@@ -4,7 +4,6 @@ import { FlyText } from "../../tools/FlyText";
 import GlobalData from "../../tools/GlobalData";
 import Utils from "../../tools/Utils";
 import HUDModuleC from "../HUDModule/HUDModuleC";
-import TeamModuleC from "../TeamModule/TeamModuleC";
 import PlayerData from "./PlayerData";
 import { PlayerModuleS } from "./PlayerModuleS";
 
@@ -15,14 +14,6 @@ export class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
             this.hudModuleC = ModuleService.getModule(HUDModuleC);
         }
         return this.hudModuleC;
-    }
-
-    private teamModuleC: TeamModuleC = null;
-    private get getTeamModuleC(): TeamModuleC {
-        if (this.teamModuleC == null) {
-            this.teamModuleC = ModuleService.getModule(TeamModuleC);
-        }
-        return this.teamModuleC;
     }
 
     private confirmPanel: ConfirmPanel = null;
@@ -41,7 +32,6 @@ export class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
 
     private initModule(): void {
         this.hudModuleC = ModuleService.getModule(HUDModuleC);
-        this.teamModuleC = ModuleService.getModule(TeamModuleC);
     }
 
     private initUIPanel(): void {
@@ -59,7 +49,7 @@ export class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
                 Notice.showDownNotice("60秒内不可重置位置");
                 return;
             }
-            let revivalPoint = Utils.randomRevivalPoint(this.getTeamModuleC.isRedTeam(this.localPlayer.userId));
+            let revivalPoint = Utils.randomRevivalPoint();
             this.localPlayer.character.worldTransform.position = revivalPoint;
             this.isCanResetPos = false;
             TimeUtil.delaySecond(60).then(() => { this.isCanResetPos = true; });

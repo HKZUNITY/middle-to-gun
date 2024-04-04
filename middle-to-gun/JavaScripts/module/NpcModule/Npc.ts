@@ -31,6 +31,7 @@ export default class Npc extends Script {
 
     /**onStart */
     private async onStartCS(): Promise<void> {
+        await TimeUtil.delaySecond(5);
         await ModuleService.ready();
         this.npc = this.gameObject as mw.Character;
         await this.npc.asyncReady();
@@ -99,16 +100,23 @@ export default class Npc extends Script {
         let roleId = GameConfig.ROLE.getElement(Utils.randomInt(1, 34)).ROLEID;
         await Utils.asyncDownloadAsset(roleId);
         this.npc.setDescription([roleId]);
+
         let gunId = GameConfig.GUN.getElement(Utils.randomInt(1, 14)).GUNICON_M;
         await Utils.asyncDownloadAsset(gunId);
         if (this.npcGunMoeld) GameObjPool.despawn(this.npcGunMoeld);
         this.npcGunMoeld = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Asset);
         this.npcGunMoeld.setCollision(mw.PropertyStatus.Off);
         this.npc.attachToSlot(this.npcGunMoeld, mw.HumanoidSlotType.RightHand);
-        let somatotype = this.npc.description.advance.base.characterSetting.somatotype;
-        let stanceId = (somatotype % 2 == 0) ? "49096" : "94258";
-        await Utils.asyncDownloadAsset(stanceId);
-        this.npc.loadSubStance(stanceId).play();
+
+        await Utils.asyncDownloadAsset("285372");
+        let npcAnim = this.npc.loadAnimation("285372");
+        npcAnim.loop = 0;
+        npcAnim.play();
+
+        // let somatotype = this.npc.description.advance.base.characterSetting.somatotype;
+        // let stanceId = (somatotype % 2 == 0) ? "49096" : "94258";
+        // await Utils.asyncDownloadAsset(stanceId);
+        // this.npc.loadSubStance(stanceId).play();
     }
 
     /**

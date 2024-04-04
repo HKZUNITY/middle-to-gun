@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/RankPanel.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2024.03.16-12.54.22
  */
  
 @UIBind('UI/module/RankModule/RankPanel.ui')
@@ -21,13 +21,6 @@ export default class RankPanel_Generate extends UIScript {
 			this.mRedRoomContentCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoomCanvas/mRedRoomContentCanvas') as mw.Canvas
 		}
 		return this.mRedRoomContentCanvas_Internal
-	}
-	private mBlueRoomContnetCanvas_Internal: mw.Canvas
-	public get mBlueRoomContnetCanvas(): mw.Canvas {
-		if(!this.mBlueRoomContnetCanvas_Internal&&this.uiWidgetBase) {
-			this.mBlueRoomContnetCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoomCanvas/mBlueRoomContnetCanvas') as mw.Canvas
-		}
-		return this.mBlueRoomContnetCanvas_Internal
 	}
 	private mWorldCanvas_Internal: mw.Canvas
 	public get mWorldCanvas(): mw.Canvas {
@@ -115,12 +108,6 @@ export default class RankPanel_Generate extends UIScript {
 		
 		//文本多语言
 		
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoomCanvas/MainRoomCanvas/TitleRoomCanvas/RedRoomTextBlock") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoomCanvas/MainRoomCanvas/TitleRoomCanvas/BlueRoomTextBlock") as any);
-		
-	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoomCanvas/RedTitleRoomCanvas/RedRankTextBlock") as any);
 		
 	

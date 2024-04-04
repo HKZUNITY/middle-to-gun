@@ -14,7 +14,11 @@ export default class RoomItem extends RoomItem_Generate {
 
 	public setData(ranking: number, roomData: RoomData, isSelf: boolean): void {
 		this.mRankTextBlock.text = ranking.toString();
-		this.mNameTextBlock.text = roomData.playerName;
+		if (roomData.playerName.length > 10) {
+			this.mNameTextBlock.text = roomData.playerName.slice(0, 10);
+		} else {
+			this.mNameTextBlock.text = roomData.playerName;
+		}
 		this.mKillCountTextBlock.text = roomData.killCount.toString();
 		this.mDieCountTextBlock.text = roomData.dieCount.toString();
 

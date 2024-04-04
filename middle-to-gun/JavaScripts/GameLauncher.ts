@@ -23,8 +23,6 @@ import ShopModuleS from "./module/ShopModule/ShopModuleS";
 import { TaskData } from "./module/TaskModule/TaskData";
 import TaskModuleC from "./module/TaskModule/TaskModuleC";
 import TaskModuleS from "./module/TaskModule/TaskModuleS";
-import TeamModuleC from "./module/TeamModule/TeamModuleC";
-import TeamModuleS from "./module/TeamModule/TeamModuleS";
 import GlobalData from "./tools/GlobalData";
 
 @Component
@@ -70,7 +68,6 @@ export default class GameLauncher extends mw.Script {
         ModuleService.registerModule(PlayerModuleS, PlayerModuleC, PlayerData);
         ModuleService.registerModule(CoinModuleS, CoinModuleC, CoinData);
         ModuleService.registerModule(ShopModuleS, ShopModuleC, ShopData);
-        ModuleService.registerModule(TeamModuleS, TeamModuleC, null);
         ModuleService.registerModule(RankModuleS, RankModuleC, null);
         ModuleService.registerModule(RadarModuleS, RadarModuleC, null);
         ModuleService.registerModule(ActivityModuleS, ActivityModuleC, ActivityData);

@@ -3,7 +3,6 @@ import Utils from "../../tools/Utils";
 import CoinModuleS from "../CoinModule/CoinModuleS";
 import RankModuleS from "../RankModule/RankModuleS";
 import TaskModuleS from "../TaskModule/TaskModuleS";
-import TeamModuleS from "../TeamModule/TeamModuleS";
 import PlayerData, { PlayerStatus } from "./PlayerData";
 import { PlayerModuleC } from "./PlayerModuleC";
 
@@ -14,14 +13,6 @@ export class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
             this.rankModuleS = ModuleService.getModule(RankModuleS);
         }
         return this.rankModuleS;
-    }
-
-    private teamModuleS: TeamModuleS = null;
-    private get getTeamModuleS(): TeamModuleS {
-        if (this.teamModuleS == null) {
-            this.teamModuleS = ModuleService.getModule(TeamModuleS);
-        }
-        return this.teamModuleS;
     }
 
     private coinModuleS: CoinModuleS = null;
@@ -47,7 +38,6 @@ export class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
 
     private initModule(): void {
         this.rankModuleS = ModuleService.getModule(RankModuleS);
-        this.teamModuleS = ModuleService.getModule(TeamModuleS);
         this.coinModuleS = ModuleService.getModule(CoinModuleS);
         this.taslModuleS = ModuleService.getModule(TaskModuleS);
     }
@@ -92,10 +82,6 @@ export class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         if (!this.playerMap.has(senderGuid) || !this.playerMap.has(targetGuid)) return;
         let sendPlayer = this.playerMap.get(senderGuid);
         let targetPlayer = this.playerMap.get(targetGuid);
-        if (this.getTeamModuleS.isTeamMate(sendPlayer.userId, targetPlayer.userId)) {
-            this.getClient(sendPlayer).net_hitTeammate();
-            return;
-        }
         if (!hitPoint) hitPoint = targetPlayer.character.worldTransform.position;
         this.updatePlayerData(sendPlayer, targetPlayer, damage, hitPoint);
     }
@@ -175,7 +161,7 @@ export class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
     private playerBirth(player: mw.Player, maxHp: number): void {
         this.getClient(player).net_updateHp(maxHp);
         let userId = player.userId;
-        let revivalPoint = Utils.randomRevivalPoint(this.getTeamModuleS.isRedTeam(userId));
+        let revivalPoint = Utils.randomRevivalPoint();
         player.character.worldTransform.position = revivalPoint;
         Utils.playBirthEffect(player);
         TimeUtil.delaySecond(2).then(() => {

@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2024.03.16-12.54.22
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -21,20 +21,6 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mTouchPad_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mTouchPad') as mw.TouchPad
 		}
 		return this.mTouchPad_Internal
-	}
-	private mRedCountTextBlock_Internal: mw.TextBlock
-	public get mRedCountTextBlock(): mw.TextBlock {
-		if(!this.mRedCountTextBlock_Internal&&this.uiWidgetBase) {
-			this.mRedCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/VsCanvas/RedVsCanvas/mRedCountTextBlock') as mw.TextBlock
-		}
-		return this.mRedCountTextBlock_Internal
-	}
-	private mBlueCountTextBlock_Internal: mw.TextBlock
-	public get mBlueCountTextBlock(): mw.TextBlock {
-		if(!this.mBlueCountTextBlock_Internal&&this.uiWidgetBase) {
-			this.mBlueCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/VsCanvas/BlueVsCanvas/mBlueCountTextBlock') as mw.TextBlock
-		}
-		return this.mBlueCountTextBlock_Internal
 	}
 	private mSetButton_Internal: mw.Button
 	public get mSetButton(): mw.Button {
@@ -71,26 +57,19 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mTaskBgImage_Internal
 	}
-	private mTeamButton_Internal: mw.Button
-	public get mTeamButton(): mw.Button {
-		if(!this.mTeamButton_Internal&&this.uiWidgetBase) {
-			this.mTeamButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_2/TeamCanvas/mTeamButton') as mw.Button
+	private mActivityButton_Internal: mw.Button
+	public get mActivityButton(): mw.Button {
+		if(!this.mActivityButton_Internal&&this.uiWidgetBase) {
+			this.mActivityButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_2/ActivityCanvas/mActivityButton') as mw.Button
 		}
-		return this.mTeamButton_Internal
+		return this.mActivityButton_Internal
 	}
-	private mTeamBgImage_Internal: mw.Image
-	public get mTeamBgImage(): mw.Image {
-		if(!this.mTeamBgImage_Internal&&this.uiWidgetBase) {
-			this.mTeamBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_2/TeamCanvas/mTeamBgImage') as mw.Image
+	private mActivityPointImage_Internal: mw.Image
+	public get mActivityPointImage(): mw.Image {
+		if(!this.mActivityPointImage_Internal&&this.uiWidgetBase) {
+			this.mActivityPointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_2/ActivityCanvas/mActivityPointImage') as mw.Image
 		}
-		return this.mTeamBgImage_Internal
-	}
-	private mTeamIconImage_Internal: mw.Image
-	public get mTeamIconImage(): mw.Image {
-		if(!this.mTeamIconImage_Internal&&this.uiWidgetBase) {
-			this.mTeamIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_2/TeamCanvas/mTeamIconImage') as mw.Image
-		}
-		return this.mTeamIconImage_Internal
+		return this.mActivityPointImage_Internal
 	}
 	private mShopButton_Internal: mw.Button
 	public get mShopButton(): mw.Button {
@@ -98,20 +77,6 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mShopButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_2/ShopCanvas/mShopButton') as mw.Button
 		}
 		return this.mShopButton_Internal
-	}
-	private mActivityButton_Internal: mw.Button
-	public get mActivityButton(): mw.Button {
-		if(!this.mActivityButton_Internal&&this.uiWidgetBase) {
-			this.mActivityButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/LeftButtonCanvas/ActivityCanvas/mActivityButton') as mw.Button
-		}
-		return this.mActivityButton_Internal
-	}
-	private mActivityPointImage_Internal: mw.Image
-	public get mActivityPointImage(): mw.Image {
-		if(!this.mActivityPointImage_Internal&&this.uiWidgetBase) {
-			this.mActivityPointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/LeftButtonCanvas/ActivityCanvas/mActivityPointImage') as mw.Image
-		}
-		return this.mActivityPointImage_Internal
 	}
 	private mIconmage_Internal: mw.Image
 	public get mIconmage(): mw.Image {
@@ -319,22 +284,16 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mTaskButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
-		this.mTeamButton.onClicked.add(()=>{
-			Event.dispatchToLocal("PlayButtonClick", "mTeamButton");
+		this.mActivityButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mActivityButton");
 		});
-		this.mTeamButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		this.mActivityButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
 		this.mShopButton.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mShopButton");
 		});
 		this.mShopButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-		
-	
-		this.mActivityButton.onClicked.add(()=>{
-			Event.dispatchToLocal("PlayButtonClick", "mActivityButton");
-		});
-		this.mActivityButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
 		this.mSetCloseButton.onClicked.add(()=>{
@@ -353,12 +312,6 @@ export default class HUDPanel_Generate extends UIScript {
 		
 		//文本多语言
 		
-		this.initLanguage(this.mRedCountTextBlock)
-		
-	
-		this.initLanguage(this.mBlueCountTextBlock)
-		
-	
 		this.initLanguage(this.mRankTextBlock)
 		
 	
@@ -382,12 +335,6 @@ export default class HUDPanel_Generate extends UIScript {
 	
 		//文本多语言
 		
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/VsCanvas/RedVsCanvas/RedVsTextBlock") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/VsCanvas/BlueVsCanvas/BlueVsTextBlock") as any);
-		
-	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/PlayerCanvas/HpCanvas/HpTextBlock") as any);
 		
 	

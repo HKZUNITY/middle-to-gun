@@ -45,59 +45,37 @@ export default class RankPanel extends RankPanel_Generate {
 		Event.dispatchToLocal(EventType.OnOffMainHUD, true);
 	}
 
-	public refreshRankPanel_RoomWorld(redRoomDatas: RoomData[], blueRoomDatas: RoomData[], isRedTeam: boolean, curRoomIndex: number,
+	public refreshRankPanel_RoomWorld(redRoomDatas: RoomData[], curRoomIndex: number,
 		worldDatas: WorldData[], curWorldIndex: number): void {
-		this.refreshRoomRankPanel(redRoomDatas, blueRoomDatas, isRedTeam, curRoomIndex);
+		this.refreshRoomRankPanel(redRoomDatas, curRoomIndex);
 		this.refreshWorldRankPanel(worldDatas, curWorldIndex);
 	}
 
-	public refreshRankPanel_Room(redRoomDatas: RoomData[], blueRoomDatas: RoomData[], isRedTeam: boolean, curRoomIndex: number): void {
-		this.refreshRoomRankPanel(redRoomDatas, blueRoomDatas, isRedTeam, curRoomIndex);
+	public refreshRankPanel_Room(redRoomDatas: RoomData[], curRoomIndex: number): void {
+		this.refreshRoomRankPanel(redRoomDatas, curRoomIndex);
 	}
 
 	private redRoomItems: RoomItem[] = [];
-	private blueRoomItems: RoomItem[] = [];
-	private refreshRoomRankPanel(redRoomDatas: RoomData[], blueRoomDatas: RoomData[], isRedTeam: boolean, curRoomIndex: number): void {
+	private refreshRoomRankPanel(redRoomDatas: RoomData[], curRoomIndex: number): void {
 		// console.error("isRedTeam = " + isRedTeam + " curRoomIndex = " + curRoomIndex);
 		if (redRoomDatas.length > this.redRoomItems.length) {
 			for (let i = 0; i < this.redRoomItems.length; ++i) {
-				this.redRoomItems[i].setData(i + 1, redRoomDatas[i], isRedTeam && (i == curRoomIndex));
+				this.redRoomItems[i].setData(i + 1, redRoomDatas[i], (i == curRoomIndex));
 				Utils.setWidgetVisibility(this.redRoomItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
 			}
 			for (let i = this.redRoomItems.length; i < redRoomDatas.length; ++i) {
 				let redItem = UIService.create(RoomItem);
-				redItem.setData(i + 1, redRoomDatas[i], isRedTeam && (i == curRoomIndex));
+				redItem.setData(i + 1, redRoomDatas[i], (i == curRoomIndex));
 				this.mRedRoomContentCanvas.addChild(redItem.uiObject);
 				this.redRoomItems.push(redItem);
 			}
 		} else {
 			for (let i = 0; i < redRoomDatas.length; ++i) {
-				this.redRoomItems[i].setData(i + 1, redRoomDatas[i], isRedTeam && (i == curRoomIndex));
+				this.redRoomItems[i].setData(i + 1, redRoomDatas[i], (i == curRoomIndex));
 				Utils.setWidgetVisibility(this.redRoomItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
 			}
 			for (let i = redRoomDatas.length; i < this.redRoomItems.length; ++i) {
 				Utils.setWidgetVisibility(this.redRoomItems[i].uiObject, mw.SlateVisibility.Collapsed);
-			}
-		}
-
-		if (blueRoomDatas.length > this.blueRoomItems.length) {
-			for (let i = 0; i < this.blueRoomItems.length; ++i) {
-				this.blueRoomItems[i].setData(i + 1, blueRoomDatas[i], !isRedTeam && (i == curRoomIndex));
-				Utils.setWidgetVisibility(this.blueRoomItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
-			}
-			for (let i = this.blueRoomItems.length; i < blueRoomDatas.length; ++i) {
-				let blueItem = UIService.create(RoomItem);
-				blueItem.setData(i + 1, blueRoomDatas[i], !isRedTeam && (i == curRoomIndex));
-				this.mBlueRoomContnetCanvas.addChild(blueItem.uiObject);
-				this.blueRoomItems.push(blueItem);
-			}
-		} else {
-			for (let i = 0; i < blueRoomDatas.length; ++i) {
-				this.blueRoomItems[i].setData(i + 1, blueRoomDatas[i], !isRedTeam && (i == curRoomIndex));
-				Utils.setWidgetVisibility(this.blueRoomItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
-			}
-			for (let i = blueRoomDatas.length; i < this.blueRoomItems.length; ++i) {
-				Utils.setWidgetVisibility(this.blueRoomItems[i].uiObject, mw.SlateVisibility.Collapsed);
 			}
 		}
 	}

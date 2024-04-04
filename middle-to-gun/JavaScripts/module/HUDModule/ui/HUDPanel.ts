@@ -45,7 +45,6 @@ export default class HUDPanel extends HUDPanel_Generate {
 
     private bindButtons(): void {
         this.mShopButton.onClicked.add(this.onClickOpenShopButton.bind(this));
-        this.mTeamButton.onClicked.add(this.onClickOpenTeamButton.bind(this));
         this.mRankButton.onClicked.add(this.onClickOpenRankButton.bind(this));
         this.mActivityButton.onClicked.add(this.onClickOpenActivityButton.bind(this));
         this.mTaskButton.onClicked.add(this.onClickOpenTaskButton.bind(this));
@@ -75,11 +74,6 @@ export default class HUDPanel extends HUDPanel_Generate {
 
     private onClickResetPosButton(): void {
         this.getHUDModuleC.onResetPosAction.call();
-    }
-
-    public updateVsUI(redCount: number, blueCount: number): void {
-        this.mRedCountTextBlock.text = redCount + "";
-        this.mBlueCountTextBlock.text = blueCount + "";
     }
 
     protected onHide(): void {
@@ -144,7 +138,7 @@ export default class HUDPanel extends HUDPanel_Generate {
     private killTipsTimeOutId2: any = null;
     public showKillTips1(killTips: string, killerName: string, killedName: string): void {
         Notice.showDownNotice("<color=#lime>" + "<size=18>" + killerName + " 击败了 " + killedName + "</size>" + "</color>"
-            + "\n" + "<color=#red>" + killTips + "</color>");
+            + "\n" + "<color=#red>完成了" + killTips + "</color>");
     }
 
     private clearKillTipsTimeOutId1(): void {
@@ -188,13 +182,9 @@ export default class HUDPanel extends HUDPanel_Generate {
         this.mHpProgressBar.sliderMaxValue = maxHp;
     }
 
-    public updateRankUIText(isRedTeam: boolean, rank: number): void {
-        let teamStr: string = "潜伏者：第";
+    public updateRankUIText(rank: number): void {
+        let teamStr: string = "第";
         let rankTextBlockColor: mw.LinearColor = mw.LinearColor.red;
-        if (!isRedTeam) {
-            teamStr = "保卫者：第";
-            rankTextBlockColor = mw.LinearColor.blue;
-        }
         this.mRankTextBlock.text = teamStr + rank + "名";
         this.mRankTextBlock.fontColor = rankTextBlockColor;
     }
@@ -411,7 +401,6 @@ export default class HUDPanel extends HUDPanel_Generate {
     private initUITweens(): void {
         this.initRankButtonTweens();
         this.initTaskTween();
-        this.initTeamTweens();
         this.initShakeActivityTween();
         this.initShakeShopTween();
     }
@@ -482,35 +471,6 @@ export default class HUDPanel extends HUDPanel_Generate {
             });
         });
         this.initTaskRedPointTweens();
-    }
-    //#endregion
-
-    //#region TeamTween
-    private initTeamTweens(): void {
-        let teamBgTween1 = this.getRenderOpacityTween(this.mTeamBgImage, 0.75, 1, 0);
-        let teamBgTween2 = this.getRenderOpacityTween(this.mTeamBgImage, 0.75, 0, 1);
-        teamBgTween1.start().onComplete(() => {
-            TimeUtil.delaySecond(0.2).then(() => {
-                teamBgTween2.start().onComplete(() => {
-                    TimeUtil.delaySecond(0.2).then(() => {
-                        teamBgTween1.start();
-                    });
-                });
-            });
-        });
-        let teamIconTween1 = this.getScaleTween(this.mTeamIconImage, 0.75, 1, 1, 0, 1);
-        let teamIconTween2 = this.getScaleTween(this.mTeamIconImage, 0.75, 0, 1, 1, 1);
-        TimeUtil.delaySecond(0.75).then(() => {
-            teamIconTween1.start().onComplete(() => {
-                TimeUtil.delaySecond(0.2).then(() => {
-                    teamIconTween2.start().onComplete(() => {
-                        TimeUtil.delaySecond(0.2).then(() => {
-                            teamIconTween1.start();
-                        });
-                    });
-                });
-            });
-        });
     }
     //#endregion
 

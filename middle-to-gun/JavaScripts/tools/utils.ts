@@ -339,35 +339,24 @@ export default class Utils {
     }
 
     private static redTeamRevivalPoint: mw.Vector[] = [
-        new mw.Vector(3600, -550, 23.28),
-        new mw.Vector(3400, -400, 23.28),
-        new mw.Vector(3600, -250, 23.28),
-        new mw.Vector(3400, -100, 23.28),
-        new mw.Vector(3600, 50, 23.28),
-        new mw.Vector(3400, 200, 23.28),
-        new mw.Vector(3600, 350, 23.28),
-        new mw.Vector(3400, 500, 23.28),
-        new mw.Vector(3600, 650, 23.28),
-        new mw.Vector(3400, 800, 23.28)
+        new mw.Vector(-5779.03, 1518.19, 1123.84 + 30),
+        new mw.Vector(-6095.24, 3726.99, 634.89 + 30),
+        new mw.Vector(-5677.45, 5891.08, 634.89 + 30),
+        new mw.Vector(-2835.44, 5887.38, 634.89 + 30),
+        new mw.Vector(-2483.15, 1497.58, 1123.84 + 30),
+        new mw.Vector(902.67, 5614.24, 117.22 + 30),
+        new mw.Vector(4705.37, 3658.09, 120.07 + 30),
+        new mw.Vector(6279.63, 904.88, 118.60 + 30),
+        new mw.Vector(6182.95, -1406.41, 118.60 + 30),
+        new mw.Vector(4639.91, -2766.05, 127.34 + 30),
+        new mw.Vector(3870.42, -4692.80, 126.69 + 30),
+        new mw.Vector(957.24, -4616.49, 133.31 + 30),
+        new mw.Vector(-314.85, -1769.33, 116.28 + 30),
+        new mw.Vector(-1157.01, -915.91, 116.28 + 30),
     ];
-    private static blueTeamRevivalPoint: mw.Vector[] = [
-        new mw.Vector(-3600, -550, 23.28),
-        new mw.Vector(-3400, -400, 23.28),
-        new mw.Vector(-3600, -250, 23.28),
-        new mw.Vector(-3400, -100, 23.28),
-        new mw.Vector(-3600, 50, 23.28),
-        new mw.Vector(-3400, 200, 23.28),
-        new mw.Vector(-3600, 350, 23.28),
-        new mw.Vector(-3400, 500, 23.28),
-        new mw.Vector(-3600, 650, 23.28),
-        new mw.Vector(-3400, 800, 23.28)
-    ];
-    public static randomRevivalPoint(isRedTeam: boolean): mw.Vector {
-        if (isRedTeam) {
-            return this.redTeamRevivalPoint[this.randomInt(0, this.redTeamRevivalPoint.length - 1)];
-        } else {
-            return this.blueTeamRevivalPoint[this.randomInt(0, this.blueTeamRevivalPoint.length - 1)];
-        }
+
+    public static randomRevivalPoint(): mw.Vector {
+        return this.redTeamRevivalPoint[this.randomInt(0, this.redTeamRevivalPoint.length - 1)];
     }
     public static setOutLine(player: mw.Player, isTeamMate: boolean, width: number = 0.5): void {
         player.character.setOutline(true, isTeamMate ? mw.LinearColor.blue : mw.LinearColor.red, width);

@@ -1,6 +1,4 @@
-﻿import RadarModuleC from "../RadarModuleC";
-
-export default class RadarPanel extends UIScript {
+﻿export default class RadarPanel extends UIScript {
 	private mCutCanvas: mw.Canvas = null;
 	private mRadarCanvas: mw.Canvas = null;
 	private currentPlayer: mw.Player = null;
@@ -10,16 +8,7 @@ export default class RadarPanel extends UIScript {
 	private mapScalRate: number = 1;
 	private windowSize: Vector2 = mw.Vector.zero;
 
-	private radarModuleC: RadarModuleC = null;
-	private get getRadarModuleC(): RadarModuleC {
-		if (!this.radarModuleC) {
-			this.radarModuleC = ModuleService.getModule(RadarModuleC);
-		}
-		return this.radarModuleC;
-	}
-
 	protected async onAwake(): Promise<void> {
-		this.radarModuleC = ModuleService.getModule(RadarModuleC);
 		this.currentPlayer = await Player.asyncGetLocalPlayer();
 		this.initUI();
 		this.bindEvent();
@@ -101,11 +90,7 @@ export default class RadarPanel extends UIScript {
 					this.setTextBlock(otherPlayerPoint, "◆");
 				}
 
-				if (this.getRadarModuleC.isFriendly(this.currentPlayer, otherPlayer)) {
-					this.setTextFontColor(otherPlayerPoint, mw.LinearColor.green);
-				} else {
-					this.setTextFontColor(otherPlayerPoint, mw.LinearColor.red);
-				}
+				this.setTextFontColor(otherPlayerPoint, mw.LinearColor.red);
 
 				let loc = this.Loc2RadarPos(otherPlayer.character.worldTransform.position);
 				let offset = otherPlayerPoint.size;

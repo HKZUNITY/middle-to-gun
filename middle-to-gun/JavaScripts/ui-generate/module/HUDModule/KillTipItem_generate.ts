@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/KillTipItem.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2024.03.16-12.54.22
  */
  
 @UIBind('UI/module/HUDModule/KillTipItem.ui')
