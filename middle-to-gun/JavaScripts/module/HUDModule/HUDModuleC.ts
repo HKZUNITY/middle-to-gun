@@ -106,31 +106,31 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
         switch (killCount) {
             case 2:
                 soundId = "65877";
-                killCountTips = "连续消灭2人！势不可当！";
+                killCountTips = "双杀！势不可当！";
                 break;
             case 3:
                 soundId = "65874";
-                killCountTips = "连续消灭3人！勇冠三军！";
+                killCountTips = "三连杀！勇冠三军！";
                 break;
             case 4:
                 soundId = "65873";
-                killCountTips = "连续消灭4人！无人能敌！";
+                killCountTips = "四连杀！无人能敌！";
                 break;
             case 5:
                 soundId = "65881";
-                killCountTips = "连续消灭5人！横扫千军！";
+                killCountTips = "五连杀！横扫千军！";
                 break;
             case 6:
                 soundId = "65871";
-                killCountTips = "连续消灭6人！接近神了！";
+                killCountTips = "六连杀！接近神了！";
                 break;
             case 7:
                 soundId = "65879";
-                killCountTips = "连续消灭7人！超越神了！";
+                killCountTips = "七连杀！超越神了！";
                 break;
             default:
                 soundId = "65879";
-                killCountTips = "连续消灭" + Utils.numChangeToCN(killCount) + "人！超越神了！";
+                killCountTips = Utils.numChangeToCN(killCount) + "连杀！超越神了！";
                 break;
         }
         SoundService.playSound(soundId, 1, GlobalData.soundVolume);

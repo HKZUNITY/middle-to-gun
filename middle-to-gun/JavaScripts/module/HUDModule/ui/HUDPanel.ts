@@ -143,8 +143,8 @@ export default class HUDPanel extends HUDPanel_Generate {
     private killTipsTimeOutId1: any = null;
     private killTipsTimeOutId2: any = null;
     public showKillTips1(killTips: string, killerName: string, killedName: string): void {
-        Notice.showDownNotice("<color=#lime>" + "<size=18>" + killerName + " 击败了 " + killedName + "</size>" + "</color>"
-            + "\n" + "<color=#red>" + killTips + "</color>");
+        Notice.showDownNotice("<color=#lime>" + "<size=18>" + killerName + " 击杀了 " + killedName + "</size>" + "</color>"
+            + "\n" + "<color=#red>完成了" + killTips + "</color>");
     }
 
     private clearKillTipsTimeOutId1(): void {
@@ -158,9 +158,9 @@ export default class HUDPanel extends HUDPanel_Generate {
         if (killTipType == KillTipType.None) return;
         this.clearKillTipsTimeOutId2();
         if (killTipType == KillTipType.Killed) {
-            this.mKillTipTextBlock3.text = "你已被 " + killerName + " 击败";
+            this.mKillTipTextBlock3.text = "你已被 " + killerName + " 击杀";
         } else if (killTipType == KillTipType.revenge) {
-            this.mKillTipTextBlock3.text = "击败 " + killedName + " 完成复仇";
+            this.mKillTipTextBlock3.text = "击杀 " + killedName + " 完成复仇";
         }
         Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.SelfHitTestInvisible);
         this.killTipsTimeOutId2 = setTimeout(() => {

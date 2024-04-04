@@ -114,7 +114,7 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
     private popupNotice(num: number, isCoin: boolean): void {
         if (num == 0) return;
         Notice.showDownNotice("<color=#" + (num > 0 ? "yellow>" : "red>") + (num > 0 ? "获得" : "花费") + (isCoin ? "金币" : "钻石") + num + "</color>");
-        // Notice.showDownNotice("<color=#lime>" + "<size=18>" + killerName + " 击败了 " + killedName + "</size>" + "</color>"
+        // Notice.showDownNotice("<color=#lime>" + "<size=18>" + killerName + " 击杀了 " + killedName + "</size>" + "</color>"
         //     + "\n" + "<color=#red>完成了" + killTips + "</color>");
     }
 
@@ -166,6 +166,6 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
             Utils.showRewardAd(() => {
                 this.setDiamond(2);
             });
-        }, "被击败奖励\n免费获得2个钻石");
+        }, "死亡奖励\n免费获得2个钻石");
     }
 }
