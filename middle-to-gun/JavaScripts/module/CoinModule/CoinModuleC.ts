@@ -1,4 +1,5 @@
 ﻿import { Notice } from "../../common/notice/Notice";
+import { EventType } from "../../tools/EventType";
 import GlobalData from "../../tools/GlobalData";
 import Utils from "../../tools/Utils";
 import AdPanel from "../AdModule/ui/AdPanel";
@@ -167,5 +168,6 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
                 this.setDiamond(2);
             });
         }, "死亡奖励\n免费获得2个钻石");
+        Event.dispatchToLocal(EventType.TryOutGun);
     }
 }
