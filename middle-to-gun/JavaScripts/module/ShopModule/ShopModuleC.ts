@@ -46,8 +46,8 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
         this.initModule();
-        this.initUIPanel();
         this.bindActions();
+        this.initEvent();
     }
 
     private initModule(): void {
@@ -56,12 +56,12 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
         this.gunModuleC = ModuleService.getModule(GunModuleC);
     }
 
-    private initUIPanel(): void {
-
-    }
-
     private bindActions(): void {
         this.getHUDModuleC.onOpenShopAction.add(this.bindOpenShopAction.bind(this));
+    }
+
+    private initEvent(): void {
+        Event.addLocalListener(EventType.TryOutGun, this.setCharacterGun.bind(this));
     }
 
     private bindOpenShopAction(): void {

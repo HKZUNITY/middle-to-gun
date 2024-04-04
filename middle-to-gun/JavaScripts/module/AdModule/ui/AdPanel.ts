@@ -24,11 +24,13 @@ export default class AdPanel extends AdPanel_Generate {
     }
 
     private callback: () => void = null;
+    private yesText: string = "领取";
     public showRewardAd(callback: () => void, contentText: string, noText: string = "取消", yesText = "领取", isAuto: boolean = true): void {
         this.callback = callback;
         this.mContentTxt.text = contentText;
         this.mNoBtn.text = noText;
         this.mYesBtn.text = yesText;
+        this.yesText = yesText;
         this.showAdPanel();
         if (isAuto) this.autoYes();
     }
@@ -37,10 +39,10 @@ export default class AdPanel extends AdPanel_Generate {
     private autoYes(): void {
         this.clearAutoYesInterval();
         let time: number = 5;
-        this.mYesBtn.text = "领取(" + time + ")";
+        this.mYesBtn.text = this.yesText + "(" + time + ")";
         this.yesInterval = TimeUtil.setInterval(() => {
             time--;
-            this.mYesBtn.text = "领取(" + time + ")";
+            this.mYesBtn.text = this.yesText + "(" + time + ")";
             if (time <= 0) {
                 this.onClickYesButton();
                 this.clearAutoYesInterval();
