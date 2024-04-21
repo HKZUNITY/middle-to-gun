@@ -211,7 +211,7 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
     public onSwitchCameraAction: Action1<number> = new Action1<number>();
     private async initShopCamera(): Promise<void> {
         let myCamera = Camera.currentCamera;
-        let cameraAnchor = await GameObject.asyncFindGameObjectById("2547D5CE");
+        let cameraAnchor = await GameObject.asyncFindGameObjectById("3A1472A8");
         let shopCamera: mw.Camera = await GameObject.asyncSpawn<mw.Camera>("Camera",
             {
                 replicates: false,
@@ -234,7 +234,7 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
     private shopAnchor: mw.Model = null;
     private shopNpcIntegratedMover: mw.IntegratedMover = null;
     private async initShopAnchor(): Promise<void> {
-        this.shopAnchor = await GameObject.asyncFindGameObjectById("3D9DE30C") as mw.Model;
+        this.shopAnchor = await GameObject.asyncFindGameObjectById("22747779") as mw.Model;
         this.shopNpcIntegratedMover = await GameObject.asyncSpawn("IntegratedMover") as mw.IntegratedMover;
         this.shopNpcIntegratedMover.parent = this.shopAnchor;
         this.shopNpcIntegratedMover.localTransform.position = mw.Vector.zero;
@@ -312,7 +312,7 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
     private trailingAnchor: mw.Model = null;
     private trailingIntegratedMover: mw.IntegratedMover = null;
     private async initTrailingAnchor(): Promise<void> {
-        this.trailingAnchor = await GameObject.asyncFindGameObjectById("29541486") as mw.Model;
+        this.trailingAnchor = await GameObject.asyncFindGameObjectById("2237A677") as mw.Model;
         this.trailingIntegratedMover = await GameObject.asyncSpawn("IntegratedMover") as mw.IntegratedMover;
         this.trailingIntegratedMover.parent = this.trailingAnchor;
         this.trailingIntegratedMover.localTransform.position = mw.Vector.zero;

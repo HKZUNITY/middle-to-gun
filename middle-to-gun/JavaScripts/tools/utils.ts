@@ -339,28 +339,24 @@ export default class Utils {
     }
 
     private static redTeamRevivalPoint: mw.Vector[] = [
-        new mw.Vector(3600, -550, 23.28),
-        new mw.Vector(3400, -400, 23.28),
-        new mw.Vector(3600, -250, 23.28),
-        new mw.Vector(3400, -100, 23.28),
-        new mw.Vector(3600, 50, 23.28),
-        new mw.Vector(3400, 200, 23.28),
-        new mw.Vector(3600, 350, 23.28),
-        new mw.Vector(3400, 500, 23.28),
-        new mw.Vector(3600, 650, 23.28),
-        new mw.Vector(3400, 800, 23.28)
+        new mw.Vector(-3359.47, -1123.33, 450),
+        new mw.Vector(-2987.92, -1110.02, 450),
+        new mw.Vector(-2642.78, -1080.19, 450),
+        new mw.Vector(-2224.69, -1073.82, 450),
+        new mw.Vector(-1934.94, -1265.23, 450),
+        new mw.Vector(-1543.13, -1271.08, 450),
+        new mw.Vector(-1182.89, -1284.99, 450),
+        new mw.Vector(-796.34, -1254.91, 450)
     ];
     private static blueTeamRevivalPoint: mw.Vector[] = [
-        new mw.Vector(-3600, -550, 23.28),
-        new mw.Vector(-3400, -400, 23.28),
-        new mw.Vector(-3600, -250, 23.28),
-        new mw.Vector(-3400, -100, 23.28),
-        new mw.Vector(-3600, 50, 23.28),
-        new mw.Vector(-3400, 200, 23.28),
-        new mw.Vector(-3600, 350, 23.28),
-        new mw.Vector(-3400, 500, 23.28),
-        new mw.Vector(-3600, 650, 23.28),
-        new mw.Vector(-3400, 800, 23.28)
+        new mw.Vector(878.52, 2900.85, 400),
+        new mw.Vector(840.18, 3257.55, 400),
+        new mw.Vector(837.79, 3652.54, 400),
+        new mw.Vector(792.21, 3947.59, 400),
+        new mw.Vector(1073.08, 3797.32, 400),
+        new mw.Vector(1061.52, 3479.38, 400),
+        new mw.Vector(1075.25, 3139.19, 400),
+        new mw.Vector(1107.06, 2836.69, 400)
     ];
     public static randomRevivalPoint(isRedTeam: boolean): mw.Vector {
         if (isRedTeam) {
