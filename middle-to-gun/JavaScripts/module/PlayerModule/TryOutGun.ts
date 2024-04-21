@@ -84,10 +84,12 @@ export default class TryOutGun extends Script {
                 this.switchGunModel(Utils.randomInt(10, 14));
                 return;
             }
+            character.movementEnabled = false;
             Utils.showRewardAd(() => {
                 if (!this.gunkey) return;
                 this.getGunModuleC.switchGun(this.gunkey);
                 this.switchGunModel(Utils.randomInt(10, 14));
+                character.movementEnabled = true;
             });
         }, gunElement.GUNNAME + "\n免费试用一局", "取消", "试用");
     }
