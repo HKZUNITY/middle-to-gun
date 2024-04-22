@@ -72,7 +72,7 @@ export class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         playerStatus.hp = playerStatus.maxHp;
         this.playerStatusMap.set(player.userId, playerStatus);
         this.playerMap.set(player.character.gameObjectId, player);
-        TimeUtil.delaySecond(5).then(() => {
+        TimeUtil.delaySecond(8).then(() => {
             this.playerBirth(player, 100);
         });
     }

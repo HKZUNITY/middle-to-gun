@@ -121,12 +121,12 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
 
 
     private defaultAds(): void {
-        this.delay10Seconds();
+        this.delay15Seconds();
         this.setInterval180Seconds();
     }
 
-    private delay10Seconds(): void {
-        TimeUtil.delaySecond(10).then(() => {
+    private delay15Seconds(): void {
+        TimeUtil.delaySecond(15).then(() => {
             this.getAdPanel.showRewardAd(() => {
                 if (!GlobalData.isOpenIAA) {
                     this.setDiamond(2);
