@@ -21,6 +21,7 @@ export default class GunModuleS extends ModuleS<GunModuleC, null> {
         // console.error("wfz-A");
     }
 
+    @Decorator.noReply()
     public net_switchGun(gunId: number): void {
         let player = this.currentPlayer;
         this.switchStance(player);
@@ -35,13 +36,18 @@ export default class GunModuleS extends ModuleS<GunModuleC, null> {
     }
 
     private async switchGun(gunId: number, player: mw.Player): Promise<void> {
+        player.character.movementEnabled = false;
         let weapon = await GameObject.asyncSpawn<mw.GameObject>(
             GameConfig.GUN.getElement(gunId).GUNPREFAB,
             {
                 replicates: true,
-                transform: new mw.Transform(player.character.worldTransform.position, mw.Rotation.zero, mw.Vector.one)
+                // transform: new mw.Transform(player.character.worldTransform.position, mw.Rotation.zero, mw.Vector.one)
             }
         );
+        await weapon.asyncReady();
+        player.character.attachToSlot(weapon, mw.HumanoidSlotType.BackOrnamental);
+        weapon.localTransform.position = mw.Vector.zero;
+        player.character.movementEnabled = true;
 
         await TimeUtil.delaySecond(2);
         let userId = player.userId;

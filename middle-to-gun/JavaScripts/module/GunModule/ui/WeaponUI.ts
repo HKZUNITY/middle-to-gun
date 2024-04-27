@@ -75,6 +75,7 @@ export default class WeaponUI extends WeaponUI_Generate {
             let player = Player.localPlayer;
             if (player) {
                 player.character.jump();
+                if (!player.character.movementEnabled) player.character.movementEnabled = true;
             }
         });
 
