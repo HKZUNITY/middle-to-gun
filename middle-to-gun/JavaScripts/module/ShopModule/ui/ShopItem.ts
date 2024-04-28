@@ -155,10 +155,9 @@ export default class ShopItem extends ShopItem_Generate {
 	private setIcon(guid: string, isGunIcon: boolean): void {
 		Utils.setImageByAssetIconData(this.mICONImage, guid);
 		let size: mw.Vector2 = new mw.Vector2(200, 200);
-		let position: mw.Vector2 = new mw.Vector2(100, 0);
-		if (isGunIcon) {
-			size = new mw.Vector2(300, 300);
-			position = new mw.Vector2(50, -50);
+		let position: mw.Vector2 = new mw.Vector2(50, 0);
+		if (!isGunIcon) {
+			position = new mw.Vector2(25, 0);
 		}
 		this.mICONImage.size = size;
 		this.mICONImage.position = position;
