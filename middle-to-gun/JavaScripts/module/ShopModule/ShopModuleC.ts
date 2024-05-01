@@ -192,6 +192,7 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
     private setCharacterGun(): void {
         let gunId = MapEx.get(this.useShopIds, ShopType.Gun);
         this.getGunModuleC.switchGun(gunId);
+        Notice.showDownNotice("枪械装备成功");
     }
 
     private async setCharacterDescription(shopId: number): Promise<void> {
