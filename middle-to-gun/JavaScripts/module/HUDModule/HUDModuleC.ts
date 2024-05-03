@@ -125,7 +125,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
         }
         killCount++;
         this.killCountMap.set(killerUserId, killCount);
-        this.killCountTime.set(killerUserId, 5);
+        this.killCountTime.set(killerUserId, 10);
         if (killCount <= 1) return;
 
         let soundId: string = "";

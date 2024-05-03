@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/ConfirmPanel.ui
- * TIME: 2024.05.03-17.31.08
+ * TIME: 2024.05.03-19.21.49
  */
  
 @UIBind('UI/common/ConfirmPanel.ui')

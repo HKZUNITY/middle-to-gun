@@ -1,6 +1,7 @@
 ﻿import { GameConfig } from "../../config/GameConfig";
 import { PrefabEvent } from "../../tools/PrefabEvent";
 import Utils from "../../tools/Utils";
+import EnemyLifebar_Generate from "../../ui-generate/common/EnemyLifebar_generate";
 import { PlayerModuleS } from "../PlayerModule/PlayerModuleS";
 import RadarPanel from "../RadarModule/ui/RadarPanel";
 
@@ -12,7 +13,7 @@ export default class Npc extends Script {
     @mw.Property({ displayName: "路径", group: "设置属性", tooltip: "路径" })
     private pathVector: mw.Vector[] = [mw.Vector.zero];
 
-    @mw.Property({ displayName: "移动速度", group: "设置属性", tooltip: "移动速度", range: { min: 100, max: 1000, showSlider: true } })
+    @mw.Property({ displayName: "移动速度", group: "设置属性", tooltip: "移动速度", range: { min: 50, max: 1000, showSlider: true } })
     private moveSpeed: number = 150;
 
     @mw.Property({ displayName: "最大生命值", group: "设置属性", tooltip: "最大生命值", range: { min: 100, max: 100000, showSlider: true } })
@@ -59,6 +60,10 @@ export default class Npc extends Script {
         }
     }
     /**--------------------------------【客户端】-------------------------------- */
+    private cubeLifebar: EnemyLifebar_Generate = null;
+    private cubeLifebarWidget: mw.UIWidget = null;
+    private isInitLifebar = false;
+
     /**客户端的onStart */
     private onStartC(): void {
         this.useUpdate = false;
@@ -68,6 +73,50 @@ export default class Npc extends Script {
     private initDataC(): void {
         UIService.getUI(RadarPanel).setNpcPoint(this.npc);
         this.npc.setOutline(true, mw.LinearColor.red, 0.5);
+        this.initLifebar();
+    }
+
+    private async initLifebar(): Promise<void> {
+        this.cubeLifebar = UIService.create(EnemyLifebar_Generate);
+        this.cubeLifebarWidget = await mw.GameObject.asyncSpawn<mw.UIWidget>(
+            "UIWidget",
+            {
+                replicates: false
+            });
+        this.cubeLifebarWidget.setTargetUIWidget(this.cubeLifebar.uiWidgetBase);
+        this.cubeLifebarWidget.widgetSpace = mw.WidgetSpaceMode.OverheadUI;
+
+        let boss = this.gameObject as mw.Character;
+        boss.attachToSlot(this.cubeLifebarWidget, mw.HumanoidSlotType.BackOrnamental);
+        this.cubeLifebarWidget.localTransform.position = new mw.Vector(-100, 0, 0);
+
+        this.cubeLifebarWidget.occlusionEnable = false;
+        this.cubeLifebarWidget.scaledByDistanceEnable = true;
+        this.cubeLifebarWidget.hideByDistanceEnable = true;
+        this.cubeLifebarWidget.headUIMaxVisibleDistance = 10000;
+
+        this.isInitLifebar = true;
+        this.onHpChanged();
+    }
+
+    /**
+     * 血量改变
+     */
+    private onHpChanged(): void {
+        if (!this.isInitLifebar) return;
+
+        this.cubeLifebar.mLifebarProgressBar.percent = this.curHp / this.maxHp;
+        this.cubeLifebar.mHpTextBlock.text = `${Math.floor(this.curHp)}/${Math.floor(this.maxHp)}`;
+
+        if (this.curHp <= 0) {
+            if (this.cubeLifebarWidget.getVisibility()) {
+                this.cubeLifebarWidget.setVisibility(false);
+            }
+        } else if (this.curHp >= this.maxHp) {
+            if (!this.cubeLifebarWidget.getVisibility()) {
+                this.cubeLifebarWidget.setVisibility(true);
+            }
+        }
     }
 
     /**客户端的onUpdate */
@@ -162,7 +211,8 @@ export default class Npc extends Script {
     }
 
     private setNpcStateS(isVisibility: boolean): void {
-        this.npc.ragdollEnabled = !isVisibility;
+        this.npc.setVisibility(isVisibility);
+        this.npc.setCollision(isVisibility ? mw.PropertyStatus.On : mw.PropertyStatus.Off);
         this.useUpdate = isVisibility;
     }
 
