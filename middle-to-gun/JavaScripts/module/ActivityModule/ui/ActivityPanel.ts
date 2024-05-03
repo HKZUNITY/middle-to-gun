@@ -24,13 +24,13 @@ export default class ActivityPanel extends ActivityPanel_Generate {
 	}
 
 	private activityData: { shopId: number, shopType: ShopType, shopIcon: string }[] = [
-		{ shopId: 2, shopType: ShopType.Role, shopIcon: "143400" },
-		{ shopId: 3, shopType: ShopType.Role, shopIcon: "142292" },
-		{ shopId: 4, shopType: ShopType.Role, shopIcon: "142272" },
+		{ shopId: 2, shopType: ShopType.Gun, shopIcon: "95712" },
 		{ shopId: 3, shopType: ShopType.Gun, shopIcon: "44974" },
 		{ shopId: 4, shopType: ShopType.Gun, shopIcon: "43712" },
 		{ shopId: 5, shopType: ShopType.Gun, shopIcon: "43710" },
-		{ shopId: 6, shopType: ShopType.Gun, shopIcon: "99703" }
+		{ shopId: 6, shopType: ShopType.Gun, shopIcon: "99703" },
+		{ shopId: 7, shopType: ShopType.Gun, shopIcon: "99701" },
+		{ shopId: 8, shopType: ShopType.Gun, shopIcon: "43734" }
 	];
 
 	/** 

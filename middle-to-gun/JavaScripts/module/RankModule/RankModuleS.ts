@@ -48,14 +48,14 @@ export default class RankModuleS extends ModuleS<RankModuleC, null> {
         this.synchrodata_onEnterScene(userId);
     }
 
-    public refreshKillDieCount(killUserId: string, dieUserId: string): void {
+    public refreshKillDieCount(killUserId: string, dieUserId: string, score: number): void {
         if (!this.roomDataMap.has(killUserId)) return;
         let killRoomData = this.roomDataMap.get(killUserId);
-        killRoomData.killCount += 1;
+        killRoomData.killCount += score;
 
         if (this.tmpRoomDataMap.has(killUserId)) {
             let tmpKillRoomData = this.tmpRoomDataMap.get(killUserId);
-            tmpKillRoomData.killCount += 1;
+            tmpKillRoomData.killCount += score;
         }
 
         if (this.roomDataMap.has(dieUserId)) {
@@ -161,7 +161,10 @@ export default class RankModuleS extends ModuleS<RankModuleC, null> {
             this.roomUserIds.push(value.userId);
             this.roomNames.push(value.playerName);
             this.roomKillCounts.push(value.killCount);
-            this.roomDieCounts.push(value.dieCount);
+            // this.roomDieCounts.push(value.dieCount);
+        });
+        this.roomDataMap.forEach((value: RoomData, key: string) => {
+            this.roomDieCounts.push(value.killCount);
         });
     }
 

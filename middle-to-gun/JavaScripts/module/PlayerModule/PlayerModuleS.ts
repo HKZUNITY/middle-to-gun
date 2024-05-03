@@ -43,7 +43,7 @@ export class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
     }
 
     private initEventAction(): void {
-        PrefabEvent.PrefabEvtFight.onHit(this.playerAtkPlayer.bind(this));
+        // PrefabEvent.PrefabEvtFight.onHit(this.playerAtkPlayer.bind(this));
     }
 
     protected onPlayerEnterGame(player: mw.Player): void {
@@ -98,7 +98,7 @@ export class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         if (curHp <= 0) {
             targetPlayerData.hp = 0;
             targetPlayerData.isDead = true;
-            if (sendPlayer) this.updatePlayerKillCount(sendPlayer, targetPlayer);
+            if (sendPlayer) this.updatePlayerKillCount(sendPlayer, targetPlayer, damage, true);
             targetPlayer.character.ragdollEnabled = true;
             this.playerDie(targetPlayer);
             TimeUtil.delaySecond(3).then(() => {
@@ -113,16 +113,20 @@ export class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         if (sendPlayer) this.getClient(sendPlayer).net_flyText(damage, hitPoint);
     }
 
-    public updatePlayerKillCount(killPlayer: mw.Player, diePlayer: mw.Player): void {
-        if (killPlayer) DataCenterS.getData(killPlayer, PlayerData).setKillCount(1);
+    public updatePlayerKillCount(killPlayer: mw.Player, diePlayer: mw.Player, score: number, isDead: boolean): void {
+        if (killPlayer) DataCenterS.getData(killPlayer, PlayerData).setKillCount(score);
         if (diePlayer) DataCenterS.getData(diePlayer, PlayerData).setDieCount(1);
 
         let userId1 = killPlayer.userId;
         let userId2 = diePlayer ? diePlayer.userId : "-1";
 
-        this.getRankModuleS.refreshKillDieCount(userId1, userId2);
-        this.getCoinModuleS.killPlayerAddCoin(killPlayer);
-        this.getTaskModuleS.killPlayer(killPlayer);
+        this.getRankModuleS.refreshKillDieCount(userId1, userId2, score);
+        if (isDead) {
+            this.getCoinModuleS.killPlayerAddCoin(killPlayer);
+            this.getTaskModuleS.killPlayer(killPlayer);
+        }
+
+        if (!isDead) return;
 
         let names: string[] = [];
         if (userId2 != "-1") {
@@ -138,9 +142,9 @@ export class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         } catch (error) { }
     }
 
-    public playerKillNpc(senderGuid: string): void {
+    public playerKillNpc(senderGuid: string, score: number, isDead: boolean): void {
         if (!this.playerMap.has(senderGuid)) return;
-        this.updatePlayerKillCount(this.playerMap.get(senderGuid), null);
+        this.updatePlayerKillCount(this.playerMap.get(senderGuid), null, score, isDead);
     }
 
     public playerAtkNpcFlyText(senderGuid: string, hitPoint: mw.Vector, damage: number): void {

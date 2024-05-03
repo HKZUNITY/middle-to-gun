@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/WorldItem.ui
- * TIME: 2024.03.16-12.54.22
+ * TIME: 2024.05.03-17.31.08
  */
  
 @UIBind('UI/module/RankModule/WorldItem.ui')
@@ -29,13 +29,6 @@ export default class WorldItem_Generate extends UIScript {
 		}
 		return this.mKillCountTextBlock_Internal
 	}
-	private mDieCountTextBlock_Internal: mw.TextBlock
-	public get mDieCountTextBlock(): mw.TextBlock {
-		if(!this.mDieCountTextBlock_Internal&&this.uiWidgetBase) {
-			this.mDieCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mDieCountTextBlock') as mw.TextBlock
-		}
-		return this.mDieCountTextBlock_Internal
-	}
 
 
 	protected onAwake() {
@@ -60,9 +53,6 @@ export default class WorldItem_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.mKillCountTextBlock)
-		
-	
-		this.initLanguage(this.mDieCountTextBlock)
 		
 	
 		//文本多语言

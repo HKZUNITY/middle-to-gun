@@ -13,7 +13,10 @@ export default class Npc extends Script {
     private pathVector: mw.Vector[] = [mw.Vector.zero];
 
     @mw.Property({ displayName: "移动速度", group: "设置属性", tooltip: "移动速度", range: { min: 100, max: 1000, showSlider: true } })
-    private moveSpeed: number = 300;
+    private moveSpeed: number = 150;
+
+    @mw.Property({ displayName: "最大生命值", group: "设置属性", tooltip: "最大生命值", range: { min: 100, max: 100000, showSlider: true } })
+    private maxHp: number = 100;
 
     /**爆炸特效 */
     private explosionEffect: string = "27422";
@@ -35,6 +38,7 @@ export default class Npc extends Script {
         await ModuleService.ready();
         this.npc = this.gameObject as mw.Character;
         await this.npc.asyncReady();
+        this.npc.collisionWithOtherCharacterEnabled = false;
         if (mw.SystemUtil.isClient()) {
             this.onStartC();
         } else if (mw.SystemUtil.isServer()) {
@@ -90,33 +94,15 @@ export default class Npc extends Script {
     }
 
     private initDataS(): void {
-        this.curHp = 100;
+        this.curHp = this.maxHp;
         this.npc.displayName = Utils.randomNpcName();
         this.setNpcDescriptionAndGun();
     }
 
-    private npcGunMoeld: mw.Model = null;
     private async setNpcDescriptionAndGun(): Promise<void> {
-        let roleId = GameConfig.ROLE.getElement(Utils.randomInt(1, 34)).ROLEID;
+        let roleId = Utils.getNpx();
         await Utils.asyncDownloadAsset(roleId);
         this.npc.setDescription([roleId]);
-
-        let gunId = GameConfig.GUN.getElement(Utils.randomInt(1, 14)).GUNICON_M;
-        await Utils.asyncDownloadAsset(gunId);
-        if (this.npcGunMoeld) GameObjPool.despawn(this.npcGunMoeld);
-        this.npcGunMoeld = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Asset);
-        this.npcGunMoeld.setCollision(mw.PropertyStatus.Off);
-        this.npc.attachToSlot(this.npcGunMoeld, mw.HumanoidSlotType.RightHand);
-
-        await Utils.asyncDownloadAsset("285372");
-        let npcAnim = this.npc.loadAnimation("285372");
-        npcAnim.loop = 0;
-        npcAnim.play();
-
-        // let somatotype = this.npc.description.advance.base.characterSetting.somatotype;
-        // let stanceId = (somatotype % 2 == 0) ? "49096" : "94258";
-        // await Utils.asyncDownloadAsset(stanceId);
-        // this.npc.loadSubStance(stanceId).play();
     }
 
     /**
@@ -143,13 +129,14 @@ export default class Npc extends Script {
         } else {
             this.curHp = 0;
             this.dieS();
-            this.getPlayerModuleS.playerKillNpc(senderGuid);
+            this.getPlayerModuleS.playerKillNpc(senderGuid, damage, true);
             TimeUtil.delaySecond(this.respawnTime).then(() => {
-                this.curHp = 100;
+                this.curHp = this.maxHp;
                 this.respawnS();
             });
         }
         this.getPlayerModuleS.playerAtkNpcFlyText(senderGuid, hitPoint, damage);
+        this.getPlayerModuleS.playerKillNpc(senderGuid, damage, false);
     }
 
     private dieS(): void {
@@ -166,6 +153,12 @@ export default class Npc extends Script {
         await this.setNpcDescriptionAndGun();
         this.setNpcStateS(true);
         EffectService.playOnGameObject(this.respawnEffect, this.npc, { slotType: mw.HumanoidSlotType.Root });
+        this.index = 0;
+        this.pathFlag = true;
+        this.curBossDir = mw.Vector.zero;
+        this.targetPos = mw.Vector.zero;
+        this.targetDistance = 0;
+        this.npc.worldTransform.position = new mw.Vector(this.pathVector[this.index].x, this.pathVector[this.index].y, -500);
     }
 
     private setNpcStateS(isVisibility: boolean): void {
@@ -174,6 +167,9 @@ export default class Npc extends Script {
     }
 
     private initMove(): void {
+        for (let i = 0; i < this.pathVector.length; ++i) {
+            this.pathVector[i] = new mw.Vector(this.pathVector[i].x + Utils.randomInt(-50, 50), this.pathVector[i].y + Utils.randomInt(-50, 50), this.pathVector[i].z);
+        }
         this.targetPos = this.pathVector[this.index];
         this.npc.maxWalkSpeed = this.moveSpeed;
     }
