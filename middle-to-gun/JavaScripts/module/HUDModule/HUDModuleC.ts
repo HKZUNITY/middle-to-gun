@@ -2,6 +2,7 @@
 import GlobalData from "../../tools/GlobalData";
 import Utils from "../../tools/Utils";
 import CoinPanel from "../CoinModule/ui/CoinPanel";
+import { CloseGMUI, OpenGMUI } from "../GMModule/GMService";
 import { HUDData, KillTipType } from "./HUDData";
 import HUDModuleS from "./HUDModuleS";
 import HUDPanel from "./ui/HUDPanel";
@@ -43,6 +44,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
         let isOpen = true;
         InputUtil.onKeyDown(mw.Keys.NumPadFive, () => {
             isOpen = !isOpen;
+            isOpen ? OpenGMUI() : CloseGMUI();
             isOpen ? UIService.getUI(CoinPanel).show() : UIService.getUI(CoinPanel).hide();
             Event.dispatchToLocal(EventType.OnOffMainHUD, isOpen);
         });

@@ -1,4 +1,5 @@
-﻿import GMHUD_Generate from "../../ui-generate/module/GMModule/GMHUD_generate";
+﻿import Utils from "../../tools/Utils";
+import GMHUD_Generate from "../../ui-generate/module/GMModule/GMHUD_generate";
 import GMItem_Generate from "../../ui-generate/module/GMModule/GMItem_generate";
 
 const GMConfig = [];
@@ -7,10 +8,14 @@ export function AddGMCommand(cmd: GMData) {
 }
 
 AddGMCommand({
-    label: "Test",
+    label: "playAnimation",
     clientCmd: (player, value) => {
     },
-    serverCmd: (player, value) => {
+    serverCmd: async (player, value) => {
+        await Utils.asyncDownloadAsset(value);
+        let a = player.character.loadAnimation(value);
+        a.loop = 0;
+        a.play();
     }
 });
 
