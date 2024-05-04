@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/RankPanel.ui
- * TIME: 2024.05.03-19.21.50
+ * TIME: 2024.03.16-12.54.22
  */
  
 @UIBind('UI/module/RankModule/RankPanel.ui')
@@ -117,7 +117,19 @@ export default class RankPanel_Generate extends UIScript {
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoomCanvas/RedTitleRoomCanvas/RedKillCountTextBlock") as any);
 		
 	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoomCanvas/RedTitleRoomCanvas/RedKillCountTextBlock_1") as any);
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoomCanvas/RedTitleRoomCanvas/RedDieCountTextBlock") as any);
+		
+	
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoomCanvas/BlueTitleRoomCanvas/BlueRankTextBlock") as any);
+		
+	
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoomCanvas/BlueTitleRoomCanvas/BlueNameTextBlock") as any);
+		
+	
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoomCanvas/BlueTitleRoomCanvas/BlueKillCountTextBlock") as any);
+		
+	
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoomCanvas/BlueTitleRoomCanvas/BlueDieCountTextBlock") as any);
 		
 	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mWorldCanvas/MainWorldCanvas/TitleWorldCanvas/TitleTextBlock") as any);
@@ -130,6 +142,9 @@ export default class RankPanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mWorldCanvas/WorldCanvas/WorldKillCountTextBlock") as any);
+		
+	
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mWorldCanvas/WorldCanvas/WorldDieCountTextBlock") as any);
 		
 	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/TypeCanvas/RoomCanvas/RoomTextBlock") as any);

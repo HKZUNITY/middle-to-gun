@@ -20,11 +20,12 @@ export default class RoomItem extends RoomItem_Generate {
 			this.mNameTextBlock.text = roomData.playerName;
 		}
 		this.mKillCountTextBlock.text = roomData.killCount.toString();
-		this.mTotalScoreTextBlock.text = roomData.dieCount.toString();
+		this.mDieCountTextBlock.text = roomData.dieCount.toString();
 
 		let fontColor = isSelf ? mw.LinearColor.green : mw.LinearColor.white;
 		this.mRankTextBlock.fontColor = fontColor;
 		this.mNameTextBlock.fontColor = fontColor;
 		this.mKillCountTextBlock.fontColor = fontColor;
+		this.mDieCountTextBlock.fontColor = fontColor;
 	}
 }

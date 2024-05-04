@@ -1,7 +1,6 @@
 ﻿import { GameConfig } from "../../config/GameConfig";
 import { PrefabEvent } from "../../tools/PrefabEvent";
 import Utils from "../../tools/Utils";
-import EnemyLifebar_Generate from "../../ui-generate/common/EnemyLifebar_generate";
 import { PlayerModuleS } from "../PlayerModule/PlayerModuleS";
 import RadarPanel from "../RadarModule/ui/RadarPanel";
 
@@ -13,11 +12,8 @@ export default class Npc extends Script {
     @mw.Property({ displayName: "路径", group: "设置属性", tooltip: "路径" })
     private pathVector: mw.Vector[] = [mw.Vector.zero];
 
-    @mw.Property({ displayName: "移动速度", group: "设置属性", tooltip: "移动速度", range: { min: 50, max: 1000, showSlider: true } })
-    private moveSpeed: number = 150;
-
-    @mw.Property({ displayName: "最大生命值", group: "设置属性", tooltip: "最大生命值", range: { min: 100, max: 100000, showSlider: true } })
-    private maxHp: number = 100;
+    @mw.Property({ displayName: "移动速度", group: "设置属性", tooltip: "移动速度", range: { min: 100, max: 1000, showSlider: true } })
+    private moveSpeed: number = 300;
 
     /**爆炸特效 */
     private explosionEffect: string = "27422";
@@ -39,7 +35,6 @@ export default class Npc extends Script {
         await ModuleService.ready();
         this.npc = this.gameObject as mw.Character;
         await this.npc.asyncReady();
-        this.npc.collisionWithOtherCharacterEnabled = false;
         if (mw.SystemUtil.isClient()) {
             this.onStartC();
         } else if (mw.SystemUtil.isServer()) {
@@ -60,10 +55,6 @@ export default class Npc extends Script {
         }
     }
     /**--------------------------------【客户端】-------------------------------- */
-    private cubeLifebar: EnemyLifebar_Generate = null;
-    private cubeLifebarWidget: mw.UIWidget = null;
-    private isInitLifebar = false;
-
     /**客户端的onStart */
     private onStartC(): void {
         this.useUpdate = false;
@@ -73,50 +64,6 @@ export default class Npc extends Script {
     private initDataC(): void {
         UIService.getUI(RadarPanel).setNpcPoint(this.npc);
         this.npc.setOutline(true, mw.LinearColor.red, 0.5);
-        this.initLifebar();
-    }
-
-    private async initLifebar(): Promise<void> {
-        this.cubeLifebar = UIService.create(EnemyLifebar_Generate);
-        this.cubeLifebarWidget = await mw.GameObject.asyncSpawn<mw.UIWidget>(
-            "UIWidget",
-            {
-                replicates: false
-            });
-        this.cubeLifebarWidget.setTargetUIWidget(this.cubeLifebar.uiWidgetBase);
-        this.cubeLifebarWidget.widgetSpace = mw.WidgetSpaceMode.OverheadUI;
-
-        let boss = this.gameObject as mw.Character;
-        boss.attachToSlot(this.cubeLifebarWidget, mw.HumanoidSlotType.BackOrnamental);
-        this.cubeLifebarWidget.localTransform.position = new mw.Vector(-100, 0, 0);
-
-        this.cubeLifebarWidget.occlusionEnable = false;
-        this.cubeLifebarWidget.scaledByDistanceEnable = true;
-        this.cubeLifebarWidget.hideByDistanceEnable = true;
-        this.cubeLifebarWidget.headUIMaxVisibleDistance = 10000;
-
-        this.isInitLifebar = true;
-        this.onHpChanged();
-    }
-
-    /**
-     * 血量改变
-     */
-    private onHpChanged(): void {
-        if (!this.isInitLifebar) return;
-
-        this.cubeLifebar.mLifebarProgressBar.percent = this.curHp / this.maxHp;
-        this.cubeLifebar.mHpTextBlock.text = `${Math.floor(this.curHp)}/${Math.floor(this.maxHp)}`;
-
-        if (this.curHp <= 0) {
-            if (this.cubeLifebarWidget.getVisibility()) {
-                this.cubeLifebarWidget.setVisibility(false);
-            }
-        } else if (this.curHp >= this.maxHp) {
-            if (!this.cubeLifebarWidget.getVisibility()) {
-                this.cubeLifebarWidget.setVisibility(true);
-            }
-        }
     }
 
     /**客户端的onUpdate */
@@ -143,15 +90,33 @@ export default class Npc extends Script {
     }
 
     private initDataS(): void {
-        this.curHp = this.maxHp;
+        this.curHp = 100;
         this.npc.displayName = Utils.randomNpcName();
         this.setNpcDescriptionAndGun();
     }
 
+    private npcGunMoeld: mw.Model = null;
     private async setNpcDescriptionAndGun(): Promise<void> {
-        let roleId = Utils.getNpx();
+        let roleId = GameConfig.ROLE.getElement(Utils.randomInt(1, 34)).ROLEID;
         await Utils.asyncDownloadAsset(roleId);
         this.npc.setDescription([roleId]);
+
+        let gunId = GameConfig.GUN.getElement(Utils.randomInt(1, 14)).GUNICON_M;
+        await Utils.asyncDownloadAsset(gunId);
+        if (this.npcGunMoeld) GameObjPool.despawn(this.npcGunMoeld);
+        this.npcGunMoeld = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Asset);
+        this.npcGunMoeld.setCollision(mw.PropertyStatus.Off);
+        this.npc.attachToSlot(this.npcGunMoeld, mw.HumanoidSlotType.RightHand);
+
+        await Utils.asyncDownloadAsset("285372");
+        let npcAnim = this.npc.loadAnimation("285372");
+        npcAnim.loop = 0;
+        npcAnim.play();
+
+        // let somatotype = this.npc.description.advance.base.characterSetting.somatotype;
+        // let stanceId = (somatotype % 2 == 0) ? "49096" : "94258";
+        // await Utils.asyncDownloadAsset(stanceId);
+        // this.npc.loadSubStance(stanceId).play();
     }
 
     /**
@@ -178,14 +143,13 @@ export default class Npc extends Script {
         } else {
             this.curHp = 0;
             this.dieS();
-            this.getPlayerModuleS.playerKillNpc(senderGuid, damage, true);
+            this.getPlayerModuleS.playerKillNpc(senderGuid);
             TimeUtil.delaySecond(this.respawnTime).then(() => {
-                this.curHp = this.maxHp;
+                this.curHp = 100;
                 this.respawnS();
             });
         }
         this.getPlayerModuleS.playerAtkNpcFlyText(senderGuid, hitPoint, damage);
-        this.getPlayerModuleS.playerKillNpc(senderGuid, damage, false);
     }
 
     private dieS(): void {
@@ -202,24 +166,14 @@ export default class Npc extends Script {
         await this.setNpcDescriptionAndGun();
         this.setNpcStateS(true);
         EffectService.playOnGameObject(this.respawnEffect, this.npc, { slotType: mw.HumanoidSlotType.Root });
-        this.index = 0;
-        this.pathFlag = true;
-        this.curBossDir = mw.Vector.zero;
-        this.targetPos = mw.Vector.zero;
-        this.targetDistance = 0;
-        this.npc.worldTransform.position = new mw.Vector(this.pathVector[this.index].x, this.pathVector[this.index].y, -500);
     }
 
     private setNpcStateS(isVisibility: boolean): void {
-        this.npc.setVisibility(isVisibility);
-        this.npc.setCollision(isVisibility ? mw.PropertyStatus.On : mw.PropertyStatus.Off);
+        this.npc.ragdollEnabled = !isVisibility;
         this.useUpdate = isVisibility;
     }
 
     private initMove(): void {
-        for (let i = 0; i < this.pathVector.length; ++i) {
-            this.pathVector[i] = new mw.Vector(this.pathVector[i].x + Utils.randomInt(-50, 50), this.pathVector[i].y + Utils.randomInt(-50, 50), this.pathVector[i].z);
-        }
         this.targetPos = this.pathVector[this.index];
         this.npc.maxWalkSpeed = this.moveSpeed;
     }

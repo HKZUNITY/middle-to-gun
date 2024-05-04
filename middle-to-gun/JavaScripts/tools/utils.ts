@@ -339,11 +339,18 @@ export default class Utils {
     }
 
     private static redTeamRevivalPoint: mw.Vector[] = [
-        new mw.Vector(-2996.38, 3979.89, -700),
-        new mw.Vector(-2985.11, 3655.64, -700),
-        new mw.Vector(-2755.92, 3844.14, -700),
-        new mw.Vector(-2042.47, 3726.45, -700),
-        new mw.Vector(-2039.12, 3995.14, -700)
+        new mw.Vector(-2618.97, 7001.38, 1057.78),
+        new mw.Vector(-2611.57, 6320.05, 634.89),
+        new mw.Vector(-5405.69, 6967.56, 1057.78),
+        new mw.Vector(-5414.73, 6307.54, 634.89),
+        new mw.Vector(-7141.13, 4051.35, 1057.78),
+        new mw.Vector(-6451.20, 3994.13, 634.89),
+        new mw.Vector(-5779.42, 1533.19, 1123.84),
+        new mw.Vector(-2462.03, 1485.00, 1123.84),
+        new mw.Vector(2192.24, 3976.86, 117.22),
+        new mw.Vector(-176.48, 4462.57, 117.67),
+        new mw.Vector(-3415.02, 1507.25, 877.52),
+        new mw.Vector(-6767.94, 1488.38, 877.52),
     ];
 
     public static randomRevivalPoint(): mw.Vector {
@@ -358,21 +365,6 @@ export default class Utils {
 
     public static playBirthSound(player: mw.Player): void {
         SoundService.play3DSound("169179", player.character, 1, GlobalData.soundVolume);
-    }
-
-    public static npxs: string[] = [
-        "D7BB26F347F6BD0615EE5CB1F785A7F9",
-        "B0BD7F28430E80A02AAFEB92BE6A0FDD",
-        "9514D6A446209024C0389C9954F5813F",
-        "D47682554E4D5DF01D53AC818CF0FDDF",
-        "1D15C1654FBE722993E01F8F04598E83",
-        "03CB93B7470FB22C072061A7FD997D1F",
-        "B25CB0EB491F99EA45E83984887C901E",
-        "05453C8942A50A195EC62EB8254A381D",
-        "BE5D997D4F6F31621CCC61906401E2E4"
-    ]
-    public static getNpx(): string {
-        return this.npxs[this.randomInt(0, this.npxs.length - 1)];
     }
 }
 

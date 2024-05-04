@@ -110,7 +110,7 @@ export default class TryOutGun extends Script {
         await Utils.asyncDownloadAsset(gunId);
         this.gunModel = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Asset);
         this.gunModel.parent = this.gunAnchor;
-        this.gunModel.localTransform.position = new mw.Vector(gunElement.GUNLOC.x, gunElement.GUNLOC.y, gunElement.GUNLOC.z + 30);
+        this.gunModel.localTransform.position = gunElement.GUNLOC;
         this.gunModel.localTransform.rotation = new mw.Rotation(0, 15, 0);
         this.gunModel.localTransform.scale = gunElement.GUNSCALE;
     }

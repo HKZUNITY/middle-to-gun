@@ -59,10 +59,6 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
         this.playBgm();
     }
 
-    protected onUpdate(dt: number): void {
-        this.updatedoubleKill(dt);
-    }
-
     //#region 击杀提示
     public killTip(killerUserId: string, killerName: string, killedUserId: string, killedName: string): void {
         let killTipType: KillTipType = KillTipType.None;
@@ -77,27 +73,6 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     //#endregion
 
     //#region 连杀提示
-
-    private doubleTime: number = 1;
-    private doubleTimer: number = 0;
-    private keys: string[] = [];
-    private updatedoubleKill(dt: number): void {
-        this.doubleTimer += dt;
-        if (this.doubleTimer >= this.doubleTime) {
-            this.doubleTimer = 0;
-            this.keys.length = 0;
-            this.killCountTime.forEach((value: number, key: string) => {
-                if (value > 0) this.keys.push(key);
-            });
-            for (let i = 0; i < this.keys.length; ++i) {
-                if (this.killCountTime.has(this.keys[i])) {
-                    this.killCountTime.set(this.keys[i], this.killCountTime.get(this.keys[i]) - 1);
-                }
-            }
-        }
-    }
-
-    private killCountTime: Map<string, number> = new Map<string, number>();
     private killCountMap: Map<string, number> = new Map<string, number>();
     private revengeUserIdMap: Set<string> = new Set<string>();
     private killTipsSound(killerUserId: string, killerName: string, killedUserId: string, killedName: string): void {
@@ -114,18 +89,12 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
         this.getHUDPanel.showKillTips2(killerName, killedName, killTipType);
 
         if (this.killCountMap.has(killedUserId)) this.killCountMap.delete(killedUserId);
-        if (this.killCountTime.has(killerUserId)) {
-            if (this.killCountTime.get(killerUserId) == 0) {
-                if (this.killCountMap.has(killerUserId)) this.killCountMap.delete(killerUserId);
-            }
-        }
         let killCount: number = 0;
         if (this.killCountMap.has(killerUserId)) {
             killCount = this.killCountMap.get(killerUserId);
         }
         killCount++;
         this.killCountMap.set(killerUserId, killCount);
-        this.killCountTime.set(killerUserId, 10);
         if (killCount <= 1) return;
 
         let soundId: string = "";

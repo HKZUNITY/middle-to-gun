@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/RoomItem.ui
- * TIME: 2024.05.03-19.21.50
+ * TIME: 2024.03.16-12.54.22
  */
  
 @UIBind('UI/module/RankModule/RoomItem.ui')
@@ -22,19 +22,19 @@ export default class RoomItem_Generate extends UIScript {
 		}
 		return this.mNameTextBlock_Internal
 	}
-	private mTotalScoreTextBlock_Internal: mw.TextBlock
-	public get mTotalScoreTextBlock(): mw.TextBlock {
-		if(!this.mTotalScoreTextBlock_Internal&&this.uiWidgetBase) {
-			this.mTotalScoreTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mTotalScoreTextBlock') as mw.TextBlock
-		}
-		return this.mTotalScoreTextBlock_Internal
-	}
 	private mKillCountTextBlock_Internal: mw.TextBlock
 	public get mKillCountTextBlock(): mw.TextBlock {
 		if(!this.mKillCountTextBlock_Internal&&this.uiWidgetBase) {
 			this.mKillCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mKillCountTextBlock') as mw.TextBlock
 		}
 		return this.mKillCountTextBlock_Internal
+	}
+	private mDieCountTextBlock_Internal: mw.TextBlock
+	public get mDieCountTextBlock(): mw.TextBlock {
+		if(!this.mDieCountTextBlock_Internal&&this.uiWidgetBase) {
+			this.mDieCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mDieCountTextBlock') as mw.TextBlock
+		}
+		return this.mDieCountTextBlock_Internal
 	}
 
 
@@ -59,10 +59,10 @@ export default class RoomItem_Generate extends UIScript {
 		this.initLanguage(this.mNameTextBlock)
 		
 	
-		this.initLanguage(this.mTotalScoreTextBlock)
+		this.initLanguage(this.mKillCountTextBlock)
 		
 	
-		this.initLanguage(this.mKillCountTextBlock)
+		this.initLanguage(this.mDieCountTextBlock)
 		
 	
 		//文本多语言
