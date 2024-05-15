@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2024.05.15-22.37.34
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -288,6 +288,34 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mResetPosButton_Internal
 	}
+	private mMorphCanvas_Internal: mw.Canvas
+	public get mMorphCanvas(): mw.Canvas {
+		if(!this.mMorphCanvas_Internal&&this.uiWidgetBase) {
+			this.mMorphCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMorphCanvas') as mw.Canvas
+		}
+		return this.mMorphCanvas_Internal
+	}
+	private mMorphButton_Internal: mw.Button
+	public get mMorphButton(): mw.Button {
+		if(!this.mMorphButton_Internal&&this.uiWidgetBase) {
+			this.mMorphButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMorphCanvas/mMorphButton') as mw.Button
+		}
+		return this.mMorphButton_Internal
+	}
+	private mUnMorphCanvas_Internal: mw.Canvas
+	public get mUnMorphCanvas(): mw.Canvas {
+		if(!this.mUnMorphCanvas_Internal&&this.uiWidgetBase) {
+			this.mUnMorphCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mUnMorphCanvas') as mw.Canvas
+		}
+		return this.mUnMorphCanvas_Internal
+	}
+	private mUnMorphButton_Internal: mw.Button
+	public get mUnMorphButton(): mw.Button {
+		if(!this.mUnMorphButton_Internal&&this.uiWidgetBase) {
+			this.mUnMorphButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mUnMorphCanvas/mUnMorphButton') as mw.Button
+		}
+		return this.mUnMorphButton_Internal
+	}
 
 
 	protected onAwake() {
@@ -347,6 +375,18 @@ export default class HUDPanel_Generate extends UIScript {
 			Event.dispatchToLocal("PlayButtonClick", "mResetPosButton");
 		});
 		this.mResetPosButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
+		this.mMorphButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mMorphButton");
+		});
+		this.mMorphButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
+		this.mUnMorphButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mUnMorphButton");
+		});
+		this.mUnMorphButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
 		//按钮多语言
@@ -449,6 +489,9 @@ export default class HUDPanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/mResetPosButton/ResetTextBlock") as any);
+		
+	
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mMorphCanvas/TextBlock") as any);
 		
 	
 	}

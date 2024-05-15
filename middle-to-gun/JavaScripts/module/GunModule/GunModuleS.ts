@@ -21,6 +21,13 @@ export default class GunModuleS extends ModuleS<GunModuleC, null> {
         // console.error("wfz-A");
     }
 
+    public setGunState(userId: string, isHide: boolean): void {
+        if (!this.weaponMap.has(userId)) return;
+        // if (this.weaponMap.get(userId).getVisibility() != isHide) this.weaponMap.get(userId).setVisibility(isHide, true);
+        // this.weaponMap.get(userId).localTransform.position = mw.Vector.zero;
+        // this.weaponMap.get(userId).localTransform.rotation = mw.Rotation.zero;
+    }
+
     @Decorator.noReply()
     public net_switchGun(gunId: number): void {
         let player = this.currentPlayer;

@@ -41,6 +41,7 @@ export default class HUDPanel extends HUDPanel_Generate {
         this.initUITweens();
         Utils.setWidgetVisibility(this.mKillTipCountCanvas, mw.SlateVisibility.Collapsed);
         Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.Collapsed);
     }
 
     private bindButtons(): void {
@@ -50,6 +51,8 @@ export default class HUDPanel extends HUDPanel_Generate {
         this.mActivityButton.onClicked.add(this.onClickOpenActivityButton.bind(this));
         this.mTaskButton.onClicked.add(this.onClickOpenTaskButton.bind(this));
         this.mResetPosButton.onClicked.add(this.onClickResetPosButton.bind(this));
+        this.mMorphButton.onClicked.add(this.onClickMorphButton.bind(this));
+        this.mUnMorphButton.onClicked.add(this.onClickUnMorphButton.bind(this));
         this.bindSetButton();
     }
 
@@ -75,6 +78,16 @@ export default class HUDPanel extends HUDPanel_Generate {
 
     private onClickResetPosButton(): void {
         this.getHUDModuleC.onResetPosAction.call();
+    }
+
+    private onClickMorphButton(): void {
+        this.getHUDModuleC.onMorphAction.call(true);
+        Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.SelfHitTestInvisible);
+    }
+
+    private onClickUnMorphButton(): void {
+        this.getHUDModuleC.onMorphAction.call(false);
+        Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.Collapsed);
     }
 
     public updateVsUI(redCount: number, blueCount: number): void {
@@ -414,6 +427,7 @@ export default class HUDPanel extends HUDPanel_Generate {
         this.initTeamTweens();
         this.initShakeActivityTween();
         this.initShakeShopTween();
+        this.initMorphButtonTween();
     }
     //#region RankTween
     private initRankButtonTweens(): void {
@@ -590,6 +604,18 @@ export default class HUDPanel extends HUDPanel_Generate {
             });
         });
         this.initActivityRedPointTweens();
+    }
+    //#endregion
+
+    //#region MorphButton
+    private initMorphButtonTween(): void {
+        let rotate1 = this.getShakeTween(this.mMorphButton, 1, 0, 360);
+        let rotate2 = this.getShakeTween(this.mMorphButton, 1, 0, 360);
+        rotate1.start().onComplete(() => {
+            rotate2.start().onComplete(() => {
+                rotate1.start();
+            });
+        });
     }
     //#endregion
     private getShakeTween(widget: Widget, angleTime: number, startAngle: number, endAngle: number): mw.Tween<any> {

@@ -1,4 +1,5 @@
-﻿import GlobalData from "./GlobalData";
+﻿import { Notice } from "../common/notice/Notice";
+import GlobalData from "./GlobalData";
 
 export default class Utils {
     //#region 兼容027之前的API
@@ -258,7 +259,7 @@ export default class Utils {
                 Utils.showAd(mw.AdsType.Reward, (state: mw.AdsState) => {
                     if (state == AdsState.Fail) {
                         // 展示失败。 展示广告失败的时候回调，一般是网络卡顿。 建议在这里做容错
-                        // Notice.showDownNotice("网络卡顿、再试一次吧");
+                        Notice.showDownNotice("网络卡顿、再试一次吧");
                     }
                     if (state == AdsState.Success) {
                         //开始展示。 开始展示广告的时候回调，无论是否完成广告播放。 这里可以用来“保护”玩家，顺利开始播放广告后玩家客户端处在一个“挂起”的状态。 如有需要，可在此处加一些保护逻辑，例如在放广告的时候玩家暂时被传送走，等state==1关闭广告后再切回来。
@@ -267,7 +268,7 @@ export default class Utils {
                         mw.TimeUtil.delaySecond(1).then(() => {
                             if (isGetReward) {
                                 if (callback) callback();
-                                // Notice.showDownNotice("成功获得奖励");
+                                Notice.showDownNotice("成功获得奖励");
                             }
                         });
                     }
@@ -278,7 +279,7 @@ export default class Utils {
                 });
             } else {
                 // 广告没准备好，或后台还有广告在放(玩家没放完广告就切回游戏)
-                // Notice.showDownNotice("广告没准备好，或后台还有广告在放");
+                Notice.showDownNotice("广告没准备好，或后台还有广告在放");
             }
         });
     }
@@ -339,28 +340,18 @@ export default class Utils {
     }
 
     private static redTeamRevivalPoint: mw.Vector[] = [
-        new mw.Vector(3600, -550, 23.28),
-        new mw.Vector(3400, -400, 23.28),
-        new mw.Vector(3600, -250, 23.28),
-        new mw.Vector(3400, -100, 23.28),
-        new mw.Vector(3600, 50, 23.28),
-        new mw.Vector(3400, 200, 23.28),
-        new mw.Vector(3600, 350, 23.28),
-        new mw.Vector(3400, 500, 23.28),
-        new mw.Vector(3600, 650, 23.28),
-        new mw.Vector(3400, 800, 23.28)
+        new mw.Vector(7845.02, 12608.37, 200),
+        new mw.Vector(7837.43, 12939.73, 200),
+        new mw.Vector(7816.22, 13340.00, 200),
+        new mw.Vector(7817.55, 13794.88, 200),
+        new mw.Vector(7837.37, 14298.47, 200)
     ];
     private static blueTeamRevivalPoint: mw.Vector[] = [
-        new mw.Vector(-3600, -550, 23.28),
-        new mw.Vector(-3400, -400, 23.28),
-        new mw.Vector(-3600, -250, 23.28),
-        new mw.Vector(-3400, -100, 23.28),
-        new mw.Vector(-3600, 50, 23.28),
-        new mw.Vector(-3400, 200, 23.28),
-        new mw.Vector(-3600, 350, 23.28),
-        new mw.Vector(-3400, 500, 23.28),
-        new mw.Vector(-3600, 650, 23.28),
-        new mw.Vector(-3400, 800, 23.28)
+        new mw.Vector(498.17, 14082.48, 200),
+        new mw.Vector(488.34, 14320.64, 200),
+        new mw.Vector(696.33, 14005.49, 200),
+        new mw.Vector(693.34, 14218.82, 200),
+        new mw.Vector(727.67, 14524.54, 200)
     ];
     public static randomRevivalPoint(isRedTeam: boolean): mw.Vector {
         if (isRedTeam) {

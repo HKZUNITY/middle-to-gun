@@ -21,16 +21,12 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     public onOpenActivityAction: Action = new Action();
     public onOpenTaskAction: Action = new Action();
     public onResetPosAction: Action = new Action();
+    public onMorphAction: Action1<boolean> = new Action1<boolean>();
 
     protected onStart(): void {
-        // this.initModule();
         this.initUIPanel();
         this.initEventAction();
     }
-
-    // private initModule(): void {
-
-    // }
 
     private initUIPanel(): void {
         this.hudPanel = UIService.getUI(HUDPanel);
@@ -39,6 +35,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     private initEventAction(): void {
         this.initSetAction();
         this.initSoundEvent();
+        this.initMorphAction();
         Event.addLocalListener(EventType.OnOffMainHUD, this.addOnOffHUDPannel.bind(this));
         let isOpen = true;
         InputUtil.onKeyDown(mw.Keys.NumPadFive, () => {
@@ -223,6 +220,17 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     private playClickSound(): void {
         if (this.clickId) SoundService.stopSound(this.clickId);
         this.clickId = SoundService.playSound("200082", 1, GlobalData.soundVolume);
+    }
+    //#endregion
+
+    //#region Morph
+    private initMorphAction(): void {
+        this.onMorphAction.add(this.addMorphAction.bind(this));
+    }
+
+    private addMorphAction(isMorph: boolean): void {
+        Event.dispatchToLocal(EventType.OnOffWeaponUI, isMorph);
+        if (!isMorph) Event.dispatchToLocal(EventType.TryOutGun);
     }
     //#endregion
 }

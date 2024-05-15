@@ -10,6 +10,7 @@ import GunModuleS from "./module/GunModule/GunModuleS";
 import { HUDData } from "./module/HUDModule/HUDData";
 import HUDModuleC from "./module/HUDModule/HUDModuleC";
 import HUDModuleS from "./module/HUDModule/HUDModuleS";
+import { MorphModuleC, MorphModuleS } from "./module/MorphModule/MorphModule";
 import PlayerData from "./module/PlayerModule/PlayerData";
 import { PlayerModuleC } from "./module/PlayerModule/PlayerModuleC";
 import { PlayerModuleS } from "./module/PlayerModule/PlayerModuleS";
@@ -76,6 +77,7 @@ export default class GameLauncher extends mw.Script {
         ModuleService.registerModule(ActivityModuleS, ActivityModuleC, ActivityData);
         ModuleService.registerModule(GunModuleS, GunModuleC, null);
         ModuleService.registerModule(TaskModuleS, TaskModuleC, TaskData);
+        ModuleService.registerModule(MorphModuleS, MorphModuleC, null);
     }
 
     /**------------------------------------------- 客户端 ------------------------------------------------ */

@@ -3,6 +3,8 @@ import GlobalData from "../../tools/GlobalData";
 import Utils from "../../tools/Utils";
 import AdPanel from "../AdModule/ui/AdPanel";
 import GunModuleC from "../GunModule/GunModuleC";
+import { MorphModuleC } from "../MorphModule/MorphModule";
+import ShopModuleC from "../ShopModule/ShopModuleC";
 
 @Component
 export default class TryOutGun extends Script {
@@ -35,6 +37,22 @@ export default class TryOutGun extends Script {
             this.gunModuleC = ModuleService.getModule(GunModuleC);
         }
         return this.gunModuleC;
+    }
+
+    private morphModuleC: MorphModuleC = null;
+    private get getMorphModuleC(): MorphModuleC {
+        if (this.morphModuleC == null) {
+            this.morphModuleC = ModuleService.getModule(MorphModuleC);
+        }
+        return this.morphModuleC;
+    }
+
+    private shopModuleC: ShopModuleC = null;
+    private get getShopModuleC(): ShopModuleC {
+        if (this.shopModuleC == null) {
+            this.shopModuleC = ModuleService.getModule(ShopModuleC);
+        }
+        return this.shopModuleC;
     }
 
     private adPanel: AdPanel = null;
@@ -81,7 +99,7 @@ export default class TryOutGun extends Script {
             character.movementEnabled = false;
             if (!GlobalData.isOpenIAA) {
                 if (!this.gunkey) return;
-                this.getGunModuleC.switchGun(this.gunkey);
+                this.switchGun();
                 this.switchGunModel(Utils.randomInt(10, 14));
                 TimeUtil.delaySecond(2).then(() => {
                     character.movementEnabled = true;
@@ -90,13 +108,21 @@ export default class TryOutGun extends Script {
             }
             Utils.showRewardAd(() => {
                 if (!this.gunkey) return;
-                this.getGunModuleC.switchGun(this.gunkey);
+                this.switchGun();
                 this.switchGunModel(Utils.randomInt(10, 14));
                 TimeUtil.delaySecond(2).then(() => {
                     character.movementEnabled = true;
                 });
             });
         }, gunElement.GUNNAME + "\n免费试用一局", "取消", "试用");
+    }
+
+    private switchGun(): void {
+        if (this.getMorphModuleC.getIsMorph) {
+            this.getShopModuleC.setUseShopId_Gun(this.gunkey);
+        } else {
+            this.getGunModuleC.switchGun(this.gunkey);
+        }
     }
 
     private gunModel: mw.Model = null;

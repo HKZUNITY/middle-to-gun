@@ -1272,15 +1272,28 @@ export default class WeaponDriver extends mw.Script {
 			this.clientInitHitSound();
 			this.clientInitDelegate();
 		});
-		Event.addLocalListener(EventType.OnOffMainHUD, (isOpen: boolean) => {
-			if (!this.weaponUI) return;
-			try {
-				if (!this.weaponUI.rootCanvas) return;
-				this.weaponUI.rootCanvas.visibility = isOpen ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed;
-			} catch (error) {
-				// console.error("addLocalListener-IsOpenUI-[error]" + error);
-			}
-		});
+		Event.addLocalListener(EventType.OnOffMainHUD, this.addOnOffMainHUD.bind(this));
+		Event.addLocalListener(EventType.OnOffWeaponUI, this.addOnOffWeaponUI.bind(this));
+	}
+
+	private addOnOffMainHUD(isOpen: boolean): void {
+		if (!this.weaponUI) return;
+		try {
+			if (!this.weaponUI.rootCanvas) return;
+			Utils.setWidgetVisibility(this.weaponUI.rootCanvas, isOpen ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
+		} catch (error) {
+			// console.error("addLocalListener-IsOpenUI-[error]" + error);
+		}
+	}
+
+	private addOnOffWeaponUI(isOpen: boolean): void {
+		if (!this.weaponUI) return;
+		try {
+			if (!this.weaponUI.rootCanvas) return;
+			Utils.setWidgetVisibility(this.weaponUI.rootCanvas, !isOpen ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
+		} catch (error) {
+			// console.error("addLocalListener-IsOpenUI-[error]" + error);
+		}
 	}
 
 	/* 客户端初始化根武器实体 */

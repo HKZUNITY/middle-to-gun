@@ -181,6 +181,11 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
         }
     }
 
+    public setUseShopId_Gun(shopId: number): void {
+        if (MapEx.has(this.useShopIds, ShopType.Gun) && MapEx.get(this.useShopIds, ShopType.Gun) == shopId) return;
+        MapEx.set(this.useShopIds, ShopType.Gun, shopId);
+    }
+
     public setUseShopId(shopType: ShopType, shopId: number): boolean {
         if (MapEx.has(this.useShopIds, shopType) && MapEx.get(this.useShopIds, shopType) == shopId) return false;
         MapEx.set(this.useShopIds, shopType, shopId);
