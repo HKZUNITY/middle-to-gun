@@ -1,4 +1,6 @@
-﻿import GMHUD_Generate from "../../ui-generate/module/GMModule/GMHUD_generate";
+﻿import { EventType } from "../../tools/EventType";
+import Utils from "../../tools/Utils";
+import GMHUD_Generate from "../../ui-generate/module/GMModule/GMHUD_generate";
 import GMItem_Generate from "../../ui-generate/module/GMModule/GMItem_generate";
 
 const GMConfig = [];
@@ -7,10 +9,14 @@ export function AddGMCommand(cmd: GMData) {
 }
 
 AddGMCommand({
-    label: "Test",
+    label: "pA",
     clientCmd: (player, value) => {
     },
-    serverCmd: (player, value) => {
+    serverCmd: async (player, value) => {
+        await Utils.asyncDownloadAsset(value);
+        let pA = player.character.loadAnimation(value);
+        pA.loop = 0;
+        pA.play();
     }
 });
 
@@ -33,6 +39,9 @@ export default class GMService extends mw.Script {
         if (mw.SystemUtil.isClient()) {
             console.log("[GM]：模块初始化")
             new GMBasePanel();
+            Event.addLocalListener(EventType.OnOffMainHUD, (isOpen: boolean) => {
+                isOpen ? OpenGMUI() : CloseGMUI();
+            });
         }
     }
 

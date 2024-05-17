@@ -53,6 +53,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
 
     private addJumpAction(): void {
         this.localPlayer.character.jump();
+        if (!this.localPlayer.character.movementEnabled) this.localPlayer.character.movementEnabled = true;
     }
 
     protected onEnterScene(sceneType: number): void {
