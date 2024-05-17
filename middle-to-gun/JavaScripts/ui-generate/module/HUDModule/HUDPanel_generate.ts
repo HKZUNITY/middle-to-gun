@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.05.15-22.37.34
+ * TIME: 2024.05.18-00.33.23
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -316,6 +316,20 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mUnMorphButton_Internal
 	}
+	private mJumpCanvas_Internal: mw.Canvas
+	public get mJumpCanvas(): mw.Canvas {
+		if(!this.mJumpCanvas_Internal&&this.uiWidgetBase) {
+			this.mJumpCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mJumpCanvas') as mw.Canvas
+		}
+		return this.mJumpCanvas_Internal
+	}
+	private mJumpButton_Internal: mw.Button
+	public get mJumpButton(): mw.Button {
+		if(!this.mJumpButton_Internal&&this.uiWidgetBase) {
+			this.mJumpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mJumpCanvas/mJumpButton') as mw.Button
+		}
+		return this.mJumpButton_Internal
+	}
 
 
 	protected onAwake() {
@@ -387,6 +401,12 @@ export default class HUDPanel_Generate extends UIScript {
 			Event.dispatchToLocal("PlayButtonClick", "mUnMorphButton");
 		});
 		this.mUnMorphButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
+		this.mJumpButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mJumpButton");
+		});
+		this.mJumpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
 		//按钮多语言
@@ -491,7 +511,7 @@ export default class HUDPanel_Generate extends UIScript {
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/mResetPosButton/ResetTextBlock") as any);
 		
 	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mMorphCanvas/TextBlock") as any);
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mMorphCanvas/MorphTextBlock") as any);
 		
 	
 	}

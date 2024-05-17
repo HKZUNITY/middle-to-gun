@@ -97,7 +97,7 @@ export class MorphModuleS extends ModuleS<MorphModuleC, null> {
     // private i: number = 1;
     private async spawnGo(player: mw.Player): Promise<void> {
         let randomId = Utils.randomInt(1, 62);
-        console.error(`randomId:${randomId}`);
+        // console.error(`randomId:${randomId}`);
         // let morphElement = GameConfig.Morph.getElement(this.i++);
         let morphElement = GameConfig.Morph.getElement(randomId);
         await Utils.asyncDownloadAsset(morphElement.AssetId);

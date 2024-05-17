@@ -22,6 +22,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     public onOpenTaskAction: Action = new Action();
     public onResetPosAction: Action = new Action();
     public onMorphAction: Action1<boolean> = new Action1<boolean>();
+    public onJumpAction: Action = new Action();
 
     protected onStart(): void {
         this.initUIPanel();
@@ -36,6 +37,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
         this.initSetAction();
         this.initSoundEvent();
         this.initMorphAction();
+        this.onJumpAction.add(this.addJumpAction.bind(this));
         Event.addLocalListener(EventType.OnOffMainHUD, this.addOnOffHUDPannel.bind(this));
         let isOpen = true;
         InputUtil.onKeyDown(mw.Keys.NumPadFive, () => {
@@ -47,6 +49,10 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
 
     private addOnOffHUDPannel(isOpen: boolean): void {
         isOpen ? this.getHUDPanel.show() : this.getHUDPanel.hide();
+    }
+
+    private addJumpAction(): void {
+        this.localPlayer.character.jump();
     }
 
     protected onEnterScene(sceneType: number): void {
@@ -206,12 +212,13 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
 
     //#region SoundService
     private playBgm(): void {
+        return;
         SoundService.playBGM("146100", this.currentBgmVolume);
     }
 
     private initSoundEvent(): void {
         Event.addLocalListener("PlayButtonClick", (btnName: string) => {
-            if (btnName == "reload" || btnName == "jump" || btnName == "aim" || btnName == "left_fire") return;
+            if (btnName == "reload" || btnName == "jump" || btnName == "aim" || btnName == "left_fire" || btnName == "mJumpButton") return;
             this.playClickSound();
         });
     }

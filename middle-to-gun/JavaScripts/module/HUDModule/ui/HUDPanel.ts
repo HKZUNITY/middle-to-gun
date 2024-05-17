@@ -42,6 +42,7 @@ export default class HUDPanel extends HUDPanel_Generate {
         Utils.setWidgetVisibility(this.mKillTipCountCanvas, mw.SlateVisibility.Collapsed);
         Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.Collapsed);
         Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.Collapsed);
     }
 
     private bindButtons(): void {
@@ -53,6 +54,7 @@ export default class HUDPanel extends HUDPanel_Generate {
         this.mResetPosButton.onClicked.add(this.onClickResetPosButton.bind(this));
         this.mMorphButton.onClicked.add(this.onClickMorphButton.bind(this));
         this.mUnMorphButton.onClicked.add(this.onClickUnMorphButton.bind(this));
+        this.mJumpButton.onClicked.add(this.onClickJumpButton.bind(this));
         this.bindSetButton();
     }
 
@@ -83,11 +85,17 @@ export default class HUDPanel extends HUDPanel_Generate {
     private onClickMorphButton(): void {
         this.getHUDModuleC.onMorphAction.call(true);
         Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.SelfHitTestInvisible);
+        Utils.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.SelfHitTestInvisible);
     }
 
     private onClickUnMorphButton(): void {
         this.getHUDModuleC.onMorphAction.call(false);
         Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.Collapsed);
+    }
+
+    private onClickJumpButton(): void {
+        this.getHUDModuleC.onJumpAction.call(false);
     }
 
     public updateVsUI(redCount: number, blueCount: number): void {

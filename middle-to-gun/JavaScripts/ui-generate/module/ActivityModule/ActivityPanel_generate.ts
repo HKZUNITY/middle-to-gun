@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ActivityModule/ActivityPanel.ui
- * TIME: 2024.05.15-22.37.33
+ * TIME: 2024.05.18-00.33.23
  */
  
 @UIBind('UI/module/ActivityModule/ActivityPanel.ui')

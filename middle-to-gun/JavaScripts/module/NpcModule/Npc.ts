@@ -34,6 +34,7 @@ export default class Npc extends Script {
         await ModuleService.ready();
         this.npc = this.gameObject as mw.Character;
         await this.npc.asyncReady();
+        this.npc.collisionWithOtherCharacterEnabled = false;
         if (mw.SystemUtil.isClient()) {
             this.onStartC();
         } else if (mw.SystemUtil.isServer()) {
@@ -94,21 +95,43 @@ export default class Npc extends Script {
         this.setNpcDescriptionAndGun();
     }
 
+    private model: mw.Model = null;
     private npcGunMoeld: mw.Model = null;
     private async setNpcDescriptionAndGun(): Promise<void> {
-        let roleId = GameConfig.ROLE.getElement(Utils.randomInt(1, 34)).ROLEID;
-        await Utils.asyncDownloadAsset(roleId);
-        this.npc.setDescription([roleId]);
-        let gunId = GameConfig.GUN.getElement(Utils.randomInt(1, 14)).GUNICON_M;
-        await Utils.asyncDownloadAsset(gunId);
-        if (this.npcGunMoeld) GameObjPool.despawn(this.npcGunMoeld);
-        this.npcGunMoeld = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Asset);
-        this.npcGunMoeld.setCollision(mw.PropertyStatus.Off);
-        this.npc.attachToSlot(this.npcGunMoeld, mw.HumanoidSlotType.RightHand);
-        let somatotype = this.npc.description.advance.base.characterSetting.somatotype;
-        let stanceId = (somatotype % 2 == 0) ? "49096" : "94258";
-        await Utils.asyncDownloadAsset(stanceId);
-        this.npc.loadSubStance(stanceId).play();
+        let ran = Utils.randomInt(1, 2);
+        if (ran == 1) {
+            let morphElement = GameConfig.Morph.getElement(Utils.randomInt(1, 62));
+            let assetId = morphElement.AssetId;
+            await Utils.asyncDownloadAsset(assetId);
+            if (this.model) GameObjPool.despawn(this.model);
+            this.model = await GameObjPool.asyncSpawn(assetId, mwext.GameObjPoolSourceType.Prefab) as mw.Model;
+            this.model.setCollision(mw.PropertyStatus.Off);
+            this.npc.attachToSlot(this.model, mw.HumanoidSlotType.Root);
+            this.model.localTransform.position = new mw.Vector(0, 0, this.model.getBoundingBox().z / 2);
+            this.model.localTransform.rotation = new mw.Rotation(morphElement.OffsetRot);
+
+            if (this.npc.getVisibility()) this.npc.setVisibility(false, false);
+            if (this.npcGunMoeld && this.npcGunMoeld.getVisibility()) this.npcGunMoeld.setVisibility(false);
+            if (this.model && !this.model.getVisibility()) this.model.setVisibility(true);
+        } else {
+            let roleId = GameConfig.ROLE.getElement(Utils.randomInt(1, 34)).ROLEID;
+            await Utils.asyncDownloadAsset(roleId);
+            this.npc.setDescription([roleId]);
+            let gunId = GameConfig.GUN.getElement(Utils.randomInt(1, 14)).GUNICON_M;
+            await Utils.asyncDownloadAsset(gunId);
+            if (this.npcGunMoeld) GameObjPool.despawn(this.npcGunMoeld);
+            this.npcGunMoeld = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Asset);
+            this.npcGunMoeld.setCollision(mw.PropertyStatus.Off);
+            this.npc.attachToSlot(this.npcGunMoeld, mw.HumanoidSlotType.RightHand);
+            let somatotype = this.npc.description.advance.base.characterSetting.somatotype;
+            let stanceId = (somatotype % 2 == 0) ? "49096" : "94258";
+            await Utils.asyncDownloadAsset(stanceId);
+            this.npc.loadSubStance(stanceId).play();
+
+            if (!this.npc.getVisibility()) this.npc.setVisibility(true, false);
+            if (this.npcGunMoeld && !this.npcGunMoeld.getVisibility()) this.npcGunMoeld.setVisibility(true);
+            if (this.model && this.model.getVisibility()) this.model.setVisibility(false);
+        }
     }
 
     /**
@@ -163,6 +186,7 @@ export default class Npc extends Script {
     private setNpcStateS(isVisibility: boolean): void {
         this.npc.ragdollEnabled = !isVisibility;
         this.useUpdate = isVisibility;
+        if (!isVisibility && this.model) this.model.setVisibility(isVisibility);
     }
 
     private initMove(): void {

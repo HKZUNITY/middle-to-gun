@@ -126,6 +126,12 @@ export default class ShopItem extends ShopItem_Generate {
 	private setGun(key: number): void {
 		let gunElement = GameConfig.GUN.getElement(key);
 		this.setIcon(gunElement.GUNICON_M, true);
+		if (key == 1) this.mICONImage.renderScale = mw.Vector2.one.multiply(0.8);
+		else if (key == 14) this.mICONImage.renderTransformAngle = 90;
+		else {
+			this.mICONImage.renderScale = mw.Vector2.one;
+			this.mICONImage.renderTransformAngle = 0;
+		}
 		this.mNameTextBlock.text = gunElement.GUNNAME;
 		this.mHasTypeTextBlock.text = gunElement.PRICETYPE == PriceType.Ads ? "限时" : "永久";
 		this.mHurtTextBlock.text = "伤害:" + gunElement.HURT;
@@ -137,6 +143,8 @@ export default class ShopItem extends ShopItem_Generate {
 	private setRole(key: number): void {
 		let roleElement = GameConfig.ROLE.getElement(key);
 		this.setIcon(roleElement.ROLEID, false);
+		this.mICONImage.renderScale = mw.Vector2.one;
+		this.mICONImage.renderTransformAngle = 0;
 		this.mNameTextBlock.text = roleElement.NAME;
 		this.mHasTypeTextBlock.text = roleElement.PRICETYPE == PriceType.Ads ? "限时" : "永久";
 		if (this.isHas) return;
@@ -146,6 +154,8 @@ export default class ShopItem extends ShopItem_Generate {
 	private setTrailing(key: number): void {
 		let trailingElement = GameConfig.TRAILING.getElement(key);
 		this.setIcon(trailingElement.TRAILING, false);
+		this.mICONImage.renderScale = mw.Vector2.one;
+		this.mICONImage.renderTransformAngle = 0;
 		this.mNameTextBlock.text = trailingElement.NAME;
 		this.mHasTypeTextBlock.text = trailingElement.PRICETYPE == PriceType.Ads ? "限时" : "永久";
 		if (this.isHas) return;
