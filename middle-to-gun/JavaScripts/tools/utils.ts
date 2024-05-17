@@ -253,6 +253,8 @@ export default class Utils {
     }
 
     public static showRewardAd(callback: () => void): void {
+        if (callback) callback();
+        return;
         mw.AdsService.isReady(mw.AdsType.Reward, (isReady: boolean) => {
             let isGetReward = false;
             if (isReady) {
