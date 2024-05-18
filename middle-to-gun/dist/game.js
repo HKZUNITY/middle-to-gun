@@ -86,7 +86,7 @@ NoticeView_Generate = __decorate([
 ], NoticeView_Generate);
 var NoticeView_Generate$1 = NoticeView_Generate;
 
-var foreign71 = /*#__PURE__*/Object.freeze({
+var foreign72 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NoticeView_Generate$1
 });
@@ -160,7 +160,7 @@ TopNoticeItem_Generate = __decorate([
 ], TopNoticeItem_Generate);
 var TopNoticeItem_Generate$1 = TopNoticeItem_Generate;
 
-var foreign73 = /*#__PURE__*/Object.freeze({
+var foreign74 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TopNoticeItem_Generate$1
 });
@@ -1728,18 +1728,26 @@ Utils.npcNames = ["张吉惟", "林国瑞", "林玫书", "林雅南", "江奕云
 Utils.tens = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 Utils.digitalUnits = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
 Utils.redTeamRevivalPoint = [
-    new mw.Vector(7845.02, 12608.37, 200),
-    new mw.Vector(7837.43, 12939.73, 200),
-    new mw.Vector(7816.22, 13340.00, 200),
-    new mw.Vector(7817.55, 13794.88, 200),
-    new mw.Vector(7837.37, 14298.47, 200)
+    new mw.Vector(963, -52, 400),
+    new mw.Vector(679, -1169, 150),
+    new mw.Vector(-1310, -1097, 150),
+    new mw.Vector(-553, 2185, 150),
+    new mw.Vector(-1167, 1555, 200),
+    new mw.Vector(-724, 443, 200),
+    new mw.Vector(-1270, 576, 200),
+    new mw.Vector(52, 5, 200),
+    new mw.Vector(1033, 2255, 150)
 ];
 Utils.blueTeamRevivalPoint = [
-    new mw.Vector(498.17, 14082.48, 200),
-    new mw.Vector(488.34, 14320.64, 200),
-    new mw.Vector(696.33, 14005.49, 200),
-    new mw.Vector(693.34, 14218.82, 200),
-    new mw.Vector(727.67, 14524.54, 200)
+    new mw.Vector(963, -52, 400),
+    new mw.Vector(679, -1169, 150),
+    new mw.Vector(-1310, -1097, 150),
+    new mw.Vector(-553, 2185, 150),
+    new mw.Vector(-1167, 1555, 200),
+    new mw.Vector(-724, 443, 200),
+    new mw.Vector(-1270, 576, 200),
+    new mw.Vector(52, 5, 200),
+    new mw.Vector(1033, 2255, 150)
 ];
 function cubicBezier(p1x, p1y, p2x, p2y) {
     const ZERO_LIMIT = 1e-6;
@@ -1797,7 +1805,7 @@ function cubicBezier(p1x, p1y, p2x, p2y) {
     return solve;
 }
 
-var foreign69 = /*#__PURE__*/Object.freeze({
+var foreign70 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     cubicBezier: cubicBezier,
     default: Utils
@@ -1895,7 +1903,7 @@ ConfirmPanel_Generate = __decorate([
 ], ConfirmPanel_Generate);
 var ConfirmPanel_Generate$1 = ConfirmPanel_Generate;
 
-var foreign70 = /*#__PURE__*/Object.freeze({
+var foreign71 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ConfirmPanel_Generate$1
 });
@@ -2094,7 +2102,7 @@ var foreign8 = /*#__PURE__*/Object.freeze({
     GUNConfig: GUNConfig
 });
 
-const EXCELDATA$3 = [["ID", "AssetId", "OffsetPos", "OffsetRot", "OffsetSca"], ["", "", "", "", ""], [1, "EC0C8ADC459322F5DE2106B9562A90CA", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [2, "335126154CEC4A49F102238D6210F205", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [3, "078F47E840BF64873D328A9673951309", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [4, "E77FD27C4C304D5B08ADB0828DE97EF1", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [5, "EAB0980E49843AA01B24418DE4D34F19", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [6, "3277C410430DBBAA9AAC2B91F5616546", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [7, "7B8B31584AF072EC0D92D7835A1E6AA8", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [8, "1FE95F4B4B762E305B6425B8B7726197", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [9, "4342D9B34145F0F5BCE31A9C7B8782F3", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [10, "0FDE1CD444234AA6F8EE5AA3440430D0", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [11, "CAD93AB64E3F4F0949866684D13C5858", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [12, "FCE45D8E4E05E19B303A5BBE856597FB", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [13, "BF55149449AAF418BE3C01B491A560FA", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [14, "D44D15B6486D4C1F2F9D758B8EE82BBE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [15, "80A1CEF44600E00C7FF831A7A2FF6AD6", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [16, "81B23DDB4CDEAFBA4B8E5F931B8CC088", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [17, "DE8D2C2E4C265421D3205A8CC1F59C5C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [18, "10E5F67B4B35167245EF8493F07D676B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [19, "85C00CA447692B1603D4DD9D106C44BA", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [20, "9E3EF7D64077F30BA4C6EF8215666AF9", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [21, "7D9116A44D451AC4567BE296AB10E5AB", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [22, "1401A34346237AD6FADE36BDB501E17A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [23, "6E3C374D4AEDEA66EA83A78DAAFD3CB7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [24, "AF70636342AD405BAC6490901E1E48A7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [25, "2EB3E87248522F3ED3AD628C7FD4588F", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [26, "F667C8AB46F5FCBAB51E58B98676367B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [27, "E483C36F4203D16F289B6F96E17B6EBE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [28, "860ED32A4A9B1421BDF480BD37206127", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [29, "EC560EA044478C3DD016BBB942E9B65D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [30, "7D444D4640A16323197FFA8FCDF2E41D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [31, "7F8C5612486B9EFF207FF79854180D1E", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [32, "5682A4FA4E0DA03232DACFAE22AA0220", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [33, "B967236D4A62DE0B9BDC45ACA618713A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [34, "529D2818405B01D4C68831B1D59A66E4", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [35, "E4546504452A29F7F97665B37DF49083", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [36, "F769A3ED4A29E47C0FB6928B53D7508A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [37, "5BCE4569426BC2E205DC0CAE9C28DCFF", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [38, "3E9C6F8B406C15898AB1B9846DEBE83D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [39, "F93F66834B60109E9BCF0AB8AE205E8C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [40, "957F005A48A340E377B206A38D8B0BF2", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [41, "87CCDCF1440844D76796DDAE0C2A47A1", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [42, "171995C543F147B24337809C704C517B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [43, "D2152DAB4780CE011C1F75B60AD8F9B5", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [44, "070FF554463A9C82EF1DA3A6ADA30FF5", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [45, "C82B989B44B0F5C2593FD4BF6885CF5D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [46, "7F28155F4EEFF2E1B33DDDA7EEFD4AD2", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [47, "D85C27AC4F8BB66FB668EABFE2FF9BD7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [48, "3688AC4D45D5EEC1E0D2279197E330BB", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [49, "9523FD8F4D5E4060F39DE59DC439A055", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [50, "273117F54B2A12D4B6D87584E242A9A4", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [51, "30DB36F5483E1EED93827DBF845B2E0C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [52, "F58F40BE47A971AF45C94F8E774FA959", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [53, "A872C382435C967D31F639BC792A8C7C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [54, "6FD710524711C2FB675409822F20C84C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [55, "D7FED734443084BD9CC322B2A02A8195", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [56, "8421359249F0AE6538674FADC6196BCC", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [57, "CEE419F24C4BD425B1221DBABC019925", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [58, "5E2CA8A84F3B2A39B092739D18611B23", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [59, "45CC801843BCB421039107B2112267A6", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [60, "C9292BC84BD8123269224ABBA8B007CB", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [61, "D0C568E94DC2EAAADE0303AC1A079AB8", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [62, "9369090F4F800E92F623348B8D94270A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)]];
+const EXCELDATA$3 = [["ID", "AssetId", "OffsetPos", "OffsetRot", "OffsetSca"], ["", "", "", "", ""], [1, "644370734B58F8B04E7A2D8A43FCD3EE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [2, "891797F24E233CAF385DACACC64680F0", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [3, "4A56A781407E60DD50D3AA99D081CA1C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [4, "6659C6AD46CD78FFEA5EFB91C134D1CC", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [5, "A6F38CEB4F04B0B1B7D9928279F28DA3", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [6, "EE34E6A943212AD3B03574AA0679AC3B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [7, "1945CD094B57EAAF4C14D0A15893D227", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [8, "BEEBC0634AE7923C680E3A92EBC84C5A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [9, "5DF5E0DE47734645DC1D33BF18048033", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [10, "9E4458E04AAD4FD7DBAF39AC2FF67EB1", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [11, "986B60A743C3FE5D8CF619A6AC385D61", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [12, "0927EBE64D3FD31A9A954A9850C84B20", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [13, "A82AF76F45A266FC48F22BA634E29B16", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [14, "4EC73D3D45F2685BF43F51B6F2B93F44", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [15, "66C48DC340E357CEB5D8A8827A6AE050", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [16, "94A4DABF454716C9B8432DB68087A1FA", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [17, "8174C2EB4A1246B6E90CC68E04E12B1D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [18, "6FC1EA7F4F4E9FDDA7E148893600295C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [19, "4F1E9ABA465877411AA3388818881456", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [20, "F0AB725F44F0C3359AE191A5CC701E0A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [21, "F1CAAE1B4389B691F9760E916FABE8FB", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [22, "5364B4264285BB3A6183499F05413A8E", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [23, "A695B5EC4AB1AD0456E566A8F087E2AC", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [24, "A8EC5D6A46D7D11B4F8702995A26A987", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [25, "C476BA6F4EAC4F200E4F06A79477C0E0", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [26, "0DA39A7848EC2217D777F5B4642E9A3C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [27, "934EABE24FA6BB77E26D009DEF94388A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [28, "592B8457417F36B609DC5A8B1273F8AE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [29, "4ECCECDA4FDB7038138AE9AD613F8A26", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [30, "7FED350342ADACEE9D0799A445261AE9", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [31, "0B2DA68345CECCD3596628BFB64D539E", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [32, "6F4BEDBD4203189019C3E78A9F0231E4", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [33, "E05FB1BC44DACF90C1ACE7A6523916E9", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [34, "D341C3FE42F26ECE9A939399EACE9844", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [35, "58F8D894443E7E24E472C5BEBD2CA30E", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [36, "488F7D57472DA0752885E894384B72D0", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [37, "582DB6CC4247090BE83235B4A1CA59A7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [38, "AFDED9BE47FBA1463542EBBFEF347A40", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [39, "E84D50A54E582F53DE60F08BB0E0C7F1", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [40, "9F736430461652281B89D6AF6B2EB31B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [41, "55FA55D14C4BE46A2174CDB864D6C3D8", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [42, "57EF1B594111E0C566DF1A92ECB9A955", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [43, "0267ED4F447B0987C109C79DB9B694DB", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [44, "FF6419E44D7B3CDB1EFDB6AD9C9D509B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [45, "D045390F4D2D6D600C7CAEA47C8DBC4E", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [46, "BA4DAD794B1476B537B8D692C169DC49", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [47, "3C25623141F0BB7A80F4DC9FE57C933D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [48, "31839B5144E8030D2DEC9B9212A15BE7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [49, "399F36764233BCFF94E7BBA86FC4BC36", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [50, "DEB37F6041D7A0999483FE970120499E", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [51, "19D037BD472BA399F8B80DBD9226E058", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [52, "593B9AB64F4E9FD436FF4BB129AB6B0B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [53, "B5DFDDEB474EF39DAB8F5A9AD09D3B99", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [54, "EC19B5A04084580B774DE9BC0A268A7C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)]];
 class MorphConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$3);
@@ -2311,7 +2319,7 @@ CoinPanel_Generate = __decorate([
 ], CoinPanel_Generate);
 var CoinPanel_Generate$1 = CoinPanel_Generate;
 
-var foreign76 = /*#__PURE__*/Object.freeze({
+var foreign77 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CoinPanel_Generate$1
 });
@@ -2391,7 +2399,7 @@ AdPanel_Generate = __decorate([
 ], AdPanel_Generate);
 var AdPanel_Generate$1 = AdPanel_Generate;
 
-var foreign75 = /*#__PURE__*/Object.freeze({
+var foreign76 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AdPanel_Generate$1
 });
@@ -3094,7 +3102,7 @@ HUDPanel_Generate = __decorate([
 ], HUDPanel_Generate);
 var HUDPanel_Generate$1 = HUDPanel_Generate;
 
-var foreign80 = /*#__PURE__*/Object.freeze({
+var foreign81 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDPanel_Generate$1
 });
@@ -3170,7 +3178,7 @@ KillTipItem_Generate = __decorate([
 ], KillTipItem_Generate);
 var KillTipItem_Generate$1 = KillTipItem_Generate;
 
-var foreign81 = /*#__PURE__*/Object.freeze({
+var foreign82 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: KillTipItem_Generate$1
 });
@@ -4221,7 +4229,7 @@ var MapEx;
     MapEx.copy = copy;
 })(MapEx || (MapEx = {}));
 
-var foreign67 = /*#__PURE__*/Object.freeze({
+var foreign68 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get MapEx () { return MapEx; }
 });
@@ -4406,7 +4414,7 @@ ShopPanel_Generate = __decorate([
 ], ShopPanel_Generate);
 var ShopPanel_Generate$1 = ShopPanel_Generate;
 
-var foreign87 = /*#__PURE__*/Object.freeze({
+var foreign88 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel_Generate$1
 });
@@ -4599,7 +4607,7 @@ ShopItem_Generate = __decorate([
 ], ShopItem_Generate);
 var ShopItem_Generate$1 = ShopItem_Generate;
 
-var foreign86 = /*#__PURE__*/Object.freeze({
+var foreign87 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopItem_Generate$1
 });
@@ -5451,7 +5459,7 @@ ActivityPanel_Generate = __decorate([
 ], ActivityPanel_Generate);
 var ActivityPanel_Generate$1 = ActivityPanel_Generate;
 
-var foreign74 = /*#__PURE__*/Object.freeze({
+var foreign75 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ActivityPanel_Generate$1
 });
@@ -5991,7 +5999,7 @@ class MorphModuleS extends ModuleS {
     }
     // private i: number = 1;
     async spawnGo(player) {
-        let randomId = Utils.randomInt(1, 62);
+        let randomId = Utils.randomInt(1, 54);
         // console.error(`randomId:${randomId}`);
         // let morphElement = GameConfig.Morph.getElement(this.i++);
         let morphElement = GameConfig.Morph.getElement(randomId);
@@ -6350,7 +6358,7 @@ RankPanel_Generate = __decorate([
 ], RankPanel_Generate);
 var RankPanel_Generate$1 = RankPanel_Generate;
 
-var foreign83 = /*#__PURE__*/Object.freeze({
+var foreign84 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankPanel_Generate$1
 });
@@ -6427,7 +6435,7 @@ RoomItem_Generate = __decorate([
 ], RoomItem_Generate);
 var RoomItem_Generate$1 = RoomItem_Generate;
 
-var foreign84 = /*#__PURE__*/Object.freeze({
+var foreign85 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RoomItem_Generate$1
 });
@@ -6531,7 +6539,7 @@ WorldItem_Generate = __decorate([
 ], WorldItem_Generate);
 var WorldItem_Generate$1 = WorldItem_Generate;
 
-var foreign85 = /*#__PURE__*/Object.freeze({
+var foreign86 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldItem_Generate$1
 });
@@ -7114,7 +7122,7 @@ TeamPanel_Generate = __decorate([
 ], TeamPanel_Generate);
 var TeamPanel_Generate$1 = TeamPanel_Generate;
 
-var foreign91 = /*#__PURE__*/Object.freeze({
+var foreign92 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamPanel_Generate$1
 });
@@ -7176,7 +7184,7 @@ TeamItem_Generate = __decorate([
 ], TeamItem_Generate);
 var TeamItem_Generate$1 = TeamItem_Generate;
 
-var foreign90 = /*#__PURE__*/Object.freeze({
+var foreign91 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamItem_Generate$1
 });
@@ -8236,7 +8244,7 @@ function PrefabReport(reportId = null) {
     };
 }
 
-var foreign68 = /*#__PURE__*/Object.freeze({
+var foreign69 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get PrefabEvent () { return PrefabEvent; },
     PrefabReport: PrefabReport
@@ -9519,7 +9527,7 @@ TaskItem_Generate = __decorate([
 ], TaskItem_Generate);
 var TaskItem_Generate$1 = TaskItem_Generate;
 
-var foreign88 = /*#__PURE__*/Object.freeze({
+var foreign89 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskItem_Generate$1
 });
@@ -9632,7 +9640,7 @@ TaskPanel_Generate = __decorate([
 ], TaskPanel_Generate);
 var TaskPanel_Generate$1 = TaskPanel_Generate;
 
-var foreign89 = /*#__PURE__*/Object.freeze({
+var foreign90 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskPanel_Generate$1
 });
@@ -10423,7 +10431,7 @@ GMHUD_Generate = __decorate([
 ], GMHUD_Generate);
 var GMHUD_Generate$1 = GMHUD_Generate;
 
-var foreign77 = /*#__PURE__*/Object.freeze({
+var foreign78 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GMHUD_Generate$1
 });
@@ -10483,7 +10491,7 @@ GMItem_Generate = __decorate([
 ], GMItem_Generate);
 var GMItem_Generate$1 = GMItem_Generate;
 
-var foreign78 = /*#__PURE__*/Object.freeze({
+var foreign79 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GMItem_Generate$1
 });
@@ -10881,7 +10889,7 @@ WeaponUI_Generate = __decorate([
 ], WeaponUI_Generate);
 var WeaponUI_Generate$1 = WeaponUI_Generate;
 
-var foreign79 = /*#__PURE__*/Object.freeze({
+var foreign80 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WeaponUI_Generate$1
 });
@@ -12828,9 +12836,9 @@ let Npc = class Npc extends Script {
         this.setNpcDescriptionAndGun();
     }
     async setNpcDescriptionAndGun() {
-        let ran = Utils.randomInt(1, 2);
-        if (ran == 1) {
-            let morphElement = GameConfig.Morph.getElement(Utils.randomInt(1, 62));
+        let ran = Utils.randomInt(1, 3);
+        if (ran > 1) {
+            let morphElement = GameConfig.Morph.getElement(Utils.randomInt(1, 54));
             let assetId = morphElement.AssetId;
             await Utils.asyncDownloadAsset(assetId);
             if (this.model)
@@ -13435,6 +13443,77 @@ var foreign65 = /*#__PURE__*/Object.freeze({
     default: FreeCamera$1
 });
 
+let JumpGame = class JumpGame extends Script {
+    constructor() {
+        super(...arguments);
+        /**------------------------------------------- 客户端 ------------------------------------------------ */
+        this.confirmPanel = null;
+        this.jumpTrigger = null;
+        /**------------------------------------------- 服务端 ------------------------------------------------ */
+    }
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+        if (mw.SystemUtil.isClient()) {
+            this.useUpdate = false;
+            this.onStartC();
+        }
+        else if (mw.SystemUtil.isServer()) {
+            this.useUpdate = false;
+            this.onStartS();
+        }
+    }
+    /**
+     * 周期函数 每帧执行
+     * 此函数执行需要将this.useUpdate赋值为true
+     * @param dt 当前帧与上一帧的延迟 / 秒
+     */
+    onUpdate(dt) {
+        if (mw.SystemUtil.isClient()) {
+            this.onUpdateC(dt);
+        }
+        else if (mw.SystemUtil.isServer()) {
+            this.onUpdateS(dt);
+        }
+    }
+    get getConfirmPanel() {
+        if (this.confirmPanel == null) {
+            this.confirmPanel = UIService.getUI(ConfirmPanel);
+        }
+        return this.confirmPanel;
+    }
+    /**客户端的OnStart */
+    onStartC() {
+        this.jumpTrigger = this.gameObject;
+        this.jumpTrigger.onEnter.add((character) => {
+            if (Player.localPlayer.character != character)
+                return;
+            this.getConfirmPanel.confirmTips(() => {
+                mw.RouteService.enterNewGame("P_1daa99958ce8cf1a9b493d98c2616f805f78f1a2");
+            }, "前往 枪战躲猫猫-废弃医院", "前往", "取消");
+        });
+    }
+    /**客户端的update */
+    onUpdateC(dt) {
+    }
+    /**------------------------------------------- 客户端 ------------------------------------------------ */
+    /**------------------------------------------- 服务端 ------------------------------------------------ */
+    /**服务端的OnStart */
+    onStartS() {
+    }
+    /**服务端的update */
+    onUpdateS(dt) {
+    }
+};
+JumpGame = __decorate([
+    Component
+], JumpGame);
+var JumpGame$1 = JumpGame;
+
+var foreign67 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: JumpGame$1
+});
+
 /**
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
@@ -13498,7 +13577,7 @@ SecondNoticeItem_Generate = __decorate([
 ], SecondNoticeItem_Generate);
 var SecondNoticeItem_Generate$1 = SecondNoticeItem_Generate;
 
-var foreign72 = /*#__PURE__*/Object.freeze({
+var foreign73 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SecondNoticeItem_Generate$1
 });
@@ -13547,7 +13626,7 @@ RadarPanel_Generate = __decorate([
 ], RadarPanel_Generate);
 var RadarPanel_Generate$1 = RadarPanel_Generate;
 
-var foreign82 = /*#__PURE__*/Object.freeze({
+var foreign83 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadarPanel_Generate$1
 });
@@ -13619,31 +13698,32 @@ const MWModuleMap = {
      '761A5E774007E1CA28720DB572DA7A45': foreign64,
      '3A19265E439F9BC57DD9188415D69D90': foreign65,
      'ACB26C334F3E66726611CAAACE1B29F0': foreign66,
-     'A30FDC1848F2A2BB4F412FB42FC6A123': foreign67,
-     'CD82A2E448FA71DD00529A8B5261ED6C': foreign68,
-     '7BC3DC9143A0AC886B7C69BF0BA72582': foreign69,
-     '0ADADD634CB1574E2CE91AA7D15972BF': foreign70,
-     'BF72AC404FF17C439A9112B6B4B32279': foreign71,
-     'A012B90749779FBE8DE607A2B99C7BBD': foreign72,
-     '82E080274DC72CA9D26CFF80275210C8': foreign73,
-     'B445B07141F3B81911589FB86B887D16': foreign74,
-     '3738A163431B2780E684368D4B44D659': foreign75,
-     '9A05761A4E0937CD96EDBD98F5CF127C': foreign76,
-     '69B56DE846DD7777A34F73BAAD388917': foreign77,
-     'C8403C274C4A11E56CBA4ABE1BB56FE9': foreign78,
-     'EF8CF652443106FAD829B9B7D44FDF4A': foreign79,
-     '6378A8BD4992C396F0BF5795C241272A': foreign80,
-     'E65657ED48A221438A440EB8FB55AB3A': foreign81,
-     '4BAAB5D2447B37D97384719CE67C9E72': foreign82,
-     '4B7AD5B5415D6B34A20794B83D33C8D4': foreign83,
-     '8B4959C3457E9E607BFD83A45E3B0B4E': foreign84,
-     '61C409DE43B68BAD7C2712AC407F6B85': foreign85,
-     'BD732EF648AD01E5A18863865EF79E7F': foreign86,
-     'D7D5128A42442933D108809A874A1F67': foreign87,
-     '5951240940FFACB56FF8EB8F140D19E5': foreign88,
-     'E0AAC56B4C54E8B2B8B946A3EB4D60C5': foreign89,
-     '54FA95C94AC4FD0AE2C3AF985B5862A7': foreign90,
-     '181ACB1C48C92C4E510D6B94FA31BD79': foreign91,
+     '3B3B427741BD7AB2AD3A71BF1BB1CA80': foreign67,
+     'A30FDC1848F2A2BB4F412FB42FC6A123': foreign68,
+     'CD82A2E448FA71DD00529A8B5261ED6C': foreign69,
+     '7BC3DC9143A0AC886B7C69BF0BA72582': foreign70,
+     '0ADADD634CB1574E2CE91AA7D15972BF': foreign71,
+     'BF72AC404FF17C439A9112B6B4B32279': foreign72,
+     'A012B90749779FBE8DE607A2B99C7BBD': foreign73,
+     '82E080274DC72CA9D26CFF80275210C8': foreign74,
+     'B445B07141F3B81911589FB86B887D16': foreign75,
+     '3738A163431B2780E684368D4B44D659': foreign76,
+     '9A05761A4E0937CD96EDBD98F5CF127C': foreign77,
+     '69B56DE846DD7777A34F73BAAD388917': foreign78,
+     'C8403C274C4A11E56CBA4ABE1BB56FE9': foreign79,
+     'EF8CF652443106FAD829B9B7D44FDF4A': foreign80,
+     '6378A8BD4992C396F0BF5795C241272A': foreign81,
+     'E65657ED48A221438A440EB8FB55AB3A': foreign82,
+     '4BAAB5D2447B37D97384719CE67C9E72': foreign83,
+     '4B7AD5B5415D6B34A20794B83D33C8D4': foreign84,
+     '8B4959C3457E9E607BFD83A45E3B0B4E': foreign85,
+     '61C409DE43B68BAD7C2712AC407F6B85': foreign86,
+     'BD732EF648AD01E5A18863865EF79E7F': foreign87,
+     'D7D5128A42442933D108809A874A1F67': foreign88,
+     '5951240940FFACB56FF8EB8F140D19E5': foreign89,
+     'E0AAC56B4C54E8B2B8B946A3EB4D60C5': foreign90,
+     '54FA95C94AC4FD0AE2C3AF985B5862A7': foreign91,
+     '181ACB1C48C92C4E510D6B94FA31BD79': foreign92,
 };
 const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/ConfirmPanel"],
 [foreign2 || {}, "JavaScripts/common/notice/Notice"],
@@ -13711,31 +13791,32 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/ConfirmP
 [foreign64 || {}, "JavaScripts/tools/FlyText"],
 [foreign65 || {}, "JavaScripts/tools/FreeCamera"],
 [foreign66 || {}, "JavaScripts/tools/GlobalData"],
-[foreign67 || {}, "JavaScripts/tools/MapEx"],
-[foreign68 || {}, "JavaScripts/tools/PrefabEvent"],
-[foreign69 || {}, "JavaScripts/tools/Utils"],
-[foreign70 || {}, "JavaScripts/ui-generate/common/ConfirmPanel_generate"],
-[foreign71 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
-[foreign72 || {}, "JavaScripts/ui-generate/common/notice/SecondNoticeItem_generate"],
-[foreign73 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
-[foreign74 || {}, "JavaScripts/ui-generate/module/ActivityModule/ActivityPanel_generate"],
-[foreign75 || {}, "JavaScripts/ui-generate/module/AdModule/AdPanel_generate"],
-[foreign76 || {}, "JavaScripts/ui-generate/module/CoinModule/CoinPanel_generate"],
-[foreign77 || {}, "JavaScripts/ui-generate/module/GMModule/GMHUD_generate"],
-[foreign78 || {}, "JavaScripts/ui-generate/module/GMModule/GMItem_generate"],
-[foreign79 || {}, "JavaScripts/ui-generate/module/GunModule/WeaponUI_generate"],
-[foreign80 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
-[foreign81 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
-[foreign82 || {}, "JavaScripts/ui-generate/module/RadarModule/RadarPanel_generate"],
-[foreign83 || {}, "JavaScripts/ui-generate/module/RankModule/RankPanel_generate"],
-[foreign84 || {}, "JavaScripts/ui-generate/module/RankModule/RoomItem_generate"],
-[foreign85 || {}, "JavaScripts/ui-generate/module/RankModule/WorldItem_generate"],
-[foreign86 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
-[foreign87 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
-[foreign88 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
-[foreign89 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
-[foreign90 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamItem_generate"],
-[foreign91 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamPanel_generate"]]);
+[foreign67 || {}, "JavaScripts/tools/JumpGame"],
+[foreign68 || {}, "JavaScripts/tools/MapEx"],
+[foreign69 || {}, "JavaScripts/tools/PrefabEvent"],
+[foreign70 || {}, "JavaScripts/tools/Utils"],
+[foreign71 || {}, "JavaScripts/ui-generate/common/ConfirmPanel_generate"],
+[foreign72 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
+[foreign73 || {}, "JavaScripts/ui-generate/common/notice/SecondNoticeItem_generate"],
+[foreign74 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
+[foreign75 || {}, "JavaScripts/ui-generate/module/ActivityModule/ActivityPanel_generate"],
+[foreign76 || {}, "JavaScripts/ui-generate/module/AdModule/AdPanel_generate"],
+[foreign77 || {}, "JavaScripts/ui-generate/module/CoinModule/CoinPanel_generate"],
+[foreign78 || {}, "JavaScripts/ui-generate/module/GMModule/GMHUD_generate"],
+[foreign79 || {}, "JavaScripts/ui-generate/module/GMModule/GMItem_generate"],
+[foreign80 || {}, "JavaScripts/ui-generate/module/GunModule/WeaponUI_generate"],
+[foreign81 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
+[foreign82 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
+[foreign83 || {}, "JavaScripts/ui-generate/module/RadarModule/RadarPanel_generate"],
+[foreign84 || {}, "JavaScripts/ui-generate/module/RankModule/RankPanel_generate"],
+[foreign85 || {}, "JavaScripts/ui-generate/module/RankModule/RoomItem_generate"],
+[foreign86 || {}, "JavaScripts/ui-generate/module/RankModule/WorldItem_generate"],
+[foreign87 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
+[foreign88 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
+[foreign89 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
+[foreign90 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
+[foreign91 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamItem_generate"],
+[foreign92 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamPanel_generate"]]);
 
 exports.MWFileMapping = MWFileMapping;
 exports.MWModuleMap = MWModuleMap;
