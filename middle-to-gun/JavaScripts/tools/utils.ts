@@ -252,6 +252,8 @@ export default class Utils {
     }
 
     public static showRewardAd(callback: () => void): void {
+        if (callback) callback();
+        return;
         mw.AdsService.isReady(mw.AdsType.Reward, (isReady: boolean) => {
             let isGetReward = false;
             if (isReady) {
@@ -266,7 +268,7 @@ export default class Utils {
                     if (state == AdsState.Close) {
                         mw.TimeUtil.delaySecond(1).then(() => {
                             if (isGetReward) {
-                                if (callback) callback();
+
                                 // Notice.showDownNotice("成功获得奖励");
                             }
                         });
