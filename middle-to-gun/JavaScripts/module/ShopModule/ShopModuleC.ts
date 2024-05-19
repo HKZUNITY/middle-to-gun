@@ -65,6 +65,10 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
     }
 
     private bindOpenShopAction(): void {
+        if (this.getHUDModuleC.getIsMorph && !this.localPlayer.character.getVisibility()) {
+            Notice.showDownNotice("变身状态不可打开商店");
+            return;
+        }
         this.getShopPanel.show();
         this.onSwitchCameraAction.call(1);
         Event.dispatchToLocal(EventType.OnOffMainHUD, false);

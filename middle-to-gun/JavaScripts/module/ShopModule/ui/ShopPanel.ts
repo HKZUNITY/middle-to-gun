@@ -95,6 +95,13 @@ export default class ShopPanel extends ShopPanel_Generate {
 				this.shopItems.push(shopItem);
 			}
 		}
+
+		if (this.currentShopType == ShopType.Role) {
+			Utils.setWidgetVisibility(this.shopItems[7].uiObject, mw.SlateVisibility.Collapsed);
+			Utils.setWidgetVisibility(this.shopItems[9].uiObject, mw.SlateVisibility.Collapsed);
+			Utils.setWidgetVisibility(this.shopItems[13].uiObject, mw.SlateVisibility.Collapsed);
+			Utils.setWidgetVisibility(this.shopItems[32].uiObject, mw.SlateVisibility.Collapsed);
+		}
 	}
 
 	protected onShow(...params: any[]): void {
