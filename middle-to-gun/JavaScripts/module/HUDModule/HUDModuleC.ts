@@ -236,7 +236,13 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
         this.onMorphAction.add(this.addMorphAction.bind(this));
     }
 
+    public get getIsMorph(): boolean {
+        return this.isMorph;
+    }
+
+    private isMorph: boolean = false;
     private addMorphAction(isMorph: boolean): void {
+        this.isMorph = isMorph;
         Event.dispatchToLocal(EventType.OnOffWeaponUI, isMorph);
         if (!isMorph) Event.dispatchToLocal(EventType.TryOutGun);
     }
