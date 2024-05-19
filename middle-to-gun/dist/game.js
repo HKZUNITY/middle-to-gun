@@ -86,7 +86,7 @@ NoticeView_Generate = __decorate([
 ], NoticeView_Generate);
 var NoticeView_Generate$1 = NoticeView_Generate;
 
-var foreign71 = /*#__PURE__*/Object.freeze({
+var foreign72 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NoticeView_Generate$1
 });
@@ -160,7 +160,7 @@ TopNoticeItem_Generate = __decorate([
 ], TopNoticeItem_Generate);
 var TopNoticeItem_Generate$1 = TopNoticeItem_Generate;
 
-var foreign73 = /*#__PURE__*/Object.freeze({
+var foreign74 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TopNoticeItem_Generate$1
 });
@@ -1797,7 +1797,7 @@ function cubicBezier(p1x, p1y, p2x, p2y) {
     return solve;
 }
 
-var foreign69 = /*#__PURE__*/Object.freeze({
+var foreign70 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     cubicBezier: cubicBezier,
     default: Utils
@@ -1895,7 +1895,7 @@ ConfirmPanel_Generate = __decorate([
 ], ConfirmPanel_Generate);
 var ConfirmPanel_Generate$1 = ConfirmPanel_Generate;
 
-var foreign70 = /*#__PURE__*/Object.freeze({
+var foreign71 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ConfirmPanel_Generate$1
 });
@@ -2106,7 +2106,7 @@ var foreign9 = /*#__PURE__*/Object.freeze({
     MorphConfig: MorphConfig
 });
 
-const EXCELDATA$2 = [["ID", "ROLEID", "PRICETYPE", "PRICE", "NAME"], ["", "", "", "", ""], [1, "181562", 1, [1, 5888], "兜帽男"], [2, "143400", 1, [1, 8888], "双马尾女"], [3, "142292", 1, [1, 10888], "男战士"], [4, "142272", 1, [1, 13888], "机甲少女"], [5, "142293", 1, [1, 15888], "男骑士"], [6, "142255", 1, [1, 18888], "纳米机甲女性"], [7, "219915", 1, [2, 20888], "赛博少年"], [8, "226379", 1, [2, 20888], "赛博少年"], [9, "219912", 1, [2, 28888], "赛博少女"], [10, "226386", 1, [2, 28888], "赛博少女"], [11, "266641", 1, [3, 30888], "一定锅少年"], [12, "267183", 1, [3, 30888], "求神少年"], [13, "264622", 1, [3, 35888], "一定锅少女"], [14, "266861", 1, [3, 38888], "求神少女"], [15, "142302", 1, [3, 38888], "宝石铠甲男"], [16, "142303", 1, [3, 38888], "铠甲男战士"], [17, "142396", 1, [3, 38888], "黑人男纳米机甲"], [18, "142397", 1, [3, 38888], "白人男纳米机甲"], [19, "142398", 1, [3, 38888], "白银骑士"], [20, "142906", 1, [4, 40888], "鹰眼"], [21, "142895", 1, [4, 40888], "洛基"], [22, "142886", 1, [4, 43888], "毒液"], [23, "142905", 1, [4, 43888], "蚁人"], [24, "142898", 1, [4, 45888], "美国队长"], [25, "142885", 1, [4, 45888], "超人"], [26, "142900", 1, [4, 45888], "奇异博士"], [27, "142901", 1, [4, 45888], "闪电侠"], [28, "142887", 1, [4, 48888], "恶灵骑士"], [29, "142888", 1, [4, 48888], "钢铁大侠"], [30, "222475", 1, [5, 50888], "风衣女"], [31, "219916", 1, [5, 55888], "汉服少女"], [32, "266860", 1, [5, 55888], "时尚少女"], [33, "226382", 1, [5, 55888], "潮流少女"], [34, "222476", 1, [5, 58888], "古代书生"]];
+const EXCELDATA$2 = [["ID", "ROLEID", "PRICETYPE", "PRICE", "NAME"], ["", "", "", "", ""], [1, "181562", 1, [1, 5888], "兜帽男"], [2, "143400", 1, [1, 8888], "双马尾女"], [3, "142292", 1, [1, 10888], "男战士"], [4, "142272", 1, [1, 13888], "机甲少女"], [5, "142293", 1, [1, 15888], "男骑士"], [6, "142255", 1, [1, 18888], "纳米机甲女性"], [7, "219915", 1, [2, 20888], "赛博少年"], [8, "226379", 1, [2, 20888], "赛博少年"], [9, "219912", 1, [2, 28888], "赛博少女"], [10, "226386", 1, [2, 28888], "赛博少女"], [11, "266641", 1, [3, 30888], "一定锅少年"], [12, "267183", 1, [3, 30888], "求神少年"], [13, "264622", 1, [3, 35888], "一定锅少女"], [14, "266861", 1, [3, 38888], "求神少女"], [15, "142302", 1, [3, 38888], "宝石铠甲男"], [16, "142303", 1, [3, 38888], "铠甲男战士"], [17, "142396", 1, [3, 38888], "黑人男纳米机甲"], [18, "142397", 1, [3, 38888], "白人男纳米机甲"], [19, "142398", 1, [3, 38888], "白银骑士"], [20, "142906", 1, [4, 40888], "鹰战士"], [21, "142895", 1, [4, 40888], "战士"], [22, "142886", 1, [4, 43888], "毒液怪人"], [23, "142905", 1, [4, 43888], "蚁侠士"], [24, "142898", 1, [4, 45888], "最强队长"], [25, "142885", 1, [4, 45888], "超帅侠"], [26, "142900", 1, [4, 45888], "奇异战士"], [27, "142901", 1, [4, 45888], "闪电怪"], [28, "142887", 1, [4, 48888], "恶灵骷髅"], [29, "142888", 1, [4, 48888], "铁人"], [30, "222475", 1, [5, 50888], "风衣女"], [31, "219916", 1, [5, 55888], "汉服少女"], [32, "266860", 1, [5, 55888], "时尚少女"], [33, "226382", 1, [5, 55888], "潮流少女"], [34, "222476", 1, [5, 58888], "古代书生"]];
 class ROLEConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$2);
@@ -2311,7 +2311,7 @@ CoinPanel_Generate = __decorate([
 ], CoinPanel_Generate);
 var CoinPanel_Generate$1 = CoinPanel_Generate;
 
-var foreign76 = /*#__PURE__*/Object.freeze({
+var foreign77 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CoinPanel_Generate$1
 });
@@ -2391,7 +2391,7 @@ AdPanel_Generate = __decorate([
 ], AdPanel_Generate);
 var AdPanel_Generate$1 = AdPanel_Generate;
 
-var foreign75 = /*#__PURE__*/Object.freeze({
+var foreign76 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AdPanel_Generate$1
 });
@@ -3094,7 +3094,7 @@ HUDPanel_Generate = __decorate([
 ], HUDPanel_Generate);
 var HUDPanel_Generate$1 = HUDPanel_Generate;
 
-var foreign80 = /*#__PURE__*/Object.freeze({
+var foreign81 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDPanel_Generate$1
 });
@@ -3170,7 +3170,7 @@ KillTipItem_Generate = __decorate([
 ], KillTipItem_Generate);
 var KillTipItem_Generate$1 = KillTipItem_Generate;
 
-var foreign81 = /*#__PURE__*/Object.freeze({
+var foreign82 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: KillTipItem_Generate$1
 });
@@ -3875,6 +3875,7 @@ class HUDModuleC extends ModuleC {
         this.currentBgmVolume = 1;
         this.currentSoundVolume = 1;
         this.clickId = null;
+        this.isMorph = false;
         //#endregion
     }
     get getHUDPanel() {
@@ -4069,7 +4070,11 @@ class HUDModuleC extends ModuleC {
     initMorphAction() {
         this.onMorphAction.add(this.addMorphAction.bind(this));
     }
+    get getIsMorph() {
+        return this.isMorph;
+    }
     addMorphAction(isMorph) {
+        this.isMorph = isMorph;
         Event.dispatchToLocal(EventType.OnOffWeaponUI, isMorph);
         if (!isMorph)
             Event.dispatchToLocal(EventType.TryOutGun);
@@ -4221,7 +4226,7 @@ var MapEx;
     MapEx.copy = copy;
 })(MapEx || (MapEx = {}));
 
-var foreign67 = /*#__PURE__*/Object.freeze({
+var foreign68 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get MapEx () { return MapEx; }
 });
@@ -4406,7 +4411,7 @@ ShopPanel_Generate = __decorate([
 ], ShopPanel_Generate);
 var ShopPanel_Generate$1 = ShopPanel_Generate;
 
-var foreign87 = /*#__PURE__*/Object.freeze({
+var foreign88 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel_Generate$1
 });
@@ -4599,7 +4604,7 @@ ShopItem_Generate = __decorate([
 ], ShopItem_Generate);
 var ShopItem_Generate$1 = ShopItem_Generate;
 
-var foreign86 = /*#__PURE__*/Object.freeze({
+var foreign87 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopItem_Generate$1
 });
@@ -4941,6 +4946,12 @@ class ShopPanel extends ShopPanel_Generate$1 {
                 this.shopItems.push(shopItem);
             }
         }
+        if (this.currentShopType == ShopType.Role) {
+            Utils.setWidgetVisibility(this.shopItems[7].uiObject, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.shopItems[9].uiObject, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.shopItems[13].uiObject, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.shopItems[32].uiObject, mw.SlateVisibility.Collapsed);
+        }
     }
     onShow(...params) {
         this.updateShopItem();
@@ -5038,6 +5049,10 @@ class ShopModuleC extends ModuleC {
         Event.addLocalListener(EventType.TryOutGun, this.setCharacterGun.bind(this));
     }
     bindOpenShopAction() {
+        if (this.getHUDModuleC.getIsMorph && !this.localPlayer.character.getVisibility()) {
+            Notice.showDownNotice("变身状态不可打开商店");
+            return;
+        }
         this.getShopPanel.show();
         this.onSwitchCameraAction.call(1);
         Event.dispatchToLocal(EventType.OnOffMainHUD, false);
@@ -5451,7 +5466,7 @@ ActivityPanel_Generate = __decorate([
 ], ActivityPanel_Generate);
 var ActivityPanel_Generate$1 = ActivityPanel_Generate;
 
-var foreign74 = /*#__PURE__*/Object.freeze({
+var foreign75 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ActivityPanel_Generate$1
 });
@@ -6350,7 +6365,7 @@ RankPanel_Generate = __decorate([
 ], RankPanel_Generate);
 var RankPanel_Generate$1 = RankPanel_Generate;
 
-var foreign83 = /*#__PURE__*/Object.freeze({
+var foreign84 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankPanel_Generate$1
 });
@@ -6427,7 +6442,7 @@ RoomItem_Generate = __decorate([
 ], RoomItem_Generate);
 var RoomItem_Generate$1 = RoomItem_Generate;
 
-var foreign84 = /*#__PURE__*/Object.freeze({
+var foreign85 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RoomItem_Generate$1
 });
@@ -6531,7 +6546,7 @@ WorldItem_Generate = __decorate([
 ], WorldItem_Generate);
 var WorldItem_Generate$1 = WorldItem_Generate;
 
-var foreign85 = /*#__PURE__*/Object.freeze({
+var foreign86 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldItem_Generate$1
 });
@@ -7114,7 +7129,7 @@ TeamPanel_Generate = __decorate([
 ], TeamPanel_Generate);
 var TeamPanel_Generate$1 = TeamPanel_Generate;
 
-var foreign91 = /*#__PURE__*/Object.freeze({
+var foreign92 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamPanel_Generate$1
 });
@@ -7176,7 +7191,7 @@ TeamItem_Generate = __decorate([
 ], TeamItem_Generate);
 var TeamItem_Generate$1 = TeamItem_Generate;
 
-var foreign90 = /*#__PURE__*/Object.freeze({
+var foreign91 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamItem_Generate$1
 });
@@ -8236,7 +8251,7 @@ function PrefabReport(reportId = null) {
     };
 }
 
-var foreign68 = /*#__PURE__*/Object.freeze({
+var foreign69 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get PrefabEvent () { return PrefabEvent; },
     PrefabReport: PrefabReport
@@ -9519,7 +9534,7 @@ TaskItem_Generate = __decorate([
 ], TaskItem_Generate);
 var TaskItem_Generate$1 = TaskItem_Generate;
 
-var foreign88 = /*#__PURE__*/Object.freeze({
+var foreign89 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskItem_Generate$1
 });
@@ -9632,7 +9647,7 @@ TaskPanel_Generate = __decorate([
 ], TaskPanel_Generate);
 var TaskPanel_Generate$1 = TaskPanel_Generate;
 
-var foreign89 = /*#__PURE__*/Object.freeze({
+var foreign90 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskPanel_Generate$1
 });
@@ -10423,7 +10438,7 @@ GMHUD_Generate = __decorate([
 ], GMHUD_Generate);
 var GMHUD_Generate$1 = GMHUD_Generate;
 
-var foreign77 = /*#__PURE__*/Object.freeze({
+var foreign78 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GMHUD_Generate$1
 });
@@ -10483,7 +10498,7 @@ GMItem_Generate = __decorate([
 ], GMItem_Generate);
 var GMItem_Generate$1 = GMItem_Generate;
 
-var foreign78 = /*#__PURE__*/Object.freeze({
+var foreign79 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GMItem_Generate$1
 });
@@ -10881,7 +10896,7 @@ WeaponUI_Generate = __decorate([
 ], WeaponUI_Generate);
 var WeaponUI_Generate$1 = WeaponUI_Generate;
 
-var foreign79 = /*#__PURE__*/Object.freeze({
+var foreign80 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WeaponUI_Generate$1
 });
@@ -13435,6 +13450,77 @@ var foreign65 = /*#__PURE__*/Object.freeze({
     default: FreeCamera$1
 });
 
+let JumpGame = class JumpGame extends Script {
+    constructor() {
+        super(...arguments);
+        /**------------------------------------------- 客户端 ------------------------------------------------ */
+        this.confirmPanel = null;
+        this.jumpTrigger = null;
+        /**------------------------------------------- 服务端 ------------------------------------------------ */
+    }
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+        if (mw.SystemUtil.isClient()) {
+            this.useUpdate = false;
+            this.onStartC();
+        }
+        else if (mw.SystemUtil.isServer()) {
+            this.useUpdate = false;
+            this.onStartS();
+        }
+    }
+    /**
+     * 周期函数 每帧执行
+     * 此函数执行需要将this.useUpdate赋值为true
+     * @param dt 当前帧与上一帧的延迟 / 秒
+     */
+    onUpdate(dt) {
+        if (mw.SystemUtil.isClient()) {
+            this.onUpdateC(dt);
+        }
+        else if (mw.SystemUtil.isServer()) {
+            this.onUpdateS(dt);
+        }
+    }
+    get getConfirmPanel() {
+        if (this.confirmPanel == null) {
+            this.confirmPanel = UIService.getUI(ConfirmPanel);
+        }
+        return this.confirmPanel;
+    }
+    /**客户端的OnStart */
+    onStartC() {
+        this.jumpTrigger = this.gameObject;
+        this.jumpTrigger.onEnter.add((character) => {
+            if (Player.localPlayer.character != character)
+                return;
+            this.getConfirmPanel.confirmTips(() => {
+                mw.RouteService.enterNewGame("P_3440ed187d6a2079f7a42e496389c0a43267d222");
+            }, "前往 枪战躲猫猫-私人别墅", "前往", "取消");
+        });
+    }
+    /**客户端的update */
+    onUpdateC(dt) {
+    }
+    /**------------------------------------------- 客户端 ------------------------------------------------ */
+    /**------------------------------------------- 服务端 ------------------------------------------------ */
+    /**服务端的OnStart */
+    onStartS() {
+    }
+    /**服务端的update */
+    onUpdateS(dt) {
+    }
+};
+JumpGame = __decorate([
+    Component
+], JumpGame);
+var JumpGame$1 = JumpGame;
+
+var foreign67 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: JumpGame$1
+});
+
 /**
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
@@ -13498,7 +13584,7 @@ SecondNoticeItem_Generate = __decorate([
 ], SecondNoticeItem_Generate);
 var SecondNoticeItem_Generate$1 = SecondNoticeItem_Generate;
 
-var foreign72 = /*#__PURE__*/Object.freeze({
+var foreign73 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SecondNoticeItem_Generate$1
 });
@@ -13547,7 +13633,7 @@ RadarPanel_Generate = __decorate([
 ], RadarPanel_Generate);
 var RadarPanel_Generate$1 = RadarPanel_Generate;
 
-var foreign82 = /*#__PURE__*/Object.freeze({
+var foreign83 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadarPanel_Generate$1
 });
@@ -13619,31 +13705,32 @@ const MWModuleMap = {
      '761A5E774007E1CA28720DB572DA7A45': foreign64,
      '3A19265E439F9BC57DD9188415D69D90': foreign65,
      'ACB26C334F3E66726611CAAACE1B29F0': foreign66,
-     'A30FDC1848F2A2BB4F412FB42FC6A123': foreign67,
-     'CD82A2E448FA71DD00529A8B5261ED6C': foreign68,
-     '7BC3DC9143A0AC886B7C69BF0BA72582': foreign69,
-     '0ADADD634CB1574E2CE91AA7D15972BF': foreign70,
-     'BF72AC404FF17C439A9112B6B4B32279': foreign71,
-     'A012B90749779FBE8DE607A2B99C7BBD': foreign72,
-     '82E080274DC72CA9D26CFF80275210C8': foreign73,
-     'B445B07141F3B81911589FB86B887D16': foreign74,
-     '3738A163431B2780E684368D4B44D659': foreign75,
-     '9A05761A4E0937CD96EDBD98F5CF127C': foreign76,
-     '69B56DE846DD7777A34F73BAAD388917': foreign77,
-     'C8403C274C4A11E56CBA4ABE1BB56FE9': foreign78,
-     'EF8CF652443106FAD829B9B7D44FDF4A': foreign79,
-     '6378A8BD4992C396F0BF5795C241272A': foreign80,
-     'E65657ED48A221438A440EB8FB55AB3A': foreign81,
-     '4BAAB5D2447B37D97384719CE67C9E72': foreign82,
-     '4B7AD5B5415D6B34A20794B83D33C8D4': foreign83,
-     '8B4959C3457E9E607BFD83A45E3B0B4E': foreign84,
-     '61C409DE43B68BAD7C2712AC407F6B85': foreign85,
-     'BD732EF648AD01E5A18863865EF79E7F': foreign86,
-     'D7D5128A42442933D108809A874A1F67': foreign87,
-     '5951240940FFACB56FF8EB8F140D19E5': foreign88,
-     'E0AAC56B4C54E8B2B8B946A3EB4D60C5': foreign89,
-     '54FA95C94AC4FD0AE2C3AF985B5862A7': foreign90,
-     '181ACB1C48C92C4E510D6B94FA31BD79': foreign91,
+     '86F0A1A849C1B3DE1E04178576CB52FF': foreign67,
+     'A30FDC1848F2A2BB4F412FB42FC6A123': foreign68,
+     'CD82A2E448FA71DD00529A8B5261ED6C': foreign69,
+     '7BC3DC9143A0AC886B7C69BF0BA72582': foreign70,
+     '0ADADD634CB1574E2CE91AA7D15972BF': foreign71,
+     'BF72AC404FF17C439A9112B6B4B32279': foreign72,
+     'A012B90749779FBE8DE607A2B99C7BBD': foreign73,
+     '82E080274DC72CA9D26CFF80275210C8': foreign74,
+     'B445B07141F3B81911589FB86B887D16': foreign75,
+     '3738A163431B2780E684368D4B44D659': foreign76,
+     '9A05761A4E0937CD96EDBD98F5CF127C': foreign77,
+     '69B56DE846DD7777A34F73BAAD388917': foreign78,
+     'C8403C274C4A11E56CBA4ABE1BB56FE9': foreign79,
+     'EF8CF652443106FAD829B9B7D44FDF4A': foreign80,
+     '6378A8BD4992C396F0BF5795C241272A': foreign81,
+     'E65657ED48A221438A440EB8FB55AB3A': foreign82,
+     '4BAAB5D2447B37D97384719CE67C9E72': foreign83,
+     '4B7AD5B5415D6B34A20794B83D33C8D4': foreign84,
+     '8B4959C3457E9E607BFD83A45E3B0B4E': foreign85,
+     '61C409DE43B68BAD7C2712AC407F6B85': foreign86,
+     'BD732EF648AD01E5A18863865EF79E7F': foreign87,
+     'D7D5128A42442933D108809A874A1F67': foreign88,
+     '5951240940FFACB56FF8EB8F140D19E5': foreign89,
+     'E0AAC56B4C54E8B2B8B946A3EB4D60C5': foreign90,
+     '54FA95C94AC4FD0AE2C3AF985B5862A7': foreign91,
+     '181ACB1C48C92C4E510D6B94FA31BD79': foreign92,
 };
 const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/ConfirmPanel"],
 [foreign2 || {}, "JavaScripts/common/notice/Notice"],
@@ -13711,31 +13798,32 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/ConfirmP
 [foreign64 || {}, "JavaScripts/tools/FlyText"],
 [foreign65 || {}, "JavaScripts/tools/FreeCamera"],
 [foreign66 || {}, "JavaScripts/tools/GlobalData"],
-[foreign67 || {}, "JavaScripts/tools/MapEx"],
-[foreign68 || {}, "JavaScripts/tools/PrefabEvent"],
-[foreign69 || {}, "JavaScripts/tools/Utils"],
-[foreign70 || {}, "JavaScripts/ui-generate/common/ConfirmPanel_generate"],
-[foreign71 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
-[foreign72 || {}, "JavaScripts/ui-generate/common/notice/SecondNoticeItem_generate"],
-[foreign73 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
-[foreign74 || {}, "JavaScripts/ui-generate/module/ActivityModule/ActivityPanel_generate"],
-[foreign75 || {}, "JavaScripts/ui-generate/module/AdModule/AdPanel_generate"],
-[foreign76 || {}, "JavaScripts/ui-generate/module/CoinModule/CoinPanel_generate"],
-[foreign77 || {}, "JavaScripts/ui-generate/module/GMModule/GMHUD_generate"],
-[foreign78 || {}, "JavaScripts/ui-generate/module/GMModule/GMItem_generate"],
-[foreign79 || {}, "JavaScripts/ui-generate/module/GunModule/WeaponUI_generate"],
-[foreign80 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
-[foreign81 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
-[foreign82 || {}, "JavaScripts/ui-generate/module/RadarModule/RadarPanel_generate"],
-[foreign83 || {}, "JavaScripts/ui-generate/module/RankModule/RankPanel_generate"],
-[foreign84 || {}, "JavaScripts/ui-generate/module/RankModule/RoomItem_generate"],
-[foreign85 || {}, "JavaScripts/ui-generate/module/RankModule/WorldItem_generate"],
-[foreign86 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
-[foreign87 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
-[foreign88 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
-[foreign89 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
-[foreign90 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamItem_generate"],
-[foreign91 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamPanel_generate"]]);
+[foreign67 || {}, "JavaScripts/tools/JumpGame"],
+[foreign68 || {}, "JavaScripts/tools/MapEx"],
+[foreign69 || {}, "JavaScripts/tools/PrefabEvent"],
+[foreign70 || {}, "JavaScripts/tools/Utils"],
+[foreign71 || {}, "JavaScripts/ui-generate/common/ConfirmPanel_generate"],
+[foreign72 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
+[foreign73 || {}, "JavaScripts/ui-generate/common/notice/SecondNoticeItem_generate"],
+[foreign74 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
+[foreign75 || {}, "JavaScripts/ui-generate/module/ActivityModule/ActivityPanel_generate"],
+[foreign76 || {}, "JavaScripts/ui-generate/module/AdModule/AdPanel_generate"],
+[foreign77 || {}, "JavaScripts/ui-generate/module/CoinModule/CoinPanel_generate"],
+[foreign78 || {}, "JavaScripts/ui-generate/module/GMModule/GMHUD_generate"],
+[foreign79 || {}, "JavaScripts/ui-generate/module/GMModule/GMItem_generate"],
+[foreign80 || {}, "JavaScripts/ui-generate/module/GunModule/WeaponUI_generate"],
+[foreign81 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
+[foreign82 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
+[foreign83 || {}, "JavaScripts/ui-generate/module/RadarModule/RadarPanel_generate"],
+[foreign84 || {}, "JavaScripts/ui-generate/module/RankModule/RankPanel_generate"],
+[foreign85 || {}, "JavaScripts/ui-generate/module/RankModule/RoomItem_generate"],
+[foreign86 || {}, "JavaScripts/ui-generate/module/RankModule/WorldItem_generate"],
+[foreign87 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
+[foreign88 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
+[foreign89 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
+[foreign90 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
+[foreign91 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamItem_generate"],
+[foreign92 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamPanel_generate"]]);
 
 exports.MWFileMapping = MWFileMapping;
 exports.MWModuleMap = MWModuleMap;
