@@ -3883,6 +3883,7 @@ class HUDModuleC extends ModuleC {
         this.currentBgmVolume = 1;
         this.currentSoundVolume = 1;
         this.clickId = null;
+        this.isMorph = false;
         //#endregion
     }
     get getHUDPanel() {
@@ -4077,7 +4078,11 @@ class HUDModuleC extends ModuleC {
     initMorphAction() {
         this.onMorphAction.add(this.addMorphAction.bind(this));
     }
+    get getIsMorph() {
+        return this.isMorph;
+    }
     addMorphAction(isMorph) {
+        this.isMorph = isMorph;
         Event.dispatchToLocal(EventType.OnOffWeaponUI, isMorph);
         if (!isMorph)
             Event.dispatchToLocal(EventType.TryOutGun);
@@ -4949,6 +4954,12 @@ class ShopPanel extends ShopPanel_Generate$1 {
                 this.shopItems.push(shopItem);
             }
         }
+        if (this.currentShopType == ShopType.Role) {
+            Utils.setWidgetVisibility(this.shopItems[7].uiObject, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.shopItems[9].uiObject, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.shopItems[13].uiObject, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.shopItems[32].uiObject, mw.SlateVisibility.Collapsed);
+        }
     }
     onShow(...params) {
         this.updateShopItem();
@@ -5046,6 +5057,10 @@ class ShopModuleC extends ModuleC {
         Event.addLocalListener(EventType.TryOutGun, this.setCharacterGun.bind(this));
     }
     bindOpenShopAction() {
+        if (this.getHUDModuleC.getIsMorph && !this.localPlayer.character.getVisibility()) {
+            Notice.showDownNotice("变身状态不可打开商店");
+            return;
+        }
         this.getShopPanel.show();
         this.onSwitchCameraAction.call(1);
         Event.dispatchToLocal(EventType.OnOffMainHUD, false);
