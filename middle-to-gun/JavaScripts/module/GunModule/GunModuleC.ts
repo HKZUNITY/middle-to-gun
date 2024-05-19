@@ -7,11 +7,7 @@ export default class GunModuleC extends ModuleC<GunModuleS, null> {
 
     }
 
-    private currentGunId: number = -1;
-
     public switchGun(gunId: number): void {
-        if (this.currentGunId == gunId) return;
-        this.currentGunId = gunId;
         this.server.net_switchGun(gunId);
     }
 }
