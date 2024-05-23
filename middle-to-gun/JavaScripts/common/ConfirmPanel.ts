@@ -17,9 +17,10 @@ export default class ConfirmPanel extends ConfirmPanel_Generate {
         this.mSureButton.onClicked.add(() => {
             this.hide();
             if (this.callback) this.callback();
+            this.callback = null;
         });
         this.mCancleButton.onClicked.add(() => {
-            this.hide();
+            this.hideTween();
             this.callback = null;
         });
     }

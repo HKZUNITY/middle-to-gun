@@ -1,11 +1,14 @@
-﻿import { Notice } from "../../common/notice/Notice";
+﻿import ConfirmPanel from "../../common/ConfirmPanel";
+import { Notice } from "../../common/notice/Notice";
+import { GameConfig } from "../../config/GameConfig";
+import { IShopItemElement } from "../../config/ShopItem";
 import { EventType } from "../../tools/EventType";
-import GlobalData from "../../tools/GlobalData";
-import Utils from "../../tools/Utils";
+import { TSIAPService } from "../../tools/IAPInstance";
 import AdPanel from "../AdModule/ui/AdPanel";
 import CoinData from "./CoinData";
 import CoinModuleS from "./CoinModuleS";
 import CoinPanel from "./ui/CoinPanel";
+import DiamondPanel from "./ui/DiamondPanel";
 
 export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
     private coinPanel: CoinPanel = null;
@@ -24,19 +27,30 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
         return this.adPanel;
     }
 
+    private diamondPanel: DiamondPanel = null;
+    private get getDiamondPanel(): DiamondPanel {
+        if (this.diamondPanel == null) {
+            this.diamondPanel = mw.UIService.getUI(DiamondPanel);
+        }
+        return this.diamondPanel;
+    }
+
+    private confirmPanel: ConfirmPanel = null;
+    private get getConfirmPanel(): ConfirmPanel {
+        if (this.confirmPanel == null) {
+            this.confirmPanel = UIService.getUI(ConfirmPanel);
+        }
+        return this.confirmPanel;
+    }
+
     public onAddCoinAction: Action = new Action();
     public onAddDiamondAction: Action = new Action();
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
-        // this.initModule();
         this.initUIPanel();
         this.bindEventAction();
     }
-
-    // private initModule(): void {
-
-    // }
 
     private initUIPanel(): void {
         this.coinPanel = mw.UIService.getUI(CoinPanel);
@@ -56,8 +70,10 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
         this.diamond = this.data.diamond;
         this.getCoinPanel.setCoinAndDiamond(this.coin, this.diamond);
         this.defaultAds();
+        this.initLeBiData();
     }
 
+    //#region Coin
     public setCoin(coin: number): void {
         this.coin += coin;
         this.popupNotice(coin, true);
@@ -83,27 +99,17 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
     }
 
     public getCoinByAd(): void {
-        this.getAdPanel.showRewardAd(() => {
-            if (!GlobalData.isOpenIAA) {
-                this.setCoin(10000);
-                return;
-            }
-            Utils.showRewardAd(() => {
-                this.setCoin(10000);
-            });
-        }, "免费领取10000金币");
+        // this.getAdPanel.showRewardAd(() => {
+        //     this.setCoin(10000);
+        // }, "免费领取10000金币");
+        this.openShopBuyDiamondCoin();
     }
 
     public getDiamondByAd(): void {
-        this.getAdPanel.showRewardAd(() => {
-            if (!GlobalData.isOpenIAA) {
-                this.setDiamond(1);
-                return;
-            }
-            Utils.showRewardAd(() => {
-                this.setDiamond(1);
-            });
-        }, "免费领取1个钻石");
+        // this.getAdPanel.showRewardAd(() => {
+        //     this.setDiamond(1);
+        // }, "免费领取1个钻石");
+        this.openShopBuyDiamondCoin();
     }
 
     public net_killPlayerAddCoin(coin: number): void {
@@ -118,8 +124,9 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
         // Notice.showDownNotice("<color=#lime>" + "<size=18>" + killerName + " 击败了 " + killedName + "</size>" + "</color>"
         //     + "\n" + "<color=#red>完成了" + killTips + "</color>");
     }
+    //#endregion
 
-
+    //#region Ads
     private defaultAds(): void {
         this.delay10Seconds();
         this.setInterval180Seconds();
@@ -128,28 +135,16 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
     private delay10Seconds(): void {
         TimeUtil.delaySecond(10).then(() => {
             this.getAdPanel.showRewardAd(() => {
-                if (!GlobalData.isOpenIAA) {
-                    this.setDiamond(2);
-                    return;
-                }
-                Utils.showRewardAd(() => {
-                    this.setDiamond(2);
-                });
-            }, "大礼包\n免费获得2个钻石");
+                this.setDiamond(5);
+            }, "大礼包\n免费获得5个钻石");
         });
     }
 
     private setInterval180Seconds(): void {
         TimeUtil.setInterval(() => {
             this.getAdPanel.showRewardAd(() => {
-                if (!GlobalData.isOpenIAA) {
-                    this.setDiamond(3);
-                    return;
-                }
-                Utils.showRewardAd(() => {
-                    this.setDiamond(3);
-                });
-            }, "幸运大礼包\n免费获得3个钻石");
+                this.setDiamond(10);
+            }, "幸运大礼包\n免费获得10个钻石");
         }, 180);
     }
 
@@ -160,14 +155,69 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
             return;
         }
         this.getAdPanel.showRewardAd(() => {
-            if (!GlobalData.isOpenIAA) {
-                this.setDiamond(2);
-                return;
-            }
-            Utils.showRewardAd(() => {
-                this.setDiamond(2);
-            });
-        }, "被击败奖励\n免费获得2个钻石");
+            this.setDiamond(5);
+        }, "被击败奖励\n免费获得5个钻石");
         Event.dispatchToLocal(EventType.TryOutGun);
     }
+    //#endregion
+
+    //#region LeBi
+    private isFirstBuy: boolean = true;
+    public get getIsFirstBuy(): boolean {
+        return this.isFirstBuy;
+    }
+    private setFirstBuy(): void {
+        if (!this.isFirstBuy) return;
+        this.isFirstBuy = false;
+        this.getDiamondPanel.refreshDiamondItems();
+        this.server.net_setFirstBuy(this.isFirstBuy);
+    }
+
+    private shopItemElements: IShopItemElement[] = [];
+    private get getShopItemElements(): IShopItemElement[] {
+        if (!this.shopItemElements || this.shopItemElements.length == 0) {
+            this.shopItemElements = GameConfig.ShopItem.getAllElement();
+        }
+        return this.shopItemElements;
+    }
+    private initLeBiData(): void {
+        this.isFirstBuy = this.data.isFirstBuy;
+        this.shopItemElements = GameConfig.ShopItem.getAllElement();
+        this.getDiamondPanel.initDiamondItem();
+    }
+
+    public openShopBuyDiamondCoin(): void {
+        this.getDiamondPanel.show();
+    }
+
+    public net_deliverGoods(commodityId: string): void {
+        let diamondCount = this.getBuyDiamondCount(commodityId);
+        Notice.showDownNotice(`购买成功`);
+        if (this.isFirst) diamondCount *= 2;
+        this.setDiamond(diamondCount);
+        this.setFirstBuy();
+    }
+
+    private getBuyDiamondCount(commodityId: string): number {
+        for (let i = 0; i < this.getShopItemElements.length; ++i) {
+            if (this.getShopItemElements[i].CommodityId == commodityId) {
+                return this.getShopItemElements[i].Count;
+            }
+        }
+        return 0;
+    }
+
+    public buyDiamond(shopItemElement: IShopItemElement): void {
+        if (!shopItemElement.CommodityId || !TSIAPService.enable) {
+            this.getAdPanel.showRewardAd(() => {
+                this.setDiamond(5);
+            }, "购买失败,请升级233乐园\n大礼包\n免费获得5个钻石");
+            return;
+        }
+        let contentText: string = `消耗${shopItemElement.PartyPrice}乐币购买${shopItemElement.Count * (this.isFirstBuy ? 2 : 1)}钻石`;
+        this.getConfirmPanel.confirmTips(() => {
+            TSIAPService.reqBuyGoods(shopItemElement.CommodityId);
+        }, contentText, "购买", "取消");
+    }
+    //#endregion
 }

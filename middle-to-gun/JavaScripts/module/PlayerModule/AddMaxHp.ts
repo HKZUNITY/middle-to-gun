@@ -1,6 +1,8 @@
-﻿import GlobalData from "../../tools/GlobalData";
-import Utils from "../../tools/Utils";
+﻿import ConfirmPanel from "../../common/ConfirmPanel";
+import { Notice } from "../../common/notice/Notice";
+import GlobalData from "../../tools/GlobalData";
 import AdPanel from "../AdModule/ui/AdPanel";
+import CoinModuleC from "../CoinModule/CoinModuleC";
 import { PlayerModuleC } from "./PlayerModuleC";
 
 @Component
@@ -44,6 +46,22 @@ export default class AddMaxHp extends Script {
         return this.adPanel;
     }
 
+    private confirmPanel: ConfirmPanel = null;
+    private get getConfirmPanel(): ConfirmPanel {
+        if (this.confirmPanel == null) {
+            this.confirmPanel = UIService.getUI(ConfirmPanel);
+        }
+        return this.confirmPanel;
+    }
+
+    private coinModuleC: CoinModuleC = null;
+    private get getCoinModuleC(): CoinModuleC {
+        if (this.coinModuleC == null) {
+            this.coinModuleC = ModuleService.getModule(CoinModuleC);
+        }
+        return this.coinModuleC;
+    }
+
     /**客户端的onStart */
     private async onStartC(): Promise<void> {
         await ModuleService.ready();
@@ -68,15 +86,20 @@ export default class AddMaxHp extends Script {
 
     private onTriggerEnter(character: mw.Character): void {
         if (Player.localPlayer.character != character) return;
-        this.getAdPanel.showRewardAd(() => {
-            if (!GlobalData.isOpenIAA) {
+        let price: number = 100;
+        let contentText: string = `奖励翻倍\n消耗${price}钻石\n最大生命值提高到${GlobalData.maxHp * 2}`;
+        this.getConfirmPanel.confirmTips(() => {
+            if (this.getCoinModuleC.getDiamond >= price) {
+                this.getCoinModuleC.setDiamond(-price);
                 this.getPlayerModuleC.addMaxHp();
-                return;
+            } else {
+                Notice.showDownNotice("钻石不足");
+                this.getCoinModuleC.openShopBuyDiamondCoin();
             }
-            Utils.showRewardAd(() => {
-                this.getPlayerModuleC.addMaxHp();
-            });
-        }, "奖励翻倍\n提高最大生命值 + " + GlobalData.maxHp * 2, "取消", "获取");
+        }, contentText, "领取", "取消", "提示");
+        // this.getAdPanel.showRewardAd(() => {
+        //     this.getPlayerModuleC.addMaxHp();
+        // }, "奖励翻倍\n提高最大生命值 + " + GlobalData.maxHp * 2, "取消", "获取");
     }
 
     /**客户端的onUpdate */

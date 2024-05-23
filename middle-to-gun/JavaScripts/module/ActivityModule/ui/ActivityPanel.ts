@@ -1,9 +1,11 @@
-﻿import { Notice } from "../../../common/notice/Notice";
+﻿import ConfirmPanel from "../../../common/ConfirmPanel";
+import { Notice } from "../../../common/notice/Notice";
+import { GameConfig } from "../../../config/GameConfig";
 import { EventType } from "../../../tools/EventType";
-import GlobalData from "../../../tools/GlobalData";
 import Utils from "../../../tools/Utils";
 import ActivityPanel_Generate from "../../../ui-generate/module/ActivityModule/ActivityPanel_generate";
 import AdPanel from "../../AdModule/ui/AdPanel";
+import CoinModuleC from "../../CoinModule/CoinModuleC";
 import { ShopType } from "../../ShopModule/ShopData";
 import ActivityModuleC from "../ActivityModuleC";
 
@@ -21,6 +23,21 @@ export default class ActivityPanel extends ActivityPanel_Generate {
 			this.adPanel = UIService.getUI(AdPanel);
 		}
 		return this.adPanel;
+	}
+	private confirmPanel: ConfirmPanel = null;
+	private get getConfirmPanel(): ConfirmPanel {
+		if (this.confirmPanel == null) {
+			this.confirmPanel = UIService.getUI(ConfirmPanel);
+		}
+		return this.confirmPanel;
+	}
+
+	private coinModuleC: CoinModuleC = null;
+	private get getCoinModuleC(): CoinModuleC {
+		if (this.coinModuleC == null) {
+			this.coinModuleC = ModuleService.getModule(CoinModuleC);
+		}
+		return this.coinModuleC;
 	}
 
 	private activityData: { shopId: number, shopType: ShopType, shopIcon: string }[] = [
@@ -96,15 +113,28 @@ export default class ActivityPanel extends ActivityPanel_Generate {
 
 	private onClickAdsGetButton(): void {
 		if (!this.isHasCondition(true)) return;
-		this.getAdPanel.showRewardAd(() => {
-			if (!GlobalData.isOpenIAA) {
+		let contentText: string = "";
+		let curActivityData = this.activityData[this.currentIndex - 1];
+		let price: number = 0;
+		if (curActivityData.shopType == ShopType.Gun) {
+			price = GameConfig.GUN.getElement(curActivityData.shopId).PRICE[0];
+			contentText = `消耗${price}钻石领取`;
+		} else if (curActivityData.shopType == ShopType.Role) {
+			price = GameConfig.ROLE.getElement(curActivityData.shopId).PRICE[0];
+			contentText = `消耗${price}钻石领取`;
+		}
+		this.getConfirmPanel.confirmTips(() => {
+			if (this.getCoinModuleC.getDiamond >= price) {
+				this.getCoinModuleC.setDiamond(-price);
 				this.setGetActivity();
-				return;
+			} else {
+				Notice.showDownNotice("钻石不足");
+				this.getCoinModuleC.openShopBuyDiamondCoin();
 			}
-			Utils.showRewardAd(() => {
-				this.setGetActivity();
-			});
-		}, "免费领取" + this.getActicityShopTypeStr());
+		}, contentText, "领取", "取消", "提示");
+		// this.getAdPanel.showRewardAd(() => {
+		// 	this.setGetActivity();
+		// }, "免费领取" + this.getActicityShopTypeStr());
 	}
 
 	private setGetActivity(): void {
