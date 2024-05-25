@@ -2985,11 +2985,11 @@ class CoinModuleC extends ModuleC {
         // }, "免费领取10000金币");
         this.openShopBuyDiamondCoin();
     }
-    getDiamondByAd() {
+    getDiamondByAd(diamond) {
         // this.getAdPanel.showRewardAd(() => {
         //     this.setDiamond(1);
         // }, "免费领取1个钻石");
-        this.openShopBuyDiamondCoin();
+        this.openShopBuyDiamondCoin(diamond);
     }
     net_killPlayerAddCoin(coin) {
         this.coin += coin;
@@ -3054,8 +3054,19 @@ class CoinModuleC extends ModuleC {
         this.shopItemElements = GameConfig.ShopItem.getAllElement();
         this.getDiamondPanel.initDiamondItem();
     }
-    openShopBuyDiamondCoin() {
-        this.getDiamondPanel.show();
+    openShopBuyDiamondCoin(diamond = 0) {
+        if (diamond == 0) {
+            this.getDiamondPanel.show();
+        }
+        else {
+            for (let i = 0; i < this.shopItemElements.length; ++i) {
+                if (this.shopItemElements[i].Count >= diamond) {
+                    TSIAPService.reqBuyGoods(this.shopItemElements[i].CommodityId);
+                    console.warn(`diamond:${diamond}`);
+                    break;
+                }
+            }
+        }
     }
     net_deliverGoods(commodityId) {
         let diamondCount = this.getBuyDiamondCount(commodityId);
@@ -5613,7 +5624,7 @@ class ShopModuleC extends ModuleC {
         }
         else {
             Notice.showDownNotice("钻石不足");
-            this.getCoinModuleC.getDiamondByAd();
+            this.getCoinModuleC.getDiamondByAd(costPrice[0]);
             return false;
         }
     }
@@ -6075,7 +6086,7 @@ class ActivityPanel extends ActivityPanel_Generate$1 {
             }
             else {
                 Notice.showDownNotice("钻石不足");
-                this.getCoinModuleC.openShopBuyDiamondCoin();
+                this.getCoinModuleC.openShopBuyDiamondCoin(price);
             }
         }, contentText, "领取", "取消", "提示");
         // this.getAdPanel.showRewardAd(() => {
@@ -13626,7 +13637,7 @@ let AddMaxHp = class AddMaxHp extends Script {
             }
             else {
                 Notice.showDownNotice("钻石不足");
-                this.getCoinModuleC.openShopBuyDiamondCoin();
+                this.getCoinModuleC.openShopBuyDiamondCoin(price);
             }
         }, contentText, "领取", "取消", "提示");
         // this.getAdPanel.showRewardAd(() => {
@@ -13769,7 +13780,7 @@ let TryOutGun = class TryOutGun extends Script {
             }
             else {
                 Notice.showDownNotice("钻石不足");
-                this.getCoinModuleC.openShopBuyDiamondCoin();
+                this.getCoinModuleC.openShopBuyDiamondCoin(price);
             }
         }, contentText, "领取", "取消", "提示");
         // this.getAdPanel.showRewardAd(() => {
