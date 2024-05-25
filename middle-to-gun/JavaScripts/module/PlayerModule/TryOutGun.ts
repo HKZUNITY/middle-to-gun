@@ -122,7 +122,7 @@ export default class TryOutGun extends Script {
                 this.switchGunModel(Utils.randomInt(10, 14));
             } else {
                 Notice.showDownNotice("钻石不足");
-                this.getCoinModuleC.openShopBuyDiamondCoin();
+                this.getCoinModuleC.openShopBuyDiamondCoin(price);
             }
         }, contentText, "领取", "取消", "提示");
 

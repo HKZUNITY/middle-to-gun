@@ -148,7 +148,7 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
             return true;
         } else {
             Notice.showDownNotice("钻石不足");
-            this.getCoinModuleC.getDiamondByAd();
+            this.getCoinModuleC.getDiamondByAd(costPrice[0]);
             return false;
         }
     }

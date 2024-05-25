@@ -105,11 +105,11 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
         this.openShopBuyDiamondCoin();
     }
 
-    public getDiamondByAd(): void {
+    public getDiamondByAd(diamond: number): void {
         // this.getAdPanel.showRewardAd(() => {
         //     this.setDiamond(1);
         // }, "免费领取1个钻石");
-        this.openShopBuyDiamondCoin();
+        this.openShopBuyDiamondCoin(diamond);
     }
 
     public net_killPlayerAddCoin(coin: number): void {
@@ -186,8 +186,18 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
         this.getDiamondPanel.initDiamondItem();
     }
 
-    public openShopBuyDiamondCoin(): void {
-        this.getDiamondPanel.show();
+    public openShopBuyDiamondCoin(diamond: number = 0): void {
+        if (diamond == 0) {
+            this.getDiamondPanel.show();
+        } else {
+            for (let i = 0; i < this.shopItemElements.length; ++i) {
+                if (this.shopItemElements[i].Count >= diamond) {
+                    TSIAPService.reqBuyGoods(this.shopItemElements[i].CommodityId);
+                    console.warn(`diamond:${diamond}`);
+                    break;
+                }
+            }
+        }
     }
 
     public net_deliverGoods(commodityId: string): void {

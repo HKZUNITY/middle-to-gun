@@ -94,7 +94,7 @@ export default class AddMaxHp extends Script {
                 this.getPlayerModuleC.addMaxHp();
             } else {
                 Notice.showDownNotice("钻石不足");
-                this.getCoinModuleC.openShopBuyDiamondCoin();
+                this.getCoinModuleC.openShopBuyDiamondCoin(price);
             }
         }, contentText, "领取", "取消", "提示");
         // this.getAdPanel.showRewardAd(() => {
