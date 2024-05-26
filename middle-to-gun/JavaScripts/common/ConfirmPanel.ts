@@ -20,7 +20,6 @@ export default class ConfirmPanel extends ConfirmPanel_Generate {
         });
         this.mCancleButton.onClicked.add(() => {
             this.hide();
-            this.callback = null;
         });
     }
 
