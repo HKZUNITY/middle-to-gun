@@ -2083,7 +2083,7 @@ var foreign6 = /*#__PURE__*/Object.freeze({
     ConfigBase: ConfigBase
 });
 
-const EXCELDATA$5 = [["ID", "GUNNAME", "GUNPREFAB", "GUNICON", "GUNICON_M", "GUNLOC", "GUNSCALE", "IATURNICON", "PRICETYPE", "PRICE", "FIREINTERVAL", "BULLETCOUNT", "HURT"], ["", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "水枪", "587777AD4056DC3AB465FBA7D3F5F7BA", null, "166941", new mw.Vector(0, 0, 0), new mw.Vector(1, 2, 1), 0, 1, [100, 15888], "0.2", 30, 25], [2, "泡泡枪", "0D543D5346C331F41DA890A5E6DD3DB5", null, "155696", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [100, 18888], "0.2", 30, 25], [3, "霰弹枪", "E3E0C2994D3518540DBB6D8C00C8AB83", null, "226214", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), 0, 1, [200, 35888], "0.15", 30, 25], [4, "金枪鱼", "5181250F44DF914A714B668F99177E3A", null, "138213", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [300, 48888], "0.15", 30, 25], [5, "脉冲枪", "1CD6AEAB4602DF140ACE93BD49D5CA19", null, "153110", new mw.Vector(0, 0, 0), new mw.Vector(2, 2.5, 2), 0, 1, [400, 58888], "0.1", 35, 25], [6, "喷火枪", "A469CCC84AAA873815243BB25439707C", null, "226213", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), 0, 1, [400, 58888], "0.1", 35, 25], [7, "散弹喷枪", "68E812DC47B714F9A2BB2ABE18304C5B", null, "155702", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [400, 58888], "0.1", 35, 25], [8, "霰弹枪枪身", "BA1BDC034FCDE8574CBBAA8C4831A950", null, "318664", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [500, 68888], "0.1", 40, 25], [9, "火箭发射器", "FCFE18BE440FAEBD5AB999A222F10AA9", null, "226826", new mw.Vector(0, 0, 0), new mw.Vector(1.5, 1, 1), 0, 1, [500, 78888], "0.2", 100, 25], [10, "激光幽灵枪", "23240FEE4F3BD25DE8EA6DBE525B3A20", null, "122716", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 1, 1, [800, 138888], "0.3", 40, 50], [11, "烟花枪", "A830458640D6EA21FB7AEA8F7E029CB7", null, "122726", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1000, 158888], "0.3", 40, 50], [12, "激光烈火枪", "0C7F278C4254F90F69614086DCA0B906", null, "95676", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1200, 188888], "0.3", 40, 50], [13, "激光冰雷枪", "29CD5E6145D1B05590E887A050E0D3C8", null, "122720", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1500, 208888], "0.3", 40, 50], [14, "尖叫鸡", "015C826546EBC60F95EF399D16523B78", null, "20799", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 3), 1, 1, [2000, 388888], "1", 10, 100]];
+const EXCELDATA$5 = [["ID", "GUNNAME", "GUNPREFAB", "GUNICON", "GUNICON_M", "GUNLOC", "GUNSCALE", "IATURNICON", "PRICETYPE", "PRICE", "FIREINTERVAL", "BULLETCOUNT", "HURT"], ["", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "水枪", "587777AD4056DC3AB465FBA7D3F5F7BA", null, "166941", new mw.Vector(0, 0, 0), new mw.Vector(1, 2, 1), 0, 1, [1, 15888], "0.2", 30, 25], [2, "泡泡枪", "0D543D5346C331F41DA890A5E6DD3DB5", null, "155696", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1, 15888], "0.2", 30, 25], [3, "霰弹枪", "E3E0C2994D3518540DBB6D8C00C8AB83", null, "226214", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), 0, 1, [1, 15888], "0.15", 30, 25], [4, "金枪鱼", "5181250F44DF914A714B668F99177E3A", null, "138213", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1, 15888], "0.15", 30, 25], [5, "脉冲枪", "1CD6AEAB4602DF140ACE93BD49D5CA19", null, "153110", new mw.Vector(0, 0, 0), new mw.Vector(2, 2.5, 2), 0, 1, [1, 15888], "0.1", 35, 25], [6, "喷火枪", "A469CCC84AAA873815243BB25439707C", null, "226213", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), 0, 1, [1, 15888], "0.1", 35, 25], [7, "散弹喷枪", "68E812DC47B714F9A2BB2ABE18304C5B", null, "155702", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [2, 28888], "0.1", 35, 25], [8, "霰弹枪枪身", "BA1BDC034FCDE8574CBBAA8C4831A950", null, "318664", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [2, 28888], "0.1", 40, 25], [9, "火箭发射器", "FCFE18BE440FAEBD5AB999A222F10AA9", null, "226826", new mw.Vector(0, 0, 0), new mw.Vector(1.5, 1, 1), 0, 1, [2, 28888], "0.2", 100, 25], [10, "激光幽灵枪", "23240FEE4F3BD25DE8EA6DBE525B3A20", null, "122716", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 1, 1, [3, 38888], "0.3", 40, 50], [11, "烟花枪", "A830458640D6EA21FB7AEA8F7E029CB7", null, "122726", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [3, 38888], "0.3", 40, 50], [12, "激光烈火枪", "0C7F278C4254F90F69614086DCA0B906", null, "95676", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [4, 48888], "0.3", 40, 50], [13, "激光冰雷枪", "29CD5E6145D1B05590E887A050E0D3C8", null, "122720", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [4, 48888], "0.3", 40, 50], [14, "尖叫鸡", "015C826546EBC60F95EF399D16523B78", null, "20799", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 3), 1, 1, [5, 58888], "1", 10, 100]];
 class GUNConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$5);
@@ -2107,7 +2107,7 @@ var foreign9 = /*#__PURE__*/Object.freeze({
     MorphConfig: MorphConfig
 });
 
-const EXCELDATA$3 = [["ID", "ROLEID", "PRICETYPE", "PRICE", "NAME"], ["", "", "", "", ""], [1, "181562", 1, [100, 5888], "兜帽男"], [2, "143400", 1, [100, 8888], "双马尾女"], [3, "142292", 1, [100, 10888], "男战士"], [4, "142272", 1, [100, 13888], "机甲少女"], [5, "142293", 1, [100, 15888], "男骑士"], [6, "142255", 1, [100, 18888], "纳米机甲女性"], [7, "219915", 1, [300, 30888], "赛博少年"], [8, "226379", 1, [300, 30888], "赛博少年"], [9, "219912", 1, [300, 30888], "赛博少女"], [10, "226386", 1, [300, 30888], "赛博少女"], [11, "266641", 1, [500, 50888], "一定锅少年"], [12, "267183", 1, [500, 60888], "求神少年"], [13, "264622", 1, [300, 35888], "一定锅少女"], [14, "266861", 1, [500, 60888], "求神少女"], [15, "142302", 1, [600, 88888], "宝石铠甲男"], [16, "142303", 1, [600, 88888], "铠甲男战士"], [17, "142396", 1, [600, 88888], "黑人男纳米机甲"], [18, "142397", 1, [600, 88888], "白人男纳米机甲"], [19, "142398", 1, [600, 88888], "白银骑士"], [20, "142906", 1, [600, 88888], "鹰战士"], [21, "142895", 1, [600, 88888], "战士"], [22, "142886", 1, [600, 88888], "毒液怪人"], [23, "142905", 1, [600, 88888], "蚁侠士"], [24, "142898", 1, [600, 88888], "最强队长"], [25, "142885", 1, [600, 88888], "超帅侠"], [26, "142900", 1, [600, 88888], "奇异战士"], [27, "142901", 1, [600, 88888], "闪电怪"], [28, "142887", 1, [600, 88888], "恶灵骷髅"], [29, "142888", 1, [1000, 108888], "铁人"], [30, "222475", 1, [1000, 128888], "风衣女"], [31, "219916", 1, [1000, 158888], "汉服少女"], [32, "266860", 1, [1000, 158888], "时尚少女"], [33, "226382", 1, [1000, 158888], "潮流少女"], [34, "222476", 1, [1000, 158888], "古代书生"]];
+const EXCELDATA$3 = [["ID", "ROLEID", "PRICETYPE", "PRICE", "NAME"], ["", "", "", "", ""], [1, "181562", 1, [1, 5888], "兜帽男"], [2, "143400", 1, [1, 5888], "双马尾女"], [3, "142292", 1, [1, 5888], "男战士"], [4, "142272", 1, [1, 5888], "机甲少女"], [5, "142293", 1, [1, 5888], "男骑士"], [6, "142255", 1, [1, 5888], "纳米机甲女性"], [7, "219915", 1, [1, 5888], "赛博少年"], [8, "226379", 1, [1, 5888], "赛博少年"], [9, "219912", 1, [1, 5888], "赛博少女"], [10, "226386", 1, [1, 5888], "赛博少女"], [11, "266641", 1, [1, 5888], "一定锅少年"], [12, "267183", 1, [1, 5888], "求神少年"], [13, "264622", 1, [1, 5888], "一定锅少女"], [14, "266861", 1, [1, 5888], "求神少女"], [15, "142302", 1, [1, 5888], "宝石铠甲男"], [16, "142303", 1, [1, 5888], "铠甲男战士"], [17, "142396", 1, [1, 5888], "黑人男纳米机甲"], [18, "142397", 1, [1, 5888], "白人男纳米机甲"], [19, "142398", 1, [1, 5888], "白银骑士"], [20, "142906", 1, [1, 5888], "鹰战士"], [21, "142895", 1, [1, 5888], "战士"], [22, "142886", 1, [1, 5888], "毒液怪人"], [23, "142905", 1, [1, 5888], "蚁侠士"], [24, "142898", 1, [1, 5888], "最强队长"], [25, "142885", 1, [1, 5888], "超帅侠"], [26, "142900", 1, [1, 5888], "奇异战士"], [27, "142901", 1, [1, 5888], "闪电怪"], [28, "142887", 1, [1, 5888], "恶灵骷髅"], [29, "142888", 1, [1, 5888], "铁人"], [30, "222475", 1, [1, 5888], "风衣女"], [31, "219916", 1, [1, 5888], "汉服少女"], [32, "266860", 1, [1, 5888], "时尚少女"], [33, "226382", 1, [1, 5888], "潮流少女"], [34, "222476", 1, [1, 5888], "古代书生"]];
 class ROLEConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$3);
@@ -2143,7 +2143,7 @@ var foreign12 = /*#__PURE__*/Object.freeze({
     TaskConfig: TaskConfig
 });
 
-const EXCELDATA = [["ID", "TRAILING", "PRICETYPE", "PRICE", "NAME"], ["", "", "", "", ""], [1, "14317", 1, [100, 8888], "烟雾拖尾"], [2, "14319", 1, [100, 8888], "烟雾拖尾"], [3, "27399", 1, [100, 8888], "烟雾拖尾"], [4, "27447", 1, [100, 8888], "粒子拖尾"], [5, "30497", 1, [100, 8888], "烟雾拖尾"], [6, "88020", 1, [100, 8888], "光束拖尾"], [7, "88442", 1, [100, 8888], "光束拖尾"], [8, "88443", 1, [100, 8888], "光束拖尾"], [9, "88796", 1, [100, 8888], "烟雾拖尾"], [10, "88794", 1, [100, 8888], "烟雾拖尾"], [11, "88797", 1, [100, 8888], "烟雾拖尾"], [12, "88798", 1, [100, 8888], "烟雾拖尾"], [13, "89592", 1, [100, 8888], "光束拖尾"], [14, "128512", 1, [100, 8888], "光束拖尾"], [15, "128513", 1, [100, 8888], "光束拖尾"], [16, "128514", 1, [100, 8888], "光束拖尾"], [17, "128515", 1, [100, 8888], "光束拖尾"], [18, "128516", 1, [100, 8888], "光束拖尾"], [19, "128517", 1, [100, 8888], "光束拖尾"], [20, "128518", 1, [100, 8888], "光束拖尾"], [21, "146783", 1, [300, 38888], "烟雾拖尾"], [22, "148710", 1, [300, 38888], "拖尾"], [23, "150907", 1, [300, 38888], "水拖尾"], [24, "145511", 1, [300, 38888], "火焰拖尾"], [25, "151527", 1, [300, 38888], "烟雾拖尾"], [26, "151528", 1, [300, 38888], "烟雾拖尾"], [27, "153603", 1, [300, 38888], "拖尾"], [28, "153613", 1, [300, 38888], "拖尾"], [29, "128519", 1, [300, 38888], "光束拖尾"], [30, "128520", 1, [300, 38888], "光束拖尾"], [31, "145496", 1, [500, 68888], "烟雾拖尾"], [32, "145506", 1, [500, 68888], "拖尾"], [33, "128521", 1, [500, 68888], "光束拖尾"], [34, "4399", 1, [500, 68888], "雷拖尾"], [35, "27392", 1, [500, 68888], "彩虹拖尾"], [36, "133481", 1, [500, 68888], "胎印拖尾"], [37, "145492", 1, [500, 68888], "螺丝钉拖尾"], [38, "145493", 1, [500, 68888], "足球拖尾"], [39, "145494", 1, [500, 68888], "彩虹拖尾"], [40, "145495", 1, [500, 68888], "糖果拖尾"], [41, "145497", 1, [800, 108888], "奖杯拖尾"], [42, "145498", 1, [800, 108888], "皇冠拖尾"], [43, "145499", 1, [800, 108888], "爱心拖尾"], [44, "145500", 1, [800, 108888], "骷髅拖尾"], [45, "145502", 1, [800, 108888], "香蕉拖尾"], [46, "145503", 1, [800, 108888], "雷电拖尾"], [47, "145504", 1, [800, 108888], "雪花拖尾"], [48, "145505", 1, [800, 108888], "2023拖尾"], [49, "145507", 1, [800, 108888], "爆竹拖尾"], [50, "145508", 1, [800, 108888], "烟花拖尾"], [51, "145509", 1, [1000, 138888], "礼物拖尾"], [52, "145510", 1, [1000, 138888], "钞票拖尾"], [53, "145512", 1, [1000, 138888], "泡泡拖尾"], [54, "145513", 1, [1000, 138888], "彩带拖尾"], [55, "186344", 1, [1000, 138888], "便便拖尾"], [56, "195115", 1, [1000, 138888], "枫叶拖尾"], [57, "196217", 1, [1000, 138888], "六芒星拖尾"], [58, "221186", 1, [1000, 138888], "蝴蝶拖尾"], [59, "221187", 1, [1000, 158888], "冰淇淋拖尾"], [60, "267975", 1, [1000, 158888], "鸟拖尾"], [61, "271639", 1, [1000, 158888], "蝙蝠拖尾"], [62, "289528", 1, [1000, 158888], "祥云拖尾"], [63, "290033", 1, [1000, 158888], "爪印"]];
+const EXCELDATA = [["ID", "TRAILING", "PRICETYPE", "PRICE", "NAME"], ["", "", "", "", ""], [1, "14317", 1, [1, 8888], "烟雾拖尾"], [2, "14319", 1, [1, 8888], "烟雾拖尾"], [3, "27399", 1, [1, 8888], "烟雾拖尾"], [4, "27447", 1, [1, 8888], "粒子拖尾"], [5, "30497", 1, [1, 8888], "烟雾拖尾"], [6, "88020", 1, [1, 8888], "光束拖尾"], [7, "88442", 1, [1, 8888], "光束拖尾"], [8, "88443", 1, [1, 8888], "光束拖尾"], [9, "88796", 1, [1, 8888], "烟雾拖尾"], [10, "88794", 1, [1, 8888], "烟雾拖尾"], [11, "88797", 1, [1, 8888], "烟雾拖尾"], [12, "88798", 1, [1, 8888], "烟雾拖尾"], [13, "89592", 1, [1, 8888], "光束拖尾"], [14, "128512", 1, [1, 8888], "光束拖尾"], [15, "128513", 1, [1, 8888], "光束拖尾"], [16, "128514", 1, [1, 8888], "光束拖尾"], [17, "128515", 1, [1, 8888], "光束拖尾"], [18, "128516", 1, [1, 8888], "光束拖尾"], [19, "128517", 1, [1, 8888], "光束拖尾"], [20, "128518", 1, [1, 8888], "光束拖尾"], [21, "146783", 1, [1, 8888], "烟雾拖尾"], [22, "148710", 1, [1, 8888], "拖尾"], [23, "150907", 1, [1, 8888], "水拖尾"], [24, "145511", 1, [1, 8888], "火焰拖尾"], [25, "151527", 1, [1, 8888], "烟雾拖尾"], [26, "151528", 1, [1, 8888], "烟雾拖尾"], [27, "153603", 1, [1, 8888], "拖尾"], [28, "153613", 1, [1, 8888], "拖尾"], [29, "128519", 1, [1, 8888], "光束拖尾"], [30, "128520", 1, [1, 8888], "光束拖尾"], [31, "145496", 1, [1, 8888], "烟雾拖尾"], [32, "145506", 1, [1, 8888], "拖尾"], [33, "128521", 1, [1, 8888], "光束拖尾"], [34, "4399", 1, [1, 8888], "雷拖尾"], [35, "27392", 1, [1, 8888], "彩虹拖尾"], [36, "133481", 1, [1, 8888], "胎印拖尾"], [37, "145492", 1, [1, 8888], "螺丝钉拖尾"], [38, "145493", 1, [1, 8888], "足球拖尾"], [39, "145494", 1, [1, 8888], "彩虹拖尾"], [40, "145495", 1, [1, 8888], "糖果拖尾"], [41, "145497", 1, [1, 8888], "奖杯拖尾"], [42, "145498", 1, [1, 8888], "皇冠拖尾"], [43, "145499", 1, [1, 8888], "爱心拖尾"], [44, "145500", 1, [1, 8888], "骷髅拖尾"], [45, "145502", 1, [1, 8888], "香蕉拖尾"], [46, "145503", 1, [1, 8888], "雷电拖尾"], [47, "145504", 1, [1, 8888], "雪花拖尾"], [48, "145505", 1, [1, 8888], "2023拖尾"], [49, "145507", 1, [1, 8888], "爆竹拖尾"], [50, "145508", 1, [1, 8888], "烟花拖尾"], [51, "145509", 1, [1, 8888], "礼物拖尾"], [52, "145510", 1, [1, 8888], "钞票拖尾"], [53, "145512", 1, [1, 8888], "泡泡拖尾"], [54, "145513", 1, [1, 8888], "彩带拖尾"], [55, "186344", 1, [1, 8888], "便便拖尾"], [56, "195115", 1, [1, 8888], "枫叶拖尾"], [57, "196217", 1, [1, 8888], "六芒星拖尾"], [58, "221186", 1, [1, 8888], "蝴蝶拖尾"], [59, "221187", 1, [1, 8888], "冰淇淋拖尾"], [60, "267975", 1, [1, 8888], "鸟拖尾"], [61, "271639", 1, [1, 8888], "蝙蝠拖尾"], [62, "289528", 1, [1, 8888], "祥云拖尾"], [63, "290033", 1, [1, 8888], "爪印"]];
 class TRAILINGConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA);
@@ -2331,90 +2331,6 @@ var foreign82 = /*#__PURE__*/Object.freeze({
     default: CoinPanel_Generate$1
 });
 
-class TSIAP {
-    constructor() {
-        /**功能是否开放 */
-        this.enable = false;
-        /**乐币数量 */
-        this.arkCoin = 0;
-        /**乐币数量监听回调 */
-        this.onArkCoinChange = new Action1();
-        if (SystemUtil.isClient()) {
-            mw.MessageChannelService.registerAction("bridge.action.feature.support.result", this, (dataStr) => {
-                try {
-                    const resp = JSON.parse(dataStr).data;
-                    if (resp.feature == "isIAPEnable") {
-                        this.enable = resp.isSupport;
-                    }
-                }
-                catch (err) {
-                }
-            });
-            this.reqIAP();
-            PurchaseService.onArkBalanceUpdated.add((amount) => {
-                this.arkCoin = amount;
-                this.onArkCoinChange.call(amount);
-            });
-            this.reqRefreshCoin();
-        }
-    }
-    reqIAP() {
-        const Data = {
-            "action": "ue.action.feature.support",
-            "messageId": 0,
-            "callbackType": "Call",
-            "data": {
-                "feature": "isIAPEnable"
-            }
-        };
-        const DataStr = JSON.stringify(Data);
-        mw.MessageChannelService.sendTo(mw.MessageChannelReceiver.Client, DataStr);
-    }
-    /**
-     * 客户端发起购买
-     * @param commodityId 商品Code
-     * @returns
-     */
-    reqBuyGoods(commodityId) {
-        return new Promise((result) => {
-            console.warn("发起购买的code", commodityId);
-            PurchaseService.placeOrder(commodityId, 1, (status, msg) => {
-                console.warn(`IAP_BuyCallback__,status:${status},msg:${msg},id:${commodityId}`);
-                PurchaseService.getArkBalance();
-                if (status == 200) {
-                    result(true);
-                    console.warn("订单支付成功!," + commodityId);
-                }
-                else {
-                    result(false);
-                    console.warn(`订单支付失败, id:${commodityId},msg:${msg}`);
-                    // Notice.showDownNotice(`订单支付失败`);
-                }
-            });
-        });
-    }
-    /**
-     * 乐币是否足够
-     * @param cost 花费金额
-     * @returns
-     */
-    isArkCoinEnough(cost) {
-        return this.arkCoin >= cost;
-    }
-    /**
-     * 客户端发起刷新乐币
-     */
-    reqRefreshCoin() {
-        PurchaseService.getArkBalance();
-    }
-}
-let TSIAPService = new TSIAP();
-
-var foreign70 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    TSIAPService: TSIAPService
-});
-
 /**
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
@@ -2550,355 +2466,19 @@ var foreign19 = /*#__PURE__*/Object.freeze({
     default: AdPanel
 });
 
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/CoinModule/DiamondPanel.ui
- * TIME: 2024.05.23-21.30.02
- */
-let DiamondPanel_Generate = class DiamondPanel_Generate extends UIScript {
-    get mMainCanvas() {
-        if (!this.mMainCanvas_Internal && this.uiWidgetBase) {
-            this.mMainCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas');
-        }
-        return this.mMainCanvas_Internal;
-    }
-    get mContentCanvas() {
-        if (!this.mContentCanvas_Internal && this.uiWidgetBase) {
-            this.mContentCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mContentCanvas');
-        }
-        return this.mContentCanvas_Internal;
-    }
-    get mCloseButton() {
-        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
-            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mCloseButton');
-        }
-        return this.mCloseButton_Internal;
-    }
-    get mAdsButton() {
-        if (!this.mAdsButton_Internal && this.uiWidgetBase) {
-            this.mAdsButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mAdsButton');
-        }
-        return this.mAdsButton_Internal;
-    }
-    get mLeBiIconImage() {
-        if (!this.mLeBiIconImage_Internal && this.uiWidgetBase) {
-            this.mLeBiIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mLeBiIconImage');
-        }
-        return this.mLeBiIconImage_Internal;
-    }
-    get mLeBiCountTextBlock() {
-        if (!this.mLeBiCountTextBlock_Internal && this.uiWidgetBase) {
-            this.mLeBiCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mLeBiIconImage/mLeBiCountTextBlock');
-        }
-        return this.mLeBiCountTextBlock_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        this.mCloseButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        });
-        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mLeBiCountTextBlock);
-        //文本多语言
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mMainCanvas/TitleTextBlock"));
-    }
-    /**初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /**显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /**隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-DiamondPanel_Generate = __decorate([
-    UIBind('UI/module/CoinModule/DiamondPanel.ui')
-], DiamondPanel_Generate);
-var DiamondPanel_Generate$1 = DiamondPanel_Generate;
-
-var foreign84 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: DiamondPanel_Generate$1
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/CoinModule/DiamondItem.ui
- * TIME: 2024.05.23-21.30.02
- */
-let DiamondItem_Generate = class DiamondItem_Generate extends UIScript {
-    get mFirstBuyTextBlock() {
-        if (!this.mFirstBuyTextBlock_Internal && this.uiWidgetBase) {
-            this.mFirstBuyTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mFirstBuyTextBlock');
-        }
-        return this.mFirstBuyTextBlock_Internal;
-    }
-    get mIconImage() {
-        if (!this.mIconImage_Internal && this.uiWidgetBase) {
-            this.mIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/IconImage/mIconImage');
-        }
-        return this.mIconImage_Internal;
-    }
-    get mDiamondCountTextBlock() {
-        if (!this.mDiamondCountTextBlock_Internal && this.uiWidgetBase) {
-            this.mDiamondCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mDiamondCountTextBlock');
-        }
-        return this.mDiamondCountTextBlock_Internal;
-    }
-    get mFirstCanvas() {
-        if (!this.mFirstCanvas_Internal && this.uiWidgetBase) {
-            this.mFirstCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mFirstCanvas');
-        }
-        return this.mFirstCanvas_Internal;
-    }
-    get mFirstDiamondTextBlock() {
-        if (!this.mFirstDiamondTextBlock_Internal && this.uiWidgetBase) {
-            this.mFirstDiamondTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mFirstCanvas/FirstBgImage/mFirstDiamondTextBlock');
-        }
-        return this.mFirstDiamondTextBlock_Internal;
-    }
-    get mLeBiCanvas() {
-        if (!this.mLeBiCanvas_Internal && this.uiWidgetBase) {
-            this.mLeBiCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mLeBiCanvas');
-        }
-        return this.mLeBiCanvas_Internal;
-    }
-    get mLiBiCountTextBlock_Real() {
-        if (!this.mLiBiCountTextBlock_Real_Internal && this.uiWidgetBase) {
-            this.mLiBiCountTextBlock_Real_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mLeBiCanvas/LiBiCanvas/mLiBiCountTextBlock_Real');
-        }
-        return this.mLiBiCountTextBlock_Real_Internal;
-    }
-    get mLiBiCountTextBlock_Fake() {
-        if (!this.mLiBiCountTextBlock_Fake_Internal && this.uiWidgetBase) {
-            this.mLiBiCountTextBlock_Fake_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mLeBiCanvas/LiBiCanvas/mLiBiCountTextBlock_Real/mLiBiCountTextBlock_Fake');
-        }
-        return this.mLiBiCountTextBlock_Fake_Internal;
-    }
-    get mBuyButton() {
-        if (!this.mBuyButton_Internal && this.uiWidgetBase) {
-            this.mBuyButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mBuyButton');
-        }
-        return this.mBuyButton_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        this.mBuyButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mBuyButton");
-        });
-        this.mBuyButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mFirstBuyTextBlock);
-        this.initLanguage(this.mDiamondCountTextBlock);
-        this.initLanguage(this.mFirstDiamondTextBlock);
-        this.initLanguage(this.mLiBiCountTextBlock_Real);
-        this.initLanguage(this.mLiBiCountTextBlock_Fake);
-        //文本多语言
-    }
-    /**初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /**显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /**隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-DiamondItem_Generate = __decorate([
-    UIBind('UI/module/CoinModule/DiamondItem.ui')
-], DiamondItem_Generate);
-var DiamondItem_Generate$1 = DiamondItem_Generate;
-
-var foreign83 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: DiamondItem_Generate$1
-});
-
-class DiamondItem extends DiamondItem_Generate$1 {
-    constructor() {
-        super(...arguments);
-        this.coinModuleC = null;
-        this.shopItemElement = null;
-    }
-    get getCoinModuleC() {
-        if (this.coinModuleC == null) {
-            this.coinModuleC = ModuleService.getModule(CoinModuleC);
-        }
-        return this.coinModuleC;
-    }
-    /**
-     * 构造UI文件成功后，在合适的时机最先初始化一次
-     */
-    onStart() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = UILayerMiddle;
-        this.bindButton();
-    }
-    bindButton() {
-        this.mBuyButton.onClicked.add(this.addBuyButton.bind(this));
-    }
-    addBuyButton() {
-        this.getCoinModuleC.buyDiamond(this.shopItemElement);
-    }
-    setData(value) {
-        this.shopItemElement = value;
-        if (this.getCoinModuleC.getIsFirstBuy) {
-            Utils.setWidgetVisibility(this.mFirstBuyTextBlock, mw.SlateVisibility.SelfHitTestInvisible);
-            Utils.setWidgetVisibility(this.mFirstCanvas, mw.SlateVisibility.SelfHitTestInvisible);
-            Utils.setWidgetVisibility(this.mLiBiCountTextBlock_Fake, mw.SlateVisibility.SelfHitTestInvisible);
-            this.mFirstDiamondTextBlock.text = `额外+${this.shopItemElement.Count}`;
-            this.mLiBiCountTextBlock_Fake.text = `${this.shopItemElement.PartyPrice * 2}`;
-        }
-        else {
-            Utils.setWidgetVisibility(this.mFirstBuyTextBlock, mw.SlateVisibility.Collapsed);
-            Utils.setWidgetVisibility(this.mFirstCanvas, mw.SlateVisibility.Collapsed);
-            Utils.setWidgetVisibility(this.mLiBiCountTextBlock_Fake, mw.SlateVisibility.Collapsed);
-            this.mLiBiCountTextBlock_Real.position = new mw.Vector2(60, 15);
-            this.mIconImage.size = new mw.Vector2(190, 190);
-            this.mIconImage.position = new mw.Vector2(-20, 0);
-        }
-        this.mIconImage.imageGuid = this.shopItemElement.Icon;
-        this.mDiamondCountTextBlock.text = `+${this.shopItemElement.Count}`;
-        this.mLiBiCountTextBlock_Real.text = `${this.shopItemElement.PartyPrice}`;
-    }
-    refreshUI() {
-        if (this.getCoinModuleC.getIsFirstBuy)
-            return;
-        Utils.setWidgetVisibility(this.mFirstBuyTextBlock, mw.SlateVisibility.Collapsed);
-        Utils.setWidgetVisibility(this.mFirstCanvas, mw.SlateVisibility.Collapsed);
-        Utils.setWidgetVisibility(this.mLiBiCountTextBlock_Fake, mw.SlateVisibility.Collapsed);
-        this.mLiBiCountTextBlock_Real.position = new mw.Vector2(60, 15);
-        this.mIconImage.size = new mw.Vector2(190, 190);
-        this.mIconImage.position = new mw.Vector2(-20, 0);
-    }
-}
-
-var foreign24 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: DiamondItem
-});
-
-class DiamondPanel extends DiamondPanel_Generate$1 {
-    constructor() {
-        super(...arguments);
-        this.coinModuleC = null;
-        this.diamondItems = [];
-    }
-    get getCoinModuleC() {
-        if (this.coinModuleC == null) {
-            this.coinModuleC = ModuleService.getModule(CoinModuleC);
-        }
-        return this.coinModuleC;
-    }
-    /**
-     * 构造UI文件成功后，在合适的时机最先初始化一次
-     */
-    onStart() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = UILayerMiddle;
-        this.bindButton();
-        this.initAction();
-    }
-    bindButton() {
-        this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
-        this.mAdsButton.onClose.add(this.addAds.bind(this));
-        this.mAdsButton.text = `免费领取\n5个钻石`;
-    }
-    initAction() {
-        TSIAPService.onArkCoinChange.add(this.addArkCoinChange.bind(this));
-    }
-    addArkCoinChange(libeCount) {
-        this.mLeBiCountTextBlock.text = libeCount.toString();
-    }
-    addAds(isSuccess) {
-        if (!isSuccess) {
-            Notice.showDownNotice(`领取失败,请重试`);
-            return;
-        }
-        this.getCoinModuleC.setDiamond(5);
-    }
-    initDiamondItem() {
-        GameConfig.ShopItem.getAllElement().forEach((value) => {
-            let diamondItem = UIService.create(DiamondItem);
-            diamondItem.setData(value);
-            this.mContentCanvas.addChild(diamondItem.uiObject);
-            this.diamondItems.push(diamondItem);
-        });
-        TSIAPService.reqRefreshCoin();
-    }
-    refreshDiamondItems() {
-        this.diamondItems.forEach((value) => {
-            value.refreshUI();
-        });
-    }
-    addCloseButton() {
-        this.hideTween();
-    }
-    onShow(...params) {
-        Utils.openUITween(this.rootCanvas, null, null);
-    }
-    /**
-     * 隐藏缓动
-     */
-    hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, () => {
-            this.hide();
-        });
-    }
-}
-
-var foreign25 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: DiamondPanel
-});
-
+// import DiamondPanel from "./ui/DiamondPanel";
 class CoinModuleC extends ModuleC {
     constructor() {
         super(...arguments);
         this.coinPanel = null;
         this.adPanel = null;
-        this.diamondPanel = null;
+        // private diamondPanel: DiamondPanel = null;
+        // private get getDiamondPanel(): DiamondPanel {
+        //     if (this.diamondPanel == null) {
+        //         this.diamondPanel = mw.UIService.getUI(DiamondPanel);
+        //     }
+        //     return this.diamondPanel;
+        // }
         this.confirmPanel = null;
         this.onAddCoinAction = new Action();
         this.onAddDiamondAction = new Action();
@@ -2907,8 +2487,68 @@ class CoinModuleC extends ModuleC {
         this.isFirst = true;
         //#endregion
         //#region LeBi
-        this.isFirstBuy = true;
-        this.shopItemElements = [];
+        // private isFirstBuy: boolean = true;
+        // public get getIsFirstBuy(): boolean {
+        //     return this.isFirstBuy;
+        // }
+        // private setFirstBuy(): void {
+        //     if (!this.isFirstBuy) return;
+        //     this.isFirstBuy = false;
+        //     this.getDiamondPanel.refreshDiamondItems();
+        //     this.server.net_setFirstBuy(this.isFirstBuy);
+        // }
+        // private shopItemElements: IShopItemElement[] = [];
+        // private get getShopItemElements(): IShopItemElement[] {
+        //     if (!this.shopItemElements || this.shopItemElements.length == 0) {
+        //         this.shopItemElements = GameConfig.ShopItem.getAllElement();
+        //     }
+        //     return this.shopItemElements;
+        // }
+        // private initLeBiData(): void {
+        //     this.isFirstBuy = this.data.isFirstBuy;
+        //     this.shopItemElements = GameConfig.ShopItem.getAllElement();
+        //     this.getDiamondPanel.initDiamondItem();
+        // }
+        // public openShopBuyDiamondCoin(diamond: number = 0): void {
+        //     if (diamond == 0 || !TSIAPService.enable) {
+        //         this.getDiamondPanel.show();
+        //     } else {
+        //         for (let i = 0; i < this.shopItemElements.length; ++i) {
+        //             if (this.shopItemElements[i].Count >= diamond) {
+        //                 TSIAPService.reqBuyGoods(this.shopItemElements[i].CommodityId);
+        //                 console.warn(`diamond:${diamond}`);
+        //                 break;
+        //             }
+        //         }
+        //     }
+        // }
+        // public net_deliverGoods(commodityId: string): void {
+        //     let diamondCount = this.getBuyDiamondCount(commodityId);
+        //     Notice.showDownNotice(`购买成功`);
+        //     if (this.isFirst) diamondCount *= 2;
+        //     this.setDiamond(diamondCount);
+        //     this.setFirstBuy();
+        // }
+        // private getBuyDiamondCount(commodityId: string): number {
+        //     for (let i = 0; i < this.getShopItemElements.length; ++i) {
+        //         if (this.getShopItemElements[i].CommodityId == commodityId) {
+        //             return this.getShopItemElements[i].Count;
+        //         }
+        //     }
+        //     return 0;
+        // }
+        // public buyDiamond(shopItemElement: IShopItemElement): void {
+        //     if (!shopItemElement.CommodityId || !TSIAPService.enable) {
+        //         this.getAdPanel.showRewardAd(() => {
+        //             this.setDiamond(5);
+        //         }, "购买失败,请升级233乐园\n大礼包\n免费获得5个钻石");
+        //         return;
+        //     }
+        //     let contentText: string = `消耗${shopItemElement.PartyPrice}乐币购买${shopItemElement.Count * (this.isFirstBuy ? 2 : 1)}钻石`;
+        //     this.getConfirmPanel.confirmTips(() => {
+        //         TSIAPService.reqBuyGoods(shopItemElement.CommodityId);
+        //     }, contentText, "购买", "取消");
+        // }
         //#endregion
     }
     get getCoinPanel() {
@@ -2922,12 +2562,6 @@ class CoinModuleC extends ModuleC {
             this.adPanel = UIService.getUI(AdPanel);
         }
         return this.adPanel;
-    }
-    get getDiamondPanel() {
-        if (this.diamondPanel == null) {
-            this.diamondPanel = mw.UIService.getUI(DiamondPanel);
-        }
-        return this.diamondPanel;
     }
     get getConfirmPanel() {
         if (this.confirmPanel == null) {
@@ -2954,7 +2588,7 @@ class CoinModuleC extends ModuleC {
         this.diamond = this.data.diamond;
         this.getCoinPanel.setCoinAndDiamond(this.coin, this.diamond);
         this.defaultAds();
-        this.initLeBiData();
+        // this.initLeBiData();
     }
     //#region Coin
     setCoin(coin) {
@@ -2980,16 +2614,16 @@ class CoinModuleC extends ModuleC {
         return this.diamond;
     }
     getCoinByAd() {
-        // this.getAdPanel.showRewardAd(() => {
-        //     this.setCoin(10000);
-        // }, "免费领取10000金币");
-        this.openShopBuyDiamondCoin();
+        this.getAdPanel.showRewardAd(() => {
+            this.setCoin(10000);
+        }, "免费领取10000金币");
+        // this.openShopBuyDiamondCoin();
     }
     getDiamondByAd(diamond) {
-        // this.getAdPanel.showRewardAd(() => {
-        //     this.setDiamond(1);
-        // }, "免费领取1个钻石");
-        this.openShopBuyDiamondCoin(diamond);
+        this.getAdPanel.showRewardAd(() => {
+            this.setDiamond(1);
+        }, "免费领取1个钻石");
+        // this.openShopBuyDiamondCoin(diamond);
     }
     net_killPlayerAddCoin(coin) {
         this.coin += coin;
@@ -3010,17 +2644,17 @@ class CoinModuleC extends ModuleC {
         this.setInterval180Seconds();
     }
     delay10Seconds() {
-        TimeUtil.delaySecond(10).then(() => {
+        TimeUtil.delaySecond(30).then(() => {
             this.getAdPanel.showRewardAd(() => {
-                this.setDiamond(5);
-            }, "大礼包\n免费获得5个钻石");
+                this.setDiamond(2);
+            }, "大礼包\n免费获得2个钻石");
         });
     }
     setInterval180Seconds() {
         TimeUtil.setInterval(() => {
             this.getAdPanel.showRewardAd(() => {
-                this.setDiamond(10);
-            }, "幸运大礼包\n免费获得10个钻石");
+                this.setDiamond(2);
+            }, "幸运大礼包\n免费获得2个钻石");
         }, 180);
     }
     dieAds() {
@@ -3029,72 +2663,9 @@ class CoinModuleC extends ModuleC {
             return;
         }
         this.getAdPanel.showRewardAd(() => {
-            this.setDiamond(5);
-        }, "被击败奖励\n免费获得5个钻石");
+            this.setDiamond(2);
+        }, "被击败奖励\n免费获得2个钻石");
         Event.dispatchToLocal(EventType.TryOutGun);
-    }
-    get getIsFirstBuy() {
-        return this.isFirstBuy;
-    }
-    setFirstBuy() {
-        if (!this.isFirstBuy)
-            return;
-        this.isFirstBuy = false;
-        this.getDiamondPanel.refreshDiamondItems();
-        this.server.net_setFirstBuy(this.isFirstBuy);
-    }
-    get getShopItemElements() {
-        if (!this.shopItemElements || this.shopItemElements.length == 0) {
-            this.shopItemElements = GameConfig.ShopItem.getAllElement();
-        }
-        return this.shopItemElements;
-    }
-    initLeBiData() {
-        this.isFirstBuy = this.data.isFirstBuy;
-        this.shopItemElements = GameConfig.ShopItem.getAllElement();
-        this.getDiamondPanel.initDiamondItem();
-    }
-    openShopBuyDiamondCoin(diamond = 0) {
-        if (diamond == 0) {
-            this.getDiamondPanel.show();
-        }
-        else {
-            for (let i = 0; i < this.shopItemElements.length; ++i) {
-                if (this.shopItemElements[i].Count >= diamond) {
-                    TSIAPService.reqBuyGoods(this.shopItemElements[i].CommodityId);
-                    console.warn(`diamond:${diamond}`);
-                    break;
-                }
-            }
-        }
-    }
-    net_deliverGoods(commodityId) {
-        let diamondCount = this.getBuyDiamondCount(commodityId);
-        Notice.showDownNotice(`购买成功`);
-        if (this.isFirst)
-            diamondCount *= 2;
-        this.setDiamond(diamondCount);
-        this.setFirstBuy();
-    }
-    getBuyDiamondCount(commodityId) {
-        for (let i = 0; i < this.getShopItemElements.length; ++i) {
-            if (this.getShopItemElements[i].CommodityId == commodityId) {
-                return this.getShopItemElements[i].Count;
-            }
-        }
-        return 0;
-    }
-    buyDiamond(shopItemElement) {
-        if (!shopItemElement.CommodityId || !TSIAPService.enable) {
-            this.getAdPanel.showRewardAd(() => {
-                this.setDiamond(5);
-            }, "购买失败,请升级233乐园\n大礼包\n免费获得5个钻石");
-            return;
-        }
-        let contentText = `消耗${shopItemElement.PartyPrice}乐币购买${shopItemElement.Count * (this.isFirstBuy ? 2 : 1)}钻石`;
-        this.getConfirmPanel.confirmTips(() => {
-            TSIAPService.reqBuyGoods(shopItemElement.CommodityId);
-        }, contentText, "购买", "取消");
     }
 }
 
@@ -6068,30 +5639,28 @@ class ActivityPanel extends ActivityPanel_Generate$1 {
     onClickAdsGetButton() {
         if (!this.isHasCondition(true))
             return;
-        let contentText = "";
-        let curActivityData = this.activityData[this.currentIndex - 1];
-        let price = 0;
-        if (curActivityData.shopType == ShopType.Gun) {
-            price = GameConfig.GUN.getElement(curActivityData.shopId).PRICE[0];
-            contentText = `消耗${price}钻石领取`;
-        }
-        else if (curActivityData.shopType == ShopType.Role) {
-            price = GameConfig.ROLE.getElement(curActivityData.shopId).PRICE[0];
-            contentText = `消耗${price}钻石领取`;
-        }
-        this.getConfirmPanel.confirmTips(() => {
-            if (this.getCoinModuleC.getDiamond >= price) {
-                this.getCoinModuleC.setDiamond(-price);
-                this.setGetActivity();
-            }
-            else {
-                Notice.showDownNotice("钻石不足");
-                this.getCoinModuleC.openShopBuyDiamondCoin(price);
-            }
-        }, contentText, "领取", "取消", "提示");
-        // this.getAdPanel.showRewardAd(() => {
-        // 	this.setGetActivity();
-        // }, "免费领取" + this.getActicityShopTypeStr());
+        // let contentText: string = "";
+        // let curActivityData = this.activityData[this.currentIndex - 1];
+        // let price: number = 0;
+        // if (curActivityData.shopType == ShopType.Gun) {
+        // 	price = GameConfig.GUN.getElement(curActivityData.shopId).PRICE[0];
+        // 	contentText = `消耗${price}钻石领取`;
+        // } else if (curActivityData.shopType == ShopType.Role) {
+        // 	price = GameConfig.ROLE.getElement(curActivityData.shopId).PRICE[0];
+        // 	contentText = `消耗${price}钻石领取`;
+        // }
+        // this.getConfirmPanel.confirmTips(() => {
+        // 	if (this.getCoinModuleC.getDiamond >= price) {
+        // 		this.getCoinModuleC.setDiamond(-price);
+        // 		this.setGetActivity();
+        // 	} else {
+        // 		Notice.showDownNotice("钻石不足");
+        // 		this.getCoinModuleC.openShopBuyDiamondCoin(price);
+        // 	}
+        // }, contentText, "领取", "取消", "提示");
+        this.getAdPanel.showRewardAd(() => {
+            this.setGetActivity();
+        }, "免费领取" + this.getActicityShopTypeStr());
     }
     setGetActivity() {
         this.getActivityModuleC.setGetActivity(this.activityData[this.currentIndex - 1].shopId, this.activityData[this.currentIndex - 1].shopType);
@@ -6341,20 +5910,19 @@ class CoinModuleS extends ModuleS {
         this.bindEvent();
     }
     bindEvent() {
-        const onShipOrder = (playerId, orderId, commodityId, amount, confirmOrder) => {
-            //根据 playerId 和 commodityId 来处理购买成功后的逻辑
-            confirmOrder(true); //调用这个方法表示确认收货成功
-            this.deliverGoods(playerId, commodityId);
-        };
-        // 监听订单发货后的委托
-        mw.PurchaseService.onOrderDelivered.add(onShipOrder);
+        // const onShipOrder = (playerId: number, orderId: string, commodityId: string, amount: number, confirmOrder: (bReceived: boolean) => void) => {
+        //     //根据 playerId 和 commodityId 来处理购买成功后的逻辑
+        //     confirmOrder(true); //调用这个方法表示确认收货成功
+        //     this.deliverGoods(playerId, commodityId);
+        // }
+        // // 监听订单发货后的委托
+        // mw.PurchaseService.onOrderDelivered.add(onShipOrder);
     }
-    async deliverGoods(playerId, commodityId) {
-        let player = await Player.asyncGetPlayer(playerId);
-        if (!player)
-            return;
-        this.getClient(player).net_deliverGoods(commodityId);
-    }
+    // private async deliverGoods(playerId: number, commodityId: string): Promise<void> {
+    //     let player = await Player.asyncGetPlayer(playerId);
+    //     if (!player) return;
+    //     this.getClient(player).net_deliverGoods(commodityId);
+    // }
     net_setCoin(coin) {
         this.currentData.setCoin(coin);
     }
@@ -10910,6 +10478,155 @@ var foreign14 = /*#__PURE__*/Object.freeze({
     default: GameLauncher$1
 });
 
+// import { IShopItemElement } from "../../../config/ShopItem";
+// import Utils from "../../../tools/Utils";
+// import DiamondItem_Generate from "../../../ui-generate/module/CoinModule/DiamondItem_generate";
+// import CoinModuleC from "../CoinModuleC";
+// export default class DiamondItem extends DiamondItem_Generate {
+//     private coinModuleC: CoinModuleC = null;
+//     private get getCoinModuleC(): CoinModuleC {
+//         if (this.coinModuleC == null) {
+//             this.coinModuleC = ModuleService.getModule(CoinModuleC);
+//         }
+//         return this.coinModuleC;
+//     }
+//     /**
+//      * 构造UI文件成功后，在合适的时机最先初始化一次
+//      */
+//     protected onStart() {
+//         //设置能否每帧触发onUpdate
+//         this.canUpdate = false;
+//         this.layer = UILayerMiddle;
+//         this.bindButton();
+//     }
+//     private bindButton(): void {
+//         this.mBuyButton.onClicked.add(this.addBuyButton.bind(this));
+//     }
+//     private addBuyButton(): void {
+//         // this.getCoinModuleC.buyDiamond(this.shopItemElement);
+//     }
+//     private shopItemElement: IShopItemElement = null;
+//     public setData(value: IShopItemElement): void {
+//         this.shopItemElement = value;
+//         if (this.getCoinModuleC.getIsFirstBuy) {
+//             Utils.setWidgetVisibility(this.mFirstBuyTextBlock, mw.SlateVisibility.SelfHitTestInvisible);
+//             Utils.setWidgetVisibility(this.mFirstCanvas, mw.SlateVisibility.SelfHitTestInvisible);
+//             Utils.setWidgetVisibility(this.mLiBiCountTextBlock_Fake, mw.SlateVisibility.SelfHitTestInvisible);
+//             this.mFirstDiamondTextBlock.text = `额外+${this.shopItemElement.Count}`;
+//             this.mLiBiCountTextBlock_Fake.text = `${this.shopItemElement.PartyPrice * 2}`;
+//         } else {
+//             Utils.setWidgetVisibility(this.mFirstBuyTextBlock, mw.SlateVisibility.Collapsed);
+//             Utils.setWidgetVisibility(this.mFirstCanvas, mw.SlateVisibility.Collapsed);
+//             Utils.setWidgetVisibility(this.mLiBiCountTextBlock_Fake, mw.SlateVisibility.Collapsed);
+//             this.mLiBiCountTextBlock_Real.position = new mw.Vector2(60, 15);
+//             this.mIconImage.size = new mw.Vector2(190, 190);
+//             this.mIconImage.position = new mw.Vector2(-20, 0);
+//         }
+//         this.mIconImage.imageGuid = this.shopItemElement.Icon;
+//         this.mDiamondCountTextBlock.text = `+${this.shopItemElement.Count}`;
+//         this.mLiBiCountTextBlock_Real.text = `${this.shopItemElement.PartyPrice}`;
+//     }
+//     public refreshUI(): void {
+//         if (this.getCoinModuleC.getIsFirstBuy) return;
+//         Utils.setWidgetVisibility(this.mFirstBuyTextBlock, mw.SlateVisibility.Collapsed);
+//         Utils.setWidgetVisibility(this.mFirstCanvas, mw.SlateVisibility.Collapsed);
+//         Utils.setWidgetVisibility(this.mLiBiCountTextBlock_Fake, mw.SlateVisibility.Collapsed);
+//         this.mLiBiCountTextBlock_Real.position = new mw.Vector2(60, 15);
+//         this.mIconImage.size = new mw.Vector2(190, 190);
+//         this.mIconImage.position = new mw.Vector2(-20, 0);
+//     }
+// }
+
+var foreign24 = /*#__PURE__*/Object.freeze({
+    __proto__: null
+});
+
+// import { Notice } from "../../../common/notice/Notice";
+// import { GameConfig } from "../../../config/GameConfig";
+// import { IShopItemElement } from "../../../config/ShopItem";
+// import { TSIAPService } from "../../../tools/IAPInstance";
+// import Utils from "../../../tools/Utils";
+// import DiamondPanel_Generate from "../../../ui-generate/module/CoinModule/DiamondPanel_generate";
+// import CoinModuleC from "../CoinModuleC";
+// import DiamondItem from "./DiamondItem";
+// export default class DiamondPanel extends DiamondPanel_Generate {
+//     private coinModuleC: CoinModuleC = null;
+//     private get getCoinModuleC(): CoinModuleC {
+//         if (this.coinModuleC == null) {
+//             this.coinModuleC = ModuleService.getModule(CoinModuleC);
+//         }
+//         return this.coinModuleC;
+//     }
+//     /**
+//      * 构造UI文件成功后，在合适的时机最先初始化一次
+//      */
+//     protected onStart() {
+//         //设置能否每帧触发onUpdate
+//         this.canUpdate = false;
+//         this.layer = UILayerMiddle;
+//         this.bindButton();
+//         this.initAction();
+//     }
+//     private bindButton(): void {
+//         this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
+//         this.mAdsButton.onClose.add(this.addAds.bind(this));
+//         this.mAdsButton.text = `免费领取\n5个钻石`;
+//     }
+//     private initAction(): void {
+//         TSIAPService.onArkCoinChange.add(this.addArkCoinChange.bind(this));
+//     }
+//     private addArkCoinChange(libeCount: number): void {
+//         this.mLeBiCountTextBlock.text = libeCount.toString();
+//     }
+//     private addAds(isSuccess: boolean): void {
+//         if (!isSuccess) {
+//             Notice.showDownNotice(`领取失败,请重试`);
+//             return;
+//         }
+//         this.getCoinModuleC.setDiamond(5);
+//     }
+//     private diamondItems: DiamondItem[] = [];
+//     public initDiamondItem(): void {
+//         GameConfig.ShopItem.getAllElement().forEach((value: IShopItemElement) => {
+//             let diamondItem = UIService.create(DiamondItem);
+//             diamondItem.setData(value);
+//             this.mContentCanvas.addChild(diamondItem.uiObject);
+//             this.diamondItems.push(diamondItem);
+//         });
+//         TSIAPService.reqRefreshCoin();
+//     }
+//     public refreshDiamondItems(): void {
+//         this.diamondItems.forEach((value: DiamondItem) => {
+//             value.refreshUI();
+//         });
+//     }
+//     private addCloseButton(): void {
+//         this.hideTween();
+//     }
+//     protected onShow(...params: any[]): void {
+//         Utils.openUITween(
+//             this.rootCanvas,
+//             null,
+//             null
+//         );
+//     }
+//     /**
+//      * 隐藏缓动
+//      */
+//     public hideTween(): void {
+//         Utils.closeUITween(
+//             this.rootCanvas,
+//             null,
+//             () => {
+//                 this.hide();
+//             });
+//     }
+// }
+
+var foreign25 = /*#__PURE__*/Object.freeze({
+    __proto__: null
+});
+
 /**
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
@@ -13628,21 +13345,20 @@ let AddMaxHp = class AddMaxHp extends Script {
     onTriggerEnter(character) {
         if (Player.localPlayer.character != character)
             return;
-        let price = 100;
-        let contentText = `奖励翻倍\n消耗${price}钻石\n最大生命值提高到${GlobalData.maxHp * 2}`;
-        this.getConfirmPanel.confirmTips(() => {
-            if (this.getCoinModuleC.getDiamond >= price) {
-                this.getCoinModuleC.setDiamond(-price);
-                this.getPlayerModuleC.addMaxHp();
-            }
-            else {
-                Notice.showDownNotice("钻石不足");
-                this.getCoinModuleC.openShopBuyDiamondCoin(price);
-            }
-        }, contentText, "领取", "取消", "提示");
-        // this.getAdPanel.showRewardAd(() => {
-        //     this.getPlayerModuleC.addMaxHp();
-        // }, "奖励翻倍\n提高最大生命值 + " + GlobalData.maxHp * 2, "取消", "获取");
+        // let price: number = 100;
+        // let contentText: string = `奖励翻倍\n消耗${price}钻石\n最大生命值提高到${GlobalData.maxHp * 2}`;
+        // this.getConfirmPanel.confirmTips(() => {
+        //     if (this.getCoinModuleC.getDiamond >= price) {
+        //         this.getCoinModuleC.setDiamond(-price);
+        //         this.getPlayerModuleC.addMaxHp();
+        //     } else {
+        //         Notice.showDownNotice("钻石不足");
+        //         this.getCoinModuleC.openShopBuyDiamondCoin(price);
+        //     }
+        // }, contentText, "领取", "取消", "提示");
+        this.getAdPanel.showRewardAd(() => {
+            this.getPlayerModuleC.addMaxHp();
+        }, "奖励翻倍\n最大生命值提高到 + " + GlobalData.maxHp * 2, "取消", "提高");
     }
     /**客户端的onUpdate */
     onUpdateC(dt) {
@@ -13769,25 +13485,25 @@ let TryOutGun = class TryOutGun extends Script {
     onTriggerEnter(character) {
         if (Player.localPlayer.character != character)
             return;
-        // let gunElement = GameConfig.GUN.getElement(this.gunkey);
-        let price = 100;
-        let contentText = `消耗${price}钻石\n免费领取`;
-        this.getConfirmPanel.confirmTips(() => {
-            if (this.getCoinModuleC.getDiamond >= price) {
-                this.getCoinModuleC.setDiamond(-price);
-                this.switchGun();
-                this.switchGunModel(Utils.randomInt(10, 14));
-            }
-            else {
-                Notice.showDownNotice("钻石不足");
-                this.getCoinModuleC.openShopBuyDiamondCoin(price);
-            }
-        }, contentText, "领取", "取消", "提示");
-        // this.getAdPanel.showRewardAd(() => {
-        //     if (!this.gunkey) return;
-        //     this.switchGun();
-        //     this.switchGunModel(Utils.randomInt(10, 14));
-        // }, gunElement.GUNNAME + "\n免费试用一局", "取消", "试用");
+        let gunElement = GameConfig.GUN.getElement(this.gunkey);
+        // let price: number = 100;
+        // let contentText: string = `消耗${price}钻石\n免费领取`;
+        // this.getConfirmPanel.confirmTips(() => {
+        //     if (this.getCoinModuleC.getDiamond >= price) {
+        //         this.getCoinModuleC.setDiamond(-price);
+        //         this.switchGun();
+        //         this.switchGunModel(Utils.randomInt(10, 14));
+        //     } else {
+        //         Notice.showDownNotice("钻石不足");
+        //         this.getCoinModuleC.openShopBuyDiamondCoin(price);
+        //     }
+        // }, contentText, "领取", "取消", "提示");
+        this.getAdPanel.showRewardAd(() => {
+            if (!this.gunkey)
+                return;
+            this.switchGun();
+            this.switchGunModel(Utils.randomInt(10, 14));
+        }, gunElement.GUNNAME + "\n免费试用一局", "取消", "试用");
     }
     switchGun() {
         if (this.getMorphModuleC.getIsMorph) {
@@ -14037,6 +13753,90 @@ var foreign68 = /*#__PURE__*/Object.freeze({
     default: FreeCamera$1
 });
 
+class TSIAP {
+    constructor() {
+        /**功能是否开放 */
+        this.enable = false;
+        /**乐币数量 */
+        this.arkCoin = 0;
+        /**乐币数量监听回调 */
+        this.onArkCoinChange = new Action1();
+        if (SystemUtil.isClient()) {
+            mw.MessageChannelService.registerAction("bridge.action.feature.support.result", this, (dataStr) => {
+                try {
+                    const resp = JSON.parse(dataStr).data;
+                    if (resp.feature == "isIAPEnable") {
+                        this.enable = resp.isSupport;
+                    }
+                }
+                catch (err) {
+                }
+            });
+            this.reqIAP();
+            PurchaseService.onArkBalanceUpdated.add((amount) => {
+                this.arkCoin = amount;
+                this.onArkCoinChange.call(amount);
+            });
+            this.reqRefreshCoin();
+        }
+    }
+    reqIAP() {
+        const Data = {
+            "action": "ue.action.feature.support",
+            "messageId": 0,
+            "callbackType": "Call",
+            "data": {
+                "feature": "isIAPEnable"
+            }
+        };
+        const DataStr = JSON.stringify(Data);
+        mw.MessageChannelService.sendTo(mw.MessageChannelReceiver.Client, DataStr);
+    }
+    /**
+     * 客户端发起购买
+     * @param commodityId 商品Code
+     * @returns
+     */
+    reqBuyGoods(commodityId) {
+        return new Promise((result) => {
+            console.warn("发起购买的code", commodityId);
+            PurchaseService.placeOrder(commodityId, 1, (status, msg) => {
+                console.warn(`IAP_BuyCallback__,status:${status},msg:${msg},id:${commodityId}`);
+                PurchaseService.getArkBalance();
+                if (status == 200) {
+                    result(true);
+                    console.warn("订单支付成功!," + commodityId);
+                }
+                else {
+                    result(false);
+                    console.warn(`订单支付失败, id:${commodityId},msg:${msg}`);
+                    // Notice.showDownNotice(`订单支付失败`);
+                }
+            });
+        });
+    }
+    /**
+     * 乐币是否足够
+     * @param cost 花费金额
+     * @returns
+     */
+    isArkCoinEnough(cost) {
+        return this.arkCoin >= cost;
+    }
+    /**
+     * 客户端发起刷新乐币
+     */
+    reqRefreshCoin() {
+        PurchaseService.getArkBalance();
+    }
+}
+let TSIAPService = new TSIAP();
+
+var foreign70 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    TSIAPService: TSIAPService
+});
+
 let JumpGame = class JumpGame extends Script {
     constructor() {
         super(...arguments);
@@ -14224,6 +14024,209 @@ var SecondNoticeItem_Generate$1 = SecondNoticeItem_Generate;
 var foreign78 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SecondNoticeItem_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/CoinModule/DiamondItem.ui
+ * TIME: 2024.05.23-21.30.02
+ */
+let DiamondItem_Generate = class DiamondItem_Generate extends UIScript {
+    get mFirstBuyTextBlock() {
+        if (!this.mFirstBuyTextBlock_Internal && this.uiWidgetBase) {
+            this.mFirstBuyTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mFirstBuyTextBlock');
+        }
+        return this.mFirstBuyTextBlock_Internal;
+    }
+    get mIconImage() {
+        if (!this.mIconImage_Internal && this.uiWidgetBase) {
+            this.mIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/IconImage/mIconImage');
+        }
+        return this.mIconImage_Internal;
+    }
+    get mDiamondCountTextBlock() {
+        if (!this.mDiamondCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mDiamondCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mDiamondCountTextBlock');
+        }
+        return this.mDiamondCountTextBlock_Internal;
+    }
+    get mFirstCanvas() {
+        if (!this.mFirstCanvas_Internal && this.uiWidgetBase) {
+            this.mFirstCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mFirstCanvas');
+        }
+        return this.mFirstCanvas_Internal;
+    }
+    get mFirstDiamondTextBlock() {
+        if (!this.mFirstDiamondTextBlock_Internal && this.uiWidgetBase) {
+            this.mFirstDiamondTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mFirstCanvas/FirstBgImage/mFirstDiamondTextBlock');
+        }
+        return this.mFirstDiamondTextBlock_Internal;
+    }
+    get mLeBiCanvas() {
+        if (!this.mLeBiCanvas_Internal && this.uiWidgetBase) {
+            this.mLeBiCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mLeBiCanvas');
+        }
+        return this.mLeBiCanvas_Internal;
+    }
+    get mLiBiCountTextBlock_Real() {
+        if (!this.mLiBiCountTextBlock_Real_Internal && this.uiWidgetBase) {
+            this.mLiBiCountTextBlock_Real_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mLeBiCanvas/LiBiCanvas/mLiBiCountTextBlock_Real');
+        }
+        return this.mLiBiCountTextBlock_Real_Internal;
+    }
+    get mLiBiCountTextBlock_Fake() {
+        if (!this.mLiBiCountTextBlock_Fake_Internal && this.uiWidgetBase) {
+            this.mLiBiCountTextBlock_Fake_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mLeBiCanvas/LiBiCanvas/mLiBiCountTextBlock_Real/mLiBiCountTextBlock_Fake');
+        }
+        return this.mLiBiCountTextBlock_Fake_Internal;
+    }
+    get mBuyButton() {
+        if (!this.mBuyButton_Internal && this.uiWidgetBase) {
+            this.mBuyButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mBuyButton');
+        }
+        return this.mBuyButton_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mBuyButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mBuyButton");
+        });
+        this.mBuyButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mFirstBuyTextBlock);
+        this.initLanguage(this.mDiamondCountTextBlock);
+        this.initLanguage(this.mFirstDiamondTextBlock);
+        this.initLanguage(this.mLiBiCountTextBlock_Real);
+        this.initLanguage(this.mLiBiCountTextBlock_Fake);
+        //文本多语言
+    }
+    /**初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /**显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /**隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+DiamondItem_Generate = __decorate([
+    UIBind('UI/module/CoinModule/DiamondItem.ui')
+], DiamondItem_Generate);
+var DiamondItem_Generate$1 = DiamondItem_Generate;
+
+var foreign83 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: DiamondItem_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/CoinModule/DiamondPanel.ui
+ * TIME: 2024.05.23-21.30.02
+ */
+let DiamondPanel_Generate = class DiamondPanel_Generate extends UIScript {
+    get mMainCanvas() {
+        if (!this.mMainCanvas_Internal && this.uiWidgetBase) {
+            this.mMainCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas');
+        }
+        return this.mMainCanvas_Internal;
+    }
+    get mContentCanvas() {
+        if (!this.mContentCanvas_Internal && this.uiWidgetBase) {
+            this.mContentCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mContentCanvas');
+        }
+        return this.mContentCanvas_Internal;
+    }
+    get mCloseButton() {
+        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
+            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mCloseButton');
+        }
+        return this.mCloseButton_Internal;
+    }
+    get mAdsButton() {
+        if (!this.mAdsButton_Internal && this.uiWidgetBase) {
+            this.mAdsButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mAdsButton');
+        }
+        return this.mAdsButton_Internal;
+    }
+    get mLeBiIconImage() {
+        if (!this.mLeBiIconImage_Internal && this.uiWidgetBase) {
+            this.mLeBiIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mLeBiIconImage');
+        }
+        return this.mLeBiIconImage_Internal;
+    }
+    get mLeBiCountTextBlock() {
+        if (!this.mLeBiCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mLeBiCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mLeBiIconImage/mLeBiCountTextBlock');
+        }
+        return this.mLeBiCountTextBlock_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mCloseButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
+        });
+        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mLeBiCountTextBlock);
+        //文本多语言
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mMainCanvas/TitleTextBlock"));
+    }
+    /**初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /**显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /**隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+DiamondPanel_Generate = __decorate([
+    UIBind('UI/module/CoinModule/DiamondPanel.ui')
+], DiamondPanel_Generate);
+var DiamondPanel_Generate$1 = DiamondPanel_Generate;
+
+var foreign84 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: DiamondPanel_Generate$1
 });
 
 /**
