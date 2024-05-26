@@ -112,25 +112,25 @@ export default class TryOutGun extends Script {
 
     private onTriggerEnter(character: mw.Character): void {
         if (Player.localPlayer.character != character) return;
-        // let gunElement = GameConfig.GUN.getElement(this.gunkey);
-        let price: number = 100;
-        let contentText: string = `消耗${price}钻石\n免费领取`;
-        this.getConfirmPanel.confirmTips(() => {
-            if (this.getCoinModuleC.getDiamond >= price) {
-                this.getCoinModuleC.setDiamond(-price);
-                this.switchGun();
-                this.switchGunModel(Utils.randomInt(10, 14));
-            } else {
-                Notice.showDownNotice("钻石不足");
-                this.getCoinModuleC.openShopBuyDiamondCoin(price);
-            }
-        }, contentText, "领取", "取消", "提示");
+        let gunElement = GameConfig.GUN.getElement(this.gunkey);
+        // let price: number = 100;
+        // let contentText: string = `消耗${price}钻石\n免费领取`;
+        // this.getConfirmPanel.confirmTips(() => {
+        //     if (this.getCoinModuleC.getDiamond >= price) {
+        //         this.getCoinModuleC.setDiamond(-price);
+        //         this.switchGun();
+        //         this.switchGunModel(Utils.randomInt(10, 14));
+        //     } else {
+        //         Notice.showDownNotice("钻石不足");
+        //         this.getCoinModuleC.openShopBuyDiamondCoin(price);
+        //     }
+        // }, contentText, "领取", "取消", "提示");
 
-        // this.getAdPanel.showRewardAd(() => {
-        //     if (!this.gunkey) return;
-        //     this.switchGun();
-        //     this.switchGunModel(Utils.randomInt(10, 14));
-        // }, gunElement.GUNNAME + "\n免费试用一局", "取消", "试用");
+        this.getAdPanel.showRewardAd(() => {
+            if (!this.gunkey) return;
+            this.switchGun();
+            this.switchGunModel(Utils.randomInt(10, 14));
+        }, gunElement.GUNNAME + "\n免费试用一局", "取消", "试用");
     }
 
     private switchGun(): void {

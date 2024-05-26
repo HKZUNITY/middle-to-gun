@@ -86,20 +86,20 @@ export default class AddMaxHp extends Script {
 
     private onTriggerEnter(character: mw.Character): void {
         if (Player.localPlayer.character != character) return;
-        let price: number = 100;
-        let contentText: string = `奖励翻倍\n消耗${price}钻石\n最大生命值提高到${GlobalData.maxHp * 2}`;
-        this.getConfirmPanel.confirmTips(() => {
-            if (this.getCoinModuleC.getDiamond >= price) {
-                this.getCoinModuleC.setDiamond(-price);
-                this.getPlayerModuleC.addMaxHp();
-            } else {
-                Notice.showDownNotice("钻石不足");
-                this.getCoinModuleC.openShopBuyDiamondCoin(price);
-            }
-        }, contentText, "领取", "取消", "提示");
-        // this.getAdPanel.showRewardAd(() => {
-        //     this.getPlayerModuleC.addMaxHp();
-        // }, "奖励翻倍\n提高最大生命值 + " + GlobalData.maxHp * 2, "取消", "获取");
+        // let price: number = 100;
+        // let contentText: string = `奖励翻倍\n消耗${price}钻石\n最大生命值提高到${GlobalData.maxHp * 2}`;
+        // this.getConfirmPanel.confirmTips(() => {
+        //     if (this.getCoinModuleC.getDiamond >= price) {
+        //         this.getCoinModuleC.setDiamond(-price);
+        //         this.getPlayerModuleC.addMaxHp();
+        //     } else {
+        //         Notice.showDownNotice("钻石不足");
+        //         this.getCoinModuleC.openShopBuyDiamondCoin(price);
+        //     }
+        // }, contentText, "领取", "取消", "提示");
+        this.getAdPanel.showRewardAd(() => {
+            this.getPlayerModuleC.addMaxHp();
+        }, "奖励翻倍\n最大生命值提高到 + " + GlobalData.maxHp * 2, "取消", "提高");
     }
 
     /**客户端的onUpdate */

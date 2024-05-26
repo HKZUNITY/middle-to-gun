@@ -8,7 +8,7 @@ import AdPanel from "../AdModule/ui/AdPanel";
 import CoinData from "./CoinData";
 import CoinModuleS from "./CoinModuleS";
 import CoinPanel from "./ui/CoinPanel";
-import DiamondPanel from "./ui/DiamondPanel";
+// import DiamondPanel from "./ui/DiamondPanel";
 
 export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
     private coinPanel: CoinPanel = null;
@@ -27,13 +27,13 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
         return this.adPanel;
     }
 
-    private diamondPanel: DiamondPanel = null;
-    private get getDiamondPanel(): DiamondPanel {
-        if (this.diamondPanel == null) {
-            this.diamondPanel = mw.UIService.getUI(DiamondPanel);
-        }
-        return this.diamondPanel;
-    }
+    // private diamondPanel: DiamondPanel = null;
+    // private get getDiamondPanel(): DiamondPanel {
+    //     if (this.diamondPanel == null) {
+    //         this.diamondPanel = mw.UIService.getUI(DiamondPanel);
+    //     }
+    //     return this.diamondPanel;
+    // }
 
     private confirmPanel: ConfirmPanel = null;
     private get getConfirmPanel(): ConfirmPanel {
@@ -70,7 +70,7 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
         this.diamond = this.data.diamond;
         this.getCoinPanel.setCoinAndDiamond(this.coin, this.diamond);
         this.defaultAds();
-        this.initLeBiData();
+        // this.initLeBiData();
     }
 
     //#region Coin
@@ -99,17 +99,17 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
     }
 
     public getCoinByAd(): void {
-        // this.getAdPanel.showRewardAd(() => {
-        //     this.setCoin(10000);
-        // }, "免费领取10000金币");
-        this.openShopBuyDiamondCoin();
+        this.getAdPanel.showRewardAd(() => {
+            this.setCoin(10000);
+        }, "免费领取10000金币");
+        // this.openShopBuyDiamondCoin();
     }
 
     public getDiamondByAd(diamond: number): void {
-        // this.getAdPanel.showRewardAd(() => {
-        //     this.setDiamond(1);
-        // }, "免费领取1个钻石");
-        this.openShopBuyDiamondCoin(diamond);
+        this.getAdPanel.showRewardAd(() => {
+            this.setDiamond(1);
+        }, "免费领取1个钻石");
+        // this.openShopBuyDiamondCoin(diamond);
     }
 
     public net_killPlayerAddCoin(coin: number): void {
@@ -133,18 +133,18 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
     }
 
     private delay10Seconds(): void {
-        TimeUtil.delaySecond(10).then(() => {
+        TimeUtil.delaySecond(30).then(() => {
             this.getAdPanel.showRewardAd(() => {
-                this.setDiamond(5);
-            }, "大礼包\n免费获得5个钻石");
+                this.setDiamond(2);
+            }, "大礼包\n免费获得2个钻石");
         });
     }
 
     private setInterval180Seconds(): void {
         TimeUtil.setInterval(() => {
             this.getAdPanel.showRewardAd(() => {
-                this.setDiamond(10);
-            }, "幸运大礼包\n免费获得10个钻石");
+                this.setDiamond(2);
+            }, "幸运大礼包\n免费获得2个钻石");
         }, 180);
     }
 
@@ -155,79 +155,79 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
             return;
         }
         this.getAdPanel.showRewardAd(() => {
-            this.setDiamond(5);
-        }, "被击败奖励\n免费获得5个钻石");
+            this.setDiamond(2);
+        }, "被击败奖励\n免费获得2个钻石");
         Event.dispatchToLocal(EventType.TryOutGun);
     }
     //#endregion
 
     //#region LeBi
-    private isFirstBuy: boolean = true;
-    public get getIsFirstBuy(): boolean {
-        return this.isFirstBuy;
-    }
-    private setFirstBuy(): void {
-        if (!this.isFirstBuy) return;
-        this.isFirstBuy = false;
-        this.getDiamondPanel.refreshDiamondItems();
-        this.server.net_setFirstBuy(this.isFirstBuy);
-    }
+    // private isFirstBuy: boolean = true;
+    // public get getIsFirstBuy(): boolean {
+    //     return this.isFirstBuy;
+    // }
+    // private setFirstBuy(): void {
+    //     if (!this.isFirstBuy) return;
+    //     this.isFirstBuy = false;
+    //     this.getDiamondPanel.refreshDiamondItems();
+    //     this.server.net_setFirstBuy(this.isFirstBuy);
+    // }
 
-    private shopItemElements: IShopItemElement[] = [];
-    private get getShopItemElements(): IShopItemElement[] {
-        if (!this.shopItemElements || this.shopItemElements.length == 0) {
-            this.shopItemElements = GameConfig.ShopItem.getAllElement();
-        }
-        return this.shopItemElements;
-    }
-    private initLeBiData(): void {
-        this.isFirstBuy = this.data.isFirstBuy;
-        this.shopItemElements = GameConfig.ShopItem.getAllElement();
-        this.getDiamondPanel.initDiamondItem();
-    }
+    // private shopItemElements: IShopItemElement[] = [];
+    // private get getShopItemElements(): IShopItemElement[] {
+    //     if (!this.shopItemElements || this.shopItemElements.length == 0) {
+    //         this.shopItemElements = GameConfig.ShopItem.getAllElement();
+    //     }
+    //     return this.shopItemElements;
+    // }
+    // private initLeBiData(): void {
+    //     this.isFirstBuy = this.data.isFirstBuy;
+    //     this.shopItemElements = GameConfig.ShopItem.getAllElement();
+    //     this.getDiamondPanel.initDiamondItem();
+    // }
 
-    public openShopBuyDiamondCoin(diamond: number = 0): void {
-        if (diamond == 0) {
-            this.getDiamondPanel.show();
-        } else {
-            for (let i = 0; i < this.shopItemElements.length; ++i) {
-                if (this.shopItemElements[i].Count >= diamond) {
-                    TSIAPService.reqBuyGoods(this.shopItemElements[i].CommodityId);
-                    console.warn(`diamond:${diamond}`);
-                    break;
-                }
-            }
-        }
-    }
+    // public openShopBuyDiamondCoin(diamond: number = 0): void {
+    //     if (diamond == 0 || !TSIAPService.enable) {
+    //         this.getDiamondPanel.show();
+    //     } else {
+    //         for (let i = 0; i < this.shopItemElements.length; ++i) {
+    //             if (this.shopItemElements[i].Count >= diamond) {
+    //                 TSIAPService.reqBuyGoods(this.shopItemElements[i].CommodityId);
+    //                 console.warn(`diamond:${diamond}`);
+    //                 break;
+    //             }
+    //         }
+    //     }
+    // }
 
-    public net_deliverGoods(commodityId: string): void {
-        let diamondCount = this.getBuyDiamondCount(commodityId);
-        Notice.showDownNotice(`购买成功`);
-        if (this.isFirst) diamondCount *= 2;
-        this.setDiamond(diamondCount);
-        this.setFirstBuy();
-    }
+    // public net_deliverGoods(commodityId: string): void {
+    //     let diamondCount = this.getBuyDiamondCount(commodityId);
+    //     Notice.showDownNotice(`购买成功`);
+    //     if (this.isFirst) diamondCount *= 2;
+    //     this.setDiamond(diamondCount);
+    //     this.setFirstBuy();
+    // }
 
-    private getBuyDiamondCount(commodityId: string): number {
-        for (let i = 0; i < this.getShopItemElements.length; ++i) {
-            if (this.getShopItemElements[i].CommodityId == commodityId) {
-                return this.getShopItemElements[i].Count;
-            }
-        }
-        return 0;
-    }
+    // private getBuyDiamondCount(commodityId: string): number {
+    //     for (let i = 0; i < this.getShopItemElements.length; ++i) {
+    //         if (this.getShopItemElements[i].CommodityId == commodityId) {
+    //             return this.getShopItemElements[i].Count;
+    //         }
+    //     }
+    //     return 0;
+    // }
 
-    public buyDiamond(shopItemElement: IShopItemElement): void {
-        if (!shopItemElement.CommodityId || !TSIAPService.enable) {
-            this.getAdPanel.showRewardAd(() => {
-                this.setDiamond(5);
-            }, "购买失败,请升级233乐园\n大礼包\n免费获得5个钻石");
-            return;
-        }
-        let contentText: string = `消耗${shopItemElement.PartyPrice}乐币购买${shopItemElement.Count * (this.isFirstBuy ? 2 : 1)}钻石`;
-        this.getConfirmPanel.confirmTips(() => {
-            TSIAPService.reqBuyGoods(shopItemElement.CommodityId);
-        }, contentText, "购买", "取消");
-    }
+    // public buyDiamond(shopItemElement: IShopItemElement): void {
+    //     if (!shopItemElement.CommodityId || !TSIAPService.enable) {
+    //         this.getAdPanel.showRewardAd(() => {
+    //             this.setDiamond(5);
+    //         }, "购买失败,请升级233乐园\n大礼包\n免费获得5个钻石");
+    //         return;
+    //     }
+    //     let contentText: string = `消耗${shopItemElement.PartyPrice}乐币购买${shopItemElement.Count * (this.isFirstBuy ? 2 : 1)}钻石`;
+    //     this.getConfirmPanel.confirmTips(() => {
+    //         TSIAPService.reqBuyGoods(shopItemElement.CommodityId);
+    //     }, contentText, "购买", "取消");
+    // }
     //#endregion
 }
