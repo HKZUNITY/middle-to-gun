@@ -69,14 +69,8 @@ export default class AddMaxHp extends Script {
     private onTriggerEnter(character: mw.Character): void {
         if (Player.localPlayer.character != character) return;
         this.getAdPanel.showRewardAd(() => {
-            if (!GlobalData.isOpenIAA) {
-                this.getPlayerModuleC.addMaxHp();
-                return;
-            }
-            Utils.showRewardAd(() => {
-                this.getPlayerModuleC.addMaxHp();
-            });
-        }, "奖励翻倍\n提高最大生命值 + " + GlobalData.maxHp * 2, "取消", "获取");
+            this.getPlayerModuleC.addMaxHp();
+        }, "奖励翻倍\n提高最大生命值 + " + GlobalData.maxHp * 2, "取消", "免费获取");
     }
 
     /**客户端的onUpdate */
