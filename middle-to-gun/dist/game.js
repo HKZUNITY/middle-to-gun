@@ -1930,7 +1930,6 @@ class ConfirmPanel extends ConfirmPanel_Generate$1 {
         });
         this.mCancleButton.onClicked.add(() => {
             this.hide();
-            this.callback = null;
         });
     }
     confirmTips(callback, contentText, yesText = "购买", noText = "取消", titleText = "提示") {
@@ -2329,7 +2328,7 @@ var foreign77 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdModule/AdPanel.ui
- * TIME: 2024.05.18-03.21.13
+ * TIME: 2024.05.29-20.45.26
  */
 let AdPanel_Generate = class AdPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -2355,6 +2354,12 @@ let AdPanel_Generate = class AdPanel_Generate extends UIScript {
             this.mYesBtn_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/Canvas_1/mYesBtn');
         }
         return this.mYesBtn_Internal;
+    }
+    get mYesBtn_1() {
+        if (!this.mYesBtn_1_Internal && this.uiWidgetBase) {
+            this.mYesBtn_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/Canvas_1/mYesBtn_1');
+        }
+        return this.mYesBtn_1_Internal;
     }
     onAwake() {
         //设置能否每帧触发onUpdate
@@ -2408,6 +2413,7 @@ class AdPanel extends AdPanel_Generate$1 {
     constructor() {
         super(...arguments);
         this.callback = null;
+        this.yesInterval = null;
     }
     onStart() {
         this.canUpdate = false;
@@ -2416,6 +2422,7 @@ class AdPanel extends AdPanel_Generate$1 {
     }
     bindButtons() {
         this.mYesBtn.onClose.add(this.onClickYesButton.bind(this));
+        this.mYesBtn_1.onClose.add(this.onClickYesButton.bind(this));
         this.mNoBtn.onClicked.add(this.onClickNoButton.bind(this));
     }
     onClickYesButton(isSuccess) {
@@ -2430,12 +2437,36 @@ class AdPanel extends AdPanel_Generate$1 {
     onClickNoButton() {
         this.hideAdPanel();
     }
-    showRewardAd(callback, contentText, noText = "取消", yesText = "领取", isAuto = true) {
+    showRewardAd(callback, contentText, noText = "取消", yesText = "免费领取", isAuto = true) {
         this.callback = callback;
         this.mContentTxt.text = contentText;
         this.mNoBtn.text = noText;
         this.mYesBtn.text = yesText;
+        this.mYesBtn_1.text = `${noText}`;
         this.showAdPanel();
+        // let ran = Utils.randomInt(1, 3);
+        // this.mYesBtn_1.visibility = (ran == 1) ? mw.SlateVisibility.Collapsed : mw.SlateVisibility.Visible;
+        if (isAuto)
+            this.autoYes();
+    }
+    autoYes() {
+        this.clearAutoYesInterval();
+        let time = 5;
+        this.mYesBtn_1.text = "关闭(" + time + ")";
+        this.yesInterval = TimeUtil.setInterval(() => {
+            time--;
+            this.mYesBtn_1.text = "关闭(" + time + ")";
+            if (time <= 0) {
+                this.hideAdPanel();
+                this.clearAutoYesInterval();
+            }
+        }, 1);
+    }
+    clearAutoYesInterval() {
+        if (this.yesInterval) {
+            TimeUtil.clearInterval(this.yesInterval);
+            this.yesInterval = null;
+        }
     }
     showAdPanel() {
         if (this.visible)
@@ -4245,7 +4276,7 @@ class ShopData extends Subdata {
         this.useShopIds = {}; //1-Gun,2-Role,3-Trailing
     }
     initDefaultData() {
-        let gunId = Utils.randomInt(1, 5);
+        let gunId = 1;
         let roleId = Utils.randomInt(1, 5);
         this.shopIds = {
             [ShopType.Gun]: [gunId],
@@ -11557,7 +11588,7 @@ let WeaponDriver = class WeaponDriver extends mw.Script {
     }
     /** 脚本被销毁时最后一帧执行完调用此函数 */
     onDestroy() {
-        this.clientDestroy();
+        // this.clientDestroy();
     }
     /* 击中对象函数 */
     hit(hitResult) {
@@ -13031,7 +13062,7 @@ let AddMaxHp = class AddMaxHp extends Script {
             return;
         this.getAdPanel.showRewardAd(() => {
             this.getPlayerModuleC.addMaxHp();
-        }, "奖励翻倍\n提高最大生命值 + " + GlobalData.maxHp * 2, "取消", "获取");
+        }, "奖励翻倍\n提高最大生命值 + " + GlobalData.maxHp * 2, "取消", "免费获取");
     }
     /**客户端的onUpdate */
     onUpdateC(dt) {
@@ -13150,7 +13181,7 @@ let TryOutGun = class TryOutGun extends Script {
                 return;
             this.switchGun();
             this.switchGunModel(Utils.randomInt(10, 14));
-        }, gunElement.GUNNAME + "\n免费试用一局", "取消", "试用");
+        }, gunElement.GUNNAME + "\n免费使用一局", "取消", "免费使用");
     }
     switchGun() {
         if (this.getMorphModuleC.getIsMorph) {
