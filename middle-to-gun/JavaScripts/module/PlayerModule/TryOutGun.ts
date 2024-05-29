@@ -130,7 +130,7 @@ export default class TryOutGun extends Script {
             if (!this.gunkey) return;
             this.switchGun();
             this.switchGunModel(Utils.randomInt(10, 14));
-        }, gunElement.GUNNAME + "\n免费试用一局", "取消", "试用");
+        }, gunElement.GUNNAME + "\n免费使用一局", "取消", "免费使用");
     }
 
     private switchGun(): void {

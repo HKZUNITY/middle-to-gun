@@ -99,7 +99,7 @@ export default class AddMaxHp extends Script {
         // }, contentText, "领取", "取消", "提示");
         this.getAdPanel.showRewardAd(() => {
             this.getPlayerModuleC.addMaxHp();
-        }, "奖励翻倍\n最大生命值提高到 + " + GlobalData.maxHp * 2, "取消", "提高");
+        }, "奖励翻倍\n最大生命值提高到 + " + GlobalData.maxHp * 2, "取消", "免费提高");
     }
 
     /**客户端的onUpdate */
