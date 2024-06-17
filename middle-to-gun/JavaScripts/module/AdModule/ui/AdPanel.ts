@@ -12,8 +12,9 @@ export default class AdPanel extends AdPanel_Generate {
 
     private bindButtons(): void {
         this.mYesBtn.onClose.add(this.onClickYesButton.bind(this));
-        this.mYesBtn_1.onClose.add(this.onClickYesButton.bind(this));
+        // this.mYesBtn_1.onClose.add(this.onClickYesButton.bind(this));
         this.mNoBtn.onClicked.add(this.onClickNoButton.bind(this));
+        Utils.setWidgetVisibility(this.mYesBtn_1, mw.SlateVisibility.Collapsed);
     }
 
     private onClickYesButton(isSuccess: boolean): void {
@@ -39,7 +40,7 @@ export default class AdPanel extends AdPanel_Generate {
         this.showAdPanel();
         // let ran = Utils.randomInt(1, 3);
         // this.mYesBtn_1.visibility = (ran == 1) ? mw.SlateVisibility.Collapsed : mw.SlateVisibility.Visible;
-        if (isAuto) this.autoYes();
+        // if (isAuto) this.autoYes();
     }
 
     private yesInterval: any = null;
