@@ -83,7 +83,7 @@ export default class RankModuleS extends ModuleS<RankModuleC, null> {
         if (this.worldDatas == null) {
             this.worldDatas = [];
         }
-        if (this.worldDatas.length < 100) {
+        if (this.worldDatas.length < 500) {
             if (this.worldDatas.length == 0) {
                 this.worldDatas.push(worldData);
                 isPush = true;

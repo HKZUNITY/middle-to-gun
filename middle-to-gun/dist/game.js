@@ -1728,18 +1728,14 @@ Utils.npcNames = ["张吉惟", "林国瑞", "林玫书", "林雅南", "江奕云
 Utils.tens = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 Utils.digitalUnits = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
 Utils.redTeamRevivalPoint = [
-    new mw.Vector(7845.02, 12608.37, 200),
-    new mw.Vector(7837.43, 12939.73, 200),
-    new mw.Vector(7816.22, 13340.00, 200),
-    new mw.Vector(7817.55, 13794.88, 200),
-    new mw.Vector(7837.37, 14298.47, 200)
+    new mw.Vector(-3645, -448, 150),
+    new mw.Vector(-3645, 0, 150),
+    new mw.Vector(-3645, 312, 150)
 ];
 Utils.blueTeamRevivalPoint = [
-    new mw.Vector(498.17, 14082.48, 200),
-    new mw.Vector(488.34, 14320.64, 200),
-    new mw.Vector(696.33, 14005.49, 200),
-    new mw.Vector(693.34, 14218.82, 200),
-    new mw.Vector(727.67, 14524.54, 200)
+    new mw.Vector(3473, -291, 150),
+    new mw.Vector(3473, 160, 150),
+    new mw.Vector(3473, 779, 150),
 ];
 function cubicBezier(p1x, p1y, p2x, p2y) {
     const ZERO_LIMIT = 1e-6;
@@ -2095,7 +2091,7 @@ var foreign8 = /*#__PURE__*/Object.freeze({
     GUNConfig: GUNConfig
 });
 
-const EXCELDATA$4 = [["ID", "AssetId", "OffsetPos", "OffsetRot", "OffsetSca"], ["", "", "", "", ""], [1, "EC0C8ADC459322F5DE2106B9562A90CA", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [2, "335126154CEC4A49F102238D6210F205", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [3, "078F47E840BF64873D328A9673951309", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [4, "E77FD27C4C304D5B08ADB0828DE97EF1", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [5, "EAB0980E49843AA01B24418DE4D34F19", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [6, "3277C410430DBBAA9AAC2B91F5616546", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [7, "7B8B31584AF072EC0D92D7835A1E6AA8", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [8, "1FE95F4B4B762E305B6425B8B7726197", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [9, "4342D9B34145F0F5BCE31A9C7B8782F3", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [10, "0FDE1CD444234AA6F8EE5AA3440430D0", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [11, "CAD93AB64E3F4F0949866684D13C5858", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [12, "FCE45D8E4E05E19B303A5BBE856597FB", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [13, "BF55149449AAF418BE3C01B491A560FA", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [14, "D44D15B6486D4C1F2F9D758B8EE82BBE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [15, "80A1CEF44600E00C7FF831A7A2FF6AD6", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [16, "81B23DDB4CDEAFBA4B8E5F931B8CC088", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [17, "DE8D2C2E4C265421D3205A8CC1F59C5C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [18, "10E5F67B4B35167245EF8493F07D676B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [19, "85C00CA447692B1603D4DD9D106C44BA", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [20, "9E3EF7D64077F30BA4C6EF8215666AF9", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [21, "7D9116A44D451AC4567BE296AB10E5AB", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [22, "1401A34346237AD6FADE36BDB501E17A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [23, "6E3C374D4AEDEA66EA83A78DAAFD3CB7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [24, "AF70636342AD405BAC6490901E1E48A7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [25, "2EB3E87248522F3ED3AD628C7FD4588F", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [26, "F667C8AB46F5FCBAB51E58B98676367B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [27, "E483C36F4203D16F289B6F96E17B6EBE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [28, "860ED32A4A9B1421BDF480BD37206127", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [29, "EC560EA044478C3DD016BBB942E9B65D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [30, "7D444D4640A16323197FFA8FCDF2E41D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [31, "7F8C5612486B9EFF207FF79854180D1E", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [32, "5682A4FA4E0DA03232DACFAE22AA0220", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [33, "B967236D4A62DE0B9BDC45ACA618713A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [34, "529D2818405B01D4C68831B1D59A66E4", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [35, "E4546504452A29F7F97665B37DF49083", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [36, "F769A3ED4A29E47C0FB6928B53D7508A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [37, "5BCE4569426BC2E205DC0CAE9C28DCFF", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [38, "3E9C6F8B406C15898AB1B9846DEBE83D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [39, "F93F66834B60109E9BCF0AB8AE205E8C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [40, "957F005A48A340E377B206A38D8B0BF2", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [41, "87CCDCF1440844D76796DDAE0C2A47A1", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [42, "171995C543F147B24337809C704C517B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [43, "D2152DAB4780CE011C1F75B60AD8F9B5", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [44, "070FF554463A9C82EF1DA3A6ADA30FF5", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [45, "C82B989B44B0F5C2593FD4BF6885CF5D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [46, "7F28155F4EEFF2E1B33DDDA7EEFD4AD2", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [47, "D85C27AC4F8BB66FB668EABFE2FF9BD7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [48, "3688AC4D45D5EEC1E0D2279197E330BB", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [49, "9523FD8F4D5E4060F39DE59DC439A055", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [50, "273117F54B2A12D4B6D87584E242A9A4", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [51, "30DB36F5483E1EED93827DBF845B2E0C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [52, "F58F40BE47A971AF45C94F8E774FA959", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [53, "A872C382435C967D31F639BC792A8C7C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [54, "6FD710524711C2FB675409822F20C84C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [55, "D7FED734443084BD9CC322B2A02A8195", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [56, "8421359249F0AE6538674FADC6196BCC", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [57, "CEE419F24C4BD425B1221DBABC019925", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [58, "5E2CA8A84F3B2A39B092739D18611B23", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [59, "45CC801843BCB421039107B2112267A6", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [60, "C9292BC84BD8123269224ABBA8B007CB", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [61, "D0C568E94DC2EAAADE0303AC1A079AB8", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [62, "9369090F4F800E92F623348B8D94270A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)]];
+const EXCELDATA$4 = [["ID", "AssetId", "OffsetPos", "OffsetRot", "OffsetSca"], ["", "", "", "", ""], [1, "C665A5E44F6F23B13103ADB63B6DB8FE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [2, "7EFE3FDB48F92FD44D7B9C9B4617847B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [3, "0FCB78664DCD1BB057543DB8A067C122", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [4, "6EEEE3FE4889D23A286CC8B30701C8EE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [5, "EE3A158548986A567D4741AF925DEA34", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [6, "B40762884A5A907F6FC1018C2E8185C8", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [7, "77796AE5405E9B5B173C9EA0E0131A7D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [8, "6CF59C074F7CD23EEEA26B8CCFFBC2C2", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [9, "B04EE94540EE3000A660AEA94FDB25D2", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [10, "471E86844D001CE4E84DA8BABEB0DDEA", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [11, "98CDBDE94A8C79B6C5DD8E96AF07FAF7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [12, "967939744A6C3F5FB4E850A3E7B33E3B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [13, "4F5E80FC46C55F6F7F5ED0AFCA5D414A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [14, "6D4B721A4E1B76493972E08A824F8AE7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [15, "424A2E254F9FD0AABA1BE3B4E7992B60", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [16, "AFC3939B401019F2DEE37784CC1803A5", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [17, "63D0E8894374EF73151267AE2CD7A6E8", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [18, "CA3C71F24708B24B97555584A526400D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [19, "473BEFA7481C557195E608A058891B5A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [20, "A62514214509E9BB6FFCD286F0A8CACE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [21, "7CDBD4B148DCD0CB517E88819C62FD4D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [22, "429C69244E35328DF8D73CA554BFE01C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [23, "662BFCAD46B8DDB2C1F15E95DC1D71FB", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [24, "C7AF1DB740B957C45B589589961D4E9A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [25, "B1C3D37445115C0FD6602D86C18F5A5E", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [26, "4241E3D6474673648F132C9EE621BB2F", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [27, "893BFC51454BD89A3F56B99C7D87C45D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [28, "C54732A548232206595D87B7BB339EF7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)]];
 class MorphConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$4);
@@ -4367,7 +4363,7 @@ class ShopData extends Subdata {
         this.useShopIds = {}; //1-Gun,2-Role,3-Trailing
     }
     initDefaultData() {
-        let gunId = 1;
+        let gunId = Utils.randomInt(1, 2);
         let roleId = Utils.randomInt(1, 5);
         this.shopIds = {
             [ShopType.Gun]: [gunId],
@@ -6163,7 +6159,7 @@ class MorphModuleS extends ModuleS {
     }
     // private i: number = 1;
     async spawnGo(player) {
-        let randomId = Utils.randomInt(1, 62);
+        let randomId = Utils.randomInt(1, GameConfig.Morph.getAllElement().length);
         // console.error(`randomId:${randomId}`);
         // let morphElement = GameConfig.Morph.getElement(this.i++);
         let morphElement = GameConfig.Morph.getElement(randomId);
@@ -8499,7 +8495,7 @@ class RankModuleS extends ModuleS {
         if (this.worldDatas == null) {
             this.worldDatas = [];
         }
-        if (this.worldDatas.length < 100) {
+        if (this.worldDatas.length < 500) {
             if (this.worldDatas.length == 0) {
                 this.worldDatas.push(worldData);
                 isPush = true;
@@ -13151,7 +13147,7 @@ let Npc = class Npc extends Script {
     async setNpcDescriptionAndGun() {
         let ran = Utils.randomInt(1, 2);
         if (ran == 1) {
-            let morphElement = GameConfig.Morph.getElement(Utils.randomInt(1, 62));
+            let morphElement = GameConfig.Morph.getElement(Utils.randomInt(1, GameConfig.Morph.getAllElement().length));
             let assetId = morphElement.AssetId;
             await Utils.asyncDownloadAsset(assetId);
             if (this.model)
