@@ -1,7 +1,6 @@
 ﻿import { Notice } from "../../common/notice/Notice";
 import { GameConfig } from "../../config/GameConfig";
 import Utils from "../../tools/Utils";
-import GunModuleS from "../GunModule/GunModuleS";
 import HUDModuleC from "../HUDModule/HUDModuleC";
 
 export class MorphModuleC extends ModuleC<MorphModuleS, null> {
@@ -59,14 +58,6 @@ export class MorphModuleC extends ModuleC<MorphModuleS, null> {
 
 
 export class MorphModuleS extends ModuleS<MorphModuleC, null> {
-    private gunModuleS: GunModuleS = null;
-    private get getGunModuleS(): GunModuleS {
-        if (this.gunModuleS == null) {
-            this.gunModuleS = ModuleService.getModule(GunModuleS);
-        }
-        return this.gunModuleS;
-    }
-
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
 
@@ -122,7 +113,7 @@ export class MorphModuleS extends ModuleS<MorphModuleC, null> {
         this.playEffectSound(player);
         if (!player.character.getVisibility()) player.character.setVisibility(true, true);
         // if (player.character.getCollision() != mw.PropertyStatus.On) player.character.setCollision(mw.PropertyStatus.On);
-        this.getGunModuleS.setGunState(player.userId, true);
+        // this.getGunModuleS.setGunState(player.userId, true);//TODO:WFZ
     }
 
     private recycleGo(userId: string): void {

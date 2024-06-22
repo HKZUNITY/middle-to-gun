@@ -29,7 +29,7 @@ function __decorate(decorators, target, key, desc) {
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/NoticeView.ui
- * TIME: 2024.05.23-21.30.01
+ * TIME: 2024.06.22-23.56.50
  */
 let NoticeView_Generate = class NoticeView_Generate extends UIScript {
     get con_top_notice() {
@@ -86,7 +86,7 @@ NoticeView_Generate = __decorate([
 ], NoticeView_Generate);
 var NoticeView_Generate$1 = NoticeView_Generate;
 
-var foreign77 = /*#__PURE__*/Object.freeze({
+var foreign80 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NoticeView_Generate$1
 });
@@ -96,7 +96,7 @@ var foreign77 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/TopNoticeItem.ui
- * TIME: 2024.05.23-21.30.01
+ * TIME: 2024.06.22-23.56.50
  */
 let TopNoticeItem_Generate = class TopNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -160,7 +160,7 @@ TopNoticeItem_Generate = __decorate([
 ], TopNoticeItem_Generate);
 var TopNoticeItem_Generate$1 = TopNoticeItem_Generate;
 
-var foreign79 = /*#__PURE__*/Object.freeze({
+var foreign82 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TopNoticeItem_Generate$1
 });
@@ -1407,7 +1407,7 @@ GlobalData.dailyRefreshTime = "4:0";
 GlobalData.weeklyRefreshTime = "4:0";
 GlobalData.maxHp = 100;
 
-var foreign69 = /*#__PURE__*/Object.freeze({
+var foreign71 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GlobalData
 });
@@ -1722,6 +1722,125 @@ class Utils {
     static playBirthSound(player) {
         SoundService.play3DSound("169179", player.character, 1, GlobalData.soundVolume);
     }
+    static stringToVector(str) {
+        let arr = str.split(",");
+        return new mw.Vector(parseFloat(arr[0]), parseFloat(arr[1]), parseFloat(arr[2]));
+    }
+    static vectorToString(vector) {
+        return vector.x + "," + vector.y + "," + vector.z;
+    }
+    static arrToString(arr) {
+        let str = "";
+        for (let i = 0; i < arr.length; i++) {
+            str += arr[i] + ",";
+        }
+        return str;
+    }
+    static stringToArr(str) {
+        let arr = str.split(",");
+        let result = [];
+        for (let i = 0; i < arr.length; i++) {
+            result.push(parseInt(arr[i]));
+        }
+        return result;
+    }
+    static setProjectTarget(targetGo) {
+        this.targetGos.push(targetGo);
+    }
+    static getRecentTargetLoc(startPosition, startDirection) {
+        let minDistance = Number.MAX_VALUE;
+        let retPosition = null;
+        if (!this.targetGos || this.targetGos.length == 0)
+            return retPosition;
+        for (let i = 0; i < this.targetGos.length; ++i) {
+            let targetLoc = this.targetGos[i].worldTransform.position;
+            if (this.isTargetInSight(targetLoc, startPosition, startDirection)) {
+                let distance = mw.Vector.subtract(targetLoc, startPosition).length;
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    retPosition = this.targetGos[i].worldTransform.position;
+                }
+            }
+        }
+        return retPosition;
+    }
+    static getRecentPlayerLoc(gameObjectId, startPosition, startDirection) {
+        // return null;//TODO:WFZ 2021-07-07 不对玩家进行追踪
+        let minDistance = Number.MAX_VALUE;
+        let retPosition = null;
+        let allPlayers = Player.getAllPlayers();
+        for (let i = 0; i < allPlayers.length; ++i) {
+            if (allPlayers[i].character.gameObjectId == gameObjectId)
+                continue;
+            let targetLoc = allPlayers[i].character.worldTransform.position;
+            if (this.isTargetInSight(targetLoc, startPosition, startDirection)) {
+                let distance = mw.Vector.subtract(targetLoc, startPosition).length;
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    retPosition = allPlayers[i].character.worldTransform.position;
+                }
+            }
+        }
+        return retPosition;
+    }
+    /**判断目标是否在视野范围内 */
+    static isTargetInSight(targetLoc, startPosition, startDriection) {
+        let targetDir = mw.Vector.subtract(targetLoc, startPosition);
+        let dot = mw.Vector.dot(targetDir, startDriection);
+        let angle = Math.acos(dot / (targetDir.length * startDriection.length));
+        let targetAngle = angle * 180 / Math.PI;
+        let targetDistance = targetDir.length;
+        return (targetDistance <= 5000) && (targetAngle <= 45);
+    }
+    /**得到弧形追踪路径上的点 */
+    static getArcTracingPoints(startPosition, endPosition) {
+        let pointCount = Math.floor(mw.Vector.subtract(startPosition, endPosition).length / 100);
+        let middlePosition = this.getRandomPosition(startPosition, endPosition);
+        let retPositions = this.getCurvePointsInNum([startPosition, middlePosition, endPosition], pointCount);
+        return retPositions;
+    }
+    /**根据两个三维空间坐标随机得到一个中点球上的坐标 */
+    static getRandomPosition(startPosition, endPosition) {
+        let midPosition = mw.Vector.add(startPosition, endPosition).multiply(0.5);
+        let distance = mw.Vector.subtract(startPosition, endPosition).length;
+        let x = this.randomInt(0, distance / 2);
+        x = this.randomInt(0, 1) == 0 ? -x : x;
+        let y = this.randomInt(0, distance / 2);
+        y = this.randomInt(0, 1) == 0 ? -y : y;
+        let z = this.randomInt(0, distance / 3);
+        return mw.Vector.add(midPosition, new mw.Vector(x, y, z));
+    }
+    /**
+    * 获取贝塞尔曲线的点的集合
+    * @param points 点的集合, 至少包含起点和终点
+    * @param num 想要生成多少点
+    * @returns
+    */
+    static getCurvePointsInNum(points, num) {
+        let result = new Array();
+        for (let i = 0; i < num; ++i) {
+            let t = i / (num - 1);
+            let point = this.getKeyPoint(points, t);
+            result.push(point);
+        }
+        return result;
+    }
+    static getKeyPoint(points, t) {
+        if (points.length > 1) {
+            let dirs = new Array();
+            for (let i = 0; i < points.length - 1; i++) {
+                dirs.push(new mw.Vector(points[i + 1].x - points[i].x, points[i + 1].y - points[i].y, points[i + 1].z - points[i].z));
+            }
+            let points2 = new Array();
+            for (let j = 0; j < dirs.length; j++) {
+                points2.push(new mw.Vector(points[j].x + dirs[j].x * t, points[j].y + dirs[j].y * t, points[j].z + dirs[j].z * t));
+            }
+            return this.getKeyPoint(points2, t);
+        }
+        else {
+            return new mw.Vector(points[0].x, points[0].y, points[0].z);
+        }
+    }
 }
 Utils.assetIconDataMap = new Map();
 Utils.npcNames = ["张吉惟", "林国瑞", "林玫书", "林雅南", "江奕云", "刘柏宏", "阮建安", "林子帆", "夏志豪", "吉茹定", "李中冰", "谢彦文", "傅智翔", "洪振霞", "刘姿婷", "荣姿康", "吕致盈", "方一强", "黎芸贵", "郑伊雯", "雷进宝", "吴美隆", "吴心真", "王美珠", "郭芳天", "李雅惠", "陈文婷", "曹敏侑", "王依婷", "陈婉璇", "吴美玉", "蔡依婷", "郑昌梦", "林家纶", "黄丽昆", "李育泉", "黄芸欢", "吴韵如", "李肇芬", "卢木仲", "李成白", "方兆玉", "刘翊惠", "丁汉臻", "吴佳瑞", "舒绿珮", "周白芷", "张姿妤", "张虹伦", "周琼玫", "倪怡芳", "郭贵妃", "杨佩芳", "黄盛玫", "郑丽青", "许智云", "张孟涵", "李小爱", "王恩龙", "朱政廷", "邓诗涵", "陈政倩", "吴俊伯", "阮馨学", "翁惠珠", "吴思翰", "林佩玲", "邓海来", "陈翊依", "李建智", "武淑芬", "金雅琪", "赖怡宜", "黄育霖", "张仪湖", "王俊民", "张诗刚", "林慧颖", "沈俊君", "陈淑妤", "李姿伶", "高咏钰", "黄彦宜", "周孟儒", "潘欣臻", "李祯韵", "叶洁启", "梁哲宇", "黄晓萍", "杨雅萍", "卢志铭", "张茂以", "林婉婷", "蔡宜芸", "林珮瑜", "黄柏仪", "周逸珮", "夏雅惠", "王采珮", "林孟霖", "林竹水", "王怡乐", "王爱乐", "金佳蓉", "韩健毓", "李士杰", "陈董珍", "苏姿婷", "张政霖", "李志宏", "陈素达", "陈虹荣", "何美玲", "李仪琳", "张俞幸", "黄秋萍", "潘吉维"];
@@ -1737,6 +1856,7 @@ Utils.blueTeamRevivalPoint = [
     new mw.Vector(3473, 160, 150),
     new mw.Vector(3473, 779, 150),
 ];
+Utils.targetGos = [];
 function cubicBezier(p1x, p1y, p2x, p2y) {
     const ZERO_LIMIT = 1e-6;
     const ax = 3 * p1x - 3 * p2x + 1;
@@ -1793,7 +1913,7 @@ function cubicBezier(p1x, p1y, p2x, p2y) {
     return solve;
 }
 
-var foreign74 = /*#__PURE__*/Object.freeze({
+var foreign77 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     cubicBezier: cubicBezier,
     default: Utils
@@ -1804,7 +1924,7 @@ var foreign74 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/ConfirmPanel.ui
- * TIME: 2024.05.23-21.30.01
+ * TIME: 2024.06.22-23.56.50
  */
 let ConfirmPanel_Generate = class ConfirmPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -1891,7 +2011,7 @@ ConfirmPanel_Generate = __decorate([
 ], ConfirmPanel_Generate);
 var ConfirmPanel_Generate$1 = ConfirmPanel_Generate;
 
-var foreign75 = /*#__PURE__*/Object.freeze({
+var foreign78 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ConfirmPanel_Generate$1
 });
@@ -2227,7 +2347,7 @@ var EventType;
     EventType["OnOffWeaponUI"] = "OnOffWeaponUI";
 })(EventType || (EventType = {}));
 
-var foreign66 = /*#__PURE__*/Object.freeze({
+var foreign68 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get EventType () { return EventType; }
 });
@@ -2237,7 +2357,7 @@ var foreign66 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/CoinPanel.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.06.22-23.56.50
  */
 let CoinPanel_Generate = class CoinPanel_Generate extends UIScript {
     get mCoinCanvas() {
@@ -2322,7 +2442,7 @@ CoinPanel_Generate = __decorate([
 ], CoinPanel_Generate);
 var CoinPanel_Generate$1 = CoinPanel_Generate;
 
-var foreign82 = /*#__PURE__*/Object.freeze({
+var foreign85 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CoinPanel_Generate$1
 });
@@ -2332,7 +2452,7 @@ var foreign82 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdModule/AdPanel.ui
- * TIME: 2024.05.29-20.45.26
+ * TIME: 2024.06.22-23.56.50
  */
 let AdPanel_Generate = class AdPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -2408,7 +2528,7 @@ AdPanel_Generate = __decorate([
 ], AdPanel_Generate);
 var AdPanel_Generate$1 = AdPanel_Generate;
 
-var foreign81 = /*#__PURE__*/Object.freeze({
+var foreign84 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AdPanel_Generate$1
 });
@@ -2786,7 +2906,7 @@ var KillTipType;
     KillTipType[KillTipType["revenge"] = 3] = "revenge";
 })(KillTipType || (KillTipType = {}));
 
-var foreign31 = /*#__PURE__*/Object.freeze({
+var foreign27 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     HUDData: HUDData,
     KillTipData: KillTipData,
@@ -2798,7 +2918,7 @@ var foreign31 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.06.22-23.56.50
  */
 let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     get mVirtualJoystickPanel() {
@@ -3077,6 +3197,66 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mJumpButton_Internal;
     }
+    get mAimCanvas() {
+        if (!this.mAimCanvas_Internal && this.uiWidgetBase) {
+            this.mAimCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAimCanvas');
+        }
+        return this.mAimCanvas_Internal;
+    }
+    get mAimPoint() {
+        if (!this.mAimPoint_Internal && this.uiWidgetBase) {
+            this.mAimPoint_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAimCanvas/mAimPoint');
+        }
+        return this.mAimPoint_Internal;
+    }
+    get mAimUp() {
+        if (!this.mAimUp_Internal && this.uiWidgetBase) {
+            this.mAimUp_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAimCanvas/mAimUp');
+        }
+        return this.mAimUp_Internal;
+    }
+    get mAimDown() {
+        if (!this.mAimDown_Internal && this.uiWidgetBase) {
+            this.mAimDown_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAimCanvas/mAimDown');
+        }
+        return this.mAimDown_Internal;
+    }
+    get mAimLeft() {
+        if (!this.mAimLeft_Internal && this.uiWidgetBase) {
+            this.mAimLeft_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAimCanvas/mAimLeft');
+        }
+        return this.mAimLeft_Internal;
+    }
+    get mAimRight() {
+        if (!this.mAimRight_Internal && this.uiWidgetBase) {
+            this.mAimRight_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAimCanvas/mAimRight');
+        }
+        return this.mAimRight_Internal;
+    }
+    get mGunIconImage() {
+        if (!this.mGunIconImage_Internal && this.uiWidgetBase) {
+            this.mGunIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/GunCanvas/mGunIconImage');
+        }
+        return this.mGunIconImage_Internal;
+    }
+    get mGunNameTextBlock() {
+        if (!this.mGunNameTextBlock_Internal && this.uiWidgetBase) {
+            this.mGunNameTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/GunCanvas/mGunNameTextBlock');
+        }
+        return this.mGunNameTextBlock_Internal;
+    }
+    get mGunBulletCountTextBlock() {
+        if (!this.mGunBulletCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mGunBulletCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/GunCanvas/mGunBulletCountTextBlock');
+        }
+        return this.mGunBulletCountTextBlock_Internal;
+    }
+    get mNormalAtkButton() {
+        if (!this.mNormalAtkButton_Internal && this.uiWidgetBase) {
+            this.mNormalAtkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mNormalAtkButton');
+        }
+        return this.mNormalAtkButton_Internal;
+    }
     onAwake() {
         //设置能否每帧触发onUpdate
         this.canUpdate = false;
@@ -3141,6 +3321,8 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         this.initLanguage(this.mKillTipTextBlock3);
         this.initLanguage(this.mInvincibleTextBlock);
         this.initLanguage(this.mDeadCountDownTextBlock);
+        this.initLanguage(this.mGunNameTextBlock);
+        this.initLanguage(this.mGunBulletCountTextBlock);
         //文本多语言
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/VsCanvas/RedVsCanvas/RedVsTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/VsCanvas/BlueVsCanvas/BlueVsTextBlock"));
@@ -3190,7 +3372,7 @@ HUDPanel_Generate = __decorate([
 ], HUDPanel_Generate);
 var HUDPanel_Generate$1 = HUDPanel_Generate;
 
-var foreign88 = /*#__PURE__*/Object.freeze({
+var foreign90 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDPanel_Generate$1
 });
@@ -3200,7 +3382,7 @@ var foreign88 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/KillTipItem.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.06.22-23.56.50
  */
 let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
     get mBgImage() {
@@ -3266,7 +3448,7 @@ KillTipItem_Generate = __decorate([
 ], KillTipItem_Generate);
 var KillTipItem_Generate$1 = KillTipItem_Generate;
 
-var foreign89 = /*#__PURE__*/Object.freeze({
+var foreign91 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: KillTipItem_Generate$1
 });
@@ -3304,7 +3486,7 @@ class KillTipItem extends KillTipItem_Generate$1 {
     }
 }
 
-var foreign35 = /*#__PURE__*/Object.freeze({
+var foreign31 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     KillTipItem: KillTipItem
 });
@@ -3335,6 +3517,26 @@ class HUDPanel extends HUDPanel_Generate$1 {
         //#region ActivityTween
         this.activityRedPointTween1 = null;
         this.activityRedPointTween2 = null;
+        //#endregion
+        //#region Aim
+        this.leftAimTween1 = null;
+        this.rightAimTween1 = null;
+        this.upAimTween1 = null;
+        this.downAimTween1 = null;
+        this.leftAimTween2 = null;
+        this.rightAimTween2 = null;
+        this.upAimTween2 = null;
+        this.downAimTween2 = null;
+        this.fromAimLeftPos = mw.Vector2.zero;
+        this.fromAimRightPos = mw.Vector2.zero;
+        this.fromAimUpPos = mw.Vector2.zero;
+        this.fromAimDownPos = mw.Vector2.zero;
+        this.toAimLeftPos = mw.Vector2.zero;
+        this.toAimRightPos = mw.Vector2.zero;
+        this.toAimUpPos = mw.Vector2.zero;
+        this.toAimDownPos = mw.Vector2.zero;
+        this.aimOffsetValue = 10;
+        this.expansionTime = 0.15;
         //#endregion
     }
     get getHUDModuleC() {
@@ -3367,6 +3569,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.Collapsed);
         Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.Collapsed);
         Utils.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.Collapsed);
+        this.initAimUI();
     }
     bindButtons() {
         this.mShopButton.onClicked.add(this.onClickOpenShopButton.bind(this));
@@ -3379,6 +3582,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.mUnMorphButton.onClicked.add(this.onClickUnMorphButton.bind(this));
         this.mJumpButton.onClicked.add(this.onClickJumpButton.bind(this));
         this.bindSetButton();
+        this.bindAtkButton();
     }
     onClickOpenShopButton() {
         this.getHUDModuleC.onOpenShopAction.call();
@@ -3937,9 +4141,113 @@ class HUDPanel extends HUDPanel_Generate$1 {
         })
             .easing(cubicBezier(.22, .9, .28, .92));
     }
+    //#endregion
+    //#region Normal Attack Button
+    bindAtkButton() {
+        this.mNormalAtkButton.onJoyStickDown.add(() => {
+            this.getHUDModuleC.onNormalAction.call(true);
+        });
+        this.mNormalAtkButton.onJoyStickUp.add(() => {
+            this.getHUDModuleC.onNormalAction.call(false);
+        });
+    }
+    initAimUI() {
+        this.updateAimPosition();
+        this.initAimUIPosition();
+        this.updateAimPosition();
+        this.initToAimUIPosition();
+        this.initAimUITween();
+    }
+    updateAimPosition() {
+        this.fromAimLeftPos = this.mAimLeft.position;
+        this.fromAimRightPos = this.mAimRight.position;
+        this.fromAimUpPos = this.mAimUp.position;
+        this.fromAimDownPos = this.mAimDown.position;
+    }
+    initAimUIPosition() {
+        this.mAimLeft.position = new mw.Vector2(this.fromAimLeftPos.x - this.aimOffsetValue, this.fromAimLeftPos.y);
+        this.mAimRight.position = new mw.Vector2(this.fromAimRightPos.x + this.aimOffsetValue, this.fromAimRightPos.y);
+        this.mAimUp.position = new mw.Vector2(this.fromAimUpPos.x, this.fromAimUpPos.y - this.aimOffsetValue);
+        this.mAimDown.position = new mw.Vector2(this.fromAimDownPos.x, this.fromAimDownPos.y + this.aimOffsetValue);
+    }
+    initToAimUIPosition() {
+        this.toAimLeftPos = new mw.Vector2(this.fromAimLeftPos.x - (this.aimOffsetValue * 3), this.fromAimLeftPos.y);
+        this.toAimRightPos = new mw.Vector2(this.fromAimRightPos.x + (this.aimOffsetValue * 3), this.fromAimRightPos.y);
+        this.toAimUpPos = new mw.Vector2(this.fromAimUpPos.x, this.fromAimUpPos.y - (this.aimOffsetValue * 3));
+        this.toAimDownPos = new mw.Vector2(this.fromAimDownPos.x, this.fromAimDownPos.y + (this.aimOffsetValue * 3));
+    }
+    initAimUITween() {
+        this.leftAimTween2 = this.expansionTween(this.mAimLeft, this.toAimLeftPos, this.fromAimLeftPos, this.expansionTime).easing(cubicBezier(.19, .66, .27, .72));
+        this.rightAimTween2 = this.expansionTween(this.mAimRight, this.toAimRightPos, this.fromAimRightPos, this.expansionTime).easing(cubicBezier(.19, .66, .27, .72));
+        this.upAimTween2 = this.expansionTween(this.mAimUp, this.toAimUpPos, this.fromAimUpPos, this.expansionTime).easing(cubicBezier(.19, .66, .27, .72));
+        this.downAimTween2 = this.expansionTween(this.mAimDown, this.toAimDownPos, this.fromAimDownPos, this.expansionTime).easing(cubicBezier(.19, .66, .27, .72));
+    }
+    startAimUITween() {
+        this.stopAimUITween();
+        let lerpTime = Math.abs(this.mAimLeft.position.x - this.toAimLeftPos.x) / (this.aimOffsetValue * 3) * this.expansionTime;
+        this.leftAimTween1 = this.expansionTween(this.mAimLeft, new mw.Vector2(this.mAimLeft.position.x, this.mAimLeft.position.y), this.toAimLeftPos, lerpTime)
+            .easing(cubicBezier(.13, .68, .8, .25))
+            .start()
+            .onComplete(() => {
+            this.leftAimTween2.start();
+        });
+        this.rightAimTween1 = this.expansionTween(this.mAimRight, new mw.Vector2(this.mAimRight.position.x, this.mAimRight.position.y), this.toAimRightPos, lerpTime)
+            .easing(cubicBezier(.13, .68, .8, .25))
+            .start()
+            .onComplete(() => {
+            this.rightAimTween2.start();
+        });
+        this.upAimTween1 = this.expansionTween(this.mAimUp, new mw.Vector2(this.mAimUp.position.x, this.mAimUp.position.y), this.toAimUpPos, lerpTime)
+            .easing(cubicBezier(.13, .68, .8, .25))
+            .start()
+            .onComplete(() => {
+            this.upAimTween2.start();
+        });
+        this.downAimTween1 = this.expansionTween(this.mAimDown, new mw.Vector2(this.mAimDown.position.x, this.mAimDown.position.y), this.toAimDownPos, lerpTime)
+            .easing(cubicBezier(.13, .68, .8, .25))
+            .start()
+            .onComplete(() => {
+            this.downAimTween2.start();
+        });
+    }
+    stopAimUITween() {
+        if (this.leftAimTween1)
+            this.leftAimTween1.stop();
+        if (this.leftAimTween2)
+            this.leftAimTween2.stop();
+        if (this.rightAimTween1)
+            this.rightAimTween1.stop();
+        if (this.rightAimTween2)
+            this.rightAimTween2.stop();
+        if (this.upAimTween1)
+            this.upAimTween1.stop();
+        if (this.upAimTween2)
+            this.upAimTween2.stop();
+        if (this.downAimTween1)
+            this.downAimTween1.stop();
+        if (this.downAimTween2)
+            this.downAimTween2.stop();
+    }
+    expansionTween(ui, fromXY, toXY, time) {
+        return new Tween({ x: fromXY.x, y: fromXY.y })
+            .to({ x: toXY.x, y: toXY.y }, time * 1000)
+            .onUpdate((v) => {
+            ui.position = new mw.Vector2(v.x, v.y);
+        });
+    }
+    //#endregion
+    //#region Gun
+    updateGunPropUI(gunIcon, gunBulletCount, gunName) {
+        Utils.setImageByAssetIconData(this.mGunIconImage, gunIcon);
+        this.mGunBulletCountTextBlock.text = gunBulletCount.toString();
+        this.mGunNameTextBlock.text = gunName;
+    }
+    updateBulletCountUI(bulletCount) {
+        this.mGunBulletCountTextBlock.text = bulletCount.toString();
+    }
 }
 
-var foreign34 = /*#__PURE__*/Object.freeze({
+var foreign30 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDPanel
 });
@@ -3956,6 +4264,7 @@ class HUDModuleC extends ModuleC {
         this.onResetPosAction = new Action();
         this.onMorphAction = new Action1();
         this.onJumpAction = new Action();
+        this.onNormalAction = new Action1();
         //#endregion
         //#region 连杀提示
         this.killCountMap = new Map();
@@ -4175,9 +4484,22 @@ class HUDModuleC extends ModuleC {
         if (!isMorph)
             Event.dispatchToLocal(EventType.TryOutGun);
     }
+    //#endregion
+    //#region Aim
+    startAimUITween() {
+        this.getHUDPanel.startAimUITween();
+    }
+    //#endregion
+    //#region Update Gun
+    updateBulletCount(bulletCount) {
+        this.getHUDPanel.updateBulletCountUI(bulletCount);
+    }
+    updateGunPropUI(gunIcon, gunBulletCount, gunName) {
+        this.getHUDPanel.updateGunPropUI(gunIcon, gunBulletCount, gunName);
+    }
 }
 
-var foreign32 = /*#__PURE__*/Object.freeze({
+var foreign28 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDModuleC
 });
@@ -4322,26 +4644,9 @@ var MapEx;
     MapEx.copy = copy;
 })(MapEx || (MapEx = {}));
 
-var foreign72 = /*#__PURE__*/Object.freeze({
+var foreign75 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get MapEx () { return MapEx; }
-});
-
-class GunModuleC extends ModuleC {
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    onStart() {
-    }
-    // private currentGunId: number = -1;
-    switchGun(gunId) {
-        // if (this.currentGunId == gunId) return;
-        // this.currentGunId = gunId;
-        this.server.net_switchGun(gunId);
-    }
-}
-
-var foreign27 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: GunModuleC
 });
 
 var ShopType;
@@ -4395,7 +4700,7 @@ __decorate([
     Decorator.persistence()
 ], ShopData.prototype, "useShopIds", void 0);
 
-var foreign52 = /*#__PURE__*/Object.freeze({
+var foreign48 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get PriceType () { return PriceType; },
     get ShopType () { return ShopType; },
@@ -4407,7 +4712,7 @@ var foreign52 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopPanel.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.06.22-23.56.51
  */
 let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
     get mTabCanvas() {
@@ -4507,7 +4812,7 @@ ShopPanel_Generate = __decorate([
 ], ShopPanel_Generate);
 var ShopPanel_Generate$1 = ShopPanel_Generate;
 
-var foreign95 = /*#__PURE__*/Object.freeze({
+var foreign97 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel_Generate$1
 });
@@ -4517,7 +4822,7 @@ var foreign95 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopItem.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.06.22-23.56.50
  */
 let ShopItem_Generate = class ShopItem_Generate extends UIScript {
     get mICONImage() {
@@ -4700,7 +5005,7 @@ ShopItem_Generate = __decorate([
 ], ShopItem_Generate);
 var ShopItem_Generate$1 = ShopItem_Generate;
 
-var foreign94 = /*#__PURE__*/Object.freeze({
+var foreign96 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopItem_Generate$1
 });
@@ -4889,7 +5194,7 @@ class ShopItem extends ShopItem_Generate$1 {
     }
 }
 
-var foreign55 = /*#__PURE__*/Object.freeze({
+var foreign51 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopItem
 });
@@ -5063,7 +5368,7 @@ class ShopPanel extends ShopPanel_Generate$1 {
     }
 }
 
-var foreign56 = /*#__PURE__*/Object.freeze({
+var foreign52 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel
 });
@@ -5073,7 +5378,6 @@ class ShopModuleC extends ModuleC {
         super(...arguments);
         this.hudModuleC = null;
         this.coinModuleC = null;
-        this.gunModuleC = null;
         this.shopPanel = null;
         this.shopIds = {}; //1-Gun,2-Role,3-Trailing
         this.useShopIds = {}; //1-Gun,2-Role,3-Trailing
@@ -5115,12 +5419,6 @@ class ShopModuleC extends ModuleC {
         }
         return this.coinModuleC;
     }
-    get getGunModuleC() {
-        if (this.gunModuleC == null) {
-            this.gunModuleC = ModuleService.getModule(GunModuleC);
-        }
-        return this.gunModuleC;
-    }
     get getShopPanel() {
         if (this.shopPanel == null) {
             this.shopPanel = UIService.getUI(ShopPanel);
@@ -5136,7 +5434,6 @@ class ShopModuleC extends ModuleC {
     initModule() {
         this.hudModuleC = ModuleService.getModule(HUDModuleC);
         this.coinModuleC = ModuleService.getModule(CoinModuleC);
-        this.gunModuleC = ModuleService.getModule(GunModuleC);
     }
     bindActions() {
         this.getHUDModuleC.onOpenShopAction.add(this.bindOpenShopAction.bind(this));
@@ -5270,8 +5567,8 @@ class ShopModuleC extends ModuleC {
         return true;
     }
     setCharacterGun() {
-        let gunId = MapEx.get(this.useShopIds, ShopType.Gun);
-        this.getGunModuleC.switchGun(gunId);
+        MapEx.get(this.useShopIds, ShopType.Gun);
+        // this.getGunModuleC.switchGun(gunId);//TODO:WFZ
     }
     async setCharacterDescription(shopId) {
         let roleId = GameConfig.ROLE.getElement(shopId).ROLEID;
@@ -5427,7 +5724,7 @@ class ShopModuleC extends ModuleC {
     }
 }
 
-var foreign53 = /*#__PURE__*/Object.freeze({
+var foreign49 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopModuleC
 });
@@ -5437,7 +5734,7 @@ var foreign53 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ActivityModule/ActivityPanel.ui
- * TIME: 2024.05.23-21.30.01
+ * TIME: 2024.06.22-23.56.50
  */
 let ActivityPanel_Generate = class ActivityPanel_Generate extends UIScript {
     get mWhatDayTextBlock() {
@@ -5562,7 +5859,7 @@ ActivityPanel_Generate = __decorate([
 ], ActivityPanel_Generate);
 var ActivityPanel_Generate$1 = ActivityPanel_Generate;
 
-var foreign80 = /*#__PURE__*/Object.freeze({
+var foreign83 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ActivityPanel_Generate$1
 });
@@ -5983,76 +6280,6 @@ var foreign22 = /*#__PURE__*/Object.freeze({
     default: CoinModuleS
 });
 
-class GunModuleS extends ModuleS {
-    constructor() {
-        super(...arguments);
-        this.weaponMap = new Map();
-    }
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    onStart() {
-    }
-    onPlayerLeft(player) {
-        let userId = player.userId;
-        if (!this.weaponMap.has(userId))
-            return;
-        let weapon = this.weaponMap.get(userId);
-        weapon?.getChildren().forEach((value) => {
-            value?.destroy();
-        });
-        weapon?.destroy();
-        this.weaponMap.delete(userId);
-        // console.error("wfz-A");
-    }
-    setGunState(userId, isHide) {
-        if (!this.weaponMap.has(userId))
-            return;
-        // if (this.weaponMap.get(userId).getVisibility() != isHide) this.weaponMap.get(userId).setVisibility(isHide, true);
-        // this.weaponMap.get(userId).localTransform.position = mw.Vector.zero;
-        // this.weaponMap.get(userId).localTransform.rotation = mw.Rotation.zero;
-    }
-    net_switchGun(gunId) {
-        let player = this.currentPlayer;
-        this.switchStance(player);
-        this.switchGun(gunId, player);
-    }
-    async switchStance(player) {
-        let somatotype = player.character.description.advance.base.characterSetting.somatotype;
-        let stanceId = (somatotype % 2 == 0) ? "49098" : "94261";
-        await Utils.asyncDownloadAsset(stanceId);
-        player.character.loadSubStance(stanceId).play();
-    }
-    async switchGun(gunId, player) {
-        player.character.movementEnabled = false;
-        let weapon = await GameObject.asyncSpawn(GameConfig.GUN.getElement(gunId).GUNPREFAB, {
-            replicates: true,
-            // transform: new mw.Transform(player.character.worldTransform.position, mw.Rotation.zero, mw.Vector.one)
-        });
-        await weapon.asyncReady();
-        player.character.attachToSlot(weapon, mw.HumanoidSlotType.BackOrnamental);
-        weapon.localTransform.position = mw.Vector.zero;
-        player.character.movementEnabled = true;
-        await TimeUtil.delaySecond(2);
-        let userId = player.userId;
-        if (this.weaponMap.has(userId)) {
-            let weapon = this.weaponMap.get(userId);
-            weapon?.getChildren().forEach((value) => {
-                value?.destroy();
-            });
-            weapon?.destroy();
-            // console.error("wfz-A");
-        }
-        this.weaponMap.set(userId, weapon);
-    }
-}
-__decorate([
-    Decorator.noReply()
-], GunModuleS.prototype, "net_switchGun", null);
-
-var foreign28 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: GunModuleS
-});
-
 class HUDModuleS extends ModuleS {
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     onStart() {
@@ -6069,7 +6296,7 @@ __decorate([
     Decorator.noReply()
 ], HUDModuleS.prototype, "net_saveSetData", null);
 
-var foreign33 = /*#__PURE__*/Object.freeze({
+var foreign29 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDModuleS
 });
@@ -6125,14 +6352,7 @@ class MorphModuleC extends ModuleC {
 class MorphModuleS extends ModuleS {
     constructor() {
         super(...arguments);
-        this.gunModuleS = null;
         this.playerGoMap = new Map();
-    }
-    get getGunModuleS() {
-        if (this.gunModuleS == null) {
-            this.gunModuleS = ModuleService.getModule(GunModuleS);
-        }
-        return this.gunModuleS;
     }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     onStart() {
@@ -6184,7 +6404,7 @@ class MorphModuleS extends ModuleS {
         if (!player.character.getVisibility())
             player.character.setVisibility(true, true);
         // if (player.character.getCollision() != mw.PropertyStatus.On) player.character.setCollision(mw.PropertyStatus.On);
-        this.getGunModuleS.setGunState(player.userId, true);
+        // this.getGunModuleS.setGunState(player.userId, true);//TODO:WFZ
     }
     recycleGo(userId) {
         if (this.playerGoMap.has(userId)) {
@@ -6201,7 +6421,7 @@ __decorate([
     Decorator.noReply()
 ], MorphModuleS.prototype, "net_unmorph", null);
 
-var foreign36 = /*#__PURE__*/Object.freeze({
+var foreign32 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     MorphModuleC: MorphModuleC,
     MorphModuleS: MorphModuleS
@@ -6240,7 +6460,7 @@ __decorate([
     Decorator.persistence()
 ], PlayerData.prototype, "dieCount", void 0);
 
-var foreign39 = /*#__PURE__*/Object.freeze({
+var foreign35 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PlayerStatus: PlayerStatus,
     default: PlayerData
@@ -6337,7 +6557,7 @@ class FlyText {
     }
 }
 
-var foreign67 = /*#__PURE__*/Object.freeze({
+var foreign69 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     FlyText: FlyText
 });
@@ -6379,7 +6599,7 @@ class WorldData {
     }
 }
 
-var foreign46 = /*#__PURE__*/Object.freeze({
+var foreign42 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     RoomData: RoomData,
     WorldData: WorldData
@@ -6390,7 +6610,7 @@ var foreign46 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/RankPanel.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.06.22-23.56.51
  */
 let RankPanel_Generate = class RankPanel_Generate extends UIScript {
     get mRoomCanvas() {
@@ -6518,7 +6738,7 @@ RankPanel_Generate = __decorate([
 ], RankPanel_Generate);
 var RankPanel_Generate$1 = RankPanel_Generate;
 
-var foreign91 = /*#__PURE__*/Object.freeze({
+var foreign93 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankPanel_Generate$1
 });
@@ -6528,7 +6748,7 @@ var foreign91 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/RoomItem.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.06.22-23.56.51
  */
 let RoomItem_Generate = class RoomItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -6595,7 +6815,7 @@ RoomItem_Generate = __decorate([
 ], RoomItem_Generate);
 var RoomItem_Generate$1 = RoomItem_Generate;
 
-var foreign92 = /*#__PURE__*/Object.freeze({
+var foreign94 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RoomItem_Generate$1
 });
@@ -6622,7 +6842,7 @@ class RoomItem extends RoomItem_Generate$1 {
     }
 }
 
-var foreign50 = /*#__PURE__*/Object.freeze({
+var foreign46 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RoomItem
 });
@@ -6632,7 +6852,7 @@ var foreign50 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/WorldItem.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.06.22-23.56.51
  */
 let WorldItem_Generate = class WorldItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -6699,7 +6919,7 @@ WorldItem_Generate = __decorate([
 ], WorldItem_Generate);
 var WorldItem_Generate$1 = WorldItem_Generate;
 
-var foreign93 = /*#__PURE__*/Object.freeze({
+var foreign95 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldItem_Generate$1
 });
@@ -6726,7 +6946,7 @@ class WorldItem extends WorldItem_Generate$1 {
     }
 }
 
-var foreign51 = /*#__PURE__*/Object.freeze({
+var foreign47 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldItem
 });
@@ -6865,7 +7085,7 @@ class RankPanel extends RankPanel_Generate$1 {
     }
 }
 
-var foreign49 = /*#__PURE__*/Object.freeze({
+var foreign45 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankPanel
 });
@@ -7146,7 +7366,7 @@ class RankModuleC extends ModuleC {
     }
 }
 
-var foreign47 = /*#__PURE__*/Object.freeze({
+var foreign43 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankModuleC
 });
@@ -7179,7 +7399,7 @@ var ResultType;
     ResultType[ResultType["Fail3"] = 3] = "Fail3";
 })(ResultType || (ResultType = {}));
 
-var foreign61 = /*#__PURE__*/Object.freeze({
+var foreign57 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get ResultType () { return ResultType; },
     TeamData: TeamData,
@@ -7191,7 +7411,7 @@ var foreign61 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TeamModule/TeamPanel.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.06.22-23.56.51
  */
 let TeamPanel_Generate = class TeamPanel_Generate extends UIScript {
     get mMainCanvas() {
@@ -7282,7 +7502,7 @@ TeamPanel_Generate = __decorate([
 ], TeamPanel_Generate);
 var TeamPanel_Generate$1 = TeamPanel_Generate;
 
-var foreign99 = /*#__PURE__*/Object.freeze({
+var foreign101 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamPanel_Generate$1
 });
@@ -7292,7 +7512,7 @@ var foreign99 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TeamModule/TeamItem.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.06.22-23.56.51
  */
 let TeamItem_Generate = class TeamItem_Generate extends UIScript {
     get mBgImage() {
@@ -7344,7 +7564,7 @@ TeamItem_Generate = __decorate([
 ], TeamItem_Generate);
 var TeamItem_Generate$1 = TeamItem_Generate;
 
-var foreign98 = /*#__PURE__*/Object.freeze({
+var foreign100 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamItem_Generate$1
 });
@@ -7367,7 +7587,7 @@ class TeamItem extends TeamItem_Generate$1 {
     }
 }
 
-var foreign64 = /*#__PURE__*/Object.freeze({
+var foreign60 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamItem
 });
@@ -7477,7 +7697,7 @@ class TeamPanel extends TeamPanel_Generate$1 {
     }
 }
 
-var foreign65 = /*#__PURE__*/Object.freeze({
+var foreign61 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamPanel
 });
@@ -7610,7 +7830,7 @@ class TeamModuleC extends ModuleC {
     }
 }
 
-var foreign62 = /*#__PURE__*/Object.freeze({
+var foreign58 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamModuleC
 });
@@ -7689,7 +7909,7 @@ class PlayerModuleC extends ModuleC {
     }
 }
 
-var foreign40 = /*#__PURE__*/Object.freeze({
+var foreign36 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PlayerModuleC: PlayerModuleC
 });
@@ -8404,7 +8624,7 @@ function PrefabReport(reportId = null) {
     };
 }
 
-var foreign73 = /*#__PURE__*/Object.freeze({
+var foreign76 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get PrefabEvent () { return PrefabEvent; },
     PrefabReport: PrefabReport
@@ -8679,7 +8899,7 @@ __decorate([
     Decorator.noReply()
 ], RankModuleS.prototype, "net_setFirstModel", null);
 
-var foreign48 = /*#__PURE__*/Object.freeze({
+var foreign44 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankModuleS
 });
@@ -8830,7 +9050,7 @@ __decorate([
     Decorator.persistence()
 ], TaskData.prototype, "weeklyTasks", void 0);
 
-var foreign57 = /*#__PURE__*/Object.freeze({
+var foreign53 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Task: Task,
     TaskData: TaskData,
@@ -9021,7 +9241,7 @@ __decorate([
     Decorator.noReply()
 ], TaskModuleS.prototype, "net_updateTaskConpleteData", null);
 
-var foreign59 = /*#__PURE__*/Object.freeze({
+var foreign55 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskModuleS
 });
@@ -9129,7 +9349,7 @@ __decorate([
     Decorator.noReply()
 ], TeamModuleS.prototype, "net_onEnterScene", null);
 
-var foreign63 = /*#__PURE__*/Object.freeze({
+var foreign59 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamModuleS
 });
@@ -9313,7 +9533,7 @@ class PlayerModuleS extends ModuleS {
     }
 }
 
-var foreign41 = /*#__PURE__*/Object.freeze({
+var foreign37 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PlayerModuleS: PlayerModuleS
 });
@@ -9483,7 +9703,7 @@ class RadarPanel extends UIScript {
     }
 }
 
-var foreign45 = /*#__PURE__*/Object.freeze({
+var foreign41 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadarPanel
 });
@@ -9528,7 +9748,7 @@ class RadarModuleC extends ModuleC {
     }
 }
 
-var foreign43 = /*#__PURE__*/Object.freeze({
+var foreign39 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadarModuleC
 });
@@ -9538,7 +9758,7 @@ class RadarModuleS extends ModuleS {
     }
 }
 
-var foreign44 = /*#__PURE__*/Object.freeze({
+var foreign40 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadarModuleS
 });
@@ -9587,7 +9807,7 @@ __decorate([
     Decorator.noReply()
 ], ShopModuleS.prototype, "net_setCharacterTrailing", null);
 
-var foreign54 = /*#__PURE__*/Object.freeze({
+var foreign50 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopModuleS
 });
@@ -9597,7 +9817,7 @@ var foreign54 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.06.22-23.56.51
  */
 let TaskItem_Generate = class TaskItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -9687,7 +9907,7 @@ TaskItem_Generate = __decorate([
 ], TaskItem_Generate);
 var TaskItem_Generate$1 = TaskItem_Generate;
 
-var foreign96 = /*#__PURE__*/Object.freeze({
+var foreign98 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskItem_Generate$1
 });
@@ -9697,7 +9917,7 @@ var foreign96 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskPanel.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.06.22-23.56.51
  */
 let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
     get mDailyTimeTextBlock() {
@@ -9800,7 +10020,7 @@ TaskPanel_Generate = __decorate([
 ], TaskPanel_Generate);
 var TaskPanel_Generate$1 = TaskPanel_Generate;
 
-var foreign97 = /*#__PURE__*/Object.freeze({
+var foreign99 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskPanel_Generate$1
 });
@@ -10084,7 +10304,7 @@ class TaskItem extends TaskItem_Generate$1 {
     }
 }
 
-var foreign60 = /*#__PURE__*/Object.freeze({
+var foreign56 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     TaskItem: TaskItem,
     default: TaskPanel
@@ -10419,10 +10639,913 @@ class TaskModuleC extends ModuleC {
     }
 }
 
-var foreign58 = /*#__PURE__*/Object.freeze({
+var foreign54 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskModuleC
 });
+
+class WeaponData extends Subdata {
+    constructor() {
+        super(...arguments);
+        this.weaponIndex = 6;
+        this.projectileIndex = 6;
+    }
+    setWeaponIndex(weaponId) {
+        this.weaponIndex = weaponId;
+        this.save(true);
+    }
+    setProjectileIndex(projectileIndex) {
+        this.projectileIndex = projectileIndex;
+        this.save(true);
+    }
+}
+__decorate([
+    Decorator.persistence()
+], WeaponData.prototype, "weaponIndex", void 0);
+__decorate([
+    Decorator.persistence()
+], WeaponData.prototype, "projectileIndex", void 0);
+var ProjectileType;
+(function (ProjectileType) {
+    /**正常 */
+    ProjectileType[ProjectileType["Normal"] = 0] = "Normal";
+    /**弧线追踪(弱) */
+    ProjectileType[ProjectileType["ArcTracing_Weak"] = 1] = "ArcTracing_Weak";
+    /**弧线追踪(强) */
+    ProjectileType[ProjectileType["ArcTracing_Strong"] = 2] = "ArcTracing_Strong";
+    /**穿透 */
+    ProjectileType[ProjectileType["Penetrate"] = 3] = "Penetrate";
+    /**投掷物 */
+    ProjectileType[ProjectileType["Throw"] = 4] = "Throw";
+})(ProjectileType || (ProjectileType = {}));
+
+class Helper {
+}
+Helper.damage = 1;
+/**激活的子弹 */
+Helper.activeBulletMap = new Map();
+/**失活的子弹 */
+Helper.inactiveBullets = new Map();
+/**子弹数据 */
+Helper.projectileDateMap = new Map([
+    [0, { prefabId: "1405575C47698FE0FC41F0B7E104529E", fireSound: "208048", hitEffect: "130641" }],
+    [1, { prefabId: "B8EEE9C049C089FB1E08BAA38ADC9615", fireSound: "208571", hitEffect: "200157" }],
+    [2, { prefabId: "4FB7635246F9D7F1BBAE98B3EEC97353", fireSound: "208166", hitEffect: "27422" }],
+    [3, { prefabId: "7C8533BC45920DD59BA56B82DF975D0E", fireSound: "207772", hitEffect: "31122" }],
+    [4, { prefabId: "F68FC2B94AFC0A81AA1C4D809873D98E", fireSound: "208399", hitEffect: "130641" }],
+    [5, { prefabId: "74EE012A43B28C4DDF9A279D4E93FFEF", fireSound: "207881", hitEffect: "153045" }],
+    [6, { prefabId: "5D1E329545758BE6E58407910CCA0687", fireSound: "208374", hitEffect: "287821" }],
+    [7, { prefabId: "1961231449827BF19AF6349B27AB75FA", fireSound: "208495", hitEffect: "61006" }],
+    [8, { prefabId: "24E7DF3146C2E5414BE4EE8AC093215B", fireSound: "208268", hitEffect: "31122" }],
+    [9, { prefabId: "24E7DF3146C2E5414BE4EE8AC093215B", fireSound: "208268", hitEffect: "295656" }], //208268
+]);
+/**武器数据 FireAnchor*/
+Helper.weaponDataMap = new Map([
+    [0,
+        {
+            prefabId: "51DE48DB420CD65069D6F1A77A43FE1E",
+            slotType: mw.HumanoidSlotType.LeftHand,
+            gunAttitude: "20305",
+            skillAnims: ["121981", "121981", "121981"],
+            skillAnimTimes: [2.47, 2.47, 2.47],
+            skillAtkTime: [1.05, 1.05, 1.05],
+            skillCDs: [1, 3, 5],
+            skillBulletCounts: [1, 3, 5],
+            skillFireInterval: [0.01, 0.05, 0.05],
+            normalAnims: ["121952", "121955", "121987", "121989", "121990"],
+            normalAnimTimes: [1.2, 1.43, 2.17, 1.8, 2.2],
+            normalAtkTime: [0.2, 0.2, 0.6, 0.5, 0.8],
+            normalBulletCount: [1, 1, 3, 1, 1],
+            normalFireInterval: [0.01, 0.01, 0.01, 0.01, 0.01],
+            weaponName: "弓",
+            weaponIcon: "278406",
+            weaponPrices: [1, 8888],
+            bulletCount: 99999,
+            damage: 5
+        }
+    ],
+    [1,
+        {
+            prefabId: "9E24552B4B043410A0B191B34057E4B0",
+            slotType: mw.HumanoidSlotType.RightHand,
+            gunAttitude: "221620",
+            skillAnims: ["99959", "99959", "99959"],
+            skillAnimTimes: [0.2, 0.6, 1],
+            skillAtkTime: [0.2, 0.2, 0.2],
+            skillCDs: [1, 3, 5],
+            skillBulletCounts: [1, 3, 5],
+            skillFireInterval: [0.01, 0.05, 0.05],
+            normalAnims: ["99959"],
+            normalAnimTimes: [0.5],
+            normalAtkTime: [0.1],
+            normalBulletCount: [1],
+            normalFireInterval: [0.01],
+            weaponName: "啊啊啊",
+            weaponIcon: "122726",
+            weaponPrices: [1, 8888],
+            bulletCount: 99999,
+            damage: 1
+        }
+    ],
+    [2,
+        {
+            prefabId: "37B14B154139C33C8E4771AE56156B77",
+            slotType: mw.HumanoidSlotType.RightHand,
+            gunAttitude: "221620",
+            skillAnims: ["99959", "99959", "99959"],
+            skillAnimTimes: [0.2, 0.6, 1],
+            skillAtkTime: [0.2, 0.2, 0.2],
+            skillCDs: [1, 3, 5],
+            skillBulletCounts: [1, 3, 5],
+            skillFireInterval: [0.01, 0.05, 0.05],
+            normalAnims: ["99959"],
+            normalAnimTimes: [0.5],
+            normalAtkTime: [0.05],
+            normalBulletCount: [1],
+            normalFireInterval: [0.01],
+            weaponName: "手枪",
+            weaponIcon: "129106",
+            weaponPrices: [1, 8888],
+            bulletCount: 99999,
+            damage: 1
+        }
+    ],
+    [3,
+        {
+            prefabId: "FFA7ECEC42B315D8C31F2499C243AEE4",
+            slotType: mw.HumanoidSlotType.RightHand,
+            gunAttitude: "14037",
+            skillAnims: ["20244", "20244", "20244"],
+            skillAnimTimes: [0.2, 0.4, 0.6],
+            skillAtkTime: [0.2, 0.2, 0.2],
+            skillCDs: [1, 5, 10],
+            skillBulletCounts: [1, 2, 3],
+            skillFireInterval: [0.01, 0.05, 0.05],
+            normalAnims: ["20244"],
+            normalAnimTimes: [0.4],
+            normalAtkTime: [0.3],
+            normalBulletCount: [1],
+            normalFireInterval: [0.01],
+            weaponName: "手枪",
+            weaponIcon: "129106",
+            weaponPrices: [1, 8888],
+            bulletCount: 99999,
+            damage: 1
+        }
+    ],
+    [4,
+        {
+            prefabId: "DF2B3CC9444E04F46ABEA0A3EC312A2F",
+            slotType: mw.HumanoidSlotType.RightHand,
+            gunAttitude: "221620",
+            skillAnims: ["99959", "99959", "99959"],
+            skillAnimTimes: [0.2, 0.6, 1],
+            skillAtkTime: [0.2, 0.2, 0.2],
+            skillCDs: [1, 3, 5],
+            skillBulletCounts: [1, 3, 5],
+            skillFireInterval: [0.01, 0.05, 0.05],
+            normalAnims: ["99959"],
+            normalAnimTimes: [0.5],
+            normalAtkTime: [0.3],
+            normalBulletCount: [1],
+            normalFireInterval: [0.01],
+            weaponName: "手枪",
+            weaponIcon: "129106",
+            weaponPrices: [1, 8888],
+            bulletCount: 99999,
+            damage: 1
+        }
+    ],
+    [5,
+        {
+            prefabId: "A1DCB9EC42F4CFAFFE76CB92F38919C7",
+            slotType: mw.HumanoidSlotType.RightHand,
+            gunAttitude: "14037",
+            skillAnims: ["20244", "20244", "20244"],
+            skillAnimTimes: [0.2, 0.4, 0.6],
+            skillAtkTime: [0.2, 0.2, 0.2],
+            skillCDs: [1, 5, 10],
+            skillBulletCounts: [1, 2, 3],
+            skillFireInterval: [0.01, 0.05, 0.05],
+            normalAnims: ["20244"],
+            normalAnimTimes: [0.4],
+            normalAtkTime: [0.3],
+            normalBulletCount: [1],
+            normalFireInterval: [0.01],
+            weaponName: "手枪",
+            weaponIcon: "129106",
+            weaponPrices: [1, 8888],
+            bulletCount: 99999,
+            damage: 1
+        }
+    ],
+    [6,
+        {
+            prefabId: "416DF90B41D827AA360FCDAF67DB023D",
+            slotType: mw.HumanoidSlotType.RightHand,
+            gunAttitude: "221620",
+            skillAnims: ["99959", "99959", "99959"],
+            skillAnimTimes: [0.2, 0.6, 1],
+            skillAtkTime: [0.2, 0.2, 0.2],
+            skillCDs: [1, 3, 5],
+            skillBulletCounts: [1, 3, 5],
+            skillFireInterval: [0.01, 0.05, 0.05],
+            normalAnims: ["99959"],
+            normalAnimTimes: [0.5],
+            normalAtkTime: [0.05],
+            normalBulletCount: [1],
+            normalFireInterval: [0.01],
+            weaponName: "手枪",
+            weaponIcon: "129106",
+            weaponPrices: [1, 8888],
+            bulletCount: 99999,
+            damage: 1
+        }
+    ],
+    [7,
+        {
+            prefabId: "EF601DC2464444F8D68DC1946EB03E34",
+            slotType: mw.HumanoidSlotType.RightHand,
+            gunAttitude: "221620",
+            skillAnims: ["99959", "99959", "99959"],
+            skillAnimTimes: [0.2, 0.6, 1],
+            skillAtkTime: [0.2, 0.2, 0.2],
+            skillCDs: [1, 3, 5],
+            skillBulletCounts: [1, 3, 5],
+            skillFireInterval: [0.01, 0.05, 0.05],
+            normalAnims: ["99959"],
+            normalAnimTimes: [0.5],
+            normalAtkTime: [0.3],
+            normalBulletCount: [1],
+            normalFireInterval: [0.01],
+            weaponName: "手枪",
+            weaponIcon: "129106",
+            weaponPrices: [1, 8888],
+            bulletCount: 99999,
+            damage: 1
+        }
+    ],
+    [8,
+        {
+            prefabId: "6020942C4E96E0D1817597AAF232D455",
+            slotType: mw.HumanoidSlotType.RightHand,
+            gunAttitude: "14037",
+            skillAnims: ["20244", "20244", "20244"],
+            skillAnimTimes: [0.2, 0.4, 0.6],
+            skillAtkTime: [0.2, 0.2, 0.2],
+            skillCDs: [1, 5, 10],
+            skillBulletCounts: [1, 2, 3],
+            skillFireInterval: [0.01, 0.05, 0.05],
+            normalAnims: ["20244"],
+            normalAnimTimes: [0.4],
+            normalAtkTime: [0.3],
+            normalBulletCount: [1],
+            normalFireInterval: [0.01],
+            weaponName: "手枪",
+            weaponIcon: "129106",
+            weaponPrices: [1, 8888],
+            bulletCount: 99999,
+            damage: 1
+        }
+    ],
+    [9,
+        {
+            prefabId: "2F835D36498E3C6F242BDF86B57FBC92",
+            slotType: mw.HumanoidSlotType.RightHand,
+            gunAttitude: "221620",
+            skillAnims: ["99959", "99959", "99959"],
+            skillAnimTimes: [0.2, 0.6, 1],
+            skillAtkTime: [0.2, 0.2, 0.2],
+            skillCDs: [1, 3, 5],
+            skillBulletCounts: [1, 3, 5],
+            skillFireInterval: [0.01, 0.05, 0.05],
+            normalAnims: ["99959"],
+            normalAnimTimes: [0.5],
+            normalAtkTime: [0.3],
+            normalBulletCount: [1],
+            normalFireInterval: [0.01],
+            weaponName: "手枪",
+            weaponIcon: "129106",
+            weaponPrices: [1, 8888],
+            bulletCount: 99999,
+            damage: 1
+        }
+    ],
+]);
+
+class WeaponModuleC extends ModuleC {
+    constructor() {
+        super(...arguments);
+        this.hudModuleC = null;
+        this.currentCamera = null;
+        //#region Switch Weapon
+        this.currentWeaponIndex = [0, 0];
+        this.currentWeaponData = null;
+        this.bulletCount = 0;
+        this.weaponIcon = "278406";
+        this.weaponName = "神兵弓箭";
+        this.fireAnchor = null;
+        //#endregion
+        //#region Normal
+        this.normalIntervalId = null;
+        this.normalAnims = [];
+        this.normalAttackLength = 0;
+        this.normalAnimTimes = [];
+        this.normalAtkTime = [];
+        this.normalAttackIndex = -1;
+        this.isCanNormalAttack = true;
+        this.currentProjectileType = ProjectileType.Normal;
+        this.normalAttackTimeoutId = null;
+    }
+    get getHUDModuleC() {
+        if (!this.hudModuleC) {
+            this.hudModuleC = ModuleService.getModule(HUDModuleC);
+        }
+        return this.hudModuleC;
+    }
+    get getCurrentCamera() {
+        if (this.currentCamera == null) {
+            this.currentCamera = Camera.currentCamera;
+        }
+        return this.currentCamera;
+    }
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+        this.bindEventAction();
+    }
+    bindEventAction() {
+        this.getHUDModuleC.onNormalAction.add(this.normalIntervalAttack.bind(this));
+        //#region KeyDown
+        InputUtil.onKeyDown(mw.Keys.E, () => {
+            this.bulletCount = this.currentWeaponData.bulletCount;
+            this.getHUDModuleC.updateBulletCount(this.bulletCount);
+        });
+        let isNormal = true;
+        InputUtil.onKeyDown(mw.Keys.R, () => {
+            isNormal = !isNormal;
+            this.switchProjectileType(isNormal ? ProjectileType.Normal : ProjectileType.ArcTracing_Weak);
+        });
+        //#endregion
+    }
+    onEnterScene(sceneType) {
+        this.currentWeaponIndex[1] = this.data.projectileIndex;
+    }
+    switchWeaponData(weaponId) {
+        if (this.currentWeaponIndex[0] == weaponId)
+            return;
+        this.setWeaponPropData(weaponId);
+        this.switchWeapon();
+    }
+    net_switchWeaponData(weaponId) {
+        this.setWeaponPropData(weaponId);
+    }
+    setWeaponPropData(weaponId) {
+        this.currentWeaponIndex[0] = weaponId;
+        this.currentWeaponData = Helper.weaponDataMap.get(this.currentWeaponIndex[0]);
+        Helper.damage = this.currentWeaponData.damage;
+        this.updateNormalData();
+    }
+    switchWeapon() {
+        this.server.net_switchWeapon(this.currentWeaponIndex[0]);
+    }
+    switchProjectile(projectileIndex) {
+        if (this.currentWeaponIndex[1] == projectileIndex)
+            return;
+        this.currentWeaponIndex[1] = projectileIndex;
+        this.server.net_switchProjectile(this.currentWeaponIndex[1]);
+    }
+    switchProjectileType(projectileType) {
+        this.currentProjectileType = projectileType;
+    }
+    setFireAnchor(fireAnchor) {
+        this.fireAnchor = fireAnchor;
+    }
+    normalIntervalAttack(isPress) {
+        if (isPress) {
+            this.normalAttack();
+            this.normalIntervalId = TimeUtil.setInterval(this.normalAttack.bind(this), 0.1);
+        }
+        else {
+            TimeUtil.clearInterval(this.normalIntervalId);
+        }
+    }
+    updateNormalData() {
+        this.normalAnims = this.currentWeaponData.normalAnims;
+        this.normalAttackLength = this.normalAnims.length;
+        this.normalAnimTimes = this.currentWeaponData.normalAnimTimes;
+        this.normalAtkTime = this.currentWeaponData.normalAtkTime;
+        this.normalAttackIndex = 0;
+        this.bulletCount = this.currentWeaponData.bulletCount;
+        this.weaponIcon = this.currentWeaponData.weaponIcon;
+        this.weaponName = this.currentWeaponData.weaponName;
+        this.getHUDModuleC.updateGunPropUI(this.weaponIcon, this.bulletCount, this.weaponName);
+    }
+    normalAttack() {
+        if (!this.isCanNormalAttack || !this.fireAnchor || this.bulletCount <= 0)
+            return;
+        if (this.normalAttackIndex >= this.normalAttackLength)
+            this.normalAttackIndex = 0;
+        this.updateNormalAttackState();
+        this.resetNormalAttackIndex();
+        let shootDir = this.calculateFireDirection(this.getCurrentCamera.worldTransform, this.fireAnchor.worldTransform.position);
+        this.server.net_fireNormalAttack(shootDir, this.currentWeaponIndex, this.normalAttackIndex++, this.currentProjectileType);
+        this.bulletCount--;
+        this.getHUDModuleC.updateBulletCount(this.bulletCount);
+        TimeUtil.delaySecond(this.normalAtkTime[this.normalAttackIndex - 1]).then(() => {
+            this.getHUDModuleC.startAimUITween();
+        });
+    }
+    updateNormalAttackState() {
+        this.isCanNormalAttack = false;
+        TimeUtil.delaySecond(this.normalAtkTime[this.normalAttackIndex]).then(() => {
+            this.isCanNormalAttack = true;
+        });
+    }
+    clearNormalAttackTimeout() {
+        if (this.normalAttackTimeoutId) {
+            clearTimeout(this.normalAttackTimeoutId);
+            this.normalAttackTimeoutId = null;
+        }
+    }
+    resetNormalAttackIndex() {
+        this.clearNormalAttackTimeout();
+        this.normalAttackTimeoutId = setTimeout(() => {
+            this.normalAttackIndex = 0;
+            if (!this.isCanNormalAttack)
+                this.isCanNormalAttack = true;
+        }, this.normalAnimTimes[this.normalAttackIndex] * 1000);
+    }
+    //#endregion
+    onUpdate(dt) {
+        if (Helper.activeBulletMap.size == 0)
+            return;
+        Helper.activeBulletMap.forEach((value) => {
+            value.forEach((projectile) => {
+                projectile.update(dt);
+            });
+        });
+    }
+    calculateFireDirection(cameraWorldTransform, firePosition) {
+        let cameraShootDir = Camera.currentCamera.worldTransform.clone().getForwardVector().clone();
+        let endLoc = cameraShootDir.multiply(100000).add(cameraWorldTransform.clone().position);
+        let shootDir = endLoc.clone().subtract(firePosition);
+        let hitRes = QueryUtil.lineTrace(cameraWorldTransform.clone().position, endLoc, true, mw.SystemUtil.isPIE);
+        hitRes = hitRes.filter(e => { return !(e.gameObject instanceof mw.Trigger); });
+        if (hitRes && hitRes.length > 0 && mw.Vector.dot(hitRes[0].gameObject.worldTransform.position.clone().subtract(firePosition), shootDir) > 0) {
+            shootDir = hitRes[0].impactPoint.clone().subtract(firePosition);
+        }
+        return shootDir.normalized;
+    }
+}
+
+class Projectile {
+    get getCurCharacterId() {
+        if (this.curCharacterId == null) {
+            this.curCharacterId = Player.localPlayer.character.gameObjectId;
+        }
+        return this.curCharacterId;
+    }
+    constructor(characterId, projectileId, hitEffect, recyclePosition, startPosition, startDirection, projectileType, paths) {
+        this.curCharacterId = null;
+        this.characterId = "";
+        this.projectileId = "";
+        this.hitEffect = "";
+        this.recyclePosition = mw.Vector.zero;
+        this.startPosition = mw.Vector.zero;
+        this.startDirection = mw.Vector.zero;
+        this.projectileType = ProjectileType.Normal;
+        this.paths = [];
+        this.projectile = null;
+        this.trigger = null;
+        this.isUpdate = false;
+        this.stride = mw.Vector.zero;
+        this.currentLocation = mw.Vector.zero;
+        this.pathIndex = 0;
+        this.recycleTimeOutId = null;
+        this.characterId = characterId;
+        this.projectileId = projectileId;
+        this.hitEffect = hitEffect;
+        this.recyclePosition = recyclePosition;
+        this.startPosition = startPosition;
+        this.startDirection = startDirection;
+        this.projectileType = projectileType;
+        this.paths = paths;
+        this.pathIndex = 0;
+        this.initBullet();
+    }
+    async initBullet() {
+        this.projectile = await GameObjPool.asyncSpawn(this.projectileId, mwext.GameObjPoolSourceType.Prefab);
+        this.projectile.worldTransform.position = this.recyclePosition;
+        this.trigger = this.projectile.getChildByName("触发器");
+        this.trigger.onEnter.add(this.onTriggerEnter.bind(this));
+        this.trigger.enabled = this.getCurCharacterId == this.characterId;
+        this.prepareFire();
+    }
+    onTriggerEnter(go) {
+        if (go instanceof mw.Character) {
+            if (go.gameObjectId == this.characterId)
+                return; //打到了自己
+            if (go instanceof Character) { //打到了玩家
+                if (this.getCurCharacterId == this.characterId) { //是自己发射的子弹
+                    PrefabEvent.PrefabEvtFight.hit(this.characterId, go.gameObjectId, Helper.damage, this.projectile.worldTransform.position);
+                    console.error("击中其他玩家");
+                }
+            }
+        }
+        this.recycle();
+    }
+    initFire(ownerId, startPosition, startDirection, projectileType, paths) {
+        this.characterId = ownerId;
+        this.startPosition = startPosition;
+        this.startDirection = startDirection;
+        this.projectileType = projectileType;
+        this.paths = paths;
+        this.pathIndex = 0;
+        this.prepareFire();
+        this.setThisVisibility(true);
+    }
+    prepareFire() {
+        if (!this.projectile)
+            return;
+        if (this.projectileType == ProjectileType.ArcTracing_Weak && this.paths) {
+            if (this.pathIndex + 1 < this.paths.length) {
+                mw.Vector.subtract(this.paths[this.pathIndex + 1], this.paths[this.pathIndex], this.startDirection);
+                this.startDirection = this.startDirection.normalized;
+            }
+        }
+        this.projectile.worldTransform.position = this.startPosition;
+        this.projectile.worldTransform.rotation = new mw.Rotation(this.startDirection, mw.Vector.up);
+        this.isUpdate = true;
+        this.setRecycleTimeout();
+    }
+    update(dt) {
+        if (!this.isUpdate)
+            return;
+        if (this.projectileType == ProjectileType.Normal || !this.paths) {
+            this.updateThisPosition_Normal();
+        }
+        else if (this.projectileType == ProjectileType.ArcTracing_Weak && this.paths) {
+            this.updateThisPosition_ArcTracing();
+        }
+    }
+    updateThisPosition_Normal() {
+        if (!this.projectile)
+            return;
+        mw.Vector.multiply(this.startDirection, 50, this.stride);
+        this.currentLocation = this.projectile.worldTransform.position;
+        this.currentLocation.x += this.stride.x;
+        this.currentLocation.y += this.stride.y;
+        this.currentLocation.z += this.stride.z;
+        this.projectile.worldTransform.position = this.currentLocation;
+    }
+    updateThisPosition_ArcTracing() {
+        if (!this.projectile || !this.paths || this.paths?.length == 0)
+            return;
+        this.currentLocation = this.projectile.worldTransform.position;
+        if (mw.Vector.subtract(this.currentLocation, this.paths[this.pathIndex]).length <= 10) {
+            if (this.pathIndex < this.paths.length - 1) {
+                mw.Vector.subtract(this.paths[this.pathIndex + 1], this.paths[this.pathIndex], this.startDirection);
+                this.startDirection = this.startDirection.normalized;
+                this.projectile.worldTransform.rotation = new mw.Rotation(this.startDirection, mw.Vector.up);
+                this.pathIndex++;
+                // console.error("this.pathIndex", this.pathIndex);
+            }
+        }
+        mw.Vector.lerp(this.currentLocation, this.paths[this.pathIndex], 0.6, this.currentLocation);
+        this.projectile.worldTransform.position = this.currentLocation;
+        if (mw.Vector.subtract(this.currentLocation, this.paths[this.paths.length - 1]).length <= 10) {
+            this.recycle();
+        }
+    }
+    setThisVisibility(visible) {
+        if (!this.projectile || !this.trigger)
+            return;
+        this.projectile.setVisibility(visible, true);
+        this.trigger.enabled = visible && (this.getCurCharacterId == this.characterId);
+    }
+    setRecycleTimeout() {
+        this.clearRecycleTimeOut();
+        this.recycleTimeOutId = setTimeout(() => {
+            this.recycle();
+        }, 10 * 1000);
+    }
+    clearRecycleTimeOut() {
+        if (!this.recycleTimeOutId)
+            return;
+        clearTimeout(this.recycleTimeOutId);
+        this.recycleTimeOutId = null;
+    }
+    recycle() {
+        this.play3DSound("208300");
+        this.playHitEffect();
+        if (!Helper.activeBulletMap.has(this.projectileId) || !Helper.activeBulletMap.get(this.projectileId).has(this))
+            return;
+        Helper.activeBulletMap.get(this.projectileId).delete(this);
+        if (Helper.inactiveBullets.has(this.projectileId)) {
+            Helper.inactiveBullets.get(this.projectileId).push(this);
+        }
+        else {
+            Helper.inactiveBullets.set(this.projectileId, [this]);
+        }
+        this.projectile.worldTransform.position = this.recyclePosition;
+        this.setThisVisibility(false);
+        this.clearRecycleTimeOut();
+        this.isUpdate = false;
+        // console.error("recycle");
+    }
+    play3DSound(soundId) {
+        SoundService.play3DSound(soundId, this.projectile.worldTransform.position);
+    }
+    playHitEffect() {
+        EffectService.playAtPosition(this.hitEffect, this.projectile.worldTransform.position);
+    }
+}
+
+let Weapon = class Weapon extends Script {
+    constructor() {
+        super(...arguments);
+        this.weaponId = -1;
+        this.playerId_WeaponId = "";
+        this.fireData = "";
+        this.weaponModuleC = null;
+        this.player = null;
+        this.playerId = -1;
+        this.weaponModel = null;
+        this.fireAnchor = null;
+        this.gos = [];
+        //#endregion
+    }
+    get getWeaponModuleC() {
+        if (this.weaponModuleC == null) {
+            this.weaponModuleC = ModuleService.getModule(WeaponModuleC);
+        }
+        return this.weaponModuleC;
+    }
+    get getPlayer() {
+        if (this.player == null) {
+            this.player = Player.getPlayer(this.playerId_WeaponId);
+        }
+        return this.player;
+    }
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+        if (mw.SystemUtil.isServer())
+            return;
+    }
+    async initPlayerWeapon() {
+        let data = this.playerId_WeaponId.split("|");
+        if (data.length < 2)
+            return;
+        this.playerId = parseInt(data[0]);
+        this.weaponId = parseInt(data[1]);
+        await this.initPlayer();
+        await this.onWeaponChanged();
+    }
+    async initPlayer() {
+        if (!this.player) {
+            this.player = await Player.asyncGetPlayer(this.playerId);
+            console.error("playerId = " + this.playerId_WeaponId + "的玩家 " + this.player ? "角色初始化完成" : "角色初始化失败");
+        }
+    }
+    //#region Switch Weapon
+    async onWeaponChanged() {
+        if (this.weaponId == -1) {
+            this.despawnWeapon();
+            return;
+        }
+        if (!this.player)
+            await this.initPlayer();
+        if (!this.player)
+            return;
+        if (!Helper.weaponDataMap.has(this.weaponId))
+            return;
+        let weaponData = Helper.weaponDataMap.get(this.weaponId);
+        this.despawnWeapon();
+        await this.spawnWeapon(weaponData.prefabId, weaponData.slotType);
+        this.playSubStance(weaponData.gunAttitude);
+    }
+    async playSubStance(gunAttitude) {
+        await Utils.asyncDownloadAsset(gunAttitude);
+        this.getPlayer.character.loadSubStance(gunAttitude).play();
+    }
+    async spawnWeapon(prefabId, slotType) {
+        this.weaponModel = await GameObjPool.asyncSpawn(prefabId, mwext.GameObjPoolSourceType.Prefab);
+        this.getPlayer.character.attachToSlot(this.weaponModel, slotType);
+        this.weaponModel.localTransform.position = mw.Vector.zero;
+        this.weaponModel.localTransform.rotation = mw.Rotation.zero;
+        console.error("playerId = " + this.playerId_WeaponId + "的玩家 " + this.weaponModel ? "武器加载完成" : "武器加载失败");
+        this.fireAnchor = this.weaponModel.getChildByName("FireAnchor");
+        if (this.getPlayer.playerId == Player.localPlayer.playerId)
+            this.getWeaponModuleC.setFireAnchor(this.fireAnchor);
+    }
+    despawnWeapon() {
+        if (!this.weaponModel)
+            return;
+        GameObjPool.despawn(this.weaponModel);
+    }
+    //#endregion
+    //#region Projectile
+    fire() {
+        if (!this.fireData)
+            return;
+        // console.error("fireData = " + this.fireData);
+        let data = this.fireData.split("|");
+        if (data.length < 5)
+            return;
+        let shootDir = Utils.stringToVector(data[0]);
+        let projectileIndex = parseInt(data[1]);
+        let projectileType = parseInt(data[2]);
+        let projectileCount = parseInt(data[3]);
+        let fireInterval = parseFloat(data[4]);
+        this.prepareFire(this.getPlayer.character.gameObjectId, this.fireAnchor.worldTransform.position, shootDir, projectileIndex, projectileCount, projectileType, fireInterval);
+    }
+    async prepareFire(characterId, firePosition, shootDir, projectileIndex, projectileCount, projectileType, fireInterval = 0.01) {
+        if (!Helper.projectileDateMap.has(projectileIndex))
+            return;
+        let projectileDate = Helper.projectileDateMap.get(projectileIndex);
+        let prefabId = projectileDate.prefabId;
+        let fireSound = projectileDate.fireSound;
+        let hitEffect = projectileDate.hitEffect;
+        this.calculateFire(characterId, prefabId, hitEffect, firePosition, shootDir, projectileType, fireSound);
+        for (let i = 0; i < projectileCount - 1; ++i) {
+            await new Promise((resolve) => {
+                setTimeout(() => {
+                    this.calculateFire(characterId, prefabId, hitEffect, firePosition, shootDir, projectileType, fireSound);
+                    return resolve();
+                }, fireInterval * 1000);
+            });
+        }
+    }
+    calculateFire(characterId, prefabId, hitEffect, firePosition, shootDir, projectileType, fireSound) {
+        this.startFire(characterId, prefabId, hitEffect, firePosition, shootDir, projectileType);
+        this.playFireSound(firePosition, fireSound);
+    }
+    startFire(characterId, projectileId, hitEffect, firePosition, startDirection, projectileType) {
+        let projectile = null;
+        let targetPosition = null;
+        let paths = null;
+        if (projectileType == ProjectileType.ArcTracing_Weak) {
+            targetPosition = Utils.getRecentPlayerLoc(characterId, firePosition, startDirection);
+            if (!targetPosition)
+                targetPosition = Utils.getRecentTargetLoc(firePosition, startDirection);
+            paths = (targetPosition == null) ? null : Utils.getArcTracingPoints(firePosition, targetPosition);
+            if (mw.SystemUtil.isPIE)
+                this.testPaths(paths);
+        }
+        if (Helper.inactiveBullets.has(projectileId)) {
+            let projectiles = Helper.inactiveBullets.get(projectileId);
+            if (projectiles.length > 0) {
+                projectile = projectiles.shift();
+                projectile.initFire(characterId, firePosition, startDirection, projectileType, paths);
+            }
+            else {
+                projectile = new Projectile(characterId, projectileId, hitEffect, mw.Vector.up.multiply(-100), firePosition, startDirection, projectileType, paths);
+            }
+        }
+        else {
+            projectile = new Projectile(characterId, projectileId, hitEffect, mw.Vector.up.multiply(-100), firePosition, startDirection, projectileType, paths);
+        }
+        if (Helper.activeBulletMap.has(projectileId)) {
+            Helper.activeBulletMap.get(projectileId).add(projectile);
+        }
+        else {
+            Helper.activeBulletMap.set(projectileId, new Set().add(projectile));
+        }
+    }
+    playFireSound(firePosition, fireSound) {
+        SoundService.play3DSound(fireSound, firePosition);
+    }
+    async testPaths(paths) {
+        if (!paths)
+            return;
+        if (this.gos.length >= paths.length) {
+            for (let i = 0; i < paths.length; ++i) {
+                this.gos[i].worldTransform.scale = mw.Vector.one.multiply(0.1);
+                this.gos[i].worldTransform.position = paths[i];
+                this.gos[i].setVisibility(true);
+            }
+            for (let i = paths.length; i < this.gos.length; ++i) {
+                this.gos[i].setVisibility(false);
+            }
+        }
+        else {
+            for (let i = 0; i < this.gos.length; ++i) {
+                this.gos[i].worldTransform.scale = mw.Vector.one.multiply(0.1);
+                this.gos[i].worldTransform.position = paths[i];
+                this.gos[i].setVisibility(true);
+            }
+            for (let i = this.gos.length; i < paths.length; ++i) {
+                let go = await mw.GameObject.asyncSpawn("197386");
+                go.setCollision(mw.PropertyStatus.Off);
+                go.worldTransform.scale = mw.Vector.one.multiply(0.1);
+                go.worldTransform.position = paths[i];
+                this.gos.push(go);
+            }
+        }
+    }
+};
+__decorate([
+    mw.Property({ replicated: true, onChanged: "onWeaponChanged" })
+], Weapon.prototype, "weaponId", void 0);
+__decorate([
+    mw.Property({ replicated: true, onChanged: "initPlayerWeapon" })
+], Weapon.prototype, "playerId_WeaponId", void 0);
+__decorate([
+    mw.Property({ replicated: true, onChanged: "fire" })
+], Weapon.prototype, "fireData", void 0);
+Weapon = __decorate([
+    Component
+], Weapon);
+var Weapon$1 = Weapon;
+
+class WeaponModuleS extends ModuleS {
+    constructor() {
+        super(...arguments);
+        //#endregion
+        //#region Weapon
+        this.playerWeaponMap = new Map();
+        //#endregion
+    }
+    onPlayerEnterGame(player) {
+        this.initWeapon(player);
+    }
+    onPlayerLeft(player) {
+        let playerId = player.playerId;
+        this.destoryWeapon(playerId);
+    }
+    //#region Normal Attack
+    net_fireNormalAttack(shootDir, projectileIndex, attackIndex, projectileType) {
+        this.fireNormalAttack(this.currentPlayer, shootDir, projectileIndex, attackIndex, projectileType);
+    }
+    async fireNormalAttack(player, shootDir, projectileIndex, attackIndex, projectileType) {
+        let weaponData = Helper.weaponDataMap.get(projectileIndex[0]);
+        let atkAnimation = weaponData.normalAnims[attackIndex];
+        if (atkAnimation != "-1") {
+            await Utils.asyncDownloadAsset(atkAnimation);
+            player.character.loadAnimation(atkAnimation).play();
+        }
+        let atkTime = weaponData.normalAtkTime[attackIndex];
+        TimeUtil.delaySecond(atkTime).then(() => {
+            if (!this.playerWeaponMap.has(player.playerId))
+                return;
+            let fireData = Utils.vectorToString(shootDir) +
+                "|" + projectileIndex[1] +
+                "|" + projectileType +
+                "|" + weaponData.normalBulletCount[attackIndex] +
+                "|" + weaponData.normalFireInterval[attackIndex];
+            this.playerWeaponMap.get(player.playerId).fireData = fireData;
+        });
+    }
+    async initWeapon(player) {
+        let playerId = player.playerId;
+        if (this.playerWeaponMap.has(playerId))
+            return;
+        let weapon = await mw.Script.spawnScript(Weapon$1, true);
+        let weaponId = DataCenterS.getData(player, WeaponData).weaponIndex;
+        let playerId_WeaponId = playerId + "|" + weaponId;
+        weapon.playerId_WeaponId = playerId_WeaponId;
+        this.playerWeaponMap.set(playerId, weapon);
+        this.getClient(player).net_switchWeaponData(weaponId);
+    }
+    net_switchWeapon(weaponId) {
+        let player = this.currentPlayer;
+        this.switchWeapon(player, weaponId);
+    }
+    async switchWeapon(player, weaponId) {
+        let playerId = player.playerId;
+        if (!this.playerWeaponMap.has(playerId))
+            await this.initWeapon(player);
+        if (!this.playerWeaponMap.has(playerId))
+            return;
+        let weapon = this.playerWeaponMap.get(playerId);
+        if (!weapon)
+            return;
+        weapon.weaponId = weaponId;
+        DataCenterS.getData(player, WeaponData).setWeaponIndex(weaponId);
+    }
+    destoryWeapon(playerId) {
+        if (!this.playerWeaponMap.has(playerId))
+            return;
+        let weapon = this.playerWeaponMap.get(playerId);
+        if (!weapon)
+            return;
+        weapon.weaponId = -1;
+    }
+    //#endregion
+    //#region Projectile
+    net_switchProjectile(projectileIndex) {
+        this.currentData.setProjectileIndex(projectileIndex);
+    }
+}
+__decorate([
+    Decorator.noReply()
+], WeaponModuleS.prototype, "net_fireNormalAttack", null);
+__decorate([
+    Decorator.noReply()
+], WeaponModuleS.prototype, "net_switchWeapon", null);
+__decorate([
+    Decorator.noReply()
+], WeaponModuleS.prototype, "net_switchProjectile", null);
 
 let GameLauncher = class GameLauncher extends mw.Script {
     constructor() {
@@ -10471,7 +11594,7 @@ let GameLauncher = class GameLauncher extends mw.Script {
         ModuleService.registerModule(RankModuleS, RankModuleC, null);
         ModuleService.registerModule(RadarModuleS, RadarModuleC, null);
         ModuleService.registerModule(ActivityModuleS, ActivityModuleC, ActivityData);
-        ModuleService.registerModule(GunModuleS, GunModuleC, null);
+        ModuleService.registerModule(WeaponModuleS, WeaponModuleC, WeaponData);
         ModuleService.registerModule(TaskModuleS, TaskModuleC, TaskData);
         ModuleService.registerModule(MorphModuleS, MorphModuleC, null);
     }
@@ -10660,7 +11783,7 @@ var foreign25 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GMModule/GMHUD.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.06.22-23.56.50
  */
 let GMHUD_Generate = class GMHUD_Generate extends UIScript {
     get oKbutton() {
@@ -10740,7 +11863,7 @@ GMHUD_Generate = __decorate([
 ], GMHUD_Generate);
 var GMHUD_Generate$1 = GMHUD_Generate;
 
-var foreign85 = /*#__PURE__*/Object.freeze({
+var foreign88 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GMHUD_Generate$1
 });
@@ -10750,7 +11873,7 @@ var foreign85 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GMModule/GMItem.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.06.22-23.56.50
  */
 let GMItem_Generate = class GMItem_Generate extends UIScript {
     get button() {
@@ -10800,7 +11923,7 @@ GMItem_Generate = __decorate([
 ], GMItem_Generate);
 var GMItem_Generate$1 = GMItem_Generate;
 
-var foreign86 = /*#__PURE__*/Object.freeze({
+var foreign89 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GMItem_Generate$1
 });
@@ -11023,2040 +12146,6 @@ var foreign26 = /*#__PURE__*/Object.freeze({
     default: GMService$1
 });
 
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/GunModule/WeaponUI.ui
- * TIME: 2024.05.23-21.30.02
- */
-let WeaponUI_Generate = class WeaponUI_Generate extends UIScript {
-    get point() {
-        if (!this.point_Internal && this.uiWidgetBase) {
-            this.point_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/PointCanvas/point');
-        }
-        return this.point_Internal;
-    }
-    get up() {
-        if (!this.up_Internal && this.uiWidgetBase) {
-            this.up_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/PointCanvas/up');
-        }
-        return this.up_Internal;
-    }
-    get down() {
-        if (!this.down_Internal && this.uiWidgetBase) {
-            this.down_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/PointCanvas/down');
-        }
-        return this.down_Internal;
-    }
-    get left() {
-        if (!this.left_Internal && this.uiWidgetBase) {
-            this.left_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/PointCanvas/left');
-        }
-        return this.left_Internal;
-    }
-    get right() {
-        if (!this.right_Internal && this.uiWidgetBase) {
-            this.right_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/PointCanvas/right');
-        }
-        return this.right_Internal;
-    }
-    get move() {
-        if (!this.move_Internal && this.uiWidgetBase) {
-            this.move_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/move');
-        }
-        return this.move_Internal;
-    }
-    get right_fire() {
-        if (!this.right_fire_Internal && this.uiWidgetBase) {
-            this.right_fire_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/right_fire');
-        }
-        return this.right_fire_Internal;
-    }
-    get reload() {
-        if (!this.reload_Internal && this.uiWidgetBase) {
-            this.reload_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/reload');
-        }
-        return this.reload_Internal;
-    }
-    get crouch() {
-        if (!this.crouch_Internal && this.uiWidgetBase) {
-            this.crouch_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/crouch');
-        }
-        return this.crouch_Internal;
-    }
-    get jump() {
-        if (!this.jump_Internal && this.uiWidgetBase) {
-            this.jump_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/jump');
-        }
-        return this.jump_Internal;
-    }
-    get aim() {
-        if (!this.aim_Internal && this.uiWidgetBase) {
-            this.aim_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/aim');
-        }
-        return this.aim_Internal;
-    }
-    get left_fire() {
-        if (!this.left_fire_Internal && this.uiWidgetBase) {
-            this.left_fire_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/left_fire');
-        }
-        return this.left_fire_Internal;
-    }
-    get icon() {
-        if (!this.icon_Internal && this.uiWidgetBase) {
-            this.icon_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/GunCanvas/icon');
-        }
-        return this.icon_Internal;
-    }
-    get name() {
-        if (!this.name_Internal && this.uiWidgetBase) {
-            this.name_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/GunCanvas/name');
-        }
-        return this.name_Internal;
-    }
-    get bullet() {
-        if (!this.bullet_Internal && this.uiWidgetBase) {
-            this.bullet_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/GunCanvas/bullet');
-        }
-        return this.bullet_Internal;
-    }
-    get mKeepTimeCanvas() {
-        if (!this.mKeepTimeCanvas_Internal && this.uiWidgetBase) {
-            this.mKeepTimeCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mKeepTimeCanvas');
-        }
-        return this.mKeepTimeCanvas_Internal;
-    }
-    get keepTimeBar() {
-        if (!this.keepTimeBar_Internal && this.uiWidgetBase) {
-            this.keepTimeBar_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mKeepTimeCanvas/keepTimeBar');
-        }
-        return this.keepTimeBar_Internal;
-    }
-    get keepTimeTxt() {
-        if (!this.keepTimeTxt_Internal && this.uiWidgetBase) {
-            this.keepTimeTxt_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mKeepTimeCanvas/keepTimeTxt');
-        }
-        return this.keepTimeTxt_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        this.reload.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "reload");
-        });
-        this.reload.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        this.crouch.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "crouch");
-        });
-        this.crouch.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        this.jump.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "jump");
-        });
-        this.jump.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        this.aim.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "aim");
-        });
-        this.aim.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        this.left_fire.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "left_fire");
-        });
-        this.left_fire.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.name);
-        this.initLanguage(this.bullet);
-        this.initLanguage(this.keepTimeTxt);
-        //文本多语言
-    }
-    /**初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /**显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /**隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-WeaponUI_Generate = __decorate([
-    UIBind('UI/module/GunModule/WeaponUI.ui')
-], WeaponUI_Generate);
-var WeaponUI_Generate$1 = WeaponUI_Generate;
-
-var foreign87 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: WeaponUI_Generate$1
-});
-
-class WeaponUI extends WeaponUI_Generate$1 {
-    constructor() {
-        super(...arguments);
-        this.curWeapon = null;
-        this.upPosition = mw.Vector2.zero;
-        this.downPosition = mw.Vector2.zero;
-        this.leftPosition = mw.Vector2.zero;
-        this.rightPosition = mw.Vector2.zero;
-        this.upCurPosition = mw.Vector2.zero;
-        this.downCurPosition = mw.Vector2.zero;
-        this.leftCurPosition = mw.Vector2.zero;
-        this.rightCurPosition = mw.Vector2.zero;
-    }
-    onStart() {
-        this.right_fire.onJoyStickDown.add(() => {
-            // console.error("right_fire onJoyStickDown");
-            if (!this.curWeapon)
-                return;
-            this.curWeapon.startFire();
-        });
-        this.right_fire.onJoyStickUp.add(() => {
-            // console.error("right_fire onJoyStickUp");
-            if (!this.curWeapon)
-                return;
-            this.curWeapon.stopFire();
-        });
-        this.left_fire.onPressed.add(() => {
-            // console.error("left_fire onPressed");
-            if (!this.curWeapon)
-                return;
-            this.curWeapon.startFire();
-        });
-        this.left_fire.onReleased.add(() => {
-            // console.error("left_fire onReleased");
-            if (!this.curWeapon)
-                return;
-            this.curWeapon.stopFire();
-        });
-        this.reload.onClicked.add(() => {
-            // console.error("reload onClicked");
-            if (!this.curWeapon)
-                return;
-            this.curWeapon.startReload();
-        });
-        this.aim.onClicked.add(() => {
-            // console.error("aim onClicked");
-            if (!this.curWeapon)
-                return;
-            if (this.curWeapon.isAimming) {
-                this.curWeapon.stopAim();
-            }
-            else {
-                this.curWeapon.startAim();
-            }
-        });
-        this.crouch.onClicked.add(() => {
-            // console.error("crouch onClicked");
-            let player = Player.localPlayer;
-            if (player) {
-                if (player.character.isCrouching) {
-                    player.character.crouch(false);
-                }
-                else {
-                    player.character.crouch(true);
-                }
-            }
-        });
-        this.jump.onClicked.add(() => {
-            // console.error("jump onClicked");
-            let player = Player.localPlayer;
-            if (player) {
-                player.character.jump();
-                if (!player.character.movementEnabled)
-                    player.character.movementEnabled = true;
-            }
-        });
-        Event.addLocalListener("HotWeapon-Unequiped", () => {
-            if (this.curWeapon != null) {
-                this.curWeapon.unEquip();
-                this.curWeapon = null;
-            }
-        });
-        let hudModuleC = ModuleService.getModule(HUDModuleC);
-        let inputScale = hudModuleC.getFireScale;
-        // console.error("inputScale", inputScale);
-        this.right_fire.inputScale = new mw.Vector2(inputScale, inputScale);
-        hudModuleC.onFireScaleAction.add((scale) => {
-            this.right_fire.inputScale = new mw.Vector2(scale, scale);
-            // console.error("onControlScaleAction", scale);
-        });
-    }
-    onShow(weapon, crossValue, iconId, weaponName) {
-        // console.error("show");
-        this.curWeapon = weapon;
-        mw.assetIDChangeIconUrlRequest([iconId]).then(() => {
-            try {
-                this.icon.setImageByAssetIconData(mw.getAssetIconDataByAssetID(iconId));
-            }
-            catch (error) {
-                // console.error("onShow:" + error);
-            }
-        });
-        this.name.text = weaponName;
-        this.upPosition = this.upPosition.set(this.up.position);
-        this.downPosition = this.downPosition.set(this.down.position);
-        this.leftPosition = this.leftPosition.set(this.left.position);
-        this.rightPosition = this.rightPosition.set(this.right.position);
-        this.changeCross(crossValue * 10);
-    }
-    onHide() {
-        // console.error("hide");
-        this.changeCross(0);
-    }
-    changeBullet(bullet, ammo) {
-        if (ammo == -1) {
-            this.bullet.text = `${bullet} / 无限`;
-        }
-        else {
-            this.bullet.text = `${bullet} / ${ammo}`;
-        }
-    }
-    changeCross(value) {
-        this.up.position = this.upCurPosition.set(this.upPosition.x, this.upPosition.y - value);
-        this.down.position = this.downCurPosition.set(this.downPosition.x, this.downPosition.y + value);
-        this.left.position = this.leftCurPosition.set(this.leftPosition.x - value, this.leftPosition.y);
-        this.right.position = this.rightCurPosition.set(this.rightPosition.x + value, this.rightPosition.y);
-    }
-    setTimeText(restTime, keepTime) {
-        if (restTime <= 0) {
-            this.mKeepTimeCanvas.visibility = mw.SlateVisibility.Collapsed;
-        }
-        else {
-            this.mKeepTimeCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            let percent = restTime / keepTime;
-            this.keepTimeBar.percent = percent;
-            this.keepTimeTxt.text = `${restTime.toFixed(1)}s`;
-        }
-    }
-    setReloadBtn(enable) {
-        this.reload.visibility = enable ? mw.SlateVisibility.Visible : mw.SlateVisibility.Collapsed;
-    }
-}
-
-var foreign29 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: WeaponUI
-});
-
-/* 用于获取发射方向的射程距离 */
-const SHOOT_RANGE = 100000;
-/* 弹壳抛射持续时间 */
-const CASING_LIFE = 1;
-/* 弹壳抛射位置偏移 */
-const CASING_OFFSET = new mw.Vector(8, 5, 10);
-/* debug标识 */
-const DEBUG_FLAG = false;
-/* 重力 */
-const GRAVITAIONAL_ACCELERATION = 9.8;
-/* 最大子弹速度 */
-const MAX_SHOOTSPEED = 10001;
-/* 对象池抽象模板类 */
-class Pool {
-    constructor() {
-        this.mCacheStack = new Array();
-        this.mUsingArray = new Array();
-    }
-    get CacheStackCount() {
-        return this.mCacheStack.length;
-    }
-    get UsingCount() {
-        return this.mUsingArray.length;
-    }
-    allocate() {
-        let obj = this.mCacheStack.length > 0 ? this.mCacheStack.pop() : this.mFactory.create();
-        this.mUsingArray.push(obj);
-        return obj;
-    }
-    release() {
-        for (let i = 0; i < this.mUsingArray.length; i++) {
-            const element = this.mUsingArray[i];
-            this.mFactory.destroy(element);
-        }
-        this.mUsingArray.length = 0;
-        for (let i = 0; i < this.mCacheStack.length; i++) {
-            const element = this.mCacheStack[i];
-            this.mFactory.destroy(element);
-        }
-        this.mCacheStack.length = 0;
-    }
-}
-/* 自定义工厂模板类 */
-class CustomObjectFactory {
-    constructor(factoryCreateMethod, factoryDestroyMethod) {
-        this.mFactoryCreateMethod = factoryCreateMethod;
-        this.mFactoryDestroyMethod = factoryDestroyMethod;
-    }
-    create() {
-        return this.mFactoryCreateMethod();
-    }
-    destroy(obj) {
-        return this.mFactoryDestroyMethod(obj);
-    }
-}
-/* 对象池模板类 */
-class SimpleObjectPool extends Pool {
-    constructor(factoryCreateMethod, factoryDestroyMethod, resetMethod = null) {
-        super();
-        this.mFactory = new CustomObjectFactory(factoryCreateMethod, factoryDestroyMethod);
-        this.mResetMethod = resetMethod;
-    }
-    recycle(obj) {
-        if (this.mCacheStack.indexOf(obj) > -1) {
-            return;
-        }
-        if (this.mResetMethod != null) {
-            this.mResetMethod(obj);
-        }
-        let index = this.mUsingArray.indexOf(obj);
-        if (index > -1) {
-            this.mUsingArray.splice(index, 1);
-        }
-        this.mCacheStack.push(obj);
-        return true;
-    }
-    recycleAll() {
-        for (let i = 0; i < this.mUsingArray.length; i++) {
-            const element = this.mUsingArray[i];
-            this.mResetMethod(element);
-            this.mCacheStack.push(element);
-        }
-        this.mUsingArray.length = 0;
-    }
-    printTotalSize() {
-        // console.error("total size: " + (this.UsingCount + this.CacheStackCount));
-    }
-}
-/* 子弹类 */
-class Ammo {
-    constructor(owner, ammoPool, startLoc, direction, shootRange, ammoSpeed, gravityScale, detectRadius, hitResult = []) {
-        this.owner = owner;
-        this.ammoPool = ammoPool;
-        this.entity = this.ammoPool.allocate();
-        this.entity.parent = null;
-        this.currentLocation = startLoc.clone();
-        this.entity.worldTransform.position = this.currentLocation;
-        this.entity.worldTransform.rotation = direction.toRotation();
-        this.entity.setVisibility(mw.PropertyStatus.On);
-        this.displacement = mw.Vector.multiply(direction, ammoSpeed, this.displacement);
-        this.lifeTime = shootRange / ammoSpeed;
-        this.currentTime = 0;
-        this.gravityScale = gravityScale;
-        this.stride = mw.Vector.zero;
-        this.detectRadius = detectRadius;
-        this.hitResult = hitResult;
-    }
-    // 更新弹药位置，发射客户端承担检测
-    update(dt) {
-        // 计算当前帧弹药移动步长
-        this.stride = mw.Vector.multiply(this.displacement, dt, this.stride);
-        // 如果重力系数不为0则对z轴坐标和旋转进行进一步计算
-        if (this.gravityScale) {
-            this.stride.z -= (50 * this.gravityScale * GRAVITAIONAL_ACCELERATION * (Math.pow(this.currentTime + dt, 2) - Math.pow(this.currentTime, 2)));
-            this.entity.worldTransform.rotation = this.stride.toRotation();
-            this.currentTime += dt;
-        }
-        // 计算出当前更新位置
-        this.currentLocation.x += this.stride.x;
-        this.currentLocation.y += this.stride.y;
-        this.currentLocation.z += this.stride.z;
-        // 如果检测范围大于0，每帧检测碰撞（只有武器持有人客户端子弹进行检测，其余客户端只是模拟）
-        if (this.detectRadius) {
-            // 如果检测范围小于10，射线检测，返回Gameplay.HitResult数组
-            if (this.detectRadius < 10) {
-                let lineResult = QueryUtil.lineTrace(this.entity.worldTransform.position, this.currentLocation, true, DEBUG_FLAG);
-                lineResult = lineResult.filter(e => {
-                    return !(e.gameObject instanceof mw.Trigger);
-                });
-                // 射线检测结果不为0，即有碰撞对象
-                if (lineResult.length > 0) {
-                    // 终结弹药生命，获取检测结果
-                    this.lifeTime = -1;
-                    let temp = new Array();
-                    for (let element of lineResult) {
-                        temp.push(element);
-                    }
-                    this.hitResult = temp;
-                }
-            }
-            else { // 如果检测范围大于等于10，矩形检测，返回Core.GameObject数组
-                let boxResult = Utils.modifyboxOverlapInLevel(this.entity.worldTransform.position, this.currentLocation, this.detectRadius, this.detectRadius, DEBUG_FLAG);
-                // 射线检测结果不为0，即有碰撞对象
-                if (boxResult.length > 0) {
-                    // 终结弹药生命，获取检测结果
-                    this.lifeTime = -1;
-                    this.hitResult = boxResult;
-                }
-            }
-        }
-        // 更新弹药实体位置，弹药生命-=当前帧时间，返回弹药生命<0的Boolean值
-        this.entity.worldTransform.position = this.currentLocation;
-        this.lifeTime -= dt;
-        return this.lifeTime <= 0;
-    }
-    // 销毁弹药方法，对象池回收弹药实体
-    destroy() {
-        this.ammoPool.recycle(this.entity);
-    }
-}
-// 弹壳类
-class Casing {
-    constructor(casingPool, casing, direction) {
-        this.casingPool = casingPool;
-        this.loc = mw.Vector.add(casing.worldTransform.position, casing.worldTransform.rotation.rotateVector(CASING_OFFSET));
-        this.entity = this.casingPool.allocate();
-        this.entity.worldTransform.position = this.loc;
-        this.entity.worldTransform.rotation = new mw.Rotation(mw.MathUtil.randomFloat(0, 180), mw.MathUtil.randomFloat(0, 180), mw.MathUtil.randomFloat(0, 180));
-        this.entity.setVisibility(mw.PropertyStatus.On);
-        this.displacement = direction.multiply(100);
-        this.gravity = mw.MathUtil.randomFloat(1, 3);
-        this.lifeTime = CASING_LIFE;
-        this.stride = mw.Vector.zero;
-    }
-    // 更新弹壳位置
-    update(dt) {
-        this.stride = mw.Vector.multiply(this.displacement, dt, this.stride);
-        this.loc.x += this.stride.x;
-        this.loc.y += this.stride.y;
-        this.loc.z += this.stride.z + this.gravity;
-        this.gravity -= dt * 20;
-        this.entity.worldTransform.position = this.loc;
-        this.lifeTime -= dt;
-        return this.lifeTime <= 0;
-    }
-    // 销毁弹壳方法，对象池回收弹壳实体
-    destroy() {
-        this.casingPool.recycle(this.entity);
-    }
-}
-/* 武器动作类 */
-class WeaponAction {
-    constructor() {
-        /* 射击动画 */
-        this.shootAnimation = "";
-        /* 瞄准射击动画 */
-        this.aimShootAnimation = "";
-        /* 换弹动画 */
-        this.reloadAnimation = "";
-        /* 上膛动画 */
-        this.loadAnimation = "";
-        /* 装备武器动画 */
-        this.equipAnimation = "";
-        /* 卸载武器动画 */
-        this.unequipAnimation = "";
-        /* 持有姿态 */
-        this.holdStance = "";
-        /* 瞄准姿态 */
-        this.aimStance = "";
-    }
-}
-let MaleAction = class MaleAction extends WeaponAction {
-    constructor() {
-        super(...arguments);
-        this.shootAnimation = "80484";
-        this.aimShootAnimation = "80483";
-        this.reloadAnimation = "80479";
-        this.loadAnimation = "80482";
-        this.equipAnimation = "80585";
-        this.unequipAnimation = "80481";
-        this.holdStance = "94258";
-        this.aimStance = "94261";
-    }
-};
-__decorate([
-    mw.Property({ displayName: "射击动画" })
-], MaleAction.prototype, "shootAnimation", void 0);
-__decorate([
-    mw.Property({ displayName: "瞄准射击动画" })
-], MaleAction.prototype, "aimShootAnimation", void 0);
-__decorate([
-    mw.Property({ displayName: "换弹动画" })
-], MaleAction.prototype, "reloadAnimation", void 0);
-__decorate([
-    mw.Property({ displayName: "上膛动画" })
-], MaleAction.prototype, "loadAnimation", void 0);
-__decorate([
-    mw.Property({ displayName: "装备武器动画" })
-], MaleAction.prototype, "equipAnimation", void 0);
-__decorate([
-    mw.Property({ displayName: "卸载武器动画" })
-], MaleAction.prototype, "unequipAnimation", void 0);
-__decorate([
-    mw.Property({ displayName: "持有姿态" })
-], MaleAction.prototype, "holdStance", void 0);
-__decorate([
-    mw.Property({ displayName: "瞄准姿态" })
-], MaleAction.prototype, "aimStance", void 0);
-MaleAction = __decorate([
-    Serializable
-], MaleAction);
-let FemaleAction = class FemaleAction extends WeaponAction {
-    constructor() {
-        super(...arguments);
-        this.shootAnimation = "49094";
-        this.aimShootAnimation = "49095";
-        this.reloadAnimation = "80479";
-        this.loadAnimation = "80482";
-        this.equipAnimation = "80585";
-        this.unequipAnimation = "80481";
-        this.holdStance = "49096";
-        this.aimStance = "49098";
-    }
-};
-__decorate([
-    mw.Property({ displayName: "射击动画" })
-], FemaleAction.prototype, "shootAnimation", void 0);
-__decorate([
-    mw.Property({ displayName: "瞄准射击动画" })
-], FemaleAction.prototype, "aimShootAnimation", void 0);
-__decorate([
-    mw.Property({ displayName: "换弹动画" })
-], FemaleAction.prototype, "reloadAnimation", void 0);
-__decorate([
-    mw.Property({ displayName: "上膛动画" })
-], FemaleAction.prototype, "loadAnimation", void 0);
-__decorate([
-    mw.Property({ displayName: "装备武器动画" })
-], FemaleAction.prototype, "equipAnimation", void 0);
-__decorate([
-    mw.Property({ displayName: "卸载武器动画" })
-], FemaleAction.prototype, "unequipAnimation", void 0);
-__decorate([
-    mw.Property({ displayName: "持有姿态" })
-], FemaleAction.prototype, "holdStance", void 0);
-__decorate([
-    mw.Property({ displayName: "瞄准姿态" })
-], FemaleAction.prototype, "aimStance", void 0);
-FemaleAction = __decorate([
-    Serializable
-], FemaleAction);
-let WeaponDriver = class WeaponDriver extends mw.Script {
-    constructor() {
-        /* 提供属性面板设置参数 */
-        super(...arguments);
-        /*  */
-        this.maleAction = new MaleAction();
-        this.femaleAction = new FemaleAction();
-        this.WaponIcon = "101168";
-        this.weaponName = "步枪";
-        this.equipmentSlot = mw.HumanoidSlotType.RightHand;
-        this.equipmentCameraOffset = mw.Vector.zero;
-        this.equipmentCameraFov = 90;
-        this.aimCameraOffset = mw.Vector.zero;
-        this.aimCameraFov = 60;
-        this.aimSpeed = 90;
-        this.damage = 30;
-        this.shootRange = 5000;
-        this.ammoSpeed = 10000;
-        this.detectRadius = 1;
-        this.gravityScale = 0;
-        this.hurtRadius = 1;
-        this.isAutoReload = true;
-        this.isAutoLock = false;
-        this.isDefaultUI = true;
-        this.isWeaponHaveCasing = true;
-        this.fireBlockDistance = 100;
-        this.totalAmmo = 180;
-        this.isEmptyToDestroy = true;
-        this.isSupportRepAmmo = false;
-        this.rotateSpeed = 90;
-        this.keepTime = 10;
-        this.isEquiped = false;
-        this.isWeaponHaveScope = false;
-        this.isAutoDestroy = true;
-        this.assets = this.maleAction.aimShootAnimation + "," + this.maleAction.aimStance + "," + this.maleAction.equipAnimation + "," + this.maleAction.holdStance + "," + this.maleAction.loadAnimation + "," + this.maleAction.reloadAnimation + "," + this.maleAction.shootAnimation + "," + this.maleAction.unequipAnimation + "," + this.femaleAction.aimShootAnimation + "," + this.femaleAction.aimStance + "," + this.femaleAction.equipAnimation + "," + this.femaleAction.holdStance + "," + this.femaleAction.loadAnimation + "," + this.femaleAction.reloadAnimation + "," + this.femaleAction.shootAnimation + "," + this.femaleAction.unequipAnimation;
-        /* 热武器逻辑对象 */
-        this.weaponObj = null;
-        /* 动作资源 */
-        this.weaponAction = null;
-        /* 武器UI */
-        this.weaponUI = null;
-        /* 当前客户端玩家 */
-        this.player = null;
-        /* 当前客户端角色 */
-        this.chara = null;
-        /* 当前客户端角色摄像机 */
-        this.camera = null;
-        /* 拾取触发器 */
-        this.pickUpTrigger = null;
-        /* 根武器 */
-        this.weaponEntityRoot = null;
-        /* 根弹药 */
-        this.ammoEntityRoot = null;
-        /* 弹药池 */
-        this.ammoPool = null;
-        /* 弹药数组 */
-        this.ammoArray = [];
-        /* 弹壳 */
-        this.casingEntity = null;
-        /* 弹壳池 */
-        this.casingPool = null;
-        /* 弹壳数组 */
-        this.casingArray = [];
-        /* 开火特效 */
-        this.fireEffect = null;
-        /* 击中角色特效 */
-        this.hitCharaEffect = null;
-        /* 击中角色特效池 */
-        this.hitCharaEffectPool = null;
-        /* 击中物体特效 */
-        this.hitEffect = null;
-        /* 击中物体特效池 */
-        this.hitEffectPool = null;
-        /* 开火音效 */
-        this.fireSound = null;
-        /* 换弹音效 */
-        this.reloadSound = null;
-        /* 上膛音效 */
-        this.loadSound = null;
-        /* 瞄准音效 */
-        this.aimSound = null;
-        /* 击中角色音效 */
-        this.hitCharaSound = null;
-        /* 击中角色音效池 */
-        this.hitCharaSoundPool = null;
-        /* 击中物体音效 */
-        this.hitSound = null;
-        /* 击中物体音效池 */
-        this.hitSoundPool = null;
-        /* 开火状态标识， isFiring是武器持有人实际的开火状态*/
-        this.isFiring = false;
-        /* bFiring是武器实际的开火状态 */
-        this.bFiring = false;
-        /* 是否可以开火 */
-        this.isCanFire = 0;
-        /* 瞄准状态标识 */
-        this.isAimming = false;
-        /* 焦距变化标识 */
-        this.isZooming = false;
-        /* 阻挡状态标识 */
-        this.isBlock = false;
-        this._rotateRotation = Rotation.zero;
-        this.tempDispersionMax = 0;
-        this.tempDispersionDefault = 0;
-        this._isInited = false;
-    }
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    onStart() {
-        this.useUpdate = true;
-        this.weaponObj = this.gameObject;
-        if (this.weaponObj) {
-            if (mw.SystemUtil.isClient()) {
-                this.clientInit();
-            }
-            if (mw.SystemUtil.isServer()) {
-                this.serverInit();
-            }
-            if (mw.SystemUtil.isClient()) {
-                this.clientOnHit = (hitResult, attackPlayer, isObj) => {
-                    hitResult.forEach(e => {
-                        if (e instanceof mw.HitResult) {
-                            if (Utils.isCharacter(e.gameObject) ||
-                                e.gameObject instanceof mw.GameObject) {
-                                PrefabEvent.PrefabEvtFight.hit(this.chara.gameObjectId, e.gameObject.gameObjectId, this.damage, e.impactPoint.clone());
-                                return;
-                            }
-                        }
-                        if (Utils.isCharacter(e) || e instanceof mw.GameObject) {
-                            PrefabEvent.PrefabEvtFight.hit(this.chara.gameObjectId, e.gameObjectId, this.damage, e.worldTransform.position.clone());
-                            return;
-                        }
-                    });
-                };
-                PrefabEvent.PrefabEvtEquip.onEquip(async (targetGuid, slot, equipGuid) => {
-                    //let player = await Player.asyncGetLocalPlayer();
-                    if (this.weaponObj && this.weaponObj.getCurrentOwner() && this.weaponObj.getCurrentOwner().gameObjectId == targetGuid && this.weaponObj.gameObjectId != equipGuid) {
-                        this.unEquip();
-                    }
-                });
-            }
-        }
-    }
-    onEquipdChanged() {
-        if (this.weaponEntityRoot && this.weaponEntityRoot.localTransform)
-            this.weaponEntityRoot.localTransform.rotation = Rotation.zero;
-    }
-    /**
-     * 周期函数 每帧执行
-     * 此函数执行需要将this.bUseUpdate赋值为true
-     * @param dt 当前帧与上一帧的延迟 / 秒
-     */
-    onUpdate(dt) {
-        if (mw.SystemUtil.isServer())
-            return;
-        if (this.weaponObj == null) {
-            this.weaponObj = this.gameObject;
-            if (this.weaponObj == null)
-                return;
-            this.clientInit();
-        }
-        if (!this.isEquiped && this.weaponEntityRoot) {
-            this._rotateRotation.z = this.rotateSpeed * dt;
-            this.weaponEntityRoot.worldTransform.rotation = this.weaponEntityRoot.worldTransform.rotation.add(this._rotateRotation);
-            return;
-        }
-        for (let i = 0; i < this.ammoArray.length; i++) {
-            if (this.ammoArray[i].update(dt)) {
-                if (this.ammoArray[i].owner == this.chara) {
-                    this.serverDestroyAmmo(i);
-                    this.hit(this.ammoArray[i].hitResult);
-                    this.ammoArray[i].destroy();
-                    this.ammoArray.splice(i, 1);
-                    i--;
-                }
-            }
-        }
-        for (let i = 0; i < this.casingArray.length; i++) {
-            if (this.casingArray[i].update(dt)) {
-                this.casingArray[i].destroy();
-                this.casingArray.splice(i, 1);
-                i--;
-            }
-        }
-        if (this.weaponObj.getCurrentOwner() !== this.chara)
-            return;
-        if (this.isCanFire != 0) {
-            this.isCanFire -= dt;
-            if (this.isCanFire < 0) {
-                this.isCanFire = 0;
-            }
-        }
-        this.cameraUpdate(dt);
-        if (!this.updatebFiring()) {
-            if (!this.bFiring && this.fireEffect.loop && this.fireSound.isLoop) {
-                this.fireEffect.stop();
-                this.fireSound.stop();
-                if (!this.isAimming) {
-                    this.weaponObj.aimComponent.enableAiming(false);
-                }
-            }
-        }
-        if (!this.updateBlockFire()) {
-            if (this.clientOnBlockChange)
-                this.clientOnBlockChange(this.isBlock);
-        }
-        switch (this.weaponObj.getCurrentState()) {
-            case mw.HotWeaponState.Idle:
-                if (this.weaponObj.fireComponent.currentBullet < 1) {
-                    if (this.isAutoReload) {
-                        this.startReload();
-                        this.isAutoReload = false;
-                        setTimeout(() => {
-                            this.isAutoReload = true;
-                        }, this.weaponObj.reloadComponent.reloadDuration * 1000);
-                    }
-                }
-                else {
-                    if (this.isFiring && !this.bFiring && this.weaponObj.fireComponent.fireMode == 2) {
-                        this.startFire();
-                    }
-                }
-                break;
-            case mw.HotWeaponState.Reloading:
-                break;
-            case mw.HotWeaponState.Loading:
-                break;
-            case mw.HotWeaponState.Firing:
-                if (this.isEmptyToDestroy && this.totalAmmo == 0 && this.weaponObj.fireComponent.currentBullet == 0) {
-                    this.unEquip();
-                }
-                break;
-        }
-        if (this.weaponUI) {
-            this.weaponUI.changeBullet(this.weaponObj.fireComponent.currentBullet, this.totalAmmo);
-            if (this.keepTime != -1) {
-                this._restTime -= dt;
-                this.weaponUI.setTimeText(this._restTime, this.keepTime);
-                if (this._restTime <= 0) {
-                    this.unEquip();
-                }
-            }
-        }
-    }
-    /** 脚本被销毁时最后一帧执行完调用此函数 */
-    onDestroy() {
-        // this.clientDestroy();
-    }
-    /* 击中对象函数 */
-    hit(hitResult) {
-        if (!(hitResult.length > 0))
-            return;
-        if (this.detectRadius > 10) { // 矩形检测结果
-            for (let element of hitResult) {
-                let temp = element;
-                if (temp instanceof mw.Pawn) {
-                    this.hitCharacterMulticast(temp.worldTransform.position, temp.worldTransform.rotation);
-                }
-                else {
-                    this.hitObjectMulticast(temp.worldTransform.position, temp.worldTransform.rotation);
-                }
-            }
-            if (this.hurtRadius > 10) {
-                let sphereResult = QueryUtil.sphereOverlap(hitResult[0].worldTransform.position, this.hurtRadius, DEBUG_FLAG);
-                this.clientOnHit(sphereResult, this.player.playerId, true);
-            }
-            else {
-                this.clientOnHit(hitResult, this.player.playerId, true);
-            }
-        }
-        else { // 射线检测结果
-            for (let element of hitResult) {
-                let temp = element;
-                let rot = temp.impactNormal.toRotation();
-                rot.y -= 90;
-                if (temp.gameObject instanceof mw.Pawn) {
-                    this.hitCharacterMulticast(temp.impactPoint, rot);
-                }
-                else {
-                    this.hitObjectMulticast(temp.impactPoint, rot);
-                }
-            }
-            if (this.hurtRadius > 10) {
-                let sphereResult = QueryUtil.sphereOverlap(hitResult[0].impactPoint, this.hurtRadius, DEBUG_FLAG);
-                this.clientOnHit(sphereResult, this.player.playerId, true);
-            }
-            else {
-                this.clientOnHit(hitResult, this.player.playerId, false);
-            }
-        }
-    }
-    /* 广播击中角色 */
-    hitCharacterMulticast(loc, rot) {
-        this.hitCharaPerformance(loc, rot);
-    }
-    /* 广播击中普通对象 */
-    hitObjectMulticast(loc, rot) {
-        this.hitObjectPerformance(loc, rot);
-    }
-    hitCharaPerformance(loc, rot) {
-        // Console.error("hit Chara");
-        try {
-            if (this.hitCharaEffect)
-                Utils.rpcPlayEffectAtLocation(this.hitCharaEffect.assetId, loc, 1, rot, this.hitCharaEffect.worldTransform.scale);
-            if (this.hitCharaSound)
-                SoundService.play3DSound(this.hitCharaSound.assetId, loc, 1, GlobalData.soundVolume, { falloffDistance: 3000 });
-        }
-        catch (error) {
-            // console.error("hitCharaPerformance:" + error);
-        }
-    }
-    hitObjectPerformance(loc, rot) {
-        // Console.error("hit hitObject");
-        try {
-            if (this.hitEffect)
-                Utils.rpcPlayEffectAtLocation(this.hitEffect.assetId, loc, 1, rot, this.hitEffect.worldTransform.scale);
-            if (this.hitSound)
-                SoundService.play3DSound(this.hitSound.assetId, loc, 1, GlobalData.soundVolume, { falloffDistance: 3000 });
-        }
-        catch (error) {
-            // console.error("hitObjectPerformance:" + error);
-        }
-    }
-    // @RemoteFunction(mw.Client, mw.Multicast)
-    // private hitCharaPerformance(loc: mw.Vector, rot: mw.Rotation, target: mw.GameObject) {
-    // 	Console.error("hit Chara");
-    // 	let hitCharaEffect = mwext.SpawnManager.modifyPoolSpawn(this.hitCharaEffect.guid) as mw.Effect;
-    // 	hitCharaEffect.parent = null;
-    // 	let hitCharaSound = mwext.SpawnManager.modifyPoolSpawn(this.hitCharaSound.guid) as mw.Sound;
-    // 	hitCharaSound.parent = null;
-    // 	hitCharaSound.onFinish.add(() => {
-    // 		mwext.GameObjPool.despawn(hitCharaSound);
-    // 	});
-    // 	hitCharaEffect.worldTransform.position = loc;
-    // 	hitCharaSound.worldTransform.position = loc;
-    // 	hitCharaEffect.worldTransform.rotation = rot;
-    // 	hitCharaEffect.parent = target;
-    // 	hitCharaEffect.play(() => {
-    // 		mwext.GameObjPool.despawn(hitCharaEffect);
-    // 		hitCharaEffect.parent = null;
-    // 	});
-    // 	this.playSound(hitCharaSound);
-    // }
-    // @RemoteFunction(mw.Client, mw.Multicast)
-    // private hitObjectPerformance(loc: mw.Vector, rot: mw.Rotation, target: mw.GameObject) {
-    // 	Console.error("hit hitObject");
-    // 	let hitEffect = mwext.SpawnManager.modifyPoolSpawn(this.hitEffect.guid) as mw.Effect;
-    // 	hitEffect.parent = null;
-    // 	let hitSound = mwext.SpawnManager.modifyPoolSpawn(this.hitSound.guid) as mw.Sound;
-    // 	hitEffect.parent = null;
-    // 	hitSound.onFinish.add(() => {
-    // 		mwext.GameObjPool.despawn(hitSound);
-    // 	});
-    // 	hitEffect.worldTransform.position = loc;
-    // 	hitSound.worldTransform.position = loc;
-    // 	hitEffect.worldTransform.rotation = rot;
-    // 	if (target) {
-    // 		hitEffect.parent = target;
-    // 	}
-    // 	hitEffect.play(() => {
-    // 		mwext.GameObjPool.despawn(hitEffect);
-    // 		hitEffect.parent = null;
-    // 	});
-    // 	this.playSound(hitSound);
-    // }
-    /* 播放特效 */
-    playEffect(particle) {
-    }
-    /* 播放音效 */
-    playSound(sound) {
-        if (!sound)
-            return;
-        try {
-            sound.volume = GlobalData.soundVolume;
-            sound?.play();
-        }
-        catch (error) { }
-    }
-    serverDestroyAmmo(index) {
-        this.clientDestroyAmmo(index);
-    }
-    clientDestroyAmmo(index) {
-        if (!this.weaponObj) {
-            return;
-        }
-        if (this.weaponObj.getCurrentOwner() == this.chara) {
-            return;
-        }
-        else if (this.ammoArray.length != 0) {
-            if (index < this.ammoArray.length) {
-                this.ammoArray[index].destroy();
-                this.ammoArray.splice(index, 1);
-            }
-        }
-    }
-    /**
-     * 客户端调用直接装备
-     */
-    equip() {
-        // 如果当前角色为空且在客户端，重新获取一次角色
-        if (!this.chara && mw.SystemUtil.isClient()) {
-            this.chara = Player.localPlayer.character;
-        }
-        this.serverEquip(this.chara.player.playerId);
-    }
-    /**
-     * unEquip
-     */
-    unEquip() {
-        try {
-            if (!this.weaponObj)
-                return;
-            if (this.chara !== this.weaponObj.getCurrentOwner())
-                return;
-            if (this.isAimming) {
-                this.weaponObj.accuracyOfFireComponent.maxDispersionHalfAngle = this.tempDispersionMax;
-                this.weaponObj.accuracyOfFireComponent.defaultDispersionHalfAngle = this.tempDispersionDefault;
-                this.isAimming = false;
-            }
-            this.weaponObj?.stopFire();
-            this.weaponObj?.breakLoad();
-            this.weaponObj?.breakReload();
-            this.weaponObj?.destroy();
-            this.weaponObj?.unequip();
-            mw.UIService.hide(WeaponUI);
-            this.weaponUI = null;
-            // PlayerManagerExtesion.changeStanceExtesion(this.chara, this.tempanimationStance?.assetId);
-            this.chara.loadSubStance(this.tempanimationStance?.assetId).play();
-            // PlayerManagerExtesion.rpcPlayAnimation(this.chara, this.weaponAction.unequipAnimation);
-            this.chara.loadAnimation(this.weaponAction.unequipAnimation).play();
-            this.chara.moveFacingDirection = this.tempMoveFacingDirection;
-            this.camera.localTransform = new mw.Transform(this.tempcameraOffset, this.camera.localTransform.clone().rotation, this.camera.localTransform.clone().scale);
-            this.camera.springArm.localTransform = new mw.Transform(this.temptargetArmOffset, this.camera.localTransform.clone().rotation, this.camera.localTransform.clone().scale);
-            this.camera.fov = this.tempcameraFOV;
-            this.camera.springArm.length = this.temptargetArmLength;
-            if (this.isAutoDestroy) {
-                mw.UIService.destroyUI(WeaponUI);
-                this.weaponObj = null;
-                let destroyInterval = setInterval(() => {
-                    if (this.ammoArray.length == 0 && this.casingArray.length == 0) {
-                        this.serverDestroy();
-                        clearInterval(destroyInterval);
-                    }
-                }, 100);
-            }
-        }
-        catch (error) {
-            // console.error("unEquip-[error]" + error);
-        }
-    }
-    serverHideWeaponEntity(playerID) {
-        // 如果卸载的是当前武器，先隐藏武器，等待子弹销毁完毕后卸载并销毁武器，删除map中对应键值
-        this.hideWeaponEntity();
-    }
-    hideWeaponEntity() {
-        if (!this.weaponEntityRoot)
-            return;
-        this.weaponEntityRoot.setVisibility(mw.PropertyStatus.Off);
-    }
-    // @RemoteFunction(mw.Client, mw.Multicast)
-    // private showWeaponEntity() {
-    // 	if (!this.weaponEntityRoot) return;
-    // 	this.weaponEntityRoot.setVisibility(mw.PropertyStatus.On);
-    // }
-    serverDestroy() {
-        this.destroy();
-    }
-    /**
-     * startFire
-     */
-    startFire() {
-        if (!this.weaponObj || this.isCanFire != 0)
-            return;
-        try {
-            this.weaponObj.startFire();
-            this.isFiring = true;
-            if (!this.isAimming) {
-                this.weaponObj.aimComponent.enableAiming(true);
-            }
-        }
-        catch (error) {
-            // console.error("startFire-[error]" + error);
-        }
-    }
-    /**
-     * stopFire
-     */
-    stopFire() {
-        if (this.weaponObj == null)
-            return;
-        try {
-            this.weaponObj.stopFire();
-            this.isFiring = false;
-            if (!this.isAimming) {
-                this.weaponObj.aimComponent.enableAiming(false);
-            }
-        }
-        catch (error) {
-            // console.error("stopFire:" + error);
-        }
-    }
-    /**
-     * startReload
-     */
-    startReload() {
-        try {
-            if (!this.weaponObj || !this.weaponObj.reloadEnabled || this.weaponObj.fireComponent.currentBullet == this.weaponObj.fireComponent.clipSize)
-                return;
-            let ammoGap = this.weaponObj.fireComponent.clipSize - this.weaponObj.fireComponent.currentBullet;
-            if (this.totalAmmo == -1) {
-                this.weaponObj.reload(ammoGap);
-            }
-            if (this.totalAmmo <= 0) {
-                return;
-            }
-            if (this.totalAmmo < ammoGap) {
-                this.weaponObj.reload(this.totalAmmo);
-                this.totalAmmo = 0;
-            }
-            else {
-                this.weaponObj.reload(ammoGap);
-                this.totalAmmo -= ammoGap;
-            }
-        }
-        catch (error) {
-            // console.error("startReload:" + error);
-        }
-    }
-    /**
-     * stopReload
-     */
-    stopReload() {
-        if (this.weaponObj == null)
-            return;
-        this.weaponObj.breakReload();
-        this.weaponObj.breakLoad();
-    }
-    /**
-     * startAim
-     */
-    startAim() {
-        // console.error("startAim")
-        try {
-            if (this.aimSound) {
-                this.aimSound.stop();
-                this.playSound(this.aimSound);
-            }
-            // PlayerManagerExtesion.changeStanceExtesion(this.chara, this.weaponAction.aimStance);
-            this.chara.loadSubStance(this.weaponAction.aimStance).play();
-            this.weaponObj.fireComponent.animationAssetId = this.weaponAction.aimShootAnimation;
-            this.tempDispersionDefault = this.weaponObj.accuracyOfFireComponent.defaultDispersionHalfAngle;
-            this.tempDispersionMax = this.weaponObj.accuracyOfFireComponent.maxDispersionHalfAngle;
-            this.weaponObj.accuracyOfFireComponent.defaultDispersionHalfAngle = this.weaponObj.accuracyOfFireComponent.minDispersionHalfAngle;
-            this.weaponObj.accuracyOfFireComponent.maxDispersionHalfAngle = this.weaponObj.accuracyOfFireComponent.minDispersionHalfAngle;
-            this.isZooming = true;
-            this.zoomIn();
-            if (this.isWeaponHaveScope) {
-                this.camera.springArm.length = 0;
-            }
-        }
-        catch (error) {
-            // console.error("startAim:" + error);
-        }
-    }
-    /**
-     * stopAim
-     */
-    stopAim() {
-        // console.error("stopAim")
-        try {
-            this.weaponObj.accuracyOfFireComponent.maxDispersionHalfAngle = this.tempDispersionMax;
-            this.weaponObj.accuracyOfFireComponent.defaultDispersionHalfAngle = this.tempDispersionDefault;
-            // PlayerManagerExtesion.changeStanceExtesion(this.chara, this.weaponAction.holdStance);
-            this.chara.loadSubStance(this.weaponAction.holdStance).play();
-            this.weaponObj.fireComponent.animationAssetId = this.weaponAction.shootAnimation;
-            this.isZooming = true;
-            this.zoomOut();
-            if (this.isWeaponHaveScope) {
-                this.camera.springArm.length = 400;
-            }
-            this.aimSound.stop();
-            this.playSound(this.aimSound);
-        }
-        catch (error) {
-            // console.error("stopAim:" + error);
-        }
-    }
-    /**
-     * startLoad
-     */
-    startLoad() {
-    }
-    /**
-     * endLoad
-     */
-    endLoad() {
-    }
-    /* getBulletSize */
-    getBulletSize() {
-        if (this.weaponObj == null)
-            return;
-        return this.weaponObj.fireComponent.currentBullet;
-    }
-    /* 客户端销毁方法 */
-    clientDestroy() {
-        if (this.pickUpTrigger) {
-            this.pickUpTrigger.destroy();
-        }
-        if (this.weaponEntityRoot) {
-            this.weaponEntityRoot.destroy();
-        }
-        if (this.ammoEntityRoot) {
-            this.ammoEntityRoot.destroy();
-        }
-        if (this.casingEntity) {
-            this.casingEntity.destroy();
-        }
-        if (this.fireEffect) {
-            this.fireEffect.destroy();
-        }
-        if (this.fireSound) {
-            this.fireSound.destroy();
-        }
-        if (this.hitCharaEffect) {
-            this.hitCharaEffect.destroy();
-        }
-        if (this.hitCharaSound) {
-            this.hitCharaSound.destroy();
-        }
-        if (this.hitEffect) {
-            this.hitEffect.destroy();
-        }
-        if (this.hitSound) {
-            this.hitSound.destroy();
-        }
-        if (this.reloadSound) {
-            this.reloadSound.destroy();
-        }
-        if (this.aimSound) {
-            this.aimSound.destroy();
-        }
-        if (this.loadSound) {
-            this.loadSound.destroy();
-        }
-    }
-    /* 初始化资源 */
-    initAssets(assetIds) {
-        let assetIdArray = this.resolveString(assetIds);
-        for (let element of assetIdArray) {
-            mw.AssetUtil.asyncDownloadAsset(element).then((value) => {
-                if (value) {
-                    mw.AssetUtil.assetLoaded(element);
-                }
-            });
-        }
-    }
-    /* 服务端初始化方法 */
-    serverInit() {
-        this.serverInitDelegate();
-    }
-    /* 服务端初始化回调函数 */
-    serverInitDelegate() {
-        this.weaponObj.onEquip.add(this.onServerEquip.bind(this));
-        this.weaponObj.onUnequip.add(this.onServerUnequip.bind(this));
-        this.weaponObj.fireComponent.onStartFire.add(this.onServerStartFire.bind(this));
-        this.weaponObj.fireComponent.onEndFire.add(this.onServerEndFire.bind(this));
-        if (this.weaponObj.reloadComponent) {
-            this.weaponObj.reloadComponent.onStartReload.add(this.onServerStartReload.bind(this));
-            this.weaponObj.reloadComponent.onEndReload.add(this.onServerEndReload.bind(this));
-        }
-        if (this.weaponObj.loadComponent) {
-            this.weaponObj.loadComponent.onStartLoad.add(this.onServerStartLoad.bind(this));
-            this.weaponObj.loadComponent.onEndLoad.add(this.onServerEndLoad.bind(this));
-        }
-        if (this.weaponObj.aimComponent) {
-            this.weaponObj.aimComponent.onStartAim.add(this.onServerStartAim.bind(this));
-            this.weaponObj.aimComponent.onEndAim.add(this.onServerEndAim.bind(this));
-        }
-        if (this.weaponObj.recoilForceComponent) {
-            this.weaponObj.recoilForceComponent.onStartRecoil.add(this.onServerStartRecoil.bind(this));
-        }
-    }
-    /* 服务端开始开火回调 */
-    onServerEquip() {
-        // console.error("ServerEquip " + this.weaponObj.getCurrentOwner().displayName);
-        if (!this.weaponObj.getCurrentOwner())
-            return;
-        let v2 = this.weaponObj.getCurrentOwner();
-        if ((v2.description.advance.base.characterSetting.somatotype % 2) == 0) {
-            // console.error("female")
-            this.changeWeaponAction(0);
-            this.clientEquip(this.weaponObj.getCurrentOwner().player, 0);
-        }
-        else {
-            // console.error("male")
-            this.changeWeaponAction(1);
-            this.clientEquip(this.weaponObj.getCurrentOwner().player, 1);
-        }
-    }
-    /* 服务端卸载装备完成回调 */
-    onServerUnequip() {
-        // console.error("onServerUnequip");
-    }
-    /* 服务端开始开火回调 */
-    onServerStartFire() {
-    }
-    /* 服务端结束开火回调 */
-    onServerEndFire() {
-    }
-    /* 服务端开始换弹回调 */
-    onServerStartReload() {
-    }
-    /* 服务端结束换弹回调 */
-    onServerEndReload() {
-    }
-    /* 服务端开始上膛回调 */
-    onServerStartLoad() {
-    }
-    /* 服务端结束上膛回调 */
-    onServerEndLoad() {
-    }
-    /* 服务端开始瞄准回调 */
-    onServerStartAim() {
-    }
-    /* 服务端结束瞄准回调 */
-    onServerEndAim() {
-    }
-    /* 服务端开始后坐力回调 */
-    onServerStartRecoil() {
-    }
-    /* 客户端初始化方法 */
-    clientInit() {
-        if (this._isInited) {
-            return;
-        }
-        this._isInited = true;
-        /* 获取玩家相关对象 */
-        Player.asyncGetLocalPlayer().then((player) => {
-            this.player = player;
-            this.chara = this.player.character;
-            this.camera = Camera.currentCamera;
-            this.clientInitWeaponEntityRoot();
-            this.clientInitPickUpTrigger();
-            this.clientInitAmmoEntityRoot();
-            this.clientInitCasingEntity();
-            this.clientInitHitCharaEffect();
-            this.clientInitHitEffect();
-            this.clientInitFireEffect();
-            this.clientInitFireSound();
-            this.clientInitReloadSound();
-            this.clientInitLoadSound();
-            this.clientInitAimSound();
-            this.clientInitHitCharaSound();
-            this.clientInitHitSound();
-            this.clientInitDelegate();
-        });
-        Event.addLocalListener(EventType.OnOffMainHUD, this.addOnOffMainHUD.bind(this));
-        Event.addLocalListener(EventType.OnOffWeaponUI, this.addOnOffWeaponUI.bind(this));
-    }
-    addOnOffMainHUD(isOpen) {
-        if (!this.weaponUI)
-            return;
-        try {
-            if (!this.weaponUI.rootCanvas)
-                return;
-            Utils.setWidgetVisibility(this.weaponUI.rootCanvas, isOpen ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
-        }
-        catch (error) {
-            // console.error("addLocalListener-IsOpenUI-[error]" + error);
-        }
-    }
-    addOnOffWeaponUI(isOpen) {
-        if (!this.weaponUI)
-            return;
-        try {
-            if (!this.weaponUI.rootCanvas)
-                return;
-            Utils.setWidgetVisibility(this.weaponUI.rootCanvas, !isOpen ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
-        }
-        catch (error) {
-            // console.error("addLocalListener-IsOpenUI-[error]" + error);
-        }
-    }
-    /* 客户端初始化根武器实体 */
-    clientInitWeaponEntityRoot() {
-        try {
-            this.weaponEntityRoot = this.weaponObj.getChildByName("weaponEntityRoot");
-        }
-        catch (error) {
-            // console.error("clientInitWeaponEntityRoot:" + error);
-        }
-    }
-    /* 客户端初始化拾取触发器 */
-    clientInitPickUpTrigger() {
-        this.pickUpTrigger = this.weaponObj.getChildByName("pickUpTrigger");
-        if (this.pickUpTrigger) {
-            if (this.pickUpTrigger.checkInArea(this.chara)) {
-                this.serverEquip(this.player.playerId);
-                // console.error("B");
-            }
-        }
-    }
-    /* 服务端装备 */
-    serverEquip(playerID) {
-        let player = Player.getPlayer(playerID);
-        // 如果装备时玩家为空则返回
-        if (player == null || !this.weaponObj)
-            return;
-        this.weaponObj.equip(player.character, this.equipmentSlot);
-        this.isEquiped = true;
-        PrefabEvent.PrefabEvtEquip.equip(player.character.gameObjectId, PrefabEvent.EquipSlot.Weapon, this.weaponObj.gameObjectId);
-    }
-    /* 修改预制体动作资源 */
-    changeWeaponAction(sex) {
-        // console.error("changeWeaponAction " + sex)
-        sex == 0 ? this.weaponAction = this.femaleAction : this.weaponAction = this.maleAction;
-        if (this.weaponObj) {
-            this.weaponObj.fireComponent.animationAssetId = this.weaponAction.shootAnimation;
-            if (this.weaponObj.reloadEnabled) {
-                this.weaponObj.reloadComponent.animationAssetId = this.weaponAction.reloadAnimation;
-            }
-            if (this.weaponObj.loadEnabled) {
-                this.weaponObj.loadComponent.animationAssetId = this.weaponAction.loadAnimation;
-            }
-        }
-    }
-    /* 客户端装备 */
-    clientEquip(pickPlayer, gender) {
-        if (!this.camera) {
-            this.camera = Camera.currentCamera;
-        }
-        if (!this.weaponObj) {
-            this.weaponObj = this.gameObject;
-        }
-        this.weaponObj.equip(this.chara, this.equipmentSlot);
-        //Event.dispatchToLocal(UNEQUIP_EVENT);
-        this.changeWeaponAction(gender);
-        // setTimeout(() => {
-        // 	Event.dispatchToLocal(EQUIP_EVENT, this);
-        this.tempMoveFacingDirection = this.chara.moveFacingDirection;
-        this.tempanimationStance = this.chara.currentStance;
-        this.temptargetArmLength = this.camera.springArm.length;
-        this.temptargetArmOffset = this.camera.springArm.localTransform.clone().position;
-        this.tempcameraFOV = this.camera.fov;
-        this.tempcameraOffset = this.camera.localTransform.clone().position;
-        // PlayerManagerExtesion.changeStanceExtesion(this.chara, this.weaponAction.holdStance);
-        this.chara.loadSubStance(this.weaponAction.holdStance).play();
-        // PlayerManagerExtesion.rpcPlayAnimation(this.chara, this.weaponAction.equipAnimation);
-        this.chara.loadAnimation(this.weaponAction.equipAnimation).play();
-        this.chara.moveFacingDirection = mw.MoveFacingDirection.ControllerDirection;
-        this.camera.springArm.length = 400;
-        this.camera.fov = this.equipmentCameraFov;
-        this.camera.localTransform = new mw.Transform(this.equipmentCameraOffset, this.camera.localTransform.clone().rotation, this.camera.localTransform.clone().scale);
-        this.camera.springArm.localTransform = new mw.Transform(new mw.Vector(0, 0, 60), this.camera.localTransform.clone().rotation, this.camera.localTransform.clone().scale);
-        this.weaponUI = mw.UIService.show(WeaponUI, this, this.weaponObj.accuracyOfFireEnabled ? this.weaponObj.accuracyOfFireComponent.defaultDispersionHalfAngle : 0, this.WaponIcon, this.weaponName);
-        this.weaponUI.setTimeText(this.keepTime, this.keepTime);
-        this.weaponUI.setReloadBtn(!this.isSupportRepAmmo);
-        if (this.isSupportRepAmmo) {
-            this.weaponObj.reloadComponent.animationAssetId = this.weaponAction.aimShootAnimation;
-            this.weaponObj.loadComponent.animationAssetId = this.weaponAction.aimShootAnimation;
-        }
-        this._restTime = this.keepTime;
-        // }, 100);
-    }
-    /* 修改FOV */
-    changeFov(value) {
-        this.camera.fov = value;
-    }
-    /* 客户端初始化根弹药实体 */
-    clientInitAmmoEntityRoot() {
-        this.ammoEntityRoot = this.weaponObj.getChildByName("ammoEntityRoot");
-        this.ammoPool = new SimpleObjectPool(this.instanceAmmo.bind(this), (obj) => { obj.destroy(); }, (obj) => { obj.setVisibility(mw.PropertyStatus.Off); });
-    }
-    /* 客户端初始化弹壳实体 */
-    clientInitCasingEntity() {
-        this.casingEntity = this.weaponObj.getChildByName("casingEntity");
-        this.casingPool = new SimpleObjectPool(this.instanceCasing.bind(this), (obj) => { obj.destroy(); }, (obj) => { obj.setVisibility(mw.PropertyStatus.Off); });
-    }
-    /* 客户端初始化击中角色特效 */
-    clientInitHitCharaEffect() {
-        this.hitCharaEffect = this.weaponObj.getChildByName("hitCharaEffect");
-        this.hitCharaEffectPool = new SimpleObjectPool(this.instanceHitCharaEffect.bind(this), (particle) => { particle.destroy(); }, (particle) => { particle.parent = null; particle.stop(); });
-    }
-    /* 客户端初始化击中物体特效 */
-    clientInitHitEffect() {
-        this.hitEffect = this.weaponObj.getChildByName("hitEffect");
-        this.hitEffectPool = new SimpleObjectPool(this.instanceHitEffect.bind(this), (particle) => { particle.destroy(); }, (particle) => { particle.parent = null; particle.stop(); });
-    }
-    /* 客户端初始化开火特效 */
-    clientInitFireEffect() {
-        this.fireEffect = this.weaponObj.getChildByName("fireEffect");
-        this.fireEffect.loopCount = 1;
-    }
-    /* 客户端初始化开火音效 */
-    clientInitFireSound() {
-        this.fireSound = this.weaponObj.getChildByName("fireSound");
-    }
-    /* 客户端初始化换弹音效 */
-    clientInitReloadSound() {
-        this.reloadSound = this.weaponObj.getChildByName("reloadSound");
-    }
-    /* 客户端初始化上膛音效 */
-    clientInitLoadSound() {
-        this.loadSound = this.weaponObj.getChildByName("loadSound");
-    }
-    /* 客户端初始化瞄准音效 */
-    clientInitAimSound() {
-        this.aimSound = this.weaponObj.getChildByName("aimSound");
-    }
-    /* 客户端初始化根击中角色音效 */
-    clientInitHitCharaSound() {
-        this.hitCharaSound = this.weaponObj.getChildByName("hitCharaSound");
-        this.hitCharaSoundPool = new SimpleObjectPool(this.instanceHitCharaSound.bind(this), (sound) => { sound.destroy(); }, (sound) => { sound.stop(); });
-    }
-    /* 客户端初始化根击中物体音效 */
-    clientInitHitSound() {
-        this.hitSound = this.weaponObj.getChildByName("hitSound");
-        this.hitSoundPool = new SimpleObjectPool(this.instanceHitSound.bind(this), (sound) => { sound.destroy(); }, (sound) => { sound.stop(); });
-    }
-    /* 返回一个弹药实例 */
-    instanceAmmo() {
-        let ammo = this.ammoEntityRoot.clone();
-        ammo.parent = null;
-        ammo.setVisibility(mw.PropertyStatus.On);
-        return ammo;
-    }
-    /* 返回一个弹壳实例 */
-    instanceCasing() {
-        let casing = this.casingEntity.clone();
-        casing.parent = null;
-        casing.setVisibility(mw.PropertyStatus.On);
-        return casing;
-    }
-    /* 返回一个击中角色特效实例 */
-    instanceHitCharaEffect() {
-        let hitChara = this.hitCharaEffect.clone();
-        hitChara.parent = null;
-        return hitChara;
-    }
-    /* 返回一个击中物体特效实例 */
-    instanceHitEffect() {
-        let hit = this.hitEffect.clone();
-        hit.parent = null;
-        return hit;
-    }
-    /* 返回一个击中角色音效实例 */
-    instanceHitCharaSound() {
-        let hitChara = this.hitCharaSound.clone();
-        hitChara.parent = null;
-        return hitChara;
-    }
-    /* 返回一个击中音效实例 */
-    instanceHitSound() {
-        let hit = this.hitSound.clone();
-        hit.parent = null;
-        return hit;
-    }
-    /* 客户端初始化回调函数 */
-    clientInitDelegate() {
-        this.weaponObj.onEquip.add(this.onClientEquip.bind(this));
-        this.weaponObj.onUnequip.add(this.onClientUnequip.bind(this));
-        this.weaponObj.fireComponent.onStartFire.add(this.onClientStartFire.bind(this));
-        this.weaponObj.fireComponent.onEndFire.add(this.onClientEndFire.bind(this));
-        if (this.weaponObj.reloadEnabled) {
-            this.weaponObj.reloadComponent.onStartReload.add(this.onClientStartReload.bind(this));
-            this.weaponObj.reloadComponent.onEndReload.add(this.onClientEndReload.bind(this));
-        }
-        if (this.weaponObj.loadEnabled) {
-            this.weaponObj.loadComponent.onStartLoad.add(this.onClientStartLoad.bind(this));
-            this.weaponObj.loadComponent.onEndLoad.add(this.onClientEndLoad.bind(this));
-        }
-        if (this.weaponObj.aimEnabled) {
-            this.weaponObj.aimComponent.onStartAim.add(this.onClientStartAim.bind(this));
-            this.weaponObj.aimComponent.onEndAim.add(this.onClientEndAim.bind(this));
-        }
-        if (this.weaponObj.recoilForceEnabled) {
-            this.weaponObj.recoilForceComponent.onStartRecoil.add(this.onClientStartRecoil.bind(this));
-        }
-        if (this.weaponObj.accuracyOfFireEnabled) {
-            this.weaponObj.accuracyOfFireComponent.onCurrentDispersionChange.add(this.onClientCurrentDispersionChanged.bind(this));
-        }
-        // this.clientOnHit = ((hitResult: mw.GameObject[] | mw.HitResult[], attackPlayer: number, isObj: boolean) => {
-        // 	if (isObj) {
-        // 		for (const element of hitResult) {
-        // 			Console.error("hit " + (element as mw.GameObject).guid);
-        // 		}
-        // 	} else {
-        // 		for (const element of hitResult) {
-        // 			Console.error("hit " + (element as mw.HitResult).gameObject.guid);
-        // 		}
-        // 	}
-        // });
-        this.clientOnBlockChange = ((isBlock) => {
-            // console.error("isBlock " + isBlock);
-        });
-    }
-    /* 客户端开始装备完成回调 */
-    onClientEquip() {
-        // console.error("ClientEquip");
-        try {
-            // 装备的武器如果有拾取触发器
-            if (this.pickUpTrigger) {
-                this.pickUpTrigger.enabled = false;
-            }
-        }
-        catch (error) {
-            // console.error("onClientEquip:" + error);
-        }
-        // 装备的武器对象如果有武器实体，则把可见性打开
-        if (!this.weaponEntityRoot) {
-            this.weaponEntityRoot.setVisibility(mw.PropertyStatus.On);
-        }
-    }
-    /* 客户端卸载装备完成回调 */
-    onClientUnequip() {
-        // console.error("onClientUnequip");
-        if (!this.weaponObj)
-            return;
-        if (this.isAutoDestroy) {
-            this.weaponObj.setVisibility(mw.PropertyStatus.Off);
-            this.weaponObj = null;
-        }
-        else {
-            if (this.pickUpTrigger) {
-                this.weaponObj.worldTransform.rotation = new mw.Rotation(0, 0, 1);
-                this.weaponObj.worldTransform.position = mw.Vector.add(this.weaponObj.worldTransform.getRightVector().multiply(100), this.weaponObj.worldTransform.position, this.weaponObj.worldTransform.position);
-                this.pickUpTrigger.enabled = true;
-            }
-        }
-    }
-    /* 客户端开始开火回调 */
-    onClientStartFire() {
-        try {
-            if (!this.weaponObj) {
-                return;
-            }
-            this.isCanFire = this.weaponObj.fireComponent.fireInterval;
-            if (this.fireEffect) {
-                if (!this.fireEffect.loop) {
-                    this.fireEffect.stop();
-                }
-                this.fireEffect.play();
-            }
-            if (this.fireSound) {
-                if (!this.fireSound.isLoop) {
-                    this.fireSound.stop();
-                }
-                this.playSound(this.fireSound);
-            }
-            // 武器持有人客户端执行
-            if (this.weaponObj.getCurrentOwner() == this.chara) {
-                // 如果弹药实体不为空（有弹道表现）
-                if (this.ammoEntityRoot.getChildren().length > 0) {
-                    // 根据多重弹药数对本次发射的所有子弹对象传参
-                    for (let i = 0; i < this.weaponObj.fireComponent.multipleShot; i++) {
-                        let cameraShootDir = this.camera.worldTransform.clone().getForwardVector().clone();
-                        if (this.weaponObj.accuracyOfFireEnabled) {
-                            cameraShootDir = this.weaponObj.accuracyOfFireComponent.getRandomShootDir(cameraShootDir).clone();
-                        }
-                        let endLoc = cameraShootDir.multiply(SHOOT_RANGE).add(this.camera.worldTransform.clone().position);
-                        let shootDir = endLoc.clone().subtract(this.ammoEntityRoot.worldTransform.position);
-                        let hitRes = QueryUtil.lineTrace(this.camera.worldTransform.clone().position, endLoc, true, DEBUG_FLAG);
-                        hitRes = hitRes.filter(e => {
-                            return !(e.gameObject instanceof mw.Trigger);
-                        });
-                        if (hitRes && hitRes.length > 0 && mw.Vector.dot(hitRes[0].gameObject.worldTransform.position.clone().subtract(this.ammoEntityRoot.worldTransform.position), shootDir) > 0) {
-                            shootDir = hitRes[0].impactPoint.clone().subtract(this.ammoEntityRoot.worldTransform.position);
-                        }
-                        let ammoDirection = shootDir.normalized;
-                        if (this.ammoSpeed < MAX_SHOOTSPEED || this.isBlock) { // 如果弹药速度小于最大飞行速度值或者弹道有明显阻挡情况下，弹药走真实弹道
-                            this.serverFire(this.ammoEntityRoot.worldTransform.position.clone(), ammoDirection);
-                            if (this.ammoArray.length > this.weaponObj.fireComponent.clipSize) {
-                                let discardAmmo = this.ammoArray.shift();
-                                discardAmmo.destroy();
-                            }
-                            this.ammoArray.push(new Ammo(this.chara, this.ammoPool, this.ammoEntityRoot.worldTransform.position, ammoDirection, this.shootRange, this.ammoSpeed, this.gravityScale, this.detectRadius));
-                        }
-                        else { // 其余情况弹药走虚假弹道（子弹轨迹和检测轨迹不同，只是终点相同）
-                            this.serverFire(this.ammoEntityRoot.worldTransform.position.clone(), ammoDirection);
-                            if (this.ammoArray.length > this.weaponObj.fireComponent.clipSize) {
-                                let discardAmmo = this.ammoArray.shift();
-                                discardAmmo.destroy();
-                            }
-                            if (hitRes.length > 0) { // 屏幕中心射线击中
-                                this.ammoArray.push(new Ammo(this.chara, this.ammoPool, this.ammoEntityRoot.worldTransform.position, ammoDirection, shootDir.length, this.ammoSpeed, this.gravityScale, 0, hitRes));
-                            }
-                            else { // 屏幕中心射线未击中
-                                this.ammoArray.push(new Ammo(this.chara, this.ammoPool, this.ammoEntityRoot.worldTransform.position, ammoDirection, shootDir.length, this.ammoSpeed, this.gravityScale, 0));
-                            }
-                        }
-                    }
-                    // 如果勾选弹壳表现，则发射客户端提供弹壳弹出表现
-                    if (this.isWeaponHaveCasing) {
-                        this.casingArray.push(new Casing(this.casingPool, this.casingEntity, this.weaponEntityRoot.worldTransform.getRightVector().clone()));
-                    }
-                }
-                else { // 如果弹药实体为空（无弹道表现）
-                    let cameraShootDir = this.camera.worldTransform.clone().getForwardVector().clone();
-                    if (this.weaponObj.accuracyOfFireEnabled) {
-                        cameraShootDir = this.weaponObj.accuracyOfFireComponent.getRandomShootDir(cameraShootDir).clone();
-                    }
-                    let endLoc = cameraShootDir.multiply(SHOOT_RANGE).add(this.camera.worldTransform.clone().position);
-                    let shootDir = endLoc.clone().subtract(this.ammoEntityRoot.worldTransform.position);
-                    let hitRes = QueryUtil.lineTrace(this.camera.worldTransform.clone().position, endLoc, true, DEBUG_FLAG);
-                    hitRes = hitRes.filter(e => {
-                        return !(e.gameObject instanceof mw.Trigger);
-                    });
-                    if (hitRes && hitRes.length > 0 && mw.Vector.dot(hitRes[0].gameObject.worldTransform.position.clone().subtract(this.ammoEntityRoot.worldTransform.position), shootDir) > 0) {
-                        shootDir = hitRes[0].impactPoint.clone().subtract(this.ammoEntityRoot.worldTransform.position);
-                    }
-                    let ammoDirection = shootDir.normalized;
-                    this.weaponObj.worldTransform.rotation = ammoDirection.toRotation();
-                    let end = ammoDirection.clone().multiply(this.shootRange).add(this.ammoEntityRoot.worldTransform.position);
-                    if (this.detectRadius < 10) {
-                        let lineResult = QueryUtil.lineTrace(this.ammoEntityRoot.worldTransform.position, end, true, DEBUG_FLAG);
-                        lineResult = lineResult.filter(e => {
-                            return !(e.gameObject instanceof mw.Trigger);
-                        });
-                        this.hit(lineResult);
-                    }
-                    else {
-                        let boxResult = Utils.modifyboxOverlapInLevel(this.ammoEntityRoot.worldTransform.position, end, this.detectRadius, this.detectRadius, DEBUG_FLAG);
-                        this.hit(boxResult);
-                    }
-                }
-            }
-        }
-        catch (error) {
-            // console.error("onClientStartFire:" + error);
-        }
-    }
-    updateBlockFire() {
-        let flag = this.isBlock;
-        if (this.ammoEntityRoot == undefined ||
-            this.ammoEntityRoot.worldTransform == undefined ||
-            this.ammoEntityRoot.worldTransform.position == undefined ||
-            this.ammoEntityRoot.worldTransform.getForwardVector() == undefined)
-            return flag;
-        let lineResultMuzzle = QueryUtil.lineTrace(this.ammoEntityRoot.worldTransform.position, this.ammoEntityRoot.worldTransform.getForwardVector().multiply(this.fireBlockDistance).add(this.ammoEntityRoot.worldTransform.position), true, DEBUG_FLAG);
-        lineResultMuzzle = lineResultMuzzle.filter(e => {
-            return !(e.gameObject instanceof mw.Trigger);
-        });
-        if (lineResultMuzzle.length > 0) {
-            this.isBlock = true;
-        }
-        else {
-            this.isBlock = false;
-        }
-        return (this.isBlock == flag);
-    }
-    updatebFiring() {
-        let flag = this.bFiring;
-        this.bFiring = this.weaponObj.fireComponent.isFiring();
-        return (this.bFiring == flag);
-    }
-    serverFire(startLoc, direction) {
-        this.clientMulticastLaunch(startLoc, direction);
-    }
-    clientMulticastLaunch(startLoc, direction) {
-        if (!this.weaponObj)
-            return;
-        if (this.weaponObj.getCurrentOwner() == this.chara) {
-            return;
-        }
-        else {
-            if (this.ammoArray.length > this.weaponObj.fireComponent.clipSize) {
-                try {
-                    let discardAmmo = this.ammoArray.shift();
-                    discardAmmo.destroy();
-                }
-                catch (error) {
-                    // console.error("clientMulticastLaunch:" + error);
-                }
-            }
-            this.ammoArray.push(new Ammo(null, this.ammoPool, startLoc, direction, this.shootRange, this.ammoSpeed, this.gravityScale, 0));
-        }
-    }
-    /* 客户端结束开火回调 */
-    onClientEndFire() {
-    }
-    /* 客户端开始换弹回调 */
-    onClientStartReload() {
-        this.playSound(this.reloadSound);
-    }
-    /* 客户端结束换弹回调 */
-    onClientEndReload() {
-        try {
-            this.reloadSound?.stop();
-        }
-        catch (error) {
-            // console.error("onClientEndReload:" + error);
-        }
-    }
-    /* 客户端开始上膛回调 */
-    onClientStartLoad() {
-        this.playSound(this.loadSound);
-    }
-    /* 客户端结束上膛回调 */
-    onClientEndLoad() {
-        try {
-            this.loadSound?.stop();
-        }
-        catch (error) {
-            // console.error("onClientEndLoad:" + error);
-        }
-    }
-    /* 客户端开始瞄准回调 */
-    onClientStartAim() {
-    }
-    /* 客户端结束瞄准回调 */
-    onClientEndAim() {
-    }
-    /* 客户端开始后坐力回调 */
-    onClientStartRecoil() {
-    }
-    /* 客户端瞄准精度变化回调 */
-    onClientCurrentDispersionChanged() {
-        if (this.weaponUI) {
-            this.weaponUI.changeCross(this.weaponObj.accuracyOfFireComponent.getCurrentDispersionHalfAngle() * 10);
-        }
-    }
-    // 视角放大
-    zoomIn() {
-        if (this.camera == null)
-            return;
-        // console.error("zoomin")
-        this.isAimming = true;
-    }
-    // 视角缩小
-    zoomOut() {
-        if (this.camera == null)
-            return;
-        // console.error("zoomOut")
-        this.isAimming = false;
-    }
-    /* 摄像机update */
-    cameraUpdate(dt) {
-        if (!this.isZooming)
-            return;
-        if (this.isAimming) {
-            this.camera.fov -= dt * this.aimSpeed;
-            if (this.camera.fov < this.aimCameraFov) {
-                this.camera.fov = this.aimCameraFov;
-                this.isZooming = false;
-            }
-        }
-        else {
-            this.camera.fov += dt * this.aimSpeed;
-            if (this.camera.fov > this.equipmentCameraFov) {
-                this.camera.fov = this.equipmentCameraFov;
-                this.isZooming = false;
-            }
-        }
-    }
-    /* 解析资源ID列表 */
-    resolveString(assetIds) {
-        let assetIdArray = new Array();
-        let assetId = "";
-        let s = assetIds.split("");
-        for (let a of s) {
-            if (a == ",") {
-                assetIdArray.push(assetId);
-                assetId = "";
-            }
-            else {
-                assetId += a;
-            }
-        }
-        if (assetId) {
-            assetIdArray.push(assetId);
-        }
-        return assetIdArray;
-    }
-};
-__decorate([
-    mw.Property({ displayName: "男性动作", group: "动作资源", tooltip: "男性角色操作武器的各种动作资源" })
-], WeaponDriver.prototype, "maleAction", void 0);
-__decorate([
-    mw.Property({ displayName: "女性动作", group: "动作资源", tooltip: "女性角色操作武器的各种动作资源" })
-], WeaponDriver.prototype, "femaleAction", void 0);
-__decorate([
-    mw.Property({ displayName: "武器icon", group: "武器属性", tooltip: "武器图标" })
-], WeaponDriver.prototype, "WaponIcon", void 0);
-__decorate([
-    mw.Property({ displayName: "武器名称", group: "武器属性", tooltip: "武器命名" })
-], WeaponDriver.prototype, "weaponName", void 0);
-__decorate([
-    mw.Property({ displayName: "装备插槽", group: "武器属性", tooltip: "角色装备武器的插槽" })
-], WeaponDriver.prototype, "equipmentSlot", void 0);
-__decorate([
-    mw.Property({ displayName: "装备视角偏移", group: "武器属性", tooltip: "角色装备武器后摄像机视角偏移" })
-], WeaponDriver.prototype, "equipmentCameraOffset", void 0);
-__decorate([
-    mw.Property({ displayName: "装备FOV", group: "武器属性", tooltip: "角色装备武器后视场", range: { max: 170, min: 5 } })
-], WeaponDriver.prototype, "equipmentCameraFov", void 0);
-__decorate([
-    mw.Property({ displayName: "瞄准视角偏移", group: "武器属性", tooltip: "角色瞄准时摄像机视角偏移" })
-], WeaponDriver.prototype, "aimCameraOffset", void 0);
-__decorate([
-    mw.Property({ displayName: "瞄准FOV", group: "武器属性", tooltip: "角色装备武器后视场", range: { max: 170, min: 5 } })
-], WeaponDriver.prototype, "aimCameraFov", void 0);
-__decorate([
-    mw.Property({ displayName: "瞄准聚焦速度", group: "武器属性", tooltip: "瞄准时视场移动速度", range: { max: 170, min: 5 } })
-], WeaponDriver.prototype, "aimSpeed", void 0);
-__decorate([
-    mw.Property({ displayName: "武器基础伤害", group: "武器属性", tooltip: "武器基础伤害数值" })
-], WeaponDriver.prototype, "damage", void 0);
-__decorate([
-    mw.Property({ displayName: "最大射程", group: "弹药属性", tooltip: "弹药最大射程，超出自动销毁", range: { max: 100000, min: 1 } })
-], WeaponDriver.prototype, "shootRange", void 0);
-__decorate([
-    mw.Property({ displayName: "弹药速度", group: "弹药属性", tooltip: "弹药飞行速度，单位距离/秒", range: { max: 100000, min: 1 } })
-], WeaponDriver.prototype, "ammoSpeed", void 0);
-__decorate([
-    mw.Property({ displayName: "碰撞半径", group: "弹药属性", tooltip: "弹药碰撞检测半径，大于10矩形检测，小于等于10射线检测", range: { max: 500, min: 1 } })
-], WeaponDriver.prototype, "detectRadius", void 0);
-__decorate([
-    mw.Property({ displayName: "重力系数", group: "弹药属性", tooltip: "弹药是否受重力影响，重力系数可正可负", range: { max: -10, min: 10 } })
-], WeaponDriver.prototype, "gravityScale", void 0);
-__decorate([
-    mw.Property({ displayName: "伤害范围", group: "弹药属性", tooltip: "弹药爆炸范围，小于等于10为不爆炸", range: { max: 2000, min: 1 } })
-], WeaponDriver.prototype, "hurtRadius", void 0);
-__decorate([
-    mw.Property({ displayName: "自动换弹", group: "辅助功能", tooltip: "勾选后子弹为0时自动换弹" })
-], WeaponDriver.prototype, "isAutoReload", void 0);
-__decorate([
-    mw.Property({ displayName: "辅助瞄准", group: "辅助功能", tooltip: "勾选后开启自动锁定" })
-], WeaponDriver.prototype, "isAutoLock", void 0);
-__decorate([
-    mw.Property({ displayName: "默认UI", group: "辅助功能", tooltip: "勾选后装备武器显示默认UI" })
-], WeaponDriver.prototype, "isDefaultUI", void 0);
-__decorate([
-    mw.Property({ displayName: "弹壳弹出", group: "辅助功能", tooltip: "勾选提供弹壳弹出效果，适用枪械类武器" })
-], WeaponDriver.prototype, "isWeaponHaveCasing", void 0);
-__decorate([
-    mw.Property({ displayName: "开火阻挡距离", group: "辅助功能", tooltip: "距离内如果有障碍物阻挡，弹药是真实弹道" })
-], WeaponDriver.prototype, "fireBlockDistance", void 0);
-__decorate([
-    mw.Property({ displayName: "弹药数量(-1为无限)", group: "辅助功能", tooltip: "武器总子弹数", range: { max: 10000, min: -1 } })
-], WeaponDriver.prototype, "totalAmmo", void 0);
-__decorate([
-    mw.Property({ displayName: "弹夹为空是否销毁武器", group: "辅助功能", tooltip: "勾选后没有子弹了会自动卸载" })
-], WeaponDriver.prototype, "isEmptyToDestroy", void 0);
-__decorate([
-    mw.Property({ displayName: "支持替换弹夹", group: "辅助功能" })
-], WeaponDriver.prototype, "isSupportRepAmmo", void 0);
-__decorate([
-    mw.Property({ displayName: "模型旋转速度", group: "辅助功能" })
-], WeaponDriver.prototype, "rotateSpeed", void 0);
-__decorate([
-    mw.Property({ displayName: "持有时限（s）（-1为永久持有）", group: "辅助功能" })
-], WeaponDriver.prototype, "keepTime", void 0);
-__decorate([
-    mw.Property({ hideInEditor: true, replicated: true, onChanged: "onEquipdChanged" })
-], WeaponDriver.prototype, "isEquiped", void 0);
-__decorate([
-    mw.Property({ displayName: "瞄准镜", group: "辅助功能", tooltip: "勾选后瞄准时显示至第一人称瞄准镜" })
-], WeaponDriver.prototype, "isWeaponHaveScope", void 0);
-__decorate([
-    mw.Property({ displayName: "自动销毁", group: "辅助功能", tooltip: "勾选后卸载武器时武器会自动销毁" })
-], WeaponDriver.prototype, "isAutoDestroy", void 0);
-__decorate([
-    mw.Property({ displayName: "优先加载", group: "资源", tooltip: "需要优先加载的资源ID" })
-], WeaponDriver.prototype, "assets", void 0);
-__decorate([
-    PrefabReport(23)
-], WeaponDriver.prototype, "onStart", null);
-__decorate([
-    RemoteFunction(mw.Server)
-], WeaponDriver.prototype, "hitCharacterMulticast", null);
-__decorate([
-    RemoteFunction(mw.Server)
-], WeaponDriver.prototype, "hitObjectMulticast", null);
-__decorate([
-    RemoteFunction(mw.Client, mw.Multicast)
-], WeaponDriver.prototype, "hitCharaPerformance", null);
-__decorate([
-    RemoteFunction(mw.Client, mw.Multicast)
-], WeaponDriver.prototype, "hitObjectPerformance", null);
-__decorate([
-    RemoteFunction(mw.Server)
-], WeaponDriver.prototype, "serverDestroyAmmo", null);
-__decorate([
-    RemoteFunction(mw.Client, mw.Multicast)
-], WeaponDriver.prototype, "clientDestroyAmmo", null);
-__decorate([
-    RemoteFunction(mw.Server)
-], WeaponDriver.prototype, "serverHideWeaponEntity", null);
-__decorate([
-    RemoteFunction(mw.Client, mw.Multicast)
-], WeaponDriver.prototype, "hideWeaponEntity", null);
-__decorate([
-    RemoteFunction(mw.Server)
-], WeaponDriver.prototype, "serverDestroy", null);
-__decorate([
-    RemoteFunction(mw.Server)
-], WeaponDriver.prototype, "serverEquip", null);
-__decorate([
-    RemoteFunction(mw.Client)
-], WeaponDriver.prototype, "clientEquip", null);
-__decorate([
-    RemoteFunction(mw.Server)
-], WeaponDriver.prototype, "serverFire", null);
-__decorate([
-    RemoteFunction(mw.Client, mw.Multicast)
-], WeaponDriver.prototype, "clientMulticastLaunch", null);
-WeaponDriver = __decorate([
-    Component
-], WeaponDriver);
-var WeaponDriver$1 = WeaponDriver;
-
-var foreign30 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: WeaponDriver$1
-});
-
 let Npc = class Npc extends Script {
     constructor() {
         super(...arguments);
@@ -13145,7 +12234,7 @@ let Npc = class Npc extends Script {
         this.setNpcDescriptionAndGun();
     }
     async setNpcDescriptionAndGun() {
-        let ran = Utils.randomInt(1, 2);
+        let ran = Utils.randomInt(2, 2); //TODO:WFZ
         if (ran == 1) {
             let morphElement = GameConfig.Morph.getElement(Utils.randomInt(1, GameConfig.Morph.getAllElement().length));
             let assetId = morphElement.AssetId;
@@ -13292,7 +12381,7 @@ Npc = __decorate([
 ], Npc);
 var Npc$1 = Npc;
 
-var foreign37 = /*#__PURE__*/Object.freeze({
+var foreign33 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Npc$1
 });
@@ -13410,7 +12499,7 @@ AddMaxHp = __decorate([
 ], AddMaxHp);
 var AddMaxHp$1 = AddMaxHp;
 
-var foreign38 = /*#__PURE__*/Object.freeze({
+var foreign34 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AddMaxHp$1
 });
@@ -13419,7 +12508,6 @@ let TryOutGun = class TryOutGun extends Script {
     constructor() {
         super(...arguments);
         /**--------------------------------【客户端】-------------------------------- */
-        this.gunModuleC = null;
         this.morphModuleC = null;
         this.shopModuleC = null;
         this.adPanel = null;
@@ -13450,12 +12538,6 @@ let TryOutGun = class TryOutGun extends Script {
         else if (mw.SystemUtil.isServer()) {
             this.onUpdateS(dt);
         }
-    }
-    get getGunModuleC() {
-        if (this.gunModuleC == null) {
-            this.gunModuleC = ModuleService.getModule(GunModuleC);
-        }
-        return this.gunModuleC;
     }
     get getMorphModuleC() {
         if (this.morphModuleC == null) {
@@ -13501,7 +12583,6 @@ let TryOutGun = class TryOutGun extends Script {
         this.switchGunModel(Utils.randomInt(10, 14));
     }
     initModule() {
-        this.gunModuleC = ModuleService.getModule(GunModuleC);
     }
     initUIPanel() {
         this.adPanel = UIService.getUI(AdPanel);
@@ -13536,9 +12617,6 @@ let TryOutGun = class TryOutGun extends Script {
     switchGun() {
         if (this.getMorphModuleC.getIsMorph) {
             this.getShopModuleC.setUseShopId_Gun(this.gunkey);
-        }
-        else {
-            this.getGunModuleC.switchGun(this.gunkey);
         }
     }
     async switchGunModel(key) {
@@ -13578,10 +12656,72 @@ TryOutGun = __decorate([
 ], TryOutGun);
 var TryOutGun$1 = TryOutGun;
 
-var foreign42 = /*#__PURE__*/Object.freeze({
+var foreign38 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TryOutGun$1
 });
+
+let ProjectTarget = class ProjectTarget extends Script {
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+        if (mw.SystemUtil.isClient()) {
+            this.onStartC();
+        }
+        else if (mw.SystemUtil.isServer()) {
+            this.onStartS();
+        }
+    }
+    /**
+     * 周期函数 每帧执行
+     * 此函数执行需要将this.useUpdate赋值为true
+     * @param dt 当前帧与上一帧的延迟 / 秒
+     */
+    onUpdate(dt) {
+        if (mw.SystemUtil.isClient()) {
+            this.onUpdateC(dt);
+        }
+        else if (mw.SystemUtil.isServer()) {
+            this.onUpdateS(dt);
+        }
+    }
+    /**--------------------------------【客户端】-------------------------------- */
+    /**客户端的onStart */
+    async onStartC() {
+        this.useUpdate = false;
+        await ModuleService.ready();
+        this.setProjectTarget();
+        this.testOnHit();
+    }
+    setProjectTarget() {
+        Utils.setProjectTarget(this.gameObject);
+    }
+    testOnHit() {
+        PrefabEvent.PrefabEvtFight.onHit((attackerId, targetId, damage, position) => {
+            if (this.gameObject.gameObjectId != targetId)
+                return;
+            FlyText.instance.showFlyText("-" + damage, position);
+        });
+    }
+    /**客户端的onUpdate */
+    onUpdateC(dt) {
+    }
+    /**--------------------------------【客户端】-------------------------------- */
+    /**--------------------------------【服务端】-------------------------------- */
+    /**服务端的onStart */
+    onStartS() {
+        this.useUpdate = false;
+    }
+    /**服务端的onUpdate */
+    onUpdateS(dt) {
+    }
+    /**--------------------------------【服务端】-------------------------------- */
+    /** 脚本被销毁时最后一帧执行完调用此函数 */
+    onDestroy() {
+    }
+};
+ProjectTarget = __decorate([
+    Component
+], ProjectTarget);
 
 var FreeCamera_1;
 let FreeCamera = FreeCamera_1 = class FreeCamera extends Script {
@@ -13776,7 +12916,7 @@ class KeyActionManager {
     }
 }
 
-var foreign68 = /*#__PURE__*/Object.freeze({
+var foreign70 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FreeCamera$1
 });
@@ -13860,7 +13000,7 @@ class TSIAP {
 }
 let TSIAPService = new TSIAP();
 
-var foreign70 = /*#__PURE__*/Object.freeze({
+var foreign73 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     TSIAPService: TSIAPService
 });
@@ -13931,7 +13071,7 @@ JumpGame = __decorate([
 ], JumpGame);
 var JumpGame$1 = JumpGame;
 
-var foreign71 = /*#__PURE__*/Object.freeze({
+var foreign74 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: JumpGame$1
 });
@@ -13941,7 +13081,7 @@ var foreign71 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/JumpGameTips.ui
- * TIME: 2024.05.23-21.30.01
+ * TIME: 2024.06.22-23.56.50
  */
 let JumpGameTips_Generate = class JumpGameTips_Generate extends UIScript {
     onAwake() {
@@ -13981,7 +13121,7 @@ JumpGameTips_Generate = __decorate([
 ], JumpGameTips_Generate);
 var JumpGameTips_Generate$1 = JumpGameTips_Generate;
 
-var foreign76 = /*#__PURE__*/Object.freeze({
+var foreign79 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: JumpGameTips_Generate$1
 });
@@ -13991,7 +13131,7 @@ var foreign76 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/SecondNoticeItem.ui
- * TIME: 2024.05.23-21.30.01
+ * TIME: 2024.06.22-23.56.50
  */
 let SecondNoticeItem_Generate = class SecondNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -14049,7 +13189,7 @@ SecondNoticeItem_Generate = __decorate([
 ], SecondNoticeItem_Generate);
 var SecondNoticeItem_Generate$1 = SecondNoticeItem_Generate;
 
-var foreign78 = /*#__PURE__*/Object.freeze({
+var foreign81 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SecondNoticeItem_Generate$1
 });
@@ -14059,7 +13199,7 @@ var foreign78 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/DiamondItem.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.06.22-23.56.50
  */
 let DiamondItem_Generate = class DiamondItem_Generate extends UIScript {
     get mFirstBuyTextBlock() {
@@ -14161,7 +13301,7 @@ DiamondItem_Generate = __decorate([
 ], DiamondItem_Generate);
 var DiamondItem_Generate$1 = DiamondItem_Generate;
 
-var foreign83 = /*#__PURE__*/Object.freeze({
+var foreign86 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DiamondItem_Generate$1
 });
@@ -14171,7 +13311,7 @@ var foreign83 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/DiamondPanel.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.06.22-23.56.50
  */
 let DiamondPanel_Generate = class DiamondPanel_Generate extends UIScript {
     get mMainCanvas() {
@@ -14252,7 +13392,7 @@ DiamondPanel_Generate = __decorate([
 ], DiamondPanel_Generate);
 var DiamondPanel_Generate$1 = DiamondPanel_Generate;
 
-var foreign84 = /*#__PURE__*/Object.freeze({
+var foreign87 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DiamondPanel_Generate$1
 });
@@ -14262,7 +13402,7 @@ var foreign84 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RadarModule/RadarPanel.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.06.22-23.56.50
  */
 let RadarPanel_Generate = class RadarPanel_Generate extends UIScript {
     onAwake() {
@@ -14301,7 +13441,7 @@ RadarPanel_Generate = __decorate([
 ], RadarPanel_Generate);
 var RadarPanel_Generate$1 = RadarPanel_Generate;
 
-var foreign90 = /*#__PURE__*/Object.freeze({
+var foreign92 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadarPanel_Generate$1
 });
@@ -14333,79 +13473,74 @@ const MWModuleMap = {
      '42EE39EA49315FAE8563A88B97E3F060': foreign24,
      '34514D87410DC61DB5B64C9DCE81A833': foreign25,
      'C6239AAF49000AB5543412A4C68EAD31': foreign26,
-     'BF3F51EE49B1F2B8E540B5BE41BCC27F': foreign27,
-     '6D644F7A45B04E884AD5AA972C46C174': foreign28,
-     '5412430B4D7A4F6AD130678D4BC159E0': foreign29,
-     '7F2CCB354EB99D9A0A5B778B29710155': foreign30,
-     '43D19C1D40CA859F774230B98EE261B5': foreign31,
-     '7B3F640D45CDC99A229EFDBBC3F50ABD': foreign32,
-     '66C82E484C9BFB4ADA02618A95752286': foreign33,
-     'DAA40DEE420925A8EA2B4FB015573440': foreign34,
-     '8E647D8F40D9B4AE1A1349ACD3C3F392': foreign35,
-     '21227DCE4B6FB5C99FA72BA5B225A752': foreign36,
-     '1B12D2CD40775D42550AC8B64BACB2B5': foreign37,
-     '3B463A284FD7B66C9489AA8EC3AC8A23': foreign38,
-     'B8D3411E480AD6F4CBA476A88A02FD84': foreign39,
-     '001BB3D44F528AD6DFEB5BBB7FF03216': foreign40,
-     '0C60A5DE4F7AF9F8DE3381B2CECCE96F': foreign41,
-     '885A77EA4AC06DB2ABF8EB9F4AC89BA5': foreign42,
-     'C414180848195EEA22C4BC8C95BB22CB': foreign43,
-     '2C98E91946EADE4E5FDA0EB10A1AEC93': foreign44,
-     '7BDEA3704CEBB5559C6239928321865C': foreign45,
-     '7833C871441E612CC5B5CE9BDDA947C9': foreign46,
-     'A12B8D524B602E750EB63288C79D32E2': foreign47,
-     'F057824E4569A842D403858DC7D1D88B': foreign48,
-     '9F1D50A144B07BFAFC552F925299CE71': foreign49,
-     '3E1D070A4147D9A5B46E0EAF1E5FD4E1': foreign50,
-     'F215908B4B4F40F5531DE4A01F660731': foreign51,
-     '89FAB6BA4950774A1AEE0AA919005864': foreign52,
-     '448F172F473F500F568CE69787A05879': foreign53,
-     '7C89EFEF4B37DB0513F2659514BB7B93': foreign54,
-     'C7E79CD049A93AFDBCA399B718D2D8DC': foreign55,
-     '21E846D34531A31F92F411BB9E300D5B': foreign56,
-     '5F4167AC4B1A67501A0DD4A98DCCE793': foreign57,
-     'C2A63B424C2C17C9DE3395B59BA9444C': foreign58,
-     '4CA21C094DAD2346E120EFBEA3D7736C': foreign59,
-     'E8535D714F5BFEC20EF595B175FA24BD': foreign60,
-     '7B098C68429B7A33AA075BB6631641B6': foreign61,
-     'A41BD48545CC9593CB2B62B8C8BD8505': foreign62,
-     '4CF1BF6940037F5268A8B4B1C326C0E1': foreign63,
-     '799144174FCC1F72D4AAD2B8C0D23A93': foreign64,
-     '7969AEF34724BDC60E081286C23D4945': foreign65,
-     'C8CD71394F0002E646F3F093BF3B8A20': foreign66,
-     '761A5E774007E1CA28720DB572DA7A45': foreign67,
-     '3A19265E439F9BC57DD9188415D69D90': foreign68,
-     'ACB26C334F3E66726611CAAACE1B29F0': foreign69,
-     '5F9FD257458AA792F70050AEC35F3C7F': foreign70,
-     '86F0A1A849C1B3DE1E04178576CB52FF': foreign71,
-     'A30FDC1848F2A2BB4F412FB42FC6A123': foreign72,
-     'CD82A2E448FA71DD00529A8B5261ED6C': foreign73,
-     '7BC3DC9143A0AC886B7C69BF0BA72582': foreign74,
-     '0ADADD634CB1574E2CE91AA7D15972BF': foreign75,
-     'BEE82D4145CF7AADF455DA8F65630FCE': foreign76,
-     'BF72AC404FF17C439A9112B6B4B32279': foreign77,
-     'A012B90749779FBE8DE607A2B99C7BBD': foreign78,
-     '82E080274DC72CA9D26CFF80275210C8': foreign79,
-     'B445B07141F3B81911589FB86B887D16': foreign80,
-     '3738A163431B2780E684368D4B44D659': foreign81,
-     '9A05761A4E0937CD96EDBD98F5CF127C': foreign82,
-     'AA29C1244938B00FCD91B2AF49E1CD69': foreign83,
-     '5AFEABF6491C62D9F43C6094E8586D99': foreign84,
-     '69B56DE846DD7777A34F73BAAD388917': foreign85,
-     'C8403C274C4A11E56CBA4ABE1BB56FE9': foreign86,
-     'EF8CF652443106FAD829B9B7D44FDF4A': foreign87,
-     '6378A8BD4992C396F0BF5795C241272A': foreign88,
-     'E65657ED48A221438A440EB8FB55AB3A': foreign89,
-     '4BAAB5D2447B37D97384719CE67C9E72': foreign90,
-     '4B7AD5B5415D6B34A20794B83D33C8D4': foreign91,
-     '8B4959C3457E9E607BFD83A45E3B0B4E': foreign92,
-     '61C409DE43B68BAD7C2712AC407F6B85': foreign93,
-     'BD732EF648AD01E5A18863865EF79E7F': foreign94,
-     'D7D5128A42442933D108809A874A1F67': foreign95,
-     '5951240940FFACB56FF8EB8F140D19E5': foreign96,
-     'E0AAC56B4C54E8B2B8B946A3EB4D60C5': foreign97,
-     '54FA95C94AC4FD0AE2C3AF985B5862A7': foreign98,
-     '181ACB1C48C92C4E510D6B94FA31BD79': foreign99,
+     '43D19C1D40CA859F774230B98EE261B5': foreign27,
+     '7B3F640D45CDC99A229EFDBBC3F50ABD': foreign28,
+     '66C82E484C9BFB4ADA02618A95752286': foreign29,
+     'DAA40DEE420925A8EA2B4FB015573440': foreign30,
+     '8E647D8F40D9B4AE1A1349ACD3C3F392': foreign31,
+     '21227DCE4B6FB5C99FA72BA5B225A752': foreign32,
+     '1B12D2CD40775D42550AC8B64BACB2B5': foreign33,
+     '3B463A284FD7B66C9489AA8EC3AC8A23': foreign34,
+     'B8D3411E480AD6F4CBA476A88A02FD84': foreign35,
+     '001BB3D44F528AD6DFEB5BBB7FF03216': foreign36,
+     '0C60A5DE4F7AF9F8DE3381B2CECCE96F': foreign37,
+     '885A77EA4AC06DB2ABF8EB9F4AC89BA5': foreign38,
+     'C414180848195EEA22C4BC8C95BB22CB': foreign39,
+     '2C98E91946EADE4E5FDA0EB10A1AEC93': foreign40,
+     '7BDEA3704CEBB5559C6239928321865C': foreign41,
+     '7833C871441E612CC5B5CE9BDDA947C9': foreign42,
+     'A12B8D524B602E750EB63288C79D32E2': foreign43,
+     'F057824E4569A842D403858DC7D1D88B': foreign44,
+     '9F1D50A144B07BFAFC552F925299CE71': foreign45,
+     '3E1D070A4147D9A5B46E0EAF1E5FD4E1': foreign46,
+     'F215908B4B4F40F5531DE4A01F660731': foreign47,
+     '89FAB6BA4950774A1AEE0AA919005864': foreign48,
+     '448F172F473F500F568CE69787A05879': foreign49,
+     '7C89EFEF4B37DB0513F2659514BB7B93': foreign50,
+     'C7E79CD049A93AFDBCA399B718D2D8DC': foreign51,
+     '21E846D34531A31F92F411BB9E300D5B': foreign52,
+     '5F4167AC4B1A67501A0DD4A98DCCE793': foreign53,
+     'C2A63B424C2C17C9DE3395B59BA9444C': foreign54,
+     '4CA21C094DAD2346E120EFBEA3D7736C': foreign55,
+     'E8535D714F5BFEC20EF595B175FA24BD': foreign56,
+     '7B098C68429B7A33AA075BB6631641B6': foreign57,
+     'A41BD48545CC9593CB2B62B8C8BD8505': foreign58,
+     '4CF1BF6940037F5268A8B4B1C326C0E1': foreign59,
+     '799144174FCC1F72D4AAD2B8C0D23A93': foreign60,
+     '7969AEF34724BDC60E081286C23D4945': foreign61,
+     'C8CD71394F0002E646F3F093BF3B8A20': foreign68,
+     '761A5E774007E1CA28720DB572DA7A45': foreign69,
+     '3A19265E439F9BC57DD9188415D69D90': foreign70,
+     'ACB26C334F3E66726611CAAACE1B29F0': foreign71,
+     '5F9FD257458AA792F70050AEC35F3C7F': foreign73,
+     '86F0A1A849C1B3DE1E04178576CB52FF': foreign74,
+     'A30FDC1848F2A2BB4F412FB42FC6A123': foreign75,
+     'CD82A2E448FA71DD00529A8B5261ED6C': foreign76,
+     '7BC3DC9143A0AC886B7C69BF0BA72582': foreign77,
+     '0ADADD634CB1574E2CE91AA7D15972BF': foreign78,
+     'BEE82D4145CF7AADF455DA8F65630FCE': foreign79,
+     'BF72AC404FF17C439A9112B6B4B32279': foreign80,
+     'A012B90749779FBE8DE607A2B99C7BBD': foreign81,
+     '82E080274DC72CA9D26CFF80275210C8': foreign82,
+     'B445B07141F3B81911589FB86B887D16': foreign83,
+     '3738A163431B2780E684368D4B44D659': foreign84,
+     '9A05761A4E0937CD96EDBD98F5CF127C': foreign85,
+     'AA29C1244938B00FCD91B2AF49E1CD69': foreign86,
+     '5AFEABF6491C62D9F43C6094E8586D99': foreign87,
+     '69B56DE846DD7777A34F73BAAD388917': foreign88,
+     'C8403C274C4A11E56CBA4ABE1BB56FE9': foreign89,
+     '6378A8BD4992C396F0BF5795C241272A': foreign90,
+     'E65657ED48A221438A440EB8FB55AB3A': foreign91,
+     '4BAAB5D2447B37D97384719CE67C9E72': foreign92,
+     '4B7AD5B5415D6B34A20794B83D33C8D4': foreign93,
+     '8B4959C3457E9E607BFD83A45E3B0B4E': foreign94,
+     '61C409DE43B68BAD7C2712AC407F6B85': foreign95,
+     'BD732EF648AD01E5A18863865EF79E7F': foreign96,
+     'D7D5128A42442933D108809A874A1F67': foreign97,
+     '5951240940FFACB56FF8EB8F140D19E5': foreign98,
+     'E0AAC56B4C54E8B2B8B946A3EB4D60C5': foreign99,
+     '54FA95C94AC4FD0AE2C3AF985B5862A7': foreign100,
+     '181ACB1C48C92C4E510D6B94FA31BD79': foreign101,
 };
 const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/ConfirmPanel"],
 [foreign2 || {}, "JavaScripts/common/notice/Notice"],
@@ -14433,79 +13568,74 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/ConfirmP
 [foreign24 || {}, "JavaScripts/module/CoinModule/ui/DiamondItem"],
 [foreign25 || {}, "JavaScripts/module/CoinModule/ui/DiamondPanel"],
 [foreign26 || {}, "JavaScripts/module/GMModule/GMService"],
-[foreign27 || {}, "JavaScripts/module/GunModule/GunModuleC"],
-[foreign28 || {}, "JavaScripts/module/GunModule/GunModuleS"],
-[foreign29 || {}, "JavaScripts/module/GunModule/ui/WeaponUI"],
-[foreign30 || {}, "JavaScripts/module/GunModule/WeaponDriver"],
-[foreign31 || {}, "JavaScripts/module/HUDModule/HUDData"],
-[foreign32 || {}, "JavaScripts/module/HUDModule/HUDModuleC"],
-[foreign33 || {}, "JavaScripts/module/HUDModule/HUDModuleS"],
-[foreign34 || {}, "JavaScripts/module/HUDModule/ui/HUDPanel"],
-[foreign35 || {}, "JavaScripts/module/HUDModule/ui/KillTipItem"],
-[foreign36 || {}, "JavaScripts/module/MorphModule/MorphModule"],
-[foreign37 || {}, "JavaScripts/module/NpcModule/Npc"],
-[foreign38 || {}, "JavaScripts/module/PlayerModule/AddMaxHp"],
-[foreign39 || {}, "JavaScripts/module/PlayerModule/PlayerData"],
-[foreign40 || {}, "JavaScripts/module/PlayerModule/PlayerModuleC"],
-[foreign41 || {}, "JavaScripts/module/PlayerModule/PlayerModuleS"],
-[foreign42 || {}, "JavaScripts/module/PlayerModule/TryOutGun"],
-[foreign43 || {}, "JavaScripts/module/RadarModule/RadarModuleC"],
-[foreign44 || {}, "JavaScripts/module/RadarModule/RadarModuleS"],
-[foreign45 || {}, "JavaScripts/module/RadarModule/ui/RadarPanel"],
-[foreign46 || {}, "JavaScripts/module/RankModule/RankData"],
-[foreign47 || {}, "JavaScripts/module/RankModule/RankModuleC"],
-[foreign48 || {}, "JavaScripts/module/RankModule/RankModuleS"],
-[foreign49 || {}, "JavaScripts/module/RankModule/ui/RankPanel"],
-[foreign50 || {}, "JavaScripts/module/RankModule/ui/RoomItem"],
-[foreign51 || {}, "JavaScripts/module/RankModule/ui/WorldItem"],
-[foreign52 || {}, "JavaScripts/module/ShopModule/ShopData"],
-[foreign53 || {}, "JavaScripts/module/ShopModule/ShopModuleC"],
-[foreign54 || {}, "JavaScripts/module/ShopModule/ShopModuleS"],
-[foreign55 || {}, "JavaScripts/module/ShopModule/ui/ShopItem"],
-[foreign56 || {}, "JavaScripts/module/ShopModule/ui/ShopPanel"],
-[foreign57 || {}, "JavaScripts/module/TaskModule/TaskData"],
-[foreign58 || {}, "JavaScripts/module/TaskModule/TaskModuleC"],
-[foreign59 || {}, "JavaScripts/module/TaskModule/TaskModuleS"],
-[foreign60 || {}, "JavaScripts/module/TaskModule/ui/TaskPanel"],
-[foreign61 || {}, "JavaScripts/module/TeamModule/TeamData"],
-[foreign62 || {}, "JavaScripts/module/TeamModule/TeamModuleC"],
-[foreign63 || {}, "JavaScripts/module/TeamModule/TeamModuleS"],
-[foreign64 || {}, "JavaScripts/module/TeamModule/ui/TeamItem"],
-[foreign65 || {}, "JavaScripts/module/TeamModule/ui/TeamPanel"],
-[foreign66 || {}, "JavaScripts/tools/EventType"],
-[foreign67 || {}, "JavaScripts/tools/FlyText"],
-[foreign68 || {}, "JavaScripts/tools/FreeCamera"],
-[foreign69 || {}, "JavaScripts/tools/GlobalData"],
-[foreign70 || {}, "JavaScripts/tools/IAPInstance"],
-[foreign71 || {}, "JavaScripts/tools/JumpGame"],
-[foreign72 || {}, "JavaScripts/tools/MapEx"],
-[foreign73 || {}, "JavaScripts/tools/PrefabEvent"],
-[foreign74 || {}, "JavaScripts/tools/Utils"],
-[foreign75 || {}, "JavaScripts/ui-generate/common/ConfirmPanel_generate"],
-[foreign76 || {}, "JavaScripts/ui-generate/common/JumpGameTips_generate"],
-[foreign77 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
-[foreign78 || {}, "JavaScripts/ui-generate/common/notice/SecondNoticeItem_generate"],
-[foreign79 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
-[foreign80 || {}, "JavaScripts/ui-generate/module/ActivityModule/ActivityPanel_generate"],
-[foreign81 || {}, "JavaScripts/ui-generate/module/AdModule/AdPanel_generate"],
-[foreign82 || {}, "JavaScripts/ui-generate/module/CoinModule/CoinPanel_generate"],
-[foreign83 || {}, "JavaScripts/ui-generate/module/CoinModule/DiamondItem_generate"],
-[foreign84 || {}, "JavaScripts/ui-generate/module/CoinModule/DiamondPanel_generate"],
-[foreign85 || {}, "JavaScripts/ui-generate/module/GMModule/GMHUD_generate"],
-[foreign86 || {}, "JavaScripts/ui-generate/module/GMModule/GMItem_generate"],
-[foreign87 || {}, "JavaScripts/ui-generate/module/GunModule/WeaponUI_generate"],
-[foreign88 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
-[foreign89 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
-[foreign90 || {}, "JavaScripts/ui-generate/module/RadarModule/RadarPanel_generate"],
-[foreign91 || {}, "JavaScripts/ui-generate/module/RankModule/RankPanel_generate"],
-[foreign92 || {}, "JavaScripts/ui-generate/module/RankModule/RoomItem_generate"],
-[foreign93 || {}, "JavaScripts/ui-generate/module/RankModule/WorldItem_generate"],
-[foreign94 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
-[foreign95 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
-[foreign96 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
-[foreign97 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
-[foreign98 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamItem_generate"],
-[foreign99 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamPanel_generate"]]);
+[foreign27 || {}, "JavaScripts/module/HUDModule/HUDData"],
+[foreign28 || {}, "JavaScripts/module/HUDModule/HUDModuleC"],
+[foreign29 || {}, "JavaScripts/module/HUDModule/HUDModuleS"],
+[foreign30 || {}, "JavaScripts/module/HUDModule/ui/HUDPanel"],
+[foreign31 || {}, "JavaScripts/module/HUDModule/ui/KillTipItem"],
+[foreign32 || {}, "JavaScripts/module/MorphModule/MorphModule"],
+[foreign33 || {}, "JavaScripts/module/NpcModule/Npc"],
+[foreign34 || {}, "JavaScripts/module/PlayerModule/AddMaxHp"],
+[foreign35 || {}, "JavaScripts/module/PlayerModule/PlayerData"],
+[foreign36 || {}, "JavaScripts/module/PlayerModule/PlayerModuleC"],
+[foreign37 || {}, "JavaScripts/module/PlayerModule/PlayerModuleS"],
+[foreign38 || {}, "JavaScripts/module/PlayerModule/TryOutGun"],
+[foreign39 || {}, "JavaScripts/module/RadarModule/RadarModuleC"],
+[foreign40 || {}, "JavaScripts/module/RadarModule/RadarModuleS"],
+[foreign41 || {}, "JavaScripts/module/RadarModule/ui/RadarPanel"],
+[foreign42 || {}, "JavaScripts/module/RankModule/RankData"],
+[foreign43 || {}, "JavaScripts/module/RankModule/RankModuleC"],
+[foreign44 || {}, "JavaScripts/module/RankModule/RankModuleS"],
+[foreign45 || {}, "JavaScripts/module/RankModule/ui/RankPanel"],
+[foreign46 || {}, "JavaScripts/module/RankModule/ui/RoomItem"],
+[foreign47 || {}, "JavaScripts/module/RankModule/ui/WorldItem"],
+[foreign48 || {}, "JavaScripts/module/ShopModule/ShopData"],
+[foreign49 || {}, "JavaScripts/module/ShopModule/ShopModuleC"],
+[foreign50 || {}, "JavaScripts/module/ShopModule/ShopModuleS"],
+[foreign51 || {}, "JavaScripts/module/ShopModule/ui/ShopItem"],
+[foreign52 || {}, "JavaScripts/module/ShopModule/ui/ShopPanel"],
+[foreign53 || {}, "JavaScripts/module/TaskModule/TaskData"],
+[foreign54 || {}, "JavaScripts/module/TaskModule/TaskModuleC"],
+[foreign55 || {}, "JavaScripts/module/TaskModule/TaskModuleS"],
+[foreign56 || {}, "JavaScripts/module/TaskModule/ui/TaskPanel"],
+[foreign57 || {}, "JavaScripts/module/TeamModule/TeamData"],
+[foreign58 || {}, "JavaScripts/module/TeamModule/TeamModuleC"],
+[foreign59 || {}, "JavaScripts/module/TeamModule/TeamModuleS"],
+[foreign60 || {}, "JavaScripts/module/TeamModule/ui/TeamItem"],
+[foreign61 || {}, "JavaScripts/module/TeamModule/ui/TeamPanel"],
+[foreign68 || {}, "JavaScripts/tools/EventType"],
+[foreign69 || {}, "JavaScripts/tools/FlyText"],
+[foreign70 || {}, "JavaScripts/tools/FreeCamera"],
+[foreign71 || {}, "JavaScripts/tools/GlobalData"],
+[foreign73 || {}, "JavaScripts/tools/IAPInstance"],
+[foreign74 || {}, "JavaScripts/tools/JumpGame"],
+[foreign75 || {}, "JavaScripts/tools/MapEx"],
+[foreign76 || {}, "JavaScripts/tools/PrefabEvent"],
+[foreign77 || {}, "JavaScripts/tools/Utils"],
+[foreign78 || {}, "JavaScripts/ui-generate/common/ConfirmPanel_generate"],
+[foreign79 || {}, "JavaScripts/ui-generate/common/JumpGameTips_generate"],
+[foreign80 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
+[foreign81 || {}, "JavaScripts/ui-generate/common/notice/SecondNoticeItem_generate"],
+[foreign82 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
+[foreign83 || {}, "JavaScripts/ui-generate/module/ActivityModule/ActivityPanel_generate"],
+[foreign84 || {}, "JavaScripts/ui-generate/module/AdModule/AdPanel_generate"],
+[foreign85 || {}, "JavaScripts/ui-generate/module/CoinModule/CoinPanel_generate"],
+[foreign86 || {}, "JavaScripts/ui-generate/module/CoinModule/DiamondItem_generate"],
+[foreign87 || {}, "JavaScripts/ui-generate/module/CoinModule/DiamondPanel_generate"],
+[foreign88 || {}, "JavaScripts/ui-generate/module/GMModule/GMHUD_generate"],
+[foreign89 || {}, "JavaScripts/ui-generate/module/GMModule/GMItem_generate"],
+[foreign90 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
+[foreign91 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
+[foreign92 || {}, "JavaScripts/ui-generate/module/RadarModule/RadarPanel_generate"],
+[foreign93 || {}, "JavaScripts/ui-generate/module/RankModule/RankPanel_generate"],
+[foreign94 || {}, "JavaScripts/ui-generate/module/RankModule/RoomItem_generate"],
+[foreign95 || {}, "JavaScripts/ui-generate/module/RankModule/WorldItem_generate"],
+[foreign96 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
+[foreign97 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
+[foreign98 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
+[foreign99 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
+[foreign100 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamItem_generate"],
+[foreign101 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamPanel_generate"]]);
 
 exports.MWFileMapping = MWFileMapping;
 exports.MWModuleMap = MWModuleMap;

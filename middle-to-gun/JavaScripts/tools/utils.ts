@@ -368,6 +368,145 @@ export default class Utils {
     public static playBirthSound(player: mw.Player): void {
         SoundService.play3DSound("169179", player.character, 1, GlobalData.soundVolume);
     }
+
+
+    public static stringToVector(str: string): mw.Vector {
+        let arr = str.split(",");
+        return new mw.Vector(parseFloat(arr[0]), parseFloat(arr[1]), parseFloat(arr[2]));
+    }
+
+    public static vectorToString(vector: mw.Vector): string {
+        return vector.x + "," + vector.y + "," + vector.z;
+    }
+
+    public static arrToString(arr: number[]): string {
+        let str = "";
+        for (let i = 0; i < arr.length; i++) {
+            str += arr[i] + ",";
+        }
+        return str;
+    }
+
+    public static stringToArr(str: string): number[] {
+        let arr = str.split(",");
+        let result: number[] = [];
+        for (let i = 0; i < arr.length; i++) {
+            result.push(parseInt(arr[i]));
+        }
+        return result;
+    }
+
+    private static targetGos: mw.Model[] = [];
+    public static setProjectTarget(targetGo: mw.Model): void {
+        this.targetGos.push(targetGo);
+    }
+
+    public static getRecentTargetLoc(startPosition: mw.Vector, startDirection: mw.Vector): mw.Vector {
+        let minDistance = Number.MAX_VALUE;
+        let retPosition: mw.Vector = null;
+        if (!this.targetGos || this.targetGos.length == 0) return retPosition;
+        for (let i = 0; i < this.targetGos.length; ++i) {
+            let targetLoc = this.targetGos[i].worldTransform.position;
+            if (this.isTargetInSight(targetLoc, startPosition, startDirection)) {
+                let distance = mw.Vector.subtract(targetLoc, startPosition).length;
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    retPosition = this.targetGos[i].worldTransform.position;
+                }
+            }
+        }
+        return retPosition;
+    }
+
+    public static getRecentPlayerLoc(gameObjectId: string, startPosition: mw.Vector, startDirection: mw.Vector): mw.Vector {
+        // return null;//TODO:WFZ 2021-07-07 不对玩家进行追踪
+        let minDistance = Number.MAX_VALUE;
+        let retPosition: mw.Vector = null;
+        let allPlayers = Player.getAllPlayers();
+        for (let i = 0; i < allPlayers.length; ++i) {
+            if (allPlayers[i].character.gameObjectId == gameObjectId) continue;
+            let targetLoc = allPlayers[i].character.worldTransform.position;
+            if (this.isTargetInSight(targetLoc, startPosition, startDirection)) {
+                let distance = mw.Vector.subtract(targetLoc, startPosition).length;
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    retPosition = allPlayers[i].character.worldTransform.position;
+                }
+            }
+        }
+        return retPosition;
+    }
+
+    /**判断目标是否在视野范围内 */
+    public static isTargetInSight(targetLoc: mw.Vector, startPosition: mw.Vector, startDriection: mw.Vector): boolean {
+        let targetDir = mw.Vector.subtract(targetLoc, startPosition);
+        let dot = mw.Vector.dot(targetDir, startDriection);
+        let angle = Math.acos(dot / (targetDir.length * startDriection.length));
+        let targetAngle = angle * 180 / Math.PI;
+        let targetDistance = targetDir.length;
+        return (targetDistance <= 5000) && (targetAngle <= 45);
+    }
+
+    /**得到弧形追踪路径上的点 */
+    public static getArcTracingPoints(startPosition: mw.Vector, endPosition: mw.Vector): Array<mw.Vector> {
+        let pointCount = Math.floor(mw.Vector.subtract(startPosition, endPosition).length / 100);
+        let middlePosition = this.getRandomPosition(startPosition, endPosition);
+        let retPositions = this.getCurvePointsInNum([startPosition, middlePosition, endPosition], pointCount);
+        return retPositions;
+    }
+
+    /**根据两个三维空间坐标随机得到一个中点球上的坐标 */
+    public static getRandomPosition(startPosition: mw.Vector, endPosition: mw.Vector): mw.Vector {
+        let midPosition = mw.Vector.add(startPosition, endPosition).multiply(0.5);
+        let distance = mw.Vector.subtract(startPosition, endPosition).length;
+
+        let x: number = this.randomInt(0, distance / 2);
+        x = this.randomInt(0, 1) == 0 ? -x : x;
+        let y: number = this.randomInt(0, distance / 2);
+        y = this.randomInt(0, 1) == 0 ? -y : y;
+        let z: number = this.randomInt(0, distance / 3);
+        return mw.Vector.add(midPosition, new mw.Vector(x, y, z));
+    }
+
+    /**
+    * 获取贝塞尔曲线的点的集合
+    * @param points 点的集合, 至少包含起点和终点
+    * @param num 想要生成多少点
+    * @returns 
+    */
+    public static getCurvePointsInNum(points: Array<mw.Vector>, num: number): Array<mw.Vector> {
+        let result: Array<mw.Vector> = new Array<mw.Vector>();
+        for (let i: number = 0; i < num; ++i) {
+            let t: number = i / (num - 1);
+            let point = this.getKeyPoint(points, t);
+            result.push(point);
+        }
+        return result;
+    }
+
+    public static getKeyPoint(points: Array<mw.Vector>, t: number): mw.Vector {
+        if (points.length > 1) {
+            let dirs: Array<mw.Vector> = new Array<mw.Vector>();
+            for (let i: number = 0; i < points.length - 1; i++) {
+                dirs.push(new mw.Vector(
+                    points[i + 1].x - points[i].x,
+                    points[i + 1].y - points[i].y,
+                    points[i + 1].z - points[i].z
+                ));
+            }
+            let points2: Array<mw.Vector> = new Array<mw.Vector>();
+            for (let j: number = 0; j < dirs.length; j++) {
+                points2.push(new mw.Vector(
+                    points[j].x + dirs[j].x * t,
+                    points[j].y + dirs[j].y * t,
+                    points[j].z + dirs[j].z * t
+                ));
+            }
+            return this.getKeyPoint(points2, t);
+        } else {
+            return new mw.Vector(points[0].x, points[0].y, points[0].z);
+        }
+    }
 }
 
 export function cubicBezier(p1x, p1y, p2x, p2y) {

@@ -4,7 +4,6 @@ import { GameConfig } from "../../config/GameConfig";
 import Utils from "../../tools/Utils";
 import AdPanel from "../AdModule/ui/AdPanel";
 import CoinModuleC from "../CoinModule/CoinModuleC";
-import GunModuleC from "../GunModule/GunModuleC";
 import { MorphModuleC } from "../MorphModule/MorphModule";
 import ShopModuleC from "../ShopModule/ShopModuleC";
 
@@ -33,14 +32,6 @@ export default class TryOutGun extends Script {
         }
     }
     /**--------------------------------【客户端】-------------------------------- */
-    private gunModuleC: GunModuleC = null;
-    private get getGunModuleC(): GunModuleC {
-        if (this.gunModuleC == null) {
-            this.gunModuleC = ModuleService.getModule(GunModuleC);
-        }
-        return this.gunModuleC;
-    }
-
     private morphModuleC: MorphModuleC = null;
     private get getMorphModuleC(): MorphModuleC {
         if (this.morphModuleC == null) {
@@ -98,7 +89,6 @@ export default class TryOutGun extends Script {
     }
 
     private initModule(): void {
-        this.gunModuleC = ModuleService.getModule(GunModuleC);
     }
 
     private initUIPanel(): void {
@@ -137,7 +127,7 @@ export default class TryOutGun extends Script {
         if (this.getMorphModuleC.getIsMorph) {
             this.getShopModuleC.setUseShopId_Gun(this.gunkey);
         } else {
-            this.getGunModuleC.switchGun(this.gunkey);
+            // this.getGunModuleC.switchGun(this.gunkey);//TODO:EFZ
         }
     }
 

@@ -5,8 +5,6 @@ import ActivityModuleS from "./module/ActivityModule/ActivityModuleS";
 import CoinData from "./module/CoinModule/CoinData";
 import CoinModuleC from "./module/CoinModule/CoinModuleC";
 import CoinModuleS from "./module/CoinModule/CoinModuleS";
-import GunModuleC from "./module/GunModule/GunModuleC";
-import GunModuleS from "./module/GunModule/GunModuleS";
 import { HUDData } from "./module/HUDModule/HUDData";
 import HUDModuleC from "./module/HUDModule/HUDModuleC";
 import HUDModuleS from "./module/HUDModule/HUDModuleS";
@@ -26,6 +24,9 @@ import TaskModuleC from "./module/TaskModule/TaskModuleC";
 import TaskModuleS from "./module/TaskModule/TaskModuleS";
 import TeamModuleC from "./module/TeamModule/TeamModuleC";
 import TeamModuleS from "./module/TeamModule/TeamModuleS";
+import WeaponData from "./module/WeaponModule/WeaponData";
+import WeaponModuleC from "./module/WeaponModule/WeaponModuleC";
+import WeaponModuleS from "./module/WeaponModule/WeaponModuleS";
 import GlobalData from "./tools/GlobalData";
 
 @Component
@@ -75,7 +76,7 @@ export default class GameLauncher extends mw.Script {
         ModuleService.registerModule(RankModuleS, RankModuleC, null);
         ModuleService.registerModule(RadarModuleS, RadarModuleC, null);
         ModuleService.registerModule(ActivityModuleS, ActivityModuleC, ActivityData);
-        ModuleService.registerModule(GunModuleS, GunModuleC, null);
+        ModuleService.registerModule(WeaponModuleS, WeaponModuleC, WeaponData);
         ModuleService.registerModule(TaskModuleS, TaskModuleC, TaskData);
         ModuleService.registerModule(MorphModuleS, MorphModuleC, null);
     }

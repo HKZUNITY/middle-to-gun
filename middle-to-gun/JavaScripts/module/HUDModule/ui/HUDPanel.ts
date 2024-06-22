@@ -43,6 +43,7 @@ export default class HUDPanel extends HUDPanel_Generate {
         Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.Collapsed);
         Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.Collapsed);
         Utils.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.Collapsed);
+        this.initAimUI();
     }
 
     private bindButtons(): void {
@@ -56,6 +57,7 @@ export default class HUDPanel extends HUDPanel_Generate {
         this.mUnMorphButton.onClicked.add(this.onClickUnMorphButton.bind(this));
         this.mJumpButton.onClicked.add(this.onClickJumpButton.bind(this));
         this.bindSetButton();
+        this.bindAtkButton();
     }
 
     private onClickOpenShopButton(): void {
@@ -666,6 +668,135 @@ export default class HUDPanel extends HUDPanel_Generate {
                 widget.position = new mw.Vector2(v.posX, v.posY);
             })
             .easing(cubicBezier(.22, .9, .28, .92));
+    }
+    //#endregion
+
+    //#region Normal Attack Button
+    private bindAtkButton(): void {
+        this.mNormalAtkButton.onJoyStickDown.add(() => {
+            this.getHUDModuleC.onNormalAction.call(true);
+        });
+        this.mNormalAtkButton.onJoyStickUp.add(() => {
+            this.getHUDModuleC.onNormalAction.call(false);
+        });
+    }
+    //#endregion
+
+    //#region Aim
+    private leftAimTween1: mw.Tween<any> = null;
+    private rightAimTween1: mw.Tween<any> = null;
+    private upAimTween1: mw.Tween<any> = null;
+    private downAimTween1: mw.Tween<any> = null;
+    private leftAimTween2: mw.Tween<any> = null;
+    private rightAimTween2: mw.Tween<any> = null;
+    private upAimTween2: mw.Tween<any> = null;
+    private downAimTween2: mw.Tween<any> = null;
+
+    private fromAimLeftPos: mw.Vector2 = mw.Vector2.zero;
+    private fromAimRightPos: mw.Vector2 = mw.Vector2.zero;
+    private fromAimUpPos: mw.Vector2 = mw.Vector2.zero;
+    private fromAimDownPos: mw.Vector2 = mw.Vector2.zero;
+    private toAimLeftPos: mw.Vector2 = mw.Vector2.zero;
+    private toAimRightPos: mw.Vector2 = mw.Vector2.zero;
+    private toAimUpPos: mw.Vector2 = mw.Vector2.zero;
+    private toAimDownPos: mw.Vector2 = mw.Vector2.zero;
+
+    private aimOffsetValue: number = 10;
+    private initAimUI(): void {
+        this.updateAimPosition();
+        this.initAimUIPosition();
+        this.updateAimPosition();
+        this.initToAimUIPosition();
+        this.initAimUITween();
+    }
+
+    private updateAimPosition(): void {
+        this.fromAimLeftPos = this.mAimLeft.position;
+        this.fromAimRightPos = this.mAimRight.position;
+        this.fromAimUpPos = this.mAimUp.position;
+        this.fromAimDownPos = this.mAimDown.position;
+    }
+
+    private initAimUIPosition(): void {
+        this.mAimLeft.position = new mw.Vector2(this.fromAimLeftPos.x - this.aimOffsetValue, this.fromAimLeftPos.y);
+        this.mAimRight.position = new mw.Vector2(this.fromAimRightPos.x + this.aimOffsetValue, this.fromAimRightPos.y);
+        this.mAimUp.position = new mw.Vector2(this.fromAimUpPos.x, this.fromAimUpPos.y - this.aimOffsetValue);
+        this.mAimDown.position = new mw.Vector2(this.fromAimDownPos.x, this.fromAimDownPos.y + this.aimOffsetValue);
+    }
+
+    private initToAimUIPosition(): void {
+        this.toAimLeftPos = new mw.Vector2(this.fromAimLeftPos.x - (this.aimOffsetValue * 3), this.fromAimLeftPos.y);
+        this.toAimRightPos = new mw.Vector2(this.fromAimRightPos.x + (this.aimOffsetValue * 3), this.fromAimRightPos.y);
+        this.toAimUpPos = new mw.Vector2(this.fromAimUpPos.x, this.fromAimUpPos.y - (this.aimOffsetValue * 3));
+        this.toAimDownPos = new mw.Vector2(this.fromAimDownPos.x, this.fromAimDownPos.y + (this.aimOffsetValue * 3));
+    }
+
+    private expansionTime: number = 0.15;
+    private initAimUITween(): void {
+        this.leftAimTween2 = this.expansionTween(this.mAimLeft, this.toAimLeftPos, this.fromAimLeftPos, this.expansionTime).easing(cubicBezier(.19, .66, .27, .72));
+        this.rightAimTween2 = this.expansionTween(this.mAimRight, this.toAimRightPos, this.fromAimRightPos, this.expansionTime).easing(cubicBezier(.19, .66, .27, .72));
+        this.upAimTween2 = this.expansionTween(this.mAimUp, this.toAimUpPos, this.fromAimUpPos, this.expansionTime).easing(cubicBezier(.19, .66, .27, .72));
+        this.downAimTween2 = this.expansionTween(this.mAimDown, this.toAimDownPos, this.fromAimDownPos, this.expansionTime).easing(cubicBezier(.19, .66, .27, .72));
+    }
+
+    public startAimUITween(): void {
+        this.stopAimUITween();
+        let lerpTime = Math.abs(this.mAimLeft.position.x - this.toAimLeftPos.x) / (this.aimOffsetValue * 3) * this.expansionTime;
+        this.leftAimTween1 = this.expansionTween(this.mAimLeft, new mw.Vector2(this.mAimLeft.position.x, this.mAimLeft.position.y), this.toAimLeftPos, lerpTime)
+            .easing(cubicBezier(.13, .68, .8, .25))
+            .start()
+            .onComplete(() => {
+                this.leftAimTween2.start();
+            });
+        this.rightAimTween1 = this.expansionTween(this.mAimRight, new mw.Vector2(this.mAimRight.position.x, this.mAimRight.position.y), this.toAimRightPos, lerpTime)
+            .easing(cubicBezier(.13, .68, .8, .25))
+            .start()
+            .onComplete(() => {
+                this.rightAimTween2.start();
+            });
+        this.upAimTween1 = this.expansionTween(this.mAimUp, new mw.Vector2(this.mAimUp.position.x, this.mAimUp.position.y), this.toAimUpPos, lerpTime)
+            .easing(cubicBezier(.13, .68, .8, .25))
+            .start()
+            .onComplete(() => {
+                this.upAimTween2.start();
+            });
+        this.downAimTween1 = this.expansionTween(this.mAimDown, new mw.Vector2(this.mAimDown.position.x, this.mAimDown.position.y), this.toAimDownPos, lerpTime)
+            .easing(cubicBezier(.13, .68, .8, .25))
+            .start()
+            .onComplete(() => {
+                this.downAimTween2.start();
+            });
+    }
+
+    private stopAimUITween(): void {
+        if (this.leftAimTween1) this.leftAimTween1.stop();
+        if (this.leftAimTween2) this.leftAimTween2.stop();
+        if (this.rightAimTween1) this.rightAimTween1.stop();
+        if (this.rightAimTween2) this.rightAimTween2.stop();
+        if (this.upAimTween1) this.upAimTween1.stop();
+        if (this.upAimTween2) this.upAimTween2.stop();
+        if (this.downAimTween1) this.downAimTween1.stop();
+        if (this.downAimTween2) this.downAimTween2.stop();
+    }
+
+    private expansionTween(ui: mw.Image, fromXY: mw.Vector2, toXY: mw.Vector2, time: number): mw.Tween<any> {
+        return new Tween({ x: fromXY.x, y: fromXY.y })
+            .to({ x: toXY.x, y: toXY.y }, time * 1000)
+            .onUpdate((v) => {
+                ui.position = new mw.Vector2(v.x, v.y);
+            });
+    }
+    //#endregion
+
+    //#region Gun
+    public updateGunPropUI(gunIcon: string, gunBulletCount: number, gunName: string): void {
+        Utils.setImageByAssetIconData(this.mGunIconImage, gunIcon);
+        this.mGunBulletCountTextBlock.text = gunBulletCount.toString();
+        this.mGunNameTextBlock.text = gunName;
+    }
+
+    public updateBulletCountUI(bulletCount: number): void {
+        this.mGunBulletCountTextBlock.text = bulletCount.toString();
     }
     //#endregion
 }

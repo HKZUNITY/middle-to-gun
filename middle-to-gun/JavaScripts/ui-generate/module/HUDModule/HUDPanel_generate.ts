@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.06.22-23.56.50
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -330,6 +330,76 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mJumpButton_Internal
 	}
+	private mAimCanvas_Internal: mw.Canvas
+	public get mAimCanvas(): mw.Canvas {
+		if(!this.mAimCanvas_Internal&&this.uiWidgetBase) {
+			this.mAimCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAimCanvas') as mw.Canvas
+		}
+		return this.mAimCanvas_Internal
+	}
+	private mAimPoint_Internal: mw.Image
+	public get mAimPoint(): mw.Image {
+		if(!this.mAimPoint_Internal&&this.uiWidgetBase) {
+			this.mAimPoint_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAimCanvas/mAimPoint') as mw.Image
+		}
+		return this.mAimPoint_Internal
+	}
+	private mAimUp_Internal: mw.Image
+	public get mAimUp(): mw.Image {
+		if(!this.mAimUp_Internal&&this.uiWidgetBase) {
+			this.mAimUp_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAimCanvas/mAimUp') as mw.Image
+		}
+		return this.mAimUp_Internal
+	}
+	private mAimDown_Internal: mw.Image
+	public get mAimDown(): mw.Image {
+		if(!this.mAimDown_Internal&&this.uiWidgetBase) {
+			this.mAimDown_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAimCanvas/mAimDown') as mw.Image
+		}
+		return this.mAimDown_Internal
+	}
+	private mAimLeft_Internal: mw.Image
+	public get mAimLeft(): mw.Image {
+		if(!this.mAimLeft_Internal&&this.uiWidgetBase) {
+			this.mAimLeft_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAimCanvas/mAimLeft') as mw.Image
+		}
+		return this.mAimLeft_Internal
+	}
+	private mAimRight_Internal: mw.Image
+	public get mAimRight(): mw.Image {
+		if(!this.mAimRight_Internal&&this.uiWidgetBase) {
+			this.mAimRight_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAimCanvas/mAimRight') as mw.Image
+		}
+		return this.mAimRight_Internal
+	}
+	private mGunIconImage_Internal: mw.Image
+	public get mGunIconImage(): mw.Image {
+		if(!this.mGunIconImage_Internal&&this.uiWidgetBase) {
+			this.mGunIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/GunCanvas/mGunIconImage') as mw.Image
+		}
+		return this.mGunIconImage_Internal
+	}
+	private mGunNameTextBlock_Internal: mw.TextBlock
+	public get mGunNameTextBlock(): mw.TextBlock {
+		if(!this.mGunNameTextBlock_Internal&&this.uiWidgetBase) {
+			this.mGunNameTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/GunCanvas/mGunNameTextBlock') as mw.TextBlock
+		}
+		return this.mGunNameTextBlock_Internal
+	}
+	private mGunBulletCountTextBlock_Internal: mw.TextBlock
+	public get mGunBulletCountTextBlock(): mw.TextBlock {
+		if(!this.mGunBulletCountTextBlock_Internal&&this.uiWidgetBase) {
+			this.mGunBulletCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/GunCanvas/mGunBulletCountTextBlock') as mw.TextBlock
+		}
+		return this.mGunBulletCountTextBlock_Internal
+	}
+	private mNormalAtkButton_Internal: mw.VirtualJoystickPanel
+	public get mNormalAtkButton(): mw.VirtualJoystickPanel {
+		if(!this.mNormalAtkButton_Internal&&this.uiWidgetBase) {
+			this.mNormalAtkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mNormalAtkButton') as mw.VirtualJoystickPanel
+		}
+		return this.mNormalAtkButton_Internal
+	}
 
 
 	protected onAwake() {
@@ -438,6 +508,12 @@ export default class HUDPanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.mDeadCountDownTextBlock)
+		
+	
+		this.initLanguage(this.mGunNameTextBlock)
+		
+	
+		this.initLanguage(this.mGunBulletCountTextBlock)
 		
 	
 		//文本多语言

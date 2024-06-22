@@ -98,7 +98,7 @@ export default class Npc extends Script {
     private model: mw.Model = null;
     private npcGunMoeld: mw.Model = null;
     private async setNpcDescriptionAndGun(): Promise<void> {
-        let ran = Utils.randomInt(1, 2);
+        let ran = Utils.randomInt(2, 2);//TODO:WFZ
         if (ran == 1) {
             let morphElement = GameConfig.Morph.getElement(Utils.randomInt(1, GameConfig.Morph.getAllElement().length));
             let assetId = morphElement.AssetId;

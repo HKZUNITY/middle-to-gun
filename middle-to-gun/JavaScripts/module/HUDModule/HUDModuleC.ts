@@ -23,6 +23,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     public onResetPosAction: Action = new Action();
     public onMorphAction: Action1<boolean> = new Action1<boolean>();
     public onJumpAction: Action = new Action();
+    public onNormalAction: Action1<boolean> = new Action1<boolean>();
 
     protected onStart(): void {
         this.initUIPanel();
@@ -245,6 +246,22 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
         this.isMorph = isMorph;
         Event.dispatchToLocal(EventType.OnOffWeaponUI, isMorph);
         if (!isMorph) Event.dispatchToLocal(EventType.TryOutGun);
+    }
+    //#endregion
+
+    //#region Aim
+    public startAimUITween(): void {
+        this.getHUDPanel.startAimUITween();
+    }
+    //#endregion
+
+    //#region Update Gun
+    public updateBulletCount(bulletCount: number): void {
+        this.getHUDPanel.updateBulletCountUI(bulletCount);
+    }
+
+    public updateGunPropUI(gunIcon: string, gunBulletCount: number, gunName: string): void {
+        this.getHUDPanel.updateGunPropUI(gunIcon, gunBulletCount, gunName);
     }
     //#endregion
 }

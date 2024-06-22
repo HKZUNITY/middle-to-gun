@@ -4,7 +4,6 @@ import { EventType } from "../../tools/EventType";
 import { MapEx } from "../../tools/MapEx";
 import Utils from "../../tools/Utils";
 import CoinModuleC from "../CoinModule/CoinModuleC";
-import GunModuleC from "../GunModule/GunModuleC";
 import HUDModuleC from "../HUDModule/HUDModuleC";
 import ShopData, { PriceType, ShopType } from "./ShopData";
 import ShopModuleS from "./ShopModuleS";
@@ -27,14 +26,6 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
         return this.coinModuleC;
     }
 
-    private gunModuleC: GunModuleC = null;
-    private get getGunModuleC(): GunModuleC {
-        if (this.gunModuleC == null) {
-            this.gunModuleC = ModuleService.getModule(GunModuleC);
-        }
-        return this.gunModuleC;
-    }
-
     private shopPanel: ShopPanel = null;
     private get getShopPanel(): ShopPanel {
         if (this.shopPanel == null) {
@@ -53,7 +44,6 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
     private initModule(): void {
         this.hudModuleC = ModuleService.getModule(HUDModuleC);
         this.coinModuleC = ModuleService.getModule(CoinModuleC);
-        this.gunModuleC = ModuleService.getModule(GunModuleC);
     }
 
     private bindActions(): void {
@@ -200,7 +190,7 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
 
     private setCharacterGun(): void {
         let gunId = MapEx.get(this.useShopIds, ShopType.Gun);
-        this.getGunModuleC.switchGun(gunId);
+        // this.getGunModuleC.switchGun(gunId);//TODO:WFZ
     }
 
     private async setCharacterDescription(shopId: number): Promise<void> {
