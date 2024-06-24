@@ -5,6 +5,7 @@ import { MapEx } from "../../tools/MapEx";
 import Utils from "../../tools/Utils";
 import CoinModuleC from "../CoinModule/CoinModuleC";
 import HUDModuleC from "../HUDModule/HUDModuleC";
+import WeaponModuleC from "../WeaponModule/WeaponModuleC";
 import ShopData, { PriceType, ShopType } from "./ShopData";
 import ShopModuleS from "./ShopModuleS";
 import ShopPanel from "./ui/ShopPanel";
@@ -32,6 +33,14 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
             this.shopPanel = UIService.getUI(ShopPanel);
         }
         return this.shopPanel;
+    }
+
+    private weaponModuleC: WeaponModuleC = null;
+    private get getWeaponModuleC(): WeaponModuleC {
+        if (!this.weaponModuleC) {
+            this.weaponModuleC = ModuleService.getModule(WeaponModuleC);
+        }
+        return this.weaponModuleC;
     }
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
@@ -83,7 +92,7 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
     }
 
     private initUseShopItem(): void {
-        if (MapEx.has(this.useShopIds, ShopType.Gun)) this.setCharacterGun();
+        // if (MapEx.has(this.useShopIds, ShopType.Gun)) this.setCharacterGun();
         if (MapEx.has(this.useShopIds, ShopType.Role)) this.setCharacterDescription(MapEx.get(this.useShopIds, ShopType.Role));
         if (MapEx.has(this.useShopIds, ShopType.Trailing)) this.setCharacterTrailing(MapEx.get(this.useShopIds, ShopType.Trailing));
     }
@@ -91,7 +100,7 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
     private isAds(shopId: number, shopType: ShopType): boolean {
         switch (shopType) {
             case ShopType.Gun:
-                return GameConfig.GUN.getElement(shopId).PRICETYPE == PriceType.Ads;
+                return GameConfig.WeaponProp.getElement(shopId).PriceType == PriceType.Ads;
             case ShopType.Role:
                 return GameConfig.ROLE.getElement(shopId).PRICETYPE == PriceType.Ads;
             case ShopType.Trailing:
@@ -146,7 +155,7 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
     public getGoodPrice(shopId: number, shopType: ShopType): number[] {
         switch (shopType) {
             case ShopType.Gun:
-                return GameConfig.GUN.getElement(shopId).PRICE;
+                return GameConfig.WeaponProp.getElement(shopId).WeaponPrices;
             case ShopType.Role:
                 return GameConfig.ROLE.getElement(shopId).PRICE;
             case ShopType.Trailing:
@@ -190,7 +199,7 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
 
     private setCharacterGun(): void {
         let gunId = MapEx.get(this.useShopIds, ShopType.Gun);
-        // this.getGunModuleC.switchGun(gunId);//TODO:WFZ
+        this.getWeaponModuleC.switchWeaponData(gunId);
     }
 
     private async setCharacterDescription(shopId: number): Promise<void> {
@@ -270,14 +279,14 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
         }
         this.gunkey = key;
         if (this.gunModel) GameObjPool.despawn(this.gunModel);
-        let gunElement = GameConfig.GUN.getElement(key);
-        let gunId = gunElement.GUNICON_M;
+        let weaponPropElement = GameConfig.WeaponProp.getElement(key);
+        let gunId = weaponPropElement.WeaponIcon;
         await Utils.asyncDownloadAsset(gunId);
         this.gunModel = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Asset);
         this.gunModel.parent = this.shopAnchor;
-        this.gunModel.localTransform.position = gunElement.GUNLOC;
+        this.gunModel.localTransform.position = weaponPropElement.GunLoc;
         this.gunModel.localTransform.rotation = new mw.Rotation(0, 15, 0);
-        this.gunModel.localTransform.scale = gunElement.GUNSCALE;
+        this.gunModel.localTransform.scale = weaponPropElement.GunScale;
         this.setShopNpcGunState(true);
     }
 

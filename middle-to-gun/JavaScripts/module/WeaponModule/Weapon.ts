@@ -1,4 +1,7 @@
-﻿import { Helper } from "../../tools/Helper";
+﻿import { GameConfig } from "../../config/GameConfig";
+import { IProjectilePropElement } from "../../config/ProjectileProp";
+import { IWeaponPropElement } from "../../config/WeaponProp";
+import { Helper } from "../../tools/Helper";
 import Utils from "../../tools/Utils";
 import { Projectile } from "./Projectile";
 import { ProjectileType } from "./WeaponData";
@@ -26,7 +29,7 @@ export default class Weapon extends Script {
     private player: mw.Player = null;
     private get getPlayer(): mw.Player {
         if (this.player == null) {
-            this.player = Player.getPlayer(this.playerId_WeaponId);
+            this.player = Player.getPlayer(this.playerId);
         }
         return this.player;
     }
@@ -49,11 +52,12 @@ export default class Weapon extends Script {
     private async initPlayer(): Promise<void> {
         if (!this.player) {
             this.player = await Player.asyncGetPlayer(this.playerId);
-            console.error("playerId = " + this.playerId_WeaponId + "的玩家 " + this.player ? "角色初始化完成" : "角色初始化失败");
+            console.error(`playerId = ${this.playerId}"的玩家 "${this.player ? "角色初始化完成" : "角色初始化失败"}`);
         }
     }
 
     //#region Switch Weapon
+    private weaponPropElement: IWeaponPropElement = null;
     private async onWeaponChanged(): Promise<void> {
         if (this.weaponId == -1) {
             this.despawnWeapon();
@@ -61,11 +65,11 @@ export default class Weapon extends Script {
         }
         if (!this.player) await this.initPlayer();
         if (!this.player) return;
-        if (!Helper.weaponDataMap.has(this.weaponId)) return;
-        let weaponData = Helper.weaponDataMap.get(this.weaponId);
+        this.weaponPropElement = GameConfig.WeaponProp.getElement(this.weaponId);
+        if (!this.weaponPropElement) return;
         this.despawnWeapon();
-        await this.spawnWeapon(weaponData.prefabId, weaponData.slotType);
-        this.playSubStance(weaponData.gunAttitude);
+        await this.spawnWeapon(this.weaponPropElement.PrefabId, this.weaponPropElement.SlotType);
+        this.playSubStance(this.weaponPropElement.GunAttitude);
     }
 
     private async playSubStance(gunAttitude: string): Promise<void> {
@@ -80,7 +84,7 @@ export default class Weapon extends Script {
         this.getPlayer.character.attachToSlot(this.weaponModel, slotType);
         this.weaponModel.localTransform.position = mw.Vector.zero;
         this.weaponModel.localTransform.rotation = mw.Rotation.zero;
-        console.error("playerId = " + this.playerId_WeaponId + "的玩家 " + this.weaponModel ? "武器加载完成" : "武器加载失败");
+        console.error(`playerId = ${this.playerId}的玩家 "${this.weaponModel ? "武器加载完成" : "武器加载失败"}`);
         this.fireAnchor = this.weaponModel.getChildByName("FireAnchor") as mw.Model;
         if (this.getPlayer.playerId == Player.localPlayer.playerId) this.getWeaponModuleC.setFireAnchor(this.fireAnchor);
     }
@@ -92,48 +96,50 @@ export default class Weapon extends Script {
     //#endregion
 
     //#region Projectile
+    private projectilePropElement: IProjectilePropElement = null;
     private fire(): void {
         if (!this.fireData) return;
         // console.error("fireData = " + this.fireData);
         let data = this.fireData.split("|");
-        if (data.length < 5) return;
+        if (data.length < 3) return;
         let shootDir = Utils.stringToVector(data[0]);
-        let projectileIndex = parseInt(data[1]);
-        let projectileType = parseInt(data[2]);
-        let projectileCount = parseInt(data[3]);
-        let fireInterval = parseFloat(data[4]);
+        let projectileType = parseInt(data[1]);
+        let attackIndex = parseInt(data[2]);
 
-        this.prepareFire(this.getPlayer.character.gameObjectId,
-            this.fireAnchor.worldTransform.position,
-            shootDir, projectileIndex,
-            projectileCount, projectileType, fireInterval);
+        if (!this.getPlayer || !this.fireAnchor) return;
+
+        this.projectilePropElement = GameConfig.ProjectileProp.getElement(this.weaponId);
+        if (!this.projectilePropElement || !this.weaponPropElement) return;
+
+        console.error(`playerId = ${this.playerId}的玩家 发射一枚子弹`);
+        this.prepareFire(this.getPlayer.character.gameObjectId, this.fireAnchor.worldTransform.position, shootDir, projectileType, attackIndex);
     }
 
-    private async prepareFire(characterId: string, firePosition: mw.Vector, shootDir: mw.Vector,
-        projectileIndex: number, projectileCount: number, projectileType: ProjectileType, fireInterval: number = 0.01): Promise<void> {
-        if (!Helper.projectileDateMap.has(projectileIndex)) return;
-        let projectileDate = Helper.projectileDateMap.get(projectileIndex);
-        let prefabId = projectileDate.prefabId;
-        let fireSound = projectileDate.fireSound;
-        let hitEffect = projectileDate.hitEffect;
-        this.calculateFire(characterId, prefabId, hitEffect, firePosition, shootDir, projectileType, fireSound);
+    private async prepareFire(characterId: string, firePosition: mw.Vector, shootDir: mw.Vector, projectileType: ProjectileType, attackIndex: number): Promise<void> {
+        let prefabId = this.projectilePropElement.PrefabId;
+        let fireSound = this.projectilePropElement.FireSound;
+        let hitEffect = this.projectilePropElement.HitEffect;
+        let hitEffectScale = this.projectilePropElement.HitEffectScale;
+        let projectileCount = this.weaponPropElement.NormalBulletCount[attackIndex];
+        let fireInterval = this.weaponPropElement.NormalFireInterval[attackIndex];
+        this.calculateFire(characterId, prefabId, hitEffect, hitEffectScale, firePosition, shootDir, projectileType, fireSound);
         for (let i = 0; i < projectileCount - 1; ++i) {
             await new Promise<void>((resolve: () => void) => {
                 setTimeout(() => {
-                    this.calculateFire(characterId, prefabId, hitEffect, firePosition, shootDir, projectileType, fireSound);
+                    this.calculateFire(characterId, prefabId, hitEffect, hitEffectScale, firePosition, shootDir, projectileType, fireSound);
                     return resolve();
                 }, fireInterval * 1000);
             });
         }
     }
 
-    private calculateFire(characterId: string, prefabId: string, hitEffect: string, firePosition: mw.Vector,
+    private calculateFire(characterId: string, prefabId: string, hitEffect: string, hitEffectScale: mw.Vector, firePosition: mw.Vector,
         shootDir: mw.Vector, projectileType: ProjectileType, fireSound: string): void {
-        this.startFire(characterId, prefabId, hitEffect, firePosition, shootDir, projectileType);
+        this.startFire(characterId, prefabId, hitEffect, hitEffectScale, firePosition, shootDir, projectileType);
         this.playFireSound(firePosition, fireSound);
     }
 
-    private startFire(characterId: string, projectileId: string, hitEffect: string, firePosition: mw.Vector, startDirection: mw.Vector, projectileType: ProjectileType): void {
+    private startFire(characterId: string, projectileId: string, hitEffect: string, hitEffectScale: mw.Vector, firePosition: mw.Vector, startDirection: mw.Vector, projectileType: ProjectileType): void {
         let projectile: Projectile = null;
         let targetPosition: mw.Vector = null;
         let paths: mw.Vector[] = null;
@@ -150,11 +156,11 @@ export default class Weapon extends Script {
                 projectile.initFire(characterId, firePosition, startDirection, projectileType, paths);
             } else {
                 projectile = new Projectile(characterId, projectileId, hitEffect,
-                    mw.Vector.up.multiply(-100), firePosition, startDirection, projectileType, paths);
+                    hitEffectScale, firePosition, startDirection, projectileType, paths);
             }
         } else {
             projectile = new Projectile(characterId, projectileId, hitEffect,
-                mw.Vector.up.multiply(-100), firePosition, startDirection, projectileType, paths);
+                hitEffectScale, firePosition, startDirection, projectileType, paths);
         }
 
         if (Helper.activeBulletMap.has(projectileId)) {

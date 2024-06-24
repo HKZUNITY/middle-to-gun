@@ -124,20 +124,20 @@ export default class ShopItem extends ShopItem_Generate {
 
 	private isHas: boolean = false;
 	private setGun(key: number): void {
-		let gunElement = GameConfig.GUN.getElement(key);
-		this.setIcon(gunElement.GUNICON_M, true);
+		let weaponPropElement = GameConfig.WeaponProp.getElement(key);
+		this.setIcon(weaponPropElement.WeaponIcon, true);
 		if (key == 1) this.mICONImage.renderScale = mw.Vector2.one.multiply(0.8);
 		else if (key == 14) this.mICONImage.renderTransformAngle = 90;
 		else {
 			this.mICONImage.renderScale = mw.Vector2.one;
 			this.mICONImage.renderTransformAngle = 0;
 		}
-		this.mNameTextBlock.text = gunElement.GUNNAME;
-		this.mHasTypeTextBlock.text = gunElement.PRICETYPE == PriceType.Ads ? "限时" : "永久";
-		this.mHurtTextBlock.text = "伤害:" + gunElement.HURT;
-		this.mBulletCountTextBlock.text = "子弹:" + gunElement.BULLETCOUNT + "/∞";
+		this.mNameTextBlock.text = weaponPropElement.WeaponName;
+		this.mHasTypeTextBlock.text = weaponPropElement.PriceType == PriceType.Ads ? "限时" : "永久";
+		this.mHurtTextBlock.text = "伤害:" + weaponPropElement.Damage;
+		this.mBulletCountTextBlock.text = "子弹:" + weaponPropElement.BulletCount + "/∞";
 		if (this.isHas) return;
-		this.updatePrice(gunElement.PRICETYPE, gunElement.PRICE);
+		this.updatePrice(weaponPropElement.PriceType, weaponPropElement.WeaponPrices);
 	}
 
 	private setRole(key: number): void {

@@ -14,18 +14,18 @@ export class Projectile {
     private characterId: string = "";
     private projectileId: string = "";
     private hitEffect: string = "";
-    private recyclePosition: mw.Vector = mw.Vector.zero;
+    private hitEffectScale: mw.Vector = mw.Vector.one;
     private startPosition: mw.Vector = mw.Vector.zero;
     private startDirection: mw.Vector = mw.Vector.zero;
     private projectileType: ProjectileType = ProjectileType.Normal;
     private paths: mw.Vector[] = [];
 
-    constructor(characterId: string, projectileId: string, hitEffect: string, recyclePosition: mw.Vector, startPosition: mw.Vector, startDirection: mw.Vector,
+    constructor(characterId: string, projectileId: string, hitEffect: string, hitEffectScale: mw.Vector, startPosition: mw.Vector, startDirection: mw.Vector,
         projectileType: ProjectileType, paths: mw.Vector[]) {
         this.characterId = characterId;
         this.projectileId = projectileId;
         this.hitEffect = hitEffect;
-        this.recyclePosition = recyclePosition;
+        this.hitEffectScale = hitEffectScale;
         this.startPosition = startPosition;
         this.startDirection = startDirection;
         this.projectileType = projectileType;
@@ -38,10 +38,10 @@ export class Projectile {
     private trigger: mw.Trigger = null;
     private async initBullet(): Promise<void> {
         this.projectile = await GameObjPool.asyncSpawn(this.projectileId, mwext.GameObjPoolSourceType.Prefab);
-        this.projectile.worldTransform.position = this.recyclePosition;
+        this.projectile.worldTransform.position = Helper.recyclePosition;
         this.trigger = this.projectile.getChildByName("触发器") as mw.Trigger;
         this.trigger.onEnter.add(this.onTriggerEnter.bind(this));
-        this.trigger.enabled = this.getCurCharacterId == this.characterId;
+        this.trigger.enabled = true;
         this.prepareFire();
     }
 
@@ -55,7 +55,7 @@ export class Projectile {
                 }
             }
         }
-        this.recycle();
+        this.recycleThis();
     }
 
     public initFire(ownerId: string, startPosition: mw.Vector, startDirection: mw.Vector,
@@ -122,21 +122,21 @@ export class Projectile {
         mw.Vector.lerp(this.currentLocation, this.paths[this.pathIndex], 0.6, this.currentLocation);
         this.projectile.worldTransform.position = this.currentLocation;
         if (mw.Vector.subtract(this.currentLocation, this.paths[this.paths.length - 1]).length <= 10) {
-            this.recycle();
+            this.recycleThis();
         }
     }
 
     private setThisVisibility(visible: boolean): void {
         if (!this.projectile || !this.trigger) return;
         this.projectile.setVisibility(visible, true);
-        this.trigger.enabled = visible && (this.getCurCharacterId == this.characterId);
+        this.trigger.enabled = visible;
     }
 
     private recycleTimeOutId: any = null;
     private setRecycleTimeout(): void {
         this.clearRecycleTimeOut();
         this.recycleTimeOutId = setTimeout(() => {
-            this.recycle();
+            this.recycleThis();
         }, 10 * 1000);
     }
 
@@ -146,20 +146,10 @@ export class Projectile {
         this.recycleTimeOutId = null;
     }
 
-    private recycle(): void {
+    private recycleThis(): void {
         this.play3DSound("208300");
         this.playHitEffect();
-        if (!Helper.activeBulletMap.has(this.projectileId) || !Helper.activeBulletMap.get(this.projectileId).has(this)) return;
-        Helper.activeBulletMap.get(this.projectileId).delete(this);
-        if (Helper.inactiveBullets.has(this.projectileId)) {
-            Helper.inactiveBullets.get(this.projectileId).push(this);
-        } else {
-            Helper.inactiveBullets.set(this.projectileId, [this]);
-        }
-        this.projectile.worldTransform.position = this.recyclePosition;
-        this.setThisVisibility(false);
-        this.clearRecycleTimeOut();
-        this.isUpdate = false;
+        this.recycleProjectile();
         // console.error("recycle");
     }
 
@@ -168,6 +158,20 @@ export class Projectile {
     }
 
     private playHitEffect(): void {
-        EffectService.playAtPosition(this.hitEffect, this.projectile.worldTransform.position);
+        EffectService.playAtPosition(this.hitEffect, this.projectile.worldTransform.position, { scale: this.hitEffectScale });
+    }
+
+    private recycleProjectile(): void {
+        if (!Helper.activeBulletMap.has(this.projectileId) || !Helper.activeBulletMap.get(this.projectileId).has(this)) return;
+        Helper.activeBulletMap.get(this.projectileId).delete(this);
+        if (Helper.inactiveBullets.has(this.projectileId)) {
+            Helper.inactiveBullets.get(this.projectileId).push(this);
+        } else {
+            Helper.inactiveBullets.set(this.projectileId, [this]);
+        }
+        this.projectile.worldTransform.position = Helper.recyclePosition;
+        this.setThisVisibility(false);
+        this.clearRecycleTimeOut();
+        this.isUpdate = false;
     }
 }

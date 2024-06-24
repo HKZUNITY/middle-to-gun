@@ -1,10 +1,14 @@
-﻿import { WeaponProp, Helper } from "../../tools/Helper";
+﻿import { Notice } from "../../common/notice/Notice";
+import { GameConfig } from "../../config/GameConfig";
+import { IWeaponPropElement } from "../../config/WeaponProp";
+import { Helper } from "../../tools/Helper";
+import Utils from "../../tools/Utils";
 import HUDModuleC from "../HUDModule/HUDModuleC";
 import { Projectile } from "./Projectile";
-import WeaponData, { ProjectileType } from "./WeaponData";
+import { ProjectileType } from "./WeaponData";
 import WeaponModuleS from "./WeaponModuleS";
 
-export default class WeaponModuleC extends ModuleC<WeaponModuleS, WeaponData> {
+export default class WeaponModuleC extends ModuleC<WeaponModuleS, null> {
     private hudModuleC: HUDModuleC = null;
     private get getHUDModuleC(): HUDModuleC {
         if (!this.hudModuleC) {
@@ -29,10 +33,6 @@ export default class WeaponModuleC extends ModuleC<WeaponModuleS, WeaponData> {
     private bindEventAction(): void {
         this.getHUDModuleC.onNormalAction.add(this.normalIntervalAttack.bind(this));
         //#region KeyDown
-        InputUtil.onKeyDown(mw.Keys.E, () => {
-            this.bulletCount = this.currentWeaponData.bulletCount;
-            this.getHUDModuleC.updateBulletCount(this.bulletCount);
-        });
         let isNormal = true;
         InputUtil.onKeyDown(mw.Keys.R, () => {
             isNormal = !isNormal;
@@ -41,18 +41,14 @@ export default class WeaponModuleC extends ModuleC<WeaponModuleS, WeaponData> {
         //#endregion
     }
 
-    protected onEnterScene(sceneType: number): void {
-        this.currentWeaponIndex[1] = this.data.projectileIndex;
-    }
-
     //#region Switch Weapon
-    private currentWeaponIndex: number[] = [0, 0];
-    private currentWeaponData: WeaponProp = null;
+    private currentWeaponId: number = 0;
+    private weaponPropElement: IWeaponPropElement = null;
     private bulletCount: number = 0;
     private weaponIcon: string = "278406";
     private weaponName: string = "神兵弓箭";
     public switchWeaponData(weaponId: number): void {
-        if (this.currentWeaponIndex[0] == weaponId) return;
+        if (this.currentWeaponId == weaponId) return;
         this.setWeaponPropData(weaponId);
         this.switchWeapon();
     }
@@ -62,20 +58,15 @@ export default class WeaponModuleC extends ModuleC<WeaponModuleS, WeaponData> {
     }
 
     private setWeaponPropData(weaponId: number): void {
-        this.currentWeaponIndex[0] = weaponId;
-        this.currentWeaponData = Helper.weaponDataMap.get(this.currentWeaponIndex[0]);
-        Helper.damage = this.currentWeaponData.damage;
+        this.currentWeaponId = weaponId;
+        this.weaponPropElement = GameConfig.WeaponProp.getElement(this.currentWeaponId);
+        Helper.damage = this.weaponPropElement.Damage;
         this.updateNormalData();
+        Notice.showDownNotice("武器装备成功");
     }
 
     private switchWeapon(): void {
-        this.server.net_switchWeapon(this.currentWeaponIndex[0]);
-    }
-
-    public switchProjectile(projectileIndex: number): void {
-        if (this.currentWeaponIndex[1] == projectileIndex) return;
-        this.currentWeaponIndex[1] = projectileIndex;
-        this.server.net_switchProjectile(this.currentWeaponIndex[1]);
+        this.server.net_switchWeapon(this.currentWeaponId);
     }
 
     public switchProjectileType(projectileType: ProjectileType): void {
@@ -94,8 +85,10 @@ export default class WeaponModuleC extends ModuleC<WeaponModuleS, WeaponData> {
         if (isPress) {
             this.normalAttack();
             this.normalIntervalId = TimeUtil.setInterval(this.normalAttack.bind(this), 0.1);
+            this.switchFireOn();
         } else {
             TimeUtil.clearInterval(this.normalIntervalId);
+            this.switchFireOff();
         }
     }
 
@@ -105,14 +98,14 @@ export default class WeaponModuleC extends ModuleC<WeaponModuleS, WeaponData> {
     private normalAtkTime: number[] = [];
     private normalAttackIndex: number = -1;
     private updateNormalData(): void {
-        this.normalAnims = this.currentWeaponData.normalAnims;
+        this.normalAnims = this.weaponPropElement.NormalAnims;
         this.normalAttackLength = this.normalAnims.length;
-        this.normalAnimTimes = this.currentWeaponData.normalAnimTimes;
-        this.normalAtkTime = this.currentWeaponData.normalAtkTime;
+        this.normalAnimTimes = this.weaponPropElement.NormalAnimTimes;
+        this.normalAtkTime = this.weaponPropElement.NormalAtkTime;
         this.normalAttackIndex = 0;
-        this.bulletCount = this.currentWeaponData.bulletCount;
-        this.weaponIcon = this.currentWeaponData.weaponIcon;
-        this.weaponName = this.currentWeaponData.weaponName;
+        this.bulletCount = this.weaponPropElement.BulletCount;
+        this.weaponIcon = this.weaponPropElement.WeaponIcon;
+        this.weaponName = this.weaponPropElement.WeaponName;
         this.getHUDModuleC.updateGunPropUI(this.weaponIcon, this.bulletCount, this.weaponName);
     }
 
@@ -124,8 +117,9 @@ export default class WeaponModuleC extends ModuleC<WeaponModuleS, WeaponData> {
         this.updateNormalAttackState();
         this.resetNormalAttackIndex();
         let shootDir = this.calculateFireDirection(this.getCurrentCamera.worldTransform, this.fireAnchor.worldTransform.position);
-        this.server.net_fireNormalAttack(shootDir, this.currentWeaponIndex, this.normalAttackIndex++, this.currentProjectileType);
+        this.server.net_fireNormalAttack(shootDir, this.currentWeaponId, this.normalAttackIndex++, this.currentProjectileType);
         this.bulletCount--;
+        if (this.bulletCount <= 0) this.reloadButtet();
         this.getHUDModuleC.updateBulletCount(this.bulletCount);
         TimeUtil.delaySecond(this.normalAtkTime[this.normalAttackIndex - 1]).then(() => {
             this.getHUDModuleC.startAimUITween();
@@ -155,7 +149,86 @@ export default class WeaponModuleC extends ModuleC<WeaponModuleS, WeaponData> {
     }
     //#endregion
 
+    //#region Fov
+    private camera: mw.Camera = null;
+    private get getCamera(): mw.Camera {
+        if (this.camera == null) {
+            this.camera = Camera.currentCamera;
+        }
+        return this.camera;
+    }
+    /* 焦距变化标识 */
+    private isZooming: boolean = false;
+    /* 瞄准状态标识 */
+    private isAimming: boolean = false;
+    /**瞄准聚焦速度 */
+    private aimSpeed: number = 90;
+    /**瞄准FOV */
+    private aimCameraFov: number = 90;
+    /**装备FOV */
+    private equipmentCameraFov = 110;
+
+    private switchFireOn(): void {
+        this.isZooming = true;
+        this.zoomIn();
+    }
+
+    private switchFireOff(): void {
+        this.isZooming = true;
+        this.zoomOut();
+    }
+
+    private zoomIn() {
+        if (this.getCamera == null) return;
+        this.isAimming = true;
+    }
+
+    private zoomOut() {
+        if (this.getCamera == null) return;
+        this.isAimming = false;
+    }
+
+    private cameraUpdate(dt: number) {
+        if (!this.isZooming) return;
+        if (this.isAimming) {
+            this.getCamera.fov -= dt * this.aimSpeed;
+            if (this.getCamera.fov < this.aimCameraFov) {
+                this.getCamera.fov = this.aimCameraFov;
+                this.isZooming = false;
+            }
+        } else {
+            this.getCamera.fov += dt * this.aimSpeed;
+            if (this.getCamera.fov > this.equipmentCameraFov) {
+                this.getCamera.fov = this.equipmentCameraFov;
+                this.isZooming = false;
+            }
+        }
+    }
+    //#endregion
+
+    //#region 
+    private reloadAniId: string[] = ["80479", "80588"];
+    private reloadSoundId: string = "75374";
+    private reloadAnimation: mw.Animation = null;
+    private async reloadButtet(): Promise<void> {
+        await TimeUtil.delaySecond(1);
+        let animIndex = this.weaponPropElement.BulletCount == 10 ? 1 : 0;
+        await Utils.asyncDownloadAsset(this.reloadAniId[animIndex]);
+        this.reloadAnimation = this.localPlayer.character.loadAnimation(this.reloadAniId[animIndex]);
+        this.reloadAnimation.play();
+        SoundService.play3DSound(this.reloadSoundId, this.fireAnchor.worldTransform.position);
+        TimeUtil.delaySecond(1).then(this.addReloadBullet.bind(this));
+    }
+
+    private addReloadBullet(): void {
+        if (!this.weaponPropElement) return;
+        this.bulletCount = this.weaponPropElement.BulletCount;
+        this.getHUDModuleC.updateBulletCount(this.bulletCount);
+    }
+    //#endregion
+
     protected onUpdate(dt: number): void {
+        this.cameraUpdate(dt);
         if (Helper.activeBulletMap.size == 0) return;
         Helper.activeBulletMap.forEach((value: Set<Projectile>) => {
             value.forEach((projectile: Projectile) => {
@@ -170,6 +243,7 @@ export default class WeaponModuleC extends ModuleC<WeaponModuleS, WeaponData> {
         let shootDir = endLoc.clone().subtract(firePosition);
         let hitRes = QueryUtil.lineTrace(cameraWorldTransform.clone().position, endLoc, true, mw.SystemUtil.isPIE);
         hitRes = hitRes.filter(e => { return !(e.gameObject instanceof mw.Trigger); });
+        console.error(`hitRes: ${hitRes.length}`);
         if (hitRes && hitRes.length > 0 && mw.Vector.dot(hitRes[0].gameObject.worldTransform.position.clone().subtract(firePosition), shootDir) > 0) {
             shootDir = hitRes[0].impactPoint.clone().subtract(firePosition);
         }

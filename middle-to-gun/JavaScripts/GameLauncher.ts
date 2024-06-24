@@ -24,7 +24,6 @@ import TaskModuleC from "./module/TaskModule/TaskModuleC";
 import TaskModuleS from "./module/TaskModule/TaskModuleS";
 import TeamModuleC from "./module/TeamModule/TeamModuleC";
 import TeamModuleS from "./module/TeamModule/TeamModuleS";
-import WeaponData from "./module/WeaponModule/WeaponData";
 import WeaponModuleC from "./module/WeaponModule/WeaponModuleC";
 import WeaponModuleS from "./module/WeaponModule/WeaponModuleS";
 import GlobalData from "./tools/GlobalData";
@@ -76,7 +75,7 @@ export default class GameLauncher extends mw.Script {
         ModuleService.registerModule(RankModuleS, RankModuleC, null);
         ModuleService.registerModule(RadarModuleS, RadarModuleC, null);
         ModuleService.registerModule(ActivityModuleS, ActivityModuleC, ActivityData);
-        ModuleService.registerModule(WeaponModuleS, WeaponModuleC, WeaponData);
+        ModuleService.registerModule(WeaponModuleS, WeaponModuleC, null);
         ModuleService.registerModule(TaskModuleS, TaskModuleC, TaskData);
         ModuleService.registerModule(MorphModuleS, MorphModuleC, null);
     }

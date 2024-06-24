@@ -1,10 +1,12 @@
 import {ConfigBase, IElementBase} from "./ConfigBase";
 import {GUNConfig} from "./GUN";
 import {MorphConfig} from "./Morph";
+import {ProjectilePropConfig} from "./ProjectileProp";
 import {ROLEConfig} from "./ROLE";
 import {ShopItemConfig} from "./ShopItem";
 import {TaskConfig} from "./Task";
 import {TRAILINGConfig} from "./TRAILING";
+import {WeaponPropConfig} from "./WeaponProp";
 
 export class GameConfig{
 	private static configMap:Map<string, ConfigBase<IElementBase>> = new Map();
@@ -25,8 +27,10 @@ export class GameConfig{
 	}
 	public static get GUN():GUNConfig{ return this.getConfig(GUNConfig) };
 	public static get Morph():MorphConfig{ return this.getConfig(MorphConfig) };
+	public static get ProjectileProp():ProjectilePropConfig{ return this.getConfig(ProjectilePropConfig) };
 	public static get ROLE():ROLEConfig{ return this.getConfig(ROLEConfig) };
 	public static get ShopItem():ShopItemConfig{ return this.getConfig(ShopItemConfig) };
 	public static get Task():TaskConfig{ return this.getConfig(TaskConfig) };
 	public static get TRAILING():TRAILINGConfig{ return this.getConfig(TRAILINGConfig) };
+	public static get WeaponProp():WeaponPropConfig{ return this.getConfig(WeaponPropConfig) };
 }
