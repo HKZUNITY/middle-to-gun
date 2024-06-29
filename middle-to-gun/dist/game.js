@@ -2230,6 +2230,11 @@ class ProjectilePropConfig extends ConfigBase {
     }
 }
 
+var foreign10 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    ProjectilePropConfig: ProjectilePropConfig
+});
+
 const EXCELDATA$4 = [["ID", "ROLEID", "PRICETYPE", "PRICE", "NAME"], ["", "", "", "", ""], [1, "181562", 1, [1, 5888], "兜帽男"], [2, "143400", 1, [1, 5888], "双马尾女"], [3, "142292", 1, [1, 5888], "男战士"], [4, "142272", 1, [1, 5888], "机甲少女"], [5, "142293", 1, [1, 5888], "男骑士"], [6, "142255", 1, [1, 5888], "纳米机甲女性"], [7, "219915", 1, [1, 5888], "赛博少年"], [8, "226379", 1, [1, 5888], "赛博少年"], [9, "219912", 1, [1, 5888], "赛博少女"], [10, "226386", 1, [1, 5888], "赛博少女"], [11, "266641", 1, [1, 5888], "一定锅少年"], [12, "267183", 1, [1, 5888], "求神少年"], [13, "264622", 1, [1, 5888], "一定锅少女"], [14, "266861", 1, [1, 5888], "求神少女"], [15, "142302", 1, [1, 5888], "宝石铠甲男"], [16, "142303", 1, [1, 5888], "铠甲男战士"], [17, "142396", 1, [1, 5888], "黑人男纳米机甲"], [18, "142397", 1, [1, 5888], "白人男纳米机甲"], [19, "142398", 1, [1, 5888], "白银骑士"], [20, "142906", 1, [1, 5888], "鹰战士"], [21, "142895", 1, [1, 5888], "战士"], [22, "142886", 1, [1, 5888], "毒液怪人"], [23, "142905", 1, [1, 5888], "蚁侠士"], [24, "142898", 1, [1, 5888], "最强队长"], [25, "142885", 1, [1, 5888], "超帅侠"], [26, "142900", 1, [1, 5888], "奇异战士"], [27, "142901", 1, [1, 5888], "闪电怪"], [28, "142887", 1, [1, 5888], "恶灵骷髅"], [29, "142888", 1, [1, 5888], "铁人"], [30, "222475", 1, [1, 5888], "风衣女"], [31, "219916", 1, [1, 5888], "汉服少女"], [32, "266860", 1, [1, 5888], "时尚少女"], [33, "226382", 1, [1, 5888], "潮流少女"], [34, "222476", 1, [1, 5888], "古代书生"]];
 class ROLEConfig extends ConfigBase {
     constructor() {
@@ -2284,6 +2289,11 @@ class WeaponPropConfig extends ConfigBase {
         super(EXCELDATA);
     }
 }
+
+var foreign15 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    WeaponPropConfig: WeaponPropConfig
+});
 
 class GameConfig {
     /**
@@ -5033,6 +5043,11 @@ Helper.weaponDataMap_Abandon = new Map([
     ], //弓,弓箭瞬发射箭,弓箭手A大招
 ]);
 
+var foreign74 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    Helper: Helper
+});
+
 var ProjectileType;
 (function (ProjectileType) {
     /**正常 */
@@ -5046,6 +5061,11 @@ var ProjectileType;
     /**投掷物 */
     ProjectileType[ProjectileType["Throw"] = 4] = "Throw";
 })(ProjectileType || (ProjectileType = {}));
+
+var foreign67 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    get ProjectileType () { return ProjectileType; }
+});
 
 class WeaponModuleC extends ModuleC {
     constructor() {
@@ -5276,6 +5296,11 @@ class WeaponModuleC extends ModuleC {
         return shootDir.normalized;
     }
 }
+
+var foreign68 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: WeaponModuleC
+});
 
 var ShopType;
 (function (ShopType) {
@@ -7805,6 +7830,11 @@ class Projectile {
     }
 }
 
+var foreign64 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    Projectile: Projectile
+});
+
 let Weapon = class Weapon extends Script {
     constructor() {
         super(...arguments);
@@ -8017,6 +8047,11 @@ Weapon = __decorate([
 ], Weapon);
 var Weapon$1 = Weapon;
 
+var foreign66 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Weapon$1
+});
+
 class WeaponModuleS extends ModuleS {
     constructor() {
         super(...arguments);
@@ -8108,6 +8143,11 @@ __decorate([
 __decorate([
     Decorator.noReply()
 ], WeaponModuleS.prototype, "net_switchWeapon", null);
+
+var foreign69 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: WeaponModuleS
+});
 
 class MorphModuleC extends ModuleC {
     constructor() {
@@ -12930,6 +12970,12 @@ let ProjectTarget = class ProjectTarget extends Script {
 ProjectTarget = __decorate([
     Component
 ], ProjectTarget);
+var ProjectTarget$1 = ProjectTarget;
+
+var foreign65 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ProjectTarget$1
+});
 
 var FreeCamera_1;
 let FreeCamera = FreeCamera_1 = class FreeCamera extends Script {
@@ -13664,10 +13710,12 @@ const MWModuleMap = {
      '166E934A4902E0274794828A310EFA30': foreign7,
      '6374DD3342310CB36D6D868EC5478FF4': foreign8,
      'EC2961B34147096FC9DBC2971DD9AA53': foreign9,
+     '6A277D5049CE2CE92CD7339A98FE615B': foreign10,
      'E19C4FBC41BEE3AD41222B8D64AAD365': foreign11,
      '011052CD4ED0D3DC9960ABBFBBC46D5A': foreign12,
      'C2E7A2E041E5BB00F9451CBBBF64D6A6': foreign13,
      '5CA2293C4B0A9CA7C2D0CBBF73D219E2': foreign14,
+     'C319097045752CFC53190794AB2BCD76': foreign15,
      '290F1F4D42ECBF13317BD8BC212FA75A': foreign16,
      '2E162EDD4A7F55E58539648F012097D2': foreign17,
      '36994D0E483CF7F6283CAFACCB406590': foreign18,
@@ -13716,10 +13764,17 @@ const MWModuleMap = {
      '4CF1BF6940037F5268A8B4B1C326C0E1': foreign61,
      '799144174FCC1F72D4AAD2B8C0D23A93': foreign62,
      '7969AEF34724BDC60E081286C23D4945': foreign63,
+     'D9B1CF04450CE54C9707ECA7D804DA6C': foreign64,
+     '5224C416400F824F56E4AB9FA410B705': foreign65,
+     '018CFAAD48940396A20DC296154E69CF': foreign66,
+     '02178C534E1EACB3145516B4D5E08CA6': foreign67,
+     '586E7BD34D881F24CE4369A4C4ACD64D': foreign68,
+     '75DBE6154A88D0897AB52CB8303D0D68': foreign69,
      'C8CD71394F0002E646F3F093BF3B8A20': foreign70,
      '761A5E774007E1CA28720DB572DA7A45': foreign71,
      '3A19265E439F9BC57DD9188415D69D90': foreign72,
      'ACB26C334F3E66726611CAAACE1B29F0': foreign73,
+     'C3A91C494BCF42191B03718F492DFA64': foreign74,
      '5F9FD257458AA792F70050AEC35F3C7F': foreign75,
      '86F0A1A849C1B3DE1E04178576CB52FF': foreign76,
      'A30FDC1848F2A2BB4F412FB42FC6A123': foreign77,
@@ -13759,10 +13814,12 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/ConfirmP
 [foreign7 || {}, "JavaScripts/config/GameConfig"],
 [foreign8 || {}, "JavaScripts/config/GUN"],
 [foreign9 || {}, "JavaScripts/config/Morph"],
+[foreign10 || {}, "JavaScripts/config/ProjectileProp"],
 [foreign11 || {}, "JavaScripts/config/ROLE"],
 [foreign12 || {}, "JavaScripts/config/ShopItem"],
 [foreign13 || {}, "JavaScripts/config/Task"],
 [foreign14 || {}, "JavaScripts/config/TRAILING"],
+[foreign15 || {}, "JavaScripts/config/WeaponProp"],
 [foreign16 || {}, "JavaScripts/GameLauncher"],
 [foreign17 || {}, "JavaScripts/module/ActivityModule/ActivityData"],
 [foreign18 || {}, "JavaScripts/module/ActivityModule/ActivityModuleC"],
@@ -13811,10 +13868,17 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/ConfirmP
 [foreign61 || {}, "JavaScripts/module/TeamModule/TeamModuleS"],
 [foreign62 || {}, "JavaScripts/module/TeamModule/ui/TeamItem"],
 [foreign63 || {}, "JavaScripts/module/TeamModule/ui/TeamPanel"],
+[foreign64 || {}, "JavaScripts/module/WeaponModule/Projectile"],
+[foreign65 || {}, "JavaScripts/module/WeaponModule/ProjectTarget"],
+[foreign66 || {}, "JavaScripts/module/WeaponModule/Weapon"],
+[foreign67 || {}, "JavaScripts/module/WeaponModule/WeaponData"],
+[foreign68 || {}, "JavaScripts/module/WeaponModule/WeaponModuleC"],
+[foreign69 || {}, "JavaScripts/module/WeaponModule/WeaponModuleS"],
 [foreign70 || {}, "JavaScripts/tools/EventType"],
 [foreign71 || {}, "JavaScripts/tools/FlyText"],
 [foreign72 || {}, "JavaScripts/tools/FreeCamera"],
 [foreign73 || {}, "JavaScripts/tools/GlobalData"],
+[foreign74 || {}, "JavaScripts/tools/Helper"],
 [foreign75 || {}, "JavaScripts/tools/IAPInstance"],
 [foreign76 || {}, "JavaScripts/tools/JumpGame"],
 [foreign77 || {}, "JavaScripts/tools/MapEx"],
