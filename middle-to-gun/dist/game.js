@@ -1847,14 +1847,14 @@ Utils.npcNames = ["张吉惟", "林国瑞", "林玫书", "林雅南", "江奕云
 Utils.tens = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 Utils.digitalUnits = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
 Utils.redTeamRevivalPoint = [
-    new mw.Vector(-3645, -448, 150),
-    new mw.Vector(-3645, 0, 150),
-    new mw.Vector(-3645, 312, 150)
+    new mw.Vector(-1764.48, 2329, 200),
+    new mw.Vector(-2123.19, 2329, 200),
+    new mw.Vector(-2497.86, 2329, 200)
 ];
 Utils.blueTeamRevivalPoint = [
-    new mw.Vector(3473, -291, 150),
-    new mw.Vector(3473, 160, 150),
-    new mw.Vector(3473, 779, 150),
+    new mw.Vector(-2310.74, -2875, 100),
+    new mw.Vector(-2047.45, -2875, 100),
+    new mw.Vector(-1739.05, -2875, 100),
 ];
 Utils.targetGos = [];
 function cubicBezier(p1x, p1y, p2x, p2y) {
@@ -2211,7 +2211,7 @@ var foreign8 = /*#__PURE__*/Object.freeze({
     GUNConfig: GUNConfig
 });
 
-const EXCELDATA$6 = [["ID", "AssetId", "OffsetPos", "OffsetRot", "OffsetSca"], ["", "", "", "", ""], [1, "20673", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [2, "20760", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [3, "20780", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [4, "20867", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [5, "20900", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [6, "20921", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [7, "20953", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [8, "20980", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [9, "21009", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)]];
+const EXCELDATA$6 = [["ID", "AssetId", "OffsetPos", "OffsetRot", "OffsetSca"], ["", "", "", "", ""], [1, "34287", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [2, "36101", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [3, "36104", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [4, "36307", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [5, "43382", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [6, "43696", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [7, "43702", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [8, "43704", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [9, "43726", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [10, "44978", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [11, "68306", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [12, "95676", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [13, "88958", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [14, "122716", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [15, "122720", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [16, "122726", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [17, "153110", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [18, "152136", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [19, "155696", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [20, "155702", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [21, "168680", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [22, "199351", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [23, "218325", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [24, "218326", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [25, "222534", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [26, "221722", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [27, "223966", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [28, "226213", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [29, "226214", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [30, "226650", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [31, "226826", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [32, "321770", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [33, "327072", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)]];
 class MorphConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$6);
@@ -2223,7 +2223,7 @@ var foreign9 = /*#__PURE__*/Object.freeze({
     MorphConfig: MorphConfig
 });
 
-const EXCELDATA$5 = [["ID", "PrefabId", "FireSound", "HitEffect", "HitEffectScale", "Des"], ["", "", "", "", "", ""], [1, "5FE5766E4D27D1FC0ECC9DB29673A3EB", "208258", "27422", new mw.Vector(1, 1, 1), null, null, 208399], [2, "EAF62D0F4EF181ABB6C8AB83E876818B", "207772", "27422", new mw.Vector(1, 1, 1), null], [3, "F32C6FB24570123F58CEFA81FC1DAC1F", "208268", "27422", new mw.Vector(1, 1, 1), null], [4, "28BA1D7C44D241C468F19A94D9E63238", "208374", "61006", new mw.Vector(1, 1, 1), null, null, null, 208166], [5, "D07DD084490C6D2C3BC3A7A8BC4884C0", "208374", "61006", new mw.Vector(1, 1, 1), null], [6, "A5C80A2E45063598223D4A8D042593A8", "208166", "265666", new mw.Vector(0.5, 0.5, 0.5), null], [7, "E2497FC44D0EC13158099584EED17776", "208374", "61006", new mw.Vector(1, 1, 1), null, 208495, null, 287821], [8, "24E7DF3146C2E5414BE4EE8AC093215B", "208166", "27422", new mw.Vector(1, 1, 1), "208166"], [9, "6EB015964A8F1DC44DF94595AA7593E1", "208166", "27421", new mw.Vector(1, 1, 1), "屠龙激光枪3号-已完善"], [10, "A3BC64CF4B29BD2D076E4194A2F9E40C", "208374", "61006", new mw.Vector(1, 1, 1), null], [11, "C7708014418743519AEB66A05118335F", "208374", "61006", new mw.Vector(1, 1, 1), null], [12, "592867B84C2ABC5BC11326A6588AC115", "208495", "61006", new mw.Vector(1, 1, 1), null], [13, "4E31B836400E0183C925ACA18475115B", "208374", "27421", new mw.Vector(1, 1, 1), null], [14, "4C18E7A440AD7AE26CFA71AD44B70903", "208374", "27421", new mw.Vector(1, 1, 1), null], [15, "1405575C47698FE0FC41F0B7E104529E", "208048", "27421", new mw.Vector(1, 1, 1), null]];
+const EXCELDATA$5 = [["ID", "PrefabId", "FireSound", "HitEffect", "HitEffectScale", "Des"], ["", "", "", "", "", ""], [1, "5FE5766E4D27D1FC0ECC9DB29673A3EB", "208258", "27422", new mw.Vector(1, 1, 1), null, null, 208399], [2, "EAF62D0F4EF181ABB6C8AB83E876818B", "207772", "27422", new mw.Vector(1, 1, 1), null], [3, "F32C6FB24570123F58CEFA81FC1DAC1F", "208268", "27422", new mw.Vector(1, 1, 1), null], [4, "28BA1D7C44D241C468F19A94D9E63238", "208374", "61006", new mw.Vector(1, 1, 1), null, null, null, 208166], [5, "D07DD084490C6D2C3BC3A7A8BC4884C0", "208374", "61006", new mw.Vector(1, 1, 1), null], [6, "A5C80A2E45063598223D4A8D042593A8", "208166", "265666", new mw.Vector(0.5, 0.5, 0.5), null], [7, "E2497FC44D0EC13158099584EED17776", "208374", "61006", new mw.Vector(1, 1, 1), null, 208495, null, 287821], [8, "24E7DF3146C2E5414BE4EE8AC093215B", "208166", "27422", new mw.Vector(1, 1, 1), "208166"], [9, "6EB015964A8F1DC44DF94595AA7593E1", "208166", "27421", new mw.Vector(0.5, 0.5, 0.5), "屠龙激光枪3号-已完善"], [10, "A3BC64CF4B29BD2D076E4194A2F9E40C", "208374", "61006", new mw.Vector(1, 1, 1), null], [11, "C7708014418743519AEB66A05118335F", "208374", "61006", new mw.Vector(1, 1, 1), null], [12, "592867B84C2ABC5BC11326A6588AC115", "208495", "61006", new mw.Vector(1, 1, 1), null], [13, "4E31B836400E0183C925ACA18475115B", "208374", "27421", new mw.Vector(0.5, 0.5, 0.5), null], [14, "4C18E7A440AD7AE26CFA71AD44B70903", "208374", "27421", new mw.Vector(0.5, 0.5, 0.5), null], [15, "1405575C47698FE0FC41F0B7E104529E", "208048", "27421", new mw.Vector(0.5, 0.5, 0.5), null]];
 class ProjectilePropConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$5);
@@ -12791,7 +12791,7 @@ let TryOutGun = class TryOutGun extends Script {
     }
     initGunAnchor() {
         this.gunAnchor = this.gameObject.getChildByName("gunAnchor");
-        this.switchGunModel(Utils.randomInt(10, 14));
+        this.switchGunModel(Utils.randomInt(1, GameConfig.WeaponProp.getAllElement().length));
     }
     initUIPanel() {
         this.adPanel = UIService.getUI(AdPanel);

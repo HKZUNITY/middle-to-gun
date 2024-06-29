@@ -94,7 +94,7 @@ export default class TryOutGun extends Script {
     private gunAnchor: mw.Model = null;
     private initGunAnchor(): void {
         this.gunAnchor = this.gameObject.getChildByName("gunAnchor") as mw.Model;
-        this.switchGunModel(Utils.randomInt(10, 14));
+        this.switchGunModel(Utils.randomInt(1, GameConfig.WeaponProp.getAllElement().length));
     }
 
     private initUIPanel(): void {
