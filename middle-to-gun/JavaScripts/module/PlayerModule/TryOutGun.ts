@@ -1,11 +1,13 @@
 ﻿import ConfirmPanel from "../../common/ConfirmPanel";
 import { Notice } from "../../common/notice/Notice";
 import { GameConfig } from "../../config/GameConfig";
+import GlobalData from "../../tools/GlobalData";
 import Utils from "../../tools/Utils";
 import AdPanel from "../AdModule/ui/AdPanel";
 import CoinModuleC from "../CoinModule/CoinModuleC";
 import { MorphModuleC } from "../MorphModule/MorphModule";
 import ShopModuleC from "../ShopModule/ShopModuleC";
+import WeaponModuleC from "../WeaponModule/WeaponModuleC";
 
 @Component
 export default class TryOutGun extends Script {
@@ -72,12 +74,19 @@ export default class TryOutGun extends Script {
         return this.coinModuleC;
     }
 
+    private weaponModuleC: WeaponModuleC = null;
+    private get getWeaponModuleC(): WeaponModuleC {
+        if (!this.weaponModuleC) {
+            this.weaponModuleC = ModuleService.getModule(WeaponModuleC);
+        }
+        return this.weaponModuleC;
+    }
+
     /**客户端的onStart */
     private async onStartC(): Promise<void> {
         await ModuleService.ready();
         this.useUpdate = false;
         this.initGunAnchor();
-        this.initModule();
         this.initUIPanel();
         this.initTrigger();
     }
@@ -86,9 +95,6 @@ export default class TryOutGun extends Script {
     private initGunAnchor(): void {
         this.gunAnchor = this.gameObject.getChildByName("gunAnchor") as mw.Model;
         this.switchGunModel(Utils.randomInt(10, 14));
-    }
-
-    private initModule(): void {
     }
 
     private initUIPanel(): void {
@@ -102,32 +108,25 @@ export default class TryOutGun extends Script {
 
     private onTriggerEnter(character: mw.Character): void {
         if (Player.localPlayer.character != character) return;
-        let gunElement = GameConfig.GUN.getElement(this.gunkey);
-        // let price: number = 100;
-        // let contentText: string = `消耗${price}钻石\n免费领取`;
-        // this.getConfirmPanel.confirmTips(() => {
-        //     if (this.getCoinModuleC.getDiamond >= price) {
-        //         this.getCoinModuleC.setDiamond(-price);
-        //         this.switchGun();
-        //         this.switchGunModel(Utils.randomInt(10, 14));
-        //     } else {
-        //         Notice.showDownNotice("钻石不足");
-        //         this.getCoinModuleC.openShopBuyDiamondCoin(price);
-        //     }
-        // }, contentText, "领取", "取消", "提示");
-
-        this.getAdPanel.showRewardAd(() => {
+        let gunElement = GameConfig.WeaponProp.getElement(this.gunkey);
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
+                if (!this.gunkey) return;
+                this.switchGun();
+                this.switchGunModel(Utils.randomInt(1, GameConfig.WeaponProp.getAllElement().length));
+            }, gunElement.WeaponName + "\n免费使用一局", "取消", "免费使用");
+        } else {
             if (!this.gunkey) return;
             this.switchGun();
-            this.switchGunModel(Utils.randomInt(10, 14));
-        }, gunElement.GUNNAME + "\n免费使用一局", "取消", "免费使用");
+            this.switchGunModel(Utils.randomInt(1, 15));
+        }
     }
 
     private switchGun(): void {
         if (this.getMorphModuleC.getIsMorph) {
             this.getShopModuleC.setUseShopId_Gun(this.gunkey);
         } else {
-            // this.getGunModuleC.switchGun(this.gunkey);//TODO:EFZ
+            this.getWeaponModuleC.switchWeaponData(this.gunkey);
         }
     }
 
@@ -137,14 +136,14 @@ export default class TryOutGun extends Script {
         if (this.gunkey == key) return;
         this.gunkey = key;
         if (this.gunModel) GameObjPool.despawn(this.gunModel);
-        let gunElement = GameConfig.GUN.getElement(this.gunkey);
-        let gunId = gunElement.GUNICON_M;
+        let gunElement = GameConfig.WeaponProp.getElement(this.gunkey);
+        let gunId = gunElement.PrefabId;
         await Utils.asyncDownloadAsset(gunId);
-        this.gunModel = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Asset);
+        this.gunModel = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Prefab);
         this.gunModel.parent = this.gunAnchor;
-        this.gunModel.localTransform.position = gunElement.GUNLOC;
+        this.gunModel.localTransform.position = gunElement.GunLoc;
         this.gunModel.localTransform.rotation = new mw.Rotation(0, 15, 0);
-        this.gunModel.localTransform.scale = gunElement.GUNSCALE;
+        this.gunModel.localTransform.scale = gunElement.GunScale;
     }
 
     /**客户端的onUpdate */

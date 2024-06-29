@@ -2,6 +2,7 @@
 import { GameConfig } from "../../config/GameConfig";
 import Utils from "../../tools/Utils";
 import HUDModuleC from "../HUDModule/HUDModuleC";
+import WeaponModuleS from "../WeaponModule/WeaponModuleS";
 
 export class MorphModuleC extends ModuleC<MorphModuleS, null> {
     private hudModuleC: HUDModuleC = null;
@@ -58,6 +59,14 @@ export class MorphModuleC extends ModuleC<MorphModuleS, null> {
 
 
 export class MorphModuleS extends ModuleS<MorphModuleC, null> {
+    private weaponModuleS: WeaponModuleS = null;
+    private get getWeaponModuleS(): WeaponModuleS {
+        if (!this.weaponModuleS) {
+            this.weaponModuleS = ModuleService.getModule(WeaponModuleS);
+        }
+        return this.weaponModuleS;
+    }
+
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
 
@@ -82,7 +91,7 @@ export class MorphModuleS extends ModuleS<MorphModuleC, null> {
         await this.spawnGo(player);
         // console.error(player.character.getCollision());
         // if (player.character.getCollision() != mw.PropertyStatus.Off) player.character.setCollision(mw.PropertyStatus.Off);
-        // this.getGunModuleS.setGunState(player.userId, false);
+        this.getWeaponModuleS.setWeaponState(player.playerId, false);
     }
 
     // private i: number = 1;
@@ -96,6 +105,7 @@ export class MorphModuleS extends ModuleS<MorphModuleC, null> {
         await tmpGo.asyncReady();
         (tmpGo as mw.Model).setCollision(mw.PropertyStatus.Off);
         player.character.attachToSlot(tmpGo, mw.HumanoidSlotType.Root);
+        tmpGo.localTransform.scale = new mw.Vector(morphElement.OffsetSca);
         tmpGo.localTransform.position = new mw.Vector(0, 0, tmpGo.getBoundingBox().z / 2);
         tmpGo.localTransform.rotation = new mw.Rotation(morphElement.OffsetRot);
         this.playerGoMap.set(player.userId, tmpGo);
@@ -113,7 +123,7 @@ export class MorphModuleS extends ModuleS<MorphModuleC, null> {
         this.playEffectSound(player);
         if (!player.character.getVisibility()) player.character.setVisibility(true, true);
         // if (player.character.getCollision() != mw.PropertyStatus.On) player.character.setCollision(mw.PropertyStatus.On);
-        // this.getGunModuleS.setGunState(player.userId, true);//TODO:WFZ
+        this.getWeaponModuleS.setWeaponState(player.playerId, true);
     }
 
     private recycleGo(userId: string): void {
@@ -126,5 +136,10 @@ export class MorphModuleS extends ModuleS<MorphModuleC, null> {
     private playEffectSound(player: mw.Player): void {
         EffectService.playOnGameObject("153045", player.character, { slotType: mw.HumanoidSlotType.Root, scale: mw.Vector.one.multiply(3) });
         SoundService.play3DSound("47427", player.character);
+    }
+
+    public setPlayerMorphState(userId: string, isVisibility: boolean): void {
+        if (!this.playerGoMap.has(userId)) return;
+        this.playerGoMap.get(userId).setVisibility(isVisibility);
     }
 }

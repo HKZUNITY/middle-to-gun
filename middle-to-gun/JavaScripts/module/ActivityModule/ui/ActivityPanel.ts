@@ -2,6 +2,7 @@
 import { Notice } from "../../../common/notice/Notice";
 import { GameConfig } from "../../../config/GameConfig";
 import { EventType } from "../../../tools/EventType";
+import GlobalData from "../../../tools/GlobalData";
 import Utils from "../../../tools/Utils";
 import ActivityPanel_Generate from "../../../ui-generate/module/ActivityModule/ActivityPanel_generate";
 import AdPanel from "../../AdModule/ui/AdPanel";
@@ -113,28 +114,13 @@ export default class ActivityPanel extends ActivityPanel_Generate {
 
 	private onClickAdsGetButton(): void {
 		if (!this.isHasCondition(true)) return;
-		// let contentText: string = "";
-		// let curActivityData = this.activityData[this.currentIndex - 1];
-		// let price: number = 0;
-		// if (curActivityData.shopType == ShopType.Gun) {
-		// 	price = GameConfig.GUN.getElement(curActivityData.shopId).PRICE[0];
-		// 	contentText = `消耗${price}钻石领取`;
-		// } else if (curActivityData.shopType == ShopType.Role) {
-		// 	price = GameConfig.ROLE.getElement(curActivityData.shopId).PRICE[0];
-		// 	contentText = `消耗${price}钻石领取`;
-		// }
-		// this.getConfirmPanel.confirmTips(() => {
-		// 	if (this.getCoinModuleC.getDiamond >= price) {
-		// 		this.getCoinModuleC.setDiamond(-price);
-		// 		this.setGetActivity();
-		// 	} else {
-		// 		Notice.showDownNotice("钻石不足");
-		// 		this.getCoinModuleC.openShopBuyDiamondCoin(price);
-		// 	}
-		// }, contentText, "领取", "取消", "提示");
-		this.getAdPanel.showRewardAd(() => {
+		if (GlobalData.isOpenIAA) {
+			this.getAdPanel.showRewardAd(() => {
+				this.setGetActivity();
+			}, "免费领取" + this.getActicityShopTypeStr());
+		} else {
 			this.setGetActivity();
-		}, "免费领取" + this.getActicityShopTypeStr());
+		}
 	}
 
 	private setGetActivity(): void {

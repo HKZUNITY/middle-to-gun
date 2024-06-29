@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.06.22-23.56.50
+ * TIME: 2024.06.29-13.24.37
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -288,48 +288,6 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mResetPosButton_Internal
 	}
-	private mMorphCanvas_Internal: mw.Canvas
-	public get mMorphCanvas(): mw.Canvas {
-		if(!this.mMorphCanvas_Internal&&this.uiWidgetBase) {
-			this.mMorphCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMorphCanvas') as mw.Canvas
-		}
-		return this.mMorphCanvas_Internal
-	}
-	private mMorphButton_Internal: mw.Button
-	public get mMorphButton(): mw.Button {
-		if(!this.mMorphButton_Internal&&this.uiWidgetBase) {
-			this.mMorphButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMorphCanvas/mMorphButton') as mw.Button
-		}
-		return this.mMorphButton_Internal
-	}
-	private mUnMorphCanvas_Internal: mw.Canvas
-	public get mUnMorphCanvas(): mw.Canvas {
-		if(!this.mUnMorphCanvas_Internal&&this.uiWidgetBase) {
-			this.mUnMorphCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mUnMorphCanvas') as mw.Canvas
-		}
-		return this.mUnMorphCanvas_Internal
-	}
-	private mUnMorphButton_Internal: mw.Button
-	public get mUnMorphButton(): mw.Button {
-		if(!this.mUnMorphButton_Internal&&this.uiWidgetBase) {
-			this.mUnMorphButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mUnMorphCanvas/mUnMorphButton') as mw.Button
-		}
-		return this.mUnMorphButton_Internal
-	}
-	private mJumpCanvas_Internal: mw.Canvas
-	public get mJumpCanvas(): mw.Canvas {
-		if(!this.mJumpCanvas_Internal&&this.uiWidgetBase) {
-			this.mJumpCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mJumpCanvas') as mw.Canvas
-		}
-		return this.mJumpCanvas_Internal
-	}
-	private mJumpButton_Internal: mw.Button
-	public get mJumpButton(): mw.Button {
-		if(!this.mJumpButton_Internal&&this.uiWidgetBase) {
-			this.mJumpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mJumpCanvas/mJumpButton') as mw.Button
-		}
-		return this.mJumpButton_Internal
-	}
 	private mAimCanvas_Internal: mw.Canvas
 	public get mAimCanvas(): mw.Canvas {
 		if(!this.mAimCanvas_Internal&&this.uiWidgetBase) {
@@ -393,12 +351,75 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mGunBulletCountTextBlock_Internal
 	}
+	private mUnMorphCanvas_Internal: mw.Canvas
+	public get mUnMorphCanvas(): mw.Canvas {
+		if(!this.mUnMorphCanvas_Internal&&this.uiWidgetBase) {
+			this.mUnMorphCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mUnMorphCanvas') as mw.Canvas
+		}
+		return this.mUnMorphCanvas_Internal
+	}
+	private mUnMorphButton_Internal: mw.Button
+	public get mUnMorphButton(): mw.Button {
+		if(!this.mUnMorphButton_Internal&&this.uiWidgetBase) {
+			this.mUnMorphButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mUnMorphCanvas/UnMorphCanvas/mUnMorphButton') as mw.Button
+		}
+		return this.mUnMorphButton_Internal
+	}
+	private mJumpButton_Internal: mw.Button
+	public get mJumpButton(): mw.Button {
+		if(!this.mJumpButton_Internal&&this.uiWidgetBase) {
+			this.mJumpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mUnMorphCanvas/JumpCanvas/mJumpButton') as mw.Button
+		}
+		return this.mJumpButton_Internal
+	}
+	private mMorphCanvas_Internal: mw.Canvas
+	public get mMorphCanvas(): mw.Canvas {
+		if(!this.mMorphCanvas_Internal&&this.uiWidgetBase) {
+			this.mMorphCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMorphCanvas') as mw.Canvas
+		}
+		return this.mMorphCanvas_Internal
+	}
+	private mMorphButton_Internal: mw.Button
+	public get mMorphButton(): mw.Button {
+		if(!this.mMorphButton_Internal&&this.uiWidgetBase) {
+			this.mMorphButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMorphCanvas/mMorphButton') as mw.Button
+		}
+		return this.mMorphButton_Internal
+	}
+	private mAtkCanvas_Internal: mw.Canvas
+	public get mAtkCanvas(): mw.Canvas {
+		if(!this.mAtkCanvas_Internal&&this.uiWidgetBase) {
+			this.mAtkCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAtkCanvas') as mw.Canvas
+		}
+		return this.mAtkCanvas_Internal
+	}
 	private mNormalAtkButton_Internal: mw.VirtualJoystickPanel
 	public get mNormalAtkButton(): mw.VirtualJoystickPanel {
 		if(!this.mNormalAtkButton_Internal&&this.uiWidgetBase) {
-			this.mNormalAtkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mNormalAtkButton') as mw.VirtualJoystickPanel
+			this.mNormalAtkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAtkCanvas/mNormalAtkButton') as mw.VirtualJoystickPanel
 		}
 		return this.mNormalAtkButton_Internal
+	}
+	private mReloadButton_Internal: mw.Button
+	public get mReloadButton(): mw.Button {
+		if(!this.mReloadButton_Internal&&this.uiWidgetBase) {
+			this.mReloadButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAtkCanvas/mReloadButton') as mw.Button
+		}
+		return this.mReloadButton_Internal
+	}
+	private mCrouchButton_Internal: mw.Button
+	public get mCrouchButton(): mw.Button {
+		if(!this.mCrouchButton_Internal&&this.uiWidgetBase) {
+			this.mCrouchButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAtkCanvas/mCrouchButton') as mw.Button
+		}
+		return this.mCrouchButton_Internal
+	}
+	private mFireJumpButton_Internal: mw.Button
+	public get mFireJumpButton(): mw.Button {
+		if(!this.mFireJumpButton_Internal&&this.uiWidgetBase) {
+			this.mFireJumpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAtkCanvas/mFireJumpButton') as mw.Button
+		}
+		return this.mFireJumpButton_Internal
 	}
 
 
@@ -461,12 +482,6 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mResetPosButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
-		this.mMorphButton.onClicked.add(()=>{
-			Event.dispatchToLocal("PlayButtonClick", "mMorphButton");
-		});
-		this.mMorphButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-		
-	
 		this.mUnMorphButton.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mUnMorphButton");
 		});
@@ -477,6 +492,30 @@ export default class HUDPanel_Generate extends UIScript {
 			Event.dispatchToLocal("PlayButtonClick", "mJumpButton");
 		});
 		this.mJumpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
+		this.mMorphButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mMorphButton");
+		});
+		this.mMorphButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
+		this.mReloadButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mReloadButton");
+		});
+		this.mReloadButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
+		this.mCrouchButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mCrouchButton");
+		});
+		this.mCrouchButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
+		this.mFireJumpButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mFireJumpButton");
+		});
+		this.mFireJumpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
 		//按钮多语言

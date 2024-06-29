@@ -2211,7 +2211,7 @@ var foreign8 = /*#__PURE__*/Object.freeze({
     GUNConfig: GUNConfig
 });
 
-const EXCELDATA$6 = [["ID", "AssetId", "OffsetPos", "OffsetRot", "OffsetSca"], ["", "", "", "", ""], [1, "C665A5E44F6F23B13103ADB63B6DB8FE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [2, "7EFE3FDB48F92FD44D7B9C9B4617847B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [3, "0FCB78664DCD1BB057543DB8A067C122", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [4, "6EEEE3FE4889D23A286CC8B30701C8EE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [5, "EE3A158548986A567D4741AF925DEA34", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [6, "B40762884A5A907F6FC1018C2E8185C8", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [7, "77796AE5405E9B5B173C9EA0E0131A7D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [8, "6CF59C074F7CD23EEEA26B8CCFFBC2C2", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [9, "B04EE94540EE3000A660AEA94FDB25D2", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [10, "471E86844D001CE4E84DA8BABEB0DDEA", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [11, "98CDBDE94A8C79B6C5DD8E96AF07FAF7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [12, "967939744A6C3F5FB4E850A3E7B33E3B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [13, "4F5E80FC46C55F6F7F5ED0AFCA5D414A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [14, "6D4B721A4E1B76493972E08A824F8AE7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [15, "424A2E254F9FD0AABA1BE3B4E7992B60", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [16, "AFC3939B401019F2DEE37784CC1803A5", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [17, "63D0E8894374EF73151267AE2CD7A6E8", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [18, "CA3C71F24708B24B97555584A526400D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [19, "473BEFA7481C557195E608A058891B5A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [20, "A62514214509E9BB6FFCD286F0A8CACE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [21, "7CDBD4B148DCD0CB517E88819C62FD4D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [22, "429C69244E35328DF8D73CA554BFE01C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [23, "662BFCAD46B8DDB2C1F15E95DC1D71FB", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [24, "C7AF1DB740B957C45B589589961D4E9A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [25, "B1C3D37445115C0FD6602D86C18F5A5E", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [26, "4241E3D6474673648F132C9EE621BB2F", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [27, "893BFC51454BD89A3F56B99C7D87C45D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [28, "C54732A548232206595D87B7BB339EF7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)]];
+const EXCELDATA$6 = [["ID", "AssetId", "OffsetPos", "OffsetRot", "OffsetSca"], ["", "", "", "", ""], [1, "20673", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [2, "20760", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [3, "20780", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [4, "20867", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [5, "20900", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [6, "20921", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [7, "20953", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [8, "20980", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [9, "21009", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)]];
 class MorphConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$6);
@@ -2223,7 +2223,7 @@ var foreign9 = /*#__PURE__*/Object.freeze({
     MorphConfig: MorphConfig
 });
 
-const EXCELDATA$5 = [["ID", "PrefabId", "FireSound", "HitEffect", "HitEffectScale", "Des"], ["", "", "", "", "", ""], [1, "5FE5766E4D27D1FC0ECC9DB29673A3EB", "208258", "31122", new mw.Vector(1, 1, 1), null, null, 208399], [2, "EAF62D0F4EF181ABB6C8AB83E876818B", "207772", "31122", new mw.Vector(1, 1, 1), null], [3, "F32C6FB24570123F58CEFA81FC1DAC1F", "208268", "31122", new mw.Vector(1, 1, 1), null], [4, "28BA1D7C44D241C468F19A94D9E63238", "208374", "61006", new mw.Vector(1, 1, 1), null, null, null, 208166], [5, "D07DD084490C6D2C3BC3A7A8BC4884C0", "208374", "61006", new mw.Vector(1, 1, 1), null], [6, "A5C80A2E45063598223D4A8D042593A8", "208166", "265666", new mw.Vector(0.5, 0.5, 0.5), null], [7, "E2497FC44D0EC13158099584EED17776", "208374", "61006", new mw.Vector(1, 1, 1), null, 208495, null, 287821], [8, "24E7DF3146C2E5414BE4EE8AC093215B", "208166", "27422", new mw.Vector(1, 1, 1), "208166"], [9, "6EB015964A8F1DC44DF94595AA7593E1", "208166", "27421", new mw.Vector(1, 1, 1), "屠龙激光枪3号-已完善"], [10, "A3BC64CF4B29BD2D076E4194A2F9E40C", "208374", "61006", new mw.Vector(1, 1, 1), null], [11, "C7708014418743519AEB66A05118335F", "208374", "61006", new mw.Vector(1, 1, 1), null], [12, "592867B84C2ABC5BC11326A6588AC115", "208495", "61006", new mw.Vector(1, 1, 1), null], [13, "4E31B836400E0183C925ACA18475115B", "208374", "27421", new mw.Vector(1, 1, 1), null], [14, "4C18E7A440AD7AE26CFA71AD44B70903", "208374", "27421", new mw.Vector(1, 1, 1), null], [15, "1405575C47698FE0FC41F0B7E104529E", "208048", "27421", new mw.Vector(1, 1, 1), null]];
+const EXCELDATA$5 = [["ID", "PrefabId", "FireSound", "HitEffect", "HitEffectScale", "Des"], ["", "", "", "", "", ""], [1, "5FE5766E4D27D1FC0ECC9DB29673A3EB", "208258", "27422", new mw.Vector(1, 1, 1), null, null, 208399], [2, "EAF62D0F4EF181ABB6C8AB83E876818B", "207772", "27422", new mw.Vector(1, 1, 1), null], [3, "F32C6FB24570123F58CEFA81FC1DAC1F", "208268", "27422", new mw.Vector(1, 1, 1), null], [4, "28BA1D7C44D241C468F19A94D9E63238", "208374", "61006", new mw.Vector(1, 1, 1), null, null, null, 208166], [5, "D07DD084490C6D2C3BC3A7A8BC4884C0", "208374", "61006", new mw.Vector(1, 1, 1), null], [6, "A5C80A2E45063598223D4A8D042593A8", "208166", "265666", new mw.Vector(0.5, 0.5, 0.5), null], [7, "E2497FC44D0EC13158099584EED17776", "208374", "61006", new mw.Vector(1, 1, 1), null, 208495, null, 287821], [8, "24E7DF3146C2E5414BE4EE8AC093215B", "208166", "27422", new mw.Vector(1, 1, 1), "208166"], [9, "6EB015964A8F1DC44DF94595AA7593E1", "208166", "27421", new mw.Vector(1, 1, 1), "屠龙激光枪3号-已完善"], [10, "A3BC64CF4B29BD2D076E4194A2F9E40C", "208374", "61006", new mw.Vector(1, 1, 1), null], [11, "C7708014418743519AEB66A05118335F", "208374", "61006", new mw.Vector(1, 1, 1), null], [12, "592867B84C2ABC5BC11326A6588AC115", "208495", "61006", new mw.Vector(1, 1, 1), null], [13, "4E31B836400E0183C925ACA18475115B", "208374", "27421", new mw.Vector(1, 1, 1), null], [14, "4C18E7A440AD7AE26CFA71AD44B70903", "208374", "27421", new mw.Vector(1, 1, 1), null], [15, "1405575C47698FE0FC41F0B7E104529E", "208048", "27421", new mw.Vector(1, 1, 1), null]];
 class ProjectilePropConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$5);
@@ -2278,7 +2278,7 @@ var foreign14 = /*#__PURE__*/Object.freeze({
     TRAILINGConfig: TRAILINGConfig
 });
 
-const EXCELDATA = [["ID", "WeaponName", "WeaponIcon", "PriceType", "WeaponPrices", "PrefabId", "SlotType", "GunAttitude", "NormalAnims", "NormalAnimTimes", "NormalAtkTime", "NormalBulletCount", "NormalFireInterval", "BulletCount", "Damage", "GunLoc", "GunScale", "SkillAnims", "SkillAnimTimes", "SkillAtkTime", "SkillCDs", "SkillBulletCounts", "SkillFireInterval"], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "手枪", "221099", 1, [1, 8888], "6B813EDF4B3ADFAEBD7C86A9D6BA535C", 16, "14037", ["20244"], [0.4], [0.2], [1], [0.01], 10, 10, new mw.Vector(0, 0, 0), new mw.Vector(1.5, 1.5, 1.5), ["20244", "20244", "20244"], ["0.2", "0.4", "0.6"], [0.2, 0.2, 0.2], [1, 5, 10], [1, 2, 3], [0.01, 0.05, 0.05]], [2, "泡泡枪", "168811", 1, [1, 8888], "15BDCB2E4E51C0050B9BC3AF33316ECD", 16, "14037", ["20244"], [0.4], [0.2], [1], [0.01], 10, 10, new mw.Vector(0, 0, 0), new mw.Vector(1.5, 1.5, 1.5), ["20244", "20244", "20244"], ["0.2", "0.4", "0.6"], [0.2, 0.2, 0.2], [1, 5, 10], [1, 2, 3], [0.01, 0.05, 0.05]], [3, "散弹喷枪", "155702", 1, [1, 8888], "A963840C405ECBE7EBEC57BD46B26565", 16, "14037", ["20244"], [0.4], [0.2], [1], [0.01], 10, 10, new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), ["20244", "20244", "20244"], ["0.2", "0.4", "0.6"], [0.2, 0.2, 0.2], [1, 5, 10], [1, 2, 3], [0.01, 0.05, 0.05]], [4, "霰弹枪", "226214", 1, [1, 8888], "4FEDD6C54B0257242B22ECA4BE5099DA", 16, "221620", ["99959"], [0.5], [0.15], [1], [0.01], 30, 10, new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [5, "喷火枪", "226213", 1, [1, 8888], "5AC24144451A25F4D04B3D8400D74B75", 16, "221620", ["99959"], [0.5], [0.15], [1], [0.01], 30, 10, new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [6, "手枪", "155696", 1, [1, 8888], "21361072458C51775137F086B3D59EA5", 16, "221620", ["99959"], [0.5], [0.15], [1], [0.01], 30, 10, new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [7, "火枪", "122726", 1, [1, 8888], "82B2ADED4C512F42721715BFF158D103", 16, "221620", ["99959"], [0.5], [0.15], [1], [0.01], 30, 10, new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [8, "激光枪", "222534", 1, [1, 8888], "493A3E1D4A6DFD265D8C1BA51A2010C6", 16, "221620", ["99959"], [0.5], [0.15], [1], [0.01], 30, 10, new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [9, "水枪", "122716", 1, [1, 8888], "FADED6DA480333DCE397E08486F6E12B", 16, "221620", ["99959"], [0.5], [0.15], [1], [0.01], 30, 10, new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [10, "火箭发射器", "226826", 1, [1, 8888], "251FCDE54066648DD9228DA8593CABFE", 16, "221620", ["99959"], [0.5], [0.15], [1], [0.01], 30, 10, new mw.Vector(0, 0, 0), new mw.Vector(1.5, 1.5, 1.5), ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [11, "橘黄激光枪", "95676", 1, [1, 8888], "4F1B0735442C84A20C4C229746C0FB74", 16, "221620", ["99959"], [0.5], [0.15], [1], [0.01], 30, 10, new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [12, "加特林", "320984", 1, [1, 8888], "0B70A2E944C51B1851B5A4AADEAF5D7A", 16, "221620", ["99959"], [0.4], [0.13], [1], [0.01], 150, 10, new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [13, "激光枪", "122720", 1, [1, 8888], "06AB82414F7B76402C8B96961A2C34A0", 16, "221620", ["99959"], [0.5], [0.15], [1], [0.01], 30, 10, new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [14, "金枪鱼", "138213", 1, [1, 8888], "E7C6A1FA4BB1FFDE6CAF78B69623C3A5", 16, "221620", ["99959"], [0.5], [0.15], [1], [0.01], 30, 10, new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [15, "弓箭", "278406", 1, [1, 8888], "2580BDD74D69D7F57E93E29E74B387B6", 15, "20305", ["121952", "121955", "121987", "121989", "121990"], [1.2, 1.43, 2.17, 1.8, 2.2], [0.2, 0.2, 0.6, 0.5, 0.8], [1, 1, 2, 1, 1], [0.01, 0.01, 0.01, 0.01, 0.01], 6, 30, new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), ["121981", "121981", "121981"], ["2.47", "2.47", "2.47"], [1.05, 1.05, 1.05], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]]];
+const EXCELDATA = [["ID", "WeaponName", "WeaponIcon", "PriceType", "WeaponPrices", "PrefabId", "SlotType", "GunAttitude", "NormalAnims", "NormalAnimTimes", "NormalAtkTime", "NormalBulletCount", "NormalFireInterval", "BulletCount", "Damage", "GunLoc", "GunScale", "ReloadAnimation", "ReloadSound", "SkillAnims", "SkillAnimTimes", "SkillAtkTime", "SkillCDs", "SkillBulletCounts", "SkillFireInterval"], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "手枪", "221099", 1, [1, 8888], "6B813EDF4B3ADFAEBD7C86A9D6BA535C", 16, "14037", ["20244"], [0.4], [0.2], [1], [0.01], 10, 35, new mw.Vector(0, 0, 0), new mw.Vector(1.5, 1.5, 1.5), "80588", "75374", ["20244", "20244", "20244"], ["0.2", "0.4", "0.6"], [0.2, 0.2, 0.2], [1, 5, 10], [1, 2, 3], [0.01, 0.05, 0.05]], [2, "泡泡枪", "168811", 1, [1, 8888], "15BDCB2E4E51C0050B9BC3AF33316ECD", 16, "14037", ["20244"], [0.4], [0.2], [1], [0.01], 10, 35, new mw.Vector(0, 0, 0), new mw.Vector(1.5, 1.5, 1.5), "80588", "75374", ["20244", "20244", "20244"], ["0.2", "0.4", "0.6"], [0.2, 0.2, 0.2], [1, 5, 10], [1, 2, 3], [0.01, 0.05, 0.05]], [3, "散弹喷枪", "155702", 1, [1, 8888], "A963840C405ECBE7EBEC57BD46B26565", 16, "14037", ["20244"], [0.4], [0.2], [1], [0.01], 10, 35, new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "80588", "75374", ["20244", "20244", "20244"], ["0.2", "0.4", "0.6"], [0.2, 0.2, 0.2], [1, 5, 10], [1, 2, 3], [0.01, 0.05, 0.05]], [4, "霰弹枪", "226214", 1, [1, 18888], "4FEDD6C54B0257242B22ECA4BE5099DA", 16, "221620", ["99959"], [0.5], [0.18], [1], [0.01], 30, 25, new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), "80479", "75374", ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [5, "喷火枪", "226213", 1, [1, 18888], "5AC24144451A25F4D04B3D8400D74B75", 16, "221620", ["99959"], [0.5], [0.18], [1], [0.01], 30, 25, new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), "80479", "75374", ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [6, "手枪", "155696", 1, [1, 18888], "21361072458C51775137F086B3D59EA5", 16, "221620", ["99959"], [0.5], [0.18], [1], [0.01], 30, 25, new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "80479", "75374", ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [7, "火枪", "122726", 1, [2, 28888], "82B2ADED4C512F42721715BFF158D103", 16, "221620", ["99959"], [0.5], [0.17], [1], [0.01], 30, 25, new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "80479", "75374", ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [8, "激光枪", "222534", 1, [2, 28888], "493A3E1D4A6DFD265D8C1BA51A2010C6", 16, "221620", ["99959"], [0.5], [0.17], [1], [0.01], 30, 25, new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), "80479", "75374", ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [9, "水枪", "122716", 1, [2, 28888], "FADED6DA480333DCE397E08486F6E12B", 16, "221620", ["99959"], [0.5], [0.17], [1], [0.01], 30, 25, new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "80479", "75374", ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [10, "火箭发射器", "226826", 1, [2, 28888], "251FCDE54066648DD9228DA8593CABFE", 16, "221620", ["99959"], [0.5], [0.16], [1], [0.01], 30, 25, new mw.Vector(0, 0, 0), new mw.Vector(1.5, 1.5, 1.5), "80479", "75374", ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [11, "橘黄激光枪", "95676", 1, [2, 28888], "4F1B0735442C84A20C4C229746C0FB74", 16, "221620", ["99959"], [0.5], [0.16], [1], [0.01], 30, 25, new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "80479", "75374", ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [12, "加特林", "320984", 1, [2, 28888], "0B70A2E944C51B1851B5A4AADEAF5D7A", 16, "221620", ["99959"], [0.4], [0.18], [1], [0.01], 100, 20, new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "80479", "75374", ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [13, "激光枪", "122720", 1, [3, 38888], "06AB82414F7B76402C8B96961A2C34A0", 16, "221620", ["99959"], [0.5], [0.15], [1], [0.01], 30, 35, new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "80479", "75374", ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [14, "金枪鱼", "138213", 1, [3, 38888], "E7C6A1FA4BB1FFDE6CAF78B69623C3A5", 16, "221620", ["99959"], [0.5], [0.15], [1], [0.01], 30, 35, new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "80479", "75374", ["99959", "99959", "99959"], ["0.2", "0.6", "1"], [0.2, 0.2, 0.2], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]], [15, "弓箭", "278406", 1, [5, 58888], "2580BDD74D69D7F57E93E29E74B387B6", 15, "20305", ["121952", "121955", "121987", "121989", "121990"], [1.2, 1.43, 2.17, 1.8, 2.2], [0.2, 0.2, 0.6, 0.5, 0.8], [1, 1, 2, 1, 1], [0.01, 0.01, 0.01, 0.01, 0.01], 6, 100, new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "20228", "75374", ["121981", "121981", "121981"], ["2.47", "2.47", "2.47"], [1.05, 1.05, 1.05], [1, 3, 5], [1, 3, 5], [0.01, 0.05, 0.05]]];
 class WeaponPropConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA);
@@ -2780,15 +2780,25 @@ class CoinModuleC extends ModuleC {
         return this.diamond;
     }
     getCoinByAd() {
-        this.getAdPanel.showRewardAd(() => {
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
+                this.setCoin(10000);
+            }, "免费领取10000金币");
+        }
+        else {
             this.setCoin(10000);
-        }, "免费领取10000金币");
+        }
         // this.openShopBuyDiamondCoin();
     }
     getDiamondByAd(diamond) {
-        this.getAdPanel.showRewardAd(() => {
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
+                this.setDiamond(1);
+            }, "免费领取1个钻石");
+        }
+        else {
             this.setDiamond(1);
-        }, "免费领取1个钻石");
+        }
         // this.openShopBuyDiamondCoin(diamond);
     }
     net_killPlayerAddCoin(coin) {
@@ -2806,10 +2816,10 @@ class CoinModuleC extends ModuleC {
     //#endregion
     //#region Ads
     defaultAds() {
-        this.delay10Seconds();
+        this.delay30Seconds();
         this.setInterval180Seconds();
     }
-    delay10Seconds() {
+    delay30Seconds() {
         TimeUtil.delaySecond(30).then(() => {
             this.getAdPanel.showRewardAd(() => {
                 this.setDiamond(2);
@@ -2936,7 +2946,7 @@ var foreign29 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.06.22-23.56.50
+ * TIME: 2024.06.29-13.24.37
  */
 let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     get mVirtualJoystickPanel() {
@@ -3179,42 +3189,6 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mResetPosButton_Internal;
     }
-    get mMorphCanvas() {
-        if (!this.mMorphCanvas_Internal && this.uiWidgetBase) {
-            this.mMorphCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMorphCanvas');
-        }
-        return this.mMorphCanvas_Internal;
-    }
-    get mMorphButton() {
-        if (!this.mMorphButton_Internal && this.uiWidgetBase) {
-            this.mMorphButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMorphCanvas/mMorphButton');
-        }
-        return this.mMorphButton_Internal;
-    }
-    get mUnMorphCanvas() {
-        if (!this.mUnMorphCanvas_Internal && this.uiWidgetBase) {
-            this.mUnMorphCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mUnMorphCanvas');
-        }
-        return this.mUnMorphCanvas_Internal;
-    }
-    get mUnMorphButton() {
-        if (!this.mUnMorphButton_Internal && this.uiWidgetBase) {
-            this.mUnMorphButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mUnMorphCanvas/mUnMorphButton');
-        }
-        return this.mUnMorphButton_Internal;
-    }
-    get mJumpCanvas() {
-        if (!this.mJumpCanvas_Internal && this.uiWidgetBase) {
-            this.mJumpCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mJumpCanvas');
-        }
-        return this.mJumpCanvas_Internal;
-    }
-    get mJumpButton() {
-        if (!this.mJumpButton_Internal && this.uiWidgetBase) {
-            this.mJumpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mJumpCanvas/mJumpButton');
-        }
-        return this.mJumpButton_Internal;
-    }
     get mAimCanvas() {
         if (!this.mAimCanvas_Internal && this.uiWidgetBase) {
             this.mAimCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAimCanvas');
@@ -3269,11 +3243,65 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mGunBulletCountTextBlock_Internal;
     }
+    get mUnMorphCanvas() {
+        if (!this.mUnMorphCanvas_Internal && this.uiWidgetBase) {
+            this.mUnMorphCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mUnMorphCanvas');
+        }
+        return this.mUnMorphCanvas_Internal;
+    }
+    get mUnMorphButton() {
+        if (!this.mUnMorphButton_Internal && this.uiWidgetBase) {
+            this.mUnMorphButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mUnMorphCanvas/UnMorphCanvas/mUnMorphButton');
+        }
+        return this.mUnMorphButton_Internal;
+    }
+    get mJumpButton() {
+        if (!this.mJumpButton_Internal && this.uiWidgetBase) {
+            this.mJumpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mUnMorphCanvas/JumpCanvas/mJumpButton');
+        }
+        return this.mJumpButton_Internal;
+    }
+    get mMorphCanvas() {
+        if (!this.mMorphCanvas_Internal && this.uiWidgetBase) {
+            this.mMorphCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMorphCanvas');
+        }
+        return this.mMorphCanvas_Internal;
+    }
+    get mMorphButton() {
+        if (!this.mMorphButton_Internal && this.uiWidgetBase) {
+            this.mMorphButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMorphCanvas/mMorphButton');
+        }
+        return this.mMorphButton_Internal;
+    }
+    get mAtkCanvas() {
+        if (!this.mAtkCanvas_Internal && this.uiWidgetBase) {
+            this.mAtkCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAtkCanvas');
+        }
+        return this.mAtkCanvas_Internal;
+    }
     get mNormalAtkButton() {
         if (!this.mNormalAtkButton_Internal && this.uiWidgetBase) {
-            this.mNormalAtkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mNormalAtkButton');
+            this.mNormalAtkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAtkCanvas/mNormalAtkButton');
         }
         return this.mNormalAtkButton_Internal;
+    }
+    get mReloadButton() {
+        if (!this.mReloadButton_Internal && this.uiWidgetBase) {
+            this.mReloadButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAtkCanvas/mReloadButton');
+        }
+        return this.mReloadButton_Internal;
+    }
+    get mCrouchButton() {
+        if (!this.mCrouchButton_Internal && this.uiWidgetBase) {
+            this.mCrouchButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAtkCanvas/mCrouchButton');
+        }
+        return this.mCrouchButton_Internal;
+    }
+    get mFireJumpButton() {
+        if (!this.mFireJumpButton_Internal && this.uiWidgetBase) {
+            this.mFireJumpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mAtkCanvas/mFireJumpButton');
+        }
+        return this.mFireJumpButton_Internal;
     }
     onAwake() {
         //设置能否每帧触发onUpdate
@@ -3316,10 +3344,6 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
             Event.dispatchToLocal("PlayButtonClick", "mResetPosButton");
         });
         this.mResetPosButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        this.mMorphButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mMorphButton");
-        });
-        this.mMorphButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         this.mUnMorphButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mUnMorphButton");
         });
@@ -3328,6 +3352,22 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
             Event.dispatchToLocal("PlayButtonClick", "mJumpButton");
         });
         this.mJumpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mMorphButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mMorphButton");
+        });
+        this.mMorphButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mReloadButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mReloadButton");
+        });
+        this.mReloadButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mCrouchButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mCrouchButton");
+        });
+        this.mCrouchButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mFireJumpButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mFireJumpButton");
+        });
+        this.mFireJumpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         //按钮多语言
         //文本多语言
         this.initLanguage(this.mRedCountTextBlock);
@@ -3554,7 +3594,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.toAimUpPos = mw.Vector2.zero;
         this.toAimDownPos = mw.Vector2.zero;
         this.aimOffsetValue = 10;
-        this.expansionTime = 0.15;
+        this.expansionTime = 0.1;
         //#endregion
     }
     get getHUDModuleC() {
@@ -3586,7 +3626,6 @@ class HUDPanel extends HUDPanel_Generate$1 {
         Utils.setWidgetVisibility(this.mKillTipCountCanvas, mw.SlateVisibility.Collapsed);
         Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.Collapsed);
         Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.Collapsed);
-        Utils.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.Collapsed);
         this.initAimUI();
     }
     bindButtons() {
@@ -3623,12 +3662,12 @@ class HUDPanel extends HUDPanel_Generate$1 {
     onClickMorphButton() {
         this.getHUDModuleC.onMorphAction.call(true);
         Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.SelfHitTestInvisible);
-        Utils.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.SelfHitTestInvisible);
+        Utils.setWidgetVisibility(this.mAtkCanvas, mw.SlateVisibility.Collapsed);
     }
     onClickUnMorphButton() {
         this.getHUDModuleC.onMorphAction.call(false);
         Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.Collapsed);
-        Utils.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mAtkCanvas, mw.SlateVisibility.SelfHitTestInvisible);
     }
     onClickJumpButton() {
         this.getHUDModuleC.onJumpAction.call(false);
@@ -3745,6 +3784,8 @@ class HUDPanel extends HUDPanel_Generate$1 {
     }
     startDeadCountDown() {
         this.mVirtualJoystickPanel.resetJoyStick();
+        this.getHUDModuleC.onNormalAction.call(false);
+        this.mNormalAtkButton.enable = false;
         Utils.setWidgetVisibility(this.mDeadCanvas, mw.SlateVisibility.SelfHitTestInvisible);
         this.deadCountDown = 3;
         this.mDeadCountDownTextBlock.text = this.deadCountDown-- + "";
@@ -3765,6 +3806,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         Utils.setWidgetVisibility(this.mDeadCanvas, mw.SlateVisibility.Collapsed);
         this.clearCountDownInterval();
         this.showInvincibleTimeUI(2);
+        this.mNormalAtkButton.enable = true;
     }
     //#endregion
     //#region 无敌倒计时
@@ -4168,6 +4210,15 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.mNormalAtkButton.onJoyStickUp.add(() => {
             this.getHUDModuleC.onNormalAction.call(false);
         });
+        this.mFireJumpButton.onClicked.add(this.onClickJumpButton.bind(this));
+        this.mReloadButton.onClicked.add(this.onClickReloadButton.bind(this));
+        this.mCrouchButton.onClicked.add(this.onClickCrouchButton.bind(this));
+    }
+    onClickReloadButton() {
+        this.getHUDModuleC.onReloadAction.call();
+    }
+    onClickCrouchButton() {
+        this.getHUDModuleC.onCrouchAction.call();
     }
     initAimUI() {
         this.updateAimPosition();
@@ -4283,6 +4334,9 @@ class HUDModuleC extends ModuleC {
         this.onMorphAction = new Action1();
         this.onJumpAction = new Action();
         this.onNormalAction = new Action1();
+        this.onReloadAction = new Action();
+        this.onCrouchAction = new Action();
+        this.isCrouching = false;
         //#endregion
         //#region 连杀提示
         this.killCountMap = new Map();
@@ -4319,6 +4373,7 @@ class HUDModuleC extends ModuleC {
         this.initSoundEvent();
         this.initMorphAction();
         this.onJumpAction.add(this.addJumpAction.bind(this));
+        this.onCrouchAction.add(this.addCrouchAction.bind(this));
         Event.addLocalListener(EventType.OnOffMainHUD, this.addOnOffHUDPannel.bind(this));
         let isOpen = true;
         InputUtil.onKeyDown(mw.Keys.NumPadFive, () => {
@@ -4334,6 +4389,10 @@ class HUDModuleC extends ModuleC {
         this.localPlayer.character.jump();
         if (!this.localPlayer.character.movementEnabled)
             this.localPlayer.character.movementEnabled = true;
+    }
+    addCrouchAction() {
+        this.isCrouching = !this.isCrouching;
+        this.localPlayer.character.crouch(this.isCrouching);
     }
     onEnterScene(sceneType) {
         this.getHUDPanel.show();
@@ -4498,9 +4557,8 @@ class HUDModuleC extends ModuleC {
     }
     addMorphAction(isMorph) {
         this.isMorph = isMorph;
-        Event.dispatchToLocal(EventType.OnOffWeaponUI, isMorph);
-        if (!isMorph)
-            Event.dispatchToLocal(EventType.TryOutGun);
+        // Event.dispatchToLocal(EventType.OnOffWeaponUI, isMorph);
+        // if (!isMorph) Event.dispatchToLocal(EventType.TryOutGun);
     }
     //#endregion
     //#region Aim
@@ -5025,11 +5083,6 @@ class WeaponModuleC extends ModuleC {
         this.aimCameraFov = 90;
         /**装备FOV */
         this.equipmentCameraFov = 110;
-        //#endregion
-        //#region 
-        this.reloadAniId = ["80479", "80588"];
-        this.reloadSoundId = "75374";
-        this.reloadAnimation = null;
     }
     get getHUDModuleC() {
         if (!this.hudModuleC) {
@@ -5049,6 +5102,7 @@ class WeaponModuleC extends ModuleC {
     }
     bindEventAction() {
         this.getHUDModuleC.onNormalAction.add(this.normalIntervalAttack.bind(this));
+        this.getHUDModuleC.onReloadAction.add(this.reloadButtet.bind(this));
         //#region KeyDown
         let isNormal = true;
         InputUtil.onKeyDown(mw.Keys.R, () => {
@@ -5115,7 +5169,7 @@ class WeaponModuleC extends ModuleC {
         this.server.net_fireNormalAttack(shootDir, this.currentWeaponId, this.normalAttackIndex++, this.currentProjectileType);
         this.bulletCount--;
         if (this.bulletCount <= 0)
-            this.reloadButtet();
+            this.reloadButtet(1);
         this.getHUDModuleC.updateBulletCount(this.bulletCount);
         TimeUtil.delaySecond(this.normalAtkTime[this.normalAttackIndex - 1]).then(() => {
             this.getHUDModuleC.startAimUITween();
@@ -5183,13 +5237,13 @@ class WeaponModuleC extends ModuleC {
             }
         }
     }
-    async reloadButtet() {
-        await TimeUtil.delaySecond(1);
-        let animIndex = this.weaponPropElement.BulletCount == 10 ? 1 : 0;
-        await Utils.asyncDownloadAsset(this.reloadAniId[animIndex]);
-        this.reloadAnimation = this.localPlayer.character.loadAnimation(this.reloadAniId[animIndex]);
-        this.reloadAnimation.play();
-        SoundService.play3DSound(this.reloadSoundId, this.fireAnchor.worldTransform.position);
+    //#endregion
+    //#region 
+    async reloadButtet(delaySecond = 0) {
+        if (!this.weaponPropElement || this.bulletCount == this.weaponPropElement.BulletCount)
+            return;
+        await TimeUtil.delaySecond(delaySecond);
+        this.server.net_reload(this.weaponPropElement.ReloadAnimation, this.weaponPropElement.ReloadSound);
         TimeUtil.delaySecond(1).then(this.addReloadBullet.bind(this));
     }
     addReloadBullet() {
@@ -6147,6 +6201,8 @@ class ShopModuleC extends ModuleC {
         return true;
     }
     setCharacterGun() {
+        if (this.getHUDModuleC.getIsMorph)
+            return;
         let gunId = MapEx.get(this.useShopIds, ShopType.Gun);
         this.getWeaponModuleC.switchWeaponData(gunId);
     }
@@ -6216,9 +6272,9 @@ class ShopModuleC extends ModuleC {
         if (this.gunModel)
             GameObjPool.despawn(this.gunModel);
         let weaponPropElement = GameConfig.WeaponProp.getElement(key);
-        let gunId = weaponPropElement.WeaponIcon;
+        let gunId = weaponPropElement.PrefabId;
         await Utils.asyncDownloadAsset(gunId);
-        this.gunModel = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Asset);
+        this.gunModel = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Prefab);
         this.gunModel.parent = this.shopAnchor;
         this.gunModel.localTransform.position = weaponPropElement.GunLoc;
         this.gunModel.localTransform.rotation = new mw.Rotation(0, 15, 0);
@@ -6544,28 +6600,14 @@ class ActivityPanel extends ActivityPanel_Generate$1 {
     onClickAdsGetButton() {
         if (!this.isHasCondition(true))
             return;
-        // let contentText: string = "";
-        // let curActivityData = this.activityData[this.currentIndex - 1];
-        // let price: number = 0;
-        // if (curActivityData.shopType == ShopType.Gun) {
-        // 	price = GameConfig.GUN.getElement(curActivityData.shopId).PRICE[0];
-        // 	contentText = `消耗${price}钻石领取`;
-        // } else if (curActivityData.shopType == ShopType.Role) {
-        // 	price = GameConfig.ROLE.getElement(curActivityData.shopId).PRICE[0];
-        // 	contentText = `消耗${price}钻石领取`;
-        // }
-        // this.getConfirmPanel.confirmTips(() => {
-        // 	if (this.getCoinModuleC.getDiamond >= price) {
-        // 		this.getCoinModuleC.setDiamond(-price);
-        // 		this.setGetActivity();
-        // 	} else {
-        // 		Notice.showDownNotice("钻石不足");
-        // 		this.getCoinModuleC.openShopBuyDiamondCoin(price);
-        // 	}
-        // }, contentText, "领取", "取消", "提示");
-        this.getAdPanel.showRewardAd(() => {
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
+                this.setGetActivity();
+            }, "免费领取" + this.getActicityShopTypeStr());
+        }
+        else {
             this.setGetActivity();
-        }, "免费领取" + this.getActicityShopTypeStr());
+        }
     }
     setGetActivity() {
         this.getActivityModuleC.setGetActivity(this.activityData[this.currentIndex - 1].shopId, this.activityData[this.currentIndex - 1].shopType);
@@ -6881,6 +6923,1192 @@ var foreign31 = /*#__PURE__*/Object.freeze({
     default: HUDModuleS
 });
 
+var PrefabEvent;
+(function (PrefabEvent) {
+    /**
+     * 网络事件key
+     */
+    var _onEventNetKey = "PrefabEventNeyKey";
+    /**
+     * 本地事件key
+     */
+    var _onEventKey = "PrefabEvetKey";
+    /**
+     * 重新提交数据保存
+     */
+    var _retrySetCustomDataList = [];
+    /**
+     * 初始化事件监听器
+     */
+    function initEvent() {
+        if (mwext["PrefabEvent"]) {
+            return;
+        }
+        mwext["PrefabEvent"] = true;
+        if (SystemUtil.isServer()) {
+            DataStorage.setTemporaryStorage(mw.SystemUtil.isPIE);
+            Event.addLocalListener("__setCustomDataCache", (k, v) => {
+                _retrySetCustomDataList.push({ key: k, val: v });
+            });
+            setInterval(() => {
+                let keyMap = new Map();
+                _retrySetCustomDataList.forEach(e => {
+                    keyMap.set(e.key, e.val);
+                });
+                _retrySetCustomDataList = [];
+                keyMap.forEach((v, k, maps) => {
+                    _retrySetCustomDataList.push({ key: k, val: v });
+                });
+                while (_retrySetCustomDataList.length > 0) {
+                    let data = _retrySetCustomDataList.shift();
+                    if (data) {
+                        DataStorage.asyncSetData(data.key, data.val).then((res) => {
+                            if (res != mw.DataStorageResultCode.Success) {
+                                _retrySetCustomDataList.push(data);
+                            }
+                        }).catch((err) => {
+                            _retrySetCustomDataList.push(data);
+                        });
+                    }
+                }
+            }, 6500);
+        }
+        var call = (clazzName, funcName, ...params) => {
+            if (!PrefabEvent[clazzName]) {
+                // Console.error("无效协议 : " + clazzName);
+                return;
+            }
+            if (!PrefabEvent[clazzName][funcName]) {
+                // Console.error("无效协议 : " + clazzName + ":" + funcName);
+                return;
+            }
+            // Console.log("调用 : " + _onEventKey + ":" + clazzName + ":" + funcName);
+            Event.dispatchToLocal(_onEventKey + ":" + clazzName + ":" + funcName, ...params);
+        };
+        if (mw.SystemUtil.isServer()) {
+            Event.addClientListener(_onEventNetKey, (player, clazzName, funcName, ...params) => {
+                call(clazzName, funcName, ...params);
+            });
+        }
+        if (mw.SystemUtil.isClient()) {
+            Event.addServerListener(_onEventNetKey, (clazzName, funcName, ...params) => {
+                call(clazzName, funcName, ...params);
+            });
+        }
+    }
+    /**
+     * 回调客户端事件
+     * @param clazzName
+     * @param funcName
+     * @param params
+     */
+    function callClientFunc(clazzName, funcName, ...params) {
+        Event.dispatchToLocal(_onEventKey + ":" + clazzName + ":" + funcName, ...params);
+    }
+    /**
+     * 回调事件
+     * @param clazzName
+     * @param funcName
+     * @param params
+     */
+    function callFunc(clazzName, funcName, ...params) {
+        if (mw.SystemUtil.isClient()) {
+            Event.dispatchToServer(_onEventNetKey, clazzName, funcName, ...params);
+        }
+        if (mw.SystemUtil.isServer()) {
+            Event.dispatchToAllClient(_onEventNetKey, clazzName, funcName, ...params);
+        }
+        Event.dispatchToLocal(_onEventKey + ":" + clazzName + ":" + funcName, ...params);
+    }
+    /**
+     * 监听事件
+     * @param clazzName
+     * @param funcName
+     * @param callback
+     */
+    function onFunc(clazzName, funcName, callback) {
+        // Console.log("注册 : " + _onEventKey + ":" + clazzName + ":" + funcName);
+        return Event.addLocalListener(_onEventKey + ":" + clazzName + ":" + funcName, callback);
+    }
+    /**
+     * 存档工具
+     */
+    class DBSaveBase {
+    }
+    /**
+ * 存档工具
+ */
+    class DBServerTool {
+        /**
+         * 获取玩家数据缓存
+         * @param playerId
+         * @returns
+         */
+        static getPlayerDataCache(playerId) {
+            let dataCache = null;
+            if (mwext["PrefabEventDataCache"]) {
+                dataCache = mwext["PrefabEventDataCache"];
+            }
+            else {
+                mwext["PrefabEventDataCache"] = {};
+                dataCache = mwext["PrefabEventDataCache"];
+            }
+            if (!dataCache[playerId]) {
+                dataCache[playerId] = {};
+            }
+            return dataCache[playerId];
+        }
+        /**
+         * (服务端)获取存档
+         * @param playerId
+         * @param key
+         * @returns
+         */
+        static async asyncGetValue(playerId, key) {
+            //Console.error("asyncGetValue : 获取存档数据开始");
+            return new Promise((resolve, reject) => {
+                let playerDataCache = this.getPlayerDataCache(playerId);
+                let dataKey = key + "_" + playerId + "_key";
+                let dataVal = null;
+                let keys = Object.keys(playerDataCache);
+                keys.forEach((v, i, arr) => {
+                    if (v == dataKey) {
+                        dataVal = playerDataCache[dataKey];
+                    }
+                });
+                if (dataVal) {
+                    let res = null;
+                    let db = dataVal;
+                    if (!db) {
+                        resolve(null);
+                        return;
+                    }
+                    res = JSON.parse(db);
+                    resolve(res.value);
+                    return;
+                }
+                Utils.asyncRpcGetData(dataKey).then((v) => {
+                    let res = null;
+                    let db = v;
+                    if (!db) {
+                        resolve(null);
+                    }
+                    res = JSON.parse(db);
+                    playerDataCache[dataKey] = db;
+                    //Console.error("asyncGetValue : 获取存档数据成功");
+                    resolve(res.value);
+                }).catch(err => {
+                    // Console.log(err);
+                    reject("不存在这份存档，可能是新玩家");
+                });
+            });
+        }
+        /**
+         * (服务端)设置存档
+         * @param playerId
+         * @param key
+         * @param val
+         */
+        static async asyncSetValue(playerId, key, val) {
+            return new Promise((resolve, reject) => {
+                let data = new DBSaveBase();
+                data.value = val;
+                let dataStr = JSON.stringify(data);
+                let playerDataCache = this.getPlayerDataCache(playerId);
+                let dataKey = key + "_" + playerId + "_key";
+                if (playerDataCache[dataKey] == dataStr) {
+                    resolve();
+                    return;
+                }
+                playerDataCache[dataKey] = dataStr;
+                Event.dispatchToLocal("__setCustomDataCache", key + "_" + playerId + "_key", dataStr);
+                resolve();
+            });
+        }
+    }
+    PrefabEvent.DBServerTool = DBServerTool;
+    (function (AttrType) {
+        /** 最大血量  */
+        AttrType[AttrType["MaxHp"] = 0] = "MaxHp";
+        /** 最大蓝量 */
+        AttrType[AttrType["MaxMp"] = 1] = "MaxMp";
+        /** 攻击力 */
+        AttrType[AttrType["Attack"] = 2] = "Attack";
+        /** 魔法力 */
+        AttrType[AttrType["Magic"] = 3] = "Magic";
+        /** 防御力 */
+        AttrType[AttrType["Def"] = 4] = "Def";
+        /** 魔法防御力 */
+        AttrType[AttrType["MDef"] = 5] = "MDef";
+        /** 速度 */
+        AttrType[AttrType["Speed"] = 6] = "Speed";
+        /** 跳跃力 */
+        AttrType[AttrType["Jump"] = 7] = "Jump";
+        /** 攻击速度 */
+        AttrType[AttrType["AttackSpeed"] = 8] = "AttackSpeed";
+        /** 攻击距离 */
+        AttrType[AttrType["AttackDistance"] = 9] = "AttackDistance";
+    })(PrefabEvent.AttrType || (PrefabEvent.AttrType = {}));
+    /**
+     * 属性协议
+     */
+    class PrefabEvtAttr {
+        /**
+         * (双端)添加属性
+         * @param senderGuid 发起对象Guid
+         * @param targetGuid 目标对象Guid
+         * @param val 值
+         * @param attrType 属性类型
+         */
+        static addAttrVal(senderGuid, targetGuid, val, attrType) {
+            callFunc(this.name, this.onAddAttrVal.name, senderGuid, targetGuid, val, attrType);
+        }
+        /**
+         * (双端)监听属性改变
+         * @param callback 回调
+         * @returns
+         */
+        static onAddAttrVal(callback) {
+            return onFunc(this.name, this.onAddAttrVal.name, callback);
+        }
+    }
+    PrefabEvent.PrefabEvtAttr = PrefabEvtAttr;
+    (function (EquipSlot) {
+        /** 武器 */
+        EquipSlot[EquipSlot["Weapon"] = 1] = "Weapon";
+    })(PrefabEvent.EquipSlot || (PrefabEvent.EquipSlot = {}));
+    /**
+     * 装备协议
+     */
+    class PrefabEvtEquip {
+        /**
+         * (双端) 穿戴装备
+         * @param targetGuid 对象Guid
+         * @param slot 槽位
+         * @param equipGuid 装备Guid
+         */
+        static equip(targetGuid, slot, equipGuid) {
+            callFunc(this.name, this.onEquip.name, targetGuid, slot, equipGuid);
+        }
+        /**
+         * (双端)监听装备改变
+         * @param callback
+         * @returns
+         */
+        static onEquip(callback) {
+            return onFunc(this.name, this.onEquip.name, callback);
+        }
+    }
+    PrefabEvent.PrefabEvtEquip = PrefabEvtEquip;
+    /**
+     * 玩家信息类型
+     */
+    let PlayerInfoType;
+    (function (PlayerInfoType) {
+        /** 名字 */
+        PlayerInfoType[PlayerInfoType["Name"] = 0] = "Name";
+        /** 等级 */
+        PlayerInfoType[PlayerInfoType["Level"] = 1] = "Level";
+        /** 经验 */
+        PlayerInfoType[PlayerInfoType["Exp"] = 2] = "Exp";
+        /** 金币 */
+        PlayerInfoType[PlayerInfoType["Gold"] = 3] = "Gold";
+        /** 积分 */
+        PlayerInfoType[PlayerInfoType["Score"] = 4] = "Score";
+        /** 关卡 */
+        PlayerInfoType[PlayerInfoType["Stage"] = 5] = "Stage";
+        /** 人气 */
+        PlayerInfoType[PlayerInfoType["Popularity"] = 6] = "Popularity";
+    })(PlayerInfoType = PrefabEvent.PlayerInfoType || (PrefabEvent.PlayerInfoType = {}));
+    /**
+     * 玩家信息协议
+     */
+    class PrefabEvtPlayerInfo {
+        /**
+         * (双端)设置属性
+         * @param senderGuid 发起对象Guid
+         * @param targetGuid 目标对象Guid
+         * @param val 值
+         * @param infoType 信息类型
+         */
+        static setPlayerInfo(senderGuid, targetGuid, val, infoType) {
+            callFunc(this.name, this.onSetPlayerInfo.name, senderGuid, targetGuid, val, infoType);
+        }
+        /**
+         * (双端)监听属性改变
+         * @param callback 回调
+         * @returns
+         */
+        static onSetPlayerInfo(callback) {
+            return onFunc(this.name, this.onSetPlayerInfo.name, callback);
+        }
+        /**
+         * (双端)添加属性
+         * @param senderGuid 发起对象Guid
+         * @param targetGuid 目标对象Guid
+         * @param val 值
+         * @param infoType 信息类型
+         */
+        static addPlayerInfo(senderGuid, targetGuid, val, attrType) {
+            callFunc(this.name, this.onAddPlayerInfo.name, senderGuid, targetGuid, val, PlayerInfoType);
+        }
+        /**
+         * (双端)监听属性改变
+         * @param callback 回调
+         * @returns
+         */
+        static onAddPlayerInfo(callback) {
+            return onFunc(this.name, this.onAddPlayerInfo.name, callback);
+        }
+        /**
+         * (双端) 设置玩家名字
+         * @param senderGuid 发起者Guid
+         * @param targetGuid 目标对象Guid (玩家character)
+         * @param name 名字
+         */
+        static setPlayerName(senderGuid, targetGuid, name) {
+            callFunc(this.name, this.onSetPlayerName.name, senderGuid, targetGuid, name);
+        }
+        /**
+         * (双端)监听玩家名字改变
+         * @param callback 回调
+         * @returns
+         */
+        static onSetPlayerName(callback) {
+            return onFunc(this.name, this.onSetPlayerName.name, callback);
+        }
+    }
+    PrefabEvent.PrefabEvtPlayerInfo = PrefabEvtPlayerInfo;
+    /**
+     * 攻击协议
+     */
+    class PrefabEvtFight {
+        /**
+         * (双端)击中目标
+         * @param attackerGuid 发起对象Guid
+         * @param targetGuid 目标对象Guid
+         * @param damage 伤害
+         * @param hitPoint 击中点
+         */
+        static hit(senderGuid, targetGuid, damage, hitPoint) {
+            callFunc(this.name, this.onHit.name, senderGuid, targetGuid, damage, hitPoint);
+        }
+        /**
+         * (双端)监听击中目标
+         * @param callback 回调
+         * @returns
+         */
+        static onHit(callback) {
+            return onFunc(this.name, this.onHit.name, callback);
+        }
+        /**
+         * (双端)发起伤害
+         * @param attackerGuid 发起对象Guid
+         * @param targetGuid 目标对象Guid
+         * @param damage 伤害
+         */
+        static hurt(senderGuid, targetGuid, damage) {
+            callFunc(this.name, this.onHurt.name, senderGuid, targetGuid, damage);
+        }
+        /**
+         * (双端)监听受到伤害
+         * @param callback 回调
+         * @returns
+         */
+        static onHurt(callback) {
+            return onFunc(this.name, this.onHurt.name, callback);
+        }
+        /**
+         * (双端)发起治疗
+         * @param attackerGuid 发起对象Guid
+         * @param targetGuid 目标对象Guid
+         * @param cureVal 治疗数值
+         */
+        static cure(senderGuid, targetGuid, cureVal) {
+            callFunc(this.name, this.onCure.name, senderGuid, targetGuid, cureVal);
+        }
+        /**
+         * (双端)监听受到治疗
+         * @param callback 回调
+         * @returns
+         */
+        static onCure(callback) {
+            return onFunc(this.name, this.onCure.name, callback);
+        }
+        /**
+         * (双端)发起死亡
+         * @param targetGuid
+         */
+        static die(targetGuid) {
+            callFunc(this.name, this.onDie.name, targetGuid);
+        }
+        /**
+         * (双端)监听对象死亡
+         * @param callback
+         * @returns
+         */
+        static onDie(callback) {
+            return onFunc(this.name, this.onDie.name, callback);
+        }
+        /**
+         * (双端)通知复活
+         * @param targetGuid 对象id
+         */
+        static revive(targetGuid) {
+            callFunc(this.name, this.onRevive.name, targetGuid);
+        }
+        /**
+         * (双端)监听复活
+         * @param callback 回调
+         * @returns
+         */
+        static onRevive(callback) {
+            return onFunc(this.name, this.onRevive.name, callback);
+        }
+    }
+    PrefabEvent.PrefabEvtFight = PrefabEvtFight;
+    /**
+     * 记录点协议
+     */
+    class PrefabEvtRecordPoint {
+        /**
+         * (双端)设置关卡
+         * @param senderGuid 发送者Guid
+         * @param targetGuid 目标Guid
+         * @param recordPointId 记录点id
+         */
+        static setRecordPoint(senderGuid, targetGuid, recordPointId) {
+            callFunc(this.name, this.onSetRecordPoint.name, senderGuid, targetGuid, recordPointId);
+        }
+        /**
+         * (双端)监听设置关卡
+         * @param callback 回调
+         * @returns
+         */
+        static onSetRecordPoint(callback) {
+            return onFunc(this.name, this.onSetRecordPoint.name, callback);
+        }
+        /**
+         * (双端)返回存档记录点
+         * @param senderGuid 发送者guid
+         */
+        static backCurrentRecordPoint(senderGuid) {
+            callFunc(this.name, this.onBackCurrentRecordPoint.name, senderGuid);
+        }
+        /**
+         * (双端)监听回到存档记录点
+         * @param callback 回调
+         */
+        static onBackCurrentRecordPoint(callback) {
+            return onFunc(this.name, this.onBackCurrentRecordPoint.name, callback);
+        }
+        /**
+         * (双端)返回记录点
+         * @param senderGuid 发送者guid
+         * @param recordPointId 记录点id
+         */
+        static backRecordPoint(senderGuid, recordPointId) {
+            callFunc(this.name, this.onBackRecordPoint.name, senderGuid, recordPointId);
+        }
+        /**
+         * (双端)监听回到记录点
+         * @param callback 回调
+         */
+        static onBackRecordPoint(callback) {
+            return onFunc(this.name, this.onBackRecordPoint.name, callback);
+        }
+    }
+    PrefabEvent.PrefabEvtRecordPoint = PrefabEvtRecordPoint;
+    /**
+     * 通知协议
+     */
+    class PrefabEvtNotify {
+        /**
+         * (客户端)本地通知
+         * @param text
+         */
+        static notifyLocal(text) {
+            callClientFunc(this.name, this.onNotify.name, text);
+        }
+        /**
+         * (双端)全局通知
+         * @param text 信息
+         */
+        static notify(text) {
+            callFunc(this.name, this.onNotify.name, text);
+        }
+        /**
+         * (双端)监听通知
+         * @param callback
+         * @returns
+         */
+        static onNotify(callback) {
+            return onFunc(this.name, this.onNotify.name, callback);
+        }
+    }
+    PrefabEvent.PrefabEvtNotify = PrefabEvtNotify;
+    /**
+     * 排行榜协议
+     */
+    class PrefabEvtRank {
+        /**
+         * (客户端)打开排行榜UI
+         */
+        static openRank() {
+            callClientFunc(this.name, this.onOpenRank.name);
+        }
+        /**
+         * (客户端)监听打开排行榜UI
+         * @param callback 回调
+         * @returns
+         */
+        static onOpenRank(callback) {
+            return onFunc(this.name, this.onOpenRank.name, callback);
+        }
+        /**
+         * (双端)设置排行榜数据
+         * @param senderGuid
+         * @param score
+         * @param typeName
+         */
+        static setRankData(senderGuid, name, score, typeName) {
+            callFunc(this.name, this.onSetRankData.name, senderGuid, name, score, typeName);
+        }
+        /**
+         * (双端)监听设置排行榜数据
+         * @param callback
+         * @returns
+         */
+        static onSetRankData(callback) {
+            return onFunc(this.name, this.onSetRankData.name, callback);
+        }
+        /**
+         * (双端)删除排行榜数据
+         * @param senderGuid
+         */
+        static delRankData(senderGuid) {
+            callFunc(this.name, this.onDelRankData.name, senderGuid);
+        }
+        /**
+         * (双端)监听删除排行榜数据
+         * @param callback
+         * @returns
+         */
+        static onDelRankData(callback) {
+            return onFunc(this.name, this.onDelRankData.name, callback);
+        }
+    }
+    PrefabEvent.PrefabEvtRank = PrefabEvtRank;
+    /**
+     * 换装协议
+     */
+    class PrefabEvtCloth {
+        /**
+         * (客户端)加载角色体型
+         * @param senderGuid 发送者Guid
+         * @param targetGuid 目标对象Guid
+         * @param dressResGuid 装扮资源Guid
+         */
+        static loadRole(senderGuid, targetGuid, dressResGuid) {
+            callClientFunc(this.name, this.onLoadRole.name, senderGuid, targetGuid, dressResGuid);
+        }
+        /**
+         * (客户端)监听加载角色体型协议
+         * @param callback 回调
+         * @returns
+         */
+        static onLoadRole(callback) {
+            return onFunc(this.name, this.onLoadRole.name, callback);
+        }
+        /**
+         * (客户端)加载装扮
+         * @param senderGuid 发送者Guid
+         * @param targetGuid 目标对象Guid
+         * @param dressResGuid 装扮资源Guid
+         */
+        static loadCloth(senderGuid, targetGuid, dressResGuid) {
+            callClientFunc(this.name, this.onLoadCloth.name, senderGuid, targetGuid, dressResGuid);
+        }
+        /**
+         * (客户端)监听加载装扮
+         * @param callback
+         * @returns
+         */
+        static onLoadCloth(callback) {
+            return onFunc(this.name, this.onLoadCloth.name, callback);
+        }
+        /**
+         * (客户端)加载插槽资源
+         * @param senderGuid 发送者Guid
+         * @param targetGuid 目标对象Guid
+         * @param slotResGuid 插槽资源Guid
+         */
+        static loadSlot(senderGuid, targetGuid, slotResGuid) {
+            callClientFunc(this.name, this.onLoadSlot.name, senderGuid, targetGuid, slotResGuid);
+        }
+        /**
+         * (客户端)监听加载插槽资源
+         * @param callback
+         * @returns
+         */
+        static onLoadSlot(callback) {
+            return onFunc(this.name, this.onLoadSlot.name, callback);
+        }
+    }
+    PrefabEvent.PrefabEvtCloth = PrefabEvtCloth;
+    /**
+* 模板埋点注解(仅客户端生效)
+* @param reportId 模板id
+* @returns
+*/
+    function PrefabReport(reportId = null) {
+        return function (target, propertyKey, descriptor) {
+            const method = descriptor.value;
+            descriptor.value = function (...args) {
+                if (SystemUtil.isClient() && reportId) {
+                    // Console.log("模板", target.constructor.name, "埋点", reportId);
+                    mw.RoomService.reportLogInfo("ts_action_firstdo", "模板埋点", JSON.stringify({ record: "TemplatePrefab", lifetime: reportId }));
+                }
+                const result = method.apply(this, args);
+                return result;
+            };
+        };
+    }
+    PrefabEvent.PrefabReport = PrefabReport;
+    /**
+     * 收集物协议
+     */
+    class PrefabEvtCollection {
+        /**
+         * (客户端)打开收集物UI
+         */
+        static openCollectionUI() {
+            callClientFunc(this.name, this.onOpenCollectionUI.name);
+        }
+        /**
+         * (客户端)监听收集物UI被打开
+         * @param callback
+         * @returns
+         */
+        static onOpenCollectionUI(callback) {
+            return onFunc(this.name, this.onOpenCollectionUI.name, callback);
+        }
+        /**
+         * (双端)获得收集物
+         * @param senderGuid
+         * @param targetGuid
+         * @param atlasId
+         */
+        static addCollection(atlasId, playerId) {
+            callFunc(this.name, this.onAddCollection.name, atlasId, playerId);
+        }
+        /**
+         * (双端)监听获得收集物
+         * @param callback 回调
+         * @returns
+         */
+        static onAddCollection(callback) {
+            return onFunc(this.name, this.onAddCollection.name, callback);
+        }
+    }
+    PrefabEvent.PrefabEvtCollection = PrefabEvtCollection;
+    initEvent();
+})(PrefabEvent || (PrefabEvent = {}));
+/**
+* 模板埋点注解(仅客户端生效)
+* @param reportId 模板id
+* @returns
+*/
+function PrefabReport(reportId = null) {
+    return function (target, propertyKey, descriptor) {
+        const method = descriptor.value;
+        descriptor.value = function (...args) {
+            if (SystemUtil.isClient() && reportId) {
+                // Console.log("模板", target.constructor.name, "埋点", reportId);
+                mw.RoomService.reportLogInfo("ts_action_firstdo", "模板埋点", JSON.stringify({ record: "TemplatePrefab", lifetime: reportId }));
+            }
+            const result = method.apply(this, args);
+            return result;
+        };
+    };
+}
+
+var foreign78 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    get PrefabEvent () { return PrefabEvent; },
+    PrefabReport: PrefabReport
+});
+
+class Projectile {
+    get getCurCharacterId() {
+        if (this.curCharacterId == null) {
+            this.curCharacterId = Player.localPlayer.character.gameObjectId;
+        }
+        return this.curCharacterId;
+    }
+    constructor(characterId, projectileId, hitEffect, hitEffectScale, startPosition, startDirection, projectileType, paths) {
+        this.curCharacterId = null;
+        this.characterId = "";
+        this.projectileId = "";
+        this.hitEffect = "";
+        this.hitEffectScale = mw.Vector.one;
+        this.startPosition = mw.Vector.zero;
+        this.startDirection = mw.Vector.zero;
+        this.projectileType = ProjectileType.Normal;
+        this.paths = [];
+        this.projectile = null;
+        this.trigger = null;
+        this.isUpdate = false;
+        this.stride = mw.Vector.zero;
+        this.currentLocation = mw.Vector.zero;
+        this.pathIndex = 0;
+        this.recycleTimeOutId = null;
+        this.characterId = characterId;
+        this.projectileId = projectileId;
+        this.hitEffect = hitEffect;
+        this.hitEffectScale = hitEffectScale;
+        this.startPosition = startPosition;
+        this.startDirection = startDirection;
+        this.projectileType = projectileType;
+        this.paths = paths;
+        this.pathIndex = 0;
+        this.initBullet();
+    }
+    async initBullet() {
+        this.projectile = await GameObjPool.asyncSpawn(this.projectileId, mwext.GameObjPoolSourceType.Prefab);
+        this.projectile.worldTransform.position = Helper.recyclePosition;
+        this.trigger = this.projectile.getChildByName("触发器");
+        this.trigger.onEnter.add(this.onTriggerEnter.bind(this));
+        this.trigger.enabled = true;
+        this.prepareFire();
+    }
+    onTriggerEnter(go) {
+        if (go instanceof mw.Character) {
+            if (go.gameObjectId == this.characterId)
+                return; //打到了自己
+            if (go instanceof Character) { //打到了玩家
+                if (this.getCurCharacterId == this.characterId) { //是自己发射的子弹
+                    PrefabEvent.PrefabEvtFight.hit(this.characterId, go.gameObjectId, Helper.damage, this.projectile.worldTransform.position);
+                    console.error("击中其他玩家");
+                }
+            }
+        }
+        this.recycleThis();
+    }
+    initFire(ownerId, startPosition, startDirection, projectileType, paths) {
+        this.characterId = ownerId;
+        this.startPosition = startPosition;
+        this.startDirection = startDirection;
+        this.projectileType = projectileType;
+        this.paths = paths;
+        this.pathIndex = 0;
+        this.prepareFire();
+        this.setThisVisibility(true);
+    }
+    prepareFire() {
+        if (!this.projectile)
+            return;
+        if (this.projectileType == ProjectileType.ArcTracing_Weak && this.paths) {
+            if (this.pathIndex + 1 < this.paths.length) {
+                mw.Vector.subtract(this.paths[this.pathIndex + 1], this.paths[this.pathIndex], this.startDirection);
+                this.startDirection = this.startDirection.normalized;
+            }
+        }
+        this.projectile.worldTransform.position = this.startPosition;
+        this.projectile.worldTransform.rotation = new mw.Rotation(this.startDirection, mw.Vector.up);
+        this.isUpdate = true;
+        this.setRecycleTimeout();
+    }
+    update(dt) {
+        if (!this.isUpdate)
+            return;
+        if (this.projectileType == ProjectileType.Normal || !this.paths) {
+            this.updateThisPosition_Normal();
+        }
+        else if (this.projectileType == ProjectileType.ArcTracing_Weak && this.paths) {
+            this.updateThisPosition_ArcTracing();
+        }
+    }
+    updateThisPosition_Normal() {
+        if (!this.projectile)
+            return;
+        mw.Vector.multiply(this.startDirection, 50, this.stride);
+        this.currentLocation = this.projectile.worldTransform.position;
+        this.currentLocation.x += this.stride.x;
+        this.currentLocation.y += this.stride.y;
+        this.currentLocation.z += this.stride.z;
+        this.projectile.worldTransform.position = this.currentLocation;
+    }
+    updateThisPosition_ArcTracing() {
+        if (!this.projectile || !this.paths || this.paths?.length == 0)
+            return;
+        this.currentLocation = this.projectile.worldTransform.position;
+        if (mw.Vector.subtract(this.currentLocation, this.paths[this.pathIndex]).length <= 10) {
+            if (this.pathIndex < this.paths.length - 1) {
+                mw.Vector.subtract(this.paths[this.pathIndex + 1], this.paths[this.pathIndex], this.startDirection);
+                this.startDirection = this.startDirection.normalized;
+                this.projectile.worldTransform.rotation = new mw.Rotation(this.startDirection, mw.Vector.up);
+                this.pathIndex++;
+                // console.error("this.pathIndex", this.pathIndex);
+            }
+        }
+        mw.Vector.lerp(this.currentLocation, this.paths[this.pathIndex], 0.6, this.currentLocation);
+        this.projectile.worldTransform.position = this.currentLocation;
+        if (mw.Vector.subtract(this.currentLocation, this.paths[this.paths.length - 1]).length <= 10) {
+            this.recycleThis();
+        }
+    }
+    setThisVisibility(visible) {
+        if (!this.projectile || !this.trigger)
+            return;
+        this.projectile.setVisibility(visible, true);
+        this.trigger.enabled = visible;
+    }
+    setRecycleTimeout() {
+        this.clearRecycleTimeOut();
+        this.recycleTimeOutId = setTimeout(() => {
+            this.recycleThis();
+        }, 10 * 1000);
+    }
+    clearRecycleTimeOut() {
+        if (!this.recycleTimeOutId)
+            return;
+        clearTimeout(this.recycleTimeOutId);
+        this.recycleTimeOutId = null;
+    }
+    recycleThis() {
+        this.play3DSound("208300");
+        this.playHitEffect();
+        this.recycleProjectile();
+        // console.error("recycle");
+    }
+    play3DSound(soundId) {
+        SoundService.play3DSound(soundId, this.projectile.worldTransform.position);
+    }
+    playHitEffect() {
+        EffectService.playAtPosition(this.hitEffect, this.projectile.worldTransform.position, { scale: this.hitEffectScale });
+    }
+    recycleProjectile() {
+        if (!Helper.activeBulletMap.has(this.projectileId) || !Helper.activeBulletMap.get(this.projectileId).has(this))
+            return;
+        Helper.activeBulletMap.get(this.projectileId).delete(this);
+        if (Helper.inactiveBullets.has(this.projectileId)) {
+            Helper.inactiveBullets.get(this.projectileId).push(this);
+        }
+        else {
+            Helper.inactiveBullets.set(this.projectileId, [this]);
+        }
+        this.projectile.worldTransform.position = Helper.recyclePosition;
+        this.setThisVisibility(false);
+        this.clearRecycleTimeOut();
+        this.isUpdate = false;
+    }
+}
+
+let Weapon = class Weapon extends Script {
+    constructor() {
+        super(...arguments);
+        this.weaponId = -1;
+        this.playerId_WeaponId = "";
+        this.fireData = "";
+        this.isVisibility = true;
+        this.weaponModuleC = null;
+        this.player = null;
+        this.playerId = -1;
+        //#region Switch Weapon
+        this.weaponPropElement = null;
+        this.weaponModel = null;
+        this.fireAnchor = null;
+        //#endregion
+        //#region Projectile
+        this.projectilePropElement = null;
+        this.gos = [];
+        //#endregion
+    }
+    get getWeaponModuleC() {
+        if (this.weaponModuleC == null) {
+            this.weaponModuleC = ModuleService.getModule(WeaponModuleC);
+        }
+        return this.weaponModuleC;
+    }
+    get getPlayer() {
+        if (this.player == null) {
+            this.player = Player.getPlayer(this.playerId);
+        }
+        return this.player;
+    }
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+        if (mw.SystemUtil.isServer())
+            return;
+    }
+    async initPlayerWeapon() {
+        let data = this.playerId_WeaponId.split("|");
+        if (data.length < 2)
+            return;
+        this.playerId = parseInt(data[0]);
+        this.weaponId = parseInt(data[1]);
+        await this.initPlayer();
+        await this.onWeaponChanged();
+    }
+    async initPlayer() {
+        if (!this.player) {
+            this.player = await Player.asyncGetPlayer(this.playerId);
+            console.error(`playerId = ${this.playerId}"的玩家 "${this.player ? "角色初始化完成" : "角色初始化失败"}`);
+        }
+    }
+    async onWeaponChanged() {
+        if (this.weaponId == -1) {
+            this.despawnWeapon();
+            return;
+        }
+        if (!this.player)
+            await this.initPlayer();
+        if (!this.player)
+            return;
+        this.weaponPropElement = GameConfig.WeaponProp.getElement(this.weaponId);
+        if (!this.weaponPropElement)
+            return;
+        this.despawnWeapon();
+        await this.spawnWeapon(this.weaponPropElement.PrefabId, this.weaponPropElement.SlotType);
+        this.playSubStance(this.weaponPropElement.GunAttitude);
+    }
+    async playSubStance(gunAttitude) {
+        await Utils.asyncDownloadAsset(gunAttitude);
+        this.getPlayer.character.loadSubStance(gunAttitude).play();
+    }
+    async spawnWeapon(prefabId, slotType) {
+        this.weaponModel = await GameObjPool.asyncSpawn(prefabId, mwext.GameObjPoolSourceType.Prefab);
+        this.getPlayer.character.attachToSlot(this.weaponModel, slotType);
+        this.weaponModel.localTransform.position = mw.Vector.zero;
+        this.weaponModel.localTransform.rotation = mw.Rotation.zero;
+        console.error(`playerId = ${this.playerId}的玩家 "${this.weaponModel ? "武器加载完成" : "武器加载失败"}`);
+        this.fireAnchor = this.weaponModel.getChildByName("FireAnchor");
+        if (this.getPlayer.playerId == Player.localPlayer.playerId)
+            this.getWeaponModuleC.setFireAnchor(this.fireAnchor);
+    }
+    despawnWeapon() {
+        if (!this.weaponModel)
+            return;
+        GameObjPool.despawn(this.weaponModel);
+    }
+    weaponState() {
+        if (!this.weaponModel)
+            return;
+        this.weaponModel.setVisibility(this.isVisibility);
+    }
+    fire() {
+        if (!this.fireData)
+            return;
+        // console.error("fireData = " + this.fireData);
+        let data = this.fireData.split("|");
+        if (data.length < 3)
+            return;
+        let shootDir = Utils.stringToVector(data[0]);
+        let projectileType = parseInt(data[1]);
+        let attackIndex = parseInt(data[2]);
+        if (!this.getPlayer || !this.fireAnchor)
+            return;
+        this.projectilePropElement = GameConfig.ProjectileProp.getElement(this.weaponId);
+        if (!this.projectilePropElement || !this.weaponPropElement)
+            return;
+        console.error(`playerId = ${this.playerId}的玩家 发射一枚子弹`);
+        this.prepareFire(this.getPlayer.character.gameObjectId, this.fireAnchor.worldTransform.position, shootDir, projectileType, attackIndex);
+    }
+    async prepareFire(characterId, firePosition, shootDir, projectileType, attackIndex) {
+        let prefabId = this.projectilePropElement.PrefabId;
+        let fireSound = this.projectilePropElement.FireSound;
+        let hitEffect = this.projectilePropElement.HitEffect;
+        let hitEffectScale = this.projectilePropElement.HitEffectScale;
+        let projectileCount = this.weaponPropElement.NormalBulletCount[attackIndex];
+        let fireInterval = this.weaponPropElement.NormalFireInterval[attackIndex];
+        this.calculateFire(characterId, prefabId, hitEffect, hitEffectScale, firePosition, shootDir, projectileType, fireSound);
+        for (let i = 0; i < projectileCount - 1; ++i) {
+            await new Promise((resolve) => {
+                setTimeout(() => {
+                    this.calculateFire(characterId, prefabId, hitEffect, hitEffectScale, firePosition, shootDir, projectileType, fireSound);
+                    return resolve();
+                }, fireInterval * 1000);
+            });
+        }
+    }
+    calculateFire(characterId, prefabId, hitEffect, hitEffectScale, firePosition, shootDir, projectileType, fireSound) {
+        this.startFire(characterId, prefabId, hitEffect, hitEffectScale, firePosition, shootDir, projectileType);
+        this.playFireSound(firePosition, fireSound);
+    }
+    startFire(characterId, projectileId, hitEffect, hitEffectScale, firePosition, startDirection, projectileType) {
+        let projectile = null;
+        let targetPosition = null;
+        let paths = null;
+        if (projectileType == ProjectileType.ArcTracing_Weak) {
+            targetPosition = Utils.getRecentPlayerLoc(characterId, firePosition, startDirection);
+            if (!targetPosition)
+                targetPosition = Utils.getRecentTargetLoc(firePosition, startDirection);
+            paths = (targetPosition == null) ? null : Utils.getArcTracingPoints(firePosition, targetPosition);
+            if (mw.SystemUtil.isPIE)
+                this.testPaths(paths);
+        }
+        if (Helper.inactiveBullets.has(projectileId)) {
+            let projectiles = Helper.inactiveBullets.get(projectileId);
+            if (projectiles.length > 0) {
+                projectile = projectiles.shift();
+                projectile.initFire(characterId, firePosition, startDirection, projectileType, paths);
+            }
+            else {
+                projectile = new Projectile(characterId, projectileId, hitEffect, hitEffectScale, firePosition, startDirection, projectileType, paths);
+            }
+        }
+        else {
+            projectile = new Projectile(characterId, projectileId, hitEffect, hitEffectScale, firePosition, startDirection, projectileType, paths);
+        }
+        if (Helper.activeBulletMap.has(projectileId)) {
+            Helper.activeBulletMap.get(projectileId).add(projectile);
+        }
+        else {
+            Helper.activeBulletMap.set(projectileId, new Set().add(projectile));
+        }
+    }
+    playFireSound(firePosition, fireSound) {
+        SoundService.play3DSound(fireSound, firePosition);
+    }
+    async testPaths(paths) {
+        if (!paths)
+            return;
+        if (this.gos.length >= paths.length) {
+            for (let i = 0; i < paths.length; ++i) {
+                this.gos[i].worldTransform.scale = mw.Vector.one.multiply(0.1);
+                this.gos[i].worldTransform.position = paths[i];
+                this.gos[i].setVisibility(true);
+            }
+            for (let i = paths.length; i < this.gos.length; ++i) {
+                this.gos[i].setVisibility(false);
+            }
+        }
+        else {
+            for (let i = 0; i < this.gos.length; ++i) {
+                this.gos[i].worldTransform.scale = mw.Vector.one.multiply(0.1);
+                this.gos[i].worldTransform.position = paths[i];
+                this.gos[i].setVisibility(true);
+            }
+            for (let i = this.gos.length; i < paths.length; ++i) {
+                let go = await mw.GameObject.asyncSpawn("197386");
+                go.setCollision(mw.PropertyStatus.Off);
+                go.worldTransform.scale = mw.Vector.one.multiply(0.1);
+                go.worldTransform.position = paths[i];
+                this.gos.push(go);
+            }
+        }
+    }
+};
+__decorate([
+    mw.Property({ replicated: true, onChanged: "onWeaponChanged" })
+], Weapon.prototype, "weaponId", void 0);
+__decorate([
+    mw.Property({ replicated: true, onChanged: "initPlayerWeapon" })
+], Weapon.prototype, "playerId_WeaponId", void 0);
+__decorate([
+    mw.Property({ replicated: true, onChanged: "fire" })
+], Weapon.prototype, "fireData", void 0);
+__decorate([
+    mw.Property({ replicated: true, onChanged: "weaponState" })
+], Weapon.prototype, "isVisibility", void 0);
+Weapon = __decorate([
+    Component
+], Weapon);
+var Weapon$1 = Weapon;
+
+class WeaponModuleS extends ModuleS {
+    constructor() {
+        super(...arguments);
+        //#endregion
+        //#region Weapon
+        this.playerWeaponMap = new Map();
+        //#endregion
+    }
+    onPlayerEnterGame(player) {
+        let gunId = MapEx.get(DataCenterS.getData(player, ShopData).useShopIds, ShopType.Gun);
+        this.initWeapon(player, gunId);
+    }
+    onPlayerLeft(player) {
+        let playerId = player.playerId;
+        this.destoryWeapon(playerId);
+    }
+    //#region Normal Attack
+    net_fireNormalAttack(shootDir, weaponId, attackIndex, projectileType) {
+        this.fireNormalAttack(this.currentPlayer, shootDir, weaponId, attackIndex, projectileType);
+    }
+    async fireNormalAttack(player, shootDir, weaponId, attackIndex, projectileType) {
+        let weaponPropElement = GameConfig.WeaponProp.getElement(weaponId);
+        let atkAnimation = weaponPropElement.NormalAnims[attackIndex];
+        if (atkAnimation != "-1") {
+            await Utils.asyncDownloadAsset(atkAnimation);
+            player.character.loadAnimation(atkAnimation).play();
+        }
+        let atkTime = weaponPropElement.NormalAtkTime[attackIndex];
+        TimeUtil.delaySecond(atkTime).then(() => {
+            if (!this.playerWeaponMap.has(player.playerId))
+                return;
+            let fireData = Utils.vectorToString(shootDir) + "|" + projectileType + "|" + attackIndex;
+            this.playerWeaponMap.get(player.playerId).fireData = fireData;
+        });
+    }
+    net_reload(reloadAniId, reloadSoundId) {
+        this.reload(this.currentPlayer, reloadAniId, reloadSoundId);
+    }
+    async reload(player, reloadAniId, reloadSoundId) {
+        await Utils.asyncDownloadAsset(reloadAniId);
+        player.character.loadAnimation(reloadAniId).play();
+        SoundService.play3DSound(reloadSoundId, player.character.worldTransform.position);
+    }
+    initWeapon(player, weaponId) {
+        let playerId = player.playerId;
+        if (this.playerWeaponMap.has(playerId))
+            return;
+        let weapon = player.character.addComponent(Weapon$1, true);
+        let playerId_WeaponId = playerId + "|" + weaponId;
+        weapon.playerId_WeaponId = playerId_WeaponId;
+        this.playerWeaponMap.set(playerId, weapon);
+        this.getClient(player).net_switchWeaponData(weaponId);
+    }
+    net_switchWeapon(weaponId) {
+        let player = this.currentPlayer;
+        this.switchWeapon(player, weaponId);
+    }
+    async switchWeapon(player, weaponId) {
+        let playerId = player.playerId;
+        if (!this.playerWeaponMap.has(playerId))
+            this.initWeapon(player, weaponId);
+        if (!this.playerWeaponMap.has(playerId))
+            return;
+        let weapon = this.playerWeaponMap.get(playerId);
+        if (!weapon)
+            return;
+        weapon.weaponId = weaponId;
+    }
+    destoryWeapon(playerId) {
+        if (!this.playerWeaponMap.has(playerId))
+            return;
+        let weapon = this.playerWeaponMap.get(playerId);
+        if (!weapon)
+            return;
+        weapon.weaponId = -1;
+    }
+    setWeaponState(playerId, isVisibility) {
+        if (!this.playerWeaponMap.has(playerId))
+            return;
+        this.playerWeaponMap.get(playerId).isVisibility = isVisibility;
+    }
+}
+__decorate([
+    Decorator.noReply()
+], WeaponModuleS.prototype, "net_fireNormalAttack", null);
+__decorate([
+    Decorator.noReply()
+], WeaponModuleS.prototype, "net_reload", null);
+__decorate([
+    Decorator.noReply()
+], WeaponModuleS.prototype, "net_switchWeapon", null);
+
 class MorphModuleC extends ModuleC {
     constructor() {
         super(...arguments);
@@ -6932,7 +8160,14 @@ class MorphModuleC extends ModuleC {
 class MorphModuleS extends ModuleS {
     constructor() {
         super(...arguments);
+        this.weaponModuleS = null;
         this.playerGoMap = new Map();
+    }
+    get getWeaponModuleS() {
+        if (!this.weaponModuleS) {
+            this.weaponModuleS = ModuleService.getModule(WeaponModuleS);
+        }
+        return this.weaponModuleS;
     }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     onStart() {
@@ -6955,7 +8190,7 @@ class MorphModuleS extends ModuleS {
         await this.spawnGo(player);
         // console.error(player.character.getCollision());
         // if (player.character.getCollision() != mw.PropertyStatus.Off) player.character.setCollision(mw.PropertyStatus.Off);
-        // this.getGunModuleS.setGunState(player.userId, false);
+        this.getWeaponModuleS.setWeaponState(player.playerId, false);
     }
     // private i: number = 1;
     async spawnGo(player) {
@@ -6968,6 +8203,7 @@ class MorphModuleS extends ModuleS {
         await tmpGo.asyncReady();
         tmpGo.setCollision(mw.PropertyStatus.Off);
         player.character.attachToSlot(tmpGo, mw.HumanoidSlotType.Root);
+        tmpGo.localTransform.scale = new mw.Vector(morphElement.OffsetSca);
         tmpGo.localTransform.position = new mw.Vector(0, 0, tmpGo.getBoundingBox().z / 2);
         tmpGo.localTransform.rotation = new mw.Rotation(morphElement.OffsetRot);
         this.playerGoMap.set(player.userId, tmpGo);
@@ -6984,7 +8220,7 @@ class MorphModuleS extends ModuleS {
         if (!player.character.getVisibility())
             player.character.setVisibility(true, true);
         // if (player.character.getCollision() != mw.PropertyStatus.On) player.character.setCollision(mw.PropertyStatus.On);
-        // this.getGunModuleS.setGunState(player.userId, true);//TODO:WFZ
+        this.getWeaponModuleS.setWeaponState(player.playerId, true);
     }
     recycleGo(userId) {
         if (this.playerGoMap.has(userId)) {
@@ -6995,6 +8231,11 @@ class MorphModuleS extends ModuleS {
     playEffectSound(player) {
         EffectService.playOnGameObject("153045", player.character, { slotType: mw.HumanoidSlotType.Root, scale: mw.Vector.one.multiply(3) });
         SoundService.play3DSound("47427", player.character);
+    }
+    setPlayerMorphState(userId, isVisibility) {
+        if (!this.playerGoMap.has(userId))
+            return;
+        this.playerGoMap.get(userId).setVisibility(isVisibility);
     }
 }
 __decorate([
@@ -8494,722 +9735,6 @@ var foreign38 = /*#__PURE__*/Object.freeze({
     PlayerModuleC: PlayerModuleC
 });
 
-var PrefabEvent;
-(function (PrefabEvent) {
-    /**
-     * 网络事件key
-     */
-    var _onEventNetKey = "PrefabEventNeyKey";
-    /**
-     * 本地事件key
-     */
-    var _onEventKey = "PrefabEvetKey";
-    /**
-     * 重新提交数据保存
-     */
-    var _retrySetCustomDataList = [];
-    /**
-     * 初始化事件监听器
-     */
-    function initEvent() {
-        if (mwext["PrefabEvent"]) {
-            return;
-        }
-        mwext["PrefabEvent"] = true;
-        if (SystemUtil.isServer()) {
-            DataStorage.setTemporaryStorage(mw.SystemUtil.isPIE);
-            Event.addLocalListener("__setCustomDataCache", (k, v) => {
-                _retrySetCustomDataList.push({ key: k, val: v });
-            });
-            setInterval(() => {
-                let keyMap = new Map();
-                _retrySetCustomDataList.forEach(e => {
-                    keyMap.set(e.key, e.val);
-                });
-                _retrySetCustomDataList = [];
-                keyMap.forEach((v, k, maps) => {
-                    _retrySetCustomDataList.push({ key: k, val: v });
-                });
-                while (_retrySetCustomDataList.length > 0) {
-                    let data = _retrySetCustomDataList.shift();
-                    if (data) {
-                        DataStorage.asyncSetData(data.key, data.val).then((res) => {
-                            if (res != mw.DataStorageResultCode.Success) {
-                                _retrySetCustomDataList.push(data);
-                            }
-                        }).catch((err) => {
-                            _retrySetCustomDataList.push(data);
-                        });
-                    }
-                }
-            }, 6500);
-        }
-        var call = (clazzName, funcName, ...params) => {
-            if (!PrefabEvent[clazzName]) {
-                // Console.error("无效协议 : " + clazzName);
-                return;
-            }
-            if (!PrefabEvent[clazzName][funcName]) {
-                // Console.error("无效协议 : " + clazzName + ":" + funcName);
-                return;
-            }
-            // Console.log("调用 : " + _onEventKey + ":" + clazzName + ":" + funcName);
-            Event.dispatchToLocal(_onEventKey + ":" + clazzName + ":" + funcName, ...params);
-        };
-        if (mw.SystemUtil.isServer()) {
-            Event.addClientListener(_onEventNetKey, (player, clazzName, funcName, ...params) => {
-                call(clazzName, funcName, ...params);
-            });
-        }
-        if (mw.SystemUtil.isClient()) {
-            Event.addServerListener(_onEventNetKey, (clazzName, funcName, ...params) => {
-                call(clazzName, funcName, ...params);
-            });
-        }
-    }
-    /**
-     * 回调客户端事件
-     * @param clazzName
-     * @param funcName
-     * @param params
-     */
-    function callClientFunc(clazzName, funcName, ...params) {
-        Event.dispatchToLocal(_onEventKey + ":" + clazzName + ":" + funcName, ...params);
-    }
-    /**
-     * 回调事件
-     * @param clazzName
-     * @param funcName
-     * @param params
-     */
-    function callFunc(clazzName, funcName, ...params) {
-        if (mw.SystemUtil.isClient()) {
-            Event.dispatchToServer(_onEventNetKey, clazzName, funcName, ...params);
-        }
-        if (mw.SystemUtil.isServer()) {
-            Event.dispatchToAllClient(_onEventNetKey, clazzName, funcName, ...params);
-        }
-        Event.dispatchToLocal(_onEventKey + ":" + clazzName + ":" + funcName, ...params);
-    }
-    /**
-     * 监听事件
-     * @param clazzName
-     * @param funcName
-     * @param callback
-     */
-    function onFunc(clazzName, funcName, callback) {
-        // Console.log("注册 : " + _onEventKey + ":" + clazzName + ":" + funcName);
-        return Event.addLocalListener(_onEventKey + ":" + clazzName + ":" + funcName, callback);
-    }
-    /**
-     * 存档工具
-     */
-    class DBSaveBase {
-    }
-    /**
- * 存档工具
- */
-    class DBServerTool {
-        /**
-         * 获取玩家数据缓存
-         * @param playerId
-         * @returns
-         */
-        static getPlayerDataCache(playerId) {
-            let dataCache = null;
-            if (mwext["PrefabEventDataCache"]) {
-                dataCache = mwext["PrefabEventDataCache"];
-            }
-            else {
-                mwext["PrefabEventDataCache"] = {};
-                dataCache = mwext["PrefabEventDataCache"];
-            }
-            if (!dataCache[playerId]) {
-                dataCache[playerId] = {};
-            }
-            return dataCache[playerId];
-        }
-        /**
-         * (服务端)获取存档
-         * @param playerId
-         * @param key
-         * @returns
-         */
-        static async asyncGetValue(playerId, key) {
-            //Console.error("asyncGetValue : 获取存档数据开始");
-            return new Promise((resolve, reject) => {
-                let playerDataCache = this.getPlayerDataCache(playerId);
-                let dataKey = key + "_" + playerId + "_key";
-                let dataVal = null;
-                let keys = Object.keys(playerDataCache);
-                keys.forEach((v, i, arr) => {
-                    if (v == dataKey) {
-                        dataVal = playerDataCache[dataKey];
-                    }
-                });
-                if (dataVal) {
-                    let res = null;
-                    let db = dataVal;
-                    if (!db) {
-                        resolve(null);
-                        return;
-                    }
-                    res = JSON.parse(db);
-                    resolve(res.value);
-                    return;
-                }
-                Utils.asyncRpcGetData(dataKey).then((v) => {
-                    let res = null;
-                    let db = v;
-                    if (!db) {
-                        resolve(null);
-                    }
-                    res = JSON.parse(db);
-                    playerDataCache[dataKey] = db;
-                    //Console.error("asyncGetValue : 获取存档数据成功");
-                    resolve(res.value);
-                }).catch(err => {
-                    // Console.log(err);
-                    reject("不存在这份存档，可能是新玩家");
-                });
-            });
-        }
-        /**
-         * (服务端)设置存档
-         * @param playerId
-         * @param key
-         * @param val
-         */
-        static async asyncSetValue(playerId, key, val) {
-            return new Promise((resolve, reject) => {
-                let data = new DBSaveBase();
-                data.value = val;
-                let dataStr = JSON.stringify(data);
-                let playerDataCache = this.getPlayerDataCache(playerId);
-                let dataKey = key + "_" + playerId + "_key";
-                if (playerDataCache[dataKey] == dataStr) {
-                    resolve();
-                    return;
-                }
-                playerDataCache[dataKey] = dataStr;
-                Event.dispatchToLocal("__setCustomDataCache", key + "_" + playerId + "_key", dataStr);
-                resolve();
-            });
-        }
-    }
-    PrefabEvent.DBServerTool = DBServerTool;
-    (function (AttrType) {
-        /** 最大血量  */
-        AttrType[AttrType["MaxHp"] = 0] = "MaxHp";
-        /** 最大蓝量 */
-        AttrType[AttrType["MaxMp"] = 1] = "MaxMp";
-        /** 攻击力 */
-        AttrType[AttrType["Attack"] = 2] = "Attack";
-        /** 魔法力 */
-        AttrType[AttrType["Magic"] = 3] = "Magic";
-        /** 防御力 */
-        AttrType[AttrType["Def"] = 4] = "Def";
-        /** 魔法防御力 */
-        AttrType[AttrType["MDef"] = 5] = "MDef";
-        /** 速度 */
-        AttrType[AttrType["Speed"] = 6] = "Speed";
-        /** 跳跃力 */
-        AttrType[AttrType["Jump"] = 7] = "Jump";
-        /** 攻击速度 */
-        AttrType[AttrType["AttackSpeed"] = 8] = "AttackSpeed";
-        /** 攻击距离 */
-        AttrType[AttrType["AttackDistance"] = 9] = "AttackDistance";
-    })(PrefabEvent.AttrType || (PrefabEvent.AttrType = {}));
-    /**
-     * 属性协议
-     */
-    class PrefabEvtAttr {
-        /**
-         * (双端)添加属性
-         * @param senderGuid 发起对象Guid
-         * @param targetGuid 目标对象Guid
-         * @param val 值
-         * @param attrType 属性类型
-         */
-        static addAttrVal(senderGuid, targetGuid, val, attrType) {
-            callFunc(this.name, this.onAddAttrVal.name, senderGuid, targetGuid, val, attrType);
-        }
-        /**
-         * (双端)监听属性改变
-         * @param callback 回调
-         * @returns
-         */
-        static onAddAttrVal(callback) {
-            return onFunc(this.name, this.onAddAttrVal.name, callback);
-        }
-    }
-    PrefabEvent.PrefabEvtAttr = PrefabEvtAttr;
-    (function (EquipSlot) {
-        /** 武器 */
-        EquipSlot[EquipSlot["Weapon"] = 1] = "Weapon";
-    })(PrefabEvent.EquipSlot || (PrefabEvent.EquipSlot = {}));
-    /**
-     * 装备协议
-     */
-    class PrefabEvtEquip {
-        /**
-         * (双端) 穿戴装备
-         * @param targetGuid 对象Guid
-         * @param slot 槽位
-         * @param equipGuid 装备Guid
-         */
-        static equip(targetGuid, slot, equipGuid) {
-            callFunc(this.name, this.onEquip.name, targetGuid, slot, equipGuid);
-        }
-        /**
-         * (双端)监听装备改变
-         * @param callback
-         * @returns
-         */
-        static onEquip(callback) {
-            return onFunc(this.name, this.onEquip.name, callback);
-        }
-    }
-    PrefabEvent.PrefabEvtEquip = PrefabEvtEquip;
-    /**
-     * 玩家信息类型
-     */
-    let PlayerInfoType;
-    (function (PlayerInfoType) {
-        /** 名字 */
-        PlayerInfoType[PlayerInfoType["Name"] = 0] = "Name";
-        /** 等级 */
-        PlayerInfoType[PlayerInfoType["Level"] = 1] = "Level";
-        /** 经验 */
-        PlayerInfoType[PlayerInfoType["Exp"] = 2] = "Exp";
-        /** 金币 */
-        PlayerInfoType[PlayerInfoType["Gold"] = 3] = "Gold";
-        /** 积分 */
-        PlayerInfoType[PlayerInfoType["Score"] = 4] = "Score";
-        /** 关卡 */
-        PlayerInfoType[PlayerInfoType["Stage"] = 5] = "Stage";
-        /** 人气 */
-        PlayerInfoType[PlayerInfoType["Popularity"] = 6] = "Popularity";
-    })(PlayerInfoType = PrefabEvent.PlayerInfoType || (PrefabEvent.PlayerInfoType = {}));
-    /**
-     * 玩家信息协议
-     */
-    class PrefabEvtPlayerInfo {
-        /**
-         * (双端)设置属性
-         * @param senderGuid 发起对象Guid
-         * @param targetGuid 目标对象Guid
-         * @param val 值
-         * @param infoType 信息类型
-         */
-        static setPlayerInfo(senderGuid, targetGuid, val, infoType) {
-            callFunc(this.name, this.onSetPlayerInfo.name, senderGuid, targetGuid, val, infoType);
-        }
-        /**
-         * (双端)监听属性改变
-         * @param callback 回调
-         * @returns
-         */
-        static onSetPlayerInfo(callback) {
-            return onFunc(this.name, this.onSetPlayerInfo.name, callback);
-        }
-        /**
-         * (双端)添加属性
-         * @param senderGuid 发起对象Guid
-         * @param targetGuid 目标对象Guid
-         * @param val 值
-         * @param infoType 信息类型
-         */
-        static addPlayerInfo(senderGuid, targetGuid, val, attrType) {
-            callFunc(this.name, this.onAddPlayerInfo.name, senderGuid, targetGuid, val, PlayerInfoType);
-        }
-        /**
-         * (双端)监听属性改变
-         * @param callback 回调
-         * @returns
-         */
-        static onAddPlayerInfo(callback) {
-            return onFunc(this.name, this.onAddPlayerInfo.name, callback);
-        }
-        /**
-         * (双端) 设置玩家名字
-         * @param senderGuid 发起者Guid
-         * @param targetGuid 目标对象Guid (玩家character)
-         * @param name 名字
-         */
-        static setPlayerName(senderGuid, targetGuid, name) {
-            callFunc(this.name, this.onSetPlayerName.name, senderGuid, targetGuid, name);
-        }
-        /**
-         * (双端)监听玩家名字改变
-         * @param callback 回调
-         * @returns
-         */
-        static onSetPlayerName(callback) {
-            return onFunc(this.name, this.onSetPlayerName.name, callback);
-        }
-    }
-    PrefabEvent.PrefabEvtPlayerInfo = PrefabEvtPlayerInfo;
-    /**
-     * 攻击协议
-     */
-    class PrefabEvtFight {
-        /**
-         * (双端)击中目标
-         * @param attackerGuid 发起对象Guid
-         * @param targetGuid 目标对象Guid
-         * @param damage 伤害
-         * @param hitPoint 击中点
-         */
-        static hit(senderGuid, targetGuid, damage, hitPoint) {
-            callFunc(this.name, this.onHit.name, senderGuid, targetGuid, damage, hitPoint);
-        }
-        /**
-         * (双端)监听击中目标
-         * @param callback 回调
-         * @returns
-         */
-        static onHit(callback) {
-            return onFunc(this.name, this.onHit.name, callback);
-        }
-        /**
-         * (双端)发起伤害
-         * @param attackerGuid 发起对象Guid
-         * @param targetGuid 目标对象Guid
-         * @param damage 伤害
-         */
-        static hurt(senderGuid, targetGuid, damage) {
-            callFunc(this.name, this.onHurt.name, senderGuid, targetGuid, damage);
-        }
-        /**
-         * (双端)监听受到伤害
-         * @param callback 回调
-         * @returns
-         */
-        static onHurt(callback) {
-            return onFunc(this.name, this.onHurt.name, callback);
-        }
-        /**
-         * (双端)发起治疗
-         * @param attackerGuid 发起对象Guid
-         * @param targetGuid 目标对象Guid
-         * @param cureVal 治疗数值
-         */
-        static cure(senderGuid, targetGuid, cureVal) {
-            callFunc(this.name, this.onCure.name, senderGuid, targetGuid, cureVal);
-        }
-        /**
-         * (双端)监听受到治疗
-         * @param callback 回调
-         * @returns
-         */
-        static onCure(callback) {
-            return onFunc(this.name, this.onCure.name, callback);
-        }
-        /**
-         * (双端)发起死亡
-         * @param targetGuid
-         */
-        static die(targetGuid) {
-            callFunc(this.name, this.onDie.name, targetGuid);
-        }
-        /**
-         * (双端)监听对象死亡
-         * @param callback
-         * @returns
-         */
-        static onDie(callback) {
-            return onFunc(this.name, this.onDie.name, callback);
-        }
-        /**
-         * (双端)通知复活
-         * @param targetGuid 对象id
-         */
-        static revive(targetGuid) {
-            callFunc(this.name, this.onRevive.name, targetGuid);
-        }
-        /**
-         * (双端)监听复活
-         * @param callback 回调
-         * @returns
-         */
-        static onRevive(callback) {
-            return onFunc(this.name, this.onRevive.name, callback);
-        }
-    }
-    PrefabEvent.PrefabEvtFight = PrefabEvtFight;
-    /**
-     * 记录点协议
-     */
-    class PrefabEvtRecordPoint {
-        /**
-         * (双端)设置关卡
-         * @param senderGuid 发送者Guid
-         * @param targetGuid 目标Guid
-         * @param recordPointId 记录点id
-         */
-        static setRecordPoint(senderGuid, targetGuid, recordPointId) {
-            callFunc(this.name, this.onSetRecordPoint.name, senderGuid, targetGuid, recordPointId);
-        }
-        /**
-         * (双端)监听设置关卡
-         * @param callback 回调
-         * @returns
-         */
-        static onSetRecordPoint(callback) {
-            return onFunc(this.name, this.onSetRecordPoint.name, callback);
-        }
-        /**
-         * (双端)返回存档记录点
-         * @param senderGuid 发送者guid
-         */
-        static backCurrentRecordPoint(senderGuid) {
-            callFunc(this.name, this.onBackCurrentRecordPoint.name, senderGuid);
-        }
-        /**
-         * (双端)监听回到存档记录点
-         * @param callback 回调
-         */
-        static onBackCurrentRecordPoint(callback) {
-            return onFunc(this.name, this.onBackCurrentRecordPoint.name, callback);
-        }
-        /**
-         * (双端)返回记录点
-         * @param senderGuid 发送者guid
-         * @param recordPointId 记录点id
-         */
-        static backRecordPoint(senderGuid, recordPointId) {
-            callFunc(this.name, this.onBackRecordPoint.name, senderGuid, recordPointId);
-        }
-        /**
-         * (双端)监听回到记录点
-         * @param callback 回调
-         */
-        static onBackRecordPoint(callback) {
-            return onFunc(this.name, this.onBackRecordPoint.name, callback);
-        }
-    }
-    PrefabEvent.PrefabEvtRecordPoint = PrefabEvtRecordPoint;
-    /**
-     * 通知协议
-     */
-    class PrefabEvtNotify {
-        /**
-         * (客户端)本地通知
-         * @param text
-         */
-        static notifyLocal(text) {
-            callClientFunc(this.name, this.onNotify.name, text);
-        }
-        /**
-         * (双端)全局通知
-         * @param text 信息
-         */
-        static notify(text) {
-            callFunc(this.name, this.onNotify.name, text);
-        }
-        /**
-         * (双端)监听通知
-         * @param callback
-         * @returns
-         */
-        static onNotify(callback) {
-            return onFunc(this.name, this.onNotify.name, callback);
-        }
-    }
-    PrefabEvent.PrefabEvtNotify = PrefabEvtNotify;
-    /**
-     * 排行榜协议
-     */
-    class PrefabEvtRank {
-        /**
-         * (客户端)打开排行榜UI
-         */
-        static openRank() {
-            callClientFunc(this.name, this.onOpenRank.name);
-        }
-        /**
-         * (客户端)监听打开排行榜UI
-         * @param callback 回调
-         * @returns
-         */
-        static onOpenRank(callback) {
-            return onFunc(this.name, this.onOpenRank.name, callback);
-        }
-        /**
-         * (双端)设置排行榜数据
-         * @param senderGuid
-         * @param score
-         * @param typeName
-         */
-        static setRankData(senderGuid, name, score, typeName) {
-            callFunc(this.name, this.onSetRankData.name, senderGuid, name, score, typeName);
-        }
-        /**
-         * (双端)监听设置排行榜数据
-         * @param callback
-         * @returns
-         */
-        static onSetRankData(callback) {
-            return onFunc(this.name, this.onSetRankData.name, callback);
-        }
-        /**
-         * (双端)删除排行榜数据
-         * @param senderGuid
-         */
-        static delRankData(senderGuid) {
-            callFunc(this.name, this.onDelRankData.name, senderGuid);
-        }
-        /**
-         * (双端)监听删除排行榜数据
-         * @param callback
-         * @returns
-         */
-        static onDelRankData(callback) {
-            return onFunc(this.name, this.onDelRankData.name, callback);
-        }
-    }
-    PrefabEvent.PrefabEvtRank = PrefabEvtRank;
-    /**
-     * 换装协议
-     */
-    class PrefabEvtCloth {
-        /**
-         * (客户端)加载角色体型
-         * @param senderGuid 发送者Guid
-         * @param targetGuid 目标对象Guid
-         * @param dressResGuid 装扮资源Guid
-         */
-        static loadRole(senderGuid, targetGuid, dressResGuid) {
-            callClientFunc(this.name, this.onLoadRole.name, senderGuid, targetGuid, dressResGuid);
-        }
-        /**
-         * (客户端)监听加载角色体型协议
-         * @param callback 回调
-         * @returns
-         */
-        static onLoadRole(callback) {
-            return onFunc(this.name, this.onLoadRole.name, callback);
-        }
-        /**
-         * (客户端)加载装扮
-         * @param senderGuid 发送者Guid
-         * @param targetGuid 目标对象Guid
-         * @param dressResGuid 装扮资源Guid
-         */
-        static loadCloth(senderGuid, targetGuid, dressResGuid) {
-            callClientFunc(this.name, this.onLoadCloth.name, senderGuid, targetGuid, dressResGuid);
-        }
-        /**
-         * (客户端)监听加载装扮
-         * @param callback
-         * @returns
-         */
-        static onLoadCloth(callback) {
-            return onFunc(this.name, this.onLoadCloth.name, callback);
-        }
-        /**
-         * (客户端)加载插槽资源
-         * @param senderGuid 发送者Guid
-         * @param targetGuid 目标对象Guid
-         * @param slotResGuid 插槽资源Guid
-         */
-        static loadSlot(senderGuid, targetGuid, slotResGuid) {
-            callClientFunc(this.name, this.onLoadSlot.name, senderGuid, targetGuid, slotResGuid);
-        }
-        /**
-         * (客户端)监听加载插槽资源
-         * @param callback
-         * @returns
-         */
-        static onLoadSlot(callback) {
-            return onFunc(this.name, this.onLoadSlot.name, callback);
-        }
-    }
-    PrefabEvent.PrefabEvtCloth = PrefabEvtCloth;
-    /**
-* 模板埋点注解(仅客户端生效)
-* @param reportId 模板id
-* @returns
-*/
-    function PrefabReport(reportId = null) {
-        return function (target, propertyKey, descriptor) {
-            const method = descriptor.value;
-            descriptor.value = function (...args) {
-                if (SystemUtil.isClient() && reportId) {
-                    // Console.log("模板", target.constructor.name, "埋点", reportId);
-                    mw.RoomService.reportLogInfo("ts_action_firstdo", "模板埋点", JSON.stringify({ record: "TemplatePrefab", lifetime: reportId }));
-                }
-                const result = method.apply(this, args);
-                return result;
-            };
-        };
-    }
-    PrefabEvent.PrefabReport = PrefabReport;
-    /**
-     * 收集物协议
-     */
-    class PrefabEvtCollection {
-        /**
-         * (客户端)打开收集物UI
-         */
-        static openCollectionUI() {
-            callClientFunc(this.name, this.onOpenCollectionUI.name);
-        }
-        /**
-         * (客户端)监听收集物UI被打开
-         * @param callback
-         * @returns
-         */
-        static onOpenCollectionUI(callback) {
-            return onFunc(this.name, this.onOpenCollectionUI.name, callback);
-        }
-        /**
-         * (双端)获得收集物
-         * @param senderGuid
-         * @param targetGuid
-         * @param atlasId
-         */
-        static addCollection(atlasId, playerId) {
-            callFunc(this.name, this.onAddCollection.name, atlasId, playerId);
-        }
-        /**
-         * (双端)监听获得收集物
-         * @param callback 回调
-         * @returns
-         */
-        static onAddCollection(callback) {
-            return onFunc(this.name, this.onAddCollection.name, callback);
-        }
-    }
-    PrefabEvent.PrefabEvtCollection = PrefabEvtCollection;
-    initEvent();
-})(PrefabEvent || (PrefabEvent = {}));
-/**
-* 模板埋点注解(仅客户端生效)
-* @param reportId 模板id
-* @returns
-*/
-function PrefabReport(reportId = null) {
-    return function (target, propertyKey, descriptor) {
-        const method = descriptor.value;
-        descriptor.value = function (...args) {
-            if (SystemUtil.isClient() && reportId) {
-                // Console.log("模板", target.constructor.name, "埋点", reportId);
-                mw.RoomService.reportLogInfo("ts_action_firstdo", "模板埋点", JSON.stringify({ record: "TemplatePrefab", lifetime: reportId }));
-            }
-            const result = method.apply(this, args);
-            return result;
-        };
-    };
-}
-
-var foreign78 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    get PrefabEvent () { return PrefabEvent; },
-    PrefabReport: PrefabReport
-});
-
 class RankModuleS extends ModuleS {
     constructor() {
         super(...arguments);
@@ -9941,6 +10466,7 @@ class PlayerModuleS extends ModuleS {
         this.teamModuleS = null;
         this.coinModuleS = null;
         this.taslModuleS = null;
+        this.morphModuleS = null;
         this.playerMap = new Map();
         this.playerStatusMap = new Map();
     }
@@ -9967,6 +10493,12 @@ class PlayerModuleS extends ModuleS {
             this.taslModuleS = ModuleService.getModule(TaskModuleS);
         }
         return this.taslModuleS;
+    }
+    get getMorphModuleS() {
+        if (!this.morphModuleS) {
+            this.morphModuleS = ModuleService.getModule(MorphModuleS);
+        }
+        return this.morphModuleS;
     }
     onStart() {
         this.initModule();
@@ -10089,6 +10621,7 @@ class PlayerModuleS extends ModuleS {
         EffectService.playAtPosition("222147", player.character.worldTransform.position, {
             loopCount: 1
         });
+        this.getMorphModuleS.setPlayerMorphState(player.userId, false);
     }
     playerBirth(player, maxHp) {
         this.getClient(player).net_updateHp(maxHp);
@@ -10100,6 +10633,7 @@ class PlayerModuleS extends ModuleS {
             if (this.playerStatusMap.get(userId).isDead == true)
                 this.playerStatusMap.get(userId).isDead = false;
         });
+        this.getMorphModuleS.setPlayerMorphState(player.userId, true);
     }
     net_addMaxHp() {
         let userId = this.currentPlayer.userId;
@@ -11224,451 +11758,6 @@ var foreign56 = /*#__PURE__*/Object.freeze({
     default: TaskModuleC
 });
 
-class Projectile {
-    get getCurCharacterId() {
-        if (this.curCharacterId == null) {
-            this.curCharacterId = Player.localPlayer.character.gameObjectId;
-        }
-        return this.curCharacterId;
-    }
-    constructor(characterId, projectileId, hitEffect, hitEffectScale, startPosition, startDirection, projectileType, paths) {
-        this.curCharacterId = null;
-        this.characterId = "";
-        this.projectileId = "";
-        this.hitEffect = "";
-        this.hitEffectScale = mw.Vector.one;
-        this.startPosition = mw.Vector.zero;
-        this.startDirection = mw.Vector.zero;
-        this.projectileType = ProjectileType.Normal;
-        this.paths = [];
-        this.projectile = null;
-        this.trigger = null;
-        this.isUpdate = false;
-        this.stride = mw.Vector.zero;
-        this.currentLocation = mw.Vector.zero;
-        this.pathIndex = 0;
-        this.recycleTimeOutId = null;
-        this.characterId = characterId;
-        this.projectileId = projectileId;
-        this.hitEffect = hitEffect;
-        this.hitEffectScale = hitEffectScale;
-        this.startPosition = startPosition;
-        this.startDirection = startDirection;
-        this.projectileType = projectileType;
-        this.paths = paths;
-        this.pathIndex = 0;
-        this.initBullet();
-    }
-    async initBullet() {
-        this.projectile = await GameObjPool.asyncSpawn(this.projectileId, mwext.GameObjPoolSourceType.Prefab);
-        this.projectile.worldTransform.position = Helper.recyclePosition;
-        this.trigger = this.projectile.getChildByName("触发器");
-        this.trigger.onEnter.add(this.onTriggerEnter.bind(this));
-        this.trigger.enabled = true;
-        this.prepareFire();
-    }
-    onTriggerEnter(go) {
-        if (go instanceof mw.Character) {
-            if (go.gameObjectId == this.characterId)
-                return; //打到了自己
-            if (go instanceof Character) { //打到了玩家
-                if (this.getCurCharacterId == this.characterId) { //是自己发射的子弹
-                    PrefabEvent.PrefabEvtFight.hit(this.characterId, go.gameObjectId, Helper.damage, this.projectile.worldTransform.position);
-                    console.error("击中其他玩家");
-                }
-            }
-        }
-        this.recycleThis();
-    }
-    initFire(ownerId, startPosition, startDirection, projectileType, paths) {
-        this.characterId = ownerId;
-        this.startPosition = startPosition;
-        this.startDirection = startDirection;
-        this.projectileType = projectileType;
-        this.paths = paths;
-        this.pathIndex = 0;
-        this.prepareFire();
-        this.setThisVisibility(true);
-    }
-    prepareFire() {
-        if (!this.projectile)
-            return;
-        if (this.projectileType == ProjectileType.ArcTracing_Weak && this.paths) {
-            if (this.pathIndex + 1 < this.paths.length) {
-                mw.Vector.subtract(this.paths[this.pathIndex + 1], this.paths[this.pathIndex], this.startDirection);
-                this.startDirection = this.startDirection.normalized;
-            }
-        }
-        this.projectile.worldTransform.position = this.startPosition;
-        this.projectile.worldTransform.rotation = new mw.Rotation(this.startDirection, mw.Vector.up);
-        this.isUpdate = true;
-        this.setRecycleTimeout();
-    }
-    update(dt) {
-        if (!this.isUpdate)
-            return;
-        if (this.projectileType == ProjectileType.Normal || !this.paths) {
-            this.updateThisPosition_Normal();
-        }
-        else if (this.projectileType == ProjectileType.ArcTracing_Weak && this.paths) {
-            this.updateThisPosition_ArcTracing();
-        }
-    }
-    updateThisPosition_Normal() {
-        if (!this.projectile)
-            return;
-        mw.Vector.multiply(this.startDirection, 50, this.stride);
-        this.currentLocation = this.projectile.worldTransform.position;
-        this.currentLocation.x += this.stride.x;
-        this.currentLocation.y += this.stride.y;
-        this.currentLocation.z += this.stride.z;
-        this.projectile.worldTransform.position = this.currentLocation;
-    }
-    updateThisPosition_ArcTracing() {
-        if (!this.projectile || !this.paths || this.paths?.length == 0)
-            return;
-        this.currentLocation = this.projectile.worldTransform.position;
-        if (mw.Vector.subtract(this.currentLocation, this.paths[this.pathIndex]).length <= 10) {
-            if (this.pathIndex < this.paths.length - 1) {
-                mw.Vector.subtract(this.paths[this.pathIndex + 1], this.paths[this.pathIndex], this.startDirection);
-                this.startDirection = this.startDirection.normalized;
-                this.projectile.worldTransform.rotation = new mw.Rotation(this.startDirection, mw.Vector.up);
-                this.pathIndex++;
-                // console.error("this.pathIndex", this.pathIndex);
-            }
-        }
-        mw.Vector.lerp(this.currentLocation, this.paths[this.pathIndex], 0.6, this.currentLocation);
-        this.projectile.worldTransform.position = this.currentLocation;
-        if (mw.Vector.subtract(this.currentLocation, this.paths[this.paths.length - 1]).length <= 10) {
-            this.recycleThis();
-        }
-    }
-    setThisVisibility(visible) {
-        if (!this.projectile || !this.trigger)
-            return;
-        this.projectile.setVisibility(visible, true);
-        this.trigger.enabled = visible;
-    }
-    setRecycleTimeout() {
-        this.clearRecycleTimeOut();
-        this.recycleTimeOutId = setTimeout(() => {
-            this.recycleThis();
-        }, 10 * 1000);
-    }
-    clearRecycleTimeOut() {
-        if (!this.recycleTimeOutId)
-            return;
-        clearTimeout(this.recycleTimeOutId);
-        this.recycleTimeOutId = null;
-    }
-    recycleThis() {
-        this.play3DSound("208300");
-        this.playHitEffect();
-        this.recycleProjectile();
-        // console.error("recycle");
-    }
-    play3DSound(soundId) {
-        SoundService.play3DSound(soundId, this.projectile.worldTransform.position);
-    }
-    playHitEffect() {
-        EffectService.playAtPosition(this.hitEffect, this.projectile.worldTransform.position, { scale: this.hitEffectScale });
-    }
-    recycleProjectile() {
-        if (!Helper.activeBulletMap.has(this.projectileId) || !Helper.activeBulletMap.get(this.projectileId).has(this))
-            return;
-        Helper.activeBulletMap.get(this.projectileId).delete(this);
-        if (Helper.inactiveBullets.has(this.projectileId)) {
-            Helper.inactiveBullets.get(this.projectileId).push(this);
-        }
-        else {
-            Helper.inactiveBullets.set(this.projectileId, [this]);
-        }
-        this.projectile.worldTransform.position = Helper.recyclePosition;
-        this.setThisVisibility(false);
-        this.clearRecycleTimeOut();
-        this.isUpdate = false;
-    }
-}
-
-let Weapon = class Weapon extends Script {
-    constructor() {
-        super(...arguments);
-        this.weaponId = -1;
-        this.playerId_WeaponId = "";
-        this.fireData = "";
-        this.weaponModuleC = null;
-        this.player = null;
-        this.playerId = -1;
-        //#region Switch Weapon
-        this.weaponPropElement = null;
-        this.weaponModel = null;
-        this.fireAnchor = null;
-        //#endregion
-        //#region Projectile
-        this.projectilePropElement = null;
-        this.gos = [];
-        //#endregion
-    }
-    get getWeaponModuleC() {
-        if (this.weaponModuleC == null) {
-            this.weaponModuleC = ModuleService.getModule(WeaponModuleC);
-        }
-        return this.weaponModuleC;
-    }
-    get getPlayer() {
-        if (this.player == null) {
-            this.player = Player.getPlayer(this.playerId);
-        }
-        return this.player;
-    }
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    onStart() {
-        if (mw.SystemUtil.isServer())
-            return;
-    }
-    async initPlayerWeapon() {
-        let data = this.playerId_WeaponId.split("|");
-        if (data.length < 2)
-            return;
-        this.playerId = parseInt(data[0]);
-        this.weaponId = parseInt(data[1]);
-        await this.initPlayer();
-        await this.onWeaponChanged();
-    }
-    async initPlayer() {
-        if (!this.player) {
-            this.player = await Player.asyncGetPlayer(this.playerId);
-            console.error(`playerId = ${this.playerId}"的玩家 "${this.player ? "角色初始化完成" : "角色初始化失败"}`);
-        }
-    }
-    async onWeaponChanged() {
-        if (this.weaponId == -1) {
-            this.despawnWeapon();
-            return;
-        }
-        if (!this.player)
-            await this.initPlayer();
-        if (!this.player)
-            return;
-        this.weaponPropElement = GameConfig.WeaponProp.getElement(this.weaponId);
-        if (!this.weaponPropElement)
-            return;
-        this.despawnWeapon();
-        await this.spawnWeapon(this.weaponPropElement.PrefabId, this.weaponPropElement.SlotType);
-        this.playSubStance(this.weaponPropElement.GunAttitude);
-    }
-    async playSubStance(gunAttitude) {
-        await Utils.asyncDownloadAsset(gunAttitude);
-        this.getPlayer.character.loadSubStance(gunAttitude).play();
-    }
-    async spawnWeapon(prefabId, slotType) {
-        this.weaponModel = await GameObjPool.asyncSpawn(prefabId, mwext.GameObjPoolSourceType.Prefab);
-        this.getPlayer.character.attachToSlot(this.weaponModel, slotType);
-        this.weaponModel.localTransform.position = mw.Vector.zero;
-        this.weaponModel.localTransform.rotation = mw.Rotation.zero;
-        console.error(`playerId = ${this.playerId}的玩家 "${this.weaponModel ? "武器加载完成" : "武器加载失败"}`);
-        this.fireAnchor = this.weaponModel.getChildByName("FireAnchor");
-        if (this.getPlayer.playerId == Player.localPlayer.playerId)
-            this.getWeaponModuleC.setFireAnchor(this.fireAnchor);
-    }
-    despawnWeapon() {
-        if (!this.weaponModel)
-            return;
-        GameObjPool.despawn(this.weaponModel);
-    }
-    fire() {
-        if (!this.fireData)
-            return;
-        // console.error("fireData = " + this.fireData);
-        let data = this.fireData.split("|");
-        if (data.length < 3)
-            return;
-        let shootDir = Utils.stringToVector(data[0]);
-        let projectileType = parseInt(data[1]);
-        let attackIndex = parseInt(data[2]);
-        if (!this.getPlayer || !this.fireAnchor)
-            return;
-        this.projectilePropElement = GameConfig.ProjectileProp.getElement(this.weaponId);
-        if (!this.projectilePropElement || !this.weaponPropElement)
-            return;
-        console.error(`playerId = ${this.playerId}的玩家 发射一枚子弹`);
-        this.prepareFire(this.getPlayer.character.gameObjectId, this.fireAnchor.worldTransform.position, shootDir, projectileType, attackIndex);
-    }
-    async prepareFire(characterId, firePosition, shootDir, projectileType, attackIndex) {
-        let prefabId = this.projectilePropElement.PrefabId;
-        let fireSound = this.projectilePropElement.FireSound;
-        let hitEffect = this.projectilePropElement.HitEffect;
-        let hitEffectScale = this.projectilePropElement.HitEffectScale;
-        let projectileCount = this.weaponPropElement.NormalBulletCount[attackIndex];
-        let fireInterval = this.weaponPropElement.NormalFireInterval[attackIndex];
-        this.calculateFire(characterId, prefabId, hitEffect, hitEffectScale, firePosition, shootDir, projectileType, fireSound);
-        for (let i = 0; i < projectileCount - 1; ++i) {
-            await new Promise((resolve) => {
-                setTimeout(() => {
-                    this.calculateFire(characterId, prefabId, hitEffect, hitEffectScale, firePosition, shootDir, projectileType, fireSound);
-                    return resolve();
-                }, fireInterval * 1000);
-            });
-        }
-    }
-    calculateFire(characterId, prefabId, hitEffect, hitEffectScale, firePosition, shootDir, projectileType, fireSound) {
-        this.startFire(characterId, prefabId, hitEffect, hitEffectScale, firePosition, shootDir, projectileType);
-        this.playFireSound(firePosition, fireSound);
-    }
-    startFire(characterId, projectileId, hitEffect, hitEffectScale, firePosition, startDirection, projectileType) {
-        let projectile = null;
-        let targetPosition = null;
-        let paths = null;
-        if (projectileType == ProjectileType.ArcTracing_Weak) {
-            targetPosition = Utils.getRecentPlayerLoc(characterId, firePosition, startDirection);
-            if (!targetPosition)
-                targetPosition = Utils.getRecentTargetLoc(firePosition, startDirection);
-            paths = (targetPosition == null) ? null : Utils.getArcTracingPoints(firePosition, targetPosition);
-            if (mw.SystemUtil.isPIE)
-                this.testPaths(paths);
-        }
-        if (Helper.inactiveBullets.has(projectileId)) {
-            let projectiles = Helper.inactiveBullets.get(projectileId);
-            if (projectiles.length > 0) {
-                projectile = projectiles.shift();
-                projectile.initFire(characterId, firePosition, startDirection, projectileType, paths);
-            }
-            else {
-                projectile = new Projectile(characterId, projectileId, hitEffect, hitEffectScale, firePosition, startDirection, projectileType, paths);
-            }
-        }
-        else {
-            projectile = new Projectile(characterId, projectileId, hitEffect, hitEffectScale, firePosition, startDirection, projectileType, paths);
-        }
-        if (Helper.activeBulletMap.has(projectileId)) {
-            Helper.activeBulletMap.get(projectileId).add(projectile);
-        }
-        else {
-            Helper.activeBulletMap.set(projectileId, new Set().add(projectile));
-        }
-    }
-    playFireSound(firePosition, fireSound) {
-        SoundService.play3DSound(fireSound, firePosition);
-    }
-    async testPaths(paths) {
-        if (!paths)
-            return;
-        if (this.gos.length >= paths.length) {
-            for (let i = 0; i < paths.length; ++i) {
-                this.gos[i].worldTransform.scale = mw.Vector.one.multiply(0.1);
-                this.gos[i].worldTransform.position = paths[i];
-                this.gos[i].setVisibility(true);
-            }
-            for (let i = paths.length; i < this.gos.length; ++i) {
-                this.gos[i].setVisibility(false);
-            }
-        }
-        else {
-            for (let i = 0; i < this.gos.length; ++i) {
-                this.gos[i].worldTransform.scale = mw.Vector.one.multiply(0.1);
-                this.gos[i].worldTransform.position = paths[i];
-                this.gos[i].setVisibility(true);
-            }
-            for (let i = this.gos.length; i < paths.length; ++i) {
-                let go = await mw.GameObject.asyncSpawn("197386");
-                go.setCollision(mw.PropertyStatus.Off);
-                go.worldTransform.scale = mw.Vector.one.multiply(0.1);
-                go.worldTransform.position = paths[i];
-                this.gos.push(go);
-            }
-        }
-    }
-};
-__decorate([
-    mw.Property({ replicated: true, onChanged: "onWeaponChanged" })
-], Weapon.prototype, "weaponId", void 0);
-__decorate([
-    mw.Property({ replicated: true, onChanged: "initPlayerWeapon" })
-], Weapon.prototype, "playerId_WeaponId", void 0);
-__decorate([
-    mw.Property({ replicated: true, onChanged: "fire" })
-], Weapon.prototype, "fireData", void 0);
-Weapon = __decorate([
-    Component
-], Weapon);
-var Weapon$1 = Weapon;
-
-class WeaponModuleS extends ModuleS {
-    constructor() {
-        super(...arguments);
-        //#endregion
-        //#region Weapon
-        this.playerWeaponMap = new Map();
-        //#endregion
-    }
-    onPlayerEnterGame(player) {
-        let gunId = MapEx.get(DataCenterS.getData(player, ShopData).useShopIds, ShopType.Gun);
-        this.initWeapon(player, gunId);
-    }
-    onPlayerLeft(player) {
-        let playerId = player.playerId;
-        this.destoryWeapon(playerId);
-    }
-    //#region Normal Attack
-    net_fireNormalAttack(shootDir, weaponId, attackIndex, projectileType) {
-        this.fireNormalAttack(this.currentPlayer, shootDir, weaponId, attackIndex, projectileType);
-    }
-    async fireNormalAttack(player, shootDir, weaponId, attackIndex, projectileType) {
-        let weaponPropElement = GameConfig.WeaponProp.getElement(weaponId);
-        let atkAnimation = weaponPropElement.NormalAnims[attackIndex];
-        if (atkAnimation != "-1") {
-            await Utils.asyncDownloadAsset(atkAnimation);
-            player.character.loadAnimation(atkAnimation).play();
-        }
-        let atkTime = weaponPropElement.NormalAtkTime[attackIndex];
-        TimeUtil.delaySecond(atkTime).then(() => {
-            if (!this.playerWeaponMap.has(player.playerId))
-                return;
-            let fireData = Utils.vectorToString(shootDir) + "|" + projectileType + "|" + attackIndex;
-            this.playerWeaponMap.get(player.playerId).fireData = fireData;
-        });
-    }
-    initWeapon(player, weaponId) {
-        let playerId = player.playerId;
-        if (this.playerWeaponMap.has(playerId))
-            return;
-        let weapon = player.character.addComponent(Weapon$1, true);
-        let playerId_WeaponId = playerId + "|" + weaponId;
-        weapon.playerId_WeaponId = playerId_WeaponId;
-        this.playerWeaponMap.set(playerId, weapon);
-        this.getClient(player).net_switchWeaponData(weaponId);
-    }
-    net_switchWeapon(weaponId) {
-        let player = this.currentPlayer;
-        this.switchWeapon(player, weaponId);
-    }
-    async switchWeapon(player, weaponId) {
-        let playerId = player.playerId;
-        if (!this.playerWeaponMap.has(playerId))
-            this.initWeapon(player, weaponId);
-        if (!this.playerWeaponMap.has(playerId))
-            return;
-        let weapon = this.playerWeaponMap.get(playerId);
-        if (!weapon)
-            return;
-        weapon.weaponId = weaponId;
-    }
-    destoryWeapon(playerId) {
-        if (!this.playerWeaponMap.has(playerId))
-            return;
-        let weapon = this.playerWeaponMap.get(playerId);
-        if (!weapon)
-            return;
-        weapon.weaponId = -1;
-    }
-}
-__decorate([
-    Decorator.noReply()
-], WeaponModuleS.prototype, "net_fireNormalAttack", null);
-__decorate([
-    Decorator.noReply()
-], WeaponModuleS.prototype, "net_switchWeapon", null);
-
 let GameLauncher = class GameLauncher extends mw.Script {
     constructor() {
         super(...arguments);
@@ -12356,14 +12445,14 @@ let Npc = class Npc extends Script {
         this.setNpcDescriptionAndGun();
     }
     async setNpcDescriptionAndGun() {
-        let ran = Utils.randomInt(2, 2); //TODO:WFZ
+        let ran = Utils.randomInt(1, 2); //TODO:WFZ
         if (ran == 1) {
             let morphElement = GameConfig.Morph.getElement(Utils.randomInt(1, GameConfig.Morph.getAllElement().length));
             let assetId = morphElement.AssetId;
             await Utils.asyncDownloadAsset(assetId);
             if (this.model)
                 GameObjPool.despawn(this.model);
-            this.model = await GameObjPool.asyncSpawn(assetId, mwext.GameObjPoolSourceType.Prefab);
+            this.model = await GameObjPool.asyncSpawn(assetId, mwext.GameObjPoolSourceType.Asset);
             this.model.setCollision(mw.PropertyStatus.Off);
             this.npc.attachToSlot(this.model, mw.HumanoidSlotType.Root);
             this.model.localTransform.position = new mw.Vector(0, 0, this.model.getBoundingBox().z / 2);
@@ -12376,10 +12465,10 @@ let Npc = class Npc extends Script {
                 this.model.setVisibility(true);
         }
         else {
-            let roleId = GameConfig.ROLE.getElement(Utils.randomInt(1, 34)).ROLEID;
+            let roleId = GameConfig.ROLE.getElement(Utils.randomInt(1, GameConfig.ROLE.getAllElement().length)).ROLEID;
             await Utils.asyncDownloadAsset(roleId);
             this.npc.setDescription([roleId]);
-            let gunId = GameConfig.GUN.getElement(Utils.randomInt(1, 14)).GUNICON_M;
+            let gunId = GameConfig.WeaponProp.getElement(Utils.randomInt(1, GameConfig.WeaponProp.getAllElement().length)).WeaponIcon;
             await Utils.asyncDownloadAsset(gunId);
             if (this.npcGunMoeld)
                 GameObjPool.despawn(this.npcGunMoeld);
@@ -12584,20 +12673,14 @@ let AddMaxHp = class AddMaxHp extends Script {
     onTriggerEnter(character) {
         if (Player.localPlayer.character != character)
             return;
-        // let price: number = 100;
-        // let contentText: string = `奖励翻倍\n消耗${price}钻石\n最大生命值提高到${GlobalData.maxHp * 2}`;
-        // this.getConfirmPanel.confirmTips(() => {
-        //     if (this.getCoinModuleC.getDiamond >= price) {
-        //         this.getCoinModuleC.setDiamond(-price);
-        //         this.getPlayerModuleC.addMaxHp();
-        //     } else {
-        //         Notice.showDownNotice("钻石不足");
-        //         this.getCoinModuleC.openShopBuyDiamondCoin(price);
-        //     }
-        // }, contentText, "领取", "取消", "提示");
-        this.getAdPanel.showRewardAd(() => {
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
+                this.getPlayerModuleC.addMaxHp();
+            }, "奖励翻倍\n最大生命值提高到 + " + GlobalData.maxHp * 2, "取消", "免费提高");
+        }
+        else {
             this.getPlayerModuleC.addMaxHp();
-        }, "奖励翻倍\n最大生命值提高到 + " + GlobalData.maxHp * 2, "取消", "免费提高");
+        }
     }
     /**客户端的onUpdate */
     onUpdateC(dt) {
@@ -12635,6 +12718,7 @@ let TryOutGun = class TryOutGun extends Script {
         this.adPanel = null;
         this.confirmPanel = null;
         this.coinModuleC = null;
+        this.weaponModuleC = null;
         this.gunAnchor = null;
         this.gunModel = null;
         this.gunkey = null;
@@ -12691,20 +12775,23 @@ let TryOutGun = class TryOutGun extends Script {
         }
         return this.coinModuleC;
     }
+    get getWeaponModuleC() {
+        if (!this.weaponModuleC) {
+            this.weaponModuleC = ModuleService.getModule(WeaponModuleC);
+        }
+        return this.weaponModuleC;
+    }
     /**客户端的onStart */
     async onStartC() {
         await ModuleService.ready();
         this.useUpdate = false;
         this.initGunAnchor();
-        this.initModule();
         this.initUIPanel();
         this.initTrigger();
     }
     initGunAnchor() {
         this.gunAnchor = this.gameObject.getChildByName("gunAnchor");
         this.switchGunModel(Utils.randomInt(10, 14));
-    }
-    initModule() {
     }
     initUIPanel() {
         this.adPanel = UIService.getUI(AdPanel);
@@ -12716,29 +12803,28 @@ let TryOutGun = class TryOutGun extends Script {
     onTriggerEnter(character) {
         if (Player.localPlayer.character != character)
             return;
-        let gunElement = GameConfig.GUN.getElement(this.gunkey);
-        // let price: number = 100;
-        // let contentText: string = `消耗${price}钻石\n免费领取`;
-        // this.getConfirmPanel.confirmTips(() => {
-        //     if (this.getCoinModuleC.getDiamond >= price) {
-        //         this.getCoinModuleC.setDiamond(-price);
-        //         this.switchGun();
-        //         this.switchGunModel(Utils.randomInt(10, 14));
-        //     } else {
-        //         Notice.showDownNotice("钻石不足");
-        //         this.getCoinModuleC.openShopBuyDiamondCoin(price);
-        //     }
-        // }, contentText, "领取", "取消", "提示");
-        this.getAdPanel.showRewardAd(() => {
+        let gunElement = GameConfig.WeaponProp.getElement(this.gunkey);
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
+                if (!this.gunkey)
+                    return;
+                this.switchGun();
+                this.switchGunModel(Utils.randomInt(1, GameConfig.WeaponProp.getAllElement().length));
+            }, gunElement.WeaponName + "\n免费使用一局", "取消", "免费使用");
+        }
+        else {
             if (!this.gunkey)
                 return;
             this.switchGun();
-            this.switchGunModel(Utils.randomInt(10, 14));
-        }, gunElement.GUNNAME + "\n免费使用一局", "取消", "免费使用");
+            this.switchGunModel(Utils.randomInt(1, 15));
+        }
     }
     switchGun() {
         if (this.getMorphModuleC.getIsMorph) {
             this.getShopModuleC.setUseShopId_Gun(this.gunkey);
+        }
+        else {
+            this.getWeaponModuleC.switchWeaponData(this.gunkey);
         }
     }
     async switchGunModel(key) {
@@ -12747,14 +12833,14 @@ let TryOutGun = class TryOutGun extends Script {
         this.gunkey = key;
         if (this.gunModel)
             GameObjPool.despawn(this.gunModel);
-        let gunElement = GameConfig.GUN.getElement(this.gunkey);
-        let gunId = gunElement.GUNICON_M;
+        let gunElement = GameConfig.WeaponProp.getElement(this.gunkey);
+        let gunId = gunElement.PrefabId;
         await Utils.asyncDownloadAsset(gunId);
-        this.gunModel = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Asset);
+        this.gunModel = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Prefab);
         this.gunModel.parent = this.gunAnchor;
-        this.gunModel.localTransform.position = gunElement.GUNLOC;
+        this.gunModel.localTransform.position = gunElement.GunLoc;
         this.gunModel.localTransform.rotation = new mw.Rotation(0, 15, 0);
-        this.gunModel.localTransform.scale = gunElement.GUNSCALE;
+        this.gunModel.localTransform.scale = gunElement.GunScale;
     }
     /**客户端的onUpdate */
     onUpdateC(dt) {

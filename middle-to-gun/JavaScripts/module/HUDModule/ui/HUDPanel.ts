@@ -42,7 +42,6 @@ export default class HUDPanel extends HUDPanel_Generate {
         Utils.setWidgetVisibility(this.mKillTipCountCanvas, mw.SlateVisibility.Collapsed);
         Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.Collapsed);
         Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.Collapsed);
-        Utils.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.Collapsed);
         this.initAimUI();
     }
 
@@ -87,13 +86,13 @@ export default class HUDPanel extends HUDPanel_Generate {
     private onClickMorphButton(): void {
         this.getHUDModuleC.onMorphAction.call(true);
         Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.SelfHitTestInvisible);
-        Utils.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.SelfHitTestInvisible);
+        Utils.setWidgetVisibility(this.mAtkCanvas, mw.SlateVisibility.Collapsed);
     }
 
     private onClickUnMorphButton(): void {
         this.getHUDModuleC.onMorphAction.call(false);
         Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.Collapsed);
-        Utils.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mAtkCanvas, mw.SlateVisibility.SelfHitTestInvisible);
     }
 
     private onClickJumpButton(): void {
@@ -232,6 +231,8 @@ export default class HUDPanel extends HUDPanel_Generate {
     private deadCountDown: number = 3;
     public startDeadCountDown(): void {
         this.mVirtualJoystickPanel.resetJoyStick();
+        this.getHUDModuleC.onNormalAction.call(false);
+        this.mNormalAtkButton.enable = false;
         Utils.setWidgetVisibility(this.mDeadCanvas, mw.SlateVisibility.SelfHitTestInvisible);
         this.deadCountDown = 3;
         this.mDeadCountDownTextBlock.text = this.deadCountDown-- + "";
@@ -253,6 +254,7 @@ export default class HUDPanel extends HUDPanel_Generate {
         Utils.setWidgetVisibility(this.mDeadCanvas, mw.SlateVisibility.Collapsed);
         this.clearCountDownInterval();
         this.showInvincibleTimeUI(2);
+        this.mNormalAtkButton.enable = true;
     }
     //#endregion
 
@@ -679,6 +681,17 @@ export default class HUDPanel extends HUDPanel_Generate {
         this.mNormalAtkButton.onJoyStickUp.add(() => {
             this.getHUDModuleC.onNormalAction.call(false);
         });
+        this.mFireJumpButton.onClicked.add(this.onClickJumpButton.bind(this));
+        this.mReloadButton.onClicked.add(this.onClickReloadButton.bind(this));
+        this.mCrouchButton.onClicked.add(this.onClickCrouchButton.bind(this));
+    }
+
+    private onClickReloadButton(): void {
+        this.getHUDModuleC.onReloadAction.call();
+    }
+
+    private onClickCrouchButton(): void {
+        this.getHUDModuleC.onCrouchAction.call();
     }
     //#endregion
 
@@ -731,7 +744,7 @@ export default class HUDPanel extends HUDPanel_Generate {
         this.toAimDownPos = new mw.Vector2(this.fromAimDownPos.x, this.fromAimDownPos.y + (this.aimOffsetValue * 3));
     }
 
-    private expansionTime: number = 0.15;
+    private expansionTime: number = 0.1;
     private initAimUITween(): void {
         this.leftAimTween2 = this.expansionTween(this.mAimLeft, this.toAimLeftPos, this.fromAimLeftPos, this.expansionTime).easing(cubicBezier(.19, .66, .27, .72));
         this.rightAimTween2 = this.expansionTween(this.mAimRight, this.toAimRightPos, this.fromAimRightPos, this.expansionTime).easing(cubicBezier(.19, .66, .27, .72));

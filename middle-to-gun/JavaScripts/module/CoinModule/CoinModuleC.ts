@@ -3,6 +3,7 @@ import { Notice } from "../../common/notice/Notice";
 import { GameConfig } from "../../config/GameConfig";
 import { IShopItemElement } from "../../config/ShopItem";
 import { EventType } from "../../tools/EventType";
+import GlobalData from "../../tools/GlobalData";
 import { TSIAPService } from "../../tools/IAPInstance";
 import AdPanel from "../AdModule/ui/AdPanel";
 import CoinData from "./CoinData";
@@ -99,16 +100,24 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
     }
 
     public getCoinByAd(): void {
-        this.getAdPanel.showRewardAd(() => {
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
+                this.setCoin(10000);
+            }, "免费领取10000金币");
+        } else {
             this.setCoin(10000);
-        }, "免费领取10000金币");
+        }
         // this.openShopBuyDiamondCoin();
     }
 
     public getDiamondByAd(diamond: number): void {
-        this.getAdPanel.showRewardAd(() => {
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
+                this.setDiamond(1);
+            }, "免费领取1个钻石");
+        } else {
             this.setDiamond(1);
-        }, "免费领取1个钻石");
+        }
         // this.openShopBuyDiamondCoin(diamond);
     }
 
@@ -128,11 +137,11 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
 
     //#region Ads
     private defaultAds(): void {
-        this.delay10Seconds();
+        this.delay30Seconds();
         this.setInterval180Seconds();
     }
 
-    private delay10Seconds(): void {
+    private delay30Seconds(): void {
         TimeUtil.delaySecond(30).then(() => {
             this.getAdPanel.showRewardAd(() => {
                 this.setDiamond(2);

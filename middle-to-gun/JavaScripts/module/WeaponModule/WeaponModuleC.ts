@@ -32,6 +32,7 @@ export default class WeaponModuleC extends ModuleC<WeaponModuleS, null> {
 
     private bindEventAction(): void {
         this.getHUDModuleC.onNormalAction.add(this.normalIntervalAttack.bind(this));
+        this.getHUDModuleC.onReloadAction.add(this.reloadButtet.bind(this));
         //#region KeyDown
         let isNormal = true;
         InputUtil.onKeyDown(mw.Keys.R, () => {
@@ -119,7 +120,7 @@ export default class WeaponModuleC extends ModuleC<WeaponModuleS, null> {
         let shootDir = this.calculateFireDirection(this.getCurrentCamera.worldTransform, this.fireAnchor.worldTransform.position);
         this.server.net_fireNormalAttack(shootDir, this.currentWeaponId, this.normalAttackIndex++, this.currentProjectileType);
         this.bulletCount--;
-        if (this.bulletCount <= 0) this.reloadButtet();
+        if (this.bulletCount <= 0) this.reloadButtet(1);
         this.getHUDModuleC.updateBulletCount(this.bulletCount);
         TimeUtil.delaySecond(this.normalAtkTime[this.normalAttackIndex - 1]).then(() => {
             this.getHUDModuleC.startAimUITween();
@@ -207,16 +208,10 @@ export default class WeaponModuleC extends ModuleC<WeaponModuleS, null> {
     //#endregion
 
     //#region 
-    private reloadAniId: string[] = ["80479", "80588"];
-    private reloadSoundId: string = "75374";
-    private reloadAnimation: mw.Animation = null;
-    private async reloadButtet(): Promise<void> {
-        await TimeUtil.delaySecond(1);
-        let animIndex = this.weaponPropElement.BulletCount == 10 ? 1 : 0;
-        await Utils.asyncDownloadAsset(this.reloadAniId[animIndex]);
-        this.reloadAnimation = this.localPlayer.character.loadAnimation(this.reloadAniId[animIndex]);
-        this.reloadAnimation.play();
-        SoundService.play3DSound(this.reloadSoundId, this.fireAnchor.worldTransform.position);
+    private async reloadButtet(delaySecond: number = 0): Promise<void> {
+        if (!this.weaponPropElement || this.bulletCount == this.weaponPropElement.BulletCount) return;
+        await TimeUtil.delaySecond(delaySecond);
+        this.server.net_reload(this.weaponPropElement.ReloadAnimation, this.weaponPropElement.ReloadSound);
         TimeUtil.delaySecond(1).then(this.addReloadBullet.bind(this));
     }
 

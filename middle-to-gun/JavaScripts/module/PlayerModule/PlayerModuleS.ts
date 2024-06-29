@@ -1,6 +1,7 @@
 ﻿import { PrefabEvent } from "../../tools/PrefabEvent";
 import Utils from "../../tools/Utils";
 import CoinModuleS from "../CoinModule/CoinModuleS";
+import { MorphModuleS } from "../MorphModule/MorphModule";
 import RankModuleS from "../RankModule/RankModuleS";
 import TaskModuleS from "../TaskModule/TaskModuleS";
 import TeamModuleS from "../TeamModule/TeamModuleS";
@@ -38,6 +39,14 @@ export class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
             this.taslModuleS = ModuleService.getModule(TaskModuleS);
         }
         return this.taslModuleS;
+    }
+
+    private morphModuleS: MorphModuleS = null;
+    private get getMorphModuleS(): MorphModuleS {
+        if (!this.morphModuleS) {
+            this.morphModuleS = ModuleService.getModule(MorphModuleS);
+        }
+        return this.morphModuleS;
     }
 
     protected onStart(): void {
@@ -170,6 +179,7 @@ export class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
                 loopCount: 1
             }
         );
+        this.getMorphModuleS.setPlayerMorphState(player.userId, false);
     }
 
     private playerBirth(player: mw.Player, maxHp: number): void {
@@ -181,6 +191,7 @@ export class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         TimeUtil.delaySecond(2).then(() => {
             if (this.playerStatusMap.get(userId).isDead == true) this.playerStatusMap.get(userId).isDead = false;
         });
+        this.getMorphModuleS.setPlayerMorphState(player.userId, true);
     }
 
     public net_addMaxHp(): number {

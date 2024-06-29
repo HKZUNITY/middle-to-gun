@@ -198,6 +198,7 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
     }
 
     private setCharacterGun(): void {
+        if (this.getHUDModuleC.getIsMorph) return;
         let gunId = MapEx.get(this.useShopIds, ShopType.Gun);
         this.getWeaponModuleC.switchWeaponData(gunId);
     }
@@ -280,9 +281,9 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
         this.gunkey = key;
         if (this.gunModel) GameObjPool.despawn(this.gunModel);
         let weaponPropElement = GameConfig.WeaponProp.getElement(key);
-        let gunId = weaponPropElement.WeaponIcon;
+        let gunId = weaponPropElement.PrefabId;
         await Utils.asyncDownloadAsset(gunId);
-        this.gunModel = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Asset);
+        this.gunModel = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Prefab);
         this.gunModel.parent = this.shopAnchor;
         this.gunModel.localTransform.position = weaponPropElement.GunLoc;
         this.gunModel.localTransform.rotation = new mw.Rotation(0, 15, 0);

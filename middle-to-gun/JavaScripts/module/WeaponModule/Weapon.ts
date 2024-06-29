@@ -18,6 +18,9 @@ export default class Weapon extends Script {
     @mw.Property({ replicated: true, onChanged: "fire" })
     public fireData: string = "";
 
+    @mw.Property({ replicated: true, onChanged: "weaponState" })
+    public isVisibility: boolean = true;
+
     private weaponModuleC: WeaponModuleC = null;
     private get getWeaponModuleC(): WeaponModuleC {
         if (this.weaponModuleC == null) {
@@ -92,6 +95,11 @@ export default class Weapon extends Script {
     private despawnWeapon(): void {
         if (!this.weaponModel) return;
         GameObjPool.despawn(this.weaponModel);
+    }
+
+    private weaponState(): void {
+        if (!this.weaponModel) return;
+        this.weaponModel.setVisibility(this.isVisibility);
     }
     //#endregion
 

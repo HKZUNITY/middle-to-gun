@@ -39,6 +39,17 @@ export default class WeaponModuleS extends ModuleS<WeaponModuleC, null> {
             this.playerWeaponMap.get(player.playerId).fireData = fireData;
         });
     }
+
+    @Decorator.noReply()
+    public net_reload(reloadAniId: string, reloadSoundId: string): void {
+        this.reload(this.currentPlayer, reloadAniId, reloadSoundId);
+    }
+
+    private async reload(player: mw.Player, reloadAniId: string, reloadSoundId: string): Promise<void> {
+        await Utils.asyncDownloadAsset(reloadAniId);
+        player.character.loadAnimation(reloadAniId).play();
+        SoundService.play3DSound(reloadSoundId, player.character.worldTransform.position);
+    }
     //#endregion
 
     //#region Weapon
@@ -74,6 +85,11 @@ export default class WeaponModuleS extends ModuleS<WeaponModuleC, null> {
         let weapon = this.playerWeaponMap.get(playerId);
         if (!weapon) return;
         weapon.weaponId = -1;
+    }
+
+    public setWeaponState(playerId: number, isVisibility: boolean): void {
+        if (!this.playerWeaponMap.has(playerId)) return;
+        this.playerWeaponMap.get(playerId).isVisibility = isVisibility;
     }
     //#endregion
 }

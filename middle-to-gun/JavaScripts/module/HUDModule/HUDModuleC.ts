@@ -24,6 +24,8 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     public onMorphAction: Action1<boolean> = new Action1<boolean>();
     public onJumpAction: Action = new Action();
     public onNormalAction: Action1<boolean> = new Action1<boolean>();
+    public onReloadAction: Action = new Action();
+    public onCrouchAction: Action = new Action();
 
     protected onStart(): void {
         this.initUIPanel();
@@ -39,6 +41,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
         this.initSoundEvent();
         this.initMorphAction();
         this.onJumpAction.add(this.addJumpAction.bind(this));
+        this.onCrouchAction.add(this.addCrouchAction.bind(this));
         Event.addLocalListener(EventType.OnOffMainHUD, this.addOnOffHUDPannel.bind(this));
         let isOpen = true;
         InputUtil.onKeyDown(mw.Keys.NumPadFive, () => {
@@ -55,6 +58,12 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     private addJumpAction(): void {
         this.localPlayer.character.jump();
         if (!this.localPlayer.character.movementEnabled) this.localPlayer.character.movementEnabled = true;
+    }
+
+    private isCrouching: boolean = false;
+    private addCrouchAction(): void {
+        this.isCrouching = !this.isCrouching
+        this.localPlayer.character.crouch(this.isCrouching);
     }
 
     protected onEnterScene(sceneType: number): void {
@@ -244,8 +253,8 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     private isMorph: boolean = false;
     private addMorphAction(isMorph: boolean): void {
         this.isMorph = isMorph;
-        Event.dispatchToLocal(EventType.OnOffWeaponUI, isMorph);
-        if (!isMorph) Event.dispatchToLocal(EventType.TryOutGun);
+        // Event.dispatchToLocal(EventType.OnOffWeaponUI, isMorph);
+        // if (!isMorph) Event.dispatchToLocal(EventType.TryOutGun);
     }
     //#endregion
 

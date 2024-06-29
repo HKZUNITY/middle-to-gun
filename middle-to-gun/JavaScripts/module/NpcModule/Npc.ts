@@ -98,13 +98,13 @@ export default class Npc extends Script {
     private model: mw.Model = null;
     private npcGunMoeld: mw.Model = null;
     private async setNpcDescriptionAndGun(): Promise<void> {
-        let ran = Utils.randomInt(2, 2);//TODO:WFZ
+        let ran = Utils.randomInt(1, 2);//TODO:WFZ
         if (ran == 1) {
             let morphElement = GameConfig.Morph.getElement(Utils.randomInt(1, GameConfig.Morph.getAllElement().length));
             let assetId = morphElement.AssetId;
             await Utils.asyncDownloadAsset(assetId);
             if (this.model) GameObjPool.despawn(this.model);
-            this.model = await GameObjPool.asyncSpawn(assetId, mwext.GameObjPoolSourceType.Prefab) as mw.Model;
+            this.model = await GameObjPool.asyncSpawn(assetId, mwext.GameObjPoolSourceType.Asset) as mw.Model;
             this.model.setCollision(mw.PropertyStatus.Off);
             this.npc.attachToSlot(this.model, mw.HumanoidSlotType.Root);
             this.model.localTransform.position = new mw.Vector(0, 0, this.model.getBoundingBox().z / 2);
@@ -114,10 +114,10 @@ export default class Npc extends Script {
             if (this.npcGunMoeld && this.npcGunMoeld.getVisibility()) this.npcGunMoeld.setVisibility(false);
             if (this.model && !this.model.getVisibility()) this.model.setVisibility(true);
         } else {
-            let roleId = GameConfig.ROLE.getElement(Utils.randomInt(1, 34)).ROLEID;
+            let roleId = GameConfig.ROLE.getElement(Utils.randomInt(1, GameConfig.ROLE.getAllElement().length)).ROLEID;
             await Utils.asyncDownloadAsset(roleId);
             this.npc.setDescription([roleId]);
-            let gunId = GameConfig.GUN.getElement(Utils.randomInt(1, 14)).GUNICON_M;
+            let gunId = GameConfig.WeaponProp.getElement(Utils.randomInt(1, GameConfig.WeaponProp.getAllElement().length)).WeaponIcon;
             await Utils.asyncDownloadAsset(gunId);
             if (this.npcGunMoeld) GameObjPool.despawn(this.npcGunMoeld);
             this.npcGunMoeld = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Asset);
