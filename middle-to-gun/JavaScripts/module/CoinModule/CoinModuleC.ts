@@ -138,14 +138,14 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
     //#region Ads
     private defaultAds(): void {
         this.delay30Seconds();
-        this.setInterval180Seconds();
     }
 
     private delay30Seconds(): void {
-        TimeUtil.delaySecond(30).then(() => {
+        TimeUtil.delaySecond(300).then(() => {
             this.getAdPanel.showRewardAd(() => {
                 this.setDiamond(2);
             }, "大礼包\n免费获得2个钻石");
+            this.setInterval180Seconds();
         });
     }
 

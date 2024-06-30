@@ -21,8 +21,8 @@ export default class ShopData extends Subdata {
     public useShopIds: MapEx.MapExClass<number> = {};//1-Gun,2-Role,3-Trailing
 
     protected initDefaultData(): void {
-        let gunId = Utils.randomInt(1, 3);
-        let roleId = Utils.randomInt(1, 5);
+        let gunId = Utils.randomInt(1, 6);
+        let roleId = Utils.randomInt(1, 34);
         this.shopIds = {
             [ShopType.Gun]: [gunId],
             [ShopType.Role]: [roleId]

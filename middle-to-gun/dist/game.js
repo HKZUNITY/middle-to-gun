@@ -1847,14 +1847,20 @@ Utils.npcNames = ["张吉惟", "林国瑞", "林玫书", "林雅南", "江奕云
 Utils.tens = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 Utils.digitalUnits = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
 Utils.redTeamRevivalPoint = [
-    new mw.Vector(-1764.48, 2329, 200),
-    new mw.Vector(-2123.19, 2329, 200),
-    new mw.Vector(-2497.86, 2329, 200)
+    new mw.Vector(-3607, 1993, 250),
+    new mw.Vector(-3282, 1993, 250),
+    new mw.Vector(-2972, 1993, 250),
+    new mw.Vector(-2578, 1993, 250),
+    new mw.Vector(-4153, 2230, 250),
+    new mw.Vector(-3745., 2230, 250)
 ];
 Utils.blueTeamRevivalPoint = [
-    new mw.Vector(-2310.74, -2875, 100),
-    new mw.Vector(-2047.45, -2875, 100),
-    new mw.Vector(-1739.05, -2875, 100),
+    new mw.Vector(3444, 11319, 250),
+    new mw.Vector(3444, 11627, 250),
+    new mw.Vector(3444, 11939, 250),
+    new mw.Vector(3444, 12277, 250),
+    new mw.Vector(3444, 12640, 250),
+    new mw.Vector(3444, 11438, 250),
 ];
 Utils.targetGos = [];
 function cubicBezier(p1x, p1y, p2x, p2y) {
@@ -2827,13 +2833,13 @@ class CoinModuleC extends ModuleC {
     //#region Ads
     defaultAds() {
         this.delay30Seconds();
-        this.setInterval180Seconds();
     }
     delay30Seconds() {
-        TimeUtil.delaySecond(30).then(() => {
+        TimeUtil.delaySecond(300).then(() => {
             this.getAdPanel.showRewardAd(() => {
                 this.setDiamond(2);
             }, "大礼包\n免费获得2个钻石");
+            this.setInterval180Seconds();
         });
     }
     setInterval180Seconds() {
@@ -5321,8 +5327,8 @@ class ShopData extends Subdata {
         this.useShopIds = {}; //1-Gun,2-Role,3-Trailing
     }
     initDefaultData() {
-        let gunId = Utils.randomInt(1, 3);
-        let roleId = Utils.randomInt(1, 5);
+        let gunId = Utils.randomInt(1, 6);
+        let roleId = Utils.randomInt(1, 34);
         this.shopIds = {
             [ShopType.Gun]: [gunId],
             [ShopType.Role]: [roleId]
@@ -12485,7 +12491,7 @@ let Npc = class Npc extends Script {
         this.setNpcDescriptionAndGun();
     }
     async setNpcDescriptionAndGun() {
-        let ran = Utils.randomInt(1, 2); //TODO:WFZ
+        let ran = Utils.randomInt(1, 4); //TODO:WFZ
         if (ran == 1) {
             let morphElement = GameConfig.Morph.getElement(Utils.randomInt(1, GameConfig.Morph.getAllElement().length));
             let assetId = morphElement.AssetId;
