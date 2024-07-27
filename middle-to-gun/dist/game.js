@@ -1847,26 +1847,26 @@ Utils.npcNames = ["张吉惟", "林国瑞", "林玫书", "林雅南", "江奕云
 Utils.tens = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 Utils.digitalUnits = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
 Utils.redTeamRevivalPoint = [
-    new mw.Vector(-1791, -22919, -28 + 50),
-    new mw.Vector(1565, -22956, -7 + 50),
-    new mw.Vector(4653, -23490, -124 + 50),
-    new mw.Vector(7129, -24264, -542 + 50),
-    new mw.Vector(7000, -27302, -233 + 50),
-    new mw.Vector(6765, -30253, 15 + 50),
-    new mw.Vector(5365, -17863, -1049 + 50),
-    new mw.Vector(8128, -20456, -1049 + 50),
-    new mw.Vector(2722, -15637, -1196 + 50)
+    new mw.Vector(2228, -10636, 696 + 50),
+    new mw.Vector(2139, -554, 696 + 50),
+    new mw.Vector(5435, -538, 696 + 50),
+    new mw.Vector(5404, -10691, 696 + 50),
+    new mw.Vector(-2768, -5550, 696 + 50),
+    new mw.Vector(-2805, -8764, 696 + 50),
+    new mw.Vector(8583, -7920, 123 + 50),
+    new mw.Vector(8897, -6396, 123 + 50),
+    new mw.Vector(3606, -7138, 123 + 50)
 ];
 Utils.blueTeamRevivalPoint = [
-    new mw.Vector(-1791, -22919, -28 + 50),
-    new mw.Vector(1565, -22956, -7 + 50),
-    new mw.Vector(4653, -23490, -124 + 50),
-    new mw.Vector(7129, -24264, -542 + 50),
-    new mw.Vector(7000, -27302, -233 + 50),
-    new mw.Vector(6765, -30253, 15 + 50),
-    new mw.Vector(5365, -17863, -1049 + 50),
-    new mw.Vector(8128, -20456, -1049 + 50),
-    new mw.Vector(2722, -15637, -1196 + 50)
+    new mw.Vector(2228, -10636, 696 + 50),
+    new mw.Vector(2139, -554, 696 + 50),
+    new mw.Vector(5435, -538, 696 + 50),
+    new mw.Vector(5404, -10691, 696 + 50),
+    new mw.Vector(-2768, -5550, 696 + 50),
+    new mw.Vector(-2805, -8764, 696 + 50),
+    new mw.Vector(8583, -7920, 123 + 50),
+    new mw.Vector(8897, -6396, 123 + 50),
+    new mw.Vector(3606, -7138, 123 + 50)
 ];
 Utils.targetGos = [];
 function cubicBezier(p1x, p1y, p2x, p2y) {
@@ -4629,7 +4629,7 @@ class HUDModuleC extends ModuleC {
     //#endregion
     //#region SoundService
     playBgm() {
-        SoundService.playBGM("382365", this.currentBgmVolume);
+        SoundService.playBGM("146100", this.currentBgmVolume);
     }
     initSoundEvent() {
         Event.addLocalListener("PlayButtonClick", (btnName) => {

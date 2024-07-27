@@ -234,7 +234,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
 
     //#region SoundService
     private playBgm(): void {
-        SoundService.playBGM("382365", this.currentBgmVolume);
+        SoundService.playBGM("146100", this.currentBgmVolume);
     }
 
     private initSoundEvent(): void {
