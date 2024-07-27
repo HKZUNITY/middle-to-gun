@@ -1,3 +1,4 @@
+import { Notice } from "../../../common/notice/Notice";
 import { GameConfig } from "../../../config/GameConfig";
 import { ITaskElement } from "../../../config/Task";
 import { EventType } from "../../../tools/EventType";
@@ -68,6 +69,7 @@ export default class TaskPanel extends TaskPanel_Generate {
 		if (this.picIndex > 0 && this.isPic == false) {
 			this.getHUDPanel.startTaskRedPointTween();
 			this.isPic = true;
+			Notice.showDownNotice(`任务完成`);
 		} else if (this.picIndex <= 0 && this.isPic == true) {
 			this.getHUDPanel.stopTaskRedPointTween();
 			this.isPic = false;

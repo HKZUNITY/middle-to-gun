@@ -1,6 +1,7 @@
 ﻿import { EventType } from "../../tools/EventType";
 import GlobalData from "../../tools/GlobalData";
 import Utils from "../../tools/Utils";
+import Loading_Generate from "../../ui-generate/module/HUDModule/Loading_generate";
 import CoinPanel from "../CoinModule/ui/CoinPanel";
 import { HUDData, KillTipType } from "./HUDData";
 import HUDModuleS from "./HUDModuleS";
@@ -13,6 +14,13 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
             this.hudPanel = UIService.getUI(HUDPanel);
         }
         return this.hudPanel;
+    }
+    private loading: Loading_Generate = null;
+    private get getLoading(): Loading_Generate {
+        if (!this.loading) {
+            this.loading = mw.UIService.getUI(Loading_Generate);
+        }
+        return this.loading;
     }
 
     public onOpenShopAction: Action = new Action();
@@ -71,6 +79,9 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
         this.setPlayerIcon();
         this.initSetData();
         this.playBgm();
+        this.getLoading.show();
+        TimeUtil.delaySecond(10).then(() => { this.getLoading.hide(); })
+        TimeUtil.delaySecond(20).then(() => { this.getLoading.hide(); })
     }
 
     public updateVsUI(redCount: number, blueCount: number): void {

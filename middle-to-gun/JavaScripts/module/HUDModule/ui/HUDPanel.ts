@@ -211,10 +211,10 @@ export default class HUDPanel extends HUDPanel_Generate {
     }
 
     public updateRankUIText(isRedTeam: boolean, rank: number): void {
-        let teamStr: string = "潜伏者：第";
+        let teamStr: string = "蜘蛛猎人：第";
         let rankTextBlockColor: mw.LinearColor = mw.LinearColor.red;
         if (!isRedTeam) {
-            teamStr = "保卫者：第";
+            teamStr = "僵尸猎人：第";
             rankTextBlockColor = mw.LinearColor.blue;
         }
         this.mRankTextBlock.text = teamStr + rank + "名";
