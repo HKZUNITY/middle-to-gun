@@ -151,7 +151,8 @@ export class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
 
         this.getRankModuleS.refreshKillDieCount(userId1, userId2);
         this.getCoinModuleS.killPlayerAddCoin(killPlayer);
-        this.getTaskModuleS.killPlayer(killPlayer);
+        if (killPlayer && diePlayer) this.getTaskModuleS.killPlayer(killPlayer);
+        if (killPlayer && !diePlayer) this.getTaskModuleS.killMonster(killPlayer);
 
         let names: string[] = [];
         if (userId2 != "-1") {

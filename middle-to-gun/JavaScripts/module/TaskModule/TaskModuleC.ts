@@ -344,6 +344,12 @@ export default class TaskModuleC extends ModuleC<TaskModuleS, TaskData> {
         }
     }
 
+    public net_dailyKillMonster(): void {
+        for (let i = 51; i <= 59; ++i) {
+            this.onExecuteTaskAction.call(i, 1);
+        }
+    }
+
     public weeklyLogin(): void {
         for (let i = 101; i <= 107; ++i) {
             this.onExecuteTaskAction.call(i, 1);

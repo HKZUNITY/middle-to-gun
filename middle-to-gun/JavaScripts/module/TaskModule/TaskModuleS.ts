@@ -198,4 +198,8 @@ export default class TaskModuleS extends ModuleS<TaskModuleC, TaskData> {
     public killPlayer(player: mw.Player): void {
         this.getClient(player).net_dailyKillPlayer();
     }
+
+    public killMonster(player: mw.Player): void {
+        this.getClient(player).net_dailyKillMonster();
+    }
 }
