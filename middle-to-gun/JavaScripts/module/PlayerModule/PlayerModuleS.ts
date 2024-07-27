@@ -63,6 +63,7 @@ export class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
 
     private initEventAction(): void {
         PrefabEvent.PrefabEvtFight.onHit(this.playerAtkPlayer.bind(this));
+        PrefabEvent.PrefabEvtFight.onHurt(this.monsterAtkPlayer.bind(this));
     }
 
     protected onPlayerEnterGame(player: mw.Player): void {
@@ -95,6 +96,11 @@ export class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         if (this.playerMap.has(gameObjectId)) {
             this.playerMap.delete(gameObjectId);
         }
+    }
+
+    private monsterAtkPlayer(senderGuid: string, targetGuid: string, damage: number): void {
+        let targetPlayer = this.playerMap.get(targetGuid);
+        this.updatePlayerData(null, targetPlayer, damage, null);
     }
 
     private playerAtkPlayer(senderGuid: string, targetGuid: string, damage: number, hitPoint: mw.Vector): void {

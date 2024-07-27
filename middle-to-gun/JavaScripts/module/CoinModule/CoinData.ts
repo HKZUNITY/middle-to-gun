@@ -9,7 +9,7 @@ export default class CoinData extends Subdata {
     public isFirstBuy: boolean = true;
 
     protected initDefaultData(): void {
-        this.coin = 5000;
+        this.coin = 10000;
         this.diamond = 0;
         this.isFirstBuy = true;
     }

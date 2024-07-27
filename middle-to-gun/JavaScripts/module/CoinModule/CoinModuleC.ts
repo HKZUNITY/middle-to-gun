@@ -102,10 +102,10 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
     public getCoinByAd(): void {
         if (GlobalData.isOpenIAA) {
             this.getAdPanel.showRewardAd(() => {
-                this.setCoin(10000);
-            }, "免费领取10000金币");
+                this.setCoin(100000);
+            }, "免费领取100000金币");
         } else {
-            this.setCoin(10000);
+            this.setCoin(100000);
         }
         // this.openShopBuyDiamondCoin();
     }
@@ -113,10 +113,10 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
     public getDiamondByAd(diamond: number): void {
         if (GlobalData.isOpenIAA) {
             this.getAdPanel.showRewardAd(() => {
-                this.setDiamond(1);
-            }, "免费领取1个钻石");
+                this.setDiamond(10);
+            }, "免费领取10个钻石");
         } else {
-            this.setDiamond(1);
+            this.setDiamond(10);
         }
         // this.openShopBuyDiamondCoin(diamond);
     }
@@ -152,8 +152,8 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
     private setInterval180Seconds(): void {
         TimeUtil.setInterval(() => {
             this.getAdPanel.showRewardAd(() => {
-                this.setDiamond(2);
-            }, "幸运大礼包\n免费获得2个钻石");
+                this.setDiamond(10);
+            }, "幸运大礼包\n免费获得10个钻石");
         }, 300);
     }
 
@@ -164,8 +164,8 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
             return;
         }
         this.getAdPanel.showRewardAd(() => {
-            this.setDiamond(2);
-        }, "被击败奖励\n免费获得2个钻石");
+            this.setDiamond(10);
+        }, "被击败奖励\n免费获得10个钻石");
         Event.dispatchToLocal(EventType.TryOutGun);
     }
     //#endregion

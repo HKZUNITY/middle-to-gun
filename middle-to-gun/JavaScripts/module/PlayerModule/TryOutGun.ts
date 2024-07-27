@@ -108,18 +108,21 @@ export default class TryOutGun extends Script {
 
     private onTriggerEnter(character: mw.Character): void {
         if (Player.localPlayer.character != character) return;
-        let gunElement = GameConfig.WeaponProp.getElement(this.gunkey);
-        if (GlobalData.isOpenIAA) {
-            this.getAdPanel.showRewardAd(() => {
-                if (!this.gunkey) return;
-                this.switchGun();
-                this.switchGunModel(Utils.randomInt(1, GameConfig.WeaponProp.getAllElement().length));
-            }, gunElement.WeaponName + "\n免费使用一局", "取消", "免费使用");
-        } else {
-            if (!this.gunkey) return;
+        // let gunElement = GameConfig.WeaponProp.getElement(this.gunkey);
+        // if (GlobalData.isOpenIAA) {
+        //     this.getAdPanel.showRewardAd(() => {
+        //         if (!this.gunkey) return;
+        //         this.switchGun();
+        //         this.switchGunModel(Utils.randomInt(1, GameConfig.WeaponProp.getAllElement().length));
+        //     }, gunElement.WeaponName + "\n免费使用一局", "取消", "免费使用");
+        // } else {
+        // if (!this.gunkey) return;
+        this.getConfirmPanel.confirmTips(() => {
             this.switchGun();
-            this.switchGunModel(Utils.randomInt(1, 15));
-        }
+            this.switchGunModel(Utils.randomInt(1, GameConfig.WeaponProp.getAllElement().length));
+            Notice.showDownNotice("装备成功");
+        }, "免费获得", "确定", "取消");
+        // }
     }
 
     private switchGun(): void {

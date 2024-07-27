@@ -86,7 +86,7 @@ NoticeView_Generate = __decorate([
 ], NoticeView_Generate);
 var NoticeView_Generate$1 = NoticeView_Generate;
 
-var foreign84 = /*#__PURE__*/Object.freeze({
+var foreign85 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NoticeView_Generate$1
 });
@@ -160,7 +160,7 @@ TopNoticeItem_Generate = __decorate([
 ], TopNoticeItem_Generate);
 var TopNoticeItem_Generate$1 = TopNoticeItem_Generate;
 
-var foreign86 = /*#__PURE__*/Object.freeze({
+var foreign87 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TopNoticeItem_Generate$1
 });
@@ -1407,7 +1407,7 @@ GlobalData.dailyRefreshTime = "4:0";
 GlobalData.weeklyRefreshTime = "4:0";
 GlobalData.maxHp = 100;
 
-var foreign75 = /*#__PURE__*/Object.freeze({
+var foreign76 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GlobalData
 });
@@ -1847,39 +1847,26 @@ Utils.npcNames = ["张吉惟", "林国瑞", "林玫书", "林雅南", "江奕云
 Utils.tens = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 Utils.digitalUnits = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
 Utils.redTeamRevivalPoint = [
-    new mw.Vector(2864, -16725, -1072 + 50),
-    new mw.Vector(7956, -20613, -1049 + 50),
-    new mw.Vector(7206, -24261, -542 + 50),
-    new mw.Vector(1821, -33018, 3123 + 50),
-    new mw.Vector(-1236, -23916, 622 + 50),
-    new mw.Vector(1577, -22954, -8 + 50),
-    new mw.Vector(2000, -24419, 1784 + 50),
-    new mw.Vector(3699, -29412, 2360 + 50),
-    new mw.Vector(6602, -32339, 20 + 50),
-    new mw.Vector(-8218, -38356, 186 + 50),
-    new mw.Vector(-9115, -41395, 221 + 50),
-    new mw.Vector(-7045, -28173, -85 + 50),
-    new mw.Vector(-4844, -23316, -39 + 50),
-    new mw.Vector(4475, -21238, -1049 + 50),
-    new mw.Vector(810, -20290, -1049 + 50)
+    new mw.Vector(-1791, -22919, -28 + 50),
+    new mw.Vector(1565, -22956, -7 + 50),
+    new mw.Vector(4653, -23490, -124 + 50),
+    new mw.Vector(7129, -24264, -542 + 50),
+    new mw.Vector(7000, -27302, -233 + 50),
+    new mw.Vector(6765, 30253, 15 + 50),
+    new mw.Vector(5365, -17863, -1049 + 50),
+    new mw.Vector(8128, -20456, -1049 + 50),
+    new mw.Vector(2722, -15637, -1196 + 50)
 ];
 Utils.blueTeamRevivalPoint = [
-    new mw.Vector(2864, -16725, -1072 + 50),
-    new mw.Vector(7956, -20613, -1049 + 50),
-    new mw.Vector(7206, -24261, -542 + 50),
-    new mw.Vector(1821, -33018, 3123 + 50),
-    new mw.Vector(-3757, -30749, -3 + 50),
-    new mw.Vector(-1236, -23916, 622 + 50),
-    new mw.Vector(1577, -22954, -8 + 50),
-    new mw.Vector(2000, -24419, 1784 + 50),
-    new mw.Vector(3699, -29412, 2360 + 50),
-    new mw.Vector(6602, -32339, 20 + 50),
-    new mw.Vector(-8218, -38356, 186 + 50),
-    new mw.Vector(-9115, -41395, 221 + 50),
-    new mw.Vector(-7045, -28173, -85 + 50),
-    new mw.Vector(-4844, -23316, -39 + 50),
-    new mw.Vector(4475, -21238, -1049 + 50),
-    new mw.Vector(810, -20290, -1049 + 50)
+    new mw.Vector(-1791, -22919, -28 + 50),
+    new mw.Vector(1565, -22956, -7 + 50),
+    new mw.Vector(4653, -23490, -124 + 50),
+    new mw.Vector(7129, -24264, -542 + 50),
+    new mw.Vector(7000, -27302, -233 + 50),
+    new mw.Vector(6765, 30253, 15 + 50),
+    new mw.Vector(5365, -17863, -1049 + 50),
+    new mw.Vector(8128, -20456, -1049 + 50),
+    new mw.Vector(2722, -15637, -1196 + 50)
 ];
 Utils.targetGos = [];
 function cubicBezier(p1x, p1y, p2x, p2y) {
@@ -1938,7 +1925,7 @@ function cubicBezier(p1x, p1y, p2x, p2y) {
     return solve;
 }
 
-var foreign81 = /*#__PURE__*/Object.freeze({
+var foreign82 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     cubicBezier: cubicBezier,
     default: Utils
@@ -2036,7 +2023,7 @@ ConfirmPanel_Generate = __decorate([
 ], ConfirmPanel_Generate);
 var ConfirmPanel_Generate$1 = ConfirmPanel_Generate;
 
-var foreign82 = /*#__PURE__*/Object.freeze({
+var foreign83 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ConfirmPanel_Generate$1
 });
@@ -2409,7 +2396,7 @@ var EventType;
     EventType["OnOffWeaponUI"] = "OnOffWeaponUI";
 })(EventType || (EventType = {}));
 
-var foreign72 = /*#__PURE__*/Object.freeze({
+var foreign73 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get EventType () { return EventType; }
 });
@@ -2504,7 +2491,7 @@ CoinPanel_Generate = __decorate([
 ], CoinPanel_Generate);
 var CoinPanel_Generate$1 = CoinPanel_Generate;
 
-var foreign89 = /*#__PURE__*/Object.freeze({
+var foreign90 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CoinPanel_Generate$1
 });
@@ -2590,7 +2577,7 @@ AdPanel_Generate = __decorate([
 ], AdPanel_Generate);
 var AdPanel_Generate$1 = AdPanel_Generate;
 
-var foreign88 = /*#__PURE__*/Object.freeze({
+var foreign89 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AdPanel_Generate$1
 });
@@ -2826,22 +2813,22 @@ class CoinModuleC extends ModuleC {
     getCoinByAd() {
         if (GlobalData.isOpenIAA) {
             this.getAdPanel.showRewardAd(() => {
-                this.setCoin(10000);
-            }, "免费领取10000金币");
+                this.setCoin(100000);
+            }, "免费领取100000金币");
         }
         else {
-            this.setCoin(10000);
+            this.setCoin(100000);
         }
         // this.openShopBuyDiamondCoin();
     }
     getDiamondByAd(diamond) {
         if (GlobalData.isOpenIAA) {
             this.getAdPanel.showRewardAd(() => {
-                this.setDiamond(1);
-            }, "免费领取1个钻石");
+                this.setDiamond(10);
+            }, "免费领取10个钻石");
         }
         else {
-            this.setDiamond(1);
+            this.setDiamond(10);
         }
         // this.openShopBuyDiamondCoin(diamond);
     }
@@ -2860,7 +2847,7 @@ class CoinModuleC extends ModuleC {
     //#endregion
     //#region Ads
     defaultAds() {
-        this.delay30Seconds();
+        // this.delay30Seconds();
         this.setInterval180Seconds();
     }
     delay30Seconds() {
@@ -2873,9 +2860,9 @@ class CoinModuleC extends ModuleC {
     setInterval180Seconds() {
         TimeUtil.setInterval(() => {
             this.getAdPanel.showRewardAd(() => {
-                this.setDiamond(2);
-            }, "幸运大礼包\n免费获得2个钻石");
-        }, 180);
+                this.setDiamond(10);
+            }, "幸运大礼包\n免费获得10个钻石");
+        }, 300);
     }
     dieAds() {
         if (this.isFirst) {
@@ -2883,8 +2870,8 @@ class CoinModuleC extends ModuleC {
             return;
         }
         this.getAdPanel.showRewardAd(() => {
-            this.setDiamond(2);
-        }, "被击败奖励\n免费获得2个钻石");
+            this.setDiamond(10);
+        }, "被击败奖励\n免费获得10个钻石");
         Event.dispatchToLocal(EventType.TryOutGun);
     }
 }
@@ -3474,7 +3461,7 @@ HUDPanel_Generate = __decorate([
 ], HUDPanel_Generate);
 var HUDPanel_Generate$1 = HUDPanel_Generate;
 
-var foreign94 = /*#__PURE__*/Object.freeze({
+var foreign95 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDPanel_Generate$1
 });
@@ -3550,7 +3537,7 @@ KillTipItem_Generate = __decorate([
 ], KillTipItem_Generate);
 var KillTipItem_Generate$1 = KillTipItem_Generate;
 
-var foreign95 = /*#__PURE__*/Object.freeze({
+var foreign96 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: KillTipItem_Generate$1
 });
@@ -4764,7 +4751,7 @@ var MapEx;
     MapEx.copy = copy;
 })(MapEx || (MapEx = {}));
 
-var foreign79 = /*#__PURE__*/Object.freeze({
+var foreign80 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get MapEx () { return MapEx; }
 });
@@ -5077,7 +5064,7 @@ Helper.weaponDataMap_Abandon = new Map([
     ], //弓,弓箭瞬发射箭,弓箭手A大招
 ]);
 
-var foreign76 = /*#__PURE__*/Object.freeze({
+var foreign77 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Helper: Helper
 });
@@ -5096,7 +5083,7 @@ var ProjectileType;
     ProjectileType[ProjectileType["Throw"] = 4] = "Throw";
 })(ProjectileType || (ProjectileType = {}));
 
-var foreign69 = /*#__PURE__*/Object.freeze({
+var foreign70 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get ProjectileType () { return ProjectileType; }
 });
@@ -5331,7 +5318,7 @@ class WeaponModuleC extends ModuleC {
     }
 }
 
-var foreign70 = /*#__PURE__*/Object.freeze({
+var foreign71 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WeaponModuleC
 });
@@ -5387,7 +5374,7 @@ __decorate([
     Decorator.persistence()
 ], ShopData.prototype, "useShopIds", void 0);
 
-var foreign52 = /*#__PURE__*/Object.freeze({
+var foreign53 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get PriceType () { return PriceType; },
     get ShopType () { return ShopType; },
@@ -5499,7 +5486,7 @@ ShopPanel_Generate = __decorate([
 ], ShopPanel_Generate);
 var ShopPanel_Generate$1 = ShopPanel_Generate;
 
-var foreign102 = /*#__PURE__*/Object.freeze({
+var foreign103 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel_Generate$1
 });
@@ -5692,7 +5679,7 @@ ShopItem_Generate = __decorate([
 ], ShopItem_Generate);
 var ShopItem_Generate$1 = ShopItem_Generate;
 
-var foreign101 = /*#__PURE__*/Object.freeze({
+var foreign102 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopItem_Generate$1
 });
@@ -5881,7 +5868,7 @@ class ShopItem extends ShopItem_Generate$1 {
     }
 }
 
-var foreign55 = /*#__PURE__*/Object.freeze({
+var foreign56 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopItem
 });
@@ -6055,7 +6042,7 @@ class ShopPanel extends ShopPanel_Generate$1 {
     }
 }
 
-var foreign56 = /*#__PURE__*/Object.freeze({
+var foreign57 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel
 });
@@ -6419,7 +6406,7 @@ class ShopModuleC extends ModuleC {
     }
 }
 
-var foreign53 = /*#__PURE__*/Object.freeze({
+var foreign54 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopModuleC
 });
@@ -6554,7 +6541,7 @@ ActivityPanel_Generate = __decorate([
 ], ActivityPanel_Generate);
 var ActivityPanel_Generate$1 = ActivityPanel_Generate;
 
-var foreign87 = /*#__PURE__*/Object.freeze({
+var foreign88 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ActivityPanel_Generate$1
 });
@@ -6878,7 +6865,7 @@ class CoinData extends Subdata {
         this.isFirstBuy = true;
     }
     initDefaultData() {
-        this.coin = 5000;
+        this.coin = 10000;
         this.diamond = 0;
         this.isFirstBuy = true;
     }
@@ -7692,7 +7679,7 @@ function PrefabReport(reportId = null) {
     };
 }
 
-var foreign80 = /*#__PURE__*/Object.freeze({
+var foreign81 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get PrefabEvent () { return PrefabEvent; },
     PrefabReport: PrefabReport
@@ -7864,7 +7851,7 @@ class Projectile {
     }
 }
 
-var foreign66 = /*#__PURE__*/Object.freeze({
+var foreign67 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Projectile: Projectile
 });
@@ -8081,7 +8068,7 @@ Weapon = __decorate([
 ], Weapon);
 var Weapon$1 = Weapon;
 
-var foreign68 = /*#__PURE__*/Object.freeze({
+var foreign69 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Weapon$1
 });
@@ -8178,7 +8165,7 @@ __decorate([
     Decorator.noReply()
 ], WeaponModuleS.prototype, "net_switchWeapon", null);
 
-var foreign71 = /*#__PURE__*/Object.freeze({
+var foreign72 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WeaponModuleS
 });
@@ -8355,7 +8342,7 @@ __decorate([
     Decorator.persistence()
 ], PlayerData.prototype, "dieCount", void 0);
 
-var foreign39 = /*#__PURE__*/Object.freeze({
+var foreign40 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PlayerStatus: PlayerStatus,
     default: PlayerData
@@ -8452,7 +8439,7 @@ class FlyText {
     }
 }
 
-var foreign73 = /*#__PURE__*/Object.freeze({
+var foreign74 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     FlyText: FlyText
 });
@@ -8494,7 +8481,7 @@ class WorldData {
     }
 }
 
-var foreign46 = /*#__PURE__*/Object.freeze({
+var foreign47 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     RoomData: RoomData,
     WorldData: WorldData
@@ -8633,7 +8620,7 @@ RankPanel_Generate = __decorate([
 ], RankPanel_Generate);
 var RankPanel_Generate$1 = RankPanel_Generate;
 
-var foreign98 = /*#__PURE__*/Object.freeze({
+var foreign99 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankPanel_Generate$1
 });
@@ -8710,7 +8697,7 @@ RoomItem_Generate = __decorate([
 ], RoomItem_Generate);
 var RoomItem_Generate$1 = RoomItem_Generate;
 
-var foreign99 = /*#__PURE__*/Object.freeze({
+var foreign100 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RoomItem_Generate$1
 });
@@ -8737,7 +8724,7 @@ class RoomItem extends RoomItem_Generate$1 {
     }
 }
 
-var foreign50 = /*#__PURE__*/Object.freeze({
+var foreign51 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RoomItem
 });
@@ -8814,7 +8801,7 @@ WorldItem_Generate = __decorate([
 ], WorldItem_Generate);
 var WorldItem_Generate$1 = WorldItem_Generate;
 
-var foreign100 = /*#__PURE__*/Object.freeze({
+var foreign101 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldItem_Generate$1
 });
@@ -8841,7 +8828,7 @@ class WorldItem extends WorldItem_Generate$1 {
     }
 }
 
-var foreign51 = /*#__PURE__*/Object.freeze({
+var foreign52 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldItem
 });
@@ -8980,7 +8967,7 @@ class RankPanel extends RankPanel_Generate$1 {
     }
 }
 
-var foreign49 = /*#__PURE__*/Object.freeze({
+var foreign50 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankPanel
 });
@@ -9261,7 +9248,7 @@ class RankModuleC extends ModuleC {
     }
 }
 
-var foreign47 = /*#__PURE__*/Object.freeze({
+var foreign48 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankModuleC
 });
@@ -9294,7 +9281,7 @@ var ResultType;
     ResultType[ResultType["Fail3"] = 3] = "Fail3";
 })(ResultType || (ResultType = {}));
 
-var foreign61 = /*#__PURE__*/Object.freeze({
+var foreign62 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get ResultType () { return ResultType; },
     TeamData: TeamData,
@@ -9397,7 +9384,7 @@ TeamPanel_Generate = __decorate([
 ], TeamPanel_Generate);
 var TeamPanel_Generate$1 = TeamPanel_Generate;
 
-var foreign106 = /*#__PURE__*/Object.freeze({
+var foreign107 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamPanel_Generate$1
 });
@@ -9459,7 +9446,7 @@ TeamItem_Generate = __decorate([
 ], TeamItem_Generate);
 var TeamItem_Generate$1 = TeamItem_Generate;
 
-var foreign105 = /*#__PURE__*/Object.freeze({
+var foreign106 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamItem_Generate$1
 });
@@ -9482,7 +9469,7 @@ class TeamItem extends TeamItem_Generate$1 {
     }
 }
 
-var foreign64 = /*#__PURE__*/Object.freeze({
+var foreign65 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamItem
 });
@@ -9592,7 +9579,7 @@ class TeamPanel extends TeamPanel_Generate$1 {
     }
 }
 
-var foreign65 = /*#__PURE__*/Object.freeze({
+var foreign66 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamPanel
 });
@@ -9725,7 +9712,7 @@ class TeamModuleC extends ModuleC {
     }
 }
 
-var foreign62 = /*#__PURE__*/Object.freeze({
+var foreign63 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamModuleC
 });
@@ -9804,7 +9791,7 @@ class PlayerModuleC extends ModuleC {
     }
 }
 
-var foreign40 = /*#__PURE__*/Object.freeze({
+var foreign41 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PlayerModuleC: PlayerModuleC
 });
@@ -10078,7 +10065,7 @@ __decorate([
     Decorator.noReply()
 ], RankModuleS.prototype, "net_setFirstModel", null);
 
-var foreign48 = /*#__PURE__*/Object.freeze({
+var foreign49 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankModuleS
 });
@@ -10229,7 +10216,7 @@ __decorate([
     Decorator.persistence()
 ], TaskData.prototype, "weeklyTasks", void 0);
 
-var foreign57 = /*#__PURE__*/Object.freeze({
+var foreign58 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Task: Task,
     TaskData: TaskData,
@@ -10420,7 +10407,7 @@ __decorate([
     Decorator.noReply()
 ], TaskModuleS.prototype, "net_updateTaskConpleteData", null);
 
-var foreign59 = /*#__PURE__*/Object.freeze({
+var foreign60 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskModuleS
 });
@@ -10528,7 +10515,7 @@ __decorate([
     Decorator.noReply()
 ], TeamModuleS.prototype, "net_onEnterScene", null);
 
-var foreign63 = /*#__PURE__*/Object.freeze({
+var foreign64 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamModuleS
 });
@@ -10586,6 +10573,7 @@ class PlayerModuleS extends ModuleS {
     }
     initEventAction() {
         PrefabEvent.PrefabEvtFight.onHit(this.playerAtkPlayer.bind(this));
+        PrefabEvent.PrefabEvtFight.onHurt(this.monsterAtkPlayer.bind(this));
     }
     onPlayerEnterGame(player) {
         this.initPlayerState(player);
@@ -10612,6 +10600,10 @@ class PlayerModuleS extends ModuleS {
         if (this.playerMap.has(gameObjectId)) {
             this.playerMap.delete(gameObjectId);
         }
+    }
+    monsterAtkPlayer(senderGuid, targetGuid, damage) {
+        let targetPlayer = this.playerMap.get(targetGuid);
+        this.updatePlayerData(null, targetPlayer, damage, null);
     }
     playerAtkPlayer(senderGuid, targetGuid, damage, hitPoint) {
         if (!this.playerMap.has(senderGuid) || !this.playerMap.has(targetGuid))
@@ -10721,7 +10713,7 @@ class PlayerModuleS extends ModuleS {
     }
 }
 
-var foreign41 = /*#__PURE__*/Object.freeze({
+var foreign42 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PlayerModuleS: PlayerModuleS
 });
@@ -10891,7 +10883,7 @@ class RadarPanel extends UIScript {
     }
 }
 
-var foreign45 = /*#__PURE__*/Object.freeze({
+var foreign46 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadarPanel
 });
@@ -10936,7 +10928,7 @@ class RadarModuleC extends ModuleC {
     }
 }
 
-var foreign43 = /*#__PURE__*/Object.freeze({
+var foreign44 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadarModuleC
 });
@@ -10946,7 +10938,7 @@ class RadarModuleS extends ModuleS {
     }
 }
 
-var foreign44 = /*#__PURE__*/Object.freeze({
+var foreign45 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadarModuleS
 });
@@ -10995,7 +10987,7 @@ __decorate([
     Decorator.noReply()
 ], ShopModuleS.prototype, "net_setCharacterTrailing", null);
 
-var foreign54 = /*#__PURE__*/Object.freeze({
+var foreign55 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopModuleS
 });
@@ -11095,7 +11087,7 @@ TaskItem_Generate = __decorate([
 ], TaskItem_Generate);
 var TaskItem_Generate$1 = TaskItem_Generate;
 
-var foreign103 = /*#__PURE__*/Object.freeze({
+var foreign104 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskItem_Generate$1
 });
@@ -11208,7 +11200,7 @@ TaskPanel_Generate = __decorate([
 ], TaskPanel_Generate);
 var TaskPanel_Generate$1 = TaskPanel_Generate;
 
-var foreign104 = /*#__PURE__*/Object.freeze({
+var foreign105 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskPanel_Generate$1
 });
@@ -11492,7 +11484,7 @@ class TaskItem extends TaskItem_Generate$1 {
     }
 }
 
-var foreign60 = /*#__PURE__*/Object.freeze({
+var foreign61 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     TaskItem: TaskItem,
     default: TaskPanel
@@ -11827,7 +11819,7 @@ class TaskModuleC extends ModuleC {
     }
 }
 
-var foreign58 = /*#__PURE__*/Object.freeze({
+var foreign59 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskModuleC
 });
@@ -12148,7 +12140,7 @@ GMHUD_Generate = __decorate([
 ], GMHUD_Generate);
 var GMHUD_Generate$1 = GMHUD_Generate;
 
-var foreign92 = /*#__PURE__*/Object.freeze({
+var foreign93 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GMHUD_Generate$1
 });
@@ -12208,7 +12200,7 @@ GMItem_Generate = __decorate([
 ], GMItem_Generate);
 var GMItem_Generate$1 = GMItem_Generate;
 
-var foreign93 = /*#__PURE__*/Object.freeze({
+var foreign94 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GMItem_Generate$1
 });
@@ -12488,7 +12480,7 @@ EnemyLifebar_Generate = __decorate([
 ], EnemyLifebar_Generate);
 var EnemyLifebar_Generate$1 = EnemyLifebar_Generate;
 
-var foreign96 = /*#__PURE__*/Object.freeze({
+var foreign97 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: EnemyLifebar_Generate$1
 });
@@ -13011,7 +13003,7 @@ __decorate([
     mw.Property({ displayName: "hp", group: "Info", tooltip: "hp", replicated: true, onChanged: "onHpChanged" })
 ], Monster.prototype, "hp", void 0);
 __decorate([
-    mw.Property({ displayName: "maxHp", group: "Info", tooltip: "maxHp" })
+    mw.Property({ displayName: "maxHp", group: "Info", tooltip: "maxHp", replicated: true, onChanged: "onHpChanged" })
 ], Monster.prototype, "maxHp", void 0);
 __decorate([
     mw.Property({ displayName: "path", group: "Info", tooltip: "path" })
@@ -13378,6 +13370,76 @@ var foreign38 = /*#__PURE__*/Object.freeze({
     default: AddMaxHp$1
 });
 
+let GetNpc = class GetNpc extends Script {
+    constructor() {
+        super(...arguments);
+        this.confirmPanel = null;
+        this.coinModuleC = null;
+    }
+    get getConfirmPanel() {
+        if (this.confirmPanel == null) {
+            this.confirmPanel = UIService.getUI(ConfirmPanel);
+        }
+        return this.confirmPanel;
+    }
+    get getCoinModuleC() {
+        if (this.coinModuleC == null) {
+            this.coinModuleC = ModuleService.getModule(CoinModuleC);
+        }
+        return this.coinModuleC;
+    }
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+        if (mw.SystemUtil.isClient()) {
+            let parent = this.gameObject;
+            let p = parent.getChildren();
+            for (let i = 0; i < p.length; ++i) {
+                let t = p[i].getChildren()[0];
+                let c = p[i];
+                t.onEnter.add((p) => {
+                    if (p.gameObjectId == Player.localPlayer.character.gameObjectId) {
+                        this.getConfirmPanel.confirmTips(() => {
+                            if (this.getCoinModuleC.getDiamond >= 1) {
+                                this.getCoinModuleC.setDiamond(-1);
+                                Player.localPlayer.character.setDescription(c.getDescription());
+                                Player.localPlayer.character.asyncReady().then(() => {
+                                    Player.localPlayer.character.syncDescription();
+                                });
+                                Notice.showDownNotice("穿戴成功");
+                                return true;
+                            }
+                            else {
+                                Notice.showDownNotice("钻石不足");
+                                this.getCoinModuleC.getDiamondByAd(1);
+                                return false;
+                            }
+                        }, "花费一个钻石免费穿戴", "穿戴", "取消", "免费");
+                    }
+                });
+            }
+        }
+    }
+    /**
+     * 周期函数 每帧执行
+     * 此函数执行需要将this.useUpdate赋值为true
+     * @param dt 当前帧与上一帧的延迟 / 秒
+     */
+    onUpdate(dt) {
+    }
+    /** 脚本被销毁时最后一帧执行完调用此函数 */
+    onDestroy() {
+    }
+};
+GetNpc = __decorate([
+    Component
+], GetNpc);
+var GetNpc$1 = GetNpc;
+
+var foreign39 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: GetNpc$1
+});
+
 let TryOutGun = class TryOutGun extends Script {
     constructor() {
         super(...arguments);
@@ -13472,21 +13534,21 @@ let TryOutGun = class TryOutGun extends Script {
     onTriggerEnter(character) {
         if (Player.localPlayer.character != character)
             return;
-        let gunElement = GameConfig.WeaponProp.getElement(this.gunkey);
-        if (GlobalData.isOpenIAA) {
-            this.getAdPanel.showRewardAd(() => {
-                if (!this.gunkey)
-                    return;
-                this.switchGun();
-                this.switchGunModel(Utils.randomInt(1, GameConfig.WeaponProp.getAllElement().length));
-            }, gunElement.WeaponName + "\n免费使用一局", "取消", "免费使用");
-        }
-        else {
-            if (!this.gunkey)
-                return;
+        // let gunElement = GameConfig.WeaponProp.getElement(this.gunkey);
+        // if (GlobalData.isOpenIAA) {
+        //     this.getAdPanel.showRewardAd(() => {
+        //         if (!this.gunkey) return;
+        //         this.switchGun();
+        //         this.switchGunModel(Utils.randomInt(1, GameConfig.WeaponProp.getAllElement().length));
+        //     }, gunElement.WeaponName + "\n免费使用一局", "取消", "免费使用");
+        // } else {
+        // if (!this.gunkey) return;
+        this.getConfirmPanel.confirmTips(() => {
             this.switchGun();
-            this.switchGunModel(Utils.randomInt(1, 15));
-        }
+            this.switchGunModel(Utils.randomInt(1, GameConfig.WeaponProp.getAllElement().length));
+            Notice.showDownNotice("装备成功");
+        }, "免费获得", "确定", "取消");
+        // }
     }
     switchGun() {
         if (this.getMorphModuleC.getIsMorph) {
@@ -13533,7 +13595,7 @@ TryOutGun = __decorate([
 ], TryOutGun);
 var TryOutGun$1 = TryOutGun;
 
-var foreign42 = /*#__PURE__*/Object.freeze({
+var foreign43 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TryOutGun$1
 });
@@ -13601,7 +13663,7 @@ ProjectTarget = __decorate([
 ], ProjectTarget);
 var ProjectTarget$1 = ProjectTarget;
 
-var foreign67 = /*#__PURE__*/Object.freeze({
+var foreign68 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ProjectTarget$1
 });
@@ -13799,7 +13861,7 @@ class KeyActionManager {
     }
 }
 
-var foreign74 = /*#__PURE__*/Object.freeze({
+var foreign75 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FreeCamera$1
 });
@@ -13883,7 +13945,7 @@ class TSIAP {
 }
 let TSIAPService = new TSIAP();
 
-var foreign77 = /*#__PURE__*/Object.freeze({
+var foreign78 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     TSIAPService: TSIAPService
 });
@@ -13954,7 +14016,7 @@ JumpGame = __decorate([
 ], JumpGame);
 var JumpGame$1 = JumpGame;
 
-var foreign78 = /*#__PURE__*/Object.freeze({
+var foreign79 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: JumpGame$1
 });
@@ -14004,7 +14066,7 @@ JumpGameTips_Generate = __decorate([
 ], JumpGameTips_Generate);
 var JumpGameTips_Generate$1 = JumpGameTips_Generate;
 
-var foreign83 = /*#__PURE__*/Object.freeze({
+var foreign84 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: JumpGameTips_Generate$1
 });
@@ -14072,7 +14134,7 @@ SecondNoticeItem_Generate = __decorate([
 ], SecondNoticeItem_Generate);
 var SecondNoticeItem_Generate$1 = SecondNoticeItem_Generate;
 
-var foreign85 = /*#__PURE__*/Object.freeze({
+var foreign86 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SecondNoticeItem_Generate$1
 });
@@ -14184,7 +14246,7 @@ DiamondItem_Generate = __decorate([
 ], DiamondItem_Generate);
 var DiamondItem_Generate$1 = DiamondItem_Generate;
 
-var foreign90 = /*#__PURE__*/Object.freeze({
+var foreign91 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DiamondItem_Generate$1
 });
@@ -14275,7 +14337,7 @@ DiamondPanel_Generate = __decorate([
 ], DiamondPanel_Generate);
 var DiamondPanel_Generate$1 = DiamondPanel_Generate;
 
-var foreign91 = /*#__PURE__*/Object.freeze({
+var foreign92 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DiamondPanel_Generate$1
 });
@@ -14324,7 +14386,7 @@ RadarPanel_Generate = __decorate([
 ], RadarPanel_Generate);
 var RadarPanel_Generate$1 = RadarPanel_Generate;
 
-var foreign97 = /*#__PURE__*/Object.freeze({
+var foreign98 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadarPanel_Generate$1
 });
@@ -14367,74 +14429,75 @@ const MWModuleMap = {
      'F7C95A314FBCAFCC114ECCBE037AF3BF': foreign36,
      '1B12D2CD40775D42550AC8B64BACB2B5': foreign37,
      '3B463A284FD7B66C9489AA8EC3AC8A23': foreign38,
-     'B8D3411E480AD6F4CBA476A88A02FD84': foreign39,
-     '001BB3D44F528AD6DFEB5BBB7FF03216': foreign40,
-     '0C60A5DE4F7AF9F8DE3381B2CECCE96F': foreign41,
-     '885A77EA4AC06DB2ABF8EB9F4AC89BA5': foreign42,
-     'C414180848195EEA22C4BC8C95BB22CB': foreign43,
-     '2C98E91946EADE4E5FDA0EB10A1AEC93': foreign44,
-     '7BDEA3704CEBB5559C6239928321865C': foreign45,
-     '7833C871441E612CC5B5CE9BDDA947C9': foreign46,
-     'A12B8D524B602E750EB63288C79D32E2': foreign47,
-     'F057824E4569A842D403858DC7D1D88B': foreign48,
-     '9F1D50A144B07BFAFC552F925299CE71': foreign49,
-     '3E1D070A4147D9A5B46E0EAF1E5FD4E1': foreign50,
-     'F215908B4B4F40F5531DE4A01F660731': foreign51,
-     '89FAB6BA4950774A1AEE0AA919005864': foreign52,
-     '448F172F473F500F568CE69787A05879': foreign53,
-     '7C89EFEF4B37DB0513F2659514BB7B93': foreign54,
-     'C7E79CD049A93AFDBCA399B718D2D8DC': foreign55,
-     '21E846D34531A31F92F411BB9E300D5B': foreign56,
-     '5F4167AC4B1A67501A0DD4A98DCCE793': foreign57,
-     'C2A63B424C2C17C9DE3395B59BA9444C': foreign58,
-     '4CA21C094DAD2346E120EFBEA3D7736C': foreign59,
-     'E8535D714F5BFEC20EF595B175FA24BD': foreign60,
-     '7B098C68429B7A33AA075BB6631641B6': foreign61,
-     'A41BD48545CC9593CB2B62B8C8BD8505': foreign62,
-     '4CF1BF6940037F5268A8B4B1C326C0E1': foreign63,
-     '799144174FCC1F72D4AAD2B8C0D23A93': foreign64,
-     '7969AEF34724BDC60E081286C23D4945': foreign65,
-     'D9B1CF04450CE54C9707ECA7D804DA6C': foreign66,
-     '5224C416400F824F56E4AB9FA410B705': foreign67,
-     '018CFAAD48940396A20DC296154E69CF': foreign68,
-     '02178C534E1EACB3145516B4D5E08CA6': foreign69,
-     '586E7BD34D881F24CE4369A4C4ACD64D': foreign70,
-     '75DBE6154A88D0897AB52CB8303D0D68': foreign71,
-     'C8CD71394F0002E646F3F093BF3B8A20': foreign72,
-     '761A5E774007E1CA28720DB572DA7A45': foreign73,
-     '3A19265E439F9BC57DD9188415D69D90': foreign74,
-     'ACB26C334F3E66726611CAAACE1B29F0': foreign75,
-     'C3A91C494BCF42191B03718F492DFA64': foreign76,
-     '5F9FD257458AA792F70050AEC35F3C7F': foreign77,
-     '86F0A1A849C1B3DE1E04178576CB52FF': foreign78,
-     'A30FDC1848F2A2BB4F412FB42FC6A123': foreign79,
-     'CD82A2E448FA71DD00529A8B5261ED6C': foreign80,
-     '7BC3DC9143A0AC886B7C69BF0BA72582': foreign81,
-     '0ADADD634CB1574E2CE91AA7D15972BF': foreign82,
-     'BEE82D4145CF7AADF455DA8F65630FCE': foreign83,
-     'BF72AC404FF17C439A9112B6B4B32279': foreign84,
-     'A012B90749779FBE8DE607A2B99C7BBD': foreign85,
-     '82E080274DC72CA9D26CFF80275210C8': foreign86,
-     'B445B07141F3B81911589FB86B887D16': foreign87,
-     '3738A163431B2780E684368D4B44D659': foreign88,
-     '9A05761A4E0937CD96EDBD98F5CF127C': foreign89,
-     'AA29C1244938B00FCD91B2AF49E1CD69': foreign90,
-     '5AFEABF6491C62D9F43C6094E8586D99': foreign91,
-     '69B56DE846DD7777A34F73BAAD388917': foreign92,
-     'C8403C274C4A11E56CBA4ABE1BB56FE9': foreign93,
-     '6378A8BD4992C396F0BF5795C241272A': foreign94,
-     'E65657ED48A221438A440EB8FB55AB3A': foreign95,
-     'C8DA5246492A8B768EFD11BB64D1C2FD': foreign96,
-     '4BAAB5D2447B37D97384719CE67C9E72': foreign97,
-     '4B7AD5B5415D6B34A20794B83D33C8D4': foreign98,
-     '8B4959C3457E9E607BFD83A45E3B0B4E': foreign99,
-     '61C409DE43B68BAD7C2712AC407F6B85': foreign100,
-     'BD732EF648AD01E5A18863865EF79E7F': foreign101,
-     'D7D5128A42442933D108809A874A1F67': foreign102,
-     '5951240940FFACB56FF8EB8F140D19E5': foreign103,
-     'E0AAC56B4C54E8B2B8B946A3EB4D60C5': foreign104,
-     '54FA95C94AC4FD0AE2C3AF985B5862A7': foreign105,
-     '181ACB1C48C92C4E510D6B94FA31BD79': foreign106,
+     '2644905444AA2D39049F70B305A96C55': foreign39,
+     'B8D3411E480AD6F4CBA476A88A02FD84': foreign40,
+     '001BB3D44F528AD6DFEB5BBB7FF03216': foreign41,
+     '0C60A5DE4F7AF9F8DE3381B2CECCE96F': foreign42,
+     '885A77EA4AC06DB2ABF8EB9F4AC89BA5': foreign43,
+     'C414180848195EEA22C4BC8C95BB22CB': foreign44,
+     '2C98E91946EADE4E5FDA0EB10A1AEC93': foreign45,
+     '7BDEA3704CEBB5559C6239928321865C': foreign46,
+     '7833C871441E612CC5B5CE9BDDA947C9': foreign47,
+     'A12B8D524B602E750EB63288C79D32E2': foreign48,
+     'F057824E4569A842D403858DC7D1D88B': foreign49,
+     '9F1D50A144B07BFAFC552F925299CE71': foreign50,
+     '3E1D070A4147D9A5B46E0EAF1E5FD4E1': foreign51,
+     'F215908B4B4F40F5531DE4A01F660731': foreign52,
+     '89FAB6BA4950774A1AEE0AA919005864': foreign53,
+     '448F172F473F500F568CE69787A05879': foreign54,
+     '7C89EFEF4B37DB0513F2659514BB7B93': foreign55,
+     'C7E79CD049A93AFDBCA399B718D2D8DC': foreign56,
+     '21E846D34531A31F92F411BB9E300D5B': foreign57,
+     '5F4167AC4B1A67501A0DD4A98DCCE793': foreign58,
+     'C2A63B424C2C17C9DE3395B59BA9444C': foreign59,
+     '4CA21C094DAD2346E120EFBEA3D7736C': foreign60,
+     'E8535D714F5BFEC20EF595B175FA24BD': foreign61,
+     '7B098C68429B7A33AA075BB6631641B6': foreign62,
+     'A41BD48545CC9593CB2B62B8C8BD8505': foreign63,
+     '4CF1BF6940037F5268A8B4B1C326C0E1': foreign64,
+     '799144174FCC1F72D4AAD2B8C0D23A93': foreign65,
+     '7969AEF34724BDC60E081286C23D4945': foreign66,
+     'D9B1CF04450CE54C9707ECA7D804DA6C': foreign67,
+     '5224C416400F824F56E4AB9FA410B705': foreign68,
+     '018CFAAD48940396A20DC296154E69CF': foreign69,
+     '02178C534E1EACB3145516B4D5E08CA6': foreign70,
+     '586E7BD34D881F24CE4369A4C4ACD64D': foreign71,
+     '75DBE6154A88D0897AB52CB8303D0D68': foreign72,
+     'C8CD71394F0002E646F3F093BF3B8A20': foreign73,
+     '761A5E774007E1CA28720DB572DA7A45': foreign74,
+     '3A19265E439F9BC57DD9188415D69D90': foreign75,
+     'ACB26C334F3E66726611CAAACE1B29F0': foreign76,
+     'C3A91C494BCF42191B03718F492DFA64': foreign77,
+     '5F9FD257458AA792F70050AEC35F3C7F': foreign78,
+     '86F0A1A849C1B3DE1E04178576CB52FF': foreign79,
+     'A30FDC1848F2A2BB4F412FB42FC6A123': foreign80,
+     'CD82A2E448FA71DD00529A8B5261ED6C': foreign81,
+     '7BC3DC9143A0AC886B7C69BF0BA72582': foreign82,
+     '0ADADD634CB1574E2CE91AA7D15972BF': foreign83,
+     'BEE82D4145CF7AADF455DA8F65630FCE': foreign84,
+     'BF72AC404FF17C439A9112B6B4B32279': foreign85,
+     'A012B90749779FBE8DE607A2B99C7BBD': foreign86,
+     '82E080274DC72CA9D26CFF80275210C8': foreign87,
+     'B445B07141F3B81911589FB86B887D16': foreign88,
+     '3738A163431B2780E684368D4B44D659': foreign89,
+     '9A05761A4E0937CD96EDBD98F5CF127C': foreign90,
+     'AA29C1244938B00FCD91B2AF49E1CD69': foreign91,
+     '5AFEABF6491C62D9F43C6094E8586D99': foreign92,
+     '69B56DE846DD7777A34F73BAAD388917': foreign93,
+     'C8403C274C4A11E56CBA4ABE1BB56FE9': foreign94,
+     '6378A8BD4992C396F0BF5795C241272A': foreign95,
+     'E65657ED48A221438A440EB8FB55AB3A': foreign96,
+     'C8DA5246492A8B768EFD11BB64D1C2FD': foreign97,
+     '4BAAB5D2447B37D97384719CE67C9E72': foreign98,
+     '4B7AD5B5415D6B34A20794B83D33C8D4': foreign99,
+     '8B4959C3457E9E607BFD83A45E3B0B4E': foreign100,
+     '61C409DE43B68BAD7C2712AC407F6B85': foreign101,
+     'BD732EF648AD01E5A18863865EF79E7F': foreign102,
+     'D7D5128A42442933D108809A874A1F67': foreign103,
+     '5951240940FFACB56FF8EB8F140D19E5': foreign104,
+     'E0AAC56B4C54E8B2B8B946A3EB4D60C5': foreign105,
+     '54FA95C94AC4FD0AE2C3AF985B5862A7': foreign106,
+     '181ACB1C48C92C4E510D6B94FA31BD79': foreign107,
 };
 const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/ConfirmPanel"],
 [foreign2 || {}, "JavaScripts/common/notice/Notice"],
@@ -14473,74 +14536,75 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/ConfirmP
 [foreign36 || {}, "JavaScripts/module/NpcModule/Monster"],
 [foreign37 || {}, "JavaScripts/module/NpcModule/Npc"],
 [foreign38 || {}, "JavaScripts/module/PlayerModule/AddMaxHp"],
-[foreign39 || {}, "JavaScripts/module/PlayerModule/PlayerData"],
-[foreign40 || {}, "JavaScripts/module/PlayerModule/PlayerModuleC"],
-[foreign41 || {}, "JavaScripts/module/PlayerModule/PlayerModuleS"],
-[foreign42 || {}, "JavaScripts/module/PlayerModule/TryOutGun"],
-[foreign43 || {}, "JavaScripts/module/RadarModule/RadarModuleC"],
-[foreign44 || {}, "JavaScripts/module/RadarModule/RadarModuleS"],
-[foreign45 || {}, "JavaScripts/module/RadarModule/ui/RadarPanel"],
-[foreign46 || {}, "JavaScripts/module/RankModule/RankData"],
-[foreign47 || {}, "JavaScripts/module/RankModule/RankModuleC"],
-[foreign48 || {}, "JavaScripts/module/RankModule/RankModuleS"],
-[foreign49 || {}, "JavaScripts/module/RankModule/ui/RankPanel"],
-[foreign50 || {}, "JavaScripts/module/RankModule/ui/RoomItem"],
-[foreign51 || {}, "JavaScripts/module/RankModule/ui/WorldItem"],
-[foreign52 || {}, "JavaScripts/module/ShopModule/ShopData"],
-[foreign53 || {}, "JavaScripts/module/ShopModule/ShopModuleC"],
-[foreign54 || {}, "JavaScripts/module/ShopModule/ShopModuleS"],
-[foreign55 || {}, "JavaScripts/module/ShopModule/ui/ShopItem"],
-[foreign56 || {}, "JavaScripts/module/ShopModule/ui/ShopPanel"],
-[foreign57 || {}, "JavaScripts/module/TaskModule/TaskData"],
-[foreign58 || {}, "JavaScripts/module/TaskModule/TaskModuleC"],
-[foreign59 || {}, "JavaScripts/module/TaskModule/TaskModuleS"],
-[foreign60 || {}, "JavaScripts/module/TaskModule/ui/TaskPanel"],
-[foreign61 || {}, "JavaScripts/module/TeamModule/TeamData"],
-[foreign62 || {}, "JavaScripts/module/TeamModule/TeamModuleC"],
-[foreign63 || {}, "JavaScripts/module/TeamModule/TeamModuleS"],
-[foreign64 || {}, "JavaScripts/module/TeamModule/ui/TeamItem"],
-[foreign65 || {}, "JavaScripts/module/TeamModule/ui/TeamPanel"],
-[foreign66 || {}, "JavaScripts/module/WeaponModule/Projectile"],
-[foreign67 || {}, "JavaScripts/module/WeaponModule/ProjectTarget"],
-[foreign68 || {}, "JavaScripts/module/WeaponModule/Weapon"],
-[foreign69 || {}, "JavaScripts/module/WeaponModule/WeaponData"],
-[foreign70 || {}, "JavaScripts/module/WeaponModule/WeaponModuleC"],
-[foreign71 || {}, "JavaScripts/module/WeaponModule/WeaponModuleS"],
-[foreign72 || {}, "JavaScripts/tools/EventType"],
-[foreign73 || {}, "JavaScripts/tools/FlyText"],
-[foreign74 || {}, "JavaScripts/tools/FreeCamera"],
-[foreign75 || {}, "JavaScripts/tools/GlobalData"],
-[foreign76 || {}, "JavaScripts/tools/Helper"],
-[foreign77 || {}, "JavaScripts/tools/IAPInstance"],
-[foreign78 || {}, "JavaScripts/tools/JumpGame"],
-[foreign79 || {}, "JavaScripts/tools/MapEx"],
-[foreign80 || {}, "JavaScripts/tools/PrefabEvent"],
-[foreign81 || {}, "JavaScripts/tools/Utils"],
-[foreign82 || {}, "JavaScripts/ui-generate/common/ConfirmPanel_generate"],
-[foreign83 || {}, "JavaScripts/ui-generate/common/JumpGameTips_generate"],
-[foreign84 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
-[foreign85 || {}, "JavaScripts/ui-generate/common/notice/SecondNoticeItem_generate"],
-[foreign86 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
-[foreign87 || {}, "JavaScripts/ui-generate/module/ActivityModule/ActivityPanel_generate"],
-[foreign88 || {}, "JavaScripts/ui-generate/module/AdModule/AdPanel_generate"],
-[foreign89 || {}, "JavaScripts/ui-generate/module/CoinModule/CoinPanel_generate"],
-[foreign90 || {}, "JavaScripts/ui-generate/module/CoinModule/DiamondItem_generate"],
-[foreign91 || {}, "JavaScripts/ui-generate/module/CoinModule/DiamondPanel_generate"],
-[foreign92 || {}, "JavaScripts/ui-generate/module/GMModule/GMHUD_generate"],
-[foreign93 || {}, "JavaScripts/ui-generate/module/GMModule/GMItem_generate"],
-[foreign94 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
-[foreign95 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
-[foreign96 || {}, "JavaScripts/ui-generate/module/NpcModule/EnemyLifebar_generate"],
-[foreign97 || {}, "JavaScripts/ui-generate/module/RadarModule/RadarPanel_generate"],
-[foreign98 || {}, "JavaScripts/ui-generate/module/RankModule/RankPanel_generate"],
-[foreign99 || {}, "JavaScripts/ui-generate/module/RankModule/RoomItem_generate"],
-[foreign100 || {}, "JavaScripts/ui-generate/module/RankModule/WorldItem_generate"],
-[foreign101 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
-[foreign102 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
-[foreign103 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
-[foreign104 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
-[foreign105 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamItem_generate"],
-[foreign106 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamPanel_generate"]]);
+[foreign39 || {}, "JavaScripts/module/PlayerModule/GetNpc"],
+[foreign40 || {}, "JavaScripts/module/PlayerModule/PlayerData"],
+[foreign41 || {}, "JavaScripts/module/PlayerModule/PlayerModuleC"],
+[foreign42 || {}, "JavaScripts/module/PlayerModule/PlayerModuleS"],
+[foreign43 || {}, "JavaScripts/module/PlayerModule/TryOutGun"],
+[foreign44 || {}, "JavaScripts/module/RadarModule/RadarModuleC"],
+[foreign45 || {}, "JavaScripts/module/RadarModule/RadarModuleS"],
+[foreign46 || {}, "JavaScripts/module/RadarModule/ui/RadarPanel"],
+[foreign47 || {}, "JavaScripts/module/RankModule/RankData"],
+[foreign48 || {}, "JavaScripts/module/RankModule/RankModuleC"],
+[foreign49 || {}, "JavaScripts/module/RankModule/RankModuleS"],
+[foreign50 || {}, "JavaScripts/module/RankModule/ui/RankPanel"],
+[foreign51 || {}, "JavaScripts/module/RankModule/ui/RoomItem"],
+[foreign52 || {}, "JavaScripts/module/RankModule/ui/WorldItem"],
+[foreign53 || {}, "JavaScripts/module/ShopModule/ShopData"],
+[foreign54 || {}, "JavaScripts/module/ShopModule/ShopModuleC"],
+[foreign55 || {}, "JavaScripts/module/ShopModule/ShopModuleS"],
+[foreign56 || {}, "JavaScripts/module/ShopModule/ui/ShopItem"],
+[foreign57 || {}, "JavaScripts/module/ShopModule/ui/ShopPanel"],
+[foreign58 || {}, "JavaScripts/module/TaskModule/TaskData"],
+[foreign59 || {}, "JavaScripts/module/TaskModule/TaskModuleC"],
+[foreign60 || {}, "JavaScripts/module/TaskModule/TaskModuleS"],
+[foreign61 || {}, "JavaScripts/module/TaskModule/ui/TaskPanel"],
+[foreign62 || {}, "JavaScripts/module/TeamModule/TeamData"],
+[foreign63 || {}, "JavaScripts/module/TeamModule/TeamModuleC"],
+[foreign64 || {}, "JavaScripts/module/TeamModule/TeamModuleS"],
+[foreign65 || {}, "JavaScripts/module/TeamModule/ui/TeamItem"],
+[foreign66 || {}, "JavaScripts/module/TeamModule/ui/TeamPanel"],
+[foreign67 || {}, "JavaScripts/module/WeaponModule/Projectile"],
+[foreign68 || {}, "JavaScripts/module/WeaponModule/ProjectTarget"],
+[foreign69 || {}, "JavaScripts/module/WeaponModule/Weapon"],
+[foreign70 || {}, "JavaScripts/module/WeaponModule/WeaponData"],
+[foreign71 || {}, "JavaScripts/module/WeaponModule/WeaponModuleC"],
+[foreign72 || {}, "JavaScripts/module/WeaponModule/WeaponModuleS"],
+[foreign73 || {}, "JavaScripts/tools/EventType"],
+[foreign74 || {}, "JavaScripts/tools/FlyText"],
+[foreign75 || {}, "JavaScripts/tools/FreeCamera"],
+[foreign76 || {}, "JavaScripts/tools/GlobalData"],
+[foreign77 || {}, "JavaScripts/tools/Helper"],
+[foreign78 || {}, "JavaScripts/tools/IAPInstance"],
+[foreign79 || {}, "JavaScripts/tools/JumpGame"],
+[foreign80 || {}, "JavaScripts/tools/MapEx"],
+[foreign81 || {}, "JavaScripts/tools/PrefabEvent"],
+[foreign82 || {}, "JavaScripts/tools/Utils"],
+[foreign83 || {}, "JavaScripts/ui-generate/common/ConfirmPanel_generate"],
+[foreign84 || {}, "JavaScripts/ui-generate/common/JumpGameTips_generate"],
+[foreign85 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
+[foreign86 || {}, "JavaScripts/ui-generate/common/notice/SecondNoticeItem_generate"],
+[foreign87 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
+[foreign88 || {}, "JavaScripts/ui-generate/module/ActivityModule/ActivityPanel_generate"],
+[foreign89 || {}, "JavaScripts/ui-generate/module/AdModule/AdPanel_generate"],
+[foreign90 || {}, "JavaScripts/ui-generate/module/CoinModule/CoinPanel_generate"],
+[foreign91 || {}, "JavaScripts/ui-generate/module/CoinModule/DiamondItem_generate"],
+[foreign92 || {}, "JavaScripts/ui-generate/module/CoinModule/DiamondPanel_generate"],
+[foreign93 || {}, "JavaScripts/ui-generate/module/GMModule/GMHUD_generate"],
+[foreign94 || {}, "JavaScripts/ui-generate/module/GMModule/GMItem_generate"],
+[foreign95 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
+[foreign96 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
+[foreign97 || {}, "JavaScripts/ui-generate/module/NpcModule/EnemyLifebar_generate"],
+[foreign98 || {}, "JavaScripts/ui-generate/module/RadarModule/RadarPanel_generate"],
+[foreign99 || {}, "JavaScripts/ui-generate/module/RankModule/RankPanel_generate"],
+[foreign100 || {}, "JavaScripts/ui-generate/module/RankModule/RoomItem_generate"],
+[foreign101 || {}, "JavaScripts/ui-generate/module/RankModule/WorldItem_generate"],
+[foreign102 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
+[foreign103 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
+[foreign104 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
+[foreign105 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
+[foreign106 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamItem_generate"],
+[foreign107 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamPanel_generate"]]);
 
 exports.MWFileMapping = MWFileMapping;
 exports.MWModuleMap = MWModuleMap;
