@@ -302,6 +302,7 @@ export class TaskItem extends TaskItem_Generate {
 			Utils.setWidgetVisibility(this.mUnfinishTextBlock, mw.SlateVisibility.Collapsed);
 			this.task.isGetReward = true;
 			mw.UIService.getUI(TaskPanel).recycleTaskItem(this.vipTaskType);
+			return;
 		}
 		this.isShowFinishBtn(false);
 	}

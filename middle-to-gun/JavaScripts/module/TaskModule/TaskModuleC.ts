@@ -240,6 +240,7 @@ export default class TaskModuleC extends ModuleC<TaskModuleS, TaskData> {
 
     private getTaskRewardAndUpdateData(vipTaskType: TaskItemType, taskId: number): void {
         this.updateTaskCompleteData(vipTaskType);
+        console.error(`vipTaskType${vipTaskType} taskId:${taskId}`)
         this.getTaskPanel.updateTaskCompletePanel(vipTaskType);
         this.getTaskReward(taskId)
     }
