@@ -29,7 +29,7 @@ function __decorate(decorators, target, key, desc) {
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/NoticeView.ui
- * TIME: 2024.06.22-23.56.50
+ * TIME: 2024.07.27-14.36.07
  */
 let NoticeView_Generate = class NoticeView_Generate extends UIScript {
     get con_top_notice() {
@@ -86,7 +86,7 @@ NoticeView_Generate = __decorate([
 ], NoticeView_Generate);
 var NoticeView_Generate$1 = NoticeView_Generate;
 
-var foreign82 = /*#__PURE__*/Object.freeze({
+var foreign84 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NoticeView_Generate$1
 });
@@ -96,7 +96,7 @@ var foreign82 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/TopNoticeItem.ui
- * TIME: 2024.06.22-23.56.50
+ * TIME: 2024.07.27-14.36.07
  */
 let TopNoticeItem_Generate = class TopNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -160,7 +160,7 @@ TopNoticeItem_Generate = __decorate([
 ], TopNoticeItem_Generate);
 var TopNoticeItem_Generate$1 = TopNoticeItem_Generate;
 
-var foreign84 = /*#__PURE__*/Object.freeze({
+var foreign86 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TopNoticeItem_Generate$1
 });
@@ -1407,7 +1407,7 @@ GlobalData.dailyRefreshTime = "4:0";
 GlobalData.weeklyRefreshTime = "4:0";
 GlobalData.maxHp = 100;
 
-var foreign73 = /*#__PURE__*/Object.freeze({
+var foreign75 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GlobalData
 });
@@ -1847,14 +1847,39 @@ Utils.npcNames = ["张吉惟", "林国瑞", "林玫书", "林雅南", "江奕云
 Utils.tens = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 Utils.digitalUnits = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
 Utils.redTeamRevivalPoint = [
-    new mw.Vector(-1764.48, 2329, 200),
-    new mw.Vector(-2123.19, 2329, 200),
-    new mw.Vector(-2497.86, 2329, 200)
+    new mw.Vector(2864, -16725, -1072 + 50),
+    new mw.Vector(7956, -20613, -1049 + 50),
+    new mw.Vector(7206, -24261, -542 + 50),
+    new mw.Vector(1821, -33018, 3123 + 50),
+    new mw.Vector(-1236, -23916, 622 + 50),
+    new mw.Vector(1577, -22954, -8 + 50),
+    new mw.Vector(2000, -24419, 1784 + 50),
+    new mw.Vector(3699, -29412, 2360 + 50),
+    new mw.Vector(6602, -32339, 20 + 50),
+    new mw.Vector(-8218, -38356, 186 + 50),
+    new mw.Vector(-9115, -41395, 221 + 50),
+    new mw.Vector(-7045, -28173, -85 + 50),
+    new mw.Vector(-4844, -23316, -39 + 50),
+    new mw.Vector(4475, -21238, -1049 + 50),
+    new mw.Vector(810, -20290, -1049 + 50)
 ];
 Utils.blueTeamRevivalPoint = [
-    new mw.Vector(-2310.74, -2875, 100),
-    new mw.Vector(-2047.45, -2875, 100),
-    new mw.Vector(-1739.05, -2875, 100),
+    new mw.Vector(2864, -16725, -1072 + 50),
+    new mw.Vector(7956, -20613, -1049 + 50),
+    new mw.Vector(7206, -24261, -542 + 50),
+    new mw.Vector(1821, -33018, 3123 + 50),
+    new mw.Vector(-3757, -30749, -3 + 50),
+    new mw.Vector(-1236, -23916, 622 + 50),
+    new mw.Vector(1577, -22954, -8 + 50),
+    new mw.Vector(2000, -24419, 1784 + 50),
+    new mw.Vector(3699, -29412, 2360 + 50),
+    new mw.Vector(6602, -32339, 20 + 50),
+    new mw.Vector(-8218, -38356, 186 + 50),
+    new mw.Vector(-9115, -41395, 221 + 50),
+    new mw.Vector(-7045, -28173, -85 + 50),
+    new mw.Vector(-4844, -23316, -39 + 50),
+    new mw.Vector(4475, -21238, -1049 + 50),
+    new mw.Vector(810, -20290, -1049 + 50)
 ];
 Utils.targetGos = [];
 function cubicBezier(p1x, p1y, p2x, p2y) {
@@ -1913,7 +1938,7 @@ function cubicBezier(p1x, p1y, p2x, p2y) {
     return solve;
 }
 
-var foreign79 = /*#__PURE__*/Object.freeze({
+var foreign81 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     cubicBezier: cubicBezier,
     default: Utils
@@ -1924,7 +1949,7 @@ var foreign79 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/ConfirmPanel.ui
- * TIME: 2024.06.22-23.56.50
+ * TIME: 2024.07.27-14.36.07
  */
 let ConfirmPanel_Generate = class ConfirmPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -2011,7 +2036,7 @@ ConfirmPanel_Generate = __decorate([
 ], ConfirmPanel_Generate);
 var ConfirmPanel_Generate$1 = ConfirmPanel_Generate;
 
-var foreign80 = /*#__PURE__*/Object.freeze({
+var foreign82 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ConfirmPanel_Generate$1
 });
@@ -2199,10 +2224,10 @@ var foreign6 = /*#__PURE__*/Object.freeze({
     ConfigBase: ConfigBase
 });
 
-const EXCELDATA$7 = [["ID", "GUNNAME", "GUNPREFAB", "GUNICON", "GUNICON_M", "GUNLOC", "GUNSCALE", "IATURNICON", "PRICETYPE", "PRICE", "FIREINTERVAL", "BULLETCOUNT", "HURT"], ["", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "水枪", "587777AD4056DC3AB465FBA7D3F5F7BA", null, "166941", new mw.Vector(0, 0, 0), new mw.Vector(1, 2, 1), 0, 1, [1, 15888], "0.2", 30, 25], [2, "泡泡枪", "0D543D5346C331F41DA890A5E6DD3DB5", null, "155696", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1, 15888], "0.2", 30, 25], [3, "霰弹枪", "E3E0C2994D3518540DBB6D8C00C8AB83", null, "226214", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), 0, 1, [1, 15888], "0.15", 30, 25], [4, "金枪鱼", "5181250F44DF914A714B668F99177E3A", null, "138213", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1, 15888], "0.15", 30, 25], [5, "脉冲枪", "1CD6AEAB4602DF140ACE93BD49D5CA19", null, "153110", new mw.Vector(0, 0, 0), new mw.Vector(2, 2.5, 2), 0, 1, [1, 15888], "0.1", 35, 25], [6, "喷火枪", "A469CCC84AAA873815243BB25439707C", null, "226213", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), 0, 1, [1, 15888], "0.1", 35, 25], [7, "散弹喷枪", "68E812DC47B714F9A2BB2ABE18304C5B", null, "155702", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [2, 28888], "0.1", 35, 25], [8, "霰弹枪枪身", "BA1BDC034FCDE8574CBBAA8C4831A950", null, "318664", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [2, 28888], "0.1", 40, 25], [9, "火箭发射器", "FCFE18BE440FAEBD5AB999A222F10AA9", null, "226826", new mw.Vector(0, 0, 0), new mw.Vector(1.5, 1, 1), 0, 1, [2, 28888], "0.2", 100, 25], [10, "激光幽灵枪", "23240FEE4F3BD25DE8EA6DBE525B3A20", null, "122716", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 1, 1, [3, 38888], "0.3", 40, 50], [11, "烟花枪", "A830458640D6EA21FB7AEA8F7E029CB7", null, "122726", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [3, 38888], "0.3", 40, 50], [12, "激光烈火枪", "0C7F278C4254F90F69614086DCA0B906", null, "95676", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [4, 48888], "0.3", 40, 50], [13, "激光冰雷枪", "29CD5E6145D1B05590E887A050E0D3C8", null, "122720", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [4, 48888], "0.3", 40, 50], [14, "尖叫鸡", "015C826546EBC60F95EF399D16523B78", null, "20799", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 3), 1, 1, [5, 58888], "1", 10, 100]];
+const EXCELDATA$8 = [["ID", "GUNNAME", "GUNPREFAB", "GUNICON", "GUNICON_M", "GUNLOC", "GUNSCALE", "IATURNICON", "PRICETYPE", "PRICE", "FIREINTERVAL", "BULLETCOUNT", "HURT"], ["", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "水枪", "587777AD4056DC3AB465FBA7D3F5F7BA", null, "166941", new mw.Vector(0, 0, 0), new mw.Vector(1, 2, 1), 0, 1, [1, 15888], "0.2", 30, 25], [2, "泡泡枪", "0D543D5346C331F41DA890A5E6DD3DB5", null, "155696", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1, 15888], "0.2", 30, 25], [3, "霰弹枪", "E3E0C2994D3518540DBB6D8C00C8AB83", null, "226214", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), 0, 1, [1, 15888], "0.15", 30, 25], [4, "金枪鱼", "5181250F44DF914A714B668F99177E3A", null, "138213", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1, 15888], "0.15", 30, 25], [5, "脉冲枪", "1CD6AEAB4602DF140ACE93BD49D5CA19", null, "153110", new mw.Vector(0, 0, 0), new mw.Vector(2, 2.5, 2), 0, 1, [1, 15888], "0.1", 35, 25], [6, "喷火枪", "A469CCC84AAA873815243BB25439707C", null, "226213", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), 0, 1, [1, 15888], "0.1", 35, 25], [7, "散弹喷枪", "68E812DC47B714F9A2BB2ABE18304C5B", null, "155702", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [2, 28888], "0.1", 35, 25], [8, "霰弹枪枪身", "BA1BDC034FCDE8574CBBAA8C4831A950", null, "318664", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [2, 28888], "0.1", 40, 25], [9, "火箭发射器", "FCFE18BE440FAEBD5AB999A222F10AA9", null, "226826", new mw.Vector(0, 0, 0), new mw.Vector(1.5, 1, 1), 0, 1, [2, 28888], "0.2", 100, 25], [10, "激光幽灵枪", "23240FEE4F3BD25DE8EA6DBE525B3A20", null, "122716", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 1, 1, [3, 38888], "0.3", 40, 50], [11, "烟花枪", "A830458640D6EA21FB7AEA8F7E029CB7", null, "122726", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [3, 38888], "0.3", 40, 50], [12, "激光烈火枪", "0C7F278C4254F90F69614086DCA0B906", null, "95676", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [4, 48888], "0.3", 40, 50], [13, "激光冰雷枪", "29CD5E6145D1B05590E887A050E0D3C8", null, "122720", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [4, 48888], "0.3", 40, 50], [14, "尖叫鸡", "015C826546EBC60F95EF399D16523B78", null, "20799", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 3), 1, 1, [5, 58888], "1", 10, 100]];
 class GUNConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$7);
+        super(EXCELDATA$8);
     }
 }
 
@@ -2211,6 +2236,13 @@ var foreign8 = /*#__PURE__*/Object.freeze({
     GUNConfig: GUNConfig
 });
 
+const EXCELDATA$7 = [["ID", "Des", "PathStr", "Idles", "Moves", "MoveSpeed", "Die", "Attacks", "AttackTimePoints", "AttackOffsets", "AttackLengths", "AttackSizes", "Damages", "EffectIds", "EffectPosOffsets", "EffectRotOffsets", "EffectScales"], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "蛇女", ["0CD6E9E6"], ["318618"], ["318617"], 300, "318619", ["318616"], [0.35], [new mw.Vector(0, 50, 0)], [300], [new mw.Vector(50, 50, 100)], [100], ["125704"], [new mw.Vector(60, 0, 0)], [new mw.Vector(0, 0, -90)], [new mw.Vector(1, 0.8, 1)]], [2, "蜘蛛", ["0CD6E9E6"], ["336664", "336668"], ["336669"], 250, "336816", ["336673", "336670", "336672"], [1, 0.95, 1.2], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100, 100], ["384353", "101411", "297932"], [new mw.Vector(170, 0, -50), new mw.Vector(200, 0, -120), new mw.Vector(100, 0, -125)], [new mw.Vector(0, -60, 0), new mw.Vector(0, 30, 10), new mw.Vector(0, 0, 0)], [new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(1, 1, 1), new mw.Vector(0.55, 1, 1)]], [3, "蜘蛛精", ["0CD6E9E6"], ["336664", "336668"], ["338467"], 250, "338468", ["338464", "338466"], [0.8, 0.8], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100], ["297932", "101407"], [new mw.Vector(100, 0, -125), new mw.Vector(100, 0, -125)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0.55, 1, 1), new mw.Vector(1, 1, 1)]], [4, "龙", ["0CD6E9E6"], ["160627", "250400", "250399", "160627"], ["160628"], 250, "-1", ["250094", "250095"], [1.6, 1.3], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100], ["168947", "92843"], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(1, 1, 1), new mw.Vector(1, 1, 1)]], [5, "丧尸", ["0CD6E9E6"], ["284991", "268599"], ["285740", "269161", "285826"], 150, "-1", ["285210"], [0.55], [new mw.Vector(0, 50, 0)], [300], [new mw.Vector(50, 50, 100)], [100], ["31260"], [new mw.Vector(5, 0, 0)], [new mw.Vector(0, -30, 180)], [new mw.Vector(1, 1, 1)]], [6, "角色", ["0CD6E9E6"], ["285445"], ["285336", "285372", "280652", "280671", "280723", "284685", "280699", "280780"], 150, "-1", ["219129", "280914", "280916"], [0.2, 0.4, 0.3], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100, 100], ["92838", "135894", "125704"], [new mw.Vector(250, 0, 0), new mw.Vector(140, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(0, 0, -90)], [new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(1, 1, 1)]]];
+class MonsterInfoConfig extends ConfigBase {
+    constructor() {
+        super(EXCELDATA$7);
+    }
+}
+
 const EXCELDATA$6 = [["ID", "AssetId", "OffsetPos", "OffsetRot", "OffsetSca"], ["", "", "", "", ""], [1, "20686", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [2, "20689", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [3, "20693", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [4, "20707", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [5, "20741", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [6, "20799", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [7, "20910", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [8, "20957", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [9, "21007", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [10, "21034", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [11, "21037", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(0.3, 0.3, 0.3)], [12, "22879", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [13, "22881", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [14, "22905", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [15, "22906", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [16, "22907", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [17, "22913", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [18, "22921", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [19, "22926", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [20, "22951", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [21, "22940", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [22, "22972", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [23, "22966", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [24, "22969", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [25, "22986", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [26, "22981", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [27, "23001", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [28, "23018", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [29, "23020", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [30, "23043", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [31, "23071", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [32, "23072", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [33, "23102", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)]];
 class MorphConfig extends ConfigBase {
     constructor() {
@@ -2218,7 +2250,7 @@ class MorphConfig extends ConfigBase {
     }
 }
 
-var foreign9 = /*#__PURE__*/Object.freeze({
+var foreign10 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     MorphConfig: MorphConfig
 });
@@ -2230,7 +2262,7 @@ class ProjectilePropConfig extends ConfigBase {
     }
 }
 
-var foreign10 = /*#__PURE__*/Object.freeze({
+var foreign11 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ProjectilePropConfig: ProjectilePropConfig
 });
@@ -2242,7 +2274,7 @@ class ROLEConfig extends ConfigBase {
     }
 }
 
-var foreign11 = /*#__PURE__*/Object.freeze({
+var foreign12 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ROLEConfig: ROLEConfig
 });
@@ -2254,7 +2286,7 @@ class ShopItemConfig extends ConfigBase {
     }
 }
 
-var foreign12 = /*#__PURE__*/Object.freeze({
+var foreign13 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ShopItemConfig: ShopItemConfig
 });
@@ -2266,7 +2298,7 @@ class TaskConfig extends ConfigBase {
     }
 }
 
-var foreign13 = /*#__PURE__*/Object.freeze({
+var foreign14 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     TaskConfig: TaskConfig
 });
@@ -2278,7 +2310,7 @@ class TRAILINGConfig extends ConfigBase {
     }
 }
 
-var foreign14 = /*#__PURE__*/Object.freeze({
+var foreign15 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     TRAILINGConfig: TRAILINGConfig
 });
@@ -2290,7 +2322,7 @@ class WeaponPropConfig extends ConfigBase {
     }
 }
 
-var foreign15 = /*#__PURE__*/Object.freeze({
+var foreign16 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WeaponPropConfig: WeaponPropConfig
 });
@@ -2312,6 +2344,8 @@ class GameConfig {
         return this.configMap.get(ConfigClass.name);
     }
     static get GUN() { return this.getConfig(GUNConfig); }
+    ;
+    static get MonsterInfo() { return this.getConfig(MonsterInfoConfig); }
     ;
     static get Morph() { return this.getConfig(MorphConfig); }
     ;
@@ -2362,7 +2396,7 @@ __decorate([
     Decorator.persistence()
 ], ActivityData.prototype, "minutes", void 0);
 
-var foreign17 = /*#__PURE__*/Object.freeze({
+var foreign18 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ActivityData
 });
@@ -2375,7 +2409,7 @@ var EventType;
     EventType["OnOffWeaponUI"] = "OnOffWeaponUI";
 })(EventType || (EventType = {}));
 
-var foreign70 = /*#__PURE__*/Object.freeze({
+var foreign72 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get EventType () { return EventType; }
 });
@@ -2385,7 +2419,7 @@ var foreign70 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/CoinPanel.ui
- * TIME: 2024.06.22-23.56.50
+ * TIME: 2024.07.27-14.36.08
  */
 let CoinPanel_Generate = class CoinPanel_Generate extends UIScript {
     get mCoinCanvas() {
@@ -2470,7 +2504,7 @@ CoinPanel_Generate = __decorate([
 ], CoinPanel_Generate);
 var CoinPanel_Generate$1 = CoinPanel_Generate;
 
-var foreign87 = /*#__PURE__*/Object.freeze({
+var foreign89 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CoinPanel_Generate$1
 });
@@ -2480,7 +2514,7 @@ var foreign87 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdModule/AdPanel.ui
- * TIME: 2024.06.22-23.56.50
+ * TIME: 2024.07.27-14.36.08
  */
 let AdPanel_Generate = class AdPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -2556,7 +2590,7 @@ AdPanel_Generate = __decorate([
 ], AdPanel_Generate);
 var AdPanel_Generate$1 = AdPanel_Generate;
 
-var foreign86 = /*#__PURE__*/Object.freeze({
+var foreign88 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AdPanel_Generate$1
 });
@@ -2637,7 +2671,7 @@ class AdPanel extends AdPanel_Generate$1 {
     }
 }
 
-var foreign21 = /*#__PURE__*/Object.freeze({
+var foreign22 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AdPanel
 });
@@ -2855,7 +2889,7 @@ class CoinModuleC extends ModuleC {
     }
 }
 
-var foreign23 = /*#__PURE__*/Object.freeze({
+var foreign24 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CoinModuleC
 });
@@ -2902,7 +2936,7 @@ class CoinPanel extends CoinPanel_Generate$1 {
     }
 }
 
-var foreign25 = /*#__PURE__*/Object.freeze({
+var foreign26 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CoinPanel
 });
@@ -2944,7 +2978,7 @@ var KillTipType;
     KillTipType[KillTipType["revenge"] = 3] = "revenge";
 })(KillTipType || (KillTipType = {}));
 
-var foreign29 = /*#__PURE__*/Object.freeze({
+var foreign30 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     HUDData: HUDData,
     KillTipData: KillTipData,
@@ -2956,7 +2990,7 @@ var foreign29 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.06.29-13.24.37
+ * TIME: 2024.07.27-14.36.08
  */
 let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     get mVirtualJoystickPanel() {
@@ -3440,7 +3474,7 @@ HUDPanel_Generate = __decorate([
 ], HUDPanel_Generate);
 var HUDPanel_Generate$1 = HUDPanel_Generate;
 
-var foreign92 = /*#__PURE__*/Object.freeze({
+var foreign94 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDPanel_Generate$1
 });
@@ -3450,7 +3484,7 @@ var foreign92 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/KillTipItem.ui
- * TIME: 2024.06.22-23.56.50
+ * TIME: 2024.07.27-14.36.08
  */
 let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
     get mBgImage() {
@@ -3516,7 +3550,7 @@ KillTipItem_Generate = __decorate([
 ], KillTipItem_Generate);
 var KillTipItem_Generate$1 = KillTipItem_Generate;
 
-var foreign93 = /*#__PURE__*/Object.freeze({
+var foreign95 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: KillTipItem_Generate$1
 });
@@ -3554,7 +3588,7 @@ class KillTipItem extends KillTipItem_Generate$1 {
     }
 }
 
-var foreign33 = /*#__PURE__*/Object.freeze({
+var foreign34 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     KillTipItem: KillTipItem
 });
@@ -4326,7 +4360,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
     }
 }
 
-var foreign32 = /*#__PURE__*/Object.freeze({
+var foreign33 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDPanel
 });
@@ -4543,7 +4577,7 @@ class HUDModuleC extends ModuleC {
     //#endregion
     //#region SoundService
     playBgm() {
-        return;
+        SoundService.playBGM("382365", this.currentBgmVolume);
     }
     initSoundEvent() {
         Event.addLocalListener("PlayButtonClick", (btnName) => {
@@ -4585,7 +4619,7 @@ class HUDModuleC extends ModuleC {
     }
 }
 
-var foreign30 = /*#__PURE__*/Object.freeze({
+var foreign31 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDModuleC
 });
@@ -4730,7 +4764,7 @@ var MapEx;
     MapEx.copy = copy;
 })(MapEx || (MapEx = {}));
 
-var foreign77 = /*#__PURE__*/Object.freeze({
+var foreign79 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get MapEx () { return MapEx; }
 });
@@ -5043,7 +5077,7 @@ Helper.weaponDataMap_Abandon = new Map([
     ], //弓,弓箭瞬发射箭,弓箭手A大招
 ]);
 
-var foreign74 = /*#__PURE__*/Object.freeze({
+var foreign76 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Helper: Helper
 });
@@ -5062,7 +5096,7 @@ var ProjectileType;
     ProjectileType[ProjectileType["Throw"] = 4] = "Throw";
 })(ProjectileType || (ProjectileType = {}));
 
-var foreign67 = /*#__PURE__*/Object.freeze({
+var foreign69 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get ProjectileType () { return ProjectileType; }
 });
@@ -5297,7 +5331,7 @@ class WeaponModuleC extends ModuleC {
     }
 }
 
-var foreign68 = /*#__PURE__*/Object.freeze({
+var foreign70 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WeaponModuleC
 });
@@ -5353,7 +5387,7 @@ __decorate([
     Decorator.persistence()
 ], ShopData.prototype, "useShopIds", void 0);
 
-var foreign50 = /*#__PURE__*/Object.freeze({
+var foreign52 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get PriceType () { return PriceType; },
     get ShopType () { return ShopType; },
@@ -5365,7 +5399,7 @@ var foreign50 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopPanel.ui
- * TIME: 2024.06.22-23.56.51
+ * TIME: 2024.07.27-14.36.09
  */
 let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
     get mTabCanvas() {
@@ -5465,7 +5499,7 @@ ShopPanel_Generate = __decorate([
 ], ShopPanel_Generate);
 var ShopPanel_Generate$1 = ShopPanel_Generate;
 
-var foreign99 = /*#__PURE__*/Object.freeze({
+var foreign102 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel_Generate$1
 });
@@ -5475,7 +5509,7 @@ var foreign99 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopItem.ui
- * TIME: 2024.06.22-23.56.50
+ * TIME: 2024.07.27-14.36.09
  */
 let ShopItem_Generate = class ShopItem_Generate extends UIScript {
     get mICONImage() {
@@ -5658,7 +5692,7 @@ ShopItem_Generate = __decorate([
 ], ShopItem_Generate);
 var ShopItem_Generate$1 = ShopItem_Generate;
 
-var foreign98 = /*#__PURE__*/Object.freeze({
+var foreign101 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopItem_Generate$1
 });
@@ -5847,7 +5881,7 @@ class ShopItem extends ShopItem_Generate$1 {
     }
 }
 
-var foreign53 = /*#__PURE__*/Object.freeze({
+var foreign55 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopItem
 });
@@ -6021,7 +6055,7 @@ class ShopPanel extends ShopPanel_Generate$1 {
     }
 }
 
-var foreign54 = /*#__PURE__*/Object.freeze({
+var foreign56 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel
 });
@@ -6385,7 +6419,7 @@ class ShopModuleC extends ModuleC {
     }
 }
 
-var foreign51 = /*#__PURE__*/Object.freeze({
+var foreign53 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopModuleC
 });
@@ -6395,7 +6429,7 @@ var foreign51 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ActivityModule/ActivityPanel.ui
- * TIME: 2024.06.22-23.56.50
+ * TIME: 2024.07.27-14.36.07
  */
 let ActivityPanel_Generate = class ActivityPanel_Generate extends UIScript {
     get mWhatDayTextBlock() {
@@ -6520,7 +6554,7 @@ ActivityPanel_Generate = __decorate([
 ], ActivityPanel_Generate);
 var ActivityPanel_Generate$1 = ActivityPanel_Generate;
 
-var foreign85 = /*#__PURE__*/Object.freeze({
+var foreign87 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ActivityPanel_Generate$1
 });
@@ -6701,7 +6735,7 @@ class ActivityPanel extends ActivityPanel_Generate$1 {
     }
 }
 
-var foreign20 = /*#__PURE__*/Object.freeze({
+var foreign21 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ActivityPanel
 });
@@ -6808,7 +6842,7 @@ class ActivityModuleC extends ModuleC {
     }
 }
 
-var foreign18 = /*#__PURE__*/Object.freeze({
+var foreign19 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ActivityModuleC
 });
@@ -6831,7 +6865,7 @@ __decorate([
     Decorator.noReply()
 ], ActivityModuleS.prototype, "net_setMinutes", null);
 
-var foreign19 = /*#__PURE__*/Object.freeze({
+var foreign20 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ActivityModuleS
 });
@@ -6871,7 +6905,7 @@ __decorate([
     Decorator.persistence()
 ], CoinData.prototype, "isFirstBuy", void 0);
 
-var foreign22 = /*#__PURE__*/Object.freeze({
+var foreign23 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CoinData
 });
@@ -6922,7 +6956,7 @@ __decorate([
     Decorator.noReply()
 ], CoinModuleS.prototype, "net_setFirstBuy", null);
 
-var foreign24 = /*#__PURE__*/Object.freeze({
+var foreign25 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CoinModuleS
 });
@@ -6943,7 +6977,7 @@ __decorate([
     Decorator.noReply()
 ], HUDModuleS.prototype, "net_saveSetData", null);
 
-var foreign31 = /*#__PURE__*/Object.freeze({
+var foreign32 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDModuleS
 });
@@ -7658,7 +7692,7 @@ function PrefabReport(reportId = null) {
     };
 }
 
-var foreign78 = /*#__PURE__*/Object.freeze({
+var foreign80 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get PrefabEvent () { return PrefabEvent; },
     PrefabReport: PrefabReport
@@ -7830,7 +7864,7 @@ class Projectile {
     }
 }
 
-var foreign64 = /*#__PURE__*/Object.freeze({
+var foreign66 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Projectile: Projectile
 });
@@ -8047,7 +8081,7 @@ Weapon = __decorate([
 ], Weapon);
 var Weapon$1 = Weapon;
 
-var foreign66 = /*#__PURE__*/Object.freeze({
+var foreign68 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Weapon$1
 });
@@ -8144,7 +8178,7 @@ __decorate([
     Decorator.noReply()
 ], WeaponModuleS.prototype, "net_switchWeapon", null);
 
-var foreign69 = /*#__PURE__*/Object.freeze({
+var foreign71 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WeaponModuleS
 });
@@ -8282,7 +8316,7 @@ __decorate([
     Decorator.noReply()
 ], MorphModuleS.prototype, "net_unmorph", null);
 
-var foreign34 = /*#__PURE__*/Object.freeze({
+var foreign35 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     MorphModuleC: MorphModuleC,
     MorphModuleS: MorphModuleS
@@ -8321,7 +8355,7 @@ __decorate([
     Decorator.persistence()
 ], PlayerData.prototype, "dieCount", void 0);
 
-var foreign37 = /*#__PURE__*/Object.freeze({
+var foreign39 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PlayerStatus: PlayerStatus,
     default: PlayerData
@@ -8418,7 +8452,7 @@ class FlyText {
     }
 }
 
-var foreign71 = /*#__PURE__*/Object.freeze({
+var foreign73 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     FlyText: FlyText
 });
@@ -8460,7 +8494,7 @@ class WorldData {
     }
 }
 
-var foreign44 = /*#__PURE__*/Object.freeze({
+var foreign46 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     RoomData: RoomData,
     WorldData: WorldData
@@ -8471,7 +8505,7 @@ var foreign44 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/RankPanel.ui
- * TIME: 2024.06.22-23.56.51
+ * TIME: 2024.07.27-14.36.09
  */
 let RankPanel_Generate = class RankPanel_Generate extends UIScript {
     get mRoomCanvas() {
@@ -8599,7 +8633,7 @@ RankPanel_Generate = __decorate([
 ], RankPanel_Generate);
 var RankPanel_Generate$1 = RankPanel_Generate;
 
-var foreign95 = /*#__PURE__*/Object.freeze({
+var foreign98 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankPanel_Generate$1
 });
@@ -8609,7 +8643,7 @@ var foreign95 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/RoomItem.ui
- * TIME: 2024.06.22-23.56.51
+ * TIME: 2024.07.27-14.36.09
  */
 let RoomItem_Generate = class RoomItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -8676,7 +8710,7 @@ RoomItem_Generate = __decorate([
 ], RoomItem_Generate);
 var RoomItem_Generate$1 = RoomItem_Generate;
 
-var foreign96 = /*#__PURE__*/Object.freeze({
+var foreign99 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RoomItem_Generate$1
 });
@@ -8703,7 +8737,7 @@ class RoomItem extends RoomItem_Generate$1 {
     }
 }
 
-var foreign48 = /*#__PURE__*/Object.freeze({
+var foreign50 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RoomItem
 });
@@ -8713,7 +8747,7 @@ var foreign48 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/WorldItem.ui
- * TIME: 2024.06.22-23.56.51
+ * TIME: 2024.07.27-14.36.09
  */
 let WorldItem_Generate = class WorldItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -8780,7 +8814,7 @@ WorldItem_Generate = __decorate([
 ], WorldItem_Generate);
 var WorldItem_Generate$1 = WorldItem_Generate;
 
-var foreign97 = /*#__PURE__*/Object.freeze({
+var foreign100 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldItem_Generate$1
 });
@@ -8807,7 +8841,7 @@ class WorldItem extends WorldItem_Generate$1 {
     }
 }
 
-var foreign49 = /*#__PURE__*/Object.freeze({
+var foreign51 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldItem
 });
@@ -8946,7 +8980,7 @@ class RankPanel extends RankPanel_Generate$1 {
     }
 }
 
-var foreign47 = /*#__PURE__*/Object.freeze({
+var foreign49 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankPanel
 });
@@ -9227,7 +9261,7 @@ class RankModuleC extends ModuleC {
     }
 }
 
-var foreign45 = /*#__PURE__*/Object.freeze({
+var foreign47 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankModuleC
 });
@@ -9260,7 +9294,7 @@ var ResultType;
     ResultType[ResultType["Fail3"] = 3] = "Fail3";
 })(ResultType || (ResultType = {}));
 
-var foreign59 = /*#__PURE__*/Object.freeze({
+var foreign61 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get ResultType () { return ResultType; },
     TeamData: TeamData,
@@ -9272,7 +9306,7 @@ var foreign59 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TeamModule/TeamPanel.ui
- * TIME: 2024.06.22-23.56.51
+ * TIME: 2024.07.27-14.36.09
  */
 let TeamPanel_Generate = class TeamPanel_Generate extends UIScript {
     get mMainCanvas() {
@@ -9363,7 +9397,7 @@ TeamPanel_Generate = __decorate([
 ], TeamPanel_Generate);
 var TeamPanel_Generate$1 = TeamPanel_Generate;
 
-var foreign103 = /*#__PURE__*/Object.freeze({
+var foreign106 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamPanel_Generate$1
 });
@@ -9373,7 +9407,7 @@ var foreign103 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TeamModule/TeamItem.ui
- * TIME: 2024.06.22-23.56.51
+ * TIME: 2024.07.27-14.36.09
  */
 let TeamItem_Generate = class TeamItem_Generate extends UIScript {
     get mBgImage() {
@@ -9425,7 +9459,7 @@ TeamItem_Generate = __decorate([
 ], TeamItem_Generate);
 var TeamItem_Generate$1 = TeamItem_Generate;
 
-var foreign102 = /*#__PURE__*/Object.freeze({
+var foreign105 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamItem_Generate$1
 });
@@ -9448,7 +9482,7 @@ class TeamItem extends TeamItem_Generate$1 {
     }
 }
 
-var foreign62 = /*#__PURE__*/Object.freeze({
+var foreign64 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamItem
 });
@@ -9558,7 +9592,7 @@ class TeamPanel extends TeamPanel_Generate$1 {
     }
 }
 
-var foreign63 = /*#__PURE__*/Object.freeze({
+var foreign65 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamPanel
 });
@@ -9691,7 +9725,7 @@ class TeamModuleC extends ModuleC {
     }
 }
 
-var foreign60 = /*#__PURE__*/Object.freeze({
+var foreign62 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamModuleC
 });
@@ -9770,7 +9804,7 @@ class PlayerModuleC extends ModuleC {
     }
 }
 
-var foreign38 = /*#__PURE__*/Object.freeze({
+var foreign40 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PlayerModuleC: PlayerModuleC
 });
@@ -10044,7 +10078,7 @@ __decorate([
     Decorator.noReply()
 ], RankModuleS.prototype, "net_setFirstModel", null);
 
-var foreign46 = /*#__PURE__*/Object.freeze({
+var foreign48 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankModuleS
 });
@@ -10195,7 +10229,7 @@ __decorate([
     Decorator.persistence()
 ], TaskData.prototype, "weeklyTasks", void 0);
 
-var foreign55 = /*#__PURE__*/Object.freeze({
+var foreign57 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Task: Task,
     TaskData: TaskData,
@@ -10386,7 +10420,7 @@ __decorate([
     Decorator.noReply()
 ], TaskModuleS.prototype, "net_updateTaskConpleteData", null);
 
-var foreign57 = /*#__PURE__*/Object.freeze({
+var foreign59 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskModuleS
 });
@@ -10494,7 +10528,7 @@ __decorate([
     Decorator.noReply()
 ], TeamModuleS.prototype, "net_onEnterScene", null);
 
-var foreign61 = /*#__PURE__*/Object.freeze({
+var foreign63 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamModuleS
 });
@@ -10687,7 +10721,7 @@ class PlayerModuleS extends ModuleS {
     }
 }
 
-var foreign39 = /*#__PURE__*/Object.freeze({
+var foreign41 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PlayerModuleS: PlayerModuleS
 });
@@ -10857,7 +10891,7 @@ class RadarPanel extends UIScript {
     }
 }
 
-var foreign43 = /*#__PURE__*/Object.freeze({
+var foreign45 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadarPanel
 });
@@ -10902,7 +10936,7 @@ class RadarModuleC extends ModuleC {
     }
 }
 
-var foreign41 = /*#__PURE__*/Object.freeze({
+var foreign43 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadarModuleC
 });
@@ -10912,7 +10946,7 @@ class RadarModuleS extends ModuleS {
     }
 }
 
-var foreign42 = /*#__PURE__*/Object.freeze({
+var foreign44 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadarModuleS
 });
@@ -10961,7 +10995,7 @@ __decorate([
     Decorator.noReply()
 ], ShopModuleS.prototype, "net_setCharacterTrailing", null);
 
-var foreign52 = /*#__PURE__*/Object.freeze({
+var foreign54 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopModuleS
 });
@@ -10971,7 +11005,7 @@ var foreign52 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2024.06.22-23.56.51
+ * TIME: 2024.07.27-14.36.09
  */
 let TaskItem_Generate = class TaskItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -11061,7 +11095,7 @@ TaskItem_Generate = __decorate([
 ], TaskItem_Generate);
 var TaskItem_Generate$1 = TaskItem_Generate;
 
-var foreign100 = /*#__PURE__*/Object.freeze({
+var foreign103 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskItem_Generate$1
 });
@@ -11071,7 +11105,7 @@ var foreign100 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskPanel.ui
- * TIME: 2024.06.22-23.56.51
+ * TIME: 2024.07.27-14.36.09
  */
 let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
     get mDailyTimeTextBlock() {
@@ -11174,7 +11208,7 @@ TaskPanel_Generate = __decorate([
 ], TaskPanel_Generate);
 var TaskPanel_Generate$1 = TaskPanel_Generate;
 
-var foreign101 = /*#__PURE__*/Object.freeze({
+var foreign104 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskPanel_Generate$1
 });
@@ -11458,7 +11492,7 @@ class TaskItem extends TaskItem_Generate$1 {
     }
 }
 
-var foreign58 = /*#__PURE__*/Object.freeze({
+var foreign60 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     TaskItem: TaskItem,
     default: TaskPanel
@@ -11793,7 +11827,7 @@ class TaskModuleC extends ModuleC {
     }
 }
 
-var foreign56 = /*#__PURE__*/Object.freeze({
+var foreign58 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskModuleC
 });
@@ -11875,7 +11909,7 @@ GameLauncher = __decorate([
 ], GameLauncher);
 var GameLauncher$1 = GameLauncher;
 
-var foreign16 = /*#__PURE__*/Object.freeze({
+var foreign17 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GameLauncher$1
 });
@@ -11939,7 +11973,7 @@ var foreign16 = /*#__PURE__*/Object.freeze({
 //     }
 // }
 
-var foreign26 = /*#__PURE__*/Object.freeze({
+var foreign27 = /*#__PURE__*/Object.freeze({
     __proto__: null
 });
 
@@ -12025,7 +12059,7 @@ var foreign26 = /*#__PURE__*/Object.freeze({
 //     }
 // }
 
-var foreign27 = /*#__PURE__*/Object.freeze({
+var foreign28 = /*#__PURE__*/Object.freeze({
     __proto__: null
 });
 
@@ -12034,7 +12068,7 @@ var foreign27 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GMModule/GMHUD.ui
- * TIME: 2024.06.22-23.56.50
+ * TIME: 2024.07.27-14.36.08
  */
 let GMHUD_Generate = class GMHUD_Generate extends UIScript {
     get oKbutton() {
@@ -12114,7 +12148,7 @@ GMHUD_Generate = __decorate([
 ], GMHUD_Generate);
 var GMHUD_Generate$1 = GMHUD_Generate;
 
-var foreign90 = /*#__PURE__*/Object.freeze({
+var foreign92 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GMHUD_Generate$1
 });
@@ -12124,7 +12158,7 @@ var foreign90 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GMModule/GMItem.ui
- * TIME: 2024.06.22-23.56.50
+ * TIME: 2024.07.27-14.36.08
  */
 let GMItem_Generate = class GMItem_Generate extends UIScript {
     get button() {
@@ -12174,7 +12208,7 @@ GMItem_Generate = __decorate([
 ], GMItem_Generate);
 var GMItem_Generate$1 = GMItem_Generate;
 
-var foreign91 = /*#__PURE__*/Object.freeze({
+var foreign93 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GMItem_Generate$1
 });
@@ -12389,12 +12423,607 @@ class DropdownList {
     }
 }
 
-var foreign28 = /*#__PURE__*/Object.freeze({
+var foreign29 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     AddGMCommand: AddGMCommand,
     CloseGMUI: CloseGMUI,
     OpenGMUI: OpenGMUI,
     default: GMService$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/NpcModule/EnemyLifebar.ui
+ * TIME: 2024.07.27-14.36.08
+ */
+let EnemyLifebar_Generate = class EnemyLifebar_Generate extends UIScript {
+    get mLifebarProgressBar() {
+        if (!this.mLifebarProgressBar_Internal && this.uiWidgetBase) {
+            this.mLifebarProgressBar_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mLifebarProgressBar');
+        }
+        return this.mLifebarProgressBar_Internal;
+    }
+    get mHpTextBlock() {
+        if (!this.mHpTextBlock_Internal && this.uiWidgetBase) {
+            this.mHpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mHpTextBlock');
+        }
+        return this.mHpTextBlock_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mHpTextBlock);
+        //文本多语言
+    }
+    /**初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /**显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /**隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+EnemyLifebar_Generate = __decorate([
+    UIBind('UI/module/NpcModule/EnemyLifebar.ui')
+], EnemyLifebar_Generate);
+var EnemyLifebar_Generate$1 = EnemyLifebar_Generate;
+
+var foreign96 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: EnemyLifebar_Generate$1
+});
+
+var MonsterState;
+(function (MonsterState) {
+    MonsterState[MonsterState["Inactivation"] = 0] = "Inactivation";
+    MonsterState[MonsterState["Activate"] = 1] = "Activate";
+})(MonsterState || (MonsterState = {}));
+class AnimationInfo {
+    constructor() {
+        // @mw.Property({ displayName: "idleAnimation", group: "AnimationInfo", tooltip: "idleAnimation" })
+        this.idles = [];
+        // @mw.Property({ displayName: "moveAnimation", group: "AnimationInfo", tooltip: "moveAnimation" })
+        this.moves = [];
+        // @mw.Property({ displayName: "attackAnimation", group: "AnimationInfo", tooltip: "attackAnimation" })
+        this.attacks = [];
+        // @mw.Property({ displayName: "dieAnimation", group: "AnimationInfo", tooltip: "dieAnimation" })
+        this.die = "";
+    }
+}
+class AttackInfo {
+    constructor() {
+        // @mw.Property({ displayName: "attackTimePoint", group: "AttackInfo", tooltip: "attackTimePoint" })
+        this.attackTimePoints = [];
+        // @mw.Property({ displayName: "forwardOffset", group: "AttackInfo", tooltip: "forwardOffset" })
+        this.attackOffsets = [];
+        // @mw.Property({ displayName: "attackRange", group: "AttackInfo", tooltip: "attackRange" })
+        this.attackLengths = [];
+        // @mw.Property({ displayName: "attackSize", group: "AttackInfo", tooltip: "attackSize" })
+        this.attackSizes = [];
+        // @mw.Property({ displayName: "damage", group: "AttackInfo", tooltip: "damage" })
+        this.damages = [];
+    }
+}
+class AttackEffectInfo {
+    constructor() {
+        // @mw.Property({ displayName: "effectId", group: "AttackEffectInfo", tooltip: "effectId" })
+        this.effectIds = [];
+        // @mw.Property({ displayName: "effectPos", group: "AttackEffectInfo", tooltip: "effectPos" })
+        this.posOffsets = [];
+        // @mw.Property({ displayName: "effectRot", group: "AttackEffectInfo", tooltip: "effectRot" })
+        this.rotOffsets = [];
+        // @mw.Property({ displayName: "effectScale", group: "AttackEffectInfo", tooltip: "effectScale" })
+        this.effectScales = [];
+    }
+}
+class Monster extends Script {
+    constructor() {
+        super(...arguments);
+        this.monsterId = 0;
+        this.hp = 0;
+        this.maxHp = 0;
+        this.path = "";
+        // @mw.Property({ displayName: "moveSpeed", group: "Info", tooltip: "moveSpeed" })
+        this.moveSpeed = 450;
+        // @mw.Property({ displayName: "pathVectors", group: "Info", tooltip: "pathVectors" })
+        this.pathVectors = [mw.Vector.zero];
+        // @mw.Property({ displayName: "animationInfo", group: "Info", tooltip: "animationInfo" })
+        this.animationInfo = new AnimationInfo();
+        // @mw.Property({ displayName: "attackInfo", group: "Info", tooltip: "attackInfo" })
+        this.attackInfo = new AttackInfo();
+        // @mw.Property({ displayName: "attackEffectInfo", group: "Info", tooltip: "attackEffectInfo" })
+        this.attackEffectInfo = new AttackEffectInfo();
+        this.monster = null;
+        this.monsterState = MonsterState.Inactivation;
+        this.monsterWidth = 0;
+        this.cubeLifebar = null;
+        this.cubeLifebarWidget = null;
+        this.isInitLifebar = false;
+        this.preHp = 0;
+        this.playerModuleS = null;
+        this.chasePlayerMap = new Map();
+        this.isFollowing = false;
+        this.isNavigateToing = false;
+        this.attackIndex = 0;
+    }
+    onStart() {
+        this.onStart_CS();
+    }
+    get getMonster() {
+        if (!this.monster) {
+            this.monster = this.gameObject;
+        }
+        return this.monster;
+    }
+    get getMonsterState() {
+        return this.monsterState;
+    }
+    set setMonsterState(value) {
+        this.monsterState = value;
+    }
+    get getMonsterHeight() {
+        return this.getMonster.collisionExtent.z;
+    }
+    get getMonsterWidth() {
+        if (this.monsterWidth == 0) {
+            this.monsterWidth = this.getMonster.collisionExtent.x > this.getMonster.collisionExtent.y ?
+                this.getMonster.collisionExtent.x : this.getMonster.collisionExtent.y;
+        }
+        console.error(`this.monsterWidth:${this.monsterWidth}`);
+        return this.monsterWidth + 10;
+    }
+    async onStart_CS() {
+        await this.initCharacter();
+        await this.initConfig();
+        if (mw.SystemUtil.isClient()) {
+            this.onStart_C();
+        }
+        else if (mw.SystemUtil.isServer()) {
+            this.onStart_S();
+        }
+    }
+    async initCharacter() {
+        await ModuleService.ready();
+        this.monster = this.gameObject;
+        this.monster.collisionWithOtherCharacterEnabled = false;
+    }
+    async initConfig() {
+        let monsterElement = GameConfig.MonsterInfo.getElement(this.monsterId);
+        if (!monsterElement)
+            return;
+        await this.initPaths();
+        this.animationInfo.idles = monsterElement?.Idles;
+        this.animationInfo.moves = monsterElement?.Moves;
+        this.animationInfo.attacks = monsterElement?.Attacks;
+        this.animationInfo.die = monsterElement?.Die;
+        this.attackInfo.attackTimePoints = monsterElement?.AttackTimePoints;
+        this.attackInfo.attackOffsets = monsterElement?.AttackOffsets;
+        this.attackInfo.attackLengths = monsterElement?.AttackLengths;
+        this.attackInfo.attackSizes = monsterElement?.AttackSizes;
+        this.attackInfo.damages = monsterElement?.Damages;
+        this.attackEffectInfo.effectIds = monsterElement?.EffectIds;
+        this.attackEffectInfo.posOffsets = monsterElement?.EffectPosOffsets;
+        monsterElement?.EffectRotOffsets?.forEach((value) => {
+            this.attackEffectInfo.rotOffsets.push(new mw.Rotation(value));
+        });
+        this.attackEffectInfo.effectScales = monsterElement?.EffectScales;
+        this.moveSpeed = monsterElement?.MoveSpeed;
+    }
+    async initPaths() {
+        if (!this.path || this.path.length == 0)
+            return;
+        let pathParent = await mw.GameObject.asyncFindGameObjectById(this.path);
+        this.pathVectors.length = 0;
+        pathParent?.getChildren().forEach((child) => {
+            this.pathVectors.push(child.worldTransform.position);
+        });
+    }
+    onUpdate(dt) {
+        if (mw.SystemUtil.isClient()) {
+            this.onUpdate_C(dt);
+        }
+        else if (mw.SystemUtil.isServer()) {
+            this.onUpdate_S(dt);
+        }
+    }
+    async onStart_C() {
+        this.useUpdate = false;
+        this.initEvent_C();
+        this.preHp = Math.floor(this.maxHp);
+        this.initLifebar();
+    }
+    initEvent_C() {
+        Event.addServerListener("DrawDebug", this.bindDrawDebug_C.bind(this));
+    }
+    bindDrawDebug_C(start, end, halfSize) {
+        // console.error(`DrawDebug`);
+        mw.PhysicsService.boxTraceMulti(start, end, halfSize, mw.Rotation.zero, { objectsToIgnore: [this.getMonster] }, {
+            isDrawDebug: mw.SystemUtil.isPIE,
+            duration: 1,
+            traceColor: mw.LinearColor.red,
+            hitColor: mw.LinearColor.green,
+            thickness: 3
+        });
+    }
+    async initLifebar() {
+        this.cubeLifebar = UIService.create(EnemyLifebar_Generate$1);
+        this.cubeLifebarWidget = await mw.GameObject.asyncSpawn("UIWidget", {
+            replicates: false
+        });
+        this.cubeLifebarWidget.setTargetUIWidget(this.cubeLifebar.uiWidgetBase);
+        this.cubeLifebarWidget.widgetSpace = mw.WidgetSpaceMode.OverheadUI;
+        this.getMonster.attachToSlot(this.cubeLifebarWidget, mw.HumanoidSlotType.Rings);
+        this.cubeLifebarWidget.occlusionEnable = false;
+        this.cubeLifebarWidget.scaledByDistanceEnable = true;
+        this.cubeLifebarWidget.hideByDistanceEnable = true;
+        this.cubeLifebarWidget.headUIMaxVisibleDistance = 10000;
+        this.isInitLifebar = true;
+        this.onHpChanged();
+    }
+    onHpChanged() {
+        if (!this.isInitLifebar)
+            return;
+        if (this.preHp <= 0)
+            this.preHp = Math.floor(this.maxHp);
+        let damage = this.preHp - this.hp;
+        if (damage > 0)
+            this.preHp = this.hp;
+        this.cubeLifebar.mLifebarProgressBar.percent = this.hp / this.maxHp;
+        this.cubeLifebar.mHpTextBlock.text = `${Math.floor(this.hp)}/${Math.floor(this.maxHp)}`;
+        if (this.hp <= 0) {
+            if (this.cubeLifebarWidget.getVisibility()) {
+                this.cubeLifebarWidget.setVisibility(false);
+            }
+        }
+        else if (this.hp >= this.maxHp) {
+            if (!this.cubeLifebarWidget.getVisibility()) {
+                this.cubeLifebarWidget.setVisibility(true);
+            }
+        }
+    }
+    onUpdate_C(dt) {
+    }
+    get getPlayerModuleS() {
+        if (this.playerModuleS == null) {
+            this.playerModuleS = ModuleService.getModule(PlayerModuleS);
+        }
+        return this.playerModuleS;
+    }
+    async onStart_S() {
+        this.useUpdate = false;
+        this.initEvent_S();
+        await this.activate_S();
+    }
+    initEvent_S() {
+        PrefabEvent.PrefabEvtFight.onHit(this.playerAtkEnemy_S.bind(this));
+    }
+    playerAtkEnemy_S(senderGuid, targetGuid, damage, hitPoint) {
+        console.error(`this.getMonster.gameObjectId:${this.getMonster.gameObjectId} targetGuid:${targetGuid}`);
+        if (this.getMonster.gameObjectId != targetGuid || this.getMonsterState == MonsterState.Inactivation)
+            return;
+        if (this.hp <= 0) {
+            this.hp = 0;
+            return;
+        }
+        this.updateChasePlayer(senderGuid, damage);
+        let tmpHp = this.hp - damage;
+        if (tmpHp > 0) {
+            this.hp = tmpHp;
+        }
+        else {
+            this.hp = 0;
+            this.die_S();
+            this.getPlayerModuleS.playerKillNpc(senderGuid);
+        }
+        this.getPlayerModuleS.playerAtkNpcFlyText(senderGuid, hitPoint, damage);
+    }
+    async die_S() {
+        this.dieReset_S();
+        //die effect
+        let dieAni = await this.playDieAni_S();
+        let dieTime = 0;
+        if (dieAni) {
+            dieTime = dieAni.length;
+        }
+        else {
+            dieTime = 1;
+            this.getMonster?.currentAnimation?.stop();
+            if (!this.getMonster.ragdollEnabled)
+                this.getMonster.ragdollEnabled = true;
+        }
+        TimeUtil.delaySecond(dieTime).then(() => { this.rebirth_S(); });
+    }
+    dieReset_S() {
+        this.setMonsterState = MonsterState.Inactivation;
+        Navigation.stopNavigateTo(this.getMonster);
+        Navigation.stopFollow(this.getMonster);
+        this.isFollowing = false;
+        this.isNavigateToing = false;
+        this.chasePlayerMap.clear();
+    }
+    rebirth_S() {
+        let rebirthEffect = EffectService.playAtPosition("146786", this.getMonster.worldTransform.position, { loopCount: 0, scale: mw.Vector.one.multiply(2) });
+        // this.initPaths();
+        TimeUtil.delaySecond(this.randomInt(5, 10)).then(async () => {
+            EffectService.stop(rebirthEffect);
+            EffectService.playOnGameObject("142750", this.getMonster, { slotType: mw.HumanoidSlotType.Root });
+            this.maxHp = this.maxHp * (this.randomFloat(1.1, 1.5));
+            if (this.maxHp > 100000)
+                this.maxHp = 100000;
+            this.hp = this.maxHp;
+            if (this.getMonster.ragdollEnabled)
+                this.getMonster.ragdollEnabled = false;
+            this.setMonsterState = MonsterState.Activate;
+            await this.playIdleAni_S();
+            TimeUtil.delaySecond(this.randomInt(3, 5)).then(() => this.startNavigateTo_S());
+        });
+    }
+    updateChasePlayer(targetGuid, damage) {
+        console.error(`targetGuid:${targetGuid} damage:${damage}`);
+        let totalDamage = 0;
+        if (this.chasePlayerMap.has(targetGuid)) {
+            totalDamage = this.chasePlayerMap.get(targetGuid);
+        }
+        totalDamage += damage;
+        this.chasePlayerMap.set(targetGuid, totalDamage);
+        this.fromNavigateToToFollow();
+    }
+    deleteChasePlayer(targetGuid) {
+        if (!this.chasePlayerMap.has(targetGuid))
+            return;
+        this.chasePlayerMap.delete(targetGuid);
+    }
+    getChasePlayerByMaxDamage() {
+        if (!this.chasePlayerMap || this.chasePlayerMap.size == 0)
+            return null;
+        let maxDamage = 0;
+        let targetGuid = null;
+        this.chasePlayerMap.forEach((value, key) => {
+            if (value > maxDamage) {
+                maxDamage = value;
+                targetGuid = key;
+            }
+        });
+        let targetPlayer = null;
+        Player.getAllPlayers().forEach((value) => {
+            if (value.character.gameObjectId == targetGuid) {
+                targetPlayer = value;
+            }
+        });
+        return targetPlayer;
+    }
+    async activate_S() {
+        this.hp = this.maxHp;
+        await this.getMonster.asyncReady();
+        this.getMonster.maxWalkSpeed = this.moveSpeed;
+        this.setMonsterState = MonsterState.Activate;
+        this.isFollowing = false;
+        this.isNavigateToing = false;
+        TimeUtil.delaySecond(this.randomInt(1, 3)).then(() => { this.playIdleAni_S(); });
+        TimeUtil.delaySecond(this.randomInt(5, 15)).then(() => this.startNavigateTo_S());
+    }
+    async fromNavigateToToFollow() {
+        if (this.isFollowing || !this.isNavigateToing)
+            return;
+        Navigation.stopNavigateTo(this.getMonster);
+        this.isNavigateToing = false;
+        await this.playIdleAni_S();
+        TimeUtil.delaySecond(this.randomFloat(0.5, 1)).then(() => this.startNavigateTo_S());
+    }
+    async startNavigateTo_S() {
+        if (this.getMonsterState != MonsterState.Activate)
+            return;
+        await this.playMoveAni_S();
+        let targetPlayer = this.getChasePlayerByMaxDamage();
+        targetPlayer ? this.chasePlayerNavigateTo_S(targetPlayer) : this.randomNavigateTo_S();
+    }
+    randomNavigateTo_S() {
+        this.isNavigateToing = true;
+        Navigation.navigateTo(this.getMonster, this.getRandomTargetPoint_S(), 0, () => {
+            console.error(`随机寻路成功`);
+            this.randomNavigateToComplete_S();
+        }, () => {
+            console.error(`随机寻路失败`);
+            this.randomNavigateToComplete_S();
+        });
+    }
+    async randomNavigateToComplete_S() {
+        this.isNavigateToing = false;
+        await this.playIdleAni_S();
+        TimeUtil.delaySecond(this.randomInt(1, 3)).then(() => { this.randomAttack_S(); });
+    }
+    chasePlayerNavigateTo_S(targetPlayer) {
+        let dis = mw.Vector.distance(this.getMonster.worldTransform.position, targetPlayer.character.worldTransform.position);
+        console.error(`dis:${dis}`);
+        if (dis > this.getMonsterWidth) {
+            this.directChasePlayerNavigateTo_S(targetPlayer);
+        }
+        else {
+            this.directRandomAttack_S(targetPlayer);
+        }
+    }
+    directChasePlayerNavigateTo_S(targetPlayer) {
+        let isFollowSuccess = Navigation.follow(this.getMonster, targetPlayer.character, 0, () => {
+            console.error(`追踪寻路成功 dis = ${mw.Vector.distance(this.getMonster.worldTransform.position, targetPlayer.character.worldTransform.position)}`);
+            this.chasePlayerNavigateToComplete_S(targetPlayer);
+        }, () => {
+            console.error(`追踪寻路失败`);
+            this.deleteChasePlayer(targetPlayer.character.gameObjectId);
+            this.chasePlayerNavigateToComplete_S(targetPlayer);
+        });
+        console.error(`isFollowSuccess: ${isFollowSuccess}`);
+        if (isFollowSuccess) {
+            this.isFollowing = true;
+            return;
+        }
+        this.deleteChasePlayer(targetPlayer.character.gameObjectId);
+        this.chasePlayerNavigateToComplete_S(targetPlayer);
+    }
+    async directRandomAttack_S(targetPlayer) {
+        await this.playIdleAni_S();
+        this.getMonster.lookAt(targetPlayer.character.worldTransform.position);
+        TimeUtil.delaySecond(this.randomFloat(0.5, 1)).then(() => { this.randomAttack_S(); });
+    }
+    async chasePlayerNavigateToComplete_S(targetPlayer) {
+        Navigation.stopFollow(this.getMonster);
+        this.isFollowing = false;
+        await this.playIdleAni_S();
+        this.getMonster.lookAt(targetPlayer.character.worldTransform.position);
+        TimeUtil.delaySecond(this.randomFloat(0.5, 1)).then(() => { this.randomAttack_S(); });
+    }
+    getRandomTargetPoint_S() {
+        let targetVector = this.pathVectors[this.randomInt(0, this.pathVectors.length - 1)];
+        let targetPos = Navigation.getRandomReachablePointInRadius(targetVector, 100);
+        return (!targetPos) ? targetVector : targetPos;
+    }
+    async randomAttack_S() {
+        if (this.getMonsterState != MonsterState.Activate)
+            return;
+        this.attackIndex = this.randomInt(0, this.animationInfo.attacks.length - 1);
+        let attackAni = await this.playAtkAni_S();
+        let attackTime = attackAni.length;
+        TimeUtil.delaySecond(this.attackInfo.attackTimePoints[this.attackIndex]).then(() => { this.randomAttackCheck_S(); });
+        TimeUtil.delaySecond(attackTime).then(() => { this.playIdleAni_S(); });
+        TimeUtil.delaySecond(attackTime + this.randomInt(1, 3)).then(() => this.startNavigateTo_S());
+    }
+    randomAttackCheck_S() {
+        if (this.getMonsterState != MonsterState.Activate)
+            return;
+        this.attackEffect_S();
+        let monsterPos = this.getMonster.worldTransform.position;
+        let attackOffset = this.attackInfo.attackOffsets[this.attackIndex];
+        let startForwardOffset = this.getMonster.worldTransform.getForwardVector().multiply(attackOffset.y);
+        let start = new mw.Vector(monsterPos.x + startForwardOffset.x + attackOffset.x, monsterPos.y + startForwardOffset.y, monsterPos.z + startForwardOffset.z + attackOffset.z);
+        let endForwardOffset = this.getMonster.worldTransform.getForwardVector().multiply(this.attackInfo.attackLengths[this.attackIndex]);
+        let end = new mw.Vector(monsterPos.x + endForwardOffset.x, monsterPos.y + endForwardOffset.y, monsterPos.z + endForwardOffset.z);
+        let hitResults = mw.PhysicsService.boxTraceMulti(start, end, this.attackInfo.attackSizes[this.attackIndex], mw.Rotation.zero, { objectsToIgnore: [this.getMonster] }, {});
+        if (mw.SystemUtil.isPIE)
+            Event.dispatchToAllClient("DrawDebug", start, end, this.attackInfo.attackSizes[this.attackIndex]);
+        if (!hitResults || hitResults.length == 0)
+            return;
+        for (let i = 0; i < hitResults.length; ++i) {
+            let hitGo = hitResults[i].gameObject;
+            if (hitGo instanceof mw.Character && hitGo?.player) {
+                let targetGameObjectId = hitGo?.gameObjectId;
+                PrefabEvent.PrefabEvtFight.hurt(this.getMonster.gameObjectId, targetGameObjectId, this.attackInfo.damages[this.attackIndex]);
+            }
+        }
+    }
+    attackEffect_S() {
+        let monsterPos = this.getMonster.worldTransform.position;
+        let effectOffset = this.attackEffectInfo.posOffsets[this.attackIndex];
+        let monsterRot = this.getMonster.worldTransform.rotation;
+        let effectLocalOffset = monsterRot.rotateVector(effectOffset);
+        let effectPos = new mw.Vector(monsterPos.x + effectLocalOffset.x, monsterPos.y + effectLocalOffset.y, monsterPos.z + effectLocalOffset.z);
+        let rotOffset = this.attackEffectInfo.rotOffsets[this.attackIndex];
+        let constructorRot = new mw.Rotation(this.getMonster.worldTransform.getForwardVector(), mw.Vector.up);
+        let effectRot = new mw.Rotation(constructorRot.x + rotOffset.x, constructorRot.y + rotOffset.y, constructorRot.z + rotOffset.z);
+        EffectService.playAtPosition(this.attackEffectInfo.effectIds[this.attackIndex], effectPos, {
+            loopCount: 1,
+            rotation: effectRot,
+            scale: this.attackEffectInfo.effectScales[this.attackIndex]
+        });
+    }
+    onUpdate_S(dt) {
+    }
+    async playIdleAni_S() {
+        let idle = this.animationInfo.idles[this.randomInt(0, this.animationInfo.idles.length - 1)];
+        await this.asyncDownloadAsset(idle);
+        if (this.getMonsterState != MonsterState.Activate)
+            return;
+        let idleAni = this.getMonster.loadAnimation(idle);
+        idleAni.loop = 0;
+        idleAni.play();
+    }
+    async playMoveAni_S() {
+        let move = this.animationInfo.moves[this.randomInt(0, this.animationInfo.moves.length - 1)];
+        await this.asyncDownloadAsset(move);
+        if (this.getMonsterState != MonsterState.Activate)
+            return;
+        let moveAni = this.getMonster.loadAnimation(move);
+        moveAni.loop = 0;
+        moveAni.play();
+    }
+    async playAtkAni_S() {
+        await this.asyncDownloadAsset(this.animationInfo.attacks[this.attackIndex]);
+        if (this.getMonsterState != MonsterState.Activate)
+            return null;
+        let attackAni = this.getMonster.loadAnimation(this.animationInfo.attacks[this.attackIndex]);
+        attackAni.play();
+        return attackAni;
+    }
+    async playDieAni_S() {
+        let die = this.animationInfo.die;
+        if (die != "-1") {
+            await this.asyncDownloadAsset(die);
+            let dieAni = this.getMonster.loadAnimation(die);
+            dieAni.play();
+            return dieAni;
+        }
+        return null;
+    }
+    randomInt(min, max) {
+        if (min > max) {
+            let temp = min;
+            min = max;
+            max = temp;
+        }
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    randomFloat(min, max) {
+        if (min > max) {
+            let temp = min;
+            min = max;
+            max = temp;
+        }
+        return Number((Math.random() * (max - min) + min).toFixed(1));
+    }
+    async asyncDownloadAsset(InAssetId) {
+        if (!mw.AssetUtil.assetLoaded(InAssetId)) {
+            await mw.AssetUtil.asyncDownloadAsset(InAssetId);
+        }
+    }
+}
+__decorate([
+    mw.Property({ displayName: "monsterId", group: "Info", tooltip: "monsterId" })
+], Monster.prototype, "monsterId", void 0);
+__decorate([
+    mw.Property({ displayName: "hp", group: "Info", tooltip: "hp", replicated: true, onChanged: "onHpChanged" })
+], Monster.prototype, "hp", void 0);
+__decorate([
+    mw.Property({ displayName: "maxHp", group: "Info", tooltip: "maxHp" })
+], Monster.prototype, "maxHp", void 0);
+__decorate([
+    mw.Property({ displayName: "path", group: "Info", tooltip: "path" })
+], Monster.prototype, "path", void 0);
+
+var foreign36 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    AnimationInfo: AnimationInfo,
+    AttackEffectInfo: AttackEffectInfo,
+    AttackInfo: AttackInfo,
+    get MonsterState () { return MonsterState; },
+    default: Monster
 });
 
 let Npc = class Npc extends Script {
@@ -12632,7 +13261,7 @@ Npc = __decorate([
 ], Npc);
 var Npc$1 = Npc;
 
-var foreign35 = /*#__PURE__*/Object.freeze({
+var foreign37 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Npc$1
 });
@@ -12744,7 +13373,7 @@ AddMaxHp = __decorate([
 ], AddMaxHp);
 var AddMaxHp$1 = AddMaxHp;
 
-var foreign36 = /*#__PURE__*/Object.freeze({
+var foreign38 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AddMaxHp$1
 });
@@ -12904,7 +13533,7 @@ TryOutGun = __decorate([
 ], TryOutGun);
 var TryOutGun$1 = TryOutGun;
 
-var foreign40 = /*#__PURE__*/Object.freeze({
+var foreign42 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TryOutGun$1
 });
@@ -12972,7 +13601,7 @@ ProjectTarget = __decorate([
 ], ProjectTarget);
 var ProjectTarget$1 = ProjectTarget;
 
-var foreign65 = /*#__PURE__*/Object.freeze({
+var foreign67 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ProjectTarget$1
 });
@@ -13170,7 +13799,7 @@ class KeyActionManager {
     }
 }
 
-var foreign72 = /*#__PURE__*/Object.freeze({
+var foreign74 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FreeCamera$1
 });
@@ -13254,7 +13883,7 @@ class TSIAP {
 }
 let TSIAPService = new TSIAP();
 
-var foreign75 = /*#__PURE__*/Object.freeze({
+var foreign77 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     TSIAPService: TSIAPService
 });
@@ -13325,7 +13954,7 @@ JumpGame = __decorate([
 ], JumpGame);
 var JumpGame$1 = JumpGame;
 
-var foreign76 = /*#__PURE__*/Object.freeze({
+var foreign78 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: JumpGame$1
 });
@@ -13335,7 +13964,7 @@ var foreign76 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/JumpGameTips.ui
- * TIME: 2024.06.22-23.56.50
+ * TIME: 2024.07.27-14.36.07
  */
 let JumpGameTips_Generate = class JumpGameTips_Generate extends UIScript {
     onAwake() {
@@ -13375,7 +14004,7 @@ JumpGameTips_Generate = __decorate([
 ], JumpGameTips_Generate);
 var JumpGameTips_Generate$1 = JumpGameTips_Generate;
 
-var foreign81 = /*#__PURE__*/Object.freeze({
+var foreign83 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: JumpGameTips_Generate$1
 });
@@ -13385,7 +14014,7 @@ var foreign81 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/SecondNoticeItem.ui
- * TIME: 2024.06.22-23.56.50
+ * TIME: 2024.07.27-14.36.07
  */
 let SecondNoticeItem_Generate = class SecondNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -13443,7 +14072,7 @@ SecondNoticeItem_Generate = __decorate([
 ], SecondNoticeItem_Generate);
 var SecondNoticeItem_Generate$1 = SecondNoticeItem_Generate;
 
-var foreign83 = /*#__PURE__*/Object.freeze({
+var foreign85 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SecondNoticeItem_Generate$1
 });
@@ -13453,7 +14082,7 @@ var foreign83 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/DiamondItem.ui
- * TIME: 2024.06.22-23.56.50
+ * TIME: 2024.07.27-14.36.08
  */
 let DiamondItem_Generate = class DiamondItem_Generate extends UIScript {
     get mFirstBuyTextBlock() {
@@ -13555,7 +14184,7 @@ DiamondItem_Generate = __decorate([
 ], DiamondItem_Generate);
 var DiamondItem_Generate$1 = DiamondItem_Generate;
 
-var foreign88 = /*#__PURE__*/Object.freeze({
+var foreign90 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DiamondItem_Generate$1
 });
@@ -13565,7 +14194,7 @@ var foreign88 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/DiamondPanel.ui
- * TIME: 2024.06.22-23.56.50
+ * TIME: 2024.07.27-14.36.08
  */
 let DiamondPanel_Generate = class DiamondPanel_Generate extends UIScript {
     get mMainCanvas() {
@@ -13646,7 +14275,7 @@ DiamondPanel_Generate = __decorate([
 ], DiamondPanel_Generate);
 var DiamondPanel_Generate$1 = DiamondPanel_Generate;
 
-var foreign89 = /*#__PURE__*/Object.freeze({
+var foreign91 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DiamondPanel_Generate$1
 });
@@ -13656,7 +14285,7 @@ var foreign89 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RadarModule/RadarPanel.ui
- * TIME: 2024.06.22-23.56.50
+ * TIME: 2024.07.27-14.36.08
  */
 let RadarPanel_Generate = class RadarPanel_Generate extends UIScript {
     onAwake() {
@@ -13695,7 +14324,7 @@ RadarPanel_Generate = __decorate([
 ], RadarPanel_Generate);
 var RadarPanel_Generate$1 = RadarPanel_Generate;
 
-var foreign94 = /*#__PURE__*/Object.freeze({
+var foreign97 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadarPanel_Generate$1
 });
@@ -13709,101 +14338,103 @@ const MWModuleMap = {
      '9B86B84E423B84B77E564D8B0651277C': foreign6,
      '166E934A4902E0274794828A310EFA30': foreign7,
      '6374DD3342310CB36D6D868EC5478FF4': foreign8,
-     'EC2961B34147096FC9DBC2971DD9AA53': foreign9,
-     '6A277D5049CE2CE92CD7339A98FE615B': foreign10,
-     'E19C4FBC41BEE3AD41222B8D64AAD365': foreign11,
-     '011052CD4ED0D3DC9960ABBFBBC46D5A': foreign12,
-     'C2E7A2E041E5BB00F9451CBBBF64D6A6': foreign13,
-     '5CA2293C4B0A9CA7C2D0CBBF73D219E2': foreign14,
-     'C319097045752CFC53190794AB2BCD76': foreign15,
-     '290F1F4D42ECBF13317BD8BC212FA75A': foreign16,
-     '2E162EDD4A7F55E58539648F012097D2': foreign17,
-     '36994D0E483CF7F6283CAFACCB406590': foreign18,
-     'F80D68DA497F0D49745DDE80D38E9011': foreign19,
-     '0F598A9C453EA67A85B875B1E1D8AB93': foreign20,
-     '7D98F77C457BD44550899198F36FDB9F': foreign21,
-     '188EB62D4BAF9B98F91C589C70DE4698': foreign22,
-     '2943C580492BC867A5B690B2B178012A': foreign23,
-     '533992264411311B6F383EBE0ECF1BB5': foreign24,
-     '2A2161914E537A9F71E302BCA0CA6AC6': foreign25,
-     '42EE39EA49315FAE8563A88B97E3F060': foreign26,
-     '34514D87410DC61DB5B64C9DCE81A833': foreign27,
-     'C6239AAF49000AB5543412A4C68EAD31': foreign28,
-     '43D19C1D40CA859F774230B98EE261B5': foreign29,
-     '7B3F640D45CDC99A229EFDBBC3F50ABD': foreign30,
-     '66C82E484C9BFB4ADA02618A95752286': foreign31,
-     'DAA40DEE420925A8EA2B4FB015573440': foreign32,
-     '8E647D8F40D9B4AE1A1349ACD3C3F392': foreign33,
-     '21227DCE4B6FB5C99FA72BA5B225A752': foreign34,
-     '1B12D2CD40775D42550AC8B64BACB2B5': foreign35,
-     '3B463A284FD7B66C9489AA8EC3AC8A23': foreign36,
-     'B8D3411E480AD6F4CBA476A88A02FD84': foreign37,
-     '001BB3D44F528AD6DFEB5BBB7FF03216': foreign38,
-     '0C60A5DE4F7AF9F8DE3381B2CECCE96F': foreign39,
-     '885A77EA4AC06DB2ABF8EB9F4AC89BA5': foreign40,
-     'C414180848195EEA22C4BC8C95BB22CB': foreign41,
-     '2C98E91946EADE4E5FDA0EB10A1AEC93': foreign42,
-     '7BDEA3704CEBB5559C6239928321865C': foreign43,
-     '7833C871441E612CC5B5CE9BDDA947C9': foreign44,
-     'A12B8D524B602E750EB63288C79D32E2': foreign45,
-     'F057824E4569A842D403858DC7D1D88B': foreign46,
-     '9F1D50A144B07BFAFC552F925299CE71': foreign47,
-     '3E1D070A4147D9A5B46E0EAF1E5FD4E1': foreign48,
-     'F215908B4B4F40F5531DE4A01F660731': foreign49,
-     '89FAB6BA4950774A1AEE0AA919005864': foreign50,
-     '448F172F473F500F568CE69787A05879': foreign51,
-     '7C89EFEF4B37DB0513F2659514BB7B93': foreign52,
-     'C7E79CD049A93AFDBCA399B718D2D8DC': foreign53,
-     '21E846D34531A31F92F411BB9E300D5B': foreign54,
-     '5F4167AC4B1A67501A0DD4A98DCCE793': foreign55,
-     'C2A63B424C2C17C9DE3395B59BA9444C': foreign56,
-     '4CA21C094DAD2346E120EFBEA3D7736C': foreign57,
-     'E8535D714F5BFEC20EF595B175FA24BD': foreign58,
-     '7B098C68429B7A33AA075BB6631641B6': foreign59,
-     'A41BD48545CC9593CB2B62B8C8BD8505': foreign60,
-     '4CF1BF6940037F5268A8B4B1C326C0E1': foreign61,
-     '799144174FCC1F72D4AAD2B8C0D23A93': foreign62,
-     '7969AEF34724BDC60E081286C23D4945': foreign63,
-     'D9B1CF04450CE54C9707ECA7D804DA6C': foreign64,
-     '5224C416400F824F56E4AB9FA410B705': foreign65,
-     '018CFAAD48940396A20DC296154E69CF': foreign66,
-     '02178C534E1EACB3145516B4D5E08CA6': foreign67,
-     '586E7BD34D881F24CE4369A4C4ACD64D': foreign68,
-     '75DBE6154A88D0897AB52CB8303D0D68': foreign69,
-     'C8CD71394F0002E646F3F093BF3B8A20': foreign70,
-     '761A5E774007E1CA28720DB572DA7A45': foreign71,
-     '3A19265E439F9BC57DD9188415D69D90': foreign72,
-     'ACB26C334F3E66726611CAAACE1B29F0': foreign73,
-     'C3A91C494BCF42191B03718F492DFA64': foreign74,
-     '5F9FD257458AA792F70050AEC35F3C7F': foreign75,
-     '86F0A1A849C1B3DE1E04178576CB52FF': foreign76,
-     'A30FDC1848F2A2BB4F412FB42FC6A123': foreign77,
-     'CD82A2E448FA71DD00529A8B5261ED6C': foreign78,
-     '7BC3DC9143A0AC886B7C69BF0BA72582': foreign79,
-     '0ADADD634CB1574E2CE91AA7D15972BF': foreign80,
-     'BEE82D4145CF7AADF455DA8F65630FCE': foreign81,
-     'BF72AC404FF17C439A9112B6B4B32279': foreign82,
-     'A012B90749779FBE8DE607A2B99C7BBD': foreign83,
-     '82E080274DC72CA9D26CFF80275210C8': foreign84,
-     'B445B07141F3B81911589FB86B887D16': foreign85,
-     '3738A163431B2780E684368D4B44D659': foreign86,
-     '9A05761A4E0937CD96EDBD98F5CF127C': foreign87,
-     'AA29C1244938B00FCD91B2AF49E1CD69': foreign88,
-     '5AFEABF6491C62D9F43C6094E8586D99': foreign89,
-     '69B56DE846DD7777A34F73BAAD388917': foreign90,
-     'C8403C274C4A11E56CBA4ABE1BB56FE9': foreign91,
-     '6378A8BD4992C396F0BF5795C241272A': foreign92,
-     'E65657ED48A221438A440EB8FB55AB3A': foreign93,
-     '4BAAB5D2447B37D97384719CE67C9E72': foreign94,
-     '4B7AD5B5415D6B34A20794B83D33C8D4': foreign95,
-     '8B4959C3457E9E607BFD83A45E3B0B4E': foreign96,
-     '61C409DE43B68BAD7C2712AC407F6B85': foreign97,
-     'BD732EF648AD01E5A18863865EF79E7F': foreign98,
-     'D7D5128A42442933D108809A874A1F67': foreign99,
-     '5951240940FFACB56FF8EB8F140D19E5': foreign100,
-     'E0AAC56B4C54E8B2B8B946A3EB4D60C5': foreign101,
-     '54FA95C94AC4FD0AE2C3AF985B5862A7': foreign102,
-     '181ACB1C48C92C4E510D6B94FA31BD79': foreign103,
+     'EC2961B34147096FC9DBC2971DD9AA53': foreign10,
+     '6A277D5049CE2CE92CD7339A98FE615B': foreign11,
+     'E19C4FBC41BEE3AD41222B8D64AAD365': foreign12,
+     '011052CD4ED0D3DC9960ABBFBBC46D5A': foreign13,
+     'C2E7A2E041E5BB00F9451CBBBF64D6A6': foreign14,
+     '5CA2293C4B0A9CA7C2D0CBBF73D219E2': foreign15,
+     'C319097045752CFC53190794AB2BCD76': foreign16,
+     '290F1F4D42ECBF13317BD8BC212FA75A': foreign17,
+     '2E162EDD4A7F55E58539648F012097D2': foreign18,
+     '36994D0E483CF7F6283CAFACCB406590': foreign19,
+     'F80D68DA497F0D49745DDE80D38E9011': foreign20,
+     '0F598A9C453EA67A85B875B1E1D8AB93': foreign21,
+     '7D98F77C457BD44550899198F36FDB9F': foreign22,
+     '188EB62D4BAF9B98F91C589C70DE4698': foreign23,
+     '2943C580492BC867A5B690B2B178012A': foreign24,
+     '533992264411311B6F383EBE0ECF1BB5': foreign25,
+     '2A2161914E537A9F71E302BCA0CA6AC6': foreign26,
+     '42EE39EA49315FAE8563A88B97E3F060': foreign27,
+     '34514D87410DC61DB5B64C9DCE81A833': foreign28,
+     'C6239AAF49000AB5543412A4C68EAD31': foreign29,
+     '43D19C1D40CA859F774230B98EE261B5': foreign30,
+     '7B3F640D45CDC99A229EFDBBC3F50ABD': foreign31,
+     '66C82E484C9BFB4ADA02618A95752286': foreign32,
+     'DAA40DEE420925A8EA2B4FB015573440': foreign33,
+     '8E647D8F40D9B4AE1A1349ACD3C3F392': foreign34,
+     '21227DCE4B6FB5C99FA72BA5B225A752': foreign35,
+     'F7C95A314FBCAFCC114ECCBE037AF3BF': foreign36,
+     '1B12D2CD40775D42550AC8B64BACB2B5': foreign37,
+     '3B463A284FD7B66C9489AA8EC3AC8A23': foreign38,
+     'B8D3411E480AD6F4CBA476A88A02FD84': foreign39,
+     '001BB3D44F528AD6DFEB5BBB7FF03216': foreign40,
+     '0C60A5DE4F7AF9F8DE3381B2CECCE96F': foreign41,
+     '885A77EA4AC06DB2ABF8EB9F4AC89BA5': foreign42,
+     'C414180848195EEA22C4BC8C95BB22CB': foreign43,
+     '2C98E91946EADE4E5FDA0EB10A1AEC93': foreign44,
+     '7BDEA3704CEBB5559C6239928321865C': foreign45,
+     '7833C871441E612CC5B5CE9BDDA947C9': foreign46,
+     'A12B8D524B602E750EB63288C79D32E2': foreign47,
+     'F057824E4569A842D403858DC7D1D88B': foreign48,
+     '9F1D50A144B07BFAFC552F925299CE71': foreign49,
+     '3E1D070A4147D9A5B46E0EAF1E5FD4E1': foreign50,
+     'F215908B4B4F40F5531DE4A01F660731': foreign51,
+     '89FAB6BA4950774A1AEE0AA919005864': foreign52,
+     '448F172F473F500F568CE69787A05879': foreign53,
+     '7C89EFEF4B37DB0513F2659514BB7B93': foreign54,
+     'C7E79CD049A93AFDBCA399B718D2D8DC': foreign55,
+     '21E846D34531A31F92F411BB9E300D5B': foreign56,
+     '5F4167AC4B1A67501A0DD4A98DCCE793': foreign57,
+     'C2A63B424C2C17C9DE3395B59BA9444C': foreign58,
+     '4CA21C094DAD2346E120EFBEA3D7736C': foreign59,
+     'E8535D714F5BFEC20EF595B175FA24BD': foreign60,
+     '7B098C68429B7A33AA075BB6631641B6': foreign61,
+     'A41BD48545CC9593CB2B62B8C8BD8505': foreign62,
+     '4CF1BF6940037F5268A8B4B1C326C0E1': foreign63,
+     '799144174FCC1F72D4AAD2B8C0D23A93': foreign64,
+     '7969AEF34724BDC60E081286C23D4945': foreign65,
+     'D9B1CF04450CE54C9707ECA7D804DA6C': foreign66,
+     '5224C416400F824F56E4AB9FA410B705': foreign67,
+     '018CFAAD48940396A20DC296154E69CF': foreign68,
+     '02178C534E1EACB3145516B4D5E08CA6': foreign69,
+     '586E7BD34D881F24CE4369A4C4ACD64D': foreign70,
+     '75DBE6154A88D0897AB52CB8303D0D68': foreign71,
+     'C8CD71394F0002E646F3F093BF3B8A20': foreign72,
+     '761A5E774007E1CA28720DB572DA7A45': foreign73,
+     '3A19265E439F9BC57DD9188415D69D90': foreign74,
+     'ACB26C334F3E66726611CAAACE1B29F0': foreign75,
+     'C3A91C494BCF42191B03718F492DFA64': foreign76,
+     '5F9FD257458AA792F70050AEC35F3C7F': foreign77,
+     '86F0A1A849C1B3DE1E04178576CB52FF': foreign78,
+     'A30FDC1848F2A2BB4F412FB42FC6A123': foreign79,
+     'CD82A2E448FA71DD00529A8B5261ED6C': foreign80,
+     '7BC3DC9143A0AC886B7C69BF0BA72582': foreign81,
+     '0ADADD634CB1574E2CE91AA7D15972BF': foreign82,
+     'BEE82D4145CF7AADF455DA8F65630FCE': foreign83,
+     'BF72AC404FF17C439A9112B6B4B32279': foreign84,
+     'A012B90749779FBE8DE607A2B99C7BBD': foreign85,
+     '82E080274DC72CA9D26CFF80275210C8': foreign86,
+     'B445B07141F3B81911589FB86B887D16': foreign87,
+     '3738A163431B2780E684368D4B44D659': foreign88,
+     '9A05761A4E0937CD96EDBD98F5CF127C': foreign89,
+     'AA29C1244938B00FCD91B2AF49E1CD69': foreign90,
+     '5AFEABF6491C62D9F43C6094E8586D99': foreign91,
+     '69B56DE846DD7777A34F73BAAD388917': foreign92,
+     'C8403C274C4A11E56CBA4ABE1BB56FE9': foreign93,
+     '6378A8BD4992C396F0BF5795C241272A': foreign94,
+     'E65657ED48A221438A440EB8FB55AB3A': foreign95,
+     'C8DA5246492A8B768EFD11BB64D1C2FD': foreign96,
+     '4BAAB5D2447B37D97384719CE67C9E72': foreign97,
+     '4B7AD5B5415D6B34A20794B83D33C8D4': foreign98,
+     '8B4959C3457E9E607BFD83A45E3B0B4E': foreign99,
+     '61C409DE43B68BAD7C2712AC407F6B85': foreign100,
+     'BD732EF648AD01E5A18863865EF79E7F': foreign101,
+     'D7D5128A42442933D108809A874A1F67': foreign102,
+     '5951240940FFACB56FF8EB8F140D19E5': foreign103,
+     'E0AAC56B4C54E8B2B8B946A3EB4D60C5': foreign104,
+     '54FA95C94AC4FD0AE2C3AF985B5862A7': foreign105,
+     '181ACB1C48C92C4E510D6B94FA31BD79': foreign106,
 };
 const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/ConfirmPanel"],
 [foreign2 || {}, "JavaScripts/common/notice/Notice"],
@@ -13813,101 +14444,103 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/ConfirmP
 [foreign6 || {}, "JavaScripts/config/ConfigBase"],
 [foreign7 || {}, "JavaScripts/config/GameConfig"],
 [foreign8 || {}, "JavaScripts/config/GUN"],
-[foreign9 || {}, "JavaScripts/config/Morph"],
-[foreign10 || {}, "JavaScripts/config/ProjectileProp"],
-[foreign11 || {}, "JavaScripts/config/ROLE"],
-[foreign12 || {}, "JavaScripts/config/ShopItem"],
-[foreign13 || {}, "JavaScripts/config/Task"],
-[foreign14 || {}, "JavaScripts/config/TRAILING"],
-[foreign15 || {}, "JavaScripts/config/WeaponProp"],
-[foreign16 || {}, "JavaScripts/GameLauncher"],
-[foreign17 || {}, "JavaScripts/module/ActivityModule/ActivityData"],
-[foreign18 || {}, "JavaScripts/module/ActivityModule/ActivityModuleC"],
-[foreign19 || {}, "JavaScripts/module/ActivityModule/ActivityModuleS"],
-[foreign20 || {}, "JavaScripts/module/ActivityModule/ui/ActivityPanel"],
-[foreign21 || {}, "JavaScripts/module/AdModule/ui/AdPanel"],
-[foreign22 || {}, "JavaScripts/module/CoinModule/CoinData"],
-[foreign23 || {}, "JavaScripts/module/CoinModule/CoinModuleC"],
-[foreign24 || {}, "JavaScripts/module/CoinModule/CoinModuleS"],
-[foreign25 || {}, "JavaScripts/module/CoinModule/ui/CoinPanel"],
-[foreign26 || {}, "JavaScripts/module/CoinModule/ui/DiamondItem"],
-[foreign27 || {}, "JavaScripts/module/CoinModule/ui/DiamondPanel"],
-[foreign28 || {}, "JavaScripts/module/GMModule/GMService"],
-[foreign29 || {}, "JavaScripts/module/HUDModule/HUDData"],
-[foreign30 || {}, "JavaScripts/module/HUDModule/HUDModuleC"],
-[foreign31 || {}, "JavaScripts/module/HUDModule/HUDModuleS"],
-[foreign32 || {}, "JavaScripts/module/HUDModule/ui/HUDPanel"],
-[foreign33 || {}, "JavaScripts/module/HUDModule/ui/KillTipItem"],
-[foreign34 || {}, "JavaScripts/module/MorphModule/MorphModule"],
-[foreign35 || {}, "JavaScripts/module/NpcModule/Npc"],
-[foreign36 || {}, "JavaScripts/module/PlayerModule/AddMaxHp"],
-[foreign37 || {}, "JavaScripts/module/PlayerModule/PlayerData"],
-[foreign38 || {}, "JavaScripts/module/PlayerModule/PlayerModuleC"],
-[foreign39 || {}, "JavaScripts/module/PlayerModule/PlayerModuleS"],
-[foreign40 || {}, "JavaScripts/module/PlayerModule/TryOutGun"],
-[foreign41 || {}, "JavaScripts/module/RadarModule/RadarModuleC"],
-[foreign42 || {}, "JavaScripts/module/RadarModule/RadarModuleS"],
-[foreign43 || {}, "JavaScripts/module/RadarModule/ui/RadarPanel"],
-[foreign44 || {}, "JavaScripts/module/RankModule/RankData"],
-[foreign45 || {}, "JavaScripts/module/RankModule/RankModuleC"],
-[foreign46 || {}, "JavaScripts/module/RankModule/RankModuleS"],
-[foreign47 || {}, "JavaScripts/module/RankModule/ui/RankPanel"],
-[foreign48 || {}, "JavaScripts/module/RankModule/ui/RoomItem"],
-[foreign49 || {}, "JavaScripts/module/RankModule/ui/WorldItem"],
-[foreign50 || {}, "JavaScripts/module/ShopModule/ShopData"],
-[foreign51 || {}, "JavaScripts/module/ShopModule/ShopModuleC"],
-[foreign52 || {}, "JavaScripts/module/ShopModule/ShopModuleS"],
-[foreign53 || {}, "JavaScripts/module/ShopModule/ui/ShopItem"],
-[foreign54 || {}, "JavaScripts/module/ShopModule/ui/ShopPanel"],
-[foreign55 || {}, "JavaScripts/module/TaskModule/TaskData"],
-[foreign56 || {}, "JavaScripts/module/TaskModule/TaskModuleC"],
-[foreign57 || {}, "JavaScripts/module/TaskModule/TaskModuleS"],
-[foreign58 || {}, "JavaScripts/module/TaskModule/ui/TaskPanel"],
-[foreign59 || {}, "JavaScripts/module/TeamModule/TeamData"],
-[foreign60 || {}, "JavaScripts/module/TeamModule/TeamModuleC"],
-[foreign61 || {}, "JavaScripts/module/TeamModule/TeamModuleS"],
-[foreign62 || {}, "JavaScripts/module/TeamModule/ui/TeamItem"],
-[foreign63 || {}, "JavaScripts/module/TeamModule/ui/TeamPanel"],
-[foreign64 || {}, "JavaScripts/module/WeaponModule/Projectile"],
-[foreign65 || {}, "JavaScripts/module/WeaponModule/ProjectTarget"],
-[foreign66 || {}, "JavaScripts/module/WeaponModule/Weapon"],
-[foreign67 || {}, "JavaScripts/module/WeaponModule/WeaponData"],
-[foreign68 || {}, "JavaScripts/module/WeaponModule/WeaponModuleC"],
-[foreign69 || {}, "JavaScripts/module/WeaponModule/WeaponModuleS"],
-[foreign70 || {}, "JavaScripts/tools/EventType"],
-[foreign71 || {}, "JavaScripts/tools/FlyText"],
-[foreign72 || {}, "JavaScripts/tools/FreeCamera"],
-[foreign73 || {}, "JavaScripts/tools/GlobalData"],
-[foreign74 || {}, "JavaScripts/tools/Helper"],
-[foreign75 || {}, "JavaScripts/tools/IAPInstance"],
-[foreign76 || {}, "JavaScripts/tools/JumpGame"],
-[foreign77 || {}, "JavaScripts/tools/MapEx"],
-[foreign78 || {}, "JavaScripts/tools/PrefabEvent"],
-[foreign79 || {}, "JavaScripts/tools/Utils"],
-[foreign80 || {}, "JavaScripts/ui-generate/common/ConfirmPanel_generate"],
-[foreign81 || {}, "JavaScripts/ui-generate/common/JumpGameTips_generate"],
-[foreign82 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
-[foreign83 || {}, "JavaScripts/ui-generate/common/notice/SecondNoticeItem_generate"],
-[foreign84 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
-[foreign85 || {}, "JavaScripts/ui-generate/module/ActivityModule/ActivityPanel_generate"],
-[foreign86 || {}, "JavaScripts/ui-generate/module/AdModule/AdPanel_generate"],
-[foreign87 || {}, "JavaScripts/ui-generate/module/CoinModule/CoinPanel_generate"],
-[foreign88 || {}, "JavaScripts/ui-generate/module/CoinModule/DiamondItem_generate"],
-[foreign89 || {}, "JavaScripts/ui-generate/module/CoinModule/DiamondPanel_generate"],
-[foreign90 || {}, "JavaScripts/ui-generate/module/GMModule/GMHUD_generate"],
-[foreign91 || {}, "JavaScripts/ui-generate/module/GMModule/GMItem_generate"],
-[foreign92 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
-[foreign93 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
-[foreign94 || {}, "JavaScripts/ui-generate/module/RadarModule/RadarPanel_generate"],
-[foreign95 || {}, "JavaScripts/ui-generate/module/RankModule/RankPanel_generate"],
-[foreign96 || {}, "JavaScripts/ui-generate/module/RankModule/RoomItem_generate"],
-[foreign97 || {}, "JavaScripts/ui-generate/module/RankModule/WorldItem_generate"],
-[foreign98 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
-[foreign99 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
-[foreign100 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
-[foreign101 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
-[foreign102 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamItem_generate"],
-[foreign103 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamPanel_generate"]]);
+[foreign10 || {}, "JavaScripts/config/Morph"],
+[foreign11 || {}, "JavaScripts/config/ProjectileProp"],
+[foreign12 || {}, "JavaScripts/config/ROLE"],
+[foreign13 || {}, "JavaScripts/config/ShopItem"],
+[foreign14 || {}, "JavaScripts/config/Task"],
+[foreign15 || {}, "JavaScripts/config/TRAILING"],
+[foreign16 || {}, "JavaScripts/config/WeaponProp"],
+[foreign17 || {}, "JavaScripts/GameLauncher"],
+[foreign18 || {}, "JavaScripts/module/ActivityModule/ActivityData"],
+[foreign19 || {}, "JavaScripts/module/ActivityModule/ActivityModuleC"],
+[foreign20 || {}, "JavaScripts/module/ActivityModule/ActivityModuleS"],
+[foreign21 || {}, "JavaScripts/module/ActivityModule/ui/ActivityPanel"],
+[foreign22 || {}, "JavaScripts/module/AdModule/ui/AdPanel"],
+[foreign23 || {}, "JavaScripts/module/CoinModule/CoinData"],
+[foreign24 || {}, "JavaScripts/module/CoinModule/CoinModuleC"],
+[foreign25 || {}, "JavaScripts/module/CoinModule/CoinModuleS"],
+[foreign26 || {}, "JavaScripts/module/CoinModule/ui/CoinPanel"],
+[foreign27 || {}, "JavaScripts/module/CoinModule/ui/DiamondItem"],
+[foreign28 || {}, "JavaScripts/module/CoinModule/ui/DiamondPanel"],
+[foreign29 || {}, "JavaScripts/module/GMModule/GMService"],
+[foreign30 || {}, "JavaScripts/module/HUDModule/HUDData"],
+[foreign31 || {}, "JavaScripts/module/HUDModule/HUDModuleC"],
+[foreign32 || {}, "JavaScripts/module/HUDModule/HUDModuleS"],
+[foreign33 || {}, "JavaScripts/module/HUDModule/ui/HUDPanel"],
+[foreign34 || {}, "JavaScripts/module/HUDModule/ui/KillTipItem"],
+[foreign35 || {}, "JavaScripts/module/MorphModule/MorphModule"],
+[foreign36 || {}, "JavaScripts/module/NpcModule/Monster"],
+[foreign37 || {}, "JavaScripts/module/NpcModule/Npc"],
+[foreign38 || {}, "JavaScripts/module/PlayerModule/AddMaxHp"],
+[foreign39 || {}, "JavaScripts/module/PlayerModule/PlayerData"],
+[foreign40 || {}, "JavaScripts/module/PlayerModule/PlayerModuleC"],
+[foreign41 || {}, "JavaScripts/module/PlayerModule/PlayerModuleS"],
+[foreign42 || {}, "JavaScripts/module/PlayerModule/TryOutGun"],
+[foreign43 || {}, "JavaScripts/module/RadarModule/RadarModuleC"],
+[foreign44 || {}, "JavaScripts/module/RadarModule/RadarModuleS"],
+[foreign45 || {}, "JavaScripts/module/RadarModule/ui/RadarPanel"],
+[foreign46 || {}, "JavaScripts/module/RankModule/RankData"],
+[foreign47 || {}, "JavaScripts/module/RankModule/RankModuleC"],
+[foreign48 || {}, "JavaScripts/module/RankModule/RankModuleS"],
+[foreign49 || {}, "JavaScripts/module/RankModule/ui/RankPanel"],
+[foreign50 || {}, "JavaScripts/module/RankModule/ui/RoomItem"],
+[foreign51 || {}, "JavaScripts/module/RankModule/ui/WorldItem"],
+[foreign52 || {}, "JavaScripts/module/ShopModule/ShopData"],
+[foreign53 || {}, "JavaScripts/module/ShopModule/ShopModuleC"],
+[foreign54 || {}, "JavaScripts/module/ShopModule/ShopModuleS"],
+[foreign55 || {}, "JavaScripts/module/ShopModule/ui/ShopItem"],
+[foreign56 || {}, "JavaScripts/module/ShopModule/ui/ShopPanel"],
+[foreign57 || {}, "JavaScripts/module/TaskModule/TaskData"],
+[foreign58 || {}, "JavaScripts/module/TaskModule/TaskModuleC"],
+[foreign59 || {}, "JavaScripts/module/TaskModule/TaskModuleS"],
+[foreign60 || {}, "JavaScripts/module/TaskModule/ui/TaskPanel"],
+[foreign61 || {}, "JavaScripts/module/TeamModule/TeamData"],
+[foreign62 || {}, "JavaScripts/module/TeamModule/TeamModuleC"],
+[foreign63 || {}, "JavaScripts/module/TeamModule/TeamModuleS"],
+[foreign64 || {}, "JavaScripts/module/TeamModule/ui/TeamItem"],
+[foreign65 || {}, "JavaScripts/module/TeamModule/ui/TeamPanel"],
+[foreign66 || {}, "JavaScripts/module/WeaponModule/Projectile"],
+[foreign67 || {}, "JavaScripts/module/WeaponModule/ProjectTarget"],
+[foreign68 || {}, "JavaScripts/module/WeaponModule/Weapon"],
+[foreign69 || {}, "JavaScripts/module/WeaponModule/WeaponData"],
+[foreign70 || {}, "JavaScripts/module/WeaponModule/WeaponModuleC"],
+[foreign71 || {}, "JavaScripts/module/WeaponModule/WeaponModuleS"],
+[foreign72 || {}, "JavaScripts/tools/EventType"],
+[foreign73 || {}, "JavaScripts/tools/FlyText"],
+[foreign74 || {}, "JavaScripts/tools/FreeCamera"],
+[foreign75 || {}, "JavaScripts/tools/GlobalData"],
+[foreign76 || {}, "JavaScripts/tools/Helper"],
+[foreign77 || {}, "JavaScripts/tools/IAPInstance"],
+[foreign78 || {}, "JavaScripts/tools/JumpGame"],
+[foreign79 || {}, "JavaScripts/tools/MapEx"],
+[foreign80 || {}, "JavaScripts/tools/PrefabEvent"],
+[foreign81 || {}, "JavaScripts/tools/Utils"],
+[foreign82 || {}, "JavaScripts/ui-generate/common/ConfirmPanel_generate"],
+[foreign83 || {}, "JavaScripts/ui-generate/common/JumpGameTips_generate"],
+[foreign84 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
+[foreign85 || {}, "JavaScripts/ui-generate/common/notice/SecondNoticeItem_generate"],
+[foreign86 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
+[foreign87 || {}, "JavaScripts/ui-generate/module/ActivityModule/ActivityPanel_generate"],
+[foreign88 || {}, "JavaScripts/ui-generate/module/AdModule/AdPanel_generate"],
+[foreign89 || {}, "JavaScripts/ui-generate/module/CoinModule/CoinPanel_generate"],
+[foreign90 || {}, "JavaScripts/ui-generate/module/CoinModule/DiamondItem_generate"],
+[foreign91 || {}, "JavaScripts/ui-generate/module/CoinModule/DiamondPanel_generate"],
+[foreign92 || {}, "JavaScripts/ui-generate/module/GMModule/GMHUD_generate"],
+[foreign93 || {}, "JavaScripts/ui-generate/module/GMModule/GMItem_generate"],
+[foreign94 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
+[foreign95 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
+[foreign96 || {}, "JavaScripts/ui-generate/module/NpcModule/EnemyLifebar_generate"],
+[foreign97 || {}, "JavaScripts/ui-generate/module/RadarModule/RadarPanel_generate"],
+[foreign98 || {}, "JavaScripts/ui-generate/module/RankModule/RankPanel_generate"],
+[foreign99 || {}, "JavaScripts/ui-generate/module/RankModule/RoomItem_generate"],
+[foreign100 || {}, "JavaScripts/ui-generate/module/RankModule/WorldItem_generate"],
+[foreign101 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
+[foreign102 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
+[foreign103 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
+[foreign104 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
+[foreign105 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamItem_generate"],
+[foreign106 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamPanel_generate"]]);
 
 exports.MWFileMapping = MWFileMapping;
 exports.MWModuleMap = MWModuleMap;

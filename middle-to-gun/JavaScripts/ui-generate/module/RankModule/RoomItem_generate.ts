@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/RoomItem.ui
- * TIME: 2024.06.22-23.56.51
+ * TIME: 2024.07.27-14.36.09
  */
  
 @UIBind('UI/module/RankModule/RoomItem.ui')

@@ -342,14 +342,39 @@ export default class Utils {
     }
 
     private static redTeamRevivalPoint: mw.Vector[] = [
-        new mw.Vector(-1764.48, 2329, 200),
-        new mw.Vector(-2123.19, 2329, 200),
-        new mw.Vector(-2497.86, 2329, 200)
+        new mw.Vector(2864, -16725, -1072 + 50),
+        new mw.Vector(7956, -20613, -1049 + 50),
+        new mw.Vector(7206, -24261, -542 + 50),
+        new mw.Vector(1821, -33018, 3123 + 50),
+        new mw.Vector(-1236, -23916, 622 + 50),
+        new mw.Vector(1577, -22954, -8 + 50),
+        new mw.Vector(2000, -24419, 1784 + 50),
+        new mw.Vector(3699, -29412, 2360 + 50),
+        new mw.Vector(6602, -32339, 20 + 50),
+        new mw.Vector(-8218, -38356, 186 + 50),
+        new mw.Vector(-9115, -41395, 221 + 50),
+        new mw.Vector(-7045, -28173, -85 + 50),
+        new mw.Vector(-4844, -23316, -39 + 50),
+        new mw.Vector(4475, -21238, -1049 + 50),
+        new mw.Vector(810, -20290, -1049 + 50)
     ];
     private static blueTeamRevivalPoint: mw.Vector[] = [
-        new mw.Vector(-2310.74, -2875, 100),
-        new mw.Vector(-2047.45, -2875, 100),
-        new mw.Vector(-1739.05, -2875, 100),
+        new mw.Vector(2864, -16725, -1072 + 50),
+        new mw.Vector(7956, -20613, -1049 + 50),
+        new mw.Vector(7206, -24261, -542 + 50),
+        new mw.Vector(1821, -33018, 3123 + 50),
+        new mw.Vector(-3757, -30749, -3 + 50),
+        new mw.Vector(-1236, -23916, 622 + 50),
+        new mw.Vector(1577, -22954, -8 + 50),
+        new mw.Vector(2000, -24419, 1784 + 50),
+        new mw.Vector(3699, -29412, 2360 + 50),
+        new mw.Vector(6602, -32339, 20 + 50),
+        new mw.Vector(-8218, -38356, 186 + 50),
+        new mw.Vector(-9115, -41395, 221 + 50),
+        new mw.Vector(-7045, -28173, -85 + 50),
+        new mw.Vector(-4844, -23316, -39 + 50),
+        new mw.Vector(4475, -21238, -1049 + 50),
+        new mw.Vector(810, -20290, -1049 + 50)
     ];
     public static randomRevivalPoint(isRedTeam: boolean): mw.Vector {
         if (isRedTeam) {

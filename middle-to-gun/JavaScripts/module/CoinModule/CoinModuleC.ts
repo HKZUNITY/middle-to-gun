@@ -137,7 +137,7 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
 
     //#region Ads
     private defaultAds(): void {
-        this.delay30Seconds();
+        // this.delay30Seconds();
         this.setInterval180Seconds();
     }
 
@@ -154,7 +154,7 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
             this.getAdPanel.showRewardAd(() => {
                 this.setDiamond(2);
             }, "幸运大礼包\n免费获得2个钻石");
-        }, 180);
+        }, 300);
     }
 
     private isFirst: boolean = true;
