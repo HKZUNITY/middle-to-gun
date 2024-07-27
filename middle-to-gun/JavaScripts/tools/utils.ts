@@ -347,7 +347,7 @@ export default class Utils {
         new mw.Vector(4653, -23490, -124 + 50),
         new mw.Vector(7129, -24264, -542 + 50),
         new mw.Vector(7000, -27302, -233 + 50),
-        new mw.Vector(6765, 30253, 15 + 50),
+        new mw.Vector(6765, -30253, 15 + 50),
         new mw.Vector(5365, -17863, -1049 + 50),
         new mw.Vector(8128, -20456, -1049 + 50),
         new mw.Vector(2722, -15637, -1196 + 50)
@@ -358,7 +358,7 @@ export default class Utils {
         new mw.Vector(4653, -23490, -124 + 50),
         new mw.Vector(7129, -24264, -542 + 50),
         new mw.Vector(7000, -27302, -233 + 50),
-        new mw.Vector(6765, 30253, 15 + 50),
+        new mw.Vector(6765, -30253, 15 + 50),
         new mw.Vector(5365, -17863, -1049 + 50),
         new mw.Vector(8128, -20456, -1049 + 50),
         new mw.Vector(2722, -15637, -1196 + 50)
