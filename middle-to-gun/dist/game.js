@@ -2230,6 +2230,11 @@ class MonsterInfoConfig extends ConfigBase {
     }
 }
 
+var foreign9 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    MonsterInfoConfig: MonsterInfoConfig
+});
+
 const EXCELDATA$6 = [["ID", "AssetId", "OffsetPos", "OffsetRot", "OffsetSca"], ["", "", "", "", ""], [1, "20686", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [2, "20689", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [3, "20693", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [4, "20707", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [5, "20741", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [6, "20799", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [7, "20910", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [8, "20957", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [9, "21007", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [10, "21034", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [11, "21037", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(0.3, 0.3, 0.3)], [12, "22879", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [13, "22881", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [14, "22905", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [15, "22906", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [16, "22907", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [17, "22913", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [18, "22921", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [19, "22926", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [20, "22951", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [21, "22940", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [22, "22972", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [23, "22966", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [24, "22969", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [25, "22986", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [26, "22981", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [27, "23001", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [28, "23018", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [29, "23020", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [30, "23043", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [31, "23071", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [32, "23072", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [33, "23102", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)]];
 class MorphConfig extends ConfigBase {
     constructor() {
@@ -14411,6 +14416,7 @@ const MWModuleMap = {
      '9B86B84E423B84B77E564D8B0651277C': foreign6,
      '166E934A4902E0274794828A310EFA30': foreign7,
      '6374DD3342310CB36D6D868EC5478FF4': foreign8,
+     '6C209C17410545628474A881C3F3B0F2': foreign9,
      'EC2961B34147096FC9DBC2971DD9AA53': foreign10,
      '6A277D5049CE2CE92CD7339A98FE615B': foreign11,
      'E19C4FBC41BEE3AD41222B8D64AAD365': foreign12,
@@ -14518,6 +14524,7 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/ConfirmP
 [foreign6 || {}, "JavaScripts/config/ConfigBase"],
 [foreign7 || {}, "JavaScripts/config/GameConfig"],
 [foreign8 || {}, "JavaScripts/config/GUN"],
+[foreign9 || {}, "JavaScripts/config/MonsterInfo"],
 [foreign10 || {}, "JavaScripts/config/Morph"],
 [foreign11 || {}, "JavaScripts/config/ProjectileProp"],
 [foreign12 || {}, "JavaScripts/config/ROLE"],
