@@ -79,22 +79,11 @@ export default class TryOutGun extends Script {
         let gunElement = GameConfig.GUN.getElement(this.gunkey);
         this.getAdPanel.showRewardAd(() => {
             character.movementEnabled = false;
-            if (!GlobalData.isOpenIAA) {
-                if (!this.gunkey) return;
-                this.getGunModuleC.switchGun(this.gunkey);
-                this.switchGunModel(Utils.randomInt(10, 14));
-                TimeUtil.delaySecond(2).then(() => {
-                    character.movementEnabled = true;
-                });
-                return;
-            }
-            Utils.showRewardAd(() => {
-                if (!this.gunkey) return;
-                this.getGunModuleC.switchGun(this.gunkey);
-                this.switchGunModel(Utils.randomInt(10, 14));
-                TimeUtil.delaySecond(2).then(() => {
-                    character.movementEnabled = true;
-                });
+            if (!this.gunkey) return;
+            this.getGunModuleC.switchGun(this.gunkey);
+            this.switchGunModel(Utils.randomInt(10, 14));
+            TimeUtil.delaySecond(2).then(() => {
+                character.movementEnabled = true;
             });
         }, gunElement.GUNNAME + "\n免费试用一局", "取消", "试用");
     }

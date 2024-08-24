@@ -97,13 +97,7 @@ export default class ActivityPanel extends ActivityPanel_Generate {
 	private onClickAdsGetButton(): void {
 		if (!this.isHasCondition(true)) return;
 		this.getAdPanel.showRewardAd(() => {
-			if (!GlobalData.isOpenIAA) {
-				this.setGetActivity();
-				return;
-			}
-			Utils.showRewardAd(() => {
-				this.setGetActivity();
-			});
+			this.setGetActivity();
 		}, "免费领取" + this.getActicityShopTypeStr());
 	}
 
