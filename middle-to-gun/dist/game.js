@@ -6024,12 +6024,12 @@ class GunModuleS extends ModuleS {
     async switchGun(gunId, player) {
         player.character.movementEnabled = false;
         let weapon = await GameObject.asyncSpawn(GameConfig.GUN.getElement(gunId).GUNPREFAB, {
-            replicates: true,
-            // transform: new mw.Transform(player.character.worldTransform.position, mw.Rotation.zero, mw.Vector.one)
+            replicates: true
         });
         await weapon.asyncReady();
         player.character.attachToSlot(weapon, mw.HumanoidSlotType.BackOrnamental);
         weapon.localTransform.position = mw.Vector.zero;
+        weapon.localTransform.rotation = mw.Rotation.zero;
         player.character.movementEnabled = true;
         await TimeUtil.delaySecond(2);
         let userId = player.userId;
@@ -12440,8 +12440,14 @@ let WeaponDriver = class WeaponDriver extends mw.Script {
         if (this.pickUpTrigger) {
             if (this.pickUpTrigger.checkInArea(this.chara)) {
                 this.serverEquip(this.player.playerId);
-                // console.error("B");
+                console.error("B");
             }
+            this.pickUpTrigger.onEnter.add((char) => {
+                if (char.gameObjectId == this.chara.gameObjectId) {
+                    this.serverEquip(this.player.playerId);
+                    console.error("A");
+                }
+            });
         }
     }
     /* 服务端装备 */

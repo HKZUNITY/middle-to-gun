@@ -1311,8 +1311,14 @@ export default class WeaponDriver extends mw.Script {
 		if (this.pickUpTrigger) {
 			if (this.pickUpTrigger.checkInArea(this.chara)) {
 				this.serverEquip(this.player.playerId);
-				// console.error("B");
+				console.error("B");
 			}
+			this.pickUpTrigger.onEnter.add((char: mw.Character) => {
+				if (char.gameObjectId == this.chara.gameObjectId) {
+					this.serverEquip(this.player.playerId);
+					console.error("A");
+				}
+			});
 		}
 	}
 
