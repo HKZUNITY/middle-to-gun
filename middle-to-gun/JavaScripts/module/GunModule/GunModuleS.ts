@@ -47,13 +47,13 @@ export default class GunModuleS extends ModuleS<GunModuleC, null> {
         let weapon = await GameObject.asyncSpawn<mw.GameObject>(
             GameConfig.GUN.getElement(gunId).GUNPREFAB,
             {
-                replicates: true,
-                // transform: new mw.Transform(player.character.worldTransform.position, mw.Rotation.zero, mw.Vector.one)
+                replicates: true
             }
         );
         await weapon.asyncReady();
         player.character.attachToSlot(weapon, mw.HumanoidSlotType.BackOrnamental);
         weapon.localTransform.position = mw.Vector.zero;
+        weapon.localTransform.rotation = mw.Rotation.zero;
         player.character.movementEnabled = true;
 
         await TimeUtil.delaySecond(2);
