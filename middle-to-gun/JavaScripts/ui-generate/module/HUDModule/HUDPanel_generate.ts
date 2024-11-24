@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.11.24-20.37.19
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -98,6 +98,13 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mShopButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_2/ShopCanvas/mShopButton') as mw.Button
 		}
 		return this.mShopButton_Internal
+	}
+	private mClothesButton_Internal: mw.Button
+	public get mClothesButton(): mw.Button {
+		if(!this.mClothesButton_Internal&&this.uiWidgetBase) {
+			this.mClothesButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_2/ClothesCanvas/mClothesButton') as mw.Button
+		}
+		return this.mClothesButton_Internal
 	}
 	private mActivityButton_Internal: mw.Button
 	public get mActivityButton(): mw.Button {
@@ -371,6 +378,12 @@ export default class HUDPanel_Generate extends UIScript {
 			Event.dispatchToLocal("PlayButtonClick", "mShopButton");
 		});
 		this.mShopButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
+		this.mClothesButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mClothesButton");
+		});
+		this.mClothesButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
 		this.mActivityButton.onClicked.add(()=>{

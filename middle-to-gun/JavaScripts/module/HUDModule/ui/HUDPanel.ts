@@ -55,6 +55,7 @@ export default class HUDPanel extends HUDPanel_Generate {
         this.mMorphButton.onClicked.add(this.onClickMorphButton.bind(this));
         this.mUnMorphButton.onClicked.add(this.onClickUnMorphButton.bind(this));
         this.mJumpButton.onClicked.add(this.onClickJumpButton.bind(this));
+        this.mClothesButton.onClicked.add(this.onClickClothesButton.bind(this));
         this.bindSetButton();
     }
 
@@ -80,6 +81,10 @@ export default class HUDPanel extends HUDPanel_Generate {
 
     private onClickResetPosButton(): void {
         this.getHUDModuleC.onResetPosAction.call();
+    }
+
+    private onClickClothesButton(): void {
+        this.getHUDModuleC.onClothesAction.call();
     }
 
     private onClickMorphButton(): void {
@@ -269,7 +274,6 @@ export default class HUDPanel extends HUDPanel_Generate {
             .onComplete(() => {
                 Utils.setWidgetVisibility(this.mInvincibleCanvas, mw.SlateVisibility.Collapsed);
                 this.stopFlickerText();
-                this.getCoinModuleC.dieAds();
             })
             .start();
     }
