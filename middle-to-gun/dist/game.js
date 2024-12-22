@@ -29,7 +29,7 @@ function __decorate(decorators, target, key, desc) {
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/NoticeView.ui
- * TIME: 2024.05.23-21.30.01
+ * TIME: 2024.12.22-16.14.26
  */
 let NoticeView_Generate = class NoticeView_Generate extends UIScript {
     get con_top_notice() {
@@ -96,7 +96,7 @@ var foreign77 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/TopNoticeItem.ui
- * TIME: 2024.05.23-21.30.01
+ * TIME: 2024.12.22-16.14.26
  */
 let TopNoticeItem_Generate = class TopNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -1804,7 +1804,7 @@ var foreign74 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/ConfirmPanel.ui
- * TIME: 2024.05.23-21.30.01
+ * TIME: 2024.12.22-16.14.26
  */
 let ConfirmPanel_Generate = class ConfirmPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -2237,7 +2237,7 @@ var foreign66 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/CoinPanel.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.12.22-16.14.26
  */
 let CoinPanel_Generate = class CoinPanel_Generate extends UIScript {
     get mCoinCanvas() {
@@ -2332,7 +2332,7 @@ var foreign82 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdModule/AdPanel.ui
- * TIME: 2024.05.29-20.45.26
+ * TIME: 2024.12.22-16.14.26
  */
 let AdPanel_Generate = class AdPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -2668,7 +2668,7 @@ class CoinModuleC extends ModuleC {
     //#endregion
     //#region Ads
     defaultAds() {
-        this.delay10Seconds();
+        // this.delay10Seconds();
         this.setInterval180Seconds();
     }
     delay10Seconds() {
@@ -2683,7 +2683,7 @@ class CoinModuleC extends ModuleC {
             this.getAdPanel.showRewardAd(() => {
                 this.setDiamond(2);
             }, "幸运大礼包\n免费获得2个钻石");
-        }, 180);
+        }, 360);
     }
     dieAds() {
         if (this.isFirst) {
@@ -2798,7 +2798,7 @@ var foreign31 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.12.22-16.14.26
  */
 let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     get mVirtualJoystickPanel() {
@@ -2827,57 +2827,63 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     }
     get mSetButton() {
         if (!this.mSetButton_Internal && this.uiWidgetBase) {
-            this.mSetButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_1/SetCanvas/mSetButton');
+            this.mSetButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/SetCanvas/mSetButton');
         }
         return this.mSetButton_Internal;
     }
     get mRankButton() {
         if (!this.mRankButton_Internal && this.uiWidgetBase) {
-            this.mRankButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_1/RankCanvas/mRankButton');
+            this.mRankButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/RankCanvas/mRankButton');
         }
         return this.mRankButton_Internal;
     }
     get mTaskButton() {
         if (!this.mTaskButton_Internal && this.uiWidgetBase) {
-            this.mTaskButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_1/TaskCanvas/mTaskButton');
+            this.mTaskButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TaskCanvas/mTaskButton');
         }
         return this.mTaskButton_Internal;
     }
     get mTaskPointImage() {
         if (!this.mTaskPointImage_Internal && this.uiWidgetBase) {
-            this.mTaskPointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_1/TaskCanvas/mTaskPointImage');
+            this.mTaskPointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TaskCanvas/mTaskPointImage');
         }
         return this.mTaskPointImage_Internal;
     }
     get mTaskBgImage() {
         if (!this.mTaskBgImage_Internal && this.uiWidgetBase) {
-            this.mTaskBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_1/TaskCanvas/mTaskBgImage');
+            this.mTaskBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TaskCanvas/mTaskBgImage');
         }
         return this.mTaskBgImage_Internal;
     }
     get mTeamButton() {
         if (!this.mTeamButton_Internal && this.uiWidgetBase) {
-            this.mTeamButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_2/TeamCanvas/mTeamButton');
+            this.mTeamButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TeamCanvas/mTeamButton');
         }
         return this.mTeamButton_Internal;
     }
     get mTeamBgImage() {
         if (!this.mTeamBgImage_Internal && this.uiWidgetBase) {
-            this.mTeamBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_2/TeamCanvas/mTeamBgImage');
+            this.mTeamBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TeamCanvas/mTeamBgImage');
         }
         return this.mTeamBgImage_Internal;
     }
     get mTeamIconImage() {
         if (!this.mTeamIconImage_Internal && this.uiWidgetBase) {
-            this.mTeamIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_2/TeamCanvas/mTeamIconImage');
+            this.mTeamIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TeamCanvas/mTeamIconImage');
         }
         return this.mTeamIconImage_Internal;
     }
     get mShopButton() {
         if (!this.mShopButton_Internal && this.uiWidgetBase) {
-            this.mShopButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_2/ShopCanvas/mShopButton');
+            this.mShopButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/ShopCanvas/mShopButton');
         }
         return this.mShopButton_Internal;
+    }
+    get mRoleButton() {
+        if (!this.mRoleButton_Internal && this.uiWidgetBase) {
+            this.mRoleButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/RoleCanvas/mRoleButton');
+        }
+        return this.mRoleButton_Internal;
     }
     get mActivityButton() {
         if (!this.mActivityButton_Internal && this.uiWidgetBase) {
@@ -3106,6 +3112,10 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
             Event.dispatchToLocal("PlayButtonClick", "mShopButton");
         });
         this.mShopButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mRoleButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mRoleButton");
+        });
+        this.mRoleButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         this.mActivityButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mActivityButton");
         });
@@ -3200,7 +3210,7 @@ var foreign88 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/KillTipItem.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.12.22-16.14.26
  */
 let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
     get mBgImage() {
@@ -3378,6 +3388,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.mMorphButton.onClicked.add(this.onClickMorphButton.bind(this));
         this.mUnMorphButton.onClicked.add(this.onClickUnMorphButton.bind(this));
         this.mJumpButton.onClicked.add(this.onClickJumpButton.bind(this));
+        this.mRoleButton.onClicked.add(this.onClickOpenRoleButton.bind(this));
         this.bindSetButton();
     }
     onClickOpenShopButton() {
@@ -3397,6 +3408,9 @@ class HUDPanel extends HUDPanel_Generate$1 {
     }
     onClickResetPosButton() {
         this.getHUDModuleC.onResetPosAction.call();
+    }
+    onClickOpenRoleButton() {
+        this.getHUDModuleC.onOpenRoleAction.call();
     }
     onClickMorphButton() {
         this.getHUDModuleC.onMorphAction.call(true);
@@ -3713,6 +3727,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.initTeamTweens();
         this.initShakeActivityTween();
         this.initShakeShopTween();
+        this.initShakeRoleTween();
         this.initMorphButtonTween();
     }
     //#region RankTween
@@ -3768,8 +3783,8 @@ class HUDPanel extends HUDPanel_Generate$1 {
             .easing(cubicBezier(0.25, 0.1, 0.25, 1));
     }
     initTaskTween() {
-        let leftToRight = this.getPosTween(this.mTaskBgImage, 0.5, 0, 25, 50, 25);
-        let rightToLeft = this.getPosTween(this.mTaskBgImage, 0.5, 50, 25, 0, 25);
+        let leftToRight = this.getPosTween(this.mTaskBgImage, 0.5, 0, 15, 40, 15);
+        let rightToLeft = this.getPosTween(this.mTaskBgImage, 0.5, 40, 15, 0, 15);
         leftToRight.start().onComplete(() => {
             TimeUtil.delaySecond(0.1).then(() => {
                 rightToLeft.start().onComplete(() => {
@@ -3814,6 +3829,21 @@ class HUDPanel extends HUDPanel_Generate$1 {
     initShakeShopTween() {
         let rightBigToLeftSmall = this.getShakeScaleTween(this.mShopButton, 0.8, 20, -20, 1.1, 0.9);
         let leftSamllToRightBig = this.getShakeScaleTween(this.mShopButton, 0.8, -20, 20, 0.9, 1.1);
+        rightBigToLeftSmall.start().onComplete(() => {
+            TimeUtil.delaySecond(0.1).then(() => {
+                leftSamllToRightBig.start().onComplete(() => {
+                    TimeUtil.delaySecond(0.1).then(() => {
+                        rightBigToLeftSmall.start();
+                    });
+                });
+            });
+        });
+    }
+    //#endregion
+    //#region ShopTween
+    initShakeRoleTween() {
+        let rightBigToLeftSmall = this.getShakeScaleTween(this.mRoleButton, 0.8, 20, -20, 1.1, 0.9);
+        let leftSamllToRightBig = this.getShakeScaleTween(this.mRoleButton, 0.8, -20, 20, 0.9, 1.1);
         rightBigToLeftSmall.start().onComplete(() => {
             TimeUtil.delaySecond(0.1).then(() => {
                 leftSamllToRightBig.start().onComplete(() => {
@@ -3956,6 +3986,7 @@ class HUDModuleC extends ModuleC {
         this.onResetPosAction = new Action();
         this.onMorphAction = new Action1();
         this.onJumpAction = new Action();
+        this.onOpenRoleAction = new Action();
         //#endregion
         //#region 连杀提示
         this.killCountMap = new Map();
@@ -3992,6 +4023,7 @@ class HUDModuleC extends ModuleC {
         this.initSoundEvent();
         this.initMorphAction();
         this.onJumpAction.add(this.addJumpAction.bind(this));
+        this.onOpenRoleAction.add(this.addOpenRoleAction.bind(this));
         Event.addLocalListener(EventType.OnOffMainHUD, this.addOnOffHUDPannel.bind(this));
         let isOpen = true;
         InputUtil.onKeyDown(mw.Keys.NumPadFive, () => {
@@ -4007,6 +4039,9 @@ class HUDModuleC extends ModuleC {
         this.localPlayer.character.jump();
         if (!this.localPlayer.character.movementEnabled)
             this.localPlayer.character.movementEnabled = true;
+    }
+    addOpenRoleAction() {
+        AvatarEditorService.asyncOpenAvatarEditorModule();
     }
     onEnterScene(sceneType) {
         this.getHUDPanel.show();
@@ -4407,7 +4442,7 @@ var foreign52 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopPanel.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.12.22-16.14.26
  */
 let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
     get mTabCanvas() {
@@ -4517,7 +4552,7 @@ var foreign95 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopItem.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.12.22-16.14.26
  */
 let ShopItem_Generate = class ShopItem_Generate extends UIScript {
     get mICONImage() {
@@ -5170,8 +5205,7 @@ class ShopModuleC extends ModuleC {
     initUseShopItem() {
         if (MapEx.has(this.useShopIds, ShopType.Gun))
             this.setCharacterGun();
-        if (MapEx.has(this.useShopIds, ShopType.Role))
-            this.setCharacterDescription(MapEx.get(this.useShopIds, ShopType.Role));
+        // if (MapEx.has(this.useShopIds, ShopType.Role)) this.setCharacterDescription(MapEx.get(this.useShopIds, ShopType.Role));
         if (MapEx.has(this.useShopIds, ShopType.Trailing))
             this.setCharacterTrailing(MapEx.get(this.useShopIds, ShopType.Trailing));
     }
@@ -5239,10 +5273,10 @@ class ShopModuleC extends ModuleC {
     }
     useShopItem(shopId, shopType) {
         this.previewShopItem(shopId, shopType);
-        if (!this.setUseShopId(shopType, shopId)) {
-            Notice.showDownNotice("穿戴中");
-            return;
-        }
+        // if (!this.setUseShopId(shopType, shopId)) {
+        //     Notice.showDownNotice("穿戴中");
+        //     return;
+        // }
         switch (shopType) {
             case ShopType.Gun:
                 // this.setCharacterGun(shopId);
@@ -5437,7 +5471,7 @@ var foreign53 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ActivityModule/ActivityPanel.ui
- * TIME: 2024.05.23-21.30.01
+ * TIME: 2024.12.22-16.14.26
  */
 let ActivityPanel_Generate = class ActivityPanel_Generate extends UIScript {
     get mWhatDayTextBlock() {
@@ -6390,7 +6424,7 @@ var foreign46 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/RankPanel.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.12.22-16.14.26
  */
 let RankPanel_Generate = class RankPanel_Generate extends UIScript {
     get mRoomCanvas() {
@@ -6528,7 +6562,7 @@ var foreign91 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/RoomItem.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.12.22-16.14.26
  */
 let RoomItem_Generate = class RoomItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -6632,7 +6666,7 @@ var foreign50 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/WorldItem.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.12.22-16.14.26
  */
 let WorldItem_Generate = class WorldItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -7191,7 +7225,7 @@ var foreign61 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TeamModule/TeamPanel.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.12.22-16.14.26
  */
 let TeamPanel_Generate = class TeamPanel_Generate extends UIScript {
     get mMainCanvas() {
@@ -7292,7 +7326,7 @@ var foreign99 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TeamModule/TeamItem.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.12.22-16.14.26
  */
 let TeamItem_Generate = class TeamItem_Generate extends UIScript {
     get mBgImage() {
@@ -9597,7 +9631,7 @@ var foreign54 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.12.22-16.14.26
  */
 let TaskItem_Generate = class TaskItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -9697,7 +9731,7 @@ var foreign96 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskPanel.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.12.22-16.14.26
  */
 let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
     get mDailyTimeTextBlock() {
@@ -10661,7 +10695,7 @@ var foreign25 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GMModule/GMHUD.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.12.22-16.14.26
  */
 let GMHUD_Generate = class GMHUD_Generate extends UIScript {
     get oKbutton() {
@@ -10751,7 +10785,7 @@ var foreign85 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GMModule/GMItem.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.12.22-16.14.26
  */
 let GMItem_Generate = class GMItem_Generate extends UIScript {
     get button() {
@@ -11029,7 +11063,7 @@ var foreign26 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GunModule/WeaponUI.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.12.22-16.14.26
  */
 let WeaponUI_Generate = class WeaponUI_Generate extends UIScript {
     get point() {
@@ -13948,7 +13982,7 @@ var foreign71 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/JumpGameTips.ui
- * TIME: 2024.05.23-21.30.01
+ * TIME: 2024.12.22-16.14.26
  */
 let JumpGameTips_Generate = class JumpGameTips_Generate extends UIScript {
     onAwake() {
@@ -13998,7 +14032,7 @@ var foreign76 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/SecondNoticeItem.ui
- * TIME: 2024.05.23-21.30.01
+ * TIME: 2024.12.22-16.14.26
  */
 let SecondNoticeItem_Generate = class SecondNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -14066,7 +14100,7 @@ var foreign78 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/DiamondItem.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.12.22-16.14.26
  */
 let DiamondItem_Generate = class DiamondItem_Generate extends UIScript {
     get mFirstBuyTextBlock() {
@@ -14178,7 +14212,7 @@ var foreign83 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/DiamondPanel.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.12.22-16.14.26
  */
 let DiamondPanel_Generate = class DiamondPanel_Generate extends UIScript {
     get mMainCanvas() {
@@ -14269,7 +14303,7 @@ var foreign84 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RadarModule/RadarPanel.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2024.12.22-16.14.26
  */
 let RadarPanel_Generate = class RadarPanel_Generate extends UIScript {
     onAwake() {

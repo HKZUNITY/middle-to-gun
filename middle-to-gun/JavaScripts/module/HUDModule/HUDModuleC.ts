@@ -23,6 +23,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     public onResetPosAction: Action = new Action();
     public onMorphAction: Action1<boolean> = new Action1<boolean>();
     public onJumpAction: Action = new Action();
+    public onOpenRoleAction: Action = new Action();
 
     protected onStart(): void {
         this.initUIPanel();
@@ -38,6 +39,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
         this.initSoundEvent();
         this.initMorphAction();
         this.onJumpAction.add(this.addJumpAction.bind(this));
+        this.onOpenRoleAction.add(this.addOpenRoleAction.bind(this));
         Event.addLocalListener(EventType.OnOffMainHUD, this.addOnOffHUDPannel.bind(this));
         let isOpen = true;
         InputUtil.onKeyDown(mw.Keys.NumPadFive, () => {
@@ -54,6 +56,10 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     private addJumpAction(): void {
         this.localPlayer.character.jump();
         if (!this.localPlayer.character.movementEnabled) this.localPlayer.character.movementEnabled = true;
+    }
+
+    private addOpenRoleAction(): void {
+        AvatarEditorService.asyncOpenAvatarEditorModule();
     }
 
     protected onEnterScene(sceneType: number): void {

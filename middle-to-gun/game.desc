@@ -1,12 +1,13 @@
 ﻿{
+	"IsHorizontal": true,
 	"name": "激光躲猫猫",
 	"packageName": "E02D8744462149FE0DA44BAD666C20BA",
 	"foldername": "middle-to-gun",
 	"mainScene": 1,
 	"scenePublic": 1,
-	"intro": "修复线上报错",
-	"notes": "修复线上报错",
-	"editorVersion": "v0.36.0.6",
+	"intro": "使用平台形象、接入角色组件",
+	"notes": "使用平台形象、接入角色组件",
+	"editorVersion": "v0.41.0.6",
 	"parentGameIdentity": "",
 	"parentGameId": "",
 	"extra": "{\"attribute\":2,\"IsHorizontal\":true,\"useAvatar\":1}",
@@ -14,10 +15,24 @@
 	"needToMgs": 0,
 	"attribute": 2,
 	"autoSubmitAudit": false,
-	"ignore": [
-		"game.desc",
-		"Asset_Data_List"
-	],
+	"lightZipIgnore":
+	{
+		"suffixMatches": [
+			".meta",
+			".ts",
+			".ui",
+			".uimap",
+			".mat"
+		],
+		"fullMatches": [
+			"Asset_Data_List"
+		],
+		"prefixMatches": [
+			"AutoBackup/",
+			"JavaScripts/",
+			"Plugins/"
+		]
+	},
 	"files": [
 		{
 			"type": "Game_Thumbnail",
