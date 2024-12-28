@@ -4417,17 +4417,17 @@ class ShopData extends Subdata {
         for (let i = 1; i < 14; ++i) {
             weaponIds.push(i);
         }
-        MapEx.set(this.shopIds, 1, weaponIds);
+        MapEx.set(this.shopIds, ShopType.Gun, weaponIds);
         let skinIds = [];
         for (let i = 1; i < 34; ++i) {
             skinIds.push(i);
         }
-        MapEx.set(this.shopIds, 2, skinIds);
+        MapEx.set(this.shopIds, ShopType.Role, skinIds);
         let trailIds = [];
         for (let i = 1; i < 63; ++i) {
             trailIds.push(i);
         }
-        MapEx.set(this.shopIds, 3, trailIds);
+        MapEx.set(this.shopIds, ShopType.Trailing, trailIds);
         this.save(false);
     }
 }
@@ -5336,10 +5336,10 @@ class ShopModuleC extends ModuleC {
     }
     useShopItem(shopId, shopType) {
         this.previewShopItem(shopId, shopType);
-        // if (!this.setUseShopId(shopType, shopId)) {
-        //     Notice.showDownNotice("穿戴中");
-        //     return;
-        // }
+        if (!this.setUseShopId(shopType, shopId)) {
+            Notice.showDownNotice("穿戴中");
+            return;
+        }
         switch (shopType) {
             case ShopType.Gun:
                 // this.setCharacterGun(shopId);

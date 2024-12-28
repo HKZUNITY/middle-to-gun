@@ -206,10 +206,10 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
 
     public useShopItem(shopId: number, shopType: ShopType): void {
         this.previewShopItem(shopId, shopType);
-        // if (!this.setUseShopId(shopType, shopId)) {
-        //     Notice.showDownNotice("穿戴中");
-        //     return;
-        // }
+        if (!this.setUseShopId(shopType, shopId)) {
+            Notice.showDownNotice("穿戴中");
+            return;
+        }
         switch (shopType) {
             case ShopType.Gun:
                 // this.setCharacterGun(shopId);
