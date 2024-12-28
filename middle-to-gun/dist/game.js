@@ -5273,10 +5273,10 @@ class ShopModuleC extends ModuleC {
     }
     useShopItem(shopId, shopType) {
         this.previewShopItem(shopId, shopType);
-        // if (!this.setUseShopId(shopType, shopId)) {
-        //     Notice.showDownNotice("穿戴中");
-        //     return;
-        // }
+        if (!this.setUseShopId(shopType, shopId)) {
+            Notice.showDownNotice("穿戴中");
+            // return;
+        }
         switch (shopType) {
             case ShopType.Gun:
                 // this.setCharacterGun(shopId);
