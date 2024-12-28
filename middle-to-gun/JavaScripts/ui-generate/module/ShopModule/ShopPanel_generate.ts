@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopPanel.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.37
  */
  
 @UIBind('UI/module/ShopModule/ShopPanel.ui')
@@ -35,6 +35,13 @@ export default class ShopPanel_Generate extends UIScript {
 			this.mTabButton_2_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightCanvas/mTabCanvas/mTabButton_2') as mw.Button
 		}
 		return this.mTabButton_2_Internal
+	}
+	private mBuyButton_Internal: mw.Button
+	public get mBuyButton(): mw.Button {
+		if(!this.mBuyButton_Internal&&this.uiWidgetBase) {
+			this.mBuyButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightCanvas/mTabCanvas/mBuyButton') as mw.Button
+		}
+		return this.mBuyButton_Internal
 	}
 	private mScrollBox_Internal: mw.ScrollBox
 	public get mScrollBox(): mw.ScrollBox {
@@ -88,6 +95,12 @@ export default class ShopPanel_Generate extends UIScript {
 		this.mTabButton_2.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
+		this.mBuyButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mBuyButton");
+		});
+		this.mBuyButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
 		this.mCloseButton.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
 		});
@@ -107,6 +120,9 @@ export default class ShopPanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightCanvas/mTabCanvas/mTabButton_2/TabTextBlock_2") as any);
+		
+	
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightCanvas/mTabCanvas/mBuyButton/TabTextBlock") as any);
 		
 	
 	}

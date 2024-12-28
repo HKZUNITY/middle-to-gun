@@ -29,7 +29,7 @@ function __decorate(decorators, target, key, desc) {
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/NoticeView.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.37
  */
 let NoticeView_Generate = class NoticeView_Generate extends UIScript {
     get con_top_notice() {
@@ -96,7 +96,7 @@ var foreign77 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/TopNoticeItem.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.37
  */
 let TopNoticeItem_Generate = class TopNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -1728,14 +1728,22 @@ Utils.npcNames = ["张吉惟", "林国瑞", "林玫书", "林雅南", "江奕云
 Utils.tens = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 Utils.digitalUnits = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
 Utils.redTeamRevivalPoint = [
-    new mw.Vector(-3645, -448, 150),
-    new mw.Vector(-3645, 0, 150),
-    new mw.Vector(-3645, 312, 150)
+    new mw.Vector(5500, 2700, 150),
+    new mw.Vector(5500, 2400, 150),
+    new mw.Vector(5500, 2100, 150),
+    new mw.Vector(5500, 1800, 150),
+    new mw.Vector(5500, 1500, 150),
+    new mw.Vector(5500, 1200, 150),
+    new mw.Vector(5500, 900, 150),
+    new mw.Vector(5500, 600, 150)
 ];
 Utils.blueTeamRevivalPoint = [
-    new mw.Vector(3473, -291, 150),
-    new mw.Vector(3473, 160, 150),
-    new mw.Vector(3473, 779, 150),
+    new mw.Vector(-5000, -2000, 400),
+    new mw.Vector(-5000, -1800, 400),
+    new mw.Vector(-5000, -1600, 400),
+    new mw.Vector(-5000, -1400, 400),
+    new mw.Vector(-5000, -1200, 400),
+    new mw.Vector(-5000, -1000, 400)
 ];
 function cubicBezier(p1x, p1y, p2x, p2y) {
     const ZERO_LIMIT = 1e-6;
@@ -1804,7 +1812,7 @@ var foreign74 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/ConfirmPanel.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.37
  */
 let ConfirmPanel_Generate = class ConfirmPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -2091,7 +2099,7 @@ var foreign8 = /*#__PURE__*/Object.freeze({
     GUNConfig: GUNConfig
 });
 
-const EXCELDATA$4 = [["ID", "AssetId", "OffsetPos", "OffsetRot", "OffsetSca"], ["", "", "", "", ""], [1, "C665A5E44F6F23B13103ADB63B6DB8FE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [2, "7EFE3FDB48F92FD44D7B9C9B4617847B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [3, "0FCB78664DCD1BB057543DB8A067C122", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [4, "6EEEE3FE4889D23A286CC8B30701C8EE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [5, "EE3A158548986A567D4741AF925DEA34", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [6, "B40762884A5A907F6FC1018C2E8185C8", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [7, "77796AE5405E9B5B173C9EA0E0131A7D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [8, "6CF59C074F7CD23EEEA26B8CCFFBC2C2", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [9, "B04EE94540EE3000A660AEA94FDB25D2", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [10, "471E86844D001CE4E84DA8BABEB0DDEA", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [11, "98CDBDE94A8C79B6C5DD8E96AF07FAF7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [12, "967939744A6C3F5FB4E850A3E7B33E3B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [13, "4F5E80FC46C55F6F7F5ED0AFCA5D414A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [14, "6D4B721A4E1B76493972E08A824F8AE7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [15, "424A2E254F9FD0AABA1BE3B4E7992B60", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [16, "AFC3939B401019F2DEE37784CC1803A5", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [17, "63D0E8894374EF73151267AE2CD7A6E8", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [18, "CA3C71F24708B24B97555584A526400D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [19, "473BEFA7481C557195E608A058891B5A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [20, "A62514214509E9BB6FFCD286F0A8CACE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [21, "7CDBD4B148DCD0CB517E88819C62FD4D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [22, "429C69244E35328DF8D73CA554BFE01C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [23, "662BFCAD46B8DDB2C1F15E95DC1D71FB", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [24, "C7AF1DB740B957C45B589589961D4E9A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [25, "B1C3D37445115C0FD6602D86C18F5A5E", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [26, "4241E3D6474673648F132C9EE621BB2F", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [27, "893BFC51454BD89A3F56B99C7D87C45D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [28, "C54732A548232206595D87B7BB339EF7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)]];
+const EXCELDATA$4 = [["ID", "AssetId", "OffsetPos", "OffsetRot", "OffsetSca"], ["", "", "", "", ""], [1, "C665A5E44F6F23B13103ADB63B6DB8FE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [2, "7EFE3FDB48F92FD44D7B9C9B4617847B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [3, "0FCB78664DCD1BB057543DB8A067C122", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [4, "6EEEE3FE4889D23A286CC8B30701C8EE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [5, "EE3A158548986A567D4741AF925DEA34", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [6, "B40762884A5A907F6FC1018C2E8185C8", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [7, "77796AE5405E9B5B173C9EA0E0131A7D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [8, "6CF59C074F7CD23EEEA26B8CCFFBC2C2", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [9, "B04EE94540EE3000A660AEA94FDB25D2", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [10, "471E86844D001CE4E84DA8BABEB0DDEA", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [11, "98CDBDE94A8C79B6C5DD8E96AF07FAF7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [12, "967939744A6C3F5FB4E850A3E7B33E3B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [13, "4F5E80FC46C55F6F7F5ED0AFCA5D414A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [14, "6D4B721A4E1B76493972E08A824F8AE7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [15, "424A2E254F9FD0AABA1BE3B4E7992B60", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [16, "AFC3939B401019F2DEE37784CC1803A5", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [17, "63D0E8894374EF73151267AE2CD7A6E8", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [18, "CA3C71F24708B24B97555584A526400D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [19, "473BEFA7481C557195E608A058891B5A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [20, "A62514214509E9BB6FFCD286F0A8CACE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [21, "7CDBD4B148DCD0CB517E88819C62FD4D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [22, "429C69244E35328DF8D73CA554BFE01C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [23, "662BFCAD46B8DDB2C1F15E95DC1D71FB", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [24, "C7AF1DB740B957C45B589589961D4E9A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [25, "B1C3D37445115C0FD6602D86C18F5A5E", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [26, "4241E3D6474673648F132C9EE621BB2F", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [27, "893BFC51454BD89A3F56B99C7D87C45D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [28, "C54732A548232206595D87B7BB339EF7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [29, "7B07E44B468B61C5618A599240037492", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [30, "FA4C79AE412B67C2D02B5C8ABFD6A648", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [31, "B22039F941FFA26BC319D784637C0835", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [32, "36A8FDF445016445175EAB94DF5ECB2D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [33, "874AD10242ADB2FB8F99F0A7CFEDFD92", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(5, 5, 5)], [34, "AC6DA72A418140BECDB4DB959200750D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(0.5, 0.5, 0.5)], [35, "FB2E466B4DBEB0D3DA22C9AFDD2D0AAD", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [36, "5E9F896F4292738E09AFC6A7290FDA43", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [37, "1E47FB6B4F4DCED75E97CB83424EC32F", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)]];
 class MorphConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$4);
@@ -2237,7 +2245,7 @@ var foreign66 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/CoinPanel.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.37
  */
 let CoinPanel_Generate = class CoinPanel_Generate extends UIScript {
     get mCoinCanvas() {
@@ -2332,7 +2340,7 @@ var foreign82 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdModule/AdPanel.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.37
  */
 let AdPanel_Generate = class AdPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -2512,6 +2520,8 @@ class CoinModuleC extends ModuleC {
         this.onAddDiamondAction = new Action();
         this.coin = 0;
         this.diamond = 0;
+        //#endregion
+        //#region Ads
         this.isFirst = true;
         //#endregion
         //#region LeBi
@@ -2615,7 +2625,6 @@ class CoinModuleC extends ModuleC {
         this.coin = this.data.coin;
         this.diamond = this.data.diamond;
         this.getCoinPanel.setCoinAndDiamond(this.coin, this.diamond);
-        this.defaultAds();
         // this.initLeBiData();
     }
     //#region Coin
@@ -2664,26 +2673,6 @@ class CoinModuleC extends ModuleC {
         Notice.showDownNotice("<color=#" + (num > 0 ? "yellow>" : "red>") + (num > 0 ? "获得" : "花费") + (isCoin ? "金币" : "钻石") + num + "</color>");
         // Notice.showDownNotice("<color=#lime>" + "<size=18>" + killerName + " 击败了 " + killedName + "</size>" + "</color>"
         //     + "\n" + "<color=#red>完成了" + killTips + "</color>");
-    }
-    //#endregion
-    //#region Ads
-    defaultAds() {
-        // this.delay10Seconds();
-        this.setInterval180Seconds();
-    }
-    delay10Seconds() {
-        TimeUtil.delaySecond(30).then(() => {
-            this.getAdPanel.showRewardAd(() => {
-                this.setDiamond(2);
-            }, "大礼包\n免费获得2个钻石");
-        });
-    }
-    setInterval180Seconds() {
-        TimeUtil.setInterval(() => {
-            this.getAdPanel.showRewardAd(() => {
-                this.setDiamond(2);
-            }, "幸运大礼包\n免费获得2个钻石");
-        }, 360);
     }
     dieAds() {
         if (this.isFirst) {
@@ -2798,7 +2787,7 @@ var foreign31 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.37
  */
 let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     get mVirtualJoystickPanel() {
@@ -3210,7 +3199,7 @@ var foreign88 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/KillTipItem.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.37
  */
 let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
     get mBgImage() {
@@ -4422,6 +4411,25 @@ class ShopData extends Subdata {
         MapEx.set(this.useShopIds, shopType, shopId);
         this.save(true);
     }
+    buyComplete() {
+        this.shopIds = {};
+        let weaponIds = [];
+        for (let i = 1; i < 14; ++i) {
+            weaponIds.push(i);
+        }
+        MapEx.set(this.shopIds, 1, weaponIds);
+        let skinIds = [];
+        for (let i = 1; i < 34; ++i) {
+            skinIds.push(i);
+        }
+        MapEx.set(this.shopIds, 2, skinIds);
+        let trailIds = [];
+        for (let i = 1; i < 63; ++i) {
+            trailIds.push(i);
+        }
+        MapEx.set(this.shopIds, 3, trailIds);
+        this.save(false);
+    }
 }
 __decorate([
     Decorator.persistence()
@@ -4442,7 +4450,7 @@ var foreign52 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopPanel.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.37
  */
 let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
     get mTabCanvas() {
@@ -4468,6 +4476,12 @@ let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
             this.mTabButton_2_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightCanvas/mTabCanvas/mTabButton_2');
         }
         return this.mTabButton_2_Internal;
+    }
+    get mBuyButton() {
+        if (!this.mBuyButton_Internal && this.uiWidgetBase) {
+            this.mBuyButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightCanvas/mTabCanvas/mBuyButton');
+        }
+        return this.mBuyButton_Internal;
     }
     get mScrollBox() {
         if (!this.mScrollBox_Internal && this.uiWidgetBase) {
@@ -4508,6 +4522,10 @@ let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
             Event.dispatchToLocal("PlayButtonClick", "mTabButton_2");
         });
         this.mTabButton_2.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mBuyButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mBuyButton");
+        });
+        this.mBuyButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
         });
@@ -4518,6 +4536,7 @@ let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightCanvas/mTabCanvas/mTabButton_0/TabTextBlock_0"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightCanvas/mTabCanvas/mTabButton_1/TabTextBlock_1"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightCanvas/mTabCanvas/mTabButton_2/TabTextBlock_2"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightCanvas/mTabCanvas/mBuyButton/TabTextBlock"));
     }
     /**初始化多语言*/
     initLanguage(ui) {
@@ -4552,7 +4571,7 @@ var foreign95 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopItem.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.37
  */
 let ShopItem_Generate = class ShopItem_Generate extends UIScript {
     get mICONImage() {
@@ -5026,9 +5045,10 @@ class ShopPanel extends ShopPanel_Generate$1 {
     // }
     bindButtons() {
         this.mCloseButton.onClicked.add(this.onClickCloseButton.bind(this));
+        this.mBuyButton.onClicked.add(this.addBuyButton.bind(this));
     }
     initUI() {
-        for (let i = 0; i < this.mTabCanvas.getChildrenCount(); ++i) {
+        for (let i = 0; i < 3; ++i) {
             this.mTabButtons.push(this["mTabButton_" + i]);
             this.mTabButtons[i].onClicked.add(this.onClickTabButton.bind(this, i));
         }
@@ -5047,6 +5067,9 @@ class ShopPanel extends ShopPanel_Generate$1 {
         this.hideTween();
         this.getShopModuleC.onSwitchCameraAction.call(0);
         Event.dispatchToLocal(EventType.OnOffMainHUD, true);
+    }
+    addBuyButton() {
+        this.getShopModuleC.onBuyAction.call();
     }
     updateTabState() {
         if (this.currentTabButton)
@@ -5110,6 +5133,7 @@ class ShopModuleC extends ModuleC {
         this.coinModuleC = null;
         this.gunModuleC = null;
         this.shopPanel = null;
+        this.onBuyAction = new Action();
         this.shopIds = {}; //1-Gun,2-Role,3-Trailing
         this.useShopIds = {}; //1-Gun,2-Role,3-Trailing
         this.onSwitchCameraAction = new Action1();
@@ -5178,6 +5202,45 @@ class ShopModuleC extends ModuleC {
     }
     initEvent() {
         Event.addLocalListener(EventType.TryOutGun, this.setCharacterGun.bind(this));
+        this.onBuyAction.add(() => {
+            if (mw.SystemUtil.isPIE) {
+                Notice.showDownNotice(`购买成功`);
+                this.buyComplete();
+            }
+            else {
+                mw.PurchaseService.placeOrder(`9j54mbkGQ2m0002Rb`, 1, (status, msg) => {
+                    mw.PurchaseService.getArkBalance(); //刷新代币数量
+                    if (status != 200)
+                        return;
+                });
+            }
+        });
+    }
+    net_deliverGoods(commodityId, amount) {
+        if (commodityId == "9j54mbkGQ2m0002Rb") {
+            Notice.showDownNotice(`购买成功`);
+            this.buyComplete();
+        }
+    }
+    buyComplete() {
+        this.shopIds = {};
+        let weaponIds = [];
+        for (let i = 1; i <= 14; ++i) {
+            weaponIds.push(i);
+        }
+        MapEx.set(this.shopIds, ShopType.Gun, weaponIds);
+        let skinIds = [];
+        for (let i = 1; i <= 34; ++i) {
+            skinIds.push(i);
+        }
+        MapEx.set(this.shopIds, ShopType.Role, skinIds);
+        let trailIds = [];
+        for (let i = 1; i <= 63; ++i) {
+            trailIds.push(i);
+        }
+        MapEx.set(this.shopIds, ShopType.Trailing, trailIds);
+        this.server.net_buyComplete();
+        this.getShopPanel.updateShopItem();
     }
     bindOpenShopAction() {
         if (this.getHUDModuleC.getIsMorph && !this.localPlayer.character.getVisibility()) {
@@ -5471,7 +5534,7 @@ var foreign53 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ActivityModule/ActivityPanel.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.37
  */
 let ActivityPanel_Generate = class ActivityPanel_Generate extends UIScript {
     get mWhatDayTextBlock() {
@@ -6424,7 +6487,7 @@ var foreign46 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/RankPanel.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.38
  */
 let RankPanel_Generate = class RankPanel_Generate extends UIScript {
     get mRoomCanvas() {
@@ -6562,7 +6625,7 @@ var foreign91 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/RoomItem.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.38
  */
 let RoomItem_Generate = class RoomItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -6666,7 +6729,7 @@ var foreign50 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/WorldItem.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.38
  */
 let WorldItem_Generate = class WorldItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -7225,7 +7288,7 @@ var foreign61 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TeamModule/TeamPanel.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.38
  */
 let TeamPanel_Generate = class TeamPanel_Generate extends UIScript {
     get mMainCanvas() {
@@ -7326,7 +7389,7 @@ var foreign99 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TeamModule/TeamItem.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.38
  */
 let TeamItem_Generate = class TeamItem_Generate extends UIScript {
     get mBgImage() {
@@ -9584,6 +9647,15 @@ class ShopModuleS extends ModuleS {
     }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     onStart() {
+        mw.PurchaseService.onOrderDelivered.add(this.addShipOrder.bind(this));
+    }
+    addShipOrder(playerId, orderId, commodityId, amount, confirmOrder) {
+        //根据playerId和commodityId来处理购买逻辑
+        this.getClient(playerId).net_deliverGoods(commodityId, amount);
+        confirmOrder(true); //调用这个方法表示确认收货成功
+    }
+    net_buyComplete() {
+        this.currentData.buyComplete();
     }
     onPlayerLeft(player) {
         this.deleteTrailing(player.userId);
@@ -9613,6 +9685,9 @@ class ShopModuleS extends ModuleS {
 }
 __decorate([
     Decorator.noReply()
+], ShopModuleS.prototype, "net_buyComplete", null);
+__decorate([
+    Decorator.noReply()
 ], ShopModuleS.prototype, "net_setShopId", null);
 __decorate([
     Decorator.noReply()
@@ -9631,7 +9706,7 @@ var foreign54 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.38
  */
 let TaskItem_Generate = class TaskItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -9731,7 +9806,7 @@ var foreign96 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskPanel.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.38
  */
 let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
     get mDailyTimeTextBlock() {
@@ -10695,7 +10770,7 @@ var foreign25 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GMModule/GMHUD.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.37
  */
 let GMHUD_Generate = class GMHUD_Generate extends UIScript {
     get oKbutton() {
@@ -10785,7 +10860,7 @@ var foreign85 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GMModule/GMItem.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.37
  */
 let GMItem_Generate = class GMItem_Generate extends UIScript {
     get button() {
@@ -11063,7 +11138,7 @@ var foreign26 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GunModule/WeaponUI.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.38
  */
 let WeaponUI_Generate = class WeaponUI_Generate extends UIScript {
     get point() {
@@ -13982,7 +14057,7 @@ var foreign71 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/JumpGameTips.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.37
  */
 let JumpGameTips_Generate = class JumpGameTips_Generate extends UIScript {
     onAwake() {
@@ -14032,7 +14107,7 @@ var foreign76 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/SecondNoticeItem.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.37
  */
 let SecondNoticeItem_Generate = class SecondNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -14100,7 +14175,7 @@ var foreign78 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/DiamondItem.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.37
  */
 let DiamondItem_Generate = class DiamondItem_Generate extends UIScript {
     get mFirstBuyTextBlock() {
@@ -14212,7 +14287,7 @@ var foreign83 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/DiamondPanel.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.37
  */
 let DiamondPanel_Generate = class DiamondPanel_Generate extends UIScript {
     get mMainCanvas() {
@@ -14303,7 +14378,7 @@ var foreign84 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RadarModule/RadarPanel.ui
- * TIME: 2024.12.22-16.14.26
+ * TIME: 2024.12.28-16.08.37
  */
 let RadarPanel_Generate = class RadarPanel_Generate extends UIScript {
     onAwake() {

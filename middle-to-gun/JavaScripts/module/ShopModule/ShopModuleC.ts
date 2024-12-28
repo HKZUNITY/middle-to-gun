@@ -60,8 +60,48 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
         this.getHUDModuleC.onOpenShopAction.add(this.bindOpenShopAction.bind(this));
     }
 
+    public onBuyAction: Action = new Action();
     private initEvent(): void {
         Event.addLocalListener(EventType.TryOutGun, this.setCharacterGun.bind(this));
+        this.onBuyAction.add(() => {
+            if (mw.SystemUtil.isPIE) {
+                Notice.showDownNotice(`购买成功`);
+                this.buyComplete();
+            } else {
+                mw.PurchaseService.placeOrder(`9j54mbkGQ2m0002Rb`, 1, (status, msg) => {
+                    mw.PurchaseService.getArkBalance();//刷新代币数量
+                    if (status != 200) return;
+                });
+            }
+        });
+    }
+
+    public net_deliverGoods(commodityId: string, amount: number): void {
+        if (commodityId == "9j54mbkGQ2m0002Rb") {
+            Notice.showDownNotice(`购买成功`);
+            this.buyComplete();
+        }
+    }
+
+    private buyComplete(): void {
+        this.shopIds = {};
+        let weaponIds: number[] = [];
+        for (let i = 1; i <= 14; ++i) {
+            weaponIds.push(i);
+        }
+        MapEx.set(this.shopIds, ShopType.Gun, weaponIds);
+        let skinIds: number[] = [];
+        for (let i = 1; i <= 34; ++i) {
+            skinIds.push(i);
+        }
+        MapEx.set(this.shopIds, ShopType.Role, skinIds);
+        let trailIds: number[] = [];
+        for (let i = 1; i <= 63; ++i) {
+            trailIds.push(i);
+        }
+        MapEx.set(this.shopIds, ShopType.Trailing, trailIds);
+        this.server.net_buyComplete();
+        this.getShopPanel.updateShopItem();
     }
 
     private bindOpenShopAction(): void {

@@ -69,7 +69,6 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
         this.coin = this.data.coin;
         this.diamond = this.data.diamond;
         this.getCoinPanel.setCoinAndDiamond(this.coin, this.diamond);
-        this.defaultAds();
         // this.initLeBiData();
     }
 
@@ -127,27 +126,6 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
     //#endregion
 
     //#region Ads
-    private defaultAds(): void {
-        // this.delay10Seconds();
-        this.setInterval180Seconds();
-    }
-
-    private delay10Seconds(): void {
-        TimeUtil.delaySecond(30).then(() => {
-            this.getAdPanel.showRewardAd(() => {
-                this.setDiamond(2);
-            }, "大礼包\n免费获得2个钻石");
-        });
-    }
-
-    private setInterval180Seconds(): void {
-        TimeUtil.setInterval(() => {
-            this.getAdPanel.showRewardAd(() => {
-                this.setDiamond(2);
-            }, "幸运大礼包\n免费获得2个钻石");
-        }, 360);
-    }
-
     private isFirst: boolean = true;
     public dieAds(): void {
         if (this.isFirst) {
