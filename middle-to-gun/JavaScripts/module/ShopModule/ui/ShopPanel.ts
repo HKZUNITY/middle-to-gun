@@ -38,11 +38,16 @@ export default class ShopPanel extends ShopPanel_Generate {
 
 	private bindButtons(): void {
 		this.mCloseButton.onClicked.add(this.onClickCloseButton.bind(this));
+		this.mBuyButton.onClicked.add(this.addBuyButton.bind(this));
+	}
+
+	private addBuyButton(): void {
+		this.getShopModuleC.onBuyAction.call();
 	}
 
 	private mTabButtons: mw.Button[] = [];
 	private initUI(): void {
-		for (let i = 0; i < this.mTabCanvas.getChildrenCount(); ++i) {
+		for (let i = 0; i < 3; ++i) {
 			this.mTabButtons.push(this["mTabButton_" + i] as mw.Button);
 			this.mTabButtons[i].onClicked.add(this.onClickTabButton.bind(this, i));
 		}
@@ -74,7 +79,7 @@ export default class ShopPanel extends ShopPanel_Generate {
 	}
 
 	private shopItems: ShopItem[] = [];
-	private updateShopItem(): void {
+	public updateShopItem(): void {
 		if (this.shopItems.length > this.shopTypes[this.currentShopType]) {
 			for (let i = 0; i < this.shopTypes[this.currentShopType]; ++i) {
 				this.shopItems[i].setData(i + 1, this.currentShopType);
