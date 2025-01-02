@@ -3,6 +3,7 @@ import { Notice } from "../../common/notice/Notice";
 import { GameConfig } from "../../config/GameConfig";
 import { IShopItemElement } from "../../config/ShopItem";
 import { EventType } from "../../tools/EventType";
+import GlobalData from "../../tools/GlobalData";
 import { TSIAPService } from "../../tools/IAPInstance";
 import AdPanel from "../AdModule/ui/AdPanel";
 import CoinData from "./CoinData";
@@ -99,15 +100,15 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
 
     public getCoinByAd(): void {
         this.getAdPanel.showRewardAd(() => {
-            this.setCoin(10000);
-        }, "免费领取10000金币");
+            this.setCoin(GlobalData.addCoin);
+        }, `免费领取${GlobalData.addCoin}金币`);
         // this.openShopBuyDiamondCoin();
     }
 
     public getDiamondByAd(diamond: number): void {
         this.getAdPanel.showRewardAd(() => {
-            this.setDiamond(1);
-        }, "免费领取1个钻石");
+            this.setDiamond(GlobalData.addDiamond);
+        }, `免费领取${GlobalData.addDiamond}个钻石`);
         // this.openShopBuyDiamondCoin(diamond);
     }
 
@@ -133,8 +134,8 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
             return;
         }
         this.getAdPanel.showRewardAd(() => {
-            this.setDiamond(2);
-        }, "被击败奖励\n免费获得2个钻石");
+            this.setDiamond(GlobalData.addDiamond);
+        }, `被击败奖励\n免费领取${GlobalData.addDiamond}个钻石`);
         Event.dispatchToLocal(EventType.TryOutGun);
     }
     //#endregion

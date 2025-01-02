@@ -342,14 +342,14 @@ export default class Utils {
     }
 
     private static redTeamRevivalPoint: mw.Vector[] = [
-        new mw.Vector(5500, 2700, 150),
-        new mw.Vector(5500, 2400, 150),
-        new mw.Vector(5500, 2100, 150),
-        new mw.Vector(5500, 1800, 150),
-        new mw.Vector(5500, 1500, 150),
-        new mw.Vector(5500, 1200, 150),
-        new mw.Vector(5500, 900, 150),
-        new mw.Vector(5500, 600, 150)
+        new mw.Vector(4500, 2800, 150),
+        new mw.Vector(4300, 2800, 150),
+        new mw.Vector(4100, 2800, 150),
+        new mw.Vector(3900, 2800, 150),
+        new mw.Vector(3700, 2800, 150),
+        new mw.Vector(3500, 2800, 150),
+        new mw.Vector(3300, 2800, 150),
+        new mw.Vector(3100, 2800, 150)
     ];
     private static blueTeamRevivalPoint: mw.Vector[] = [
         new mw.Vector(-5000, -2000, 400),

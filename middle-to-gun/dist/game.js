@@ -1406,6 +1406,8 @@ GlobalData.dailyRefreshTime = "4:0";
 /**每周刷新时间（目前是每周一凌晨4点，格式为4:0） */
 GlobalData.weeklyRefreshTime = "4:0";
 GlobalData.maxHp = 100;
+GlobalData.addDiamond = 10;
+GlobalData.addCoin = 10000;
 
 var foreign69 = /*#__PURE__*/Object.freeze({
     __proto__: null,
@@ -1728,14 +1730,14 @@ Utils.npcNames = ["张吉惟", "林国瑞", "林玫书", "林雅南", "江奕云
 Utils.tens = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 Utils.digitalUnits = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
 Utils.redTeamRevivalPoint = [
-    new mw.Vector(5500, 2700, 150),
-    new mw.Vector(5500, 2400, 150),
-    new mw.Vector(5500, 2100, 150),
-    new mw.Vector(5500, 1800, 150),
-    new mw.Vector(5500, 1500, 150),
-    new mw.Vector(5500, 1200, 150),
-    new mw.Vector(5500, 900, 150),
-    new mw.Vector(5500, 600, 150)
+    new mw.Vector(4500, 2800, 150),
+    new mw.Vector(4300, 2800, 150),
+    new mw.Vector(4100, 2800, 150),
+    new mw.Vector(3900, 2800, 150),
+    new mw.Vector(3700, 2800, 150),
+    new mw.Vector(3500, 2800, 150),
+    new mw.Vector(3300, 2800, 150),
+    new mw.Vector(3100, 2800, 150)
 ];
 Utils.blueTeamRevivalPoint = [
     new mw.Vector(-5000, -2000, 400),
@@ -2087,7 +2089,7 @@ var foreign6 = /*#__PURE__*/Object.freeze({
     ConfigBase: ConfigBase
 });
 
-const EXCELDATA$5 = [["ID", "GUNNAME", "GUNPREFAB", "GUNICON", "GUNICON_M", "GUNLOC", "GUNSCALE", "IATURNICON", "PRICETYPE", "PRICE", "FIREINTERVAL", "BULLETCOUNT", "HURT"], ["", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "水枪", "587777AD4056DC3AB465FBA7D3F5F7BA", null, "166941", new mw.Vector(0, 0, 0), new mw.Vector(1, 2, 1), 0, 1, [1, 15888], "0.2", 30, 25], [2, "泡泡枪", "0D543D5346C331F41DA890A5E6DD3DB5", null, "155696", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1, 15888], "0.2", 30, 25], [3, "霰弹枪", "E3E0C2994D3518540DBB6D8C00C8AB83", null, "226214", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), 0, 1, [1, 15888], "0.15", 30, 25], [4, "金枪鱼", "5181250F44DF914A714B668F99177E3A", null, "138213", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1, 15888], "0.15", 30, 25], [5, "脉冲枪", "1CD6AEAB4602DF140ACE93BD49D5CA19", null, "153110", new mw.Vector(0, 0, 0), new mw.Vector(2, 2.5, 2), 0, 1, [1, 15888], "0.1", 35, 25], [6, "喷火枪", "A469CCC84AAA873815243BB25439707C", null, "226213", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), 0, 1, [1, 15888], "0.1", 35, 25], [7, "散弹喷枪", "68E812DC47B714F9A2BB2ABE18304C5B", null, "155702", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [2, 28888], "0.1", 35, 25], [8, "霰弹枪枪身", "BA1BDC034FCDE8574CBBAA8C4831A950", null, "318664", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [2, 28888], "0.1", 40, 25], [9, "火箭发射器", "FCFE18BE440FAEBD5AB999A222F10AA9", null, "226826", new mw.Vector(0, 0, 0), new mw.Vector(1.5, 1, 1), 0, 1, [2, 28888], "0.2", 100, 25], [10, "激光幽灵枪", "23240FEE4F3BD25DE8EA6DBE525B3A20", null, "122716", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 1, 1, [3, 38888], "0.3", 40, 50], [11, "烟花枪", "A830458640D6EA21FB7AEA8F7E029CB7", null, "122726", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [3, 38888], "0.3", 40, 50], [12, "激光烈火枪", "0C7F278C4254F90F69614086DCA0B906", null, "95676", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [4, 48888], "0.3", 40, 50], [13, "激光冰雷枪", "29CD5E6145D1B05590E887A050E0D3C8", null, "122720", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [4, 48888], "0.3", 40, 50], [14, "尖叫鸡", "015C826546EBC60F95EF399D16523B78", null, "20799", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 3), 1, 1, [5, 58888], "1", 10, 100]];
+const EXCELDATA$5 = [["ID", "GUNNAME", "GUNPREFAB", "GUNICON", "GUNICON_M", "GUNLOC", "GUNSCALE", "IATURNICON", "PRICETYPE", "PRICE", "FIREINTERVAL", "BULLETCOUNT", "HURT"], ["", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "水枪", "587777AD4056DC3AB465FBA7D3F5F7BA", null, "166941", new mw.Vector(0, 0, 0), new mw.Vector(1, 2, 1), 0, 1, [1, 15888], "0.2", 30, 25], [2, "泡泡枪", "0D543D5346C331F41DA890A5E6DD3DB5", null, "155696", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1, 15888], "0.2", 30, 25], [3, "霰弹枪", "E3E0C2994D3518540DBB6D8C00C8AB83", null, "226214", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), 0, 1, [1, 15888], "0.15", 30, 25], [4, "金枪鱼", "5181250F44DF914A714B668F99177E3A", null, "138213", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1, 15888], "0.15", 30, 25], [5, "脉冲枪", "1CD6AEAB4602DF140ACE93BD49D5CA19", null, "153110", new mw.Vector(0, 0, 0), new mw.Vector(2, 2.5, 2), 0, 1, [1, 15888], "0.1", 35, 25], [6, "喷火枪", "A469CCC84AAA873815243BB25439707C", null, "226213", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), 0, 1, [1, 15888], "0.1", 35, 25], [7, "散弹喷枪", "68E812DC47B714F9A2BB2ABE18304C5B", null, "155702", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [2, 28888], "0.1", 35, 25], [8, "霰弹枪枪身", "BA1BDC034FCDE8574CBBAA8C4831A950", null, "318664", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [2, 28888], "0.1", 40, 25], [9, "火箭发射器", "FCFE18BE440FAEBD5AB999A222F10AA9", null, "226826", new mw.Vector(0, 0, 0), new mw.Vector(1.5, 1, 1), 0, 1, [2, 28888], "0.2", 100, 25], [10, "激光幽灵枪", "23240FEE4F3BD25DE8EA6DBE525B3A20", null, "122716", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 1, 1, [3, 38888], "0.3", 40, 50], [11, "烟花枪", "A830458640D6EA21FB7AEA8F7E029CB7", null, "122726", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [10, 3888888], "0.3", 40, 50], [12, "激光烈火枪", "0C7F278C4254F90F69614086DCA0B906", null, "95676", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [30, 4888888], "0.3", 40, 50], [13, "激光冰雷枪", "29CD5E6145D1B05590E887A050E0D3C8", null, "122720", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [50, 4888888], "0.3", 40, 50], [14, "尖叫鸡", "015C826546EBC60F95EF399D16523B78", null, "20799", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 3), 1, 1, [888, 58888888], "1", 10, 100]];
 class GUNConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$5);
@@ -2135,7 +2137,7 @@ var foreign11 = /*#__PURE__*/Object.freeze({
     ShopItemConfig: ShopItemConfig
 });
 
-const EXCELDATA$1 = [["ID", "Name", "TaskType", "TaskItemType", "NextId", "TragetNum", "Coin", "Diamond"], ["", "", "", "", "", "", "", ""], [1, "每日登录游戏（{0}/{1}）", 1, 1, 0, 1, 100, 0], [11, "每日在线时长5分钟（{0}/{1}）", 1, 11, 0, 5, 500, 0], [12, "每日在线时长10分钟（{0}/{1}）", 1, 12, 0, 10, 500, 0], [13, "每日在线时长15分钟（{0}/{1}）", 1, 13, 0, 15, 500, 0], [14, "每日在线时长20分钟（{0}/{1}）", 1, 14, 0, 20, 500, 0], [15, "每日在线时长25分钟（{0}/{1}）", 1, 15, 0, 25, 500, 0], [16, "每日在线时长30分钟（{0}/{1}）", 1, 16, 0, 30, 500, 0], [17, "每日在线时长40分钟（{0}/{1}）", 1, 17, 0, 40, 1000, 0], [18, "每日在线时长50分钟（{0}/{1}）", 1, 18, 0, 50, 1000, 0], [19, "每日在线时长60分钟（{0}/{1}）", 1, 19, 0, 60, 1000, 1], [31, "每日击败1个玩家（{0}/{1}）", 1, 31, 0, 1, 20, 0], [32, "每日击败5个玩家（{0}/{1}）", 1, 32, 0, 5, 80, 0], [33, "每日击败10个玩家（{0}/{1}）", 1, 33, 0, 10, 100, 0], [34, "每日击败20个玩家（{0}/{1}）", 1, 34, 0, 20, 200, 0], [35, "每日击败30个玩家（{0}/{1}）", 1, 35, 0, 30, 200, 0], [36, "每日击败50个玩家（{0}/{1}）", 1, 36, 0, 50, 400, 0], [37, "每日击败100个玩家（{0}/{1}）", 1, 37, 0, 100, 1000, 0], [38, "每日击败200个玩家（{0}/{1}）", 1, 38, 0, 200, 2000, 0], [39, "每日击败300个玩家（{0}/{1}）", 1, 39, 0, 300, 2000, 1], [101, "每周登录1天（{0}/{1}）", 2, 101, 0, 1, 1000, 0], [102, "每周登录2天（{0}/{1}）", 2, 102, 0, 2, 1000, 0], [103, "每周登录3天（{0}/{1}）", 2, 103, 0, 3, 1000, 0], [104, "每周登录4天（{0}/{1}）", 2, 104, 0, 4, 1000, 0], [105, "每周登录5天（{0}/{1}）", 2, 105, 0, 5, 1000, 0], [106, "每周登录6天（{0}/{1}）", 2, 106, 0, 6, 1000, 0], [107, "每周登录7天（{0}/{1}）", 2, 107, 0, 7, 1000, 1]];
+const EXCELDATA$1 = [["ID", "Name", "TaskType", "TaskItemType", "NextId", "TragetNum", "Coin", "Diamond"], ["", "", "", "", "", "", "", ""], [1, "每日登录游戏（{0}/{1}）", 1, 1, 0, 1, 100, 1], [11, "每日在线时长5分钟（{0}/{1}）", 1, 11, 0, 5, 500, 1], [12, "每日在线时长10分钟（{0}/{1}）", 1, 12, 0, 10, 500, 5], [13, "每日在线时长15分钟（{0}/{1}）", 1, 13, 0, 15, 500, 5], [14, "每日在线时长20分钟（{0}/{1}）", 1, 14, 0, 20, 500, 10], [15, "每日在线时长25分钟（{0}/{1}）", 1, 15, 0, 25, 500, 10], [16, "每日在线时长30分钟（{0}/{1}）", 1, 16, 0, 30, 500, 20], [17, "每日在线时长40分钟（{0}/{1}）", 1, 17, 0, 40, 1000, 20], [18, "每日在线时长50分钟（{0}/{1}）", 1, 18, 0, 50, 1000, 30], [19, "每日在线时长60分钟（{0}/{1}）", 1, 19, 0, 60, 1000, 100], [31, "每日击败1个玩家（{0}/{1}）", 1, 31, 0, 1, 20, 1], [32, "每日击败5个玩家（{0}/{1}）", 1, 32, 0, 5, 80, 1], [33, "每日击败10个玩家（{0}/{1}）", 1, 33, 0, 10, 100, 2], [34, "每日击败20个玩家（{0}/{1}）", 1, 34, 0, 20, 200, 2], [35, "每日击败30个玩家（{0}/{1}）", 1, 35, 0, 30, 200, 5], [36, "每日击败50个玩家（{0}/{1}）", 1, 36, 0, 50, 400, 5], [37, "每日击败100个玩家（{0}/{1}）", 1, 37, 0, 100, 1000, 10], [38, "每日击败200个玩家（{0}/{1}）", 1, 38, 0, 200, 2000, 10], [39, "每日击败300个玩家（{0}/{1}）", 1, 39, 0, 300, 2000, 100], [101, "每周登录1天（{0}/{1}）", 2, 101, 0, 1, 1000, 1], [102, "每周登录2天（{0}/{1}）", 2, 102, 0, 2, 1000, 100], [103, "每周登录3天（{0}/{1}）", 2, 103, 0, 3, 1000, 200], [104, "每周登录4天（{0}/{1}）", 2, 104, 0, 4, 1000, 300], [105, "每周登录5天（{0}/{1}）", 2, 105, 0, 5, 1000, 400], [106, "每周登录6天（{0}/{1}）", 2, 106, 0, 6, 1000, 500], [107, "每周登录7天（{0}/{1}）", 2, 107, 0, 7, 1000, 600]];
 class TaskConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$1);
@@ -2652,14 +2654,14 @@ class CoinModuleC extends ModuleC {
     }
     getCoinByAd() {
         this.getAdPanel.showRewardAd(() => {
-            this.setCoin(10000);
-        }, "免费领取10000金币");
+            this.setCoin(GlobalData.addCoin);
+        }, `免费领取${GlobalData.addCoin}金币`);
         // this.openShopBuyDiamondCoin();
     }
     getDiamondByAd(diamond) {
         this.getAdPanel.showRewardAd(() => {
-            this.setDiamond(1);
-        }, "免费领取1个钻石");
+            this.setDiamond(GlobalData.addDiamond);
+        }, `免费领取${GlobalData.addDiamond}个钻石`);
         // this.openShopBuyDiamondCoin(diamond);
     }
     net_killPlayerAddCoin(coin) {
@@ -2680,8 +2682,8 @@ class CoinModuleC extends ModuleC {
             return;
         }
         this.getAdPanel.showRewardAd(() => {
-            this.setDiamond(2);
-        }, "被击败奖励\n免费获得2个钻石");
+            this.setDiamond(GlobalData.addDiamond);
+        }, `被击败奖励\n免费领取${GlobalData.addDiamond}个钻石`);
         Event.dispatchToLocal(EventType.TryOutGun);
     }
 }
@@ -4171,7 +4173,7 @@ class HUDModuleC extends ModuleC {
     //#endregion
     //#region SoundService
     playBgm() {
-        return;
+        SoundService.playBGM("146100", this.currentBgmVolume);
     }
     initSoundEvent() {
         Event.addLocalListener("PlayButtonClick", (btnName) => {
@@ -9501,21 +9503,29 @@ class RadarPanel extends UIScript {
                 return;
             if (this.playerPointMap.has(otherPlayer)) {
                 let otherPlayerPoint = this.playerPointMap.get(otherPlayer);
-                if (otherPlayer.character.ragdollEnabled) {
-                    this.setTextBlock(otherPlayerPoint, "×");
-                }
-                else {
-                    this.setTextBlock(otherPlayerPoint, "◆");
-                }
-                if (this.getRadarModuleC.isFriendly(this.currentPlayer, otherPlayer)) {
-                    this.setTextFontColor(otherPlayerPoint, mw.LinearColor.green);
-                }
-                else {
-                    this.setTextFontColor(otherPlayerPoint, mw.LinearColor.red);
-                }
                 let loc = this.Loc2RadarPos(otherPlayer.character.worldTransform.position);
                 let offset = otherPlayerPoint.size;
-                otherPlayerPoint.position = new Vector2(loc.x - (offset.x / 2), loc.y - (offset.y / 2));
+                let retPosition = new Vector2(loc.x - (offset.x / 2), loc.y - (offset.y / 2));
+                console.error(retPosition);
+                if (retPosition.x < 0 || retPosition.x > 400 || retPosition.y < 0 || retPosition.y > 400) {
+                    Utils.setWidgetVisibility(otherPlayerPoint, mw.SlateVisibility.Collapsed);
+                }
+                else {
+                    if (otherPlayer.character.ragdollEnabled) {
+                        this.setTextBlock(otherPlayerPoint, "×");
+                    }
+                    else {
+                        this.setTextBlock(otherPlayerPoint, "◆");
+                    }
+                    if (this.getRadarModuleC.isFriendly(this.currentPlayer, otherPlayer)) {
+                        this.setTextFontColor(otherPlayerPoint, mw.LinearColor.green);
+                    }
+                    else {
+                        this.setTextFontColor(otherPlayerPoint, mw.LinearColor.red);
+                    }
+                    Utils.setWidgetVisibility(otherPlayerPoint, mw.SlateVisibility.SelfHitTestInvisible);
+                    otherPlayerPoint.position = retPosition;
+                }
             }
             else {
                 this.playerPointMap.set(otherPlayer, this.getTextBlockPoint(otherPlayer.userId));
@@ -9526,15 +9536,22 @@ class RadarPanel extends UIScript {
         if (!this.npcPointMap || this.npcPointMap.size == 0)
             return;
         this.npcPointMap.forEach((value, key) => {
-            if (key.ragdollEnabled) {
-                this.setTextBlock(value, "×");
-            }
-            else {
-                this.setTextBlock(value, "◆");
-            }
             let loc = this.Loc2RadarPos(key.worldTransform.position);
             let offset = value.size;
-            value.position = new Vector2(loc.x - (offset.x / 2), loc.y - (offset.y / 2));
+            let retPosition = new Vector2(loc.x - (offset.x / 2), loc.y - (offset.y / 2));
+            if (retPosition.x < 0 || retPosition.x > 400 || retPosition.y < 0 || retPosition.y > 400) {
+                Utils.setWidgetVisibility(value, mw.SlateVisibility.Collapsed);
+            }
+            else {
+                if (key.ragdollEnabled) {
+                    this.setTextBlock(value, "×");
+                }
+                else {
+                    this.setTextBlock(value, "◆");
+                }
+                value.position = new Vector2(loc.x - (offset.x / 2), loc.y - (offset.y / 2));
+                Utils.setWidgetVisibility(value, mw.SlateVisibility.SelfHitTestInvisible);
+            }
         });
     }
     setNpcPoint(npc) {
