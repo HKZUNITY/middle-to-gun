@@ -1,6 +1,7 @@
 ﻿import { Notice } from "../../../common/notice/Notice";
 import Utils, { cubicBezier } from "../../../tools/Utils";
 import HUDPanel_Generate from "../../../ui-generate/module/HUDModule/HUDPanel_generate";
+import SharePanel_Generate from "../../../ui-generate/module/ShareModule/SharePanel_generate";
 import CoinModuleC from "../../CoinModule/CoinModuleC";
 import { KillTipData, KillTipType } from "../HUDData";
 import HUDModuleC from "../HUDModuleC";
@@ -56,6 +57,7 @@ export default class HUDPanel extends HUDPanel_Generate {
         this.mUnMorphButton.onClicked.add(this.onClickUnMorphButton.bind(this));
         this.mJumpButton.onClicked.add(this.onClickJumpButton.bind(this));
         this.mRoleButton.onClicked.add(this.onClickOpenRoleButton.bind(this));
+        this.mOpenShareButton.onClicked.add(this.addOpenShareButton.bind(this));
         this.bindSetButton();
     }
 
@@ -85,6 +87,10 @@ export default class HUDPanel extends HUDPanel_Generate {
 
     private onClickOpenRoleButton(): void {
         this.getHUDModuleC.onOpenRoleAction.call();
+    }
+
+    private addOpenShareButton(): void {
+        this.getHUDModuleC.onOpenShareAction.call(1);
     }
 
     private onClickMorphButton(): void {
@@ -442,6 +448,7 @@ export default class HUDPanel extends HUDPanel_Generate {
         this.initShakeShopTween();
         this.initShakeRoleTween();
         this.initMorphButtonTween();
+        this.initShakeShareTween();
     }
     //#region RankTween
     private initRankButtonTweens(): void {
@@ -648,6 +655,22 @@ export default class HUDPanel extends HUDPanel_Generate {
             });
         });
     }
+    //#region ShopTween
+    public initShakeShareTween(): void {
+        let rightBigToLeftSmall = this.getShakeScaleTween(this.mOpenShareButton, 0.8, 20, -20, 1.1, 0.9);
+        let leftSamllToRightBig = this.getShakeScaleTween(this.mOpenShareButton, 0.8, -20, 20, 0.9, 1.1);
+
+        rightBigToLeftSmall.start().onComplete(() => {
+            TimeUtil.delaySecond(0.1).then(() => {
+                leftSamllToRightBig.start().onComplete(() => {
+                    TimeUtil.delaySecond(0.1).then(() => {
+                        rightBigToLeftSmall.start();
+                    });
+                });
+            })
+        });
+    }
+    //#endregion
     //#endregion
     private getShakeTween(widget: Widget, angleTime: number, startAngle: number, endAngle: number): mw.Tween<any> {
         return new Tween({ angle: startAngle })
@@ -691,4 +714,66 @@ export default class HUDPanel extends HUDPanel_Generate {
             .easing(cubicBezier(.22, .9, .28, .92));
     }
     //#endregion
+}
+
+export class SharePanel extends SharePanel_Generate {
+    private hudModuleC: HUDModuleC = null;
+    private get getHUDModuleC(): HUDModuleC {
+        if (this.hudModuleC == null) {
+            this.hudModuleC = ModuleService.getModule(HUDModuleC);
+        }
+        return this.hudModuleC;
+    }
+
+    protected onStart(): void {
+        this.initUI();
+        this.bindButton();
+    }
+
+    private initUI(): void {
+        this.mMyselfTipsTextBlock.text = `我的角色ID-分享好友试穿`;
+        this.mOtherTipsTextBlock.text = `免费试穿好友的角色形象`;
+        this.mInputBox.text = "";
+        this.mInputBox.hintString = `请输入好友角色ID`;
+        this.mCancelTextBlock.text = `取消`;
+        this.mUseTextBlock.text = `免费试穿`;
+        this.mAdsButton.text = `免费试穿`;
+
+        Utils.setWidgetVisibility(this.mAdsButton, mw.SlateVisibility.Collapsed);
+    }
+
+    private bindButton(): void {
+        this.mCopyButton.onClicked.add(this.addCopyButton.bind(this));
+        this.mCancelButton.onClicked.add(this.addCancelButton.bind(this));
+        this.mUseButton.onClicked.add(this.addUseButton.bind(this));
+    }
+
+    private addCopyButton(): void {
+        let copyText = this.mMyselfTextBlock.text;
+        if (!copyText || copyText == "" || copyText.length == 0) return;
+        StringUtil.clipboardCopy(copyText);
+        Notice.showDownNotice(`复制成功`);
+    }
+
+    private addCancelButton(): void {
+        this.hide();
+    }
+
+    private addUseButton(): void {
+        let shareId = this.mInputBox.text;
+        if (!shareId || shareId == "" || shareId.length == 0) return;
+        this.getHUDModuleC.onUseShareAction.call(shareId);
+        this.hide();
+    }
+
+    public showPanel(shareId: string): void {
+        this.mMyselfTextBlock.text = shareId;
+        Utils.setWidgetVisibility(this.mInputBgImage, mw.SlateVisibility.SelfHitTestInvisible);
+        this.mOtherTipsTextBlock.text = `免费试穿好友的角色形象`;
+    }
+
+    protected onShow(...params: any[]): void {
+        this.mMyselfTextBlock.text = `加载中`;
+        this.mInputBox.text = ``;
+    }
 }

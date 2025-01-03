@@ -376,6 +376,27 @@ export default class Utils {
     public static playBirthSound(player: mw.Player): void {
         SoundService.play3DSound("169179", player.character, 1, GlobalData.soundVolume);
     }
+
+
+    public static async applySharedId(character: mw.Character, sharedId: string): Promise<boolean> {
+        return new Promise(async (resolve: (isSuccess: boolean) => void) => {
+            mw.AccountService.applySharedId(character, sharedId, async (success: boolean) => {
+                console.error(`success:${success}`);
+                if (success) character.syncDescription();
+                await character.asyncReady();
+                return resolve(success);
+            });
+        });
+    }
+
+    public static async createSharedId(character: mw.Character): Promise<string> {
+        return new Promise(async (resolve: (isSuccess: string) => void) => {
+            mw.AccountService.createSharedId(character, (dataString: string) => {
+                console.error(`dataString:${dataString}`);
+                return resolve(dataString);
+            });
+        });
+    }
 }
 
 export function cubicBezier(p1x, p1y, p2x, p2y) {
