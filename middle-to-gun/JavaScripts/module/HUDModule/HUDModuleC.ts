@@ -1,10 +1,12 @@
-﻿import { EventType } from "../../tools/EventType";
+﻿import { Notice } from "../../common/notice/Notice";
+import { EventType } from "../../tools/EventType";
 import GlobalData from "../../tools/GlobalData";
 import Utils from "../../tools/Utils";
+import AdPanel from "../AdModule/ui/AdPanel";
 import CoinPanel from "../CoinModule/ui/CoinPanel";
 import { HUDData, KillTipType } from "./HUDData";
 import HUDModuleS from "./HUDModuleS";
-import HUDPanel from "./ui/HUDPanel";
+import HUDPanel, { SharePanel } from "./ui/HUDPanel";
 
 export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     private hudPanel: HUDPanel = null;
@@ -13,6 +15,21 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
             this.hudPanel = UIService.getUI(HUDPanel);
         }
         return this.hudPanel;
+    }
+    private sharePanel: SharePanel = null;
+    private get getSharePanel(): SharePanel {
+        if (!this.sharePanel) {
+            this.sharePanel = UIService.getUI(SharePanel);
+        }
+        return this.sharePanel;
+    }
+
+    private adPanel: AdPanel = null;
+    private get getAdPanel(): AdPanel {
+        if (!this.adPanel) {
+            this.adPanel = UIService.getUI(AdPanel);
+        }
+        return this.adPanel;
     }
 
     public onOpenShopAction: Action = new Action();
@@ -24,6 +41,8 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     public onMorphAction: Action1<boolean> = new Action1<boolean>();
     public onJumpAction: Action = new Action();
     public onOpenRoleAction: Action = new Action();
+    public onOpenShareAction: Action = new Action();
+    public onUseShareAction: Action1<string> = new Action1<string>();
 
     protected onStart(): void {
         this.initUIPanel();
@@ -40,6 +59,8 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
         this.initMorphAction();
         this.onJumpAction.add(this.addJumpAction.bind(this));
         this.onOpenRoleAction.add(this.addOpenRoleAction.bind(this));
+        this.onOpenShareAction.add(this.onOpenShareActionHandler.bind(this));
+        this.onUseShareAction.add(this.onUseShareActionHandler.bind(this));
         Event.addLocalListener(EventType.OnOffMainHUD, this.addOnOffHUDPannel.bind(this));
         let isOpen = true;
         InputUtil.onKeyDown(mw.Keys.NumPadFive, () => {
@@ -56,6 +77,33 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     private addJumpAction(): void {
         this.localPlayer.character.jump();
         if (!this.localPlayer.character.movementEnabled) this.localPlayer.character.movementEnabled = true;
+    }
+
+    private async onOpenShareActionHandler(): Promise<void> {
+        this.getSharePanel.show();
+        let sharedId = await Utils.createSharedId(this.localPlayer.character);
+        this.getSharePanel.showPanel(sharedId);
+    }
+
+    private onUseShareActionHandler(shareId: string): void {
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
+                this.useShareId(shareId);
+            }, `看广告免费试穿`
+                , `取消`
+                , `免费试穿`);
+        } else {
+            this.useShareId(shareId);
+        }
+    }
+
+    private async useShareId(shareId: string): Promise<void> {
+        let isSuccess = await Utils.applySharedId(this.localPlayer.character, shareId);
+        if (isSuccess) {
+            Notice.showDownNotice(`试穿成功`);
+        } else {
+            Notice.showDownNotice(`ID无效`);
+        }
     }
 
     private addOpenRoleAction(): void {
