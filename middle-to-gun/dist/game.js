@@ -2601,7 +2601,17 @@ class CoinModuleC extends ModuleC {
         this.diamond = 0;
         //#endregion
         //#region Ads
-        this.isFirst = true;
+        // private isFirst: boolean = true;
+        // public dieAds(): void {
+        //     if (this.isFirst) {
+        //         this.isFirst = false;
+        //         return;
+        //     }
+        //     this.getAdPanel.showRewardAd(() => {
+        //         this.setDiamond(GlobalData.addDiamond);
+        //     }, `被击败奖励\n免费领取${GlobalData.addDiamond}个钻石`);
+        //     Event.dispatchToLocal(EventType.TryOutGun);
+        // }
         //#endregion
         //#region LeBi
         // private isFirstBuy: boolean = true;
@@ -2752,16 +2762,6 @@ class CoinModuleC extends ModuleC {
         Notice.showDownNotice("<color=#" + (num > 0 ? "yellow>" : "red>") + (num > 0 ? "获得" : "花费") + (isCoin ? "金币" : "钻石") + num + "</color>");
         // Notice.showDownNotice("<color=#lime>" + "<size=18>" + killerName + " 击败了 " + killedName + "</size>" + "</color>"
         //     + "\n" + "<color=#red>完成了" + killTips + "</color>");
-    }
-    dieAds() {
-        if (this.isFirst) {
-            this.isFirst = false;
-            return;
-        }
-        this.getAdPanel.showRewardAd(() => {
-            this.setDiamond(GlobalData.addDiamond);
-        }, `被击败奖励\n免费领取${GlobalData.addDiamond}个钻石`);
-        Event.dispatchToLocal(EventType.TryOutGun);
     }
 }
 
@@ -3801,7 +3801,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
             .onComplete(() => {
             Utils.setWidgetVisibility(this.mInvincibleCanvas, mw.SlateVisibility.Collapsed);
             this.stopFlickerText();
-            this.getCoinModuleC.dieAds();
+            // this.getCoinModuleC.dieAds();
         })
             .start();
     }

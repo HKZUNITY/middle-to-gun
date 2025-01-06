@@ -127,17 +127,17 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
     //#endregion
 
     //#region Ads
-    private isFirst: boolean = true;
-    public dieAds(): void {
-        if (this.isFirst) {
-            this.isFirst = false;
-            return;
-        }
-        this.getAdPanel.showRewardAd(() => {
-            this.setDiamond(GlobalData.addDiamond);
-        }, `被击败奖励\n免费领取${GlobalData.addDiamond}个钻石`);
-        Event.dispatchToLocal(EventType.TryOutGun);
-    }
+    // private isFirst: boolean = true;
+    // public dieAds(): void {
+    //     if (this.isFirst) {
+    //         this.isFirst = false;
+    //         return;
+    //     }
+    //     this.getAdPanel.showRewardAd(() => {
+    //         this.setDiamond(GlobalData.addDiamond);
+    //     }, `被击败奖励\n免费领取${GlobalData.addDiamond}个钻石`);
+    //     Event.dispatchToLocal(EventType.TryOutGun);
+    // }
     //#endregion
 
     //#region LeBi
