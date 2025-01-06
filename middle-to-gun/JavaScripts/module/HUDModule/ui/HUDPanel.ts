@@ -280,7 +280,7 @@ export default class HUDPanel extends HUDPanel_Generate {
             .onComplete(() => {
                 Utils.setWidgetVisibility(this.mInvincibleCanvas, mw.SlateVisibility.Collapsed);
                 this.stopFlickerText();
-                this.getCoinModuleC.dieAds();
+                // this.getCoinModuleC.dieAds();
             })
             .start();
     }

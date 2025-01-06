@@ -70,7 +70,7 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
         this.coin = this.data.coin;
         this.diamond = this.data.diamond;
         this.getCoinPanel.setCoinAndDiamond(this.coin, this.diamond);
-        this.defaultAds();
+        // this.defaultAds();
         // this.initLeBiData();
     }
 
@@ -128,29 +128,29 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
     //#endregion
 
     //#region Ads
-    private defaultAds(): void {
-        this.setInterval180Seconds();
-    }
+    // private defaultAds(): void {
+    //     this.setInterval180Seconds();
+    // }
 
-    private setInterval180Seconds(): void {
-        TimeUtil.setInterval(() => {
-            this.getAdPanel.showRewardAd(() => {
-                this.setDiamond(GlobalData.addDiamond);
-            }, `幸运大礼包\n免费领取${GlobalData.addDiamond}个钻石`);
-        }, 360);
-    }
+    // private setInterval180Seconds(): void {
+    //     TimeUtil.setInterval(() => {
+    //         this.getAdPanel.showRewardAd(() => {
+    //             this.setDiamond(GlobalData.addDiamond);
+    //         }, `幸运大礼包\n免费领取${GlobalData.addDiamond}个钻石`);
+    //     }, 360);
+    // }
 
-    private isFirst: boolean = true;
-    public dieAds(): void {
-        if (this.isFirst) {
-            this.isFirst = false;
-            return;
-        }
-        this.getAdPanel.showRewardAd(() => {
-            this.setDiamond(GlobalData.addDiamond);
-        }, `被击败奖励\n免费获得${GlobalData.addDiamond}个钻石`);
-        Event.dispatchToLocal(EventType.TryOutGun);
-    }
+    // private isFirst: boolean = true;
+    // public dieAds(): void {
+    //     if (this.isFirst) {
+    //         this.isFirst = false;
+    //         return;
+    //     }
+    //     this.getAdPanel.showRewardAd(() => {
+    //         this.setDiamond(GlobalData.addDiamond);
+    //     }, `被击败奖励\n免费获得${GlobalData.addDiamond}个钻石`);
+    //     Event.dispatchToLocal(EventType.TryOutGun);
+    // }
     //#endregion
 
     //#region LeBi
