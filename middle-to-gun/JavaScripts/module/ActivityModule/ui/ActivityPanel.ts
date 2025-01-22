@@ -1,11 +1,9 @@
-﻿import ConfirmPanel from "../../../common/ConfirmPanel";
-import { Notice } from "../../../common/notice/Notice";
-import { GameConfig } from "../../../config/GameConfig";
+﻿import { Notice } from "../../../common/notice/Notice";
 import { EventType } from "../../../tools/EventType";
+import GlobalData from "../../../tools/GlobalData";
 import Utils from "../../../tools/Utils";
 import ActivityPanel_Generate from "../../../ui-generate/module/ActivityModule/ActivityPanel_generate";
 import AdPanel from "../../AdModule/ui/AdPanel";
-import CoinModuleC from "../../CoinModule/CoinModuleC";
 import { ShopType } from "../../ShopModule/ShopData";
 import ActivityModuleC from "../ActivityModuleC";
 
@@ -23,21 +21,6 @@ export default class ActivityPanel extends ActivityPanel_Generate {
 			this.adPanel = UIService.getUI(AdPanel);
 		}
 		return this.adPanel;
-	}
-	private confirmPanel: ConfirmPanel = null;
-	private get getConfirmPanel(): ConfirmPanel {
-		if (this.confirmPanel == null) {
-			this.confirmPanel = UIService.getUI(ConfirmPanel);
-		}
-		return this.confirmPanel;
-	}
-
-	private coinModuleC: CoinModuleC = null;
-	private get getCoinModuleC(): CoinModuleC {
-		if (this.coinModuleC == null) {
-			this.coinModuleC = ModuleService.getModule(CoinModuleC);
-		}
-		return this.coinModuleC;
 	}
 
 	private activityData: { shopId: number, shopType: ShopType, shopIcon: string }[] = [
@@ -132,9 +115,13 @@ export default class ActivityPanel extends ActivityPanel_Generate {
 		// 		this.getCoinModuleC.openShopBuyDiamondCoin(price);
 		// 	}
 		// }, contentText, "领取", "取消", "提示");
-		this.getAdPanel.showRewardAd(() => {
+		if (GlobalData.isOpenIAA) {
+			this.getAdPanel.showRewardAd(() => {
+				this.setGetActivity();
+			}, "免费领取" + this.getActicityShopTypeStr());
+		} else {
 			this.setGetActivity();
-		}, "免费领取" + this.getActicityShopTypeStr());
+		}
 	}
 
 	private setGetActivity(): void {
