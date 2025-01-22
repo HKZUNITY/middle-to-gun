@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TeamModule/TeamItem.ui
- * TIME: 2024.05.23-21.30.02
+ * TIME: 2025.01.22-23.41.45
  */
  
 @UIBind('UI/module/TeamModule/TeamItem.ui')
