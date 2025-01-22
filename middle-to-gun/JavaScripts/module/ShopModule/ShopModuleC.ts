@@ -56,8 +56,20 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
         this.gunModuleC = ModuleService.getModule(GunModuleC);
     }
 
+    public onBuyAction: Action = new Action();
     private bindActions(): void {
         this.getHUDModuleC.onOpenShopAction.add(this.bindOpenShopAction.bind(this));
+        this.onBuyAction.add(() => {
+            if (mw.SystemUtil.isPIE) {
+                Notice.showDownNotice(`购买成功`);
+                this.buyComplete();
+            } else {
+                mw.PurchaseService.placeOrder(`72sEf6qRDFT0002w5`, 1, (status, msg) => {
+                    mw.PurchaseService.getArkBalance();//刷新代币数量
+                    if (status != 200) return;
+                });
+            }
+        });
     }
 
     private initEvent(): void {
@@ -92,9 +104,37 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
         this.shopPanel = UIService.getUI(ShopPanel);
     }
 
+    public net_deliverGoods(commodityId: string, amount: number): void {
+        if (commodityId == "72sEf6qRDFT0002w5") {
+            Notice.showDownNotice(`购买成功`);
+            this.buyComplete();
+        }
+    }
+
+    private buyComplete(): void {
+        this.shopIds = {};
+        let weaponIds: number[] = [];
+        for (let i = 1; i <= 14; ++i) {
+            weaponIds.push(i);
+        }
+        MapEx.set(this.shopIds, ShopType.Gun, weaponIds);
+        let skinIds: number[] = [];
+        for (let i = 1; i <= 34; ++i) {
+            skinIds.push(i);
+        }
+        MapEx.set(this.shopIds, ShopType.Role, skinIds);
+        let trailIds: number[] = [];
+        for (let i = 1; i <= 63; ++i) {
+            trailIds.push(i);
+        }
+        MapEx.set(this.shopIds, ShopType.Trailing, trailIds);
+        this.server.net_buyComplete();
+        this.getShopPanel.updateShopItem();
+    }
+
     private initUseShopItem(): void {
         if (MapEx.has(this.useShopIds, ShopType.Gun)) this.setCharacterGun();
-        if (MapEx.has(this.useShopIds, ShopType.Role)) this.setCharacterDescription(MapEx.get(this.useShopIds, ShopType.Role));
+        // if (MapEx.has(this.useShopIds, ShopType.Role)) this.setCharacterDescription(MapEx.get(this.useShopIds, ShopType.Role));
         if (MapEx.has(this.useShopIds, ShopType.Trailing)) this.setCharacterTrailing(MapEx.get(this.useShopIds, ShopType.Trailing));
     }
 
@@ -168,7 +208,7 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
         this.previewShopItem(shopId, shopType);
         if (!this.setUseShopId(shopType, shopId)) {
             Notice.showDownNotice("穿戴中");
-            return;
+            // return;
         }
         switch (shopType) {
             case ShopType.Gun:
