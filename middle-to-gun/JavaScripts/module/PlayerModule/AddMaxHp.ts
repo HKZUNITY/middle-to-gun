@@ -1,5 +1,4 @@
 ﻿import GlobalData from "../../tools/GlobalData";
-import Utils from "../../tools/Utils";
 import AdPanel from "../AdModule/ui/AdPanel";
 import { PlayerModuleC } from "./PlayerModuleC";
 
@@ -68,9 +67,13 @@ export default class AddMaxHp extends Script {
 
     private onTriggerEnter(character: mw.Character): void {
         if (Player.localPlayer.character != character) return;
-        this.getAdPanel.showRewardAd(() => {
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
+                this.getPlayerModuleC.addMaxHp();
+            }, "奖励翻倍\n提高最大生命值 + " + GlobalData.maxHp * 2, "取消", "免费获取");
+        } else {
             this.getPlayerModuleC.addMaxHp();
-        }, "奖励翻倍\n提高最大生命值 + " + GlobalData.maxHp * 2, "取消", "免费获取");
+        }
     }
 
     /**客户端的onUpdate */

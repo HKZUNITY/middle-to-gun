@@ -95,11 +95,17 @@ export default class TryOutGun extends Script {
     private onTriggerEnter(character: mw.Character): void {
         if (Player.localPlayer.character != character) return;
         let gunElement = GameConfig.GUN.getElement(this.gunkey);
-        this.getAdPanel.showRewardAd(() => {
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
+                if (!this.gunkey) return;
+                this.switchGun();
+                this.switchGunModel(Utils.randomInt(10, 14));
+            }, gunElement.GUNNAME + "\n免费使用一局", "取消", "免费使用");
+        } else {
             if (!this.gunkey) return;
             this.switchGun();
             this.switchGunModel(Utils.randomInt(10, 14));
-        }, gunElement.GUNNAME + "\n免费使用一局", "取消", "免费使用");
+        }
     }
 
     private switchGun(): void {
