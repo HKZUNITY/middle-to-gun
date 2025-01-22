@@ -9,4 +9,8 @@ export default class GlobalData {
     /**每周刷新时间（目前是每周一凌晨4点，格式为4:0） */
     public static weeklyRefreshTime: string = "4:0";
     public static maxHp: number = 100;
+
+    public static addDiamond: number = 10;
+    public static addCoin: number = 88888;
+    public static maxWorldRankCount: number = 500;
 }
