@@ -1,9 +1,7 @@
-﻿import ConfirmPanel from "../../common/ConfirmPanel";
-import { Notice } from "../../common/notice/Notice";
-import { GameConfig } from "../../config/GameConfig";
+﻿import { GameConfig } from "../../config/GameConfig";
+import GlobalData from "../../tools/GlobalData";
 import Utils from "../../tools/Utils";
 import AdPanel from "../AdModule/ui/AdPanel";
-import CoinModuleC from "../CoinModule/CoinModuleC";
 import GunModuleC from "../GunModule/GunModuleC";
 import { MorphModuleC } from "../MorphModule/MorphModule";
 import ShopModuleC from "../ShopModule/ShopModuleC";
@@ -65,22 +63,6 @@ export default class TryOutGun extends Script {
         return this.adPanel;
     }
 
-    private confirmPanel: ConfirmPanel = null;
-    private get getConfirmPanel(): ConfirmPanel {
-        if (this.confirmPanel == null) {
-            this.confirmPanel = UIService.getUI(ConfirmPanel);
-        }
-        return this.confirmPanel;
-    }
-
-    private coinModuleC: CoinModuleC = null;
-    private get getCoinModuleC(): CoinModuleC {
-        if (this.coinModuleC == null) {
-            this.coinModuleC = ModuleService.getModule(CoinModuleC);
-        }
-        return this.coinModuleC;
-    }
-
     /**客户端的onStart */
     private async onStartC(): Promise<void> {
         await ModuleService.ready();
@@ -113,24 +95,17 @@ export default class TryOutGun extends Script {
     private onTriggerEnter(character: mw.Character): void {
         if (Player.localPlayer.character != character) return;
         let gunElement = GameConfig.GUN.getElement(this.gunkey);
-        // let price: number = 100;
-        // let contentText: string = `消耗${price}钻石\n免费领取`;
-        // this.getConfirmPanel.confirmTips(() => {
-        //     if (this.getCoinModuleC.getDiamond >= price) {
-        //         this.getCoinModuleC.setDiamond(-price);
-        //         this.switchGun();
-        //         this.switchGunModel(Utils.randomInt(10, 14));
-        //     } else {
-        //         Notice.showDownNotice("钻石不足");
-        //         this.getCoinModuleC.openShopBuyDiamondCoin(price);
-        //     }
-        // }, contentText, "领取", "取消", "提示");
-
-        this.getAdPanel.showRewardAd(() => {
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
+                if (!this.gunkey) return;
+                this.switchGun();
+                this.switchGunModel(Utils.randomInt(10, 14));
+            }, gunElement.GUNNAME + "\n免费使用一局", "取消", "免费使用");
+        } else {
             if (!this.gunkey) return;
             this.switchGun();
             this.switchGunModel(Utils.randomInt(10, 14));
-        }, gunElement.GUNNAME + "\n免费使用一局", "取消", "免费使用");
+        }
     }
 
     private switchGun(): void {
