@@ -1,4 +1,5 @@
 ﻿import { EventType } from "../../../tools/EventType";
+import GlobalData from "../../../tools/GlobalData";
 import Utils from "../../../tools/Utils";
 import RankPanel_Generate from "../../../ui-generate/module/RankModule/RankPanel_generate";
 import { RoomData, WorldData } from "../RankData";
@@ -29,6 +30,7 @@ export default class RankPanel extends RankPanel_Generate {
 	}
 
 	private initUI(): void {
+		this.mTitleTextBlock.text = `全服前${GlobalData.maxWorldRankCount}名`;
 		this.switchRankType(true);
 	}
 
