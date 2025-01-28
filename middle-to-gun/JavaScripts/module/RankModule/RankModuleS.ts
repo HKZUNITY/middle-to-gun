@@ -1,4 +1,5 @@
-﻿import { RoomData, WorldData } from "./RankData";
+﻿import GlobalData from "../../tools/GlobalData";
+import { RoomData, WorldData } from "./RankData";
 import RankModuleC from "./RankModuleC";
 
 export default class RankModuleS extends ModuleS<RankModuleC, null> {
@@ -83,7 +84,7 @@ export default class RankModuleS extends ModuleS<RankModuleC, null> {
         if (this.worldDatas == null) {
             this.worldDatas = [];
         }
-        if (this.worldDatas.length < 100) {
+        if (this.worldDatas.length < GlobalData.maxWorldRankCount) {
             if (this.worldDatas.length == 0) {
                 this.worldDatas.push(worldData);
                 isPush = true;

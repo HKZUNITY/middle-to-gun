@@ -5,6 +5,9 @@ class GlobalData {
 GlobalData.isOpenIAA = false;
 GlobalData.roomPeopleCount = 20;
 GlobalData.soundVolume = 1;
+GlobalData.addDiamond = 100;
+GlobalData.addCoin = 88888;
+GlobalData.maxWorldRankCount = 500;
 /**每日刷新时间（目前是凌晨4点，格式为4:0） */
 GlobalData.dailyRefreshTime = "4:0";
 /**每周刷新时间（目前是每周一凌晨4点，格式为4:0） */
@@ -442,7 +445,7 @@ function __decorate(decorators, target, key, desc) {
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/ConfirmPanel.ui
- * TIME: 2024.03.13-23.04.52
+ * TIME: 2025.01.28-14.25.20
  */
 let ConfirmPanel_Generate = class ConfirmPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -590,7 +593,7 @@ var foreign1 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/NoticeView.ui
- * TIME: 2024.03.13-23.04.52
+ * TIME: 2025.01.28-14.25.20
  */
 let NoticeView_Generate = class NoticeView_Generate extends UIScript {
     get con_top_notice() {
@@ -657,7 +660,7 @@ var foreign69 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/TopNoticeItem.ui
- * TIME: 2024.03.13-23.04.52
+ * TIME: 2025.01.28-14.25.20
  */
 let TopNoticeItem_Generate = class TopNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -2088,7 +2091,7 @@ var foreign6 = /*#__PURE__*/Object.freeze({
     ConfigBase: ConfigBase
 });
 
-const EXCELDATA$3 = [["ID", "GUNNAME", "GUNPREFAB", "GUNICON", "GUNICON_M", "GUNLOC", "GUNSCALE", "IATURNICON", "PRICETYPE", "PRICE", "FIREINTERVAL", "BULLETCOUNT", "HURT"], ["", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "M4A1卡宾枪", "587777AD4056DC3AB465FBA7D3F5F7BA", "101168", "94153", new mw.Vector(-20, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1, 15888], "0.2", 30, 25], [2, "AK47自动步枪", "0D543D5346C331F41DA890A5E6DD3DB5", "101171", "95712", new mw.Vector(-20, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1, 18888], "0.2", 30, 25], [3, "QBZ95式突击步枪", "E3E0C2994D3518540DBB6D8C00C8AB83", "120590", "44974", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [2, 35888], "0.15", 30, 25], [4, "SCAR突击步枪", "5181250F44DF914A714B668F99177E3A", "120588", "43712", new mw.Vector(-10, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [3, 48888], "0.15", 30, 25], [5, "突击步枪", "1CD6AEAB4602DF140ACE93BD49D5CA19", "120587", "43710", new mw.Vector(-10, 0, 0), new mw.Vector(1, 1, 1), 1, 1, [4, 58888], "0.1", 35, 25], [6, "MP5冲锋枪", "A469CCC84AAA873815243BB25439707C", "101167", "99703", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [4, 58888], "0.1", 35, 25], [7, "MP7冲锋枪", "68E812DC47B714F9A2BB2ABE18304C5B", "101169", "99701", new mw.Vector(-5, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [4, 58888], "0.1", 35, 25], [8, "P90冲锋枪", "BA1BDC034FCDE8574CBBAA8C4831A950", "120592", "43734", new mw.Vector(10, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [5, 68888], "0.1", 40, 25], [9, "M249机枪", "FCFE18BE440FAEBD5AB999A222F10AA9", "101166", "95717", new mw.Vector(-20, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [5, 78888], "0.2", 100, 25], [10, "激光幽灵枪", "23240FEE4F3BD25DE8EA6DBE525B3A20", null, "122716", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 1, 1, [8, 138888], "0.3", 40, 50], [11, "烟花枪", "A830458640D6EA21FB7AEA8F7E029CB7", null, "122726", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [10, 158888], "0.3", 40, 50], [12, "激光烈火枪", "0C7F278C4254F90F69614086DCA0B906", "101163", "95676", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [12, 188888], "0.3", 40, 50], [13, "激光冰雷枪", "29CD5E6145D1B05590E887A050E0D3C8", "66181", "122720", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [15, 208888], "0.3", 40, 50], [14, "激光巴雷特", "015C826546EBC60F95EF399D16523B78", "101165", "99699", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 1, 1, [20, 388888], "1", 10, 100]];
+const EXCELDATA$3 = [["ID", "GUNNAME", "GUNPREFAB", "GUNICON", "GUNICON_M", "GUNLOC", "GUNSCALE", "IATURNICON", "PRICETYPE", "PRICE", "FIREINTERVAL", "BULLETCOUNT", "HURT"], ["", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "M4A1卡宾枪", "587777AD4056DC3AB465FBA7D3F5F7BA", "101168", "94153", new mw.Vector(-20, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1, 15888], "0.2", 30, 25], [2, "AK47自动步枪", "0D543D5346C331F41DA890A5E6DD3DB5", "101171", "95712", new mw.Vector(-20, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1, 18888], "0.2", 30, 25], [3, "QBZ95式突击步枪", "E3E0C2994D3518540DBB6D8C00C8AB83", "120590", "44974", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [2, 35888], "0.15", 30, 25], [4, "SCAR突击步枪", "5181250F44DF914A714B668F99177E3A", "120588", "43712", new mw.Vector(-10, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [3, 48888], "0.15", 30, 25], [5, "突击步枪", "1CD6AEAB4602DF140ACE93BD49D5CA19", "120587", "43710", new mw.Vector(-10, 0, 0), new mw.Vector(1, 1, 1), 1, 1, [4, 58888], "0.1", 35, 25], [6, "MP5冲锋枪", "A469CCC84AAA873815243BB25439707C", "101167", "99703", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [4, 58888], "0.1", 35, 25], [7, "MP7冲锋枪", "68E812DC47B714F9A2BB2ABE18304C5B", "101169", "99701", new mw.Vector(-5, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [4, 58888], "0.1", 35, 25], [8, "P90冲锋枪", "BA1BDC034FCDE8574CBBAA8C4831A950", "120592", "43734", new mw.Vector(10, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [5, 68888], "0.1", 40, 25], [9, "M249机枪", "FCFE18BE440FAEBD5AB999A222F10AA9", "101166", "95717", new mw.Vector(-20, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [5, 78888], "0.2", 100, 25], [10, "激光幽灵枪", "23240FEE4F3BD25DE8EA6DBE525B3A20", null, "122716", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 1, 1, [88, 13888888], "0.3", 40, 50], [11, "烟花枪", "A830458640D6EA21FB7AEA8F7E029CB7", null, "122726", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [288, 18858888], "0.3", 40, 50], [12, "激光烈火枪", "0C7F278C4254F90F69614086DCA0B906", "101163", "95676", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [588, 18888888], "0.3", 40, 50], [13, "激光冰雷枪", "29CD5E6145D1B05590E887A050E0D3C8", "66181", "122720", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [888, 20888888], "0.3", 40, 50], [14, "激光巴雷特", "015C826546EBC60F95EF399D16523B78", "101165", "99699", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 1, 1, [1688, 38888888], "1", 10, 100]];
 class GUNConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$3);
@@ -2112,7 +2115,7 @@ var foreign9 = /*#__PURE__*/Object.freeze({
     ROLEConfig: ROLEConfig
 });
 
-const EXCELDATA$1 = [["ID", "Name", "TaskType", "TaskItemType", "NextId", "TragetNum", "Coin", "Diamond"], ["", "", "", "", "", "", "", ""], [1, "每日登录游戏（{0}/{1}）", 1, 1, 0, 1, 100, 0], [11, "每日在线时长5分钟（{0}/{1}）", 1, 11, 0, 5, 500, 0], [12, "每日在线时长10分钟（{0}/{1}）", 1, 12, 0, 10, 500, 0], [13, "每日在线时长15分钟（{0}/{1}）", 1, 13, 0, 15, 500, 0], [14, "每日在线时长20分钟（{0}/{1}）", 1, 14, 0, 20, 500, 0], [15, "每日在线时长25分钟（{0}/{1}）", 1, 15, 0, 25, 500, 0], [16, "每日在线时长30分钟（{0}/{1}）", 1, 16, 0, 30, 500, 0], [17, "每日在线时长40分钟（{0}/{1}）", 1, 17, 0, 40, 1000, 0], [18, "每日在线时长50分钟（{0}/{1}）", 1, 18, 0, 50, 1000, 0], [19, "每日在线时长60分钟（{0}/{1}）", 1, 19, 0, 60, 1000, 1], [31, "每日击败1个玩家（{0}/{1}）", 1, 31, 0, 1, 20, 0], [32, "每日击败5个玩家（{0}/{1}）", 1, 32, 0, 5, 80, 0], [33, "每日击败10个玩家（{0}/{1}）", 1, 33, 0, 10, 100, 0], [34, "每日击败20个玩家（{0}/{1}）", 1, 34, 0, 20, 200, 0], [35, "每日击败30个玩家（{0}/{1}）", 1, 35, 0, 30, 200, 0], [36, "每日击败50个玩家（{0}/{1}）", 1, 36, 0, 50, 400, 0], [37, "每日击败100个玩家（{0}/{1}）", 1, 37, 0, 100, 1000, 0], [38, "每日击败200个玩家（{0}/{1}）", 1, 38, 0, 200, 2000, 0], [39, "每日击败300个玩家（{0}/{1}）", 1, 39, 0, 300, 2000, 1], [101, "每周登录1天（{0}/{1}）", 2, 101, 0, 1, 1000, 0], [102, "每周登录2天（{0}/{1}）", 2, 102, 0, 2, 1000, 0], [103, "每周登录3天（{0}/{1}）", 2, 103, 0, 3, 1000, 0], [104, "每周登录4天（{0}/{1}）", 2, 104, 0, 4, 1000, 0], [105, "每周登录5天（{0}/{1}）", 2, 105, 0, 5, 1000, 0], [106, "每周登录6天（{0}/{1}）", 2, 106, 0, 6, 1000, 0], [107, "每周登录7天（{0}/{1}）", 2, 107, 0, 7, 1000, 1]];
+const EXCELDATA$1 = [["ID", "Name", "TaskType", "TaskItemType", "NextId", "TragetNum", "Coin", "Diamond"], ["", "", "", "", "", "", "", ""], [1, "每日登录游戏（{0}/{1}）", 1, 1, 0, 1, 100, 10], [11, "每日在线时长5分钟（{0}/{1}）", 1, 11, 0, 5, 500, 5], [12, "每日在线时长10分钟（{0}/{1}）", 1, 12, 0, 10, 500, 10], [13, "每日在线时长15分钟（{0}/{1}）", 1, 13, 0, 15, 500, 15], [14, "每日在线时长20分钟（{0}/{1}）", 1, 14, 0, 20, 500, 20], [15, "每日在线时长25分钟（{0}/{1}）", 1, 15, 0, 25, 500, 25], [16, "每日在线时长30分钟（{0}/{1}）", 1, 16, 0, 30, 500, 30], [17, "每日在线时长40分钟（{0}/{1}）", 1, 17, 0, 40, 1000, 40], [18, "每日在线时长50分钟（{0}/{1}）", 1, 18, 0, 50, 1000, 50], [19, "每日在线时长60分钟（{0}/{1}）", 1, 19, 0, 60, 1000, 100], [31, "每日击败1个玩家（{0}/{1}）", 1, 31, 0, 1, 20, 1], [32, "每日击败5个玩家（{0}/{1}）", 1, 32, 0, 5, 80, 5], [33, "每日击败10个玩家（{0}/{1}）", 1, 33, 0, 10, 100, 10], [34, "每日击败20个玩家（{0}/{1}）", 1, 34, 0, 20, 200, 20], [35, "每日击败30个玩家（{0}/{1}）", 1, 35, 0, 30, 200, 30], [36, "每日击败50个玩家（{0}/{1}）", 1, 36, 0, 50, 400, 50], [37, "每日击败100个玩家（{0}/{1}）", 1, 37, 0, 100, 1000, 100], [38, "每日击败200个玩家（{0}/{1}）", 1, 38, 0, 200, 2000, 200], [39, "每日击败300个玩家（{0}/{1}）", 1, 39, 0, 300, 2000, 300], [101, "每周登录1天（{0}/{1}）", 2, 101, 0, 1, 1000, 100], [102, "每周登录2天（{0}/{1}）", 2, 102, 0, 2, 1000, 200], [103, "每周登录3天（{0}/{1}）", 2, 103, 0, 3, 1000, 300], [104, "每周登录4天（{0}/{1}）", 2, 104, 0, 4, 1000, 400], [105, "每周登录5天（{0}/{1}）", 2, 105, 0, 5, 1000, 500], [106, "每周登录6天（{0}/{1}）", 2, 106, 0, 6, 1000, 600], [107, "每周登录7天（{0}/{1}）", 2, 107, 0, 7, 1000, 700]];
 class TaskConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$1);
@@ -2217,7 +2220,7 @@ var foreign61 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/CoinPanel.ui
- * TIME: 2024.03.13-23.04.52
+ * TIME: 2025.01.28-14.25.20
  */
 let CoinPanel_Generate = class CoinPanel_Generate extends UIScript {
     get mCoinCanvas() {
@@ -2312,7 +2315,7 @@ var foreign74 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdModule/AdPanel.ui
- * TIME: 2024.05.20-00.20.34
+ * TIME: 2025.01.28-14.25.20
  */
 let AdPanel_Generate = class AdPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -2451,7 +2454,6 @@ class CoinModuleC extends ModuleC {
         this.onAddDiamondAction = new Action();
         this.coin = 0;
         this.diamond = 0;
-        this.isFirst = true;
     }
     get getCoinPanel() {
         if (this.coinPanel == null) {
@@ -2486,7 +2488,6 @@ class CoinModuleC extends ModuleC {
         this.coin = this.data.coin;
         this.diamond = this.data.diamond;
         this.getCoinPanel.setCoinAndDiamond(this.coin, this.diamond);
-        this.defaultAds();
     }
     setCoin(coin) {
         this.coin += coin;
@@ -2511,26 +2512,24 @@ class CoinModuleC extends ModuleC {
         return this.diamond;
     }
     getCoinByAd() {
-        this.getAdPanel.showRewardAd(() => {
-            if (!GlobalData.isOpenIAA) {
-                this.setCoin(10000);
-                return;
-            }
-            Utils.showRewardAd(() => {
-                this.setCoin(10000);
-            });
-        }, "免费领取10000金币");
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
+                this.setCoin(GlobalData.addCoin);
+            }, `免费领取${GlobalData.addCoin}金币`);
+        }
+        else {
+            this.setCoin(GlobalData.addCoin);
+        }
     }
     getDiamondByAd() {
-        this.getAdPanel.showRewardAd(() => {
-            if (!GlobalData.isOpenIAA) {
-                this.setDiamond(1);
-                return;
-            }
-            Utils.showRewardAd(() => {
-                this.setDiamond(1);
-            });
-        }, "免费领取1个钻石");
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
+                this.setDiamond(GlobalData.addDiamond);
+            }, `免费领取${GlobalData.addDiamond}个钻石`);
+        }
+        else {
+            this.setDiamond(GlobalData.addDiamond);
+        }
     }
     net_killPlayerAddCoin(coin) {
         this.coin += coin;
@@ -2543,52 +2542,6 @@ class CoinModuleC extends ModuleC {
         Notice.showDownNotice("<color=#" + (num > 0 ? "yellow>" : "red>") + (num > 0 ? "获得" : "花费") + (isCoin ? "金币" : "钻石") + num + "</color>");
         // Notice.showDownNotice("<color=#lime>" + "<size=18>" + killerName + " 击败了 " + killedName + "</size>" + "</color>"
         //     + "\n" + "<color=#red>完成了" + killTips + "</color>");
-    }
-    defaultAds() {
-        this.delay15Seconds();
-        this.setInterval180Seconds();
-    }
-    delay15Seconds() {
-        TimeUtil.delaySecond(15).then(() => {
-            this.getAdPanel.showRewardAd(() => {
-                if (!GlobalData.isOpenIAA) {
-                    this.setDiamond(2);
-                    return;
-                }
-                Utils.showRewardAd(() => {
-                    this.setDiamond(2);
-                });
-            }, "大礼包\n免费获得2个钻石");
-        });
-    }
-    setInterval180Seconds() {
-        TimeUtil.setInterval(() => {
-            this.getAdPanel.showRewardAd(() => {
-                if (!GlobalData.isOpenIAA) {
-                    this.setDiamond(3);
-                    return;
-                }
-                Utils.showRewardAd(() => {
-                    this.setDiamond(3);
-                });
-            }, "幸运大礼包\n免费获得3个钻石");
-        }, 180);
-    }
-    dieAds() {
-        if (this.isFirst) {
-            this.isFirst = false;
-            return;
-        }
-        this.getAdPanel.showRewardAd(() => {
-            if (!GlobalData.isOpenIAA) {
-                this.setDiamond(2);
-                return;
-            }
-            Utils.showRewardAd(() => {
-                this.setDiamond(2);
-            });
-        }, "被击败奖励\n免费获得2个钻石");
-        Event.dispatchToLocal(EventType.TryOutGun);
     }
 }
 
@@ -2693,7 +2646,7 @@ var foreign27 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2025.01.28-14.25.21
  */
 let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     get mVirtualJoystickPanel() {
@@ -2722,57 +2675,63 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     }
     get mSetButton() {
         if (!this.mSetButton_Internal && this.uiWidgetBase) {
-            this.mSetButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_1/SetCanvas/mSetButton');
+            this.mSetButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/SetCanvas/mSetButton');
         }
         return this.mSetButton_Internal;
     }
     get mRankButton() {
         if (!this.mRankButton_Internal && this.uiWidgetBase) {
-            this.mRankButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_1/RankCanvas/mRankButton');
+            this.mRankButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/RankCanvas/mRankButton');
         }
         return this.mRankButton_Internal;
     }
     get mTaskButton() {
         if (!this.mTaskButton_Internal && this.uiWidgetBase) {
-            this.mTaskButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_1/TaskCanvas/mTaskButton');
+            this.mTaskButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TaskCanvas/mTaskButton');
         }
         return this.mTaskButton_Internal;
     }
     get mTaskPointImage() {
         if (!this.mTaskPointImage_Internal && this.uiWidgetBase) {
-            this.mTaskPointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_1/TaskCanvas/mTaskPointImage');
+            this.mTaskPointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TaskCanvas/mTaskPointImage');
         }
         return this.mTaskPointImage_Internal;
     }
     get mTaskBgImage() {
         if (!this.mTaskBgImage_Internal && this.uiWidgetBase) {
-            this.mTaskBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_1/TaskCanvas/mTaskBgImage');
+            this.mTaskBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TaskCanvas/mTaskBgImage');
         }
         return this.mTaskBgImage_Internal;
     }
     get mTeamButton() {
         if (!this.mTeamButton_Internal && this.uiWidgetBase) {
-            this.mTeamButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_2/TeamCanvas/mTeamButton');
+            this.mTeamButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TeamCanvas/mTeamButton');
         }
         return this.mTeamButton_Internal;
     }
     get mTeamBgImage() {
         if (!this.mTeamBgImage_Internal && this.uiWidgetBase) {
-            this.mTeamBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_2/TeamCanvas/mTeamBgImage');
+            this.mTeamBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TeamCanvas/mTeamBgImage');
         }
         return this.mTeamBgImage_Internal;
     }
     get mTeamIconImage() {
         if (!this.mTeamIconImage_Internal && this.uiWidgetBase) {
-            this.mTeamIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_2/TeamCanvas/mTeamIconImage');
+            this.mTeamIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TeamCanvas/mTeamIconImage');
         }
         return this.mTeamIconImage_Internal;
     }
     get mShopButton() {
         if (!this.mShopButton_Internal && this.uiWidgetBase) {
-            this.mShopButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas_2/ShopCanvas/mShopButton');
+            this.mShopButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/ShopCanvas/mShopButton');
         }
         return this.mShopButton_Internal;
+    }
+    get mRoleButton() {
+        if (!this.mRoleButton_Internal && this.uiWidgetBase) {
+            this.mRoleButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/RoleCanvas/mRoleButton');
+        }
+        return this.mRoleButton_Internal;
     }
     get mActivityButton() {
         if (!this.mActivityButton_Internal && this.uiWidgetBase) {
@@ -2965,6 +2924,10 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
             Event.dispatchToLocal("PlayButtonClick", "mShopButton");
         });
         this.mShopButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mRoleButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mRoleButton");
+        });
+        this.mRoleButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         this.mActivityButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mActivityButton");
         });
@@ -3046,7 +3009,7 @@ var foreign78 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/KillTipItem.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2025.01.28-14.25.21
  */
 let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
     get mBgImage() {
@@ -3219,7 +3182,11 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.mActivityButton.onClicked.add(this.onClickOpenActivityButton.bind(this));
         this.mTaskButton.onClicked.add(this.onClickOpenTaskButton.bind(this));
         this.mResetPosButton.onClicked.add(this.onClickResetPosButton.bind(this));
+        this.mRoleButton.onClicked.add(this.onClickOpenRoleButton.bind(this));
         this.bindSetButton();
+    }
+    onClickOpenRoleButton() {
+        this.getHUDModuleC.onOpenRoleAction.call();
     }
     onClickOpenShopButton() {
         this.getHUDModuleC.onOpenShopAction.call();
@@ -3388,7 +3355,6 @@ class HUDPanel extends HUDPanel_Generate$1 {
             .onComplete(() => {
             Utils.setWidgetVisibility(this.mInvincibleCanvas, mw.SlateVisibility.Collapsed);
             this.stopFlickerText();
-            this.getCoinModuleC.dieAds();
         })
             .start();
     }
@@ -3541,6 +3507,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.initTeamTweens();
         this.initShakeActivityTween();
         this.initShakeShopTween();
+        this.initShakeRoleTween();
     }
     //#region RankTween
     initRankButtonTweens() {
@@ -3595,8 +3562,8 @@ class HUDPanel extends HUDPanel_Generate$1 {
             .easing(cubicBezier(0.25, 0.1, 0.25, 1));
     }
     initTaskTween() {
-        let leftToRight = this.getPosTween(this.mTaskBgImage, 0.5, 0, 25, 50, 25);
-        let rightToLeft = this.getPosTween(this.mTaskBgImage, 0.5, 50, 25, 0, 25);
+        let leftToRight = this.getPosTween(this.mTaskBgImage, 0.5, 0, 15, 40, 15);
+        let rightToLeft = this.getPosTween(this.mTaskBgImage, 0.5, 40, 15, 0, 15);
         leftToRight.start().onComplete(() => {
             TimeUtil.delaySecond(0.1).then(() => {
                 rightToLeft.start().onComplete(() => {
@@ -3641,6 +3608,21 @@ class HUDPanel extends HUDPanel_Generate$1 {
     initShakeShopTween() {
         let rightBigToLeftSmall = this.getShakeScaleTween(this.mShopButton, 0.8, 20, -20, 1.1, 0.9);
         let leftSamllToRightBig = this.getShakeScaleTween(this.mShopButton, 0.8, -20, 20, 0.9, 1.1);
+        rightBigToLeftSmall.start().onComplete(() => {
+            TimeUtil.delaySecond(0.1).then(() => {
+                leftSamllToRightBig.start().onComplete(() => {
+                    TimeUtil.delaySecond(0.1).then(() => {
+                        rightBigToLeftSmall.start();
+                    });
+                });
+            });
+        });
+    }
+    //#endregion
+    //#region ShopTween
+    initShakeRoleTween() {
+        let rightBigToLeftSmall = this.getShakeScaleTween(this.mRoleButton, 0.8, 20, -20, 1.1, 0.9);
+        let leftSamllToRightBig = this.getShakeScaleTween(this.mRoleButton, 0.8, -20, 20, 0.9, 1.1);
         rightBigToLeftSmall.start().onComplete(() => {
             TimeUtil.delaySecond(0.1).then(() => {
                 leftSamllToRightBig.start().onComplete(() => {
@@ -3770,6 +3752,7 @@ class HUDModuleC extends ModuleC {
         this.onOpenActivityAction = new Action();
         this.onOpenTaskAction = new Action();
         this.onResetPosAction = new Action();
+        this.onOpenRoleAction = new Action();
         //#endregion
         //#region 连杀提示
         this.killCountMap = new Map();
@@ -3813,6 +3796,10 @@ class HUDModuleC extends ModuleC {
             isOpen ? UIService.getUI(CoinPanel).show() : UIService.getUI(CoinPanel).hide();
             Event.dispatchToLocal(EventType.OnOffMainHUD, isOpen);
         });
+        this.onOpenRoleAction.add(this.addOpenRoleAction.bind(this));
+    }
+    addOpenRoleAction() {
+        AvatarEditorService.asyncOpenAvatarEditorModule();
     }
     addOnOffHUDPannel(isOpen) {
         isOpen ? this.getHUDPanel.show() : this.getHUDPanel.hide();
@@ -4202,7 +4189,7 @@ var foreign47 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopPanel.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2025.01.28-14.25.21
  */
 let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
     get mTabCanvas() {
@@ -4312,7 +4299,7 @@ var foreign85 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopItem.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2025.01.28-14.25.21
  */
 let ShopItem_Generate = class ShopItem_Generate extends UIScript {
     get mICONImage() {
@@ -4942,8 +4929,7 @@ class ShopModuleC extends ModuleC {
     initUseShopItem() {
         if (MapEx.has(this.useShopIds, ShopType.Gun))
             this.setCharacterGun();
-        if (MapEx.has(this.useShopIds, ShopType.Role))
-            this.setCharacterDescription(MapEx.get(this.useShopIds, ShopType.Role));
+        // if (MapEx.has(this.useShopIds, ShopType.Role)) this.setCharacterDescription(MapEx.get(this.useShopIds, ShopType.Role));
         if (MapEx.has(this.useShopIds, ShopType.Trailing))
             this.setCharacterTrailing(MapEx.get(this.useShopIds, ShopType.Trailing));
     }
@@ -5013,7 +4999,7 @@ class ShopModuleC extends ModuleC {
         this.previewShopItem(shopId, shopType);
         if (!this.setUseShopId(shopType, shopId)) {
             Notice.showDownNotice("穿戴中");
-            return;
+            // return;
         }
         switch (shopType) {
             case ShopType.Gun:
@@ -5204,7 +5190,7 @@ var foreign48 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ActivityModule/ActivityPanel.ui
- * TIME: 2024.03.13-23.04.52
+ * TIME: 2025.01.28-14.25.20
  */
 let ActivityPanel_Generate = class ActivityPanel_Generate extends UIScript {
     get mWhatDayTextBlock() {
@@ -5420,15 +5406,14 @@ class ActivityPanel extends ActivityPanel_Generate$1 {
     onClickAdsGetButton() {
         if (!this.isHasCondition(true))
             return;
-        this.getAdPanel.showRewardAd(() => {
-            if (!GlobalData.isOpenIAA) {
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
                 this.setGetActivity();
-                return;
-            }
-            Utils.showRewardAd(() => {
-                this.setGetActivity();
-            });
-        }, "免费领取" + this.getActicityShopTypeStr());
+            }, "免费领取" + this.getActicityShopTypeStr());
+        }
+        else {
+            this.setGetActivity();
+        }
     }
     setGetActivity() {
         this.getActivityModuleC.setGetActivity(this.activityData[this.currentIndex - 1].shopId, this.activityData[this.currentIndex - 1].shopType);
@@ -5960,7 +5945,7 @@ var foreign41 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/RankPanel.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2025.01.28-14.25.21
  */
 let RankPanel_Generate = class RankPanel_Generate extends UIScript {
     get mRoomCanvas() {
@@ -5986,6 +5971,12 @@ let RankPanel_Generate = class RankPanel_Generate extends UIScript {
             this.mWorldCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mWorldCanvas');
         }
         return this.mWorldCanvas_Internal;
+    }
+    get mTitleTextBlock() {
+        if (!this.mTitleTextBlock_Internal && this.uiWidgetBase) {
+            this.mTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mWorldCanvas/MainWorldCanvas/TitleWorldCanvas/mTitleTextBlock');
+        }
+        return this.mTitleTextBlock_Internal;
     }
     get mWorldContentCanvas() {
         if (!this.mWorldContentCanvas_Internal && this.uiWidgetBase) {
@@ -6046,6 +6037,7 @@ let RankPanel_Generate = class RankPanel_Generate extends UIScript {
         this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         //按钮多语言
         //文本多语言
+        this.initLanguage(this.mTitleTextBlock);
         //文本多语言
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoomCanvas/MainRoomCanvas/TitleRoomCanvas/RedRoomTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoomCanvas/MainRoomCanvas/TitleRoomCanvas/BlueRoomTextBlock"));
@@ -6057,7 +6049,6 @@ let RankPanel_Generate = class RankPanel_Generate extends UIScript {
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoomCanvas/BlueTitleRoomCanvas/BlueNameTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoomCanvas/BlueTitleRoomCanvas/BlueKillCountTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoomCanvas/BlueTitleRoomCanvas/BlueDieCountTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mWorldCanvas/MainWorldCanvas/TitleWorldCanvas/TitleTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mWorldCanvas/WorldCanvas/WorldRankTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mWorldCanvas/WorldCanvas/WorldNameTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mWorldCanvas/WorldCanvas/WorldKillCountTextBlock"));
@@ -6098,7 +6089,7 @@ var foreign81 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/RoomItem.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2025.01.28-14.25.21
  */
 let RoomItem_Generate = class RoomItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -6202,7 +6193,7 @@ var foreign45 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/WorldItem.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2025.01.28-14.25.21
  */
 let WorldItem_Generate = class WorldItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -6327,6 +6318,7 @@ class RankPanel extends RankPanel_Generate$1 {
         this.mCloseButton.onClicked.add(this.bindCloseButton.bind(this));
     }
     initUI() {
+        this.mTitleTextBlock.text = `全服前${GlobalData.maxWorldRankCount}名`;
         this.switchRankType(true);
     }
     bindRoomButton() {
@@ -6761,7 +6753,7 @@ var foreign56 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TeamModule/TeamPanel.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2025.01.28-14.25.21
  */
 let TeamPanel_Generate = class TeamPanel_Generate extends UIScript {
     get mMainCanvas() {
@@ -6862,7 +6854,7 @@ var foreign89 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TeamModule/TeamItem.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2025.01.28-14.25.21
  */
 let TeamItem_Generate = class TeamItem_Generate extends UIScript {
     get mBgImage() {
@@ -8065,7 +8057,7 @@ class RankModuleS extends ModuleS {
         if (this.worldDatas == null) {
             this.worldDatas = [];
         }
-        if (this.worldDatas.length < 100) {
+        if (this.worldDatas.length < GlobalData.maxWorldRankCount) {
             if (this.worldDatas.length == 0) {
                 this.worldDatas.push(worldData);
                 isPush = true;
@@ -8974,21 +8966,29 @@ class RadarPanel extends UIScript {
                 return;
             if (this.playerPointMap.has(otherPlayer)) {
                 let otherPlayerPoint = this.playerPointMap.get(otherPlayer);
-                if (otherPlayer.character.ragdollEnabled) {
-                    this.setTextBlock(otherPlayerPoint, "×");
-                }
-                else {
-                    this.setTextBlock(otherPlayerPoint, "◆");
-                }
-                if (this.getRadarModuleC.isFriendly(this.currentPlayer, otherPlayer)) {
-                    this.setTextFontColor(otherPlayerPoint, mw.LinearColor.green);
-                }
-                else {
-                    this.setTextFontColor(otherPlayerPoint, mw.LinearColor.red);
-                }
                 let loc = this.Loc2RadarPos(otherPlayer.character.worldTransform.position);
                 let offset = otherPlayerPoint.size;
-                otherPlayerPoint.position = new Vector2(loc.x - (offset.x / 2), loc.y - (offset.y / 2));
+                let retPosition = new Vector2(loc.x - (offset.x / 2), loc.y - (offset.y / 2));
+                console.error(retPosition);
+                if (retPosition.x < 0 || retPosition.x > 400 || retPosition.y < 0 || retPosition.y > 400) {
+                    Utils.setWidgetVisibility(otherPlayerPoint, mw.SlateVisibility.Collapsed);
+                }
+                else {
+                    if (otherPlayer.character.ragdollEnabled) {
+                        this.setTextBlock(otherPlayerPoint, "×");
+                    }
+                    else {
+                        this.setTextBlock(otherPlayerPoint, "◆");
+                    }
+                    if (this.getRadarModuleC.isFriendly(this.currentPlayer, otherPlayer)) {
+                        this.setTextFontColor(otherPlayerPoint, mw.LinearColor.green);
+                    }
+                    else {
+                        this.setTextFontColor(otherPlayerPoint, mw.LinearColor.red);
+                    }
+                    Utils.setWidgetVisibility(otherPlayerPoint, mw.SlateVisibility.SelfHitTestInvisible);
+                    otherPlayerPoint.position = retPosition;
+                }
             }
             else {
                 this.playerPointMap.set(otherPlayer, this.getTextBlockPoint(otherPlayer.userId));
@@ -8999,15 +8999,22 @@ class RadarPanel extends UIScript {
         if (!this.npcPointMap || this.npcPointMap.size == 0)
             return;
         this.npcPointMap.forEach((value, key) => {
-            if (key.ragdollEnabled) {
-                this.setTextBlock(value, "×");
-            }
-            else {
-                this.setTextBlock(value, "◆");
-            }
             let loc = this.Loc2RadarPos(key.worldTransform.position);
             let offset = value.size;
-            value.position = new Vector2(loc.x - (offset.x / 2), loc.y - (offset.y / 2));
+            let retPosition = new Vector2(loc.x - (offset.x / 2), loc.y - (offset.y / 2));
+            if (retPosition.x < 0 || retPosition.x > 400 || retPosition.y < 0 || retPosition.y > 400) {
+                Utils.setWidgetVisibility(value, mw.SlateVisibility.Collapsed);
+            }
+            else {
+                if (key.ragdollEnabled) {
+                    this.setTextBlock(value, "×");
+                }
+                else {
+                    this.setTextBlock(value, "◆");
+                }
+                value.position = new Vector2(loc.x - (offset.x / 2), loc.y - (offset.y / 2));
+                Utils.setWidgetVisibility(value, mw.SlateVisibility.SelfHitTestInvisible);
+            }
         });
     }
     setNpcPoint(npc) {
@@ -9167,7 +9174,7 @@ var foreign49 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2025.01.28-14.25.20
  */
 let TaskItem_Generate = class TaskItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -9267,7 +9274,7 @@ var foreign86 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskPanel.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2025.01.28-14.25.21
  */
 let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
     get mDailyTimeTextBlock() {
@@ -9649,6 +9656,7 @@ class TaskItem extends TaskItem_Generate$1 {
             Utils.setWidgetVisibility(this.mUnfinishTextBlock, mw.SlateVisibility.Collapsed);
             this.task.isGetReward = true;
             mw.UIService.getUI(TaskPanel).recycleTaskItem(this.vipTaskType);
+            return;
         }
         this.isShowFinishBtn(false);
     }
@@ -10080,7 +10088,7 @@ var foreign12 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GMModule/GMHUD.ui
- * TIME: 2024.03.13-23.04.52
+ * TIME: 2025.01.28-14.25.20
  */
 let GMHUD_Generate = class GMHUD_Generate extends UIScript {
     get oKbutton() {
@@ -10170,7 +10178,7 @@ var foreign75 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GMModule/GMItem.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2025.01.28-14.25.20
  */
 let GMItem_Generate = class GMItem_Generate extends UIScript {
     get button() {
@@ -10441,7 +10449,7 @@ var foreign22 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GunModule/WeaponUI.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2025.01.28-14.25.20
  */
 let WeaponUI_Generate = class WeaponUI_Generate extends UIScript {
     get point() {
@@ -12733,15 +12741,14 @@ let AddMaxHp = class AddMaxHp extends Script {
     onTriggerEnter(character) {
         if (Player.localPlayer.character != character)
             return;
-        this.getAdPanel.showRewardAd(() => {
-            if (!GlobalData.isOpenIAA) {
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
                 this.getPlayerModuleC.addMaxHp();
-                return;
-            }
-            Utils.showRewardAd(() => {
-                this.getPlayerModuleC.addMaxHp();
-            });
-        }, "奖励翻倍\n提高最大生命值 + " + GlobalData.maxHp * 2, "取消", "获取");
+            }, "奖励翻倍\n提高最大生命值 + " + GlobalData.maxHp * 2, "取消", "获取");
+        }
+        else {
+            this.getPlayerModuleC.addMaxHp();
+        }
     }
     /**客户端的onUpdate */
     onUpdateC(dt) {
@@ -12841,28 +12848,24 @@ let TryOutGun = class TryOutGun extends Script {
         if (Player.localPlayer.character != character)
             return;
         let gunElement = GameConfig.GUN.getElement(this.gunkey);
-        this.getAdPanel.showRewardAd(() => {
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
+                character.movementEnabled = false;
+                TimeUtil.delaySecond(2).then(() => { character.movementEnabled = true; });
+                if (!this.gunkey)
+                    return;
+                this.getGunModuleC.switchGun(this.gunkey);
+                this.switchGunModel(Utils.randomInt(10, 14));
+            }, gunElement.GUNNAME + "\n免费试用一局", "取消", "试用");
+        }
+        else {
             character.movementEnabled = false;
-            if (!GlobalData.isOpenIAA) {
-                if (!this.gunkey)
-                    return;
-                this.getGunModuleC.switchGun(this.gunkey);
-                this.switchGunModel(Utils.randomInt(10, 14));
-                TimeUtil.delaySecond(2).then(() => {
-                    character.movementEnabled = true;
-                });
+            TimeUtil.delaySecond(2).then(() => { character.movementEnabled = true; });
+            if (!this.gunkey)
                 return;
-            }
-            Utils.showRewardAd(() => {
-                if (!this.gunkey)
-                    return;
-                this.getGunModuleC.switchGun(this.gunkey);
-                this.switchGunModel(Utils.randomInt(10, 14));
-                TimeUtil.delaySecond(2).then(() => {
-                    character.movementEnabled = true;
-                });
-            });
-        }, gunElement.GUNNAME + "\n免费试用一局", "取消", "试用");
+            this.getGunModuleC.switchGun(this.gunkey);
+            this.switchGunModel(Utils.randomInt(10, 14));
+        }
     }
     async switchGunModel(key) {
         if (this.gunkey == key)
@@ -13109,7 +13112,7 @@ var foreign63 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/SecondNoticeItem.ui
- * TIME: 2024.03.13-23.04.52
+ * TIME: 2025.01.28-14.25.20
  */
 let SecondNoticeItem_Generate = class SecondNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -13177,7 +13180,7 @@ var foreign70 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RadarModule/RadarPanel.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2025.01.28-14.25.20
  */
 let RadarPanel_Generate = class RadarPanel_Generate extends UIScript {
     onAwake() {

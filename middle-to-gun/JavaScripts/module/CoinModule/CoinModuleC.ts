@@ -1,5 +1,4 @@
 ﻿import { Notice } from "../../common/notice/Notice";
-import { EventType } from "../../tools/EventType";
 import GlobalData from "../../tools/GlobalData";
 import Utils from "../../tools/Utils";
 import AdPanel from "../AdModule/ui/AdPanel";
@@ -55,7 +54,6 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
         this.coin = this.data.coin;
         this.diamond = this.data.diamond;
         this.getCoinPanel.setCoinAndDiamond(this.coin, this.diamond);
-        this.defaultAds();
     }
 
     public setCoin(coin: number): void {
@@ -83,27 +81,23 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
     }
 
     public getCoinByAd(): void {
-        this.getAdPanel.showRewardAd(() => {
-            if (!GlobalData.isOpenIAA) {
-                this.setCoin(10000);
-                return;
-            }
-            Utils.showRewardAd(() => {
-                this.setCoin(10000);
-            });
-        }, "免费领取10000金币");
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
+                this.setCoin(GlobalData.addCoin);
+            }, `免费领取${GlobalData.addCoin}金币`);
+        } else {
+            this.setCoin(GlobalData.addCoin);
+        }
     }
 
     public getDiamondByAd(): void {
-        this.getAdPanel.showRewardAd(() => {
-            if (!GlobalData.isOpenIAA) {
-                this.setDiamond(1);
-                return;
-            }
-            Utils.showRewardAd(() => {
-                this.setDiamond(1);
-            });
-        }, "免费领取1个钻石");
+        if (GlobalData.isOpenIAA) {
+            this.getAdPanel.showRewardAd(() => {
+                this.setDiamond(GlobalData.addDiamond);
+            }, `免费领取${GlobalData.addDiamond}个钻石`);
+        } else {
+            this.setDiamond(GlobalData.addDiamond);
+        }
     }
 
     public net_killPlayerAddCoin(coin: number): void {
@@ -117,57 +111,5 @@ export default class CoinModuleC extends ModuleC<CoinModuleS, CoinData> {
         Notice.showDownNotice("<color=#" + (num > 0 ? "yellow>" : "red>") + (num > 0 ? "获得" : "花费") + (isCoin ? "金币" : "钻石") + num + "</color>");
         // Notice.showDownNotice("<color=#lime>" + "<size=18>" + killerName + " 击败了 " + killedName + "</size>" + "</color>"
         //     + "\n" + "<color=#red>完成了" + killTips + "</color>");
-    }
-
-
-    private defaultAds(): void {
-        this.delay15Seconds();
-        this.setInterval180Seconds();
-    }
-
-    private delay15Seconds(): void {
-        TimeUtil.delaySecond(15).then(() => {
-            this.getAdPanel.showRewardAd(() => {
-                if (!GlobalData.isOpenIAA) {
-                    this.setDiamond(2);
-                    return;
-                }
-                Utils.showRewardAd(() => {
-                    this.setDiamond(2);
-                });
-            }, "大礼包\n免费获得2个钻石");
-        });
-    }
-
-    private setInterval180Seconds(): void {
-        TimeUtil.setInterval(() => {
-            this.getAdPanel.showRewardAd(() => {
-                if (!GlobalData.isOpenIAA) {
-                    this.setDiamond(3);
-                    return;
-                }
-                Utils.showRewardAd(() => {
-                    this.setDiamond(3);
-                });
-            }, "幸运大礼包\n免费获得3个钻石");
-        }, 180);
-    }
-
-    private isFirst: boolean = true;
-    public dieAds(): void {
-        if (this.isFirst) {
-            this.isFirst = false;
-            return;
-        }
-        this.getAdPanel.showRewardAd(() => {
-            if (!GlobalData.isOpenIAA) {
-                this.setDiamond(2);
-                return;
-            }
-            Utils.showRewardAd(() => {
-                this.setDiamond(2);
-            });
-        }, "被击败奖励\n免费获得2个钻石");
-        Event.dispatchToLocal(EventType.TryOutGun);
     }
 }

@@ -21,6 +21,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     public onOpenActivityAction: Action = new Action();
     public onOpenTaskAction: Action = new Action();
     public onResetPosAction: Action = new Action();
+    public onOpenRoleAction: Action = new Action();
 
     protected onStart(): void {
         // this.initModule();
@@ -46,6 +47,11 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
             isOpen ? UIService.getUI(CoinPanel).show() : UIService.getUI(CoinPanel).hide();
             Event.dispatchToLocal(EventType.OnOffMainHUD, isOpen);
         });
+        this.onOpenRoleAction.add(this.addOpenRoleAction.bind(this));
+    }
+
+    private addOpenRoleAction(): void {
+        AvatarEditorService.asyncOpenAvatarEditorModule();
     }
 
     private addOnOffHUDPannel(isOpen: boolean): void {

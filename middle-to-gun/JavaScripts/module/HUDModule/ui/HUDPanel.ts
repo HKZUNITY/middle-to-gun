@@ -50,7 +50,12 @@ export default class HUDPanel extends HUDPanel_Generate {
         this.mActivityButton.onClicked.add(this.onClickOpenActivityButton.bind(this));
         this.mTaskButton.onClicked.add(this.onClickOpenTaskButton.bind(this));
         this.mResetPosButton.onClicked.add(this.onClickResetPosButton.bind(this));
+        this.mRoleButton.onClicked.add(this.onClickOpenRoleButton.bind(this));
         this.bindSetButton();
+    }
+
+    private onClickOpenRoleButton(): void {
+        this.getHUDModuleC.onOpenRoleAction.call();
     }
 
     private onClickOpenShopButton(): void {
@@ -248,7 +253,6 @@ export default class HUDPanel extends HUDPanel_Generate {
             .onComplete(() => {
                 Utils.setWidgetVisibility(this.mInvincibleCanvas, mw.SlateVisibility.Collapsed);
                 this.stopFlickerText();
-                this.getCoinModuleC.dieAds();
             })
             .start();
     }
@@ -414,6 +418,7 @@ export default class HUDPanel extends HUDPanel_Generate {
         this.initTeamTweens();
         this.initShakeActivityTween();
         this.initShakeShopTween();
+        this.initShakeRoleTween();
     }
     //#region RankTween
     private initRankButtonTweens(): void {
@@ -470,8 +475,8 @@ export default class HUDPanel extends HUDPanel_Generate {
             .easing(cubicBezier(0.25, 0.1, 0.25, 1));
     }
     private initTaskTween(): void {
-        let leftToRight = this.getPosTween(this.mTaskBgImage, 0.5, 0, 25, 50, 25);
-        let rightToLeft = this.getPosTween(this.mTaskBgImage, 0.5, 50, 25, 0, 25);
+        let leftToRight = this.getPosTween(this.mTaskBgImage, 0.5, 0, 15, 40, 15);
+        let rightToLeft = this.getPosTween(this.mTaskBgImage, 0.5, 40, 15, 0, 15);
         leftToRight.start().onComplete(() => {
             TimeUtil.delaySecond(0.1).then(() => {
                 rightToLeft.start().onComplete(() => {
@@ -518,6 +523,23 @@ export default class HUDPanel extends HUDPanel_Generate {
     public initShakeShopTween(): void {
         let rightBigToLeftSmall = this.getShakeScaleTween(this.mShopButton, 0.8, 20, -20, 1.1, 0.9);
         let leftSamllToRightBig = this.getShakeScaleTween(this.mShopButton, 0.8, -20, 20, 0.9, 1.1);
+
+        rightBigToLeftSmall.start().onComplete(() => {
+            TimeUtil.delaySecond(0.1).then(() => {
+                leftSamllToRightBig.start().onComplete(() => {
+                    TimeUtil.delaySecond(0.1).then(() => {
+                        rightBigToLeftSmall.start();
+                    });
+                });
+            })
+        });
+    }
+    //#endregion
+
+    //#region ShopTween
+    public initShakeRoleTween(): void {
+        let rightBigToLeftSmall = this.getShakeScaleTween(this.mRoleButton, 0.8, 20, -20, 1.1, 0.9);
+        let leftSamllToRightBig = this.getShakeScaleTween(this.mRoleButton, 0.8, -20, 20, 0.9, 1.1);
 
         rightBigToLeftSmall.start().onComplete(() => {
             TimeUtil.delaySecond(0.1).then(() => {

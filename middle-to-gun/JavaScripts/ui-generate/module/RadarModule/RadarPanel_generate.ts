@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RadarModule/RadarPanel.ui
- * TIME: 2024.03.13-23.04.53
+ * TIME: 2025.01.28-14.25.20
  */
  
 @UIBind('UI/module/RadarModule/RadarPanel.ui')

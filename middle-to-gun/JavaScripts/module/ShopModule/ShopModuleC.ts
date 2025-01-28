@@ -90,7 +90,7 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
 
     private initUseShopItem(): void {
         if (MapEx.has(this.useShopIds, ShopType.Gun)) this.setCharacterGun();
-        if (MapEx.has(this.useShopIds, ShopType.Role)) this.setCharacterDescription(MapEx.get(this.useShopIds, ShopType.Role));
+        // if (MapEx.has(this.useShopIds, ShopType.Role)) this.setCharacterDescription(MapEx.get(this.useShopIds, ShopType.Role));
         if (MapEx.has(this.useShopIds, ShopType.Trailing)) this.setCharacterTrailing(MapEx.get(this.useShopIds, ShopType.Trailing));
     }
 
@@ -164,7 +164,7 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
         this.previewShopItem(shopId, shopType);
         if (!this.setUseShopId(shopType, shopId)) {
             Notice.showDownNotice("穿戴中");
-            return;
+            // return;
         }
         switch (shopType) {
             case ShopType.Gun:
