@@ -1,6 +1,7 @@
 ﻿import { EventType } from "../../tools/EventType";
 import GlobalData from "../../tools/GlobalData";
 import Utils from "../../tools/Utils";
+import ExecutorManager from "../../tools/WaitingQueue";
 import CoinPanel from "../CoinModule/ui/CoinPanel";
 import { HUDData, KillTipType } from "./HUDData";
 import HUDModuleS from "./HUDModuleS";
@@ -22,6 +23,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     public onOpenTaskAction: Action = new Action();
     public onResetPosAction: Action = new Action();
     public onOpenRoleAction: Action = new Action();
+    public onOpenShareAction: Action = new Action();
 
     protected onStart(): void {
         // this.initModule();
@@ -51,11 +53,19 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     }
 
     private addOpenRoleAction(): void {
-        AvatarEditorService.asyncOpenAvatarEditorModule();
+        ExecutorManager.instance.pushAsyncExecutor(async () => {
+            await AvatarEditorService.asyncOpenAvatarEditorModule();
+        });
     }
 
     private addOnOffHUDPannel(isOpen: boolean): void {
-        isOpen ? this.getHUDPanel.show() : this.getHUDPanel.hide();
+        if (isOpen) {
+            this.localPlayer.character.moveFacingDirection = mw.MoveFacingDirection.ControllerDirection;
+            this.getHUDPanel.show();
+        } else {
+            this.getHUDPanel.hide();
+            this.localPlayer.character.moveFacingDirection = mw.MoveFacingDirection.MovementDirection;
+        }
     }
 
     protected onEnterScene(sceneType: number): void {

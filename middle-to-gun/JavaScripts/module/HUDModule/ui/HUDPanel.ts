@@ -42,8 +42,6 @@ export default class HUDPanel extends HUDPanel_Generate {
         this.initUITweens();
         Utils.setWidgetVisibility(this.mKillTipCountCanvas, mw.SlateVisibility.Collapsed);
         Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.Collapsed);
-        Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.Collapsed);
-        Utils.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.Collapsed);
 
         this.mSetButtonTextBlock.text = GameConfig.Language.Text_HUDTips3.Value;
         this.mTaskTextBlock.text = GameConfig.Language.Text_HUDTips1.Value;
@@ -62,11 +60,16 @@ export default class HUDPanel extends HUDPanel_Generate {
         this.mTaskButton.onClicked.add(this.onClickOpenTaskButton.bind(this));
         this.mResetPosButton.onClicked.add(this.onClickResetPosButton.bind(this));
         this.mRoleButton.onClicked.add(this.onClickOpenRoleButton.bind(this));
+        this.mOpenShareButton.onClicked.add(this.onClickOpenShareButton.bind(this));
         this.bindSetButton();
     }
 
     private onClickOpenRoleButton(): void {
         this.getHUDModuleC.onOpenRoleAction.call();
+    }
+
+    private onClickOpenShareButton(): void {
+        this.getHUDModuleC.onOpenShareAction.call();
     }
 
     private onClickOpenShopButton(): void {

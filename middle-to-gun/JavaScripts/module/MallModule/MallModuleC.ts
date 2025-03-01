@@ -1007,10 +1007,10 @@ export default class MallModuleC extends ModuleC<MallModuleS, MallData> {
     private transitionNpc: mw.Character = null;
     private copyNpc: mw.Character = null;
     private async initNpc(): Promise<void> {
-        this.maleNpc = await mw.GameObject.asyncFindGameObjectById(`3C486412`) as mw.Character;
-        this.feMaleNpc = await mw.GameObject.asyncFindGameObjectById(`3CD55A36`) as mw.Character;
-        this.transitionNpc = await mw.GameObject.asyncFindGameObjectById(`0BC339EB`) as mw.Character;
-        this.copyNpc = await mw.GameObject.asyncFindGameObjectById(`0F17BFB7`) as mw.Character;
+        this.maleNpc = await mw.GameObject.asyncFindGameObjectById(`358ED182`) as mw.Character;
+        this.feMaleNpc = await mw.GameObject.asyncFindGameObjectById(`348DCFA8`) as mw.Character;
+        this.transitionNpc = await mw.GameObject.asyncFindGameObjectById(`1572E7B0`) as mw.Character;
+        this.copyNpc = await mw.GameObject.asyncFindGameObjectById(`0A1E3A80`) as mw.Character;
         await this.localPlayer.character.asyncReady();
         let somatotype = this.localPlayer.character.description.advance.base.characterSetting.somatotype;
         this.recordSex(somatotype);
