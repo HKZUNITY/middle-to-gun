@@ -1,4 +1,5 @@
 ﻿import { Notice } from "../../../common/notice/Notice";
+import { GameConfig } from "../../../config/GameConfig";
 import Utils, { cubicBezier } from "../../../tools/Utils";
 import HUDPanel_Generate from "../../../ui-generate/module/HUDModule/HUDPanel_generate";
 import CoinModuleC from "../../CoinModule/CoinModuleC";
@@ -41,6 +42,16 @@ export default class HUDPanel extends HUDPanel_Generate {
         this.initUITweens();
         Utils.setWidgetVisibility(this.mKillTipCountCanvas, mw.SlateVisibility.Collapsed);
         Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.Collapsed);
+
+        this.mSetButtonTextBlock.text = GameConfig.Language.Text_HUDTips3.Value;
+        this.mTaskTextBlock.text = GameConfig.Language.Text_HUDTips1.Value;
+        this.mRankButtonTextBlock.text = GameConfig.Language.Text_HUDTips2.Value;
+        this.mRoleTextBlock.text = GameConfig.Language.Text_HUDTips4.Value;
+        this.mShareTextBlock.text = GameConfig.Language.Text_HUDTips7.Value;
+        this.mTeamTextBlock.text = GameConfig.Language.Text_HUDTips6.Value;
+        this.mShopTextBlock.text = GameConfig.Language.Text_HUDTips5.Value;
     }
 
     private bindButtons(): void {
