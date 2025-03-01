@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShareModule/SharePanel.ui
- * TIME: 2025.01.22-23.41.45
+ * TIME: 2025.03.01-10.45.33
  */
  
 @UIBind('UI/module/ShareModule/SharePanel.ui')

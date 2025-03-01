@@ -1,6 +1,7 @@
 ﻿
 export default class GlobalData {
     public static isOpenIAA: boolean = false;
+    public static languageId: number = -1;
     public static roomPeopleCount: number = 20;
     public static soundVolume: number = 1;
 
