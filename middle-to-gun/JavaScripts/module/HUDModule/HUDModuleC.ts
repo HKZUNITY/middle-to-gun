@@ -2,6 +2,7 @@
 import { EventType } from "../../tools/EventType";
 import GlobalData from "../../tools/GlobalData";
 import Utils from "../../tools/Utils";
+import ExecutorManager from "../../tools/WaitingQueue";
 import AdPanel from "../AdModule/ui/AdPanel";
 import CoinPanel from "../CoinModule/ui/CoinPanel";
 import { HUDData, KillTipType } from "./HUDData";
@@ -72,6 +73,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     }
 
     private async onOpenShareActionHandler(): Promise<void> {
+        return;
         this.getSharePanel.show();
         let sharedId = await Utils.createSharedId(this.localPlayer.character);
         this.getSharePanel.showPanel(sharedId);
@@ -99,11 +101,19 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, HUDData> {
     }
 
     private addOpenRoleAction(): void {
-        AvatarEditorService.asyncOpenAvatarEditorModule();
+        ExecutorManager.instance.pushAsyncExecutor(async () => {
+            await AvatarEditorService.asyncOpenAvatarEditorModule();
+        });
     }
 
     private addOnOffHUDPannel(isOpen: boolean): void {
-        isOpen ? this.getHUDPanel.show() : this.getHUDPanel.hide();
+        if (isOpen) {
+            this.localPlayer.character.moveFacingDirection = mw.MoveFacingDirection.ControllerDirection;
+            this.getHUDPanel.show();
+        } else {
+            this.getHUDPanel.hide();
+            this.localPlayer.character.moveFacingDirection = mw.MoveFacingDirection.MovementDirection;
+        }
     }
 
     private addJumpAction(): void {
