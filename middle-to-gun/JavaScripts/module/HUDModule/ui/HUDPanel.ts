@@ -57,6 +57,22 @@ export default class HUDPanel extends HUDPanel_Generate {
         this.mJumpButton.onClicked.add(this.onClickJumpButton.bind(this));
         this.bindSetButton();
         this.bindAtkButton();
+        this.mClothButton.onClicked.add(async () => {
+            await AvatarEditorService.asyncOpenAvatarEditorModule();
+        });
+        mw.AvatarEditorService.avatarServiceDelegate.add(this.addAvatarServiceDelegate.bind(this));
+    }
+
+    private addAvatarServiceDelegate(eventName: string, ...params: unknown[]): void {
+        console.error(`eventName: ${eventName}`);
+        switch (eventName) {
+            case "AE_OnQuit":
+                this.show();
+                break;
+            case "AE_OnOpen":
+                this.hide();
+                break;
+        }
     }
 
     private onClickOpenShopButton(): void {

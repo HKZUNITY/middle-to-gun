@@ -109,7 +109,13 @@ export default class RadarPanel extends UIScript {
 
 				let loc = this.Loc2RadarPos(otherPlayer.character.worldTransform.position);
 				let offset = otherPlayerPoint.size;
-				otherPlayerPoint.position = new Vector2(loc.x - (offset.x / 2), loc.y - (offset.y / 2));
+				let retP = new Vector2(loc.x - (offset.x / 2), loc.y - (offset.y / 2));
+				if (retP.x < 0 || retP.x > 400 || retP.y < 0 || retP.y > 400) {
+					otherPlayerPoint.visibility = 1;
+				} else {
+					otherPlayerPoint.position = retP;
+					otherPlayerPoint.visibility = 4;
+				}
 			} else {
 				this.playerPointMap.set(otherPlayer, this.getTextBlockPoint(otherPlayer.userId));
 			}
@@ -126,7 +132,13 @@ export default class RadarPanel extends UIScript {
 			}
 			let loc = this.Loc2RadarPos(key.worldTransform.position);
 			let offset = value.size;
-			value.position = new Vector2(loc.x - (offset.x / 2), loc.y - (offset.y / 2));
+			let retP = new Vector2(loc.x - (offset.x / 2), loc.y - (offset.y / 2));
+			if (retP.x < 0 || retP.x > 400 || retP.y < 0 || retP.y > 400) {
+				value.visibility = 1;
+			} else {
+				value.position = retP;
+				value.visibility = 4;
+			}
 		});
 	}
 
