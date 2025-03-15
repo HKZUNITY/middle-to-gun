@@ -2,12 +2,12 @@
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/HUDModule/HUDPanel.ui
+ * UI: UI/module/HUDPanel1.ui
  * TIME: 2025.03.16-00.18.34
  */
  
-@UIBind('UI/module/HUDModule/HUDPanel.ui')
-export default class HUDPanel_Generate extends UIScript {
+@UIBind('UI/module/HUDPanel1.ui')
+export default class HUDPanel1_Generate extends UIScript {
 		private mVirtualJoystickPanel_Internal: mw.VirtualJoystickPanel
 	public get mVirtualJoystickPanel(): mw.VirtualJoystickPanel {
 		if(!this.mVirtualJoystickPanel_Internal&&this.uiWidgetBase) {
@@ -35,6 +35,20 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mBlueCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/VsCanvas/BlueVsCanvas/mBlueCountTextBlock') as mw.TextBlock
 		}
 		return this.mBlueCountTextBlock_Internal
+	}
+	private mActivityButton_Internal: mw.Button
+	public get mActivityButton(): mw.Button {
+		if(!this.mActivityButton_Internal&&this.uiWidgetBase) {
+			this.mActivityButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/LeftButtonCanvas/ActivityCanvas/mActivityButton') as mw.Button
+		}
+		return this.mActivityButton_Internal
+	}
+	private mActivityPointImage_Internal: mw.Image
+	public get mActivityPointImage(): mw.Image {
+		if(!this.mActivityPointImage_Internal&&this.uiWidgetBase) {
+			this.mActivityPointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/LeftButtonCanvas/ActivityCanvas/mActivityPointImage') as mw.Image
+		}
+		return this.mActivityPointImage_Internal
 	}
 	private mSetButton_Internal: mw.Button
 	public get mSetButton(): mw.Button {
@@ -168,20 +182,6 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mShareTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/mOpenShareImage/mShareTextBlock') as mw.TextBlock
 		}
 		return this.mShareTextBlock_Internal
-	}
-	private mActivityButton_Internal: mw.Button
-	public get mActivityButton(): mw.Button {
-		if(!this.mActivityButton_Internal&&this.uiWidgetBase) {
-			this.mActivityButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/LeftButtonCanvas/ActivityCanvas/mActivityButton') as mw.Button
-		}
-		return this.mActivityButton_Internal
-	}
-	private mActivityPointImage_Internal: mw.Image
-	public get mActivityPointImage(): mw.Image {
-		if(!this.mActivityPointImage_Internal&&this.uiWidgetBase) {
-			this.mActivityPointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/LeftButtonCanvas/ActivityCanvas/mActivityPointImage') as mw.Image
-		}
-		return this.mActivityPointImage_Internal
 	}
 	private mIconmage_Internal: mw.Image
 	public get mIconmage(): mw.Image {
@@ -420,6 +420,12 @@ export default class HUDPanel_Generate extends UIScript {
 	
 		//按钮添加点击
 		
+		this.mActivityButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mActivityButton");
+		});
+		this.mActivityButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
 		this.mSetButton.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mSetButton");
 		});
@@ -454,12 +460,6 @@ export default class HUDPanel_Generate extends UIScript {
 			Event.dispatchToLocal("PlayButtonClick", "mRoleButton");
 		});
 		this.mRoleButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-		
-	
-		this.mActivityButton.onClicked.add(()=>{
-			Event.dispatchToLocal("PlayButtonClick", "mActivityButton");
-		});
-		this.mActivityButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
 		this.mSetCloseButton.onClicked.add(()=>{

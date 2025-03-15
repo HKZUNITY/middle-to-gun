@@ -29,7 +29,7 @@ function __decorate(decorators, target, key, desc) {
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/NoticeView.ui
- * TIME: 2025.03.16-00.11.33
+ * TIME: 2025.03.16-00.18.34
  */
 let NoticeView_Generate = class NoticeView_Generate extends UIScript {
     get con_top_notice() {
@@ -96,7 +96,7 @@ var foreign163 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/TopNoticeItem.ui
- * TIME: 2025.03.16-00.11.33
+ * TIME: 2025.03.16-00.18.34
  */
 let TopNoticeItem_Generate = class TopNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -1415,7 +1415,7 @@ var foreign152 = /*#__PURE__*/Object.freeze({
     default: GlobalData
 });
 
-let Utils$1 = class Utils {
+class Utils {
     //#region 兼容027之前的API
     /**矩形范围检测 */
     static modifyboxOverlapInLevel(StartLocation, EndLocation, Width, Height, debug, IgnoreObjectsGuid, IgnoreByKind, Source) {
@@ -1542,7 +1542,7 @@ let Utils$1 = class Utils {
             .onUpdate((v) => {
             mCanvas.position = new mw.Vector2(v.x, v.y);
         })
-            .easing(cubicBezier$1(.75, 2.9, .46, -0.18))
+            .easing(cubicBezier(.75, 2.9, .46, -0.18))
             .onComplete(() => {
             mCanvas.position = mw.Vector2.zero;
             if (onComplete)
@@ -1792,12 +1792,12 @@ let Utils$1 = class Utils {
             });
         });
     }
-};
-Utils$1.assetIconDataMap = new Map();
-Utils$1.npcNames = ["张吉惟", "林国瑞", "林玫书", "林雅南", "江奕云", "刘柏宏", "阮建安", "林子帆", "夏志豪", "吉茹定", "李中冰", "谢彦文", "傅智翔", "洪振霞", "刘姿婷", "荣姿康", "吕致盈", "方一强", "黎芸贵", "郑伊雯", "雷进宝", "吴美隆", "吴心真", "王美珠", "郭芳天", "李雅惠", "陈文婷", "曹敏侑", "王依婷", "陈婉璇", "吴美玉", "蔡依婷", "郑昌梦", "林家纶", "黄丽昆", "李育泉", "黄芸欢", "吴韵如", "李肇芬", "卢木仲", "李成白", "方兆玉", "刘翊惠", "丁汉臻", "吴佳瑞", "舒绿珮", "周白芷", "张姿妤", "张虹伦", "周琼玫", "倪怡芳", "郭贵妃", "杨佩芳", "黄盛玫", "郑丽青", "许智云", "张孟涵", "李小爱", "王恩龙", "朱政廷", "邓诗涵", "陈政倩", "吴俊伯", "阮馨学", "翁惠珠", "吴思翰", "林佩玲", "邓海来", "陈翊依", "李建智", "武淑芬", "金雅琪", "赖怡宜", "黄育霖", "张仪湖", "王俊民", "张诗刚", "林慧颖", "沈俊君", "陈淑妤", "李姿伶", "高咏钰", "黄彦宜", "周孟儒", "潘欣臻", "李祯韵", "叶洁启", "梁哲宇", "黄晓萍", "杨雅萍", "卢志铭", "张茂以", "林婉婷", "蔡宜芸", "林珮瑜", "黄柏仪", "周逸珮", "夏雅惠", "王采珮", "林孟霖", "林竹水", "王怡乐", "王爱乐", "金佳蓉", "韩健毓", "李士杰", "陈董珍", "苏姿婷", "张政霖", "李志宏", "陈素达", "陈虹荣", "何美玲", "李仪琳", "张俞幸", "黄秋萍", "潘吉维"];
-Utils$1.tens = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
-Utils$1.digitalUnits = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
-Utils$1.redTeamRevivalPoint = [
+}
+Utils.assetIconDataMap = new Map();
+Utils.npcNames = ["张吉惟", "林国瑞", "林玫书", "林雅南", "江奕云", "刘柏宏", "阮建安", "林子帆", "夏志豪", "吉茹定", "李中冰", "谢彦文", "傅智翔", "洪振霞", "刘姿婷", "荣姿康", "吕致盈", "方一强", "黎芸贵", "郑伊雯", "雷进宝", "吴美隆", "吴心真", "王美珠", "郭芳天", "李雅惠", "陈文婷", "曹敏侑", "王依婷", "陈婉璇", "吴美玉", "蔡依婷", "郑昌梦", "林家纶", "黄丽昆", "李育泉", "黄芸欢", "吴韵如", "李肇芬", "卢木仲", "李成白", "方兆玉", "刘翊惠", "丁汉臻", "吴佳瑞", "舒绿珮", "周白芷", "张姿妤", "张虹伦", "周琼玫", "倪怡芳", "郭贵妃", "杨佩芳", "黄盛玫", "郑丽青", "许智云", "张孟涵", "李小爱", "王恩龙", "朱政廷", "邓诗涵", "陈政倩", "吴俊伯", "阮馨学", "翁惠珠", "吴思翰", "林佩玲", "邓海来", "陈翊依", "李建智", "武淑芬", "金雅琪", "赖怡宜", "黄育霖", "张仪湖", "王俊民", "张诗刚", "林慧颖", "沈俊君", "陈淑妤", "李姿伶", "高咏钰", "黄彦宜", "周孟儒", "潘欣臻", "李祯韵", "叶洁启", "梁哲宇", "黄晓萍", "杨雅萍", "卢志铭", "张茂以", "林婉婷", "蔡宜芸", "林珮瑜", "黄柏仪", "周逸珮", "夏雅惠", "王采珮", "林孟霖", "林竹水", "王怡乐", "王爱乐", "金佳蓉", "韩健毓", "李士杰", "陈董珍", "苏姿婷", "张政霖", "李志宏", "陈素达", "陈虹荣", "何美玲", "李仪琳", "张俞幸", "黄秋萍", "潘吉维"];
+Utils.tens = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
+Utils.digitalUnits = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
+Utils.redTeamRevivalPoint = [
     new mw.Vector(-3700, 1500, 200),
     new mw.Vector(-3700, 1700, 200),
     new mw.Vector(-3700, 1900, 200),
@@ -1807,7 +1807,7 @@ Utils$1.redTeamRevivalPoint = [
     new mw.Vector(-3700, 2700, 200),
     new mw.Vector(-3700, 2900, 200),
 ];
-Utils$1.blueTeamRevivalPoint = [
+Utils.blueTeamRevivalPoint = [
     new mw.Vector(2100, 4000, 200),
     new mw.Vector(2100, 3800, 200),
     new mw.Vector(2100, 3600, 200),
@@ -1817,8 +1817,8 @@ Utils$1.blueTeamRevivalPoint = [
     new mw.Vector(2100, 2800, 200),
     new mw.Vector(2100, 2600, 200),
 ];
-Utils$1.inColorHexStrMap = new Map();
-function cubicBezier$1(p1x, p1y, p2x, p2y) {
+Utils.inColorHexStrMap = new Map();
+function cubicBezier(p1x, p1y, p2x, p2y) {
     const ZERO_LIMIT = 1e-6;
     const ax = 3 * p1x - 3 * p2x + 1;
     const bx = 3 * p2x - 6 * p1x;
@@ -1874,12 +1874,18 @@ function cubicBezier$1(p1x, p1y, p2x, p2y) {
     return solve;
 }
 
+var foreign159 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    cubicBezier: cubicBezier,
+    default: Utils
+});
+
 /**
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdModule/AdPanel.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.34
  */
 let AdPanel_Generate = class AdPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -1975,7 +1981,7 @@ class AdPanel extends AdPanel_Generate$1 {
         this.mYesBtn.onClose.add(this.onClickYesButton.bind(this));
         // this.mYesBtn_1.onClose.add(this.onClickYesButton.bind(this));
         this.mNoBtn.onClicked.add(this.onClickNoButton.bind(this));
-        Utils$1.setWidgetVisibility(this.mYesBtn_1, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mYesBtn_1, mw.SlateVisibility.Collapsed);
     }
     onClickYesButton(isSuccess) {
         if (!isSuccess) {
@@ -2027,12 +2033,12 @@ class AdPanel extends AdPanel_Generate$1 {
     hideAdPanel() {
         if (!this.visible)
             return;
-        Utils$1.closeUITween(this.rootCanvas, null, () => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
         });
     }
     onShow(...params) {
-        Utils$1.openUITween(this.rootCanvas, null, null);
+        Utils.openUITween(this.rootCanvas, null, null);
     }
 }
 
@@ -2052,7 +2058,7 @@ let ChangeClothes = class ChangeClothes extends Script {
             let trigger = this.gameObject;
             let npc = trigger.parent;
             if (this.shareId && this.shareId != "")
-                Utils$1.applySharedId(npc, this.shareId);
+                Utils.applySharedId(npc, this.shareId);
             trigger.onEnter.add((char) => {
                 if (char.gameObjectId != Player.localPlayer.character.gameObjectId)
                     return;
@@ -2102,7 +2108,7 @@ var foreign1 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/ConfirmPanel.ui
- * TIME: 2025.03.16-00.11.33
+ * TIME: 2025.03.16-00.18.34
  */
 let ConfirmPanel_Generate = class ConfirmPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -2229,13 +2235,13 @@ class ConfirmPanel extends ConfirmPanel_Generate$1 {
         this.show();
     }
     onShow(...params) {
-        Utils$1.openUITween(this.rootCanvas, null, null);
+        Utils.openUITween(this.rootCanvas, null, null);
     }
     /**
      * 隐藏缓动
      */
     hideTween() {
-        Utils$1.closeUITween(this.rootCanvas, null, () => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
         });
     }
@@ -4551,8 +4557,242 @@ var foreign149 = /*#__PURE__*/Object.freeze({
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/tools/LoadingPanel.ui
+ * TIME: 2025.03.16-00.18.34
+ */
+let LoadingPanel_Generate = class LoadingPanel_Generate extends UIScript {
+    get mMainCanvas() {
+        if (!this.mMainCanvas_Internal && this.uiWidgetBase) {
+            this.mMainCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mMainCanvas');
+        }
+        return this.mMainCanvas_Internal;
+    }
+    get mLoadingImage() {
+        if (!this.mLoadingImage_Internal && this.uiWidgetBase) {
+            this.mLoadingImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mMainCanvas/mLoadingImage');
+        }
+        return this.mLoadingImage_Internal;
+    }
+    get mLoadingTextblock() {
+        if (!this.mLoadingTextblock_Internal && this.uiWidgetBase) {
+            this.mLoadingTextblock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mMainCanvas/mLoadingTextblock');
+        }
+        return this.mLoadingTextblock_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mLoadingTextblock);
+        //文本多语言
+    }
+    /**初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /**显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /**隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+LoadingPanel_Generate = __decorate([
+    UIBind('UI/tools/LoadingPanel.ui')
+], LoadingPanel_Generate);
+var LoadingPanel_Generate$1 = LoadingPanel_Generate;
+
+var foreign201 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: LoadingPanel_Generate$1
+});
+
+class LoadingPanel extends LoadingPanel_Generate$1 {
+    /**
+     * 构造UI文件成功后，在合适的时机最先初始化一次
+     */
+    onStart() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerTop;
+    }
+    /**
+    * 每一帧调用
+    * 通过canUpdate可以开启关闭调用
+    * dt 两帧调用的时间差，毫秒
+    */
+    onUpdate(dt) {
+        this.mLoadingImage.renderTransformAngle = this.mLoadingImage.renderTransformAngle + 180 * dt;
+        if (this.mLoadingImage.renderTransformAngle > 180)
+            this.mLoadingImage.renderTransformAngle = -180 + this.mLoadingImage.renderTransformAngle - 180;
+    }
+    setLock(isLock) {
+        if (isLock) {
+            this.canUpdate = true;
+            this.rootCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+        }
+        else {
+            this.canUpdate = false;
+            this.rootCanvas.visibility = mw.SlateVisibility.Collapsed;
+        }
+    }
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+}
+
+var foreign158 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: LoadingPanel
+});
+
+class ExecutorBase {
+    execute() { }
+}
+class Executor extends ExecutorBase {
+    execute() {
+        this.func(this.arg);
+    }
+}
+class AsyncExecutor extends ExecutorBase {
+    constructor() {
+        super(...arguments);
+        /**锁定输入 */
+        this.lockInput = true;
+    }
+    async execute() {
+        await this.asyncFunc(this.arg);
+    }
+}
+class ExecutorManager {
+    constructor() {
+        this.executorList = new Array();
+        this.running = false;
+        this.index = 0;
+        this.doneCb = new Action();
+    }
+    static get instance() {
+        if (ExecutorManager._instance == undefined)
+            ExecutorManager._instance = new ExecutorManager();
+        return ExecutorManager._instance;
+    }
+    pushExecutor(func, arg = undefined, record = false, resetFunc = undefined) {
+        let executor = new Executor();
+        executor.func = func;
+        executor.arg = arg;
+        executor.record = record;
+        executor.resetFunc = resetFunc;
+        this.push(executor);
+    }
+    /** 添加异步命令
+     * @param asyncFunc 异步函数
+     * @param arg 函数参数
+     * @param isAwait 是否等待(默认等待)
+     * @param record 记录角色数据
+     * @param resetFunc 恢复角色数据的操作
+     */
+    pushAsyncExecutor(asyncFunc, arg = undefined, isAwait = true, record = false, resetFunc = undefined, lockInput = true) {
+        let asyncExecutor = new AsyncExecutor();
+        asyncExecutor.asyncFunc = asyncFunc;
+        asyncExecutor.arg = arg;
+        asyncExecutor.isAwait = isAwait;
+        asyncExecutor.record = record;
+        asyncExecutor.lockInput = lockInput;
+        asyncExecutor.resetFunc = resetFunc;
+        this.push(asyncExecutor);
+    }
+    push(executor) {
+        this.executorList.push(executor);
+        this.run();
+    }
+    async run() {
+        if (this.running)
+            return;
+        this.running = true;
+        let executor = this.executorList[this.index];
+        UIService.getUI(LoadingPanel).show();
+        while (executor) {
+            try {
+                if (executor instanceof Executor) {
+                    executor.execute();
+                }
+                else {
+                    let asyncExecutor = executor;
+                    UIService.getUI(LoadingPanel).setLock(asyncExecutor.lockInput);
+                    if (asyncExecutor.isAwait) {
+                        await this.runExecute(asyncExecutor.execute.bind(asyncExecutor));
+                    }
+                    else {
+                        asyncExecutor.execute();
+                    }
+                }
+                // if (executor.record) Event.dispatchToLocal(EventType.Event_Record, executor.resetFunc);
+            }
+            catch (error) {
+                console.error(`命令执行异常:${error}`);
+            }
+            this.index++;
+            executor = this.executorList[this.index];
+        }
+        UIService.getUI(LoadingPanel).hide();
+        this.running = false;
+        this.doneCb.call();
+    }
+    //执行命令，10秒超时
+    runExecute(exeFunc) {
+        return new Promise(async (resolve) => {
+            let timeOut = setTimeout(() => {
+                console.error(`命令执行10秒超时`);
+                return resolve();
+            }, 10 * 1000);
+            await exeFunc();
+            clearTimeout(timeOut);
+            return resolve();
+        });
+    }
+    /**等待执行完毕 */
+    awaitDone() {
+        return new Promise((resolve) => {
+            if (!this.running)
+                return resolve();
+            const doneFunc = () => {
+                this.doneCb.remove(doneFunc, this);
+                return resolve();
+            };
+            this.doneCb.add(doneFunc, this);
+        });
+    }
+}
+ExecutorManager._instance = undefined;
+
+var foreign160 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ExecutorManager
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/CoinPanel.ui
- * TIME: 2025.03.16-00.11.33
+ * TIME: 2025.03.16-00.18.34
  */
 let CoinPanel_Generate = class CoinPanel_Generate extends UIScript {
     get mCoinCanvas() {
@@ -4927,7 +5167,7 @@ var foreign97 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.34
  */
 let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     get mVirtualJoystickPanel() {
@@ -4960,11 +5200,23 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mSetButton_Internal;
     }
+    get mSetButtonTextBlock() {
+        if (!this.mSetButtonTextBlock_Internal && this.uiWidgetBase) {
+            this.mSetButtonTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/SetCanvas/mSetButtonTextBlock');
+        }
+        return this.mSetButtonTextBlock_Internal;
+    }
     get mRankButton() {
         if (!this.mRankButton_Internal && this.uiWidgetBase) {
             this.mRankButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/RankCanvas/mRankButton');
         }
         return this.mRankButton_Internal;
+    }
+    get mRankButtonTextBlock() {
+        if (!this.mRankButtonTextBlock_Internal && this.uiWidgetBase) {
+            this.mRankButtonTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/RankCanvas/mRankButtonTextBlock');
+        }
+        return this.mRankButtonTextBlock_Internal;
     }
     get mTaskButton() {
         if (!this.mTaskButton_Internal && this.uiWidgetBase) {
@@ -4984,6 +5236,12 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mTaskBgImage_Internal;
     }
+    get mTaskTextBlock() {
+        if (!this.mTaskTextBlock_Internal && this.uiWidgetBase) {
+            this.mTaskTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TaskCanvas/mTaskTextBlock');
+        }
+        return this.mTaskTextBlock_Internal;
+    }
     get mTeamButton() {
         if (!this.mTeamButton_Internal && this.uiWidgetBase) {
             this.mTeamButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TeamCanvas/mTeamButton');
@@ -5002,17 +5260,35 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mTeamIconImage_Internal;
     }
+    get mTeamTextBlock() {
+        if (!this.mTeamTextBlock_Internal && this.uiWidgetBase) {
+            this.mTeamTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TeamCanvas/mTeamTextBlock');
+        }
+        return this.mTeamTextBlock_Internal;
+    }
     get mShopButton() {
         if (!this.mShopButton_Internal && this.uiWidgetBase) {
             this.mShopButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/ShopCanvas/mShopButton');
         }
         return this.mShopButton_Internal;
     }
+    get mShopTextBlock() {
+        if (!this.mShopTextBlock_Internal && this.uiWidgetBase) {
+            this.mShopTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/ShopCanvas/mShopTextBlock');
+        }
+        return this.mShopTextBlock_Internal;
+    }
     get mRoleButton() {
         if (!this.mRoleButton_Internal && this.uiWidgetBase) {
             this.mRoleButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/RoleCanvas/mRoleButton');
         }
         return this.mRoleButton_Internal;
+    }
+    get mRoleTextBlock() {
+        if (!this.mRoleTextBlock_Internal && this.uiWidgetBase) {
+            this.mRoleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/RoleCanvas/mRoleTextBlock');
+        }
+        return this.mRoleTextBlock_Internal;
     }
     get mOpenShareImage() {
         if (!this.mOpenShareImage_Internal && this.uiWidgetBase) {
@@ -5025,6 +5301,12 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
             this.mOpenShareButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/mOpenShareImage/mOpenShareButton');
         }
         return this.mOpenShareButton_Internal;
+    }
+    get mShareTextBlock() {
+        if (!this.mShareTextBlock_Internal && this.uiWidgetBase) {
+            this.mShareTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/mOpenShareImage/mShareTextBlock');
+        }
+        return this.mShareTextBlock_Internal;
     }
     get mActivityButton() {
         if (!this.mActivityButton_Internal && this.uiWidgetBase) {
@@ -5290,6 +5572,13 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         //文本多语言
         this.initLanguage(this.mRedCountTextBlock);
         this.initLanguage(this.mBlueCountTextBlock);
+        this.initLanguage(this.mSetButtonTextBlock);
+        this.initLanguage(this.mRankButtonTextBlock);
+        this.initLanguage(this.mTaskTextBlock);
+        this.initLanguage(this.mTeamTextBlock);
+        this.initLanguage(this.mShopTextBlock);
+        this.initLanguage(this.mRoleTextBlock);
+        this.initLanguage(this.mShareTextBlock);
         this.initLanguage(this.mRankTextBlock);
         this.initLanguage(this.mHpTextBlock);
         this.initLanguage(this.mKillTipTextBlock1);
@@ -5356,7 +5645,7 @@ var foreign174 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShareModule/SharePanel.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.34
  */
 let SharePanel_Generate = class SharePanel_Generate extends UIScript {
     get mMainImage() {
@@ -5484,7 +5773,7 @@ SharePanel_Generate = __decorate([
 ], SharePanel_Generate);
 var SharePanel_Generate$1 = SharePanel_Generate;
 
-var foreign193 = /*#__PURE__*/Object.freeze({
+var foreign194 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SharePanel_Generate$1
 });
@@ -5494,7 +5783,7 @@ var foreign193 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/KillTipItem.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.34
  */
 let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
     get mBgImage() {
@@ -5591,7 +5880,7 @@ class KillTipItem extends KillTipItem_Generate$1 {
                 this.mKilledTextBlock.shadowColor = mw.LinearColor.red;
                 break;
         }
-        Utils$1.setWidgetVisibility(this.uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+        Utils.setWidgetVisibility(this.uiObject, mw.SlateVisibility.SelfHitTestInvisible);
         setTimeout(() => {
             this.mBgImage.size = new mw.Vector2(this.mMainCanvas.size.x + 20, this.mMainCanvas.size.y);
         }, 1);
@@ -5657,10 +5946,10 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.initFlickerInvincibleText();
         this.initTaskTween();
         this.initUITweens();
-        Utils$1.setWidgetVisibility(this.mKillTipCountCanvas, mw.SlateVisibility.Collapsed);
-        Utils$1.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.Collapsed);
-        Utils$1.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.Collapsed);
-        Utils$1.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mKillTipCountCanvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.Collapsed);
         this.mSetButtonTextBlock.text = GameConfig.Language.Text_HUDTips3.Value;
         this.mTaskTextBlock.text = GameConfig.Language.Text_HUDTips1.Value;
         this.mRankButtonTextBlock.text = GameConfig.Language.Text_HUDTips2.Value;
@@ -5682,6 +5971,18 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.mRoleButton.onClicked.add(this.onClickOpenRoleButton.bind(this));
         this.mOpenShareButton.onClicked.add(this.addOpenShareButton.bind(this));
         this.bindSetButton();
+        mw.AvatarEditorService.avatarServiceDelegate.add(this.addAvatarServiceDelegate.bind(this));
+    }
+    addAvatarServiceDelegate(eventName, ...params) {
+        console.error(`eventName: ${eventName}`);
+        switch (eventName) {
+            case "AE_OnQuit":
+                this.show();
+                break;
+            case "AE_OnOpen":
+                this.hide();
+                break;
+        }
     }
     onClickOpenShopButton() {
         this.getHUDModuleC.onOpenShopAction.call();
@@ -5709,13 +6010,13 @@ class HUDPanel extends HUDPanel_Generate$1 {
     }
     onClickMorphButton() {
         this.getHUDModuleC.onMorphAction.call(true);
-        Utils$1.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.SelfHitTestInvisible);
-        Utils$1.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.SelfHitTestInvisible);
+        Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.SelfHitTestInvisible);
+        Utils.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.SelfHitTestInvisible);
     }
     onClickUnMorphButton() {
         this.getHUDModuleC.onMorphAction.call(false);
-        Utils$1.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.Collapsed);
-        Utils$1.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mUnMorphCanvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mJumpCanvas, mw.SlateVisibility.Collapsed);
     }
     onClickJumpButton() {
         this.getHUDModuleC.onJumpAction.call(false);
@@ -5732,7 +6033,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         for (let i = 0; i < 4; ++i) {
             let killTipItem = UIService.create(KillTipItem);
             killTipItem.uiObject.position = new mw.Vector2(0, 37 * i);
-            Utils$1.setWidgetVisibility(killTipItem.uiObject, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(killTipItem.uiObject, mw.SlateVisibility.Collapsed);
             this.mKillTipCanvas.addChild(killTipItem.uiObject);
             this.killTipItems.push(killTipItem);
         }
@@ -5769,7 +6070,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
             this.killTipItems[i].setInfo(this.killTipDatas[i]);
         }
         for (let i = this.killTipDatas.length; i < 4; ++i) {
-            Utils$1.setWidgetVisibility(this.killTipItems[i].uiObject, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.killTipItems[i].uiObject, mw.SlateVisibility.Collapsed);
         }
     }
     showKillTips1(killTips, killerName, killedName) {
@@ -5792,9 +6093,9 @@ class HUDPanel extends HUDPanel_Generate$1 {
         else if (killTipType == KillTipType.revenge) {
             this.mKillTipTextBlock3.text = "击败 " + killedName + " 完成复仇";
         }
-        Utils$1.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.SelfHitTestInvisible);
+        Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.SelfHitTestInvisible);
         this.killTipsTimeOutId2 = setTimeout(() => {
-            Utils$1.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.Collapsed);
             this.clearKillTipsTimeOutId2();
         }, 3 * 1000);
     }
@@ -5828,11 +6129,11 @@ class HUDPanel extends HUDPanel_Generate$1 {
     //#endregion
     //#region DeadCountDown
     initDeadCountDown() {
-        Utils$1.setWidgetVisibility(this.mDeadCanvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mDeadCanvas, mw.SlateVisibility.Collapsed);
     }
     startDeadCountDown() {
         this.mVirtualJoystickPanel.resetJoyStick();
-        Utils$1.setWidgetVisibility(this.mDeadCanvas, mw.SlateVisibility.SelfHitTestInvisible);
+        Utils.setWidgetVisibility(this.mDeadCanvas, mw.SlateVisibility.SelfHitTestInvisible);
         this.deadCountDown = 3;
         this.mDeadCountDownTextBlock.text = this.deadCountDown-- + "";
         this.clearCountDownInterval();
@@ -5849,7 +6150,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         }
     }
     endDeadCountDown() {
-        Utils$1.setWidgetVisibility(this.mDeadCanvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mDeadCanvas, mw.SlateVisibility.Collapsed);
         this.clearCountDownInterval();
         this.showInvincibleTimeUI(2);
     }
@@ -5859,7 +6160,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         new mw.Tween({ x: 0 })
             .to({ x: 1 }, invincibleTime * 1000)
             .onStart(() => {
-            Utils$1.setWidgetVisibility(this.mInvincibleCanvas, mw.SlateVisibility.SelfHitTestInvisible);
+            Utils.setWidgetVisibility(this.mInvincibleCanvas, mw.SlateVisibility.SelfHitTestInvisible);
             this.mInvincibleProgressBar.currentValue = 0;
             this.startFlickerText();
         })
@@ -5867,14 +6168,14 @@ class HUDPanel extends HUDPanel_Generate$1 {
             this.mInvincibleProgressBar.currentValue = v.x;
         })
             .onComplete(() => {
-            Utils$1.setWidgetVisibility(this.mInvincibleCanvas, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.mInvincibleCanvas, mw.SlateVisibility.Collapsed);
             this.stopFlickerText();
             // this.getCoinModuleC.dieAds();
         })
             .start();
     }
     initFlickerInvincibleText() {
-        Utils$1.setWidgetVisibility(this.mInvincibleCanvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mInvincibleCanvas, mw.SlateVisibility.Collapsed);
         this.flickerTextTween1 = new mw.Tween({ x: 1 })
             .to({ x: 0 }, 0.4 * 1000)
             .onStart(() => {
@@ -5922,15 +6223,15 @@ class HUDPanel extends HUDPanel_Generate$1 {
     }
     bindSetButton() {
         this.mSetButton.onClicked.add(() => {
-            Utils$1.openUITween(this.mSetCanvas, () => {
-                Utils$1.setWidgetVisibility(this.mSetCanvas, mw.SlateVisibility.SelfHitTestInvisible);
+            Utils.openUITween(this.mSetCanvas, () => {
+                Utils.setWidgetVisibility(this.mSetCanvas, mw.SlateVisibility.SelfHitTestInvisible);
             }, null);
         });
         this.mSetCloseButton.onClicked.add(() => {
-            Utils$1.closeUITween(this.mSetCanvas, () => {
+            Utils.closeUITween(this.mSetCanvas, () => {
                 this.getHUDModuleC.saveSetData();
             }, () => {
-                Utils$1.setWidgetVisibility(this.mSetCanvas, mw.SlateVisibility.Collapsed);
+                Utils.setWidgetVisibility(this.mSetCanvas, mw.SlateVisibility.Collapsed);
             });
         });
         this.mFireProgressBar.onSliderValueChanged.add((value) => {
@@ -6040,17 +6341,17 @@ class HUDPanel extends HUDPanel_Generate$1 {
         if (!this.taskRedPointTween1 || !this.taskRedPointTween2)
             this.initTaskRedPointTweens();
         this.taskRedPointTween1.start();
-        Utils$1.setWidgetVisibility(this.mTaskPointImage, mw.SlateVisibility.SelfHitTestInvisible);
+        Utils.setWidgetVisibility(this.mTaskPointImage, mw.SlateVisibility.SelfHitTestInvisible);
     }
     stopTaskRedPointTween() {
         if (this.taskRedPointTween1)
             this.taskRedPointTween1.stop();
         if (this.taskRedPointTween2)
             this.taskRedPointTween2.stop();
-        Utils$1.setWidgetVisibility(this.mTaskPointImage, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mTaskPointImage, mw.SlateVisibility.Collapsed);
     }
     initTaskRedPointTweens() {
-        Utils$1.setWidgetVisibility(this.mTaskPointImage, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mTaskPointImage, mw.SlateVisibility.Collapsed);
         this.taskRedPointTween1 = new mw.Tween({ value: 0.8 })
             .to({ value: 1.2 }, 0.2 * 1000)
             .onStart(() => {
@@ -6063,7 +6364,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
             if (this.taskRedPointTween2)
                 this.taskRedPointTween2.start();
         })
-            .easing(cubicBezier$1(0.25, 0.1, 0.25, 1));
+            .easing(cubicBezier(0.25, 0.1, 0.25, 1));
         this.taskRedPointTween2 = new mw.Tween({ value: 1.2 })
             .to({ value: 0.8 }, 0.2 * 1000)
             .onStart(() => {
@@ -6076,7 +6377,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
             if (this.taskRedPointTween1)
                 this.taskRedPointTween1.start();
         })
-            .easing(cubicBezier$1(0.25, 0.1, 0.25, 1));
+            .easing(cubicBezier(0.25, 0.1, 0.25, 1));
     }
     initTaskTween() {
         let leftToRight = this.getPosTween(this.mTaskBgImage, 0.5, 0, 15, 40, 15);
@@ -6154,17 +6455,17 @@ class HUDPanel extends HUDPanel_Generate$1 {
         if (!this.activityRedPointTween1 || !this.activityRedPointTween2)
             this.initActivityRedPointTweens();
         this.activityRedPointTween1.start();
-        Utils$1.setWidgetVisibility(this.mActivityPointImage, mw.SlateVisibility.SelfHitTestInvisible);
+        Utils.setWidgetVisibility(this.mActivityPointImage, mw.SlateVisibility.SelfHitTestInvisible);
     }
     stopActivityRedPointTween() {
         if (this.activityRedPointTween1)
             this.activityRedPointTween1.stop();
         if (this.activityRedPointTween2)
             this.activityRedPointTween2.stop();
-        Utils$1.setWidgetVisibility(this.mActivityPointImage, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mActivityPointImage, mw.SlateVisibility.Collapsed);
     }
     initActivityRedPointTweens() {
-        Utils$1.setWidgetVisibility(this.mActivityPointImage, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mActivityPointImage, mw.SlateVisibility.Collapsed);
         this.activityRedPointTween1 = new mw.Tween({ value: 0.8 })
             .to({ value: 1.2 }, 0.2 * 1000)
             .onStart(() => {
@@ -6177,7 +6478,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
             if (this.activityRedPointTween2)
                 this.activityRedPointTween2.start();
         })
-            .easing(cubicBezier$1(0.25, 0.1, 0.25, 1));
+            .easing(cubicBezier(0.25, 0.1, 0.25, 1));
         this.activityRedPointTween2 = new mw.Tween({ value: 1.2 })
             .to({ value: 0.8 }, 0.2 * 1000)
             .onStart(() => {
@@ -6190,7 +6491,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
             if (this.activityRedPointTween1)
                 this.activityRedPointTween1.start();
         })
-            .easing(cubicBezier$1(0.25, 0.1, 0.25, 1));
+            .easing(cubicBezier(0.25, 0.1, 0.25, 1));
     }
     initShakeActivityTween() {
         let middleToRight = this.getShakeTween(this.mActivityButton, 0.05, 0, 15);
@@ -6243,7 +6544,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
             .onUpdate((v) => {
             widget.renderTransformAngle = v.angle;
         })
-            .easing(cubicBezier$1(.22, .9, .28, .92));
+            .easing(cubicBezier(.22, .9, .28, .92));
     }
     getScaleTween(widget, scaleTime, startScaleX, startScaleY, endScaleX, endScaleY) {
         return new Tween({ scaleX: startScaleX, scaleY: startScaleY })
@@ -6251,7 +6552,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
             .onUpdate((v) => {
             widget.renderScale = new mw.Vector2(v.scaleX, v.scaleY);
         })
-            .easing(cubicBezier$1(.22, .9, .28, .92));
+            .easing(cubicBezier(.22, .9, .28, .92));
     }
     getShakeScaleTween(widget, shakeScaleTime, startAngle, endAngle, startScale, endScale) {
         return new Tween({ angle: startAngle, scale: startScale })
@@ -6260,7 +6561,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
             widget.renderTransformAngle = v.angle;
             widget.renderScale = new mw.Vector2(v.scale, v.scale);
         })
-            .easing(cubicBezier$1(.22, .9, .28, .92));
+            .easing(cubicBezier(.22, .9, .28, .92));
     }
     getRenderOpacityTween(widget, time, startOpacity, endOpacity) {
         return new Tween({ opacity: startOpacity })
@@ -6268,7 +6569,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
             .onUpdate((v) => {
             widget.renderOpacity = v.opacity;
         })
-            .easing(cubicBezier$1(.22, .9, .28, .92));
+            .easing(cubicBezier(.22, .9, .28, .92));
     }
     getPosTween(widget, posTime, startPosX, startPosY, endPosX, endPosY) {
         return new Tween({ posX: startPosX, posY: startPosY })
@@ -6276,7 +6577,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
             .onUpdate((v) => {
             widget.position = new mw.Vector2(v.posX, v.posY);
         })
-            .easing(cubicBezier$1(.22, .9, .28, .92));
+            .easing(cubicBezier(.22, .9, .28, .92));
     }
 }
 class SharePanel extends SharePanel_Generate$1 {
@@ -6302,7 +6603,7 @@ class SharePanel extends SharePanel_Generate$1 {
         this.mCancelTextBlock.text = `取消`;
         this.mUseTextBlock.text = `免费试穿`;
         this.mAdsButton.text = `免费试穿`;
-        Utils$1.setWidgetVisibility(this.mAdsButton, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mAdsButton, mw.SlateVisibility.Collapsed);
     }
     bindButton() {
         this.mCopyButton.onClicked.add(this.addCopyButton.bind(this));
@@ -6328,7 +6629,7 @@ class SharePanel extends SharePanel_Generate$1 {
     }
     showPanel(shareId) {
         this.mMyselfTextBlock.text = shareId;
-        Utils$1.setWidgetVisibility(this.mInputBgImage, mw.SlateVisibility.SelfHitTestInvisible);
+        Utils.setWidgetVisibility(this.mInputBgImage, mw.SlateVisibility.SelfHitTestInvisible);
         this.mOtherTipsTextBlock.text = `免费试穿好友的角色形象`;
     }
     onShow(...params) {
@@ -6420,7 +6721,14 @@ class HUDModuleC extends ModuleC {
         });
     }
     addOnOffHUDPannel(isOpen) {
-        isOpen ? this.getHUDPanel.show() : this.getHUDPanel.hide();
+        if (isOpen) {
+            this.localPlayer.character.moveFacingDirection = mw.MoveFacingDirection.ControllerDirection;
+            this.getHUDPanel.show();
+        }
+        else {
+            this.getHUDPanel.hide();
+            this.localPlayer.character.moveFacingDirection = mw.MoveFacingDirection.MovementDirection;
+        }
     }
     addJumpAction() {
         this.localPlayer.character.jump();
@@ -6428,9 +6736,7 @@ class HUDModuleC extends ModuleC {
             this.localPlayer.character.movementEnabled = true;
     }
     async onOpenShareActionHandler() {
-        this.getSharePanel.show();
-        let sharedId = await Utils$1.createSharedId(this.localPlayer.character);
-        this.getSharePanel.showPanel(sharedId);
+        return;
     }
     onUseShareActionHandler(shareId) {
         if (GlobalData.isOpenIAA) {
@@ -6443,7 +6749,7 @@ class HUDModuleC extends ModuleC {
         }
     }
     async useShareId(shareId) {
-        let isSuccess = await Utils$1.applySharedId(this.localPlayer.character, shareId);
+        let isSuccess = await Utils.applySharedId(this.localPlayer.character, shareId);
         if (isSuccess) {
             Notice.showDownNotice(`试穿成功`);
         }
@@ -6452,7 +6758,9 @@ class HUDModuleC extends ModuleC {
         }
     }
     addOpenRoleAction() {
-        AvatarEditorService.asyncOpenAvatarEditorModule();
+        ExecutorManager.instance.pushAsyncExecutor(async () => {
+            await AvatarEditorService.asyncOpenAvatarEditorModule();
+        });
     }
     onEnterScene(sceneType) {
         this.getHUDPanel.show();
@@ -6528,7 +6836,7 @@ class HUDModuleC extends ModuleC {
                 break;
             default:
                 soundId = "65879";
-                killCountTips = "连续消灭" + Utils$1.numChangeToCN(killCount) + "人！超越神了！";
+                killCountTips = "连续消灭" + Utils.numChangeToCN(killCount) + "人！超越神了！";
                 break;
         }
         SoundService.playSound(soundId, 1, GlobalData.soundVolume);
@@ -6809,8 +7117,8 @@ class ShopData extends Subdata {
         this.useShopIds = {}; //1-Gun,2-Role,3-Trailing
     }
     initDefaultData() {
-        let gunId = Utils$1.randomInt(1, 2);
-        let roleId = Utils$1.randomInt(1, 5);
+        let gunId = Utils.randomInt(1, 2);
+        let roleId = Utils.randomInt(1, 5);
         this.shopIds = {
             [ShopType.Gun]: [gunId],
             [ShopType.Role]: [roleId]
@@ -6872,7 +7180,7 @@ var foreign135 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopPanel.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.34
  */
 let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
     get mTabCanvas() {
@@ -6983,7 +7291,7 @@ ShopPanel_Generate = __decorate([
 ], ShopPanel_Generate);
 var ShopPanel_Generate$1 = ShopPanel_Generate;
 
-var foreign195 = /*#__PURE__*/Object.freeze({
+var foreign196 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel_Generate$1
 });
@@ -6993,7 +7301,7 @@ var foreign195 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopItem.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.34
  */
 let ShopItem_Generate = class ShopItem_Generate extends UIScript {
     get mICONImage() {
@@ -7176,7 +7484,7 @@ ShopItem_Generate = __decorate([
 ], ShopItem_Generate);
 var ShopItem_Generate$1 = ShopItem_Generate;
 
-var foreign194 = /*#__PURE__*/Object.freeze({
+var foreign195 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopItem_Generate$1
 });
@@ -7291,7 +7599,7 @@ class ShopItem extends ShopItem_Generate$1 {
                 this.setTrailing(key);
                 break;
         }
-        Utils$1.setWidgetVisibility(this.mPropCanvas, shopType == ShopType.Gun ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mPropCanvas, shopType == ShopType.Gun ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
         this.updateHasState();
     }
     setGun(key) {
@@ -7336,7 +7644,7 @@ class ShopItem extends ShopItem_Generate$1 {
         this.updatePrice(trailingElement.PRICETYPE, trailingElement.PRICE);
     }
     setIcon(guid, isGunIcon) {
-        Utils$1.setImageByAssetIconData(this.mICONImage, guid);
+        Utils.setImageByAssetIconData(this.mICONImage, guid);
         let size = new mw.Vector2(200, 200);
         let position = new mw.Vector2(100, 0);
         if (isGunIcon) {
@@ -7347,16 +7655,16 @@ class ShopItem extends ShopItem_Generate$1 {
         this.mICONImage.position = position;
     }
     updateHasState() {
-        Utils$1.setWidgetVisibility(this.mUseCanvas, this.isHas ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
-        Utils$1.setWidgetVisibility(this.mBuyCanvas, this.isHas ? mw.SlateVisibility.Collapsed : mw.SlateVisibility.SelfHitTestInvisible);
+        Utils.setWidgetVisibility(this.mUseCanvas, this.isHas ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mBuyCanvas, this.isHas ? mw.SlateVisibility.Collapsed : mw.SlateVisibility.SelfHitTestInvisible);
     }
     updatePrice(priceType, prices) {
         if (priceType == PriceType.Ads) {
-            Utils$1.setWidgetVisibility(this.mCoinBuyCanvas, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.mCoinBuyCanvas, mw.SlateVisibility.Collapsed);
             this.mDiamondBuyCanvas.position = new mw.Vector2(111, 0);
         }
         else {
-            Utils$1.setWidgetVisibility(this.mCoinBuyCanvas, mw.SlateVisibility.SelfHitTestInvisible);
+            Utils.setWidgetVisibility(this.mCoinBuyCanvas, mw.SlateVisibility.SelfHitTestInvisible);
             this.mDiamondBuyCanvas.position = new mw.Vector2(0, 0);
             // console.error(this.key + "," + this.shopType);
             this.mCoinPriceTextBlock.text = prices[1] + "";
@@ -7495,25 +7803,25 @@ class ShopPanel extends ShopPanel_Generate$1 {
     }
     updateTabState() {
         if (this.currentTabButton)
-            Utils$1.setButtonEnable(this.currentTabButton, true);
+            Utils.setButtonEnable(this.currentTabButton, true);
         this.currentTabButton = this.mTabButtons[this.currentShopType];
-        Utils$1.setButtonEnable(this.currentTabButton, false);
+        Utils.setButtonEnable(this.currentTabButton, false);
         this.updateShopItem();
     }
     updateShopItem() {
         if (this.shopItems.length > this.shopTypes[this.currentShopType]) {
             for (let i = 0; i < this.shopTypes[this.currentShopType]; ++i) {
                 this.shopItems[i].setData(i + 1, this.currentShopType);
-                Utils$1.setWidgetVisibility(this.shopItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.shopItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
             }
             for (let i = this.shopTypes[this.currentShopType]; i < this.shopItems.length; ++i) {
-                Utils$1.setWidgetVisibility(this.shopItems[i].uiObject, mw.SlateVisibility.Collapsed);
+                Utils.setWidgetVisibility(this.shopItems[i].uiObject, mw.SlateVisibility.Collapsed);
             }
         }
         else {
             for (let i = 0; i < this.shopItems.length; ++i) {
                 this.shopItems[i].setData(i + 1, this.currentShopType);
-                Utils$1.setWidgetVisibility(this.shopItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.shopItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
             }
             for (let i = this.shopItems.length; i < this.shopTypes[this.currentShopType]; ++i) {
                 let shopItem = UIService.create(ShopItem);
@@ -7523,21 +7831,21 @@ class ShopPanel extends ShopPanel_Generate$1 {
             }
         }
         if (this.currentShopType == ShopType.Role) {
-            Utils$1.setWidgetVisibility(this.shopItems[7].uiObject, mw.SlateVisibility.Collapsed);
-            Utils$1.setWidgetVisibility(this.shopItems[9].uiObject, mw.SlateVisibility.Collapsed);
-            Utils$1.setWidgetVisibility(this.shopItems[13].uiObject, mw.SlateVisibility.Collapsed);
-            Utils$1.setWidgetVisibility(this.shopItems[32].uiObject, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.shopItems[7].uiObject, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.shopItems[9].uiObject, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.shopItems[13].uiObject, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.shopItems[32].uiObject, mw.SlateVisibility.Collapsed);
         }
     }
     onShow(...params) {
         this.updateShopItem();
-        Utils$1.openUITween(this.rootCanvas, null, null);
+        Utils.openUITween(this.rootCanvas, null, null);
     }
     /**
      * 隐藏缓动
      */
     hideTween() {
-        Utils$1.closeUITween(this.rootCanvas, null, () => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
         });
     }
@@ -7794,7 +8102,7 @@ class ShopModuleC extends ModuleC {
     }
     async setCharacterDescription(shopId) {
         let roleId = GameConfig.ROLE.getElement(shopId).ROLEID;
-        await Utils$1.asyncDownloadAsset(roleId);
+        await Utils.asyncDownloadAsset(roleId);
         this.localPlayer.character.setDescription([roleId]);
         this.localPlayer.character.syncDescription();
         Notice.showDownNotice("皮肤成功穿戴");
@@ -7859,7 +8167,7 @@ class ShopModuleC extends ModuleC {
             GameObjPool.despawn(this.gunModel);
         let gunElement = GameConfig.GUN.getElement(key);
         let gunId = gunElement.GUNICON_M;
-        await Utils$1.asyncDownloadAsset(gunId);
+        await Utils.asyncDownloadAsset(gunId);
         this.gunModel = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Asset);
         this.gunModel.parent = this.shopAnchor;
         this.gunModel.localTransform.position = gunElement.GUNLOC;
@@ -7875,8 +8183,8 @@ class ShopModuleC extends ModuleC {
         this.shopNpc.complexMovementEnabled = false;
         this.shopNpc.displayName = "";
         await this.setShopNpcDescription(MapEx.get(this.useShopIds, ShopType.Role));
-        Utils$1.setGameObjectVisibility(this.shopNpc, false);
-        Utils$1.setGameObjectVisibility(this.holdGun, false);
+        Utils.setGameObjectVisibility(this.shopNpc, false);
+        Utils.setGameObjectVisibility(this.holdGun, false);
     }
     async setShopNpcDescription(key) {
         if (this.roleKey == key) {
@@ -7885,7 +8193,7 @@ class ShopModuleC extends ModuleC {
         }
         this.roleKey = key;
         let roleId = GameConfig.ROLE.getElement(key).ROLEID;
-        await Utils$1.asyncDownloadAsset(roleId);
+        await Utils.asyncDownloadAsset(roleId);
         this.shopNpc.setDescription([roleId]);
         this.setShopNpcGunState(false);
         await this.setShopNpcState();
@@ -7910,9 +8218,9 @@ class ShopModuleC extends ModuleC {
     }
     setShopNpcGunState(isShowGun) {
         if (this.shopNpc)
-            Utils$1.setGameObjectVisibility(this.shopNpc, !isShowGun);
+            Utils.setGameObjectVisibility(this.shopNpc, !isShowGun);
         if (this.gunModel)
-            Utils$1.setGameObjectVisibility(this.gunModel, isShowGun);
+            Utils.setGameObjectVisibility(this.gunModel, isShowGun);
     }
     async setShopNpcState() {
         if (!this.shopNpc)
@@ -7925,8 +8233,8 @@ class ShopModuleC extends ModuleC {
             return;
         if (this.holdGun)
             GameObjPool.despawn(this.holdGun);
-        this.lastGunModelId = Utils$1.randomOneDifferentId(this.holdGunModelIds, this.lastGunModelId);
-        await Utils$1.asyncDownloadAsset(this.lastGunModelId);
+        this.lastGunModelId = Utils.randomOneDifferentId(this.holdGunModelIds, this.lastGunModelId);
+        await Utils.asyncDownloadAsset(this.lastGunModelId);
         this.holdGun = await GameObjPool.asyncSpawn(this.lastGunModelId, mwext.GameObjPoolSourceType.Asset);
         this.shopNpc.attachToSlot(this.holdGun, mw.HumanoidSlotType.RightHand);
         this.holdGun.localTransform.position = mw.Vector.zero;
@@ -7938,8 +8246,8 @@ class ShopModuleC extends ModuleC {
             return;
         await this.shopNpc.asyncReady();
         let isFemale = (this.shopNpc.description.advance.base.characterSetting.somatotype % 2) == 0;
-        this.lastAnimationId = Utils$1.randomOneDifferentId(isFemale ? this.femaleAnimationIds : this.maleAnimationIds, this.lastAnimationId);
-        await Utils$1.asyncDownloadAsset(this.lastAnimationId);
+        this.lastAnimationId = Utils.randomOneDifferentId(isFemale ? this.femaleAnimationIds : this.maleAnimationIds, this.lastAnimationId);
+        await Utils.asyncDownloadAsset(this.lastAnimationId);
         let shopNpcAnim = this.shopNpc.loadAnimation(this.lastAnimationId);
         shopNpcAnim.loop = 0;
         shopNpcAnim.play();
@@ -7956,7 +8264,7 @@ var foreign136 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ActivityModule/ActivityPanel.ui
- * TIME: 2025.03.16-00.11.33
+ * TIME: 2025.03.16-00.18.34
  */
 let ActivityPanel_Generate = class ActivityPanel_Generate extends UIScript {
     get mWhatDayTextBlock() {
@@ -8148,7 +8456,7 @@ class ActivityPanel extends ActivityPanel_Generate$1 {
         this.adPanel = UIService.getUI(AdPanel);
     }
     initUI() {
-        this.currentIndex = Number(Utils$1.getWhatDay());
+        this.currentIndex = Number(Utils.getWhatDay());
         this.updateIconTextUI();
     }
     bindButtons() {
@@ -8215,8 +8523,8 @@ class ActivityPanel extends ActivityPanel_Generate$1 {
     }
     updateIconTextUI() {
         this.mIndexTextBlock.text = this.currentIndex + "/7";
-        this.mWhatDayTextBlock.text = this.getWhatDayStr() + "\n(星期" + Utils$1.weekNumChangeToCN(this.currentIndex) + ")";
-        Utils$1.setImageByAssetIconData(this.mIconImage, this.activityData[this.currentIndex - 1].shopIcon);
+        this.mWhatDayTextBlock.text = this.getWhatDayStr() + "\n(星期" + Utils.weekNumChangeToCN(this.currentIndex) + ")";
+        Utils.setImageByAssetIconData(this.mIconImage, this.activityData[this.currentIndex - 1].shopIcon);
         this.mIconTextBlock.text = this.getActicityShopTypeStr();
     }
     getWhatDayStr() {
@@ -8232,7 +8540,7 @@ class ActivityPanel extends ActivityPanel_Generate$1 {
             return "明日奖励";
         if (offsetDay == -1)
             return "昨日奖励";
-        return "星期" + Utils$1.weekNumChangeToCN(this.currentIndex) + "奖励";
+        return "星期" + Utils.weekNumChangeToCN(this.currentIndex) + "奖励";
     }
     getActicityShopTypeStr() {
         switch (this.activityData[this.currentIndex - 1].shopType) {
@@ -8257,20 +8565,20 @@ class ActivityPanel extends ActivityPanel_Generate$1 {
             return true;
         let whatDay = this.getActivityModuleC.getData();
         if (whatDay != this.currentIndex) {
-            Notice.showDownNotice("今天星期" + Utils$1.weekNumChangeToCN(whatDay));
-            Notice.showDownNotice("不能领取星期" + Utils$1.weekNumChangeToCN(this.currentIndex) + "的奖励");
+            Notice.showDownNotice("今天星期" + Utils.weekNumChangeToCN(whatDay));
+            Notice.showDownNotice("不能领取星期" + Utils.weekNumChangeToCN(this.currentIndex) + "的奖励");
             return false;
         }
         return true;
     }
     onShow(...params) {
-        Utils$1.openUITween(this.rootCanvas, null, null);
+        Utils.openUITween(this.rootCanvas, null, null);
     }
     /**
      * 隐藏缓动
      */
     hideTween() {
-        Utils$1.closeUITween(this.rootCanvas, null, () => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
         });
     }
@@ -8344,7 +8652,7 @@ class ActivityModuleC extends ModuleC {
     initActivityData() {
         this.whatDay = this.data.whatDay;
         this.miniutes = this.data.minutes;
-        let currentWhatDay = Number(Utils$1.getWhatDay());
+        let currentWhatDay = Number(Utils.getWhatDay());
         if (currentWhatDay != this.whatDay) {
             this.whatDay = currentWhatDay;
             this.miniutes = 0;
@@ -8481,7 +8789,7 @@ class CoinModuleS extends ModuleS {
     }
     killPlayerAddCoin(player) {
         let coinData = DataCenterS.getData(player, CoinData);
-        let randomCoin = Utils$1.randomInt(10, 30);
+        let randomCoin = Utils.randomInt(10, 30);
         coinData.coin += randomCoin;
         coinData.save(true);
         this.getClient(player).net_killPlayerAddCoin(randomCoin);
@@ -8537,7 +8845,7 @@ class GunModuleS extends ModuleS {
     async switchStance(player) {
         let somatotype = player.character.description.advance.base.characterSetting.somatotype;
         let stanceId = (somatotype % 2 == 0) ? "49098" : "94261";
-        await Utils$1.asyncDownloadAsset(stanceId);
+        await Utils.asyncDownloadAsset(stanceId);
         player.character.loadSubStance(stanceId).play();
     }
     async switchGun(gunId, player) {
@@ -8856,240 +9164,6 @@ var foreign103 = /*#__PURE__*/Object.freeze({
     default: MallData
 });
 
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/tools/LoadingPanel.ui
- * TIME: 2025.03.16-00.11.33
- */
-let LoadingPanel_Generate = class LoadingPanel_Generate extends UIScript {
-    get mMainCanvas() {
-        if (!this.mMainCanvas_Internal && this.uiWidgetBase) {
-            this.mMainCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mMainCanvas');
-        }
-        return this.mMainCanvas_Internal;
-    }
-    get mLoadingImage() {
-        if (!this.mLoadingImage_Internal && this.uiWidgetBase) {
-            this.mLoadingImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mMainCanvas/mLoadingImage');
-        }
-        return this.mLoadingImage_Internal;
-    }
-    get mLoadingTextblock() {
-        if (!this.mLoadingTextblock_Internal && this.uiWidgetBase) {
-            this.mLoadingTextblock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mMainCanvas/mLoadingTextblock');
-        }
-        return this.mLoadingTextblock_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mLoadingTextblock);
-        //文本多语言
-    }
-    /**初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /**显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /**隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-LoadingPanel_Generate = __decorate([
-    UIBind('UI/tools/LoadingPanel.ui')
-], LoadingPanel_Generate);
-var LoadingPanel_Generate$1 = LoadingPanel_Generate;
-
-var foreign200 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: LoadingPanel_Generate$1
-});
-
-class LoadingPanel extends LoadingPanel_Generate$1 {
-    /**
-     * 构造UI文件成功后，在合适的时机最先初始化一次
-     */
-    onStart() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerTop;
-    }
-    /**
-    * 每一帧调用
-    * 通过canUpdate可以开启关闭调用
-    * dt 两帧调用的时间差，毫秒
-    */
-    onUpdate(dt) {
-        this.mLoadingImage.renderTransformAngle = this.mLoadingImage.renderTransformAngle + 180 * dt;
-        if (this.mLoadingImage.renderTransformAngle > 180)
-            this.mLoadingImage.renderTransformAngle = -180 + this.mLoadingImage.renderTransformAngle - 180;
-    }
-    setLock(isLock) {
-        if (isLock) {
-            this.canUpdate = true;
-            this.rootCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-        }
-        else {
-            this.canUpdate = false;
-            this.rootCanvas.visibility = mw.SlateVisibility.Collapsed;
-        }
-    }
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-}
-
-var foreign158 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: LoadingPanel
-});
-
-class ExecutorBase {
-    execute() { }
-}
-class Executor extends ExecutorBase {
-    execute() {
-        this.func(this.arg);
-    }
-}
-class AsyncExecutor extends ExecutorBase {
-    constructor() {
-        super(...arguments);
-        /**锁定输入 */
-        this.lockInput = true;
-    }
-    async execute() {
-        await this.asyncFunc(this.arg);
-    }
-}
-class ExecutorManager {
-    constructor() {
-        this.executorList = new Array();
-        this.running = false;
-        this.index = 0;
-        this.doneCb = new Action();
-    }
-    static get instance() {
-        if (ExecutorManager._instance == undefined)
-            ExecutorManager._instance = new ExecutorManager();
-        return ExecutorManager._instance;
-    }
-    pushExecutor(func, arg = undefined, record = false, resetFunc = undefined) {
-        let executor = new Executor();
-        executor.func = func;
-        executor.arg = arg;
-        executor.record = record;
-        executor.resetFunc = resetFunc;
-        this.push(executor);
-    }
-    /** 添加异步命令
-     * @param asyncFunc 异步函数
-     * @param arg 函数参数
-     * @param isAwait 是否等待(默认等待)
-     * @param record 记录角色数据
-     * @param resetFunc 恢复角色数据的操作
-     */
-    pushAsyncExecutor(asyncFunc, arg = undefined, isAwait = true, record = false, resetFunc = undefined, lockInput = true) {
-        let asyncExecutor = new AsyncExecutor();
-        asyncExecutor.asyncFunc = asyncFunc;
-        asyncExecutor.arg = arg;
-        asyncExecutor.isAwait = isAwait;
-        asyncExecutor.record = record;
-        asyncExecutor.lockInput = lockInput;
-        asyncExecutor.resetFunc = resetFunc;
-        this.push(asyncExecutor);
-    }
-    push(executor) {
-        this.executorList.push(executor);
-        this.run();
-    }
-    async run() {
-        if (this.running)
-            return;
-        this.running = true;
-        let executor = this.executorList[this.index];
-        UIService.getUI(LoadingPanel).show();
-        while (executor) {
-            try {
-                if (executor instanceof Executor) {
-                    executor.execute();
-                }
-                else {
-                    let asyncExecutor = executor;
-                    UIService.getUI(LoadingPanel).setLock(asyncExecutor.lockInput);
-                    if (asyncExecutor.isAwait) {
-                        await this.runExecute(asyncExecutor.execute.bind(asyncExecutor));
-                    }
-                    else {
-                        asyncExecutor.execute();
-                    }
-                }
-                // if (executor.record) Event.dispatchToLocal(EventType.Event_Record, executor.resetFunc);
-            }
-            catch (error) {
-                console.error(`命令执行异常:${error}`);
-            }
-            this.index++;
-            executor = this.executorList[this.index];
-        }
-        UIService.getUI(LoadingPanel).hide();
-        this.running = false;
-        this.doneCb.call();
-    }
-    //执行命令，10秒超时
-    runExecute(exeFunc) {
-        return new Promise(async (resolve) => {
-            let timeOut = setTimeout(() => {
-                console.error(`命令执行10秒超时`);
-                return resolve();
-            }, 10 * 1000);
-            await exeFunc();
-            clearTimeout(timeOut);
-            return resolve();
-        });
-    }
-    /**等待执行完毕 */
-    awaitDone() {
-        return new Promise((resolve) => {
-            if (!this.running)
-                return resolve();
-            const doneFunc = () => {
-                this.doneCb.remove(doneFunc, this);
-                return resolve();
-            };
-            this.doneCb.add(doneFunc, this);
-        });
-    }
-}
-ExecutorManager._instance = undefined;
-
-var foreign160 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: ExecutorManager
-});
-
 class Mall {
     static async copyCharacterSlot(fromCharacter, toCharacter) {
         if (!fromCharacter || !toCharacter)
@@ -9128,7 +9202,7 @@ class Mall {
         await character.asyncReady();
     }
     static async setDecoraBase(character, slotIndex, assetId, offset) {
-        await Utils$1.asyncDownloadAsset(assetId);
+        await Utils.asyncDownloadAsset(assetId);
         let model = await GameObject.asyncSpawn(assetId);
         if (!model)
             return false;
@@ -9154,7 +9228,7 @@ class Mall {
         let toHair = toCharacter.description.advance.hair;
         let frontHairStyle = fromHair?.frontHair?.style;
         if (frontHairStyle) {
-            await Utils$1.asyncDownloadAsset(frontHairStyle);
+            await Utils.asyncDownloadAsset(frontHairStyle);
             toHair.frontHair.style = frontHairStyle;
         }
         let frontHairColor = fromHair?.frontHair?.color?.color;
@@ -9209,7 +9283,7 @@ class Mall {
         }
         let backHairStyle = fromHair?.backHair?.style;
         if (backHairStyle) {
-            await Utils$1.asyncDownloadAsset(backHairStyle);
+            await Utils.asyncDownloadAsset(backHairStyle);
             toHair.backHair.style = backHairStyle;
         }
         let backHairColor = fromHair?.backHair?.color?.color;
@@ -9264,7 +9338,7 @@ class Mall {
         }
         let upperClothStyle = fromClothing?.upperCloth?.style;
         if (upperClothStyle) {
-            await Utils$1.asyncDownloadAsset(upperClothStyle);
+            await Utils.asyncDownloadAsset(upperClothStyle);
             toClothing.upperCloth.style = upperClothStyle;
         }
         let upperClothPart = fromClothing?.upperCloth?.part;
@@ -9304,7 +9378,7 @@ class Mall {
         }
         let lowerClothStyle = fromClothing?.lowerCloth?.style;
         if (lowerClothStyle) {
-            await Utils$1.asyncDownloadAsset(lowerClothStyle);
+            await Utils.asyncDownloadAsset(lowerClothStyle);
             toClothing.lowerCloth.style = lowerClothStyle;
         }
         let lowerClothPart = fromClothing?.lowerCloth?.part;
@@ -9344,7 +9418,7 @@ class Mall {
         }
         let shoesStyle = fromClothing?.shoes?.style;
         if (shoesStyle) {
-            await Utils$1.asyncDownloadAsset(shoesStyle);
+            await Utils.asyncDownloadAsset(shoesStyle);
             toClothing.shoes.style = shoesStyle;
         }
         let shoesPart = fromClothing?.shoes?.part;
@@ -9384,7 +9458,7 @@ class Mall {
         }
         let glovesStyle = fromClothing?.gloves?.style;
         if (glovesStyle) {
-            await Utils$1.asyncDownloadAsset(glovesStyle);
+            await Utils.asyncDownloadAsset(glovesStyle);
             toClothing.gloves.style = glovesStyle;
         }
         let glovesPart = fromClothing?.gloves?.part;
@@ -9692,7 +9766,7 @@ var foreign102 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/ColorPickPanel.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.34
  */
 let ColorPickPanel_Generate = class ColorPickPanel_Generate extends UIScript {
     get mSaveCanvas() {
@@ -9848,7 +9922,7 @@ ColorPickPanel_Generate = __decorate([
 ], ColorPickPanel_Generate);
 var ColorPickPanel_Generate$1 = ColorPickPanel_Generate;
 
-var foreign176 = /*#__PURE__*/Object.freeze({
+var foreign177 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ColorPickPanel_Generate$1
 });
@@ -9858,7 +9932,7 @@ var foreign176 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/ColorPickTab1.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.34
  */
 let ColorPickTab1_Generate = class ColorPickTab1_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -9904,7 +9978,7 @@ ColorPickTab1_Generate = __decorate([
 ], ColorPickTab1_Generate);
 var ColorPickTab1_Generate$1 = ColorPickTab1_Generate;
 
-var foreign177 = /*#__PURE__*/Object.freeze({
+var foreign178 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ColorPickTab1_Generate$1
 });
@@ -9933,7 +10007,7 @@ var foreign107 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/ColorPickTab2.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.35
  */
 let ColorPickTab2_Generate = class ColorPickTab2_Generate extends UIScript {
     get mTab2Canvas() {
@@ -10013,7 +10087,7 @@ ColorPickTab2_Generate = __decorate([
 ], ColorPickTab2_Generate);
 var ColorPickTab2_Generate$1 = ColorPickTab2_Generate;
 
-var foreign178 = /*#__PURE__*/Object.freeze({
+var foreign179 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ColorPickTab2_Generate$1
 });
@@ -10076,12 +10150,12 @@ class ColorPickTab2 extends ColorPickTab2_Generate$1 {
     }
     updateSelectStateUI() {
         if (this.isSelect) {
-            Utils$1.setWidgetVisibility(this.mSelectTab2BgImage, mw.SlateVisibility.SelfHitTestInvisible);
+            Utils.setWidgetVisibility(this.mSelectTab2BgImage, mw.SlateVisibility.SelfHitTestInvisible);
             this.mTab2TextBlock.setFontColorByHex(`000000E5`);
             this.mTab2TextBlock.glyph = mw.UIFontGlyph.Bold;
         }
         else {
-            Utils$1.setWidgetVisibility(this.mSelectTab2BgImage, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.mSelectTab2BgImage, mw.SlateVisibility.Collapsed);
             this.mTab2TextBlock.setFontColorByHex(`00000099`);
             this.mTab2TextBlock.glyph = mw.UIFontGlyph.Normal;
         }
@@ -10098,7 +10172,7 @@ var foreign108 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/ColorPickTab3.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.35
  */
 let ColorPickTab3_Generate = class ColorPickTab3_Generate extends UIScript {
     get mBgImage() {
@@ -10159,7 +10233,7 @@ ColorPickTab3_Generate = __decorate([
 ], ColorPickTab3_Generate);
 var ColorPickTab3_Generate$1 = ColorPickTab3_Generate;
 
-var foreign179 = /*#__PURE__*/Object.freeze({
+var foreign180 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ColorPickTab3_Generate$1
 });
@@ -10309,7 +10383,7 @@ var foreign157 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/MallPanel.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.35
  */
 let MallPanel_Generate = class MallPanel_Generate extends UIScript {
     get mTouchImage() {
@@ -10522,7 +10596,7 @@ MallPanel_Generate = __decorate([
 ], MallPanel_Generate);
 var MallPanel_Generate$1 = MallPanel_Generate;
 
-var foreign184 = /*#__PURE__*/Object.freeze({
+var foreign185 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MallPanel_Generate$1
 });
@@ -10532,7 +10606,7 @@ var foreign184 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/MallItem_Big.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.35
  */
 let MallItem_Big_Generate = class MallItem_Big_Generate extends UIScript {
     get mBgImage() {
@@ -10612,7 +10686,7 @@ MallItem_Big_Generate = __decorate([
 ], MallItem_Big_Generate);
 var MallItem_Big_Generate$1 = MallItem_Big_Generate;
 
-var foreign180 = /*#__PURE__*/Object.freeze({
+var foreign181 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MallItem_Big_Generate$1
 });
@@ -10664,66 +10738,66 @@ class MallItem_Big extends MallItem_Big_Generate$1 {
             case Tab2Type.Tab2_BodyType:
                 let bodyTypeElement = GameConfig.BodyType.getElement(assetId);
                 this.mIconImage.imageGuid = bodyTypeElement.Icon;
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.Collapsed);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.Collapsed);
                 this.mPriceTextBlock.text = StringUtil.format(GameConfig.Language.Text_BodyTypeDescribe.Value, bodyTypeElement.Scale);
                 break;
             case Tab2Type.Tab2_Outfit:
                 let outfitElement = GameConfig.Outfit.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(outfitElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_DailyStyling_Suit1:
                 let dailyStylingOutfit1Element = GameConfig.DailyStylingOutfit1.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(dailyStylingOutfit1Element.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_DailyStyling_Suit2:
                 let dailyStylingOutfit2Element = GameConfig.DailyStylingOutfit2.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(dailyStylingOutfit2Element.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_MuppetStyling_Suit:
                 let muppetStylingOutfitElement = GameConfig.MuppetStylingOutfit.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(muppetStylingOutfitElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_HeroStyling_Suit:
                 let heroStylingOutfitElement = GameConfig.HeroStylingOutfit.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(heroStylingOutfitElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_FantasyModeling_Suit:
                 let fantasyModelingOutfitElement = GameConfig.FantasyModelingOutfit.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(fantasyModelingOutfitElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_HolidayStyling_Suit:
                 let holidayStylingOutfitElement = GameConfig.HolidayStylingOutfit.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(holidayStylingOutfitElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_ScienceFictionStyling_Suit:
                 let scienceFictionStylingOutfitElement = GameConfig.ScienceFictionStylingOutfit.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(scienceFictionStylingOutfitElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_AncientMolding_Suit:
                 let ancientMoldingOutfitElement = GameConfig.AncientMoldingOutfit.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(ancientMoldingOutfitElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             default:
                 this.mIconImage.imageInfo.setByAssetIcon(assetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
         }
@@ -10755,7 +10829,7 @@ var foreign110 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/MallItem_Color.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.35
  */
 let MallItem_Color_Generate = class MallItem_Color_Generate extends UIScript {
     get mBgImage() {
@@ -10816,7 +10890,7 @@ MallItem_Color_Generate = __decorate([
 ], MallItem_Color_Generate);
 var MallItem_Color_Generate$1 = MallItem_Color_Generate;
 
-var foreign181 = /*#__PURE__*/Object.freeze({
+var foreign182 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MallItem_Color_Generate$1
 });
@@ -10904,7 +10978,7 @@ var foreign111 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/MallItem_Self.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.35
  */
 let MallItem_Self_Generate = class MallItem_Self_Generate extends UIScript {
     get mBgImage() {
@@ -10972,7 +11046,7 @@ MallItem_Self_Generate = __decorate([
 ], MallItem_Self_Generate);
 var MallItem_Self_Generate$1 = MallItem_Self_Generate;
 
-var foreign182 = /*#__PURE__*/Object.freeze({
+var foreign183 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MallItem_Self_Generate$1
 });
@@ -11023,7 +11097,7 @@ class MallItem_Self extends MallItem_Self_Generate$1 {
                 break;
         }
         this.isDefault = Mall.isDefaultAssetId(this.assetId);
-        Utils$1.setWidgetVisibility(this.mCloseButton, this.isDefault ? mw.SlateVisibility.Collapsed : mw.SlateVisibility.Visible);
+        Utils.setWidgetVisibility(this.mCloseButton, this.isDefault ? mw.SlateVisibility.Collapsed : mw.SlateVisibility.Visible);
     }
 }
 
@@ -11037,7 +11111,7 @@ var foreign112 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/MallItem_Small.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.35
  */
 let MallItem_Small_Generate = class MallItem_Small_Generate extends UIScript {
     get mBgImage() {
@@ -11133,7 +11207,7 @@ MallItem_Small_Generate = __decorate([
 ], MallItem_Small_Generate);
 var MallItem_Small_Generate$1 = MallItem_Small_Generate;
 
-var foreign183 = /*#__PURE__*/Object.freeze({
+var foreign184 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MallItem_Small_Generate$1
 });
@@ -11197,187 +11271,187 @@ class MallItem_Small extends MallItem_Small_Generate$1 {
             case Tab3Type.Tab3_LowerHighlight:
                 this.mIconImage.imageColor = new mw.LinearColor(0.3098, 0.1921, 0.7176);
                 this.mIconImage.imageInfo.setByAssetIcon(assetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab2Type.Tab2_Expression:
                 let faceExpressionElement = GameConfig.FaceExpression.getElement(assetId);
                 this.mIconImage.imageColor = new mw.LinearColor(0.3098, 0.1921, 0.7176);
                 this.mIconImage.imageGuid = faceExpressionElement.Icon;
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.Collapsed);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.Collapsed);
                 this.mPriceTextBlock.text = faceExpressionElement.Name;
                 break;
             case Tab3Type.Tab3_LeftHand:
                 let leftHandElement = GameConfig.LeftHand.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(leftHandElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_RightHand:
                 let rightHandElement = GameConfig.RightHand.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(rightHandElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_Back:
                 let backElement = GameConfig.Back.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(backElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_Ear:
                 let earElement = GameConfig.Ear.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(earElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_Face:
                 let facingElement = GameConfig.Facing.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(facingElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_Hip:
                 let hipElement = GameConfig.Hip.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(hipElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_Shoulder:
                 let shoulderElement = GameConfig.Shoulder.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(shoulderElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_Effects:
                 let effectsElement = GameConfig.Effects.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(effectsElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_Trailing:
                 let trailingElement = GameConfig.Trailings.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(trailingElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_LongSinglePiece_Top:
                 let longSinglePieceTopElement = GameConfig.LongSinglePieceTop.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(longSinglePieceTopElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_ShortJacket_Top:
                 let shortJacketTopElement = GameConfig.ShortJacketTop.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(shortJacketTopElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_ShortSinglePiece_Top:
                 let shortSinglePieceTopElement = GameConfig.ShortSinglePieceTop.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(shortSinglePieceTopElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_Suit_Top:
                 let suitTopElement = GameConfig.SuitTop.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(suitTopElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_ALongCoat_Top:
                 let aLongCoatTopElement = GameConfig.ALongCoatTop.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(aLongCoatTopElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_ShortSkirt_Bottom:
                 let shortSkirtBottomElement = GameConfig.ShortSkirtBottom.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(shortSkirtBottomElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_LongPants_Bottom:
                 let longPantsBottomElement = GameConfig.LongPantsBottom.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(longPantsBottomElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_Shorts_Bottom:
                 let shortsBottomElement = GameConfig.ShortsBottom.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(shortsBottomElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_LongSkirt_Bottom:
                 let longSkirtBottomElement = GameConfig.LongSkirtBottom.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(longSkirtBottomElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_Tights_Bottom:
                 let tightsBottomElement = GameConfig.TightsBottom.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(tightsBottomElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_Gloves_Gloves:
                 let glovesGlovesElement = GameConfig.GlovesGloves.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(glovesGlovesElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_Accessories_Gloves:
                 let accessoriesGlovesElement = GameConfig.AccessoriesGloves.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(accessoriesGlovesElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_Everyday_Shoes:
                 let everydayShoesElement = GameConfig.EverydayShoes.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(everydayShoesElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_Boots_Shoes:
                 let bootsShoesElement = GameConfig.BootsShoes.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(bootsShoesElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_FootCover_Shoes:
                 let footCoverShoesElement = GameConfig.FootCoverShoes.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(footCoverShoesElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_NakedDress_Shoes:
                 let nakedDressShoesElement = GameConfig.NakedDressShoes.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(nakedDressShoesElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_HighHeels_Shoes:
                 let highHeelsShoesElement = GameConfig.HighHeelsShoes.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(highHeelsShoesElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab3Type.Tab3_SportsShoes_Shoes:
                 let sportsShoesShoesElement = GameConfig.SportsShoesShoes.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(sportsShoesShoesElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             case Tab2Type.Tab2_Pet:
                 let petElement = GameConfig.Pet.getElement(assetId);
                 this.mIconImage.imageInfo.setByAssetIcon(petElement.AssetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
             default:
                 this.mIconImage.imageInfo.setByAssetIcon(assetId, mw.AssetIconSize.Icon_128px);
-                Utils$1.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mCoinIconImage, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mPriceTextBlock.text = GameConfig.Language.Text_MallItem_Free.Value;
                 break;
         }
@@ -11420,15 +11494,15 @@ class MallItem_Small extends MallItem_Small_Generate$1 {
         if (this.isSelect) {
             this.mSelectButton.renderOpacity = 1;
             if (this.isSupportColor) {
-                Utils$1.setWidgetVisibility(this.mColorButton, mw.SlateVisibility.Visible);
+                Utils.setWidgetVisibility(this.mColorButton, mw.SlateVisibility.Visible);
             }
             else {
-                Utils$1.setWidgetVisibility(this.mColorButton, mw.SlateVisibility.Collapsed);
+                Utils.setWidgetVisibility(this.mColorButton, mw.SlateVisibility.Collapsed);
             }
         }
         else {
             this.mSelectButton.renderOpacity = 0;
-            Utils$1.setWidgetVisibility(this.mColorButton, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.mColorButton, mw.SlateVisibility.Collapsed);
         }
     }
 }
@@ -11443,7 +11517,7 @@ var foreign113 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/MallTab1.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.35
  */
 let MallTab1_Generate = class MallTab1_Generate extends UIScript {
     get mTab1Canvas() {
@@ -11517,7 +11591,7 @@ MallTab1_Generate = __decorate([
 ], MallTab1_Generate);
 var MallTab1_Generate$1 = MallTab1_Generate;
 
-var foreign185 = /*#__PURE__*/Object.freeze({
+var foreign186 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MallTab1_Generate$1
 });
@@ -11573,12 +11647,12 @@ class MallTab1 extends MallTab1_Generate$1 {
     }
     updateSelectStateUI() {
         if (this.isSelect) {
-            Utils$1.setWidgetVisibility(this.mSelectTab1BgImage, mw.SlateVisibility.SelfHitTestInvisible);
+            Utils.setWidgetVisibility(this.mSelectTab1BgImage, mw.SlateVisibility.SelfHitTestInvisible);
             this.mTab1TextBlock.setFontColorByHex(`000000E5`);
             this.mTab1TextBlock.glyph = mw.UIFontGlyph.Bold;
         }
         else {
-            Utils$1.setWidgetVisibility(this.mSelectTab1BgImage, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.mSelectTab1BgImage, mw.SlateVisibility.Collapsed);
             this.mTab1TextBlock.setFontColorByHex(`00000099`);
             this.mTab1TextBlock.glyph = mw.UIFontGlyph.Normal;
         }
@@ -11595,7 +11669,7 @@ var foreign115 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/MallTab2.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.35
  */
 let MallTab2_Generate = class MallTab2_Generate extends UIScript {
     get mTab2Canvas() {
@@ -11657,7 +11731,7 @@ MallTab2_Generate = __decorate([
 ], MallTab2_Generate);
 var MallTab2_Generate$1 = MallTab2_Generate;
 
-var foreign186 = /*#__PURE__*/Object.freeze({
+var foreign187 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MallTab2_Generate$1
 });
@@ -11733,7 +11807,7 @@ var foreign116 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/MallTab3.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.35
  */
 let MallTab3_Generate = class MallTab3_Generate extends UIScript {
     get mTab3Canvas() {
@@ -11795,7 +11869,7 @@ MallTab3_Generate = __decorate([
 ], MallTab3_Generate);
 var MallTab3_Generate$1 = MallTab3_Generate;
 
-var foreign187 = /*#__PURE__*/Object.freeze({
+var foreign188 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MallTab3_Generate$1
 });
@@ -12031,7 +12105,7 @@ class MallPanel extends MallPanel_Generate$1 {
         }
         this.showTab2Canvas();
         this.tab2Ids.length = 0;
-        this.tab2Ids = Utils$1.copyArray(tab1Element.Tab2);
+        this.tab2Ids = Utils.copyArray(tab1Element.Tab2);
         this.updateTab2();
         this.tab2Id = this.getTab2();
         this.getMallModuleC.onSelectTab2Action.call(this.tab2Id);
@@ -12048,7 +12122,7 @@ class MallPanel extends MallPanel_Generate$1 {
         }
         this.showTab3Canvas();
         this.tab3Ids.length = 0;
-        this.tab3Ids = Utils$1.copyArray(tab2Element.Tab3);
+        this.tab3Ids = Utils.copyArray(tab2Element.Tab3);
         this.updateTab3();
         this.tab3Id = this.getTab3();
         this.getMallModuleC.onSelectTab3Action.call(this.tab3Id);
@@ -12509,26 +12583,26 @@ class MallPanel extends MallPanel_Generate$1 {
     }
     hideMallItemSmallAndBig() {
         this.mallItem_Small.forEach((value) => {
-            Utils$1.setWidgetVisibility(value.uiObject, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(value.uiObject, mw.SlateVisibility.Collapsed);
         });
         this.mallItem_Big.forEach((value) => {
-            Utils$1.setWidgetVisibility(value.uiObject, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(value.uiObject, mw.SlateVisibility.Collapsed);
         });
     }
     hideMallItemSamllAndColor() {
         this.mallItem_Small.forEach((value) => {
-            Utils$1.setWidgetVisibility(value.uiObject, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(value.uiObject, mw.SlateVisibility.Collapsed);
         });
         this.mallItem_Color.forEach((value) => {
-            Utils$1.setWidgetVisibility(value.uiObject, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(value.uiObject, mw.SlateVisibility.Collapsed);
         });
     }
     hideMallItemBigAndColor() {
         this.mallItem_Big.forEach((value) => {
-            Utils$1.setWidgetVisibility(value.uiObject, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(value.uiObject, mw.SlateVisibility.Collapsed);
         });
         this.mallItem_Color.forEach((value) => {
-            Utils$1.setWidgetVisibility(value.uiObject, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(value.uiObject, mw.SlateVisibility.Collapsed);
         });
     }
     initMallItem() {
@@ -12552,7 +12626,7 @@ class MallPanel extends MallPanel_Generate$1 {
         if (this.mallItemAssetIds.length > this.mallItem_Big.length) {
             for (let i = 0; i < this.mallItem_Big.length; ++i) {
                 this.mallItem_Big[i].initItem(this.currentTabType, this.currentConfigId, this.mallItemAssetIds[i]);
-                Utils$1.setWidgetVisibility(this.mallItem_Big[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mallItem_Big[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mallItemMap.set(this.mallItemAssetIds[i], this.mallItem_Big[i]);
             }
             for (let i = this.mallItem_Big.length; i < this.mallItemAssetIds.length; ++i) {
@@ -12566,11 +12640,11 @@ class MallPanel extends MallPanel_Generate$1 {
         else {
             for (let i = 0; i < this.mallItemAssetIds.length; ++i) {
                 this.mallItem_Big[i].initItem(this.currentTabType, this.currentConfigId, this.mallItemAssetIds[i]);
-                Utils$1.setWidgetVisibility(this.mallItem_Big[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mallItem_Big[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mallItemMap.set(this.mallItemAssetIds[i], this.mallItem_Big[i]);
             }
             for (let i = this.mallItemAssetIds.length; i < this.mallItem_Big.length; ++i) {
-                Utils$1.setWidgetVisibility(this.mallItem_Big[i].uiObject, mw.SlateVisibility.Collapsed);
+                Utils.setWidgetVisibility(this.mallItem_Big[i].uiObject, mw.SlateVisibility.Collapsed);
             }
         }
     }
@@ -12578,7 +12652,7 @@ class MallPanel extends MallPanel_Generate$1 {
         if (this.mallItemAssetIds.length > this.mallItem_Small.length) {
             for (let i = 0; i < this.mallItem_Small.length; ++i) {
                 this.mallItem_Small[i].initItem(this.currentTabType, this.currentConfigId, this.mallItemAssetIds[i]);
-                Utils$1.setWidgetVisibility(this.mallItem_Small[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mallItem_Small[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mallItemMap.set(this.mallItemAssetIds[i], this.mallItem_Small[i]);
             }
             for (let i = this.mallItem_Small.length; i < this.mallItemAssetIds.length; ++i) {
@@ -12592,11 +12666,11 @@ class MallPanel extends MallPanel_Generate$1 {
         else {
             for (let i = 0; i < this.mallItemAssetIds.length; ++i) {
                 this.mallItem_Small[i].initItem(this.currentTabType, this.currentConfigId, this.mallItemAssetIds[i]);
-                Utils$1.setWidgetVisibility(this.mallItem_Small[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mallItem_Small[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mallItemMap.set(this.mallItemAssetIds[i], this.mallItem_Small[i]);
             }
             for (let i = this.mallItemAssetIds.length; i < this.mallItem_Small.length; ++i) {
-                Utils$1.setWidgetVisibility(this.mallItem_Small[i].uiObject, mw.SlateVisibility.Collapsed);
+                Utils.setWidgetVisibility(this.mallItem_Small[i].uiObject, mw.SlateVisibility.Collapsed);
             }
         }
     }
@@ -12604,7 +12678,7 @@ class MallPanel extends MallPanel_Generate$1 {
         if (this.mallItemAssetIds.length > this.mallItem_Color.length) {
             for (let i = 0; i < this.mallItem_Color.length; ++i) {
                 this.mallItem_Color[i].initItem(this.currentTabType, this.currentConfigId, this.mallItemAssetIds[i]);
-                Utils$1.setWidgetVisibility(this.mallItem_Color[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mallItem_Color[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mallItemMap.set(this.mallItemAssetIds[i], this.mallItem_Color[i]);
             }
             for (let i = this.mallItem_Color.length; i < this.mallItemAssetIds.length; ++i) {
@@ -12618,11 +12692,11 @@ class MallPanel extends MallPanel_Generate$1 {
         else {
             for (let i = 0; i < this.mallItemAssetIds.length; ++i) {
                 this.mallItem_Color[i].initItem(this.currentTabType, this.currentConfigId, this.mallItemAssetIds[i]);
-                Utils$1.setWidgetVisibility(this.mallItem_Color[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mallItem_Color[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mallItemMap.set(this.mallItemAssetIds[i], this.mallItem_Color[i]);
             }
             for (let i = this.mallItemAssetIds.length; i < this.mallItem_Color.length; ++i) {
-                Utils$1.setWidgetVisibility(this.mallItem_Color[i].uiObject, mw.SlateVisibility.Collapsed);
+                Utils.setWidgetVisibility(this.mallItem_Color[i].uiObject, mw.SlateVisibility.Collapsed);
             }
         }
     }
@@ -12634,7 +12708,7 @@ class MallPanel extends MallPanel_Generate$1 {
                     assetId = await this.getMallModuleC.getCharacterAssetId(this.currentConfigId);
                     let colorKey = `ColorPick`;
                     for (let key of this.mallItemMap.keys()) {
-                        if (Utils$1.isEqulaLinearColor(assetId, Utils$1.colorHexToLinearColorToString(key))) {
+                        if (Utils.isEqulaLinearColor(assetId, Utils.colorHexToLinearColorToString(key))) {
                             colorKey = key;
                             break;
                         }
@@ -12659,7 +12733,7 @@ class MallPanel extends MallPanel_Generate$1 {
             let assetId = await this.getMallModuleC.getCharacterAssetId(this.currentConfigId);
             let isHasSelect = false;
             this.mallItemMap.forEach((value, key) => {
-                if (Utils$1.isEqulaLinearColor(Utils$1.colorHexToLinearColorToString(key), assetId)) {
+                if (Utils.isEqulaLinearColor(Utils.colorHexToLinearColorToString(key), assetId)) {
                     isHasSelect = true;
                     value.updateSelectState(true);
                 }
@@ -12672,25 +12746,25 @@ class MallPanel extends MallPanel_Generate$1 {
         });
     }
     hideTab123Canvas() {
-        Utils$1.setWidgetVisibility(this.mTab1Canvas, mw.SlateVisibility.Collapsed);
-        Utils$1.setWidgetVisibility(this.mTab2Canvas, mw.SlateVisibility.Collapsed);
-        Utils$1.setWidgetVisibility(this.mTab3Canvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mTab1Canvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mTab2Canvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mTab3Canvas, mw.SlateVisibility.Collapsed);
     }
     hideTab23Canvas() {
-        Utils$1.setWidgetVisibility(this.mTab2Canvas, mw.SlateVisibility.Collapsed);
-        Utils$1.setWidgetVisibility(this.mTab3Canvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mTab2Canvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mTab3Canvas, mw.SlateVisibility.Collapsed);
     }
     hideTab3Canvas() {
-        Utils$1.setWidgetVisibility(this.mTab3Canvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mTab3Canvas, mw.SlateVisibility.Collapsed);
     }
     showTab1Canvas() {
-        Utils$1.setWidgetVisibility(this.mTab1Canvas, mw.SlateVisibility.SelfHitTestInvisible);
+        Utils.setWidgetVisibility(this.mTab1Canvas, mw.SlateVisibility.SelfHitTestInvisible);
     }
     showTab2Canvas() {
-        Utils$1.setWidgetVisibility(this.mTab2Canvas, mw.SlateVisibility.SelfHitTestInvisible);
+        Utils.setWidgetVisibility(this.mTab2Canvas, mw.SlateVisibility.SelfHitTestInvisible);
     }
     showTab3Canvas() {
-        Utils$1.setWidgetVisibility(this.mTab3Canvas, mw.SlateVisibility.SelfHitTestInvisible);
+        Utils.setWidgetVisibility(this.mTab3Canvas, mw.SlateVisibility.SelfHitTestInvisible);
     }
     addSelectTab1Action(tab1Id) {
         if (this.tab1Id == tab1Id)
@@ -12714,7 +12788,7 @@ class MallPanel extends MallPanel_Generate$1 {
         if (this.tab1Ids.length >= this.mallTab1s.length) {
             for (let i = 0; i < this.mallTab1s.length; ++i) {
                 this.mallTab1s[i].initTab1(this.tab1Ids[i]);
-                Utils$1.setWidgetVisibility(this.mallTab1s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mallTab1s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
             }
             for (let i = this.mallTab1s.length; i < this.tab1Ids.length; ++i) {
                 let mallTab1 = UIService.create(MallTab1);
@@ -12725,11 +12799,11 @@ class MallPanel extends MallPanel_Generate$1 {
         }
         else {
             for (let i = 0; i < this.tab1Ids.length; ++i) {
-                Utils$1.setWidgetVisibility(this.mallTab1s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mallTab1s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mallTab1s[i].initTab1(this.tab1Ids[i]);
             }
             for (let i = this.tab1Ids.length; i < this.mallTab1s.length; ++i) {
-                Utils$1.setWidgetVisibility(this.mallTab1s[i].uiObject, mw.SlateVisibility.Collapsed);
+                Utils.setWidgetVisibility(this.mallTab1s[i].uiObject, mw.SlateVisibility.Collapsed);
             }
         }
     }
@@ -12737,7 +12811,7 @@ class MallPanel extends MallPanel_Generate$1 {
         if (this.tab2Ids.length >= this.mallTab2s.length) {
             for (let i = 0; i < this.mallTab2s.length; ++i) {
                 this.mallTab2s[i].initTab2(this.tab2Ids[i]);
-                Utils$1.setWidgetVisibility(this.mallTab2s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mallTab2s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
             }
             for (let i = this.mallTab2s.length; i < this.tab2Ids.length; ++i) {
                 let mallTab2 = UIService.create(MallTab2);
@@ -12748,11 +12822,11 @@ class MallPanel extends MallPanel_Generate$1 {
         }
         else {
             for (let i = 0; i < this.tab2Ids.length; ++i) {
-                Utils$1.setWidgetVisibility(this.mallTab2s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mallTab2s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mallTab2s[i].initTab2(this.tab2Ids[i]);
             }
             for (let i = this.tab2Ids.length; i < this.mallTab2s.length; ++i) {
-                Utils$1.setWidgetVisibility(this.mallTab2s[i].uiObject, mw.SlateVisibility.Collapsed);
+                Utils.setWidgetVisibility(this.mallTab2s[i].uiObject, mw.SlateVisibility.Collapsed);
             }
         }
     }
@@ -12760,7 +12834,7 @@ class MallPanel extends MallPanel_Generate$1 {
         if (this.tab3Ids.length >= this.mallTab3s.length) {
             for (let i = 0; i < this.mallTab3s.length; ++i) {
                 this.mallTab3s[i].initTab3(this.tab3Ids[i]);
-                Utils$1.setWidgetVisibility(this.mallTab3s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mallTab3s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
             }
             for (let i = this.mallTab3s.length; i < this.tab3Ids.length; ++i) {
                 let mallTab3 = UIService.create(MallTab3);
@@ -12771,11 +12845,11 @@ class MallPanel extends MallPanel_Generate$1 {
         }
         else {
             for (let i = 0; i < this.tab3Ids.length; ++i) {
-                Utils$1.setWidgetVisibility(this.mallTab3s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mallTab3s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
                 this.mallTab3s[i].initTab3(this.tab3Ids[i]);
             }
             for (let i = this.tab3Ids.length; i < this.mallTab3s.length; ++i) {
-                Utils$1.setWidgetVisibility(this.mallTab3s[i].uiObject, mw.SlateVisibility.Collapsed);
+                Utils.setWidgetVisibility(this.mallTab3s[i].uiObject, mw.SlateVisibility.Collapsed);
             }
         }
     }
@@ -12786,16 +12860,16 @@ class MallPanel extends MallPanel_Generate$1 {
         if (this.mallItem_Selfs.length > valueArr.length) {
             for (let i = 0; i < valueArr.length; ++i) {
                 this.mallItem_Selfs[i].initItem(valueArr[i][0], valueArr[i][1]);
-                Utils$1.setWidgetVisibility(this.mallItem_Selfs[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mallItem_Selfs[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
             }
             for (let i = valueArr.length; i < this.mallItem_Selfs.length; ++i) {
-                Utils$1.setWidgetVisibility(this.mallItem_Selfs[i].uiObject, mw.SlateVisibility.Collapsed);
+                Utils.setWidgetVisibility(this.mallItem_Selfs[i].uiObject, mw.SlateVisibility.Collapsed);
             }
         }
         else {
             for (let i = 0; i < this.mallItem_Selfs.length; ++i) {
                 this.mallItem_Selfs[i].initItem(valueArr[i][0], valueArr[i][1]);
-                Utils$1.setWidgetVisibility(this.mallItem_Selfs[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mallItem_Selfs[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
             }
             for (let i = this.mallItem_Selfs.length; i < valueArr.length; ++i) {
                 let mallItem_Self = UIService.create(MallItem_Self);
@@ -12816,8 +12890,8 @@ class MallPanel extends MallPanel_Generate$1 {
         TouchScript.instance.removeScreenListener(this.mTouchImage);
     }
     onOffLeftCanvas(isOpen) {
-        Utils$1.setWidgetVisibility(this.mLeftCanvas, isOpen ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
-        Utils$1.setWidgetVisibility(this.mSelfCanvas, isOpen ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mLeftCanvas, isOpen ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mSelfCanvas, isOpen ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
     }
     //#region Rotate-Camera
     initMallRot() {
@@ -12929,7 +13003,7 @@ class ColorPickPanel extends ColorPickPanel_Generate$1 {
         if (this.colorPickTab2Datas.length > this.colorPickTab2s.length) {
             for (let i = 0; i < this.colorPickTab2s.length; ++i) {
                 this.colorPickTab2s[i].initTab2(i, this.colorPickTab2Datas[i]);
-                Utils$1.setWidgetVisibility(this.colorPickTab2s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.colorPickTab2s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
             }
             for (let i = this.colorPickTab2s.length; i < this.colorPickTab2Datas.length; ++i) {
                 let colorPickTab2 = mw.UIService.create(ColorPickTab2);
@@ -12941,10 +13015,10 @@ class ColorPickPanel extends ColorPickPanel_Generate$1 {
         else {
             for (let i = 0; i < this.colorPickTab2Datas.length; ++i) {
                 this.colorPickTab2s[i].initTab2(i, this.colorPickTab2Datas[i]);
-                Utils$1.setWidgetVisibility(this.colorPickTab2s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.colorPickTab2s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
             }
             for (let i = this.colorPickTab2Datas.length; i < this.colorPickTab2s.length; ++i) {
-                Utils$1.setWidgetVisibility(this.colorPickTab2s[i].uiObject, mw.SlateVisibility.Collapsed);
+                Utils.setWidgetVisibility(this.colorPickTab2s[i].uiObject, mw.SlateVisibility.Collapsed);
             }
         }
         this.colorPickTab2s[this.currenrColorPickTab2Index].updateSelectState(true);
@@ -12959,7 +13033,7 @@ class ColorPickPanel extends ColorPickPanel_Generate$1 {
         if (this.colorPickTab3Colors.length > this.colorPickTab3s.length) {
             for (let i = 0; i < this.colorPickTab3s.length; ++i) {
                 this.colorPickTab3s[i].initColorPickTab3(i, this.colorPickTab3Colors[i]);
-                Utils$1.setWidgetVisibility(this.colorPickTab3s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.colorPickTab3s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
                 this.colorPickTab3Map.set(this.colorPickTab3Colors[i], this.colorPickTab3s[i]);
             }
             for (let i = this.colorPickTab3s.length; i < this.colorPickTab3Colors.length; ++i) {
@@ -12973,11 +13047,11 @@ class ColorPickPanel extends ColorPickPanel_Generate$1 {
         else {
             for (let i = 0; i < this.colorPickTab3Colors.length; ++i) {
                 this.colorPickTab3s[i].initColorPickTab3(i, this.colorPickTab3Colors[i]);
-                Utils$1.setWidgetVisibility(this.colorPickTab3s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.colorPickTab3s[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
                 this.colorPickTab3Map.set(this.colorPickTab3Colors[i], this.colorPickTab3s[i]);
             }
             for (let i = this.colorPickTab3Colors.length; i < this.colorPickTab3s.length; ++i) {
-                Utils$1.setWidgetVisibility(this.colorPickTab3s[i].uiObject, mw.SlateVisibility.Collapsed);
+                Utils.setWidgetVisibility(this.colorPickTab3s[i].uiObject, mw.SlateVisibility.Collapsed);
             }
         }
         this.checkColorPickTab3();
@@ -12987,7 +13061,7 @@ class ColorPickPanel extends ColorPickPanel_Generate$1 {
             return;
         let colorKey = this.colorPickTab2Datas[this.currenrColorPickTab2Index].color;
         for (let key of this.colorPickTab3Map.keys()) {
-            if (Utils$1.isEqulaLinearColor(Utils$1.colorHexToLinearColorToString(key), colorKey)) {
+            if (Utils.isEqulaLinearColor(Utils.colorHexToLinearColorToString(key), colorKey)) {
                 this.colorPickTab3Map.get(key).updateSelectState(true);
                 break;
             }
@@ -13004,7 +13078,7 @@ class ColorPickPanel extends ColorPickPanel_Generate$1 {
         if (!color)
             return;
         this.colorPickTab3Map.forEach((value, key) => {
-            value.updateSelectState(Utils$1.isEqulaLinearColor(Utils$1.colorHexToLinearColorToString(key), color));
+            value.updateSelectState(Utils.isEqulaLinearColor(Utils.colorHexToLinearColorToString(key), color));
         });
         this.isLockColorPick = true;
         this.mColorPick.color = color;
@@ -13043,7 +13117,7 @@ var foreign106 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/MallTipsPanel.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.35
  */
 let MallTipsPanel_Generate = class MallTipsPanel_Generate extends UIScript {
     get mMainImage() {
@@ -13136,7 +13210,7 @@ MallTipsPanel_Generate = __decorate([
 ], MallTipsPanel_Generate);
 var MallTipsPanel_Generate$1 = MallTipsPanel_Generate;
 
-var foreign188 = /*#__PURE__*/Object.freeze({
+var foreign189 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MallTipsPanel_Generate$1
 });
@@ -13468,12 +13542,12 @@ class MallModuleC extends ModuleC {
                 this.localPlayer.character.description.advance.makeup.skinTone.skinColor = mw.LinearColor.colorHexToLinearColor(assetId);
                 break;
             case Tab2Type.Tab2_Face:
-                await Utils$1.asyncDownloadAsset(assetId);
+                await Utils.asyncDownloadAsset(assetId);
                 this.localPlayer.character.description.advance.headFeatures.head.style = assetId;
                 break;
             case Tab2Type.Tab2_Eyebrows:
                 if (this.localPlayer.character.description.advance.makeup.eyebrows.eyebrowStyle != assetId) {
-                    await Utils$1.asyncDownloadAsset(assetId);
+                    await Utils.asyncDownloadAsset(assetId);
                     this.localPlayer.character.description.advance.makeup.eyebrows.eyebrowStyle = assetId;
                 }
                 else {
@@ -13485,7 +13559,7 @@ class MallModuleC extends ModuleC {
                     else {
                         eyebrowStyle = `77763`;
                     }
-                    await Utils$1.asyncDownloadAsset(eyebrowStyle);
+                    await Utils.asyncDownloadAsset(eyebrowStyle);
                     this.localPlayer.character.description.advance.makeup.eyebrows.eyebrowStyle = eyebrowStyle;
                 }
                 break;
@@ -13592,11 +13666,11 @@ class MallModuleC extends ModuleC {
                 let petElement = GameConfig.Pet.getElement(assetId);
                 if (!petElement)
                     return;
-                await this.changeSlotAndDecoration(tabId, petElement.AssetId, Utils$1.stringArrayToTransform(petElement.Transform), mw.HumanoidSlotType.Root);
+                await this.changeSlotAndDecoration(tabId, petElement.AssetId, Utils.stringArrayToTransform(petElement.Transform), mw.HumanoidSlotType.Root);
                 break;
             case Tab3Type.Tab3_PupilStyle:
                 if (this.localPlayer.character.description.advance.makeup.coloredContacts.style.pupilStyle != assetId) {
-                    await Utils$1.asyncDownloadAsset(assetId);
+                    await Utils.asyncDownloadAsset(assetId);
                     this.localPlayer.character.description.advance.makeup.coloredContacts.style.pupilStyle = assetId;
                 }
                 else {
@@ -13608,23 +13682,23 @@ class MallModuleC extends ModuleC {
                     else {
                         pupilStyle = `47968`;
                     }
-                    await Utils$1.asyncDownloadAsset(pupilStyle);
+                    await Utils.asyncDownloadAsset(pupilStyle);
                     this.localPlayer.character.description.advance.makeup.coloredContacts.style.pupilStyle = pupilStyle;
                 }
                 break;
             case Tab3Type.Tab3_Lens:
                 if (this.localPlayer.character.description.advance.makeup.coloredContacts.decal.pupilStyle != assetId) {
-                    await Utils$1.asyncDownloadAsset(assetId);
+                    await Utils.asyncDownloadAsset(assetId);
                     this.localPlayer.character.description.advance.makeup.coloredContacts.decal.pupilStyle = assetId;
                 }
                 else {
-                    await Utils$1.asyncDownloadAsset(`32115`);
+                    await Utils.asyncDownloadAsset(`32115`);
                     this.localPlayer.character.description.advance.makeup.coloredContacts.decal.pupilStyle = `32115`;
                 }
                 break;
             case Tab3Type.Tab3_UpperHighlight:
                 if (this.localPlayer.character.description.advance.makeup.coloredContacts.highlight.upperHighlightStyle != assetId) {
-                    await Utils$1.asyncDownloadAsset(assetId);
+                    await Utils.asyncDownloadAsset(assetId);
                     this.localPlayer.character.description.advance.makeup.coloredContacts.highlight.upperHighlightStyle = assetId;
                 }
                 else {
@@ -13636,13 +13710,13 @@ class MallModuleC extends ModuleC {
                     else {
                         upperHighlightStyle = `32112`;
                     }
-                    await Utils$1.asyncDownloadAsset(upperHighlightStyle);
+                    await Utils.asyncDownloadAsset(upperHighlightStyle);
                     this.localPlayer.character.description.advance.makeup.coloredContacts.highlight.upperHighlightStyle = upperHighlightStyle;
                 }
                 break;
             case Tab3Type.Tab3_LowerHighlight:
                 if (this.localPlayer.character.description.advance.makeup.coloredContacts.highlight.lowerHighlightStyle != assetId) {
-                    await Utils$1.asyncDownloadAsset(assetId);
+                    await Utils.asyncDownloadAsset(assetId);
                     this.localPlayer.character.description.advance.makeup.coloredContacts.highlight.lowerHighlightStyle = assetId;
                 }
                 else {
@@ -13654,13 +13728,13 @@ class MallModuleC extends ModuleC {
                     else {
                         lowerHighlightStyle = `32098`;
                     }
-                    await Utils$1.asyncDownloadAsset(lowerHighlightStyle);
+                    await Utils.asyncDownloadAsset(lowerHighlightStyle);
                     this.localPlayer.character.description.advance.makeup.coloredContacts.highlight.lowerHighlightStyle = lowerHighlightStyle;
                 }
                 break;
             case Tab3Type.Tab3_Eyelashes:
                 if (this.localPlayer.character.description.advance.makeup.eyelashes.eyelashStyle != assetId) {
-                    await Utils$1.asyncDownloadAsset(assetId);
+                    await Utils.asyncDownloadAsset(assetId);
                     this.localPlayer.character.description.advance.makeup.eyelashes.eyelashStyle = assetId;
                 }
                 else {
@@ -13672,37 +13746,37 @@ class MallModuleC extends ModuleC {
                     else {
                         eyelashStyle = `48062`;
                     }
-                    await Utils$1.asyncDownloadAsset(eyelashStyle);
+                    await Utils.asyncDownloadAsset(eyelashStyle);
                     this.localPlayer.character.description.advance.makeup.eyelashes.eyelashStyle = eyelashStyle;
                 }
                 break;
             case Tab3Type.Tab3_Eyeshadow:
                 if (this.localPlayer.character.description.advance.makeup.eyeShadow.eyeshadowStyle != assetId) {
-                    await Utils$1.asyncDownloadAsset(assetId);
+                    await Utils.asyncDownloadAsset(assetId);
                     this.localPlayer.character.description.advance.makeup.eyeShadow.eyeshadowStyle = assetId;
                 }
                 else {
-                    await Utils$1.asyncDownloadAsset(`32115`);
+                    await Utils.asyncDownloadAsset(`32115`);
                     this.localPlayer.character.description.advance.makeup.eyeShadow.eyeshadowStyle = `32115`;
                 }
                 break;
             case Tab3Type.Tab3_Blush:
                 if (this.localPlayer.character.description.advance.makeup.blush.blushStyle != assetId) {
-                    await Utils$1.asyncDownloadAsset(assetId);
+                    await Utils.asyncDownloadAsset(assetId);
                     this.localPlayer.character.description.advance.makeup.blush.blushStyle = assetId;
                 }
                 else {
-                    await Utils$1.asyncDownloadAsset(`32115`);
+                    await Utils.asyncDownloadAsset(`32115`);
                     this.localPlayer.character.description.advance.makeup.blush.blushStyle = `32115`;
                 }
                 break;
             case Tab3Type.Tab3_LipMakeup:
                 if (this.localPlayer.character.description.advance.makeup.lipstick.lipstickStyle != assetId) {
-                    await Utils$1.asyncDownloadAsset(assetId);
+                    await Utils.asyncDownloadAsset(assetId);
                     this.localPlayer.character.description.advance.makeup.lipstick.lipstickStyle = assetId;
                 }
                 else {
-                    await Utils$1.asyncDownloadAsset(`32115`);
+                    await Utils.asyncDownloadAsset(`32115`);
                     this.localPlayer.character.description.advance.makeup.lipstick.lipstickStyle = `32115`;
                 }
                 break;
@@ -13711,7 +13785,7 @@ class MallModuleC extends ModuleC {
                 break;
             case Tab3Type.Tab3_FullHair:
                 if (this.localPlayer.character.description.advance.hair.backHair.style != assetId) {
-                    await Utils$1.asyncDownloadAsset(assetId);
+                    await Utils.asyncDownloadAsset(assetId);
                     this.localPlayer.character.description.advance.hair.backHair.style = assetId;
                     this.localPlayer.character.description.advance.hair.frontHair.style = ``;
                 }
@@ -13727,14 +13801,14 @@ class MallModuleC extends ModuleC {
                         frontHair = `343471`;
                         backHair = `343476`;
                     }
-                    await Utils$1.asyncDownloadAssets([frontHair, backHair]);
+                    await Utils.asyncDownloadAssets([frontHair, backHair]);
                     this.localPlayer.character.description.advance.hair.frontHair.style = frontHair;
                     this.localPlayer.character.description.advance.hair.backHair.style = backHair;
                 }
                 break;
             case Tab3Type.Tab3_FrontHair:
                 if (this.localPlayer.character.description.advance.hair.frontHair.style != assetId) {
-                    await Utils$1.asyncDownloadAsset(assetId);
+                    await Utils.asyncDownloadAsset(assetId);
                     this.localPlayer.character.description.advance.hair.frontHair.style = assetId;
                 }
                 else {
@@ -13746,7 +13820,7 @@ class MallModuleC extends ModuleC {
                     else {
                         frontHair = `343471`;
                     }
-                    await Utils$1.asyncDownloadAsset(frontHair);
+                    await Utils.asyncDownloadAsset(frontHair);
                     this.localPlayer.character.description.advance.hair.frontHair.style = frontHair;
                 }
                 let backHair = this.localPlayer.character.description.advance.hair.backHair.style;
@@ -13760,7 +13834,7 @@ class MallModuleC extends ModuleC {
                     else {
                         backHair = `343476`;
                     }
-                    await Utils$1.asyncDownloadAsset(backHair);
+                    await Utils.asyncDownloadAsset(backHair);
                     this.localPlayer.character.description.advance.hair.backHair.style = backHair;
                 }
                 break;
@@ -13777,10 +13851,10 @@ class MallModuleC extends ModuleC {
                         else {
                             frontHair = `343471`;
                         }
-                        await Utils$1.asyncDownloadAsset(frontHair);
+                        await Utils.asyncDownloadAsset(frontHair);
                         this.localPlayer.character.description.advance.hair.frontHair.style = frontHair;
                     }
-                    await Utils$1.asyncDownloadAsset(assetId);
+                    await Utils.asyncDownloadAsset(assetId);
                     this.localPlayer.character.description.advance.hair.backHair.style = assetId;
                 }
                 else {
@@ -13792,7 +13866,7 @@ class MallModuleC extends ModuleC {
                     else {
                         backHair = `343476`;
                     }
-                    await Utils$1.asyncDownloadAsset(backHair);
+                    await Utils.asyncDownloadAsset(backHair);
                     this.localPlayer.character.description.advance.hair.backHair.style = backHair;
                 }
                 break;
@@ -13800,55 +13874,55 @@ class MallModuleC extends ModuleC {
                 let leftHandElement = GameConfig.LeftHand.getElement(assetId);
                 if (!leftHandElement)
                     return;
-                await this.changeSlotAndDecoration(tabId, leftHandElement.AssetId, Utils$1.stringArrayToTransform(leftHandElement.Transform), mw.HumanoidSlotType.LeftHand);
+                await this.changeSlotAndDecoration(tabId, leftHandElement.AssetId, Utils.stringArrayToTransform(leftHandElement.Transform), mw.HumanoidSlotType.LeftHand);
                 break;
             case Tab3Type.Tab3_RightHand:
                 let rightHandElement = GameConfig.RightHand.getElement(assetId);
                 if (!rightHandElement)
                     return;
-                await this.changeSlotAndDecoration(tabId, rightHandElement.AssetId, Utils$1.stringArrayToTransform(rightHandElement.Transform), mw.HumanoidSlotType.RightHand);
+                await this.changeSlotAndDecoration(tabId, rightHandElement.AssetId, Utils.stringArrayToTransform(rightHandElement.Transform), mw.HumanoidSlotType.RightHand);
                 break;
             case Tab3Type.Tab3_Back:
                 let backElement = GameConfig.Back.getElement(assetId);
                 if (!backElement)
                     return;
-                await this.changeSlotAndDecoration(tabId, backElement.AssetId, Utils$1.stringArrayToTransform(backElement.Transform), mw.HumanoidSlotType.BackOrnamental);
+                await this.changeSlotAndDecoration(tabId, backElement.AssetId, Utils.stringArrayToTransform(backElement.Transform), mw.HumanoidSlotType.BackOrnamental);
                 break;
             case Tab3Type.Tab3_Ear:
                 let earElement = GameConfig.Ear.getElement(assetId);
                 if (!earElement)
                     return;
-                await this.changeSlotAndDecoration(tabId, earElement.AssetId, Utils$1.stringArrayToTransform(earElement.Transform), mw.HumanoidSlotType.Head);
+                await this.changeSlotAndDecoration(tabId, earElement.AssetId, Utils.stringArrayToTransform(earElement.Transform), mw.HumanoidSlotType.Head);
                 break;
             case Tab3Type.Tab3_Face:
                 let facingElement = GameConfig.Facing.getElement(assetId);
                 if (!facingElement)
                     return;
-                await this.changeSlotAndDecoration(tabId, facingElement.AssetId, Utils$1.stringArrayToTransform(facingElement.Transform), mw.HumanoidSlotType.FaceOrnamental);
+                await this.changeSlotAndDecoration(tabId, facingElement.AssetId, Utils.stringArrayToTransform(facingElement.Transform), mw.HumanoidSlotType.FaceOrnamental);
                 break;
             case Tab3Type.Tab3_Hip:
                 let hipElement = GameConfig.Hip.getElement(assetId);
                 if (!hipElement)
                     return;
-                await this.changeSlotAndDecoration(tabId, hipElement.AssetId, Utils$1.stringArrayToTransform(hipElement.Transform), mw.HumanoidSlotType.Buttocks);
+                await this.changeSlotAndDecoration(tabId, hipElement.AssetId, Utils.stringArrayToTransform(hipElement.Transform), mw.HumanoidSlotType.Buttocks);
                 break;
             case Tab3Type.Tab3_Shoulder:
                 let shoulderElement = GameConfig.Shoulder.getElement(assetId);
                 if (!shoulderElement)
                     return;
-                await this.changeSlotAndDecoration(tabId, shoulderElement.AssetId, Utils$1.stringArrayToTransform(shoulderElement.Transform), mw.HumanoidSlotType.Rings);
+                await this.changeSlotAndDecoration(tabId, shoulderElement.AssetId, Utils.stringArrayToTransform(shoulderElement.Transform), mw.HumanoidSlotType.Rings);
                 break;
             case Tab3Type.Tab3_Effects:
                 let effectsElement = GameConfig.Effects.getElement(assetId);
                 if (!effectsElement)
                     return;
-                await this.changeSlotAndDecoration(tabId, effectsElement.AssetId, Utils$1.stringArrayToTransform(effectsElement.Transform), mw.HumanoidSlotType.Root);
+                await this.changeSlotAndDecoration(tabId, effectsElement.AssetId, Utils.stringArrayToTransform(effectsElement.Transform), mw.HumanoidSlotType.Root);
                 break;
             case Tab3Type.Tab3_Trailing:
                 let trailingElement = GameConfig.Trailings.getElement(assetId);
                 if (!trailingElement)
                     return;
-                await this.changeSlotAndDecoration(tabId, trailingElement.AssetId, Utils$1.stringArrayToTransform(trailingElement.Transform), mw.HumanoidSlotType.Root);
+                await this.changeSlotAndDecoration(tabId, trailingElement.AssetId, Utils.stringArrayToTransform(trailingElement.Transform), mw.HumanoidSlotType.Root);
                 break;
         }
         await this.localPlayer.character.asyncReady();
@@ -13857,7 +13931,7 @@ class MallModuleC extends ModuleC {
     }
     async changeTop(assetId) {
         if (this.localPlayer.character.description.advance.clothing.upperCloth.style != assetId) {
-            await Utils$1.asyncDownloadAsset(assetId);
+            await Utils.asyncDownloadAsset(assetId);
             this.localPlayer.character.description.advance.clothing.upperCloth.style = assetId;
         }
         else {
@@ -13869,13 +13943,13 @@ class MallModuleC extends ModuleC {
             else {
                 upperClothStyle = `343474`;
             }
-            await Utils$1.asyncDownloadAsset(upperClothStyle);
+            await Utils.asyncDownloadAsset(upperClothStyle);
             this.localPlayer.character.description.advance.clothing.upperCloth.style = upperClothStyle;
         }
     }
     async changeBottom(assetId) {
         if (this.localPlayer.character.description.advance.clothing.lowerCloth.style != assetId) {
-            await Utils$1.asyncDownloadAsset(assetId);
+            await Utils.asyncDownloadAsset(assetId);
             this.localPlayer.character.description.advance.clothing.lowerCloth.style = assetId;
         }
         else {
@@ -13887,13 +13961,13 @@ class MallModuleC extends ModuleC {
             else {
                 lowerClothStyle = `343467`;
             }
-            await Utils$1.asyncDownloadAsset(lowerClothStyle);
+            await Utils.asyncDownloadAsset(lowerClothStyle);
             this.localPlayer.character.description.advance.clothing.lowerCloth.style = lowerClothStyle;
         }
     }
     async changeShoes(assetId) {
         if (this.localPlayer.character.description.advance.clothing.shoes.style != assetId) {
-            await Utils$1.asyncDownloadAsset(assetId);
+            await Utils.asyncDownloadAsset(assetId);
             this.localPlayer.character.description.advance.clothing.shoes.style = assetId;
         }
         else {
@@ -13905,13 +13979,13 @@ class MallModuleC extends ModuleC {
             else {
                 shoesStyle = `343475`;
             }
-            await Utils$1.asyncDownloadAsset(shoesStyle);
+            await Utils.asyncDownloadAsset(shoesStyle);
             this.localPlayer.character.description.advance.clothing.shoes.style = shoesStyle;
         }
     }
     async changeGloves(assetId) {
         if (this.localPlayer.character.description.advance.clothing.gloves.style != assetId) {
-            await Utils$1.asyncDownloadAsset(assetId);
+            await Utils.asyncDownloadAsset(assetId);
             this.localPlayer.character.description.advance.clothing.gloves.style = assetId;
         }
         else {
@@ -13923,18 +13997,18 @@ class MallModuleC extends ModuleC {
             else {
                 glovesStyle = `343466`;
             }
-            await Utils$1.asyncDownloadAsset(glovesStyle);
+            await Utils.asyncDownloadAsset(glovesStyle);
             this.localPlayer.character.description.advance.clothing.gloves.style = glovesStyle;
         }
     }
     async changeOutfit(assetId) {
-        await Utils$1.asyncDownloadAsset(assetId);
+        await Utils.asyncDownloadAsset(assetId);
         await this.changeOutfitTransition(assetId);
     }
     async changeOutfit_abandon(configId) {
         let outfitElement = GameConfig.Outfit.getElement(configId);
         let currentSomatotype = this.localPlayer.character.description.advance.base.characterSetting.somatotype;
-        await Utils$1.asyncDownloadAsset(outfitElement.AssetId);
+        await Utils.asyncDownloadAsset(outfitElement.AssetId);
         if (currentSomatotype == outfitElement.SexType) {
             await this.changeOutfitTransition(outfitElement.AssetId);
             // if (outfitElement.IsTransition > 0) {
@@ -13988,7 +14062,7 @@ class MallModuleC extends ModuleC {
             this.decorationIndexMap.delete(tagId);
             return;
         }
-        await Utils$1.asyncDownloadAsset(assetId);
+        await Utils.asyncDownloadAsset(assetId);
         let model = await GameObject.asyncSpawn(assetId);
         if (!model)
             return;
@@ -14330,7 +14404,7 @@ class MallModuleC extends ModuleC {
     }
     addResetAction() {
         ExecutorManager.instance.pushAsyncExecutor(async () => {
-            let isSuccess = await Utils$1.accountServiceDownloadData(this.localPlayer.character);
+            let isSuccess = await Utils.accountServiceDownloadData(this.localPlayer.character);
             if (!isSuccess) {
                 Notice.showDownNotice(GameConfig.Language.Text_ResetImageFaild.Value);
                 return;
@@ -15041,11 +15115,11 @@ class MorphModuleS extends ModuleS {
     }
     // private i: number = 1;
     async spawnGo(player) {
-        let randomId = Utils$1.randomInt(1, GameConfig.Morph.getAllElement().length);
+        let randomId = Utils.randomInt(1, GameConfig.Morph.getAllElement().length);
         // console.error(`randomId:${randomId}`);
         // let morphElement = GameConfig.Morph.getElement(this.i++);
         let morphElement = GameConfig.Morph.getElement(randomId);
-        await Utils$1.asyncDownloadAsset(morphElement.AssetId);
+        await Utils.asyncDownloadAsset(morphElement.AssetId);
         let tmpGo = await GameObjPool.asyncSpawn(morphElement.AssetId);
         await tmpGo.asyncReady();
         tmpGo.setCollision(mw.PropertyStatus.Off);
@@ -15272,7 +15346,7 @@ var foreign129 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/RankPanel.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.34
  */
 let RankPanel_Generate = class RankPanel_Generate extends UIScript {
     get mRoomCanvas() {
@@ -15400,7 +15474,7 @@ RankPanel_Generate = __decorate([
 ], RankPanel_Generate);
 var RankPanel_Generate$1 = RankPanel_Generate;
 
-var foreign190 = /*#__PURE__*/Object.freeze({
+var foreign191 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankPanel_Generate$1
 });
@@ -15410,7 +15484,7 @@ var foreign190 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/RoomItem.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.34
  */
 let RoomItem_Generate = class RoomItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -15477,7 +15551,7 @@ RoomItem_Generate = __decorate([
 ], RoomItem_Generate);
 var RoomItem_Generate$1 = RoomItem_Generate;
 
-var foreign191 = /*#__PURE__*/Object.freeze({
+var foreign192 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RoomItem_Generate$1
 });
@@ -15514,7 +15588,7 @@ var foreign133 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/WorldItem.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.34
  */
 let WorldItem_Generate = class WorldItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -15581,7 +15655,7 @@ WorldItem_Generate = __decorate([
 ], WorldItem_Generate);
 var WorldItem_Generate$1 = WorldItem_Generate;
 
-var foreign192 = /*#__PURE__*/Object.freeze({
+var foreign193 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldItem_Generate$1
 });
@@ -15663,7 +15737,7 @@ class RankPanel extends RankPanel_Generate$1 {
         if (redRoomDatas.length > this.redRoomItems.length) {
             for (let i = 0; i < this.redRoomItems.length; ++i) {
                 this.redRoomItems[i].setData(i + 1, redRoomDatas[i], isRedTeam && (i == curRoomIndex));
-                Utils$1.setWidgetVisibility(this.redRoomItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.redRoomItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
             }
             for (let i = this.redRoomItems.length; i < redRoomDatas.length; ++i) {
                 let redItem = UIService.create(RoomItem);
@@ -15675,16 +15749,16 @@ class RankPanel extends RankPanel_Generate$1 {
         else {
             for (let i = 0; i < redRoomDatas.length; ++i) {
                 this.redRoomItems[i].setData(i + 1, redRoomDatas[i], isRedTeam && (i == curRoomIndex));
-                Utils$1.setWidgetVisibility(this.redRoomItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.redRoomItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
             }
             for (let i = redRoomDatas.length; i < this.redRoomItems.length; ++i) {
-                Utils$1.setWidgetVisibility(this.redRoomItems[i].uiObject, mw.SlateVisibility.Collapsed);
+                Utils.setWidgetVisibility(this.redRoomItems[i].uiObject, mw.SlateVisibility.Collapsed);
             }
         }
         if (blueRoomDatas.length > this.blueRoomItems.length) {
             for (let i = 0; i < this.blueRoomItems.length; ++i) {
                 this.blueRoomItems[i].setData(i + 1, blueRoomDatas[i], !isRedTeam && (i == curRoomIndex));
-                Utils$1.setWidgetVisibility(this.blueRoomItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.blueRoomItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
             }
             for (let i = this.blueRoomItems.length; i < blueRoomDatas.length; ++i) {
                 let blueItem = UIService.create(RoomItem);
@@ -15696,10 +15770,10 @@ class RankPanel extends RankPanel_Generate$1 {
         else {
             for (let i = 0; i < blueRoomDatas.length; ++i) {
                 this.blueRoomItems[i].setData(i + 1, blueRoomDatas[i], !isRedTeam && (i == curRoomIndex));
-                Utils$1.setWidgetVisibility(this.blueRoomItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.blueRoomItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
             }
             for (let i = blueRoomDatas.length; i < this.blueRoomItems.length; ++i) {
-                Utils$1.setWidgetVisibility(this.blueRoomItems[i].uiObject, mw.SlateVisibility.Collapsed);
+                Utils.setWidgetVisibility(this.blueRoomItems[i].uiObject, mw.SlateVisibility.Collapsed);
             }
         }
     }
@@ -15707,7 +15781,7 @@ class RankPanel extends RankPanel_Generate$1 {
         if (worldDatas.length > this.worldItems.length) {
             for (let i = 0; i < this.worldItems.length; ++i) {
                 this.worldItems[i].setData(i + 1, worldDatas[i], i == curWorldIndex);
-                Utils$1.setWidgetVisibility(this.worldItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.worldItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
             }
             for (let i = this.worldItems.length; i < worldDatas.length; ++i) {
                 let worldItem = UIService.create(WorldItem);
@@ -15719,29 +15793,29 @@ class RankPanel extends RankPanel_Generate$1 {
         else {
             for (let i = 0; i < worldDatas.length; ++i) {
                 this.worldItems[i].setData(i + 1, worldDatas[i], i == curWorldIndex);
-                Utils$1.setWidgetVisibility(this.worldItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.worldItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
             }
             for (let i = worldDatas.length; i < this.worldItems.length; ++i) {
-                Utils$1.setWidgetVisibility(this.worldItems[i].uiObject, mw.SlateVisibility.Collapsed);
+                Utils.setWidgetVisibility(this.worldItems[i].uiObject, mw.SlateVisibility.Collapsed);
             }
         }
     }
     switchRankType(isRoom) {
-        Utils$1.setWidgetVisibility(this.mRoomCanvas, isRoom ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
-        Utils$1.setWidgetVisibility(this.mWorldCanvas, isRoom ? mw.SlateVisibility.Collapsed : mw.SlateVisibility.SelfHitTestInvisible);
-        Utils$1.setButtonEnable(this.mRoomButton, !isRoom);
-        Utils$1.setButtonEnable(this.mWorldButton, isRoom);
-        Utils$1.setWidgetVisibility(this.mRoomSignImage, isRoom ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
-        Utils$1.setWidgetVisibility(this.mWorldSignImage, isRoom ? mw.SlateVisibility.Collapsed : mw.SlateVisibility.SelfHitTestInvisible);
+        Utils.setWidgetVisibility(this.mRoomCanvas, isRoom ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mWorldCanvas, isRoom ? mw.SlateVisibility.Collapsed : mw.SlateVisibility.SelfHitTestInvisible);
+        Utils.setButtonEnable(this.mRoomButton, !isRoom);
+        Utils.setButtonEnable(this.mWorldButton, isRoom);
+        Utils.setWidgetVisibility(this.mRoomSignImage, isRoom ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mWorldSignImage, isRoom ? mw.SlateVisibility.Collapsed : mw.SlateVisibility.SelfHitTestInvisible);
     }
     onShow(...params) {
-        Utils$1.openUITween(this.rootCanvas, null, null);
+        Utils.openUITween(this.rootCanvas, null, null);
     }
     /**
      * 隐藏缓动
      */
     hideTween() {
-        Utils$1.closeUITween(this.rootCanvas, null, () => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
         });
     }
@@ -16073,7 +16147,7 @@ var foreign144 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TeamModule/TeamPanel.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.34
  */
 let TeamPanel_Generate = class TeamPanel_Generate extends UIScript {
     get mMainCanvas() {
@@ -16164,7 +16238,7 @@ TeamPanel_Generate = __decorate([
 ], TeamPanel_Generate);
 var TeamPanel_Generate$1 = TeamPanel_Generate;
 
-var foreign199 = /*#__PURE__*/Object.freeze({
+var foreign200 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamPanel_Generate$1
 });
@@ -16174,7 +16248,7 @@ var foreign199 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TeamModule/TeamItem.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.34
  */
 let TeamItem_Generate = class TeamItem_Generate extends UIScript {
     get mBgImage() {
@@ -16226,7 +16300,7 @@ TeamItem_Generate = __decorate([
 ], TeamItem_Generate);
 var TeamItem_Generate$1 = TeamItem_Generate;
 
-var foreign198 = /*#__PURE__*/Object.freeze({
+var foreign199 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TeamItem_Generate$1
 });
@@ -16345,7 +16419,7 @@ class TeamPanel extends TeamPanel_Generate$1 {
         }
     }
     onShow(...params) {
-        Utils$1.openUITween(this.rootCanvas, () => {
+        Utils.openUITween(this.rootCanvas, () => {
             // this.hudPanel.hide();
         }, null);
     }
@@ -16353,7 +16427,7 @@ class TeamPanel extends TeamPanel_Generate$1 {
      * 隐藏缓动
      */
     hideTween() {
-        Utils$1.closeUITween(this.rootCanvas, null, () => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
         });
     }
@@ -16487,7 +16561,7 @@ class TeamModuleC extends ModuleC {
     setAllPlayerOutline() {
         let localPlayerUserId = this.localPlayer.userId;
         Player.getAllPlayers().forEach((player) => {
-            Utils$1.setOutLine(player, this.isTeamMate(localPlayerUserId, player.userId));
+            Utils.setOutLine(player, this.isTeamMate(localPlayerUserId, player.userId));
         });
     }
 }
@@ -16544,7 +16618,7 @@ class PlayerModuleC extends ModuleC {
                 Notice.showDownNotice("60秒内不可重置位置");
                 return;
             }
-            let revivalPoint = Utils$1.randomRevivalPoint(this.getTeamModuleC.isRedTeam(this.localPlayer.userId));
+            let revivalPoint = Utils.randomRevivalPoint(this.getTeamModuleC.isRedTeam(this.localPlayer.userId));
             this.localPlayer.character.worldTransform.position = revivalPoint;
             this.isCanResetPos = false;
             TimeUtil.delaySecond(60).then(() => { this.isCanResetPos = true; });
@@ -16557,7 +16631,7 @@ class PlayerModuleC extends ModuleC {
         this.getHUDModuleC.updateHpUI(curHp);
     }
     net_flyText(damage, hitPoint) {
-        let fontColor = Utils$1.randomColor();
+        let fontColor = Utils.randomColor();
         FlyText.instance.showFlyText("-" + damage, hitPoint, fontColor[0], fontColor[1]);
     }
     net_killTip(killerUserId, killerName, killedUserId, killedName) {
@@ -16567,7 +16641,7 @@ class PlayerModuleC extends ModuleC {
         let maxHp = await this.server.net_addMaxHp();
         this.getHUDModuleC.updateHpUI(maxHp, true);
         GlobalData.maxHp = maxHp;
-        Utils$1.playBirthSound(this.localPlayer);
+        Utils.playBirthSound(this.localPlayer);
     }
 }
 
@@ -16740,7 +16814,7 @@ var PrefabEvent;
                     resolve(res.value);
                     return;
                 }
-                Utils$1.asyncRpcGetData(dataKey).then((v) => {
+                Utils.asyncRpcGetData(dataKey).then((v) => {
                     let res = null;
                     let db = v;
                     if (!db) {
@@ -17626,7 +17700,7 @@ class TaskData extends Subdata {
         this.dailyTasks = {};
         this.weeklyTasks = {};
         this.lastDayNow = Date.now();
-        this.lastWeekNow = Number(Utils$1.getWhatDay());
+        this.lastWeekNow = Number(Utils.getWhatDay());
     }
     saveDailyTask(taskId, vipTaskType, progress) {
         let dailyTask = null;
@@ -17740,7 +17814,7 @@ class TaskModuleS extends ModuleS {
         if (!this.playerTaskMap.has(playerID))
             return;
         this.playerTaskMap.delete(playerID);
-        DataCenterS.getData(player, TaskData).saveLastDayNow(Date.now(), Number(Utils$1.getWhatDay()));
+        DataCenterS.getData(player, TaskData).saveLastDayNow(Date.now(), Number(Utils.getWhatDay()));
     }
     onUpdate(dt) {
         // this.checkResetTask_onLine(dt);
@@ -17755,8 +17829,8 @@ class TaskModuleS extends ModuleS {
             return;
         }
         this.taskCheckTimer = 0;
-        let currentTime = Utils$1.getCurrentTime();
-        if (Utils$1.getWhatDay() == "1" && currentTime == GlobalData.weeklyRefreshTime) {
+        let currentTime = Utils.getCurrentTime();
+        if (Utils.getWhatDay() == "1" && currentTime == GlobalData.weeklyRefreshTime) {
             this.resetAllPlayersWeeklyTask();
         }
         if (currentTime == GlobalData.dailyRefreshTime) {
@@ -17858,9 +17932,9 @@ class TaskModuleS extends ModuleS {
         else {
             //不超过一周
             //判断两个时间戳是否在同一周
-            let latWhatDay = Utils$1.getLastDay(lastDay);
-            let currentWhatDay = Utils$1.getWhatDay();
-            if (Utils$1.iSameWeek(lastDayNow, currentDayNow)) {
+            let latWhatDay = Utils.getLastDay(lastDay);
+            let currentWhatDay = Utils.getWhatDay();
+            if (Utils.iSameWeek(lastDayNow, currentDayNow)) {
                 //同一周
                 if (latWhatDay == "1" && lastSecondss < weeklyRefreshTime * 3600) {
                     if ((currentWhatDay == "1" && currentSecondss >= weeklyRefreshTime * 3600) || currentWhatDay != "1") {
@@ -18147,7 +18221,7 @@ class PlayerModuleS extends ModuleS {
         }
         else {
             names.push(this.getRankModuleS.getNameByUserId(userId1));
-            names.push(Utils$1.randomNpcName());
+            names.push(Utils.randomNpcName());
         }
         if (names && names.length == 2)
             this.getAllClient().net_killTip(userId1, names[0], userId2, names[1]);
@@ -18175,9 +18249,9 @@ class PlayerModuleS extends ModuleS {
     playerBirth(player, maxHp) {
         this.getClient(player).net_updateHp(maxHp);
         let userId = player.userId;
-        let revivalPoint = Utils$1.randomRevivalPoint(this.getTeamModuleS.isRedTeam(userId));
+        let revivalPoint = Utils.randomRevivalPoint(this.getTeamModuleS.isRedTeam(userId));
         player.character.worldTransform.position = revivalPoint;
-        Utils$1.playBirthEffect(player);
+        Utils.playBirthEffect(player);
         TimeUtil.delaySecond(2).then(() => {
             if (this.playerStatusMap.get(userId).isDead == true)
                 this.playerStatusMap.get(userId).isDead = false;
@@ -18187,7 +18261,7 @@ class PlayerModuleS extends ModuleS {
         let userId = this.currentPlayer.userId;
         if (!this.playerStatusMap.has(userId))
             return 100;
-        Utils$1.playBirthEffect(this.currentPlayer);
+        Utils.playBirthEffect(this.currentPlayer);
         let playerStatus = this.playerStatusMap.get(userId);
         playerStatus.maxHp *= 2;
         playerStatus.hp = playerStatus.maxHp;
@@ -18291,7 +18365,7 @@ class RadarPanel extends UIScript {
                 let retPosition = new Vector2(loc.x - (offset.x / 2), loc.y - (offset.y / 2));
                 console.error(retPosition);
                 if (retPosition.x < 0 || retPosition.x > 400 || retPosition.y < 0 || retPosition.y > 400) {
-                    Utils$1.setWidgetVisibility(otherPlayerPoint, mw.SlateVisibility.Collapsed);
+                    Utils.setWidgetVisibility(otherPlayerPoint, mw.SlateVisibility.Collapsed);
                 }
                 else {
                     if (otherPlayer.character.ragdollEnabled) {
@@ -18306,7 +18380,7 @@ class RadarPanel extends UIScript {
                     else {
                         this.setTextFontColor(otherPlayerPoint, mw.LinearColor.red);
                     }
-                    Utils$1.setWidgetVisibility(otherPlayerPoint, mw.SlateVisibility.SelfHitTestInvisible);
+                    Utils.setWidgetVisibility(otherPlayerPoint, mw.SlateVisibility.SelfHitTestInvisible);
                     otherPlayerPoint.position = retPosition;
                 }
             }
@@ -18323,7 +18397,7 @@ class RadarPanel extends UIScript {
             let offset = value.size;
             let retPosition = new Vector2(loc.x - (offset.x / 2), loc.y - (offset.y / 2));
             if (retPosition.x < 0 || retPosition.x > 400 || retPosition.y < 0 || retPosition.y > 400) {
-                Utils$1.setWidgetVisibility(value, mw.SlateVisibility.Collapsed);
+                Utils.setWidgetVisibility(value, mw.SlateVisibility.Collapsed);
             }
             else {
                 if (key.ragdollEnabled) {
@@ -18333,7 +18407,7 @@ class RadarPanel extends UIScript {
                     this.setTextBlock(value, "◆");
                 }
                 value.position = new Vector2(loc.x - (offset.x / 2), loc.y - (offset.y / 2));
-                Utils$1.setWidgetVisibility(value, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(value, mw.SlateVisibility.SelfHitTestInvisible);
             }
         });
     }
@@ -18506,7 +18580,7 @@ var foreign137 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.34
  */
 let TaskItem_Generate = class TaskItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -18596,7 +18670,7 @@ TaskItem_Generate = __decorate([
 ], TaskItem_Generate);
 var TaskItem_Generate$1 = TaskItem_Generate;
 
-var foreign196 = /*#__PURE__*/Object.freeze({
+var foreign197 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskItem_Generate$1
 });
@@ -18606,7 +18680,7 @@ var foreign196 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskPanel.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.34
  */
 let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
     get mDailyTimeTextBlock() {
@@ -18709,7 +18783,7 @@ TaskPanel_Generate = __decorate([
 ], TaskPanel_Generate);
 var TaskPanel_Generate$1 = TaskPanel_Generate;
 
-var foreign197 = /*#__PURE__*/Object.freeze({
+var foreign198 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskPanel_Generate$1
 });
@@ -18754,13 +18828,13 @@ class TaskPanel extends TaskPanel_Generate$1 {
      */
     hideTween() {
         Event.dispatchToLocal(EventType.OnOffMainHUD, true);
-        Utils$1.closeUITween(this.rootCanvas, null, () => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
         });
     }
     onShow(...params) {
         this.canUpdate = true;
-        Utils$1.openUITween(this.rootCanvas, null, null);
+        Utils.openUITween(this.rootCanvas, null, null);
     }
     onHide() {
         this.canUpdate = false;
@@ -18784,7 +18858,7 @@ class TaskPanel extends TaskPanel_Generate$1 {
         this.recycleAllDailyTaskItem();
         if (dailyTaskDataMap.size == 0)
             return;
-        Utils$1.setWidgetVisibility(this.mDailyTaskDoneTextBlock, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mDailyTaskDoneTextBlock, mw.SlateVisibility.Collapsed);
         dailyTaskDataMap.forEach((value, key) => {
             let dailyTaskItem = UIService.create(TaskItem);
             dailyTaskItem.initTaskItemData(key, value);
@@ -18806,7 +18880,7 @@ class TaskPanel extends TaskPanel_Generate$1 {
         this.recycleAllWeeklyTaskItem();
         if (weeklyTaskDataMap.size == 0)
             return;
-        Utils$1.setWidgetVisibility(this.mWeekTaskDoneTextBlock, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mWeekTaskDoneTextBlock, mw.SlateVisibility.Collapsed);
         weeklyTaskDataMap.forEach((value, key) => {
             let weeklyTaskItem = UIService.create(TaskItem);
             weeklyTaskItem.initTaskItemData(key, value);
@@ -18831,7 +18905,7 @@ class TaskPanel extends TaskPanel_Generate$1 {
             this.dailyTaskItemsMap.delete(vipTaskType);
             // this.mDailyTaskBox.scrollOffset = 0;
             if (this.dailyTaskItemsMap.size <= 0) {
-                Utils$1.setWidgetVisibility(this.mDailyTaskDoneTextBlock, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mDailyTaskDoneTextBlock, mw.SlateVisibility.SelfHitTestInvisible);
             }
         }
         if (this.weeklyTaskItemsMap.has(vipTaskType)) {
@@ -18840,7 +18914,7 @@ class TaskPanel extends TaskPanel_Generate$1 {
             this.weeklyTaskItemsMap.delete(vipTaskType);
             // this.mWeekTaskBox.scrollOffset = 0;
             if (this.weeklyTaskItemsMap.size <= 0) {
-                Utils$1.setWidgetVisibility(this.mWeekTaskDoneTextBlock, mw.SlateVisibility.SelfHitTestInvisible);
+                Utils.setWidgetVisibility(this.mWeekTaskDoneTextBlock, mw.SlateVisibility.SelfHitTestInvisible);
             }
         }
     }
@@ -18869,7 +18943,7 @@ class TaskPanel extends TaskPanel_Generate$1 {
         this.refreshWeekHourTime = Number(GlobalData.weeklyRefreshTime.split(':')[0]);
         this.hour = new Date().getHours();
         this.updateHourTime();
-        this.week = 8 - Number(Utils$1.getWhatDay());
+        this.week = 8 - Number(Utils.getWhatDay());
         this.updateWeekTime();
     }
     onUpdate(dt) {
@@ -18880,7 +18954,7 @@ class TaskPanel extends TaskPanel_Generate$1 {
                 this.hour = hour;
                 this.updateHourTime();
             }
-            let week = Number(Utils$1.getWhatDay());
+            let week = Number(Utils.getWhatDay());
             if (week != this.week) {
                 this.week = week;
                 this.updateWeekTime();
@@ -18898,7 +18972,7 @@ class TaskPanel extends TaskPanel_Generate$1 {
         this.mDailyTimeTextBlock.text = "剩余: " + this.hour + "小时";
     }
     updateWeekTime() {
-        if (Number(Utils$1.getWhatDay()) == 1 && this.hour < this.refreshWeekHourTime) {
+        if (Number(Utils.getWhatDay()) == 1 && this.hour < this.refreshWeekHourTime) {
             this.mWeekTimeTextBlock.text = "剩余: " + 1 + "天";
             this.week = 1;
         }
@@ -18918,7 +18992,7 @@ class TaskItem extends TaskItem_Generate$1 {
         this.initUI();
     }
     initUI() {
-        Utils$1.setWidgetVisibility(this.mFinishButton, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mFinishButton, mw.SlateVisibility.Collapsed);
     }
     /**填充item数据 */
     initTaskItemData(vipTaskType, task) {
@@ -18927,7 +19001,7 @@ class TaskItem extends TaskItem_Generate$1 {
         this.vIPTaskElement = GameConfig.Task.getElement(this.task.taskId);
         if (task.isGetReward) {
             this.isShowFinishBtn(false);
-            Utils$1.setWidgetVisibility(this.mUnfinishTextBlock, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.mUnfinishTextBlock, mw.SlateVisibility.Collapsed);
         }
         else {
             let isShow = task.progress >= this.vIPTaskElement.TragetNum;
@@ -18940,7 +19014,7 @@ class TaskItem extends TaskItem_Generate$1 {
         this.mCoinTextBlock.text = this.vIPTaskElement.Coin.toString();
         this.mDiamondTextBlock.text = this.vIPTaskElement.Diamond.toString();
         if (this.vIPTaskElement.Diamond == 0 || this.vIPTaskElement.Diamond == null) {
-            Utils$1.setWidgetVisibility(this.mDiamondCanvas, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.mDiamondCanvas, mw.SlateVisibility.Collapsed);
         }
         this.mFinishButton.onClicked.add(() => {
             ModuleService.getModule(TaskModuleC).onTaskRewardAction.call(this.vipTaskType, this.task.taskId);
@@ -18949,12 +19023,12 @@ class TaskItem extends TaskItem_Generate$1 {
     }
     isShowFinishBtn(isShow) {
         if (isShow) {
-            Utils$1.setWidgetVisibility(this.mFinishButton, mw.SlateVisibility.Visible);
-            Utils$1.setWidgetVisibility(this.mUnfinishTextBlock, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.mFinishButton, mw.SlateVisibility.Visible);
+            Utils.setWidgetVisibility(this.mUnfinishTextBlock, mw.SlateVisibility.Collapsed);
         }
         else {
-            Utils$1.setWidgetVisibility(this.mFinishButton, mw.SlateVisibility.Collapsed);
-            Utils$1.setWidgetVisibility(this.mUnfinishTextBlock, mw.SlateVisibility.SelfHitTestInvisible);
+            Utils.setWidgetVisibility(this.mFinishButton, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.mUnfinishTextBlock, mw.SlateVisibility.SelfHitTestInvisible);
         }
     }
     updateTaskItemData(progress) {
@@ -18985,7 +19059,7 @@ class TaskItem extends TaskItem_Generate$1 {
             }
         }
         else {
-            Utils$1.setWidgetVisibility(this.mUnfinishTextBlock, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.mUnfinishTextBlock, mw.SlateVisibility.Collapsed);
             this.task.isGetReward = true;
             mw.UIService.getUI(TaskPanel).recycleTaskItem(this.vipTaskType);
             return;
@@ -19617,7 +19691,7 @@ var foreign91 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GMModule/GMHUD.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.34
  */
 let GMHUD_Generate = class GMHUD_Generate extends UIScript {
     get oKbutton() {
@@ -19707,7 +19781,7 @@ var foreign171 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GMModule/GMItem.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.34
  */
 let GMItem_Generate = class GMItem_Generate extends UIScript {
     get button() {
@@ -19772,7 +19846,7 @@ AddGMCommand({
     clientCmd: (player, value) => {
     },
     serverCmd: async (player, value) => {
-        await Utils$1.asyncDownloadAsset(value);
+        await Utils.asyncDownloadAsset(value);
         let pA = player.character.loadAnimation(value);
         pA.loop = 0;
         pA.play();
@@ -19985,7 +20059,7 @@ var foreign92 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GunModule/WeaponUI.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.34
  */
 let WeaponUI_Generate = class WeaponUI_Generate extends UIScript {
     get point() {
@@ -20449,7 +20523,7 @@ class Ammo {
                 }
             }
             else { // 如果检测范围大于等于10，矩形检测，返回Core.GameObject数组
-                let boxResult = Utils$1.modifyboxOverlapInLevel(this.entity.worldTransform.position, this.currentLocation, this.detectRadius, this.detectRadius, DEBUG_FLAG);
+                let boxResult = Utils.modifyboxOverlapInLevel(this.entity.worldTransform.position, this.currentLocation, this.detectRadius, this.detectRadius, DEBUG_FLAG);
                 // 射线检测结果不为0，即有碰撞对象
                 if (boxResult.length > 0) {
                     // 终结弹药生命，获取检测结果
@@ -20720,13 +20794,13 @@ let WeaponDriver = class WeaponDriver extends mw.Script {
                 this.clientOnHit = (hitResult, attackPlayer, isObj) => {
                     hitResult.forEach(e => {
                         if (e instanceof mw.HitResult) {
-                            if (Utils$1.isCharacter(e.gameObject) ||
+                            if (Utils.isCharacter(e.gameObject) ||
                                 e.gameObject instanceof mw.GameObject) {
                                 PrefabEvent.PrefabEvtFight.hit(this.chara.gameObjectId, e.gameObject.gameObjectId, this.damage, e.impactPoint.clone());
                                 return;
                             }
                         }
-                        if (Utils$1.isCharacter(e) || e instanceof mw.GameObject) {
+                        if (Utils.isCharacter(e) || e instanceof mw.GameObject) {
                             PrefabEvent.PrefabEvtFight.hit(this.chara.gameObjectId, e.gameObjectId, this.damage, e.worldTransform.position.clone());
                             return;
                         }
@@ -20901,7 +20975,7 @@ let WeaponDriver = class WeaponDriver extends mw.Script {
         // Console.error("hit Chara");
         try {
             if (this.hitCharaEffect)
-                Utils$1.rpcPlayEffectAtLocation(this.hitCharaEffect.assetId, loc, 1, rot, this.hitCharaEffect.worldTransform.scale);
+                Utils.rpcPlayEffectAtLocation(this.hitCharaEffect.assetId, loc, 1, rot, this.hitCharaEffect.worldTransform.scale);
             if (this.hitCharaSound)
                 SoundService.play3DSound(this.hitCharaSound.assetId, loc, 1, GlobalData.soundVolume, { falloffDistance: 3000 });
         }
@@ -20913,7 +20987,7 @@ let WeaponDriver = class WeaponDriver extends mw.Script {
         // Console.error("hit hitObject");
         try {
             if (this.hitEffect)
-                Utils$1.rpcPlayEffectAtLocation(this.hitEffect.assetId, loc, 1, rot, this.hitEffect.worldTransform.scale);
+                Utils.rpcPlayEffectAtLocation(this.hitEffect.assetId, loc, 1, rot, this.hitEffect.worldTransform.scale);
             if (this.hitSound)
                 SoundService.play3DSound(this.hitSound.assetId, loc, 1, GlobalData.soundVolume, { falloffDistance: 3000 });
         }
@@ -21363,7 +21437,7 @@ let WeaponDriver = class WeaponDriver extends mw.Script {
         try {
             if (!this.weaponUI.rootCanvas)
                 return;
-            Utils$1.setWidgetVisibility(this.weaponUI.rootCanvas, isOpen ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.weaponUI.rootCanvas, isOpen ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
         }
         catch (error) {
             // console.error("addLocalListener-IsOpenUI-[error]" + error);
@@ -21375,7 +21449,7 @@ let WeaponDriver = class WeaponDriver extends mw.Script {
         try {
             if (!this.weaponUI.rootCanvas)
                 return;
-            Utils$1.setWidgetVisibility(this.weaponUI.rootCanvas, !isOpen ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.weaponUI.rootCanvas, !isOpen ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
         }
         catch (error) {
             // console.error("addLocalListener-IsOpenUI-[error]" + error);
@@ -21725,7 +21799,7 @@ let WeaponDriver = class WeaponDriver extends mw.Script {
                         this.hit(lineResult);
                     }
                     else {
-                        let boxResult = Utils$1.modifyboxOverlapInLevel(this.ammoEntityRoot.worldTransform.position, end, this.detectRadius, this.detectRadius, DEBUG_FLAG);
+                        let boxResult = Utils.modifyboxOverlapInLevel(this.ammoEntityRoot.worldTransform.position, end, this.detectRadius, this.detectRadius, DEBUG_FLAG);
                         this.hit(boxResult);
                     }
                 }
@@ -22104,15 +22178,15 @@ let Npc = class Npc extends Script {
     }
     initDataS() {
         this.curHp = 100;
-        this.npc.displayName = Utils$1.randomNpcName();
+        this.npc.displayName = Utils.randomNpcName();
         this.setNpcDescriptionAndGun();
     }
     async setNpcDescriptionAndGun() {
-        let ran = Utils$1.randomInt(1, 2);
+        let ran = Utils.randomInt(1, 2);
         if (ran == 1) {
-            let morphElement = GameConfig.Morph.getElement(Utils$1.randomInt(1, GameConfig.Morph.getAllElement().length));
+            let morphElement = GameConfig.Morph.getElement(Utils.randomInt(1, GameConfig.Morph.getAllElement().length));
             let assetId = morphElement.AssetId;
-            await Utils$1.asyncDownloadAsset(assetId);
+            await Utils.asyncDownloadAsset(assetId);
             if (this.model)
                 GameObjPool.despawn(this.model);
             this.model = await GameObjPool.asyncSpawn(assetId, mwext.GameObjPoolSourceType.Prefab);
@@ -22128,11 +22202,11 @@ let Npc = class Npc extends Script {
                 this.model.setVisibility(true);
         }
         else {
-            let roleId = GameConfig.ROLE.getElement(Utils$1.randomInt(1, 34)).ROLEID;
-            await Utils$1.asyncDownloadAsset(roleId);
+            let roleId = GameConfig.ROLE.getElement(Utils.randomInt(1, 34)).ROLEID;
+            await Utils.asyncDownloadAsset(roleId);
             this.npc.setDescription([roleId]);
-            let gunId = GameConfig.GUN.getElement(Utils$1.randomInt(1, 14)).GUNICON_M;
-            await Utils$1.asyncDownloadAsset(gunId);
+            let gunId = GameConfig.GUN.getElement(Utils.randomInt(1, 14)).GUNICON_M;
+            await Utils.asyncDownloadAsset(gunId);
             if (this.npcGunMoeld)
                 GameObjPool.despawn(this.npcGunMoeld);
             this.npcGunMoeld = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Asset);
@@ -22140,7 +22214,7 @@ let Npc = class Npc extends Script {
             this.npc.attachToSlot(this.npcGunMoeld, mw.HumanoidSlotType.RightHand);
             let somatotype = this.npc.description.advance.base.characterSetting.somatotype;
             let stanceId = (somatotype % 2 == 0) ? "49096" : "94258";
-            await Utils$1.asyncDownloadAsset(stanceId);
+            await Utils.asyncDownloadAsset(stanceId);
             this.npc.loadSubStance(stanceId).play();
             if (!this.npc.getVisibility())
                 this.npc.setVisibility(true, false);
@@ -22461,7 +22535,7 @@ let TryOutGun = class TryOutGun extends Script {
     }
     initGunAnchor() {
         this.gunAnchor = this.gameObject.getChildByName("gunAnchor");
-        this.switchGunModel(Utils$1.randomInt(10, 14));
+        this.switchGunModel(Utils.randomInt(10, 14));
     }
     initModule() {
         this.gunModuleC = ModuleService.getModule(GunModuleC);
@@ -22493,7 +22567,7 @@ let TryOutGun = class TryOutGun extends Script {
             if (!this.gunkey)
                 return;
             this.switchGun();
-            this.switchGunModel(Utils$1.randomInt(10, 14));
+            this.switchGunModel(Utils.randomInt(10, 14));
         }, gunElement.GUNNAME + "\n免费使用一局", "取消", "免费使用");
     }
     switchGun() {
@@ -22512,7 +22586,7 @@ let TryOutGun = class TryOutGun extends Script {
             GameObjPool.despawn(this.gunModel);
         let gunElement = GameConfig.GUN.getElement(this.gunkey);
         let gunId = gunElement.GUNICON_M;
-        await Utils$1.asyncDownloadAsset(gunId);
+        await Utils.asyncDownloadAsset(gunId);
         this.gunModel = await GameObjPool.asyncSpawn(gunId, mwext.GameObjPoolSourceType.Asset);
         this.gunModel.parent = this.gunAnchor;
         this.gunModel.localTransform.position = gunElement.GUNLOC;
@@ -22899,477 +22973,12 @@ var foreign154 = /*#__PURE__*/Object.freeze({
     default: JumpGame$1
 });
 
-class Utils {
-    //#region 兼容027之前的API
-    /**矩形范围检测 */
-    static modifyboxOverlapInLevel(StartLocation, EndLocation, Width, Height, debug, IgnoreObjectsGuid, IgnoreByKind, Source) {
-        let halfSize = new Vector(Width / 2, Height / 2);
-        let orientation = Vector.subtract(EndLocation, StartLocation).toRotation();
-        let results = QueryUtil.boxTrace(StartLocation, EndLocation, halfSize, orientation, true, debug, IgnoreObjectsGuid, IgnoreByKind, Source);
-        let objResults = new Array();
-        for (let i = 0; i < results.length; i++) {
-            let obj = results[i].gameObject;
-            if (!obj)
-                continue;
-            if (objResults.indexOf(obj) == -1)
-                objResults.push(obj);
-        }
-        return objResults;
-    }
-    /**判断是不是Character */
-    static isCharacter(obj) {
-        if ((obj instanceof Character) && obj.player != null) {
-            return true;
-        }
-        return false;
-    }
-    /**在一个位置播放特效 */
-    static rpcPlayEffectAtLocation(source, location, loopCount, rotation, scale) {
-        let duration = undefined;
-        if (loopCount < 0) {
-            duration = -loopCount;
-            loopCount = undefined;
-        }
-        return EffectService.playAtPosition(source, location, {
-            loopCount: loopCount,
-            duration: duration,
-            rotation: rotation,
-            scale: scale,
-        });
-    }
-    static async asyncRpcGetData(key) {
-        let value = await DataStorage.asyncGetData(key);
-        return value.data;
-    }
-    //#endregion
-    static randomInt(min, max) {
-        if (min > max) {
-            let temp = min;
-            min = max;
-            max = temp;
-        }
-        return Math.floor(Math.random() * (max - min + 1) + min);
-    }
-    static async asyncDownloadAsset(InAssetId) {
-        if (!mw.AssetUtil.assetLoaded(InAssetId)) {
-            await mw.AssetUtil.asyncDownloadAsset(InAssetId);
-        }
-    }
-    static async asyncDownloadAssets(InAssetIds) {
-        for (let i = 0; i < InAssetIds.length; ++i) {
-            if (mw.AssetUtil.assetLoaded(InAssetIds[i]))
-                continue;
-            await mw.AssetUtil.asyncDownloadAsset(InAssetIds[i]);
-        }
-    }
-    static setWidgetVisibility(ui, visibility) {
-        if (ui.visibility != visibility)
-            ui.visibility = visibility;
-    }
-    static setButtonEnable(button, enable) {
-        if (button.enable != enable)
-            button.enable = enable;
-    }
-    static setGameObjectVisibility(model, isVisibility) {
-        if (model.getVisibility() != isVisibility)
-            model.setVisibility(isVisibility);
-    }
-    static randomOneDifferentId(guids, lastId) {
-        let newGuids = [];
-        newGuids = guids.filter(v => v != lastId);
-        lastId = newGuids[this.randomInt(0, newGuids.length - 1)];
-        return lastId;
-    }
-    static setImageByAssetIconData(image, icon) {
-        if (this.assetIconDataMap.has(icon)) {
-            image.setImageByAssetIconData(this.assetIconDataMap.get(icon));
-        }
-        else {
-            mw.assetIDChangeIconUrlRequest([icon]).then(() => {
-                try {
-                    let assetIconData = mw.getAssetIconDataByAssetID(icon);
-                    image.setImageByAssetIconData(assetIconData);
-                    this.assetIconDataMap.set(icon, assetIconData);
-                }
-                catch (error) { }
-            });
-        }
-    }
-    static openUITween(mCanvas, onStart, onComplete) {
-        let tmpX = 0;
-        let tmpY = 0;
-        if (this.randomInt(0, 1) == 0) {
-            if (this.randomInt(0, 1)) {
-                tmpX = mCanvas.size.x;
-            }
-            else {
-                tmpX = -mCanvas.size.x;
-            }
-            tmpY = this.randomInt(-mCanvas.size.y, mCanvas.size.y);
-        }
-        else {
-            tmpX = this.randomInt(-mCanvas.size.x, mCanvas.size.x);
-            if (this.randomInt(0, 1)) {
-                tmpY = mCanvas.size.y;
-            }
-            else {
-                tmpY = -mCanvas.size.y;
-            }
-        }
-        new mw.Tween({ x: tmpX, y: tmpY })
-            .to({ x: 0, y: 0 }, 0.5 * 1000)
-            .onStart(() => {
-            mCanvas.position = new mw.Vector2(tmpX, tmpY);
-            if (onStart)
-                onStart();
-        })
-            .onUpdate((v) => {
-            mCanvas.position = new mw.Vector2(v.x, v.y);
-        })
-            .easing(cubicBezier(.75, 2.9, .46, -0.18))
-            .onComplete(() => {
-            mCanvas.position = mw.Vector2.zero;
-            if (onComplete)
-                onComplete();
-        })
-            .start();
-        let scaleType = this.randomInt(0, 2);
-        new mw.Tween({ x: 0, y: 0 })
-            .to({ x: 1, y: 1 }, 0.5 * 1000)
-            .onStart(() => {
-            switch (scaleType) {
-                case 0:
-                    mCanvas.renderScale = new mw.Vector2(1, 0);
-                    break;
-                case 1:
-                    mCanvas.renderScale = new mw.Vector2(0, 1);
-                    break;
-                case 2:
-                    mCanvas.renderScale = new mw.Vector2(1, 1);
-                    break;
-            }
-        })
-            .onUpdate((v) => {
-            switch (scaleType) {
-                case 0:
-                    mCanvas.renderScale = new mw.Vector2(1, v.y);
-                    break;
-                case 1:
-                    mCanvas.renderScale = new mw.Vector2(v.x, 1);
-                    break;
-                case 2:
-                    mCanvas.renderScale = new mw.Vector2(v.x, v.y);
-                    break;
-            }
-        })
-            .onComplete(() => {
-            mCanvas.renderScale = mw.Vector2.one;
-        })
-            .start();
-    }
-    static closeUITween(mCanvas, onStart, onComplete) {
-        let scaleType = this.randomInt(0, 2);
-        new mw.Tween({ x: 1, y: 1 })
-            .to({ x: 0, y: 0 }, 0.5 * 1000)
-            .onStart(() => {
-            if (onStart)
-                onStart();
-            mCanvas.renderScale = new mw.Vector2(1, 1);
-        })
-            .onUpdate((v) => {
-            switch (scaleType) {
-                case 0:
-                    mCanvas.renderScale = new mw.Vector2(1, v.y);
-                    break;
-                case 1:
-                    mCanvas.renderScale = new mw.Vector2(v.x, 1);
-                    break;
-                case 2:
-                    mCanvas.renderScale = new mw.Vector2(v.x, v.y);
-                    break;
-            }
-        })
-            .onComplete(() => {
-            if (onComplete)
-                onComplete();
-            switch (scaleType) {
-                case 0:
-                    mCanvas.renderScale = new mw.Vector2(1, 0);
-                    break;
-                case 1:
-                    mCanvas.renderScale = new mw.Vector2(0, 1);
-                    break;
-                case 2:
-                    mCanvas.renderScale = new mw.Vector2(0, 0);
-                    break;
-            }
-        })
-            .start();
-    }
-    /**返回当前时间（例 13：15）。 */
-    static getCurrentTime() {
-        let date = new Date();
-        return date.getHours() + ":" + date.getMinutes();
-    }
-    static getWhatDay() {
-        let whatDay = "7123456".charAt(new Date().getDay());
-        return whatDay;
-    }
-    static weekNumChangeToCN(num) {
-        return "一二三四五六日".charAt(num - 1);
-    }
-    /**返回上次登录是周几 */
-    static getLastDay(day) {
-        let whatDay = "7123456".charAt(day);
-        return whatDay;
-    }
-    /**判断是否同一周 */
-    static iSameWeek(date1, date2) {
-        let dt1 = new Date();
-        dt1.setTime(date1);
-        let dt2 = new Date();
-        dt2.setTime(date2);
-        let md1 = this.tmonday(dt1);
-        let md2 = this.tmonday(dt2);
-        return md1 === md2;
-    }
-    static tmonday(dtm) {
-        let dte = new Date(dtm);
-        let day = dte.getDay();
-        let dty = dte.getDate();
-        if (day === 0) {
-            day = 7;
-        }
-        dte.setDate(dty - day + 1);
-        return dte.getFullYear() + '-' + dte.getMonth() + '-' + dte.getDate();
-    }
-    static showRewardAd(callback) {
-        if (callback)
-            callback();
-        return;
-    }
-    static showAd(adsType, callback) {
-        AdsService.showAd(adsType, isSuccess => {
-            if (isSuccess) {
-                callback(AdsState.Success);
-                callback(AdsState.Close);
-                callback(AdsState.Reward);
-            }
-            else {
-                callback(AdsState.Fail);
-            }
-        });
-    }
-    static randomColor() {
-        let colors = [mw.LinearColor.red, mw.LinearColor.green, mw.LinearColor.blue,
-            mw.LinearColor.yellow, new mw.LinearColor(1, 0, 1, 1), new mw.LinearColor(0, 1, 1, 1), mw.LinearColor.white];
-        let fontColor = colors[this.randomInt(0, colors.length - 1)];
-        let outlineColor = colors[this.randomInt(0, colors.length - 1)];
-        while (fontColor.a == outlineColor.a && fontColor.r == outlineColor.r
-            && fontColor.g == outlineColor.g && fontColor.b == outlineColor.b) {
-            outlineColor = colors[this.randomInt(0, colors.length - 1)];
-            // Console.error("颜色重复");
-        }
-        return [fontColor, outlineColor];
-    }
-    static randomNpcName() {
-        return this.npcNames[this.randomInt(0, this.npcNames.length - 1)];
-    }
-    /**根据数字获取汉字*/
-    static numChangeToCN(num) {
-        if (this.tens[num]) {
-            return this.tens[num];
-        }
-        else if (num > 10 && num < 20) {
-            let numStr = num.toString();
-            let n = numStr.substring(1, 2);
-            let result = this.digitalUnits[1] + this.tens[n];
-            return result;
-        }
-        else if (num > 10) {
-            let result = "";
-            let numStr = num.toString();
-            for (var i = 0; i < numStr.length; ++i) {
-                let n = numStr.substring(i, i + 1);
-                let m = numStr.length - i - 1;
-                result += this.tens[n] + this.digitalUnits[m];
-            }
-            return result;
-        }
-        else
-            return "零";
-    }
-    static randomRevivalPoint(isRedTeam) {
-        if (isRedTeam) {
-            return this.redTeamRevivalPoint[this.randomInt(0, this.redTeamRevivalPoint.length - 1)];
-        }
-        else {
-            return this.blueTeamRevivalPoint[this.randomInt(0, this.blueTeamRevivalPoint.length - 1)];
-        }
-    }
-    static setOutLine(player, isTeamMate, width = 0.5) {
-        player.character.setOutline(true, isTeamMate ? mw.LinearColor.blue : mw.LinearColor.red, width);
-    }
-    static playBirthEffect(player) {
-        EffectService.playOnGameObject("142750", player.character, { slotType: mw.HumanoidSlotType.Root });
-    }
-    static playBirthSound(player) {
-        SoundService.play3DSound("169179", player.character, 1, GlobalData.soundVolume);
-    }
-    static async applySharedId(character, sharedId) {
-        return new Promise(async (resolve) => {
-            mw.AccountService.applySharedId(character, sharedId, async (success) => {
-                console.error(`success:${success}`);
-                if (success)
-                    character.syncDescription();
-                await character.asyncReady();
-                return resolve(success);
-            });
-        });
-    }
-    static async createSharedId(character) {
-        return new Promise(async (resolve) => {
-            mw.AccountService.createSharedId(character, (dataString) => {
-                console.error(`dataString:${dataString}`);
-                return resolve(dataString);
-            });
-        });
-    }
-    static copyArray(array) {
-        let newArray = [];
-        for (let i = 0; i < array.length; ++i) {
-            newArray.push(array[i]);
-        }
-        return newArray;
-    }
-    static colorHexToLinearColorToString(inColorHex) {
-        if (this.inColorHexStrMap.has(inColorHex))
-            return this.inColorHexStrMap.get(inColorHex);
-        let inColorHexLinearColor = mw.LinearColor.colorHexToLinearColor(inColorHex);
-        this.inColorHexStrMap.set(inColorHex, inColorHexLinearColor);
-        return inColorHexLinearColor;
-    }
-    static isEqulaLinearColor(linearColor1, linearColor2) {
-        if (linearColor1.r.toFixed(5) != linearColor2.r.toFixed(5))
-            return false;
-        if (linearColor1.g.toFixed(5) != linearColor2.g.toFixed(5))
-            return false;
-        if (linearColor1.b.toFixed(5) != linearColor2.b.toFixed(5))
-            return false;
-        if (linearColor1.a.toFixed(5) != linearColor2.a.toFixed(5))
-            return false;
-        return true;
-    }
-    static stringArrayToTransform(strArray) {
-        let transform = new mw.Transform();
-        if (!strArray || strArray.length != 9)
-            return transform;
-        transform.position = new mw.Vector(Number(strArray[0]), Number(strArray[1]), Number(strArray[2]));
-        transform.rotation = new mw.Rotation(Number(strArray[3]), Number(strArray[4]), Number(strArray[5]));
-        transform.scale = new mw.Vector(Number(strArray[6]), Number(strArray[7]), Number(strArray[8]));
-        return transform;
-    }
-    static accountServiceDownloadData(character) {
-        return new Promise(async (resolve) => {
-            mw.AccountService.downloadData(character, async (success) => {
-                return resolve(success);
-            });
-        });
-    }
-}
-Utils.assetIconDataMap = new Map();
-Utils.npcNames = ["张吉惟", "林国瑞", "林玫书", "林雅南", "江奕云", "刘柏宏", "阮建安", "林子帆", "夏志豪", "吉茹定", "李中冰", "谢彦文", "傅智翔", "洪振霞", "刘姿婷", "荣姿康", "吕致盈", "方一强", "黎芸贵", "郑伊雯", "雷进宝", "吴美隆", "吴心真", "王美珠", "郭芳天", "李雅惠", "陈文婷", "曹敏侑", "王依婷", "陈婉璇", "吴美玉", "蔡依婷", "郑昌梦", "林家纶", "黄丽昆", "李育泉", "黄芸欢", "吴韵如", "李肇芬", "卢木仲", "李成白", "方兆玉", "刘翊惠", "丁汉臻", "吴佳瑞", "舒绿珮", "周白芷", "张姿妤", "张虹伦", "周琼玫", "倪怡芳", "郭贵妃", "杨佩芳", "黄盛玫", "郑丽青", "许智云", "张孟涵", "李小爱", "王恩龙", "朱政廷", "邓诗涵", "陈政倩", "吴俊伯", "阮馨学", "翁惠珠", "吴思翰", "林佩玲", "邓海来", "陈翊依", "李建智", "武淑芬", "金雅琪", "赖怡宜", "黄育霖", "张仪湖", "王俊民", "张诗刚", "林慧颖", "沈俊君", "陈淑妤", "李姿伶", "高咏钰", "黄彦宜", "周孟儒", "潘欣臻", "李祯韵", "叶洁启", "梁哲宇", "黄晓萍", "杨雅萍", "卢志铭", "张茂以", "林婉婷", "蔡宜芸", "林珮瑜", "黄柏仪", "周逸珮", "夏雅惠", "王采珮", "林孟霖", "林竹水", "王怡乐", "王爱乐", "金佳蓉", "韩健毓", "李士杰", "陈董珍", "苏姿婷", "张政霖", "李志宏", "陈素达", "陈虹荣", "何美玲", "李仪琳", "张俞幸", "黄秋萍", "潘吉维"];
-Utils.tens = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
-Utils.digitalUnits = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
-Utils.redTeamRevivalPoint = [
-    new mw.Vector(-3700, 1500, 200),
-    new mw.Vector(-3700, 1700, 200),
-    new mw.Vector(-3700, 1900, 200),
-    new mw.Vector(-3700, 2100, 200),
-    new mw.Vector(-3700, 2300, 200),
-    new mw.Vector(-3700, 2500, 200),
-    new mw.Vector(-3700, 2700, 200),
-    new mw.Vector(-3700, 2900, 200),
-];
-Utils.blueTeamRevivalPoint = [
-    new mw.Vector(2100, 4000, 200),
-    new mw.Vector(2100, 3800, 200),
-    new mw.Vector(2100, 3600, 200),
-    new mw.Vector(2100, 3400, 200),
-    new mw.Vector(2100, 3200, 200),
-    new mw.Vector(2100, 3000, 200),
-    new mw.Vector(2100, 2800, 200),
-    new mw.Vector(2100, 2600, 200),
-];
-Utils.inColorHexStrMap = new Map();
-function cubicBezier(p1x, p1y, p2x, p2y) {
-    const ZERO_LIMIT = 1e-6;
-    const ax = 3 * p1x - 3 * p2x + 1;
-    const bx = 3 * p2x - 6 * p1x;
-    const cx = 3 * p1x;
-    const ay = 3 * p1y - 3 * p2y + 1;
-    const by = 3 * p2y - 6 * p1y;
-    const cy = 3 * p1y;
-    function sampleCurveDerivativeX(t) {
-        return (3 * ax * t + 2 * bx) * t + cx;
-    }
-    function sampleCurveX(t) {
-        return ((ax * t + bx) * t + cx) * t;
-    }
-    function sampleCurveY(t) {
-        return ((ay * t + by) * t + cy) * t;
-    }
-    function solveCurveX(x) {
-        let t2 = x;
-        let derivative;
-        let x2;
-        for (let i = 0; i < 8; i++) {
-            x2 = sampleCurveX(t2) - x;
-            if (Math.abs(x2) < ZERO_LIMIT) {
-                return t2;
-            }
-            derivative = sampleCurveDerivativeX(t2);
-            if (Math.abs(derivative) < ZERO_LIMIT) {
-                break;
-            }
-            t2 -= x2 / derivative;
-        }
-        let t1 = 1;
-        let t0 = 0;
-        t2 = x;
-        while (t1 > t0) {
-            x2 = sampleCurveX(t2) - x;
-            if (Math.abs(x2) < ZERO_LIMIT) {
-                return t2;
-            }
-            if (x2 > 0) {
-                t1 = t2;
-            }
-            else {
-                t0 = t2;
-            }
-            t2 = (t1 + t0) / 2;
-        }
-        return t2;
-    }
-    function solve(x) {
-        return sampleCurveY(solveCurveX(x));
-    }
-    return solve;
-}
-
-var foreign159 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    cubicBezier: cubicBezier,
-    default: Utils
-});
-
 /**
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/JumpGameTips.ui
- * TIME: 2025.03.16-00.11.33
+ * TIME: 2025.03.16-00.18.34
  */
 let JumpGameTips_Generate = class JumpGameTips_Generate extends UIScript {
     onAwake() {
@@ -23419,7 +23028,7 @@ var foreign162 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/SecondNoticeItem.ui
- * TIME: 2025.03.16-00.11.33
+ * TIME: 2025.03.16-00.18.34
  */
 let SecondNoticeItem_Generate = class SecondNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -23487,7 +23096,7 @@ var foreign164 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/DiamondItem.ui
- * TIME: 2025.03.16-00.11.33
+ * TIME: 2025.03.16-00.18.34
  */
 let DiamondItem_Generate = class DiamondItem_Generate extends UIScript {
     get mFirstBuyTextBlock() {
@@ -23599,7 +23208,7 @@ var foreign169 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/DiamondPanel.ui
- * TIME: 2025.03.16-00.11.33
+ * TIME: 2025.03.16-00.18.34
  */
 let DiamondPanel_Generate = class DiamondPanel_Generate extends UIScript {
     get mMainCanvas() {
@@ -23689,8 +23298,486 @@ var foreign170 = /*#__PURE__*/Object.freeze({
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/HUDPanel1.ui
+ * TIME: 2025.03.16-00.18.34
+ */
+let HUDPanel1_Generate = class HUDPanel1_Generate extends UIScript {
+    get mVirtualJoystickPanel() {
+        if (!this.mVirtualJoystickPanel_Internal && this.uiWidgetBase) {
+            this.mVirtualJoystickPanel_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mVirtualJoystickPanel');
+        }
+        return this.mVirtualJoystickPanel_Internal;
+    }
+    get mTouchPad() {
+        if (!this.mTouchPad_Internal && this.uiWidgetBase) {
+            this.mTouchPad_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mTouchPad');
+        }
+        return this.mTouchPad_Internal;
+    }
+    get mRedCountTextBlock() {
+        if (!this.mRedCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mRedCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/VsCanvas/RedVsCanvas/mRedCountTextBlock');
+        }
+        return this.mRedCountTextBlock_Internal;
+    }
+    get mBlueCountTextBlock() {
+        if (!this.mBlueCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mBlueCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/VsCanvas/BlueVsCanvas/mBlueCountTextBlock');
+        }
+        return this.mBlueCountTextBlock_Internal;
+    }
+    get mActivityButton() {
+        if (!this.mActivityButton_Internal && this.uiWidgetBase) {
+            this.mActivityButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/LeftButtonCanvas/ActivityCanvas/mActivityButton');
+        }
+        return this.mActivityButton_Internal;
+    }
+    get mActivityPointImage() {
+        if (!this.mActivityPointImage_Internal && this.uiWidgetBase) {
+            this.mActivityPointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/LeftButtonCanvas/ActivityCanvas/mActivityPointImage');
+        }
+        return this.mActivityPointImage_Internal;
+    }
+    get mSetButton() {
+        if (!this.mSetButton_Internal && this.uiWidgetBase) {
+            this.mSetButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/SetCanvas/mSetButton');
+        }
+        return this.mSetButton_Internal;
+    }
+    get mSetButtonTextBlock() {
+        if (!this.mSetButtonTextBlock_Internal && this.uiWidgetBase) {
+            this.mSetButtonTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/SetCanvas/mSetButtonTextBlock');
+        }
+        return this.mSetButtonTextBlock_Internal;
+    }
+    get mRankButton() {
+        if (!this.mRankButton_Internal && this.uiWidgetBase) {
+            this.mRankButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/RankCanvas/mRankButton');
+        }
+        return this.mRankButton_Internal;
+    }
+    get mRankButtonTextBlock() {
+        if (!this.mRankButtonTextBlock_Internal && this.uiWidgetBase) {
+            this.mRankButtonTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/RankCanvas/mRankButtonTextBlock');
+        }
+        return this.mRankButtonTextBlock_Internal;
+    }
+    get mTaskButton() {
+        if (!this.mTaskButton_Internal && this.uiWidgetBase) {
+            this.mTaskButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TaskCanvas/mTaskButton');
+        }
+        return this.mTaskButton_Internal;
+    }
+    get mTaskPointImage() {
+        if (!this.mTaskPointImage_Internal && this.uiWidgetBase) {
+            this.mTaskPointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TaskCanvas/mTaskPointImage');
+        }
+        return this.mTaskPointImage_Internal;
+    }
+    get mTaskBgImage() {
+        if (!this.mTaskBgImage_Internal && this.uiWidgetBase) {
+            this.mTaskBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TaskCanvas/mTaskBgImage');
+        }
+        return this.mTaskBgImage_Internal;
+    }
+    get mTaskTextBlock() {
+        if (!this.mTaskTextBlock_Internal && this.uiWidgetBase) {
+            this.mTaskTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TaskCanvas/mTaskTextBlock');
+        }
+        return this.mTaskTextBlock_Internal;
+    }
+    get mTeamButton() {
+        if (!this.mTeamButton_Internal && this.uiWidgetBase) {
+            this.mTeamButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TeamCanvas/mTeamButton');
+        }
+        return this.mTeamButton_Internal;
+    }
+    get mTeamBgImage() {
+        if (!this.mTeamBgImage_Internal && this.uiWidgetBase) {
+            this.mTeamBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TeamCanvas/mTeamBgImage');
+        }
+        return this.mTeamBgImage_Internal;
+    }
+    get mTeamIconImage() {
+        if (!this.mTeamIconImage_Internal && this.uiWidgetBase) {
+            this.mTeamIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TeamCanvas/mTeamIconImage');
+        }
+        return this.mTeamIconImage_Internal;
+    }
+    get mTeamTextBlock() {
+        if (!this.mTeamTextBlock_Internal && this.uiWidgetBase) {
+            this.mTeamTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/TeamCanvas/mTeamTextBlock');
+        }
+        return this.mTeamTextBlock_Internal;
+    }
+    get mShopButton() {
+        if (!this.mShopButton_Internal && this.uiWidgetBase) {
+            this.mShopButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/ShopCanvas/mShopButton');
+        }
+        return this.mShopButton_Internal;
+    }
+    get mShopTextBlock() {
+        if (!this.mShopTextBlock_Internal && this.uiWidgetBase) {
+            this.mShopTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/ShopCanvas/mShopTextBlock');
+        }
+        return this.mShopTextBlock_Internal;
+    }
+    get mRoleButton() {
+        if (!this.mRoleButton_Internal && this.uiWidgetBase) {
+            this.mRoleButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/RoleCanvas/mRoleButton');
+        }
+        return this.mRoleButton_Internal;
+    }
+    get mRoleTextBlock() {
+        if (!this.mRoleTextBlock_Internal && this.uiWidgetBase) {
+            this.mRoleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/RoleCanvas/mRoleTextBlock');
+        }
+        return this.mRoleTextBlock_Internal;
+    }
+    get mOpenShareImage() {
+        if (!this.mOpenShareImage_Internal && this.uiWidgetBase) {
+            this.mOpenShareImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/mOpenShareImage');
+        }
+        return this.mOpenShareImage_Internal;
+    }
+    get mOpenShareButton() {
+        if (!this.mOpenShareButton_Internal && this.uiWidgetBase) {
+            this.mOpenShareButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/mOpenShareImage/mOpenShareButton');
+        }
+        return this.mOpenShareButton_Internal;
+    }
+    get mShareTextBlock() {
+        if (!this.mShareTextBlock_Internal && this.uiWidgetBase) {
+            this.mShareTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightButtonCanvas/mOpenShareImage/mShareTextBlock');
+        }
+        return this.mShareTextBlock_Internal;
+    }
+    get mIconmage() {
+        if (!this.mIconmage_Internal && this.uiWidgetBase) {
+            this.mIconmage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/PlayerCanvas/PlayerIconCanvas/mIconmage');
+        }
+        return this.mIconmage_Internal;
+    }
+    get mRankTextBlock() {
+        if (!this.mRankTextBlock_Internal && this.uiWidgetBase) {
+            this.mRankTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/PlayerCanvas/RankCanvas/mRankTextBlock');
+        }
+        return this.mRankTextBlock_Internal;
+    }
+    get mHpProgressBar() {
+        if (!this.mHpProgressBar_Internal && this.uiWidgetBase) {
+            this.mHpProgressBar_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/PlayerCanvas/HpCanvas/mHpProgressBar');
+        }
+        return this.mHpProgressBar_Internal;
+    }
+    get mHpTextBlock() {
+        if (!this.mHpTextBlock_Internal && this.uiWidgetBase) {
+            this.mHpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/PlayerCanvas/HpCanvas/mHpTextBlock');
+        }
+        return this.mHpTextBlock_Internal;
+    }
+    get mKillTipCountCanvas() {
+        if (!this.mKillTipCountCanvas_Internal && this.uiWidgetBase) {
+            this.mKillTipCountCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/KillStreakCanvas/mKillTipCountCanvas');
+        }
+        return this.mKillTipCountCanvas_Internal;
+    }
+    get mKillTipTextBlock1() {
+        if (!this.mKillTipTextBlock1_Internal && this.uiWidgetBase) {
+            this.mKillTipTextBlock1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/KillStreakCanvas/mKillTipCountCanvas/mKillTipTextBlock1');
+        }
+        return this.mKillTipTextBlock1_Internal;
+    }
+    get mKillTipTextBlock2() {
+        if (!this.mKillTipTextBlock2_Internal && this.uiWidgetBase) {
+            this.mKillTipTextBlock2_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/KillStreakCanvas/mKillTipCountCanvas/mKillTipTextBlock2');
+        }
+        return this.mKillTipTextBlock2_Internal;
+    }
+    get mKillTipTextBlock3() {
+        if (!this.mKillTipTextBlock3_Internal && this.uiWidgetBase) {
+            this.mKillTipTextBlock3_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/KillStreakCanvas/mKillTipTextBlock3');
+        }
+        return this.mKillTipTextBlock3_Internal;
+    }
+    get mKillTipCanvas() {
+        if (!this.mKillTipCanvas_Internal && this.uiWidgetBase) {
+            this.mKillTipCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mKillTipCanvas');
+        }
+        return this.mKillTipCanvas_Internal;
+    }
+    get mInvincibleCanvas() {
+        if (!this.mInvincibleCanvas_Internal && this.uiWidgetBase) {
+            this.mInvincibleCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mInvincibleCanvas');
+        }
+        return this.mInvincibleCanvas_Internal;
+    }
+    get mInvincibleProgressBar() {
+        if (!this.mInvincibleProgressBar_Internal && this.uiWidgetBase) {
+            this.mInvincibleProgressBar_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mInvincibleCanvas/mInvincibleProgressBar');
+        }
+        return this.mInvincibleProgressBar_Internal;
+    }
+    get mInvincibleTextBlock() {
+        if (!this.mInvincibleTextBlock_Internal && this.uiWidgetBase) {
+            this.mInvincibleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mInvincibleCanvas/mInvincibleTextBlock');
+        }
+        return this.mInvincibleTextBlock_Internal;
+    }
+    get mDeadCanvas() {
+        if (!this.mDeadCanvas_Internal && this.uiWidgetBase) {
+            this.mDeadCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDeadCanvas');
+        }
+        return this.mDeadCanvas_Internal;
+    }
+    get mDeadCountDownTextBlock() {
+        if (!this.mDeadCountDownTextBlock_Internal && this.uiWidgetBase) {
+            this.mDeadCountDownTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDeadCanvas/mDeadCountDownTextBlock');
+        }
+        return this.mDeadCountDownTextBlock_Internal;
+    }
+    get mSetCanvas() {
+        if (!this.mSetCanvas_Internal && this.uiWidgetBase) {
+            this.mSetCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mSetCanvas');
+        }
+        return this.mSetCanvas_Internal;
+    }
+    get mFireCanvas() {
+        if (!this.mFireCanvas_Internal && this.uiWidgetBase) {
+            this.mFireCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mFireCanvas');
+        }
+        return this.mFireCanvas_Internal;
+    }
+    get mFireProgressBar() {
+        if (!this.mFireProgressBar_Internal && this.uiWidgetBase) {
+            this.mFireProgressBar_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mFireCanvas/mFireProgressBar');
+        }
+        return this.mFireProgressBar_Internal;
+    }
+    get mControlCanvas() {
+        if (!this.mControlCanvas_Internal && this.uiWidgetBase) {
+            this.mControlCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mControlCanvas');
+        }
+        return this.mControlCanvas_Internal;
+    }
+    get mControlProgressBar() {
+        if (!this.mControlProgressBar_Internal && this.uiWidgetBase) {
+            this.mControlProgressBar_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mControlCanvas/mControlProgressBar');
+        }
+        return this.mControlProgressBar_Internal;
+    }
+    get mBgmCanvas() {
+        if (!this.mBgmCanvas_Internal && this.uiWidgetBase) {
+            this.mBgmCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mBgmCanvas');
+        }
+        return this.mBgmCanvas_Internal;
+    }
+    get mBgmProgressBar() {
+        if (!this.mBgmProgressBar_Internal && this.uiWidgetBase) {
+            this.mBgmProgressBar_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mBgmCanvas/mBgmProgressBar');
+        }
+        return this.mBgmProgressBar_Internal;
+    }
+    get mSoundCanvas() {
+        if (!this.mSoundCanvas_Internal && this.uiWidgetBase) {
+            this.mSoundCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mSoundCanvas');
+        }
+        return this.mSoundCanvas_Internal;
+    }
+    get mSoundProgressBar() {
+        if (!this.mSoundProgressBar_Internal && this.uiWidgetBase) {
+            this.mSoundProgressBar_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mSoundCanvas/mSoundProgressBar');
+        }
+        return this.mSoundProgressBar_Internal;
+    }
+    get mSetCloseButton() {
+        if (!this.mSetCloseButton_Internal && this.uiWidgetBase) {
+            this.mSetCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mSetCanvas/SetBgCanvas/mSetCloseButton');
+        }
+        return this.mSetCloseButton_Internal;
+    }
+    get mResetPosButton() {
+        if (!this.mResetPosButton_Internal && this.uiWidgetBase) {
+            this.mResetPosButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mSetCanvas/SetBgCanvas/mResetPosButton');
+        }
+        return this.mResetPosButton_Internal;
+    }
+    get mMorphCanvas() {
+        if (!this.mMorphCanvas_Internal && this.uiWidgetBase) {
+            this.mMorphCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMorphCanvas');
+        }
+        return this.mMorphCanvas_Internal;
+    }
+    get mMorphButton() {
+        if (!this.mMorphButton_Internal && this.uiWidgetBase) {
+            this.mMorphButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMorphCanvas/mMorphButton');
+        }
+        return this.mMorphButton_Internal;
+    }
+    get mUnMorphCanvas() {
+        if (!this.mUnMorphCanvas_Internal && this.uiWidgetBase) {
+            this.mUnMorphCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mUnMorphCanvas');
+        }
+        return this.mUnMorphCanvas_Internal;
+    }
+    get mUnMorphButton() {
+        if (!this.mUnMorphButton_Internal && this.uiWidgetBase) {
+            this.mUnMorphButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mUnMorphCanvas/mUnMorphButton');
+        }
+        return this.mUnMorphButton_Internal;
+    }
+    get mJumpCanvas() {
+        if (!this.mJumpCanvas_Internal && this.uiWidgetBase) {
+            this.mJumpCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mJumpCanvas');
+        }
+        return this.mJumpCanvas_Internal;
+    }
+    get mJumpButton() {
+        if (!this.mJumpButton_Internal && this.uiWidgetBase) {
+            this.mJumpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mJumpCanvas/mJumpButton');
+        }
+        return this.mJumpButton_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        this.mOpenShareButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mOpenShareButton");
+        });
+        this.initLanguage(this.mOpenShareButton);
+        this.mOpenShareButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮添加点击
+        this.mActivityButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mActivityButton");
+        });
+        this.mActivityButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mSetButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mSetButton");
+        });
+        this.mSetButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mRankButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mRankButton");
+        });
+        this.mRankButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mTaskButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mTaskButton");
+        });
+        this.mTaskButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mTeamButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mTeamButton");
+        });
+        this.mTeamButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mShopButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mShopButton");
+        });
+        this.mShopButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mRoleButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mRoleButton");
+        });
+        this.mRoleButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mSetCloseButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mSetCloseButton");
+        });
+        this.mSetCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mResetPosButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mResetPosButton");
+        });
+        this.mResetPosButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mMorphButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mMorphButton");
+        });
+        this.mMorphButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mUnMorphButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mUnMorphButton");
+        });
+        this.mUnMorphButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mJumpButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mJumpButton");
+        });
+        this.mJumpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mRedCountTextBlock);
+        this.initLanguage(this.mBlueCountTextBlock);
+        this.initLanguage(this.mSetButtonTextBlock);
+        this.initLanguage(this.mRankButtonTextBlock);
+        this.initLanguage(this.mTaskTextBlock);
+        this.initLanguage(this.mTeamTextBlock);
+        this.initLanguage(this.mShopTextBlock);
+        this.initLanguage(this.mRoleTextBlock);
+        this.initLanguage(this.mShareTextBlock);
+        this.initLanguage(this.mRankTextBlock);
+        this.initLanguage(this.mHpTextBlock);
+        this.initLanguage(this.mKillTipTextBlock1);
+        this.initLanguage(this.mKillTipTextBlock2);
+        this.initLanguage(this.mKillTipTextBlock3);
+        this.initLanguage(this.mInvincibleTextBlock);
+        this.initLanguage(this.mDeadCountDownTextBlock);
+        //文本多语言
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/VsCanvas/RedVsCanvas/RedVsTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/VsCanvas/BlueVsCanvas/BlueVsTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/PlayerCanvas/HpCanvas/HpTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mDeadCanvas/DeadTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mDeadCanvas/DeadTipsTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/SetTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mFireCanvas/FireTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mFireCanvas/LowFireTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mFireCanvas/MiddleFireTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mFireCanvas/HighFireTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mControlCanvas/ControlTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mControlCanvas/LowControlTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mControlCanvas/MiddleControlTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mControlCanvas/HighControlTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mBgmCanvas/BgmTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mBgmCanvas/LowBgmTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mBgmCanvas/MiddleBgmTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mBgmCanvas/HighBgmTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mSoundCanvas/SoundTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mSoundCanvas/LowSoundTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mSoundCanvas/MiddleSoundTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/SetMainCanvas/mSoundCanvas/HighSoundTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mSetCanvas/SetBgCanvas/mResetPosButton/ResetTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mMorphCanvas/MorphTextBlock"));
+    }
+    /**初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /**显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /**隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+HUDPanel1_Generate = __decorate([
+    UIBind('UI/module/HUDPanel1.ui')
+], HUDPanel1_Generate);
+var HUDPanel1_Generate$1 = HUDPanel1_Generate;
+
+var foreign176 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: HUDPanel1_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RadarModule/RadarPanel.ui
- * TIME: 2025.03.16-00.11.34
+ * TIME: 2025.03.16-00.18.35
  */
 let RadarPanel_Generate = class RadarPanel_Generate extends UIScript {
     onAwake() {
@@ -23729,7 +23816,7 @@ RadarPanel_Generate = __decorate([
 ], RadarPanel_Generate);
 var RadarPanel_Generate$1 = RadarPanel_Generate;
 
-var foreign189 = /*#__PURE__*/Object.freeze({
+var foreign190 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadarPanel_Generate$1
 });
@@ -23910,31 +23997,32 @@ const MWModuleMap = {
      'EF8CF652443106FAD829B9B7D44FDF4A': foreign173,
      '6378A8BD4992C396F0BF5795C241272A': foreign174,
      'E65657ED48A221438A440EB8FB55AB3A': foreign175,
-     '81DB488B4537080ADE438FB6277B9B99': foreign176,
-     '2F9428944CB1980E4084FE859E88FA49': foreign177,
-     'EEBA68B04C2D3EBD1C9DE88C01194F40': foreign178,
-     'B56708264994D262084DBB9FA67AF2D8': foreign179,
-     '6B82650D49240287CCBE369F13961488': foreign180,
-     'D28B228548DF452E65AD98BD5629DF83': foreign181,
-     '370EDC474EA3A5D2CC3B2EB8833710C1': foreign182,
-     'F214F82148135D5766B65E870C889403': foreign183,
-     'A4E1A63F462AC04629353FB8D37AE2A4': foreign184,
-     'D66B2BC54C433C2A46A01D8554F3A934': foreign185,
-     '657AFFAA4EA9A9EA8BC4989B57A03398': foreign186,
-     '1A472DAE4F642552EFDCF49BD44154D7': foreign187,
-     '2AE28EBB41053C381833DE8EDEC76E49': foreign188,
-     '4BAAB5D2447B37D97384719CE67C9E72': foreign189,
-     '4B7AD5B5415D6B34A20794B83D33C8D4': foreign190,
-     '8B4959C3457E9E607BFD83A45E3B0B4E': foreign191,
-     '61C409DE43B68BAD7C2712AC407F6B85': foreign192,
-     '93F9940A44F5B31028481C9944D24168': foreign193,
-     'BD732EF648AD01E5A18863865EF79E7F': foreign194,
-     'D7D5128A42442933D108809A874A1F67': foreign195,
-     '5951240940FFACB56FF8EB8F140D19E5': foreign196,
-     'E0AAC56B4C54E8B2B8B946A3EB4D60C5': foreign197,
-     '54FA95C94AC4FD0AE2C3AF985B5862A7': foreign198,
-     '181ACB1C48C92C4E510D6B94FA31BD79': foreign199,
-     'D01D7EC249C3AFF1D1C6D7A19C9B9D75': foreign200,
+     '87E37D4B49CC04E934329BB66970EF1C': foreign176,
+     '81DB488B4537080ADE438FB6277B9B99': foreign177,
+     '2F9428944CB1980E4084FE859E88FA49': foreign178,
+     'EEBA68B04C2D3EBD1C9DE88C01194F40': foreign179,
+     'B56708264994D262084DBB9FA67AF2D8': foreign180,
+     '6B82650D49240287CCBE369F13961488': foreign181,
+     'D28B228548DF452E65AD98BD5629DF83': foreign182,
+     '370EDC474EA3A5D2CC3B2EB8833710C1': foreign183,
+     'F214F82148135D5766B65E870C889403': foreign184,
+     'A4E1A63F462AC04629353FB8D37AE2A4': foreign185,
+     'D66B2BC54C433C2A46A01D8554F3A934': foreign186,
+     '657AFFAA4EA9A9EA8BC4989B57A03398': foreign187,
+     '1A472DAE4F642552EFDCF49BD44154D7': foreign188,
+     '2AE28EBB41053C381833DE8EDEC76E49': foreign189,
+     '4BAAB5D2447B37D97384719CE67C9E72': foreign190,
+     '4B7AD5B5415D6B34A20794B83D33C8D4': foreign191,
+     '8B4959C3457E9E607BFD83A45E3B0B4E': foreign192,
+     '61C409DE43B68BAD7C2712AC407F6B85': foreign193,
+     '93F9940A44F5B31028481C9944D24168': foreign194,
+     'BD732EF648AD01E5A18863865EF79E7F': foreign195,
+     'D7D5128A42442933D108809A874A1F67': foreign196,
+     '5951240940FFACB56FF8EB8F140D19E5': foreign197,
+     'E0AAC56B4C54E8B2B8B946A3EB4D60C5': foreign198,
+     '54FA95C94AC4FD0AE2C3AF985B5862A7': foreign199,
+     '181ACB1C48C92C4E510D6B94FA31BD79': foreign200,
+     'D01D7EC249C3AFF1D1C6D7A19C9B9D75': foreign201,
 };
 const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/ChangeClothes"],
 [foreign2 || {}, "JavaScripts/common/ConfirmPanel"],
@@ -24094,7 +24182,7 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/ChangeCl
 [foreign156 || {}, "JavaScripts/tools/PrefabEvent"],
 [foreign157 || {}, "JavaScripts/tools/TouchScript"],
 [foreign158 || {}, "JavaScripts/tools/ui/LoadingPanel"],
-[foreign159 || {}, "JavaScripts/tools/utils"],
+[foreign159 || {}, "JavaScripts/tools/Utils"],
 [foreign160 || {}, "JavaScripts/tools/WaitingQueue"],
 [foreign161 || {}, "JavaScripts/ui-generate/common/ConfirmPanel_generate"],
 [foreign162 || {}, "JavaScripts/ui-generate/common/JumpGameTips_generate"],
@@ -24111,31 +24199,32 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/ChangeCl
 [foreign173 || {}, "JavaScripts/ui-generate/module/GunModule/WeaponUI_generate"],
 [foreign174 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
 [foreign175 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
-[foreign176 || {}, "JavaScripts/ui-generate/module/MallModule/ColorPickPanel_generate"],
-[foreign177 || {}, "JavaScripts/ui-generate/module/MallModule/ColorPickTab1_generate"],
-[foreign178 || {}, "JavaScripts/ui-generate/module/MallModule/ColorPickTab2_generate"],
-[foreign179 || {}, "JavaScripts/ui-generate/module/MallModule/ColorPickTab3_generate"],
-[foreign180 || {}, "JavaScripts/ui-generate/module/MallModule/MallItem_Big_generate"],
-[foreign181 || {}, "JavaScripts/ui-generate/module/MallModule/MallItem_Color_generate"],
-[foreign182 || {}, "JavaScripts/ui-generate/module/MallModule/MallItem_Self_generate"],
-[foreign183 || {}, "JavaScripts/ui-generate/module/MallModule/MallItem_Small_generate"],
-[foreign184 || {}, "JavaScripts/ui-generate/module/MallModule/MallPanel_generate"],
-[foreign185 || {}, "JavaScripts/ui-generate/module/MallModule/MallTab1_generate"],
-[foreign186 || {}, "JavaScripts/ui-generate/module/MallModule/MallTab2_generate"],
-[foreign187 || {}, "JavaScripts/ui-generate/module/MallModule/MallTab3_generate"],
-[foreign188 || {}, "JavaScripts/ui-generate/module/MallModule/MallTipsPanel_generate"],
-[foreign189 || {}, "JavaScripts/ui-generate/module/RadarModule/RadarPanel_generate"],
-[foreign190 || {}, "JavaScripts/ui-generate/module/RankModule/RankPanel_generate"],
-[foreign191 || {}, "JavaScripts/ui-generate/module/RankModule/RoomItem_generate"],
-[foreign192 || {}, "JavaScripts/ui-generate/module/RankModule/WorldItem_generate"],
-[foreign193 || {}, "JavaScripts/ui-generate/module/ShareModule/SharePanel_generate"],
-[foreign194 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
-[foreign195 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
-[foreign196 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
-[foreign197 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
-[foreign198 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamItem_generate"],
-[foreign199 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamPanel_generate"],
-[foreign200 || {}, "JavaScripts/ui-generate/tools/LoadingPanel_generate"]]);
+[foreign176 || {}, "JavaScripts/ui-generate/module/HUDPanel1_generate"],
+[foreign177 || {}, "JavaScripts/ui-generate/module/MallModule/ColorPickPanel_generate"],
+[foreign178 || {}, "JavaScripts/ui-generate/module/MallModule/ColorPickTab1_generate"],
+[foreign179 || {}, "JavaScripts/ui-generate/module/MallModule/ColorPickTab2_generate"],
+[foreign180 || {}, "JavaScripts/ui-generate/module/MallModule/ColorPickTab3_generate"],
+[foreign181 || {}, "JavaScripts/ui-generate/module/MallModule/MallItem_Big_generate"],
+[foreign182 || {}, "JavaScripts/ui-generate/module/MallModule/MallItem_Color_generate"],
+[foreign183 || {}, "JavaScripts/ui-generate/module/MallModule/MallItem_Self_generate"],
+[foreign184 || {}, "JavaScripts/ui-generate/module/MallModule/MallItem_Small_generate"],
+[foreign185 || {}, "JavaScripts/ui-generate/module/MallModule/MallPanel_generate"],
+[foreign186 || {}, "JavaScripts/ui-generate/module/MallModule/MallTab1_generate"],
+[foreign187 || {}, "JavaScripts/ui-generate/module/MallModule/MallTab2_generate"],
+[foreign188 || {}, "JavaScripts/ui-generate/module/MallModule/MallTab3_generate"],
+[foreign189 || {}, "JavaScripts/ui-generate/module/MallModule/MallTipsPanel_generate"],
+[foreign190 || {}, "JavaScripts/ui-generate/module/RadarModule/RadarPanel_generate"],
+[foreign191 || {}, "JavaScripts/ui-generate/module/RankModule/RankPanel_generate"],
+[foreign192 || {}, "JavaScripts/ui-generate/module/RankModule/RoomItem_generate"],
+[foreign193 || {}, "JavaScripts/ui-generate/module/RankModule/WorldItem_generate"],
+[foreign194 || {}, "JavaScripts/ui-generate/module/ShareModule/SharePanel_generate"],
+[foreign195 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
+[foreign196 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
+[foreign197 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
+[foreign198 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
+[foreign199 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamItem_generate"],
+[foreign200 || {}, "JavaScripts/ui-generate/module/TeamModule/TeamPanel_generate"],
+[foreign201 || {}, "JavaScripts/ui-generate/tools/LoadingPanel_generate"]]);
 
 exports.MWFileMapping = MWFileMapping;
 exports.MWModuleMap = MWModuleMap;
