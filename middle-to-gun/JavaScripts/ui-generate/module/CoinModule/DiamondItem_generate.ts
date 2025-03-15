@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/DiamondItem.ui
- * TIME: 2025.01.03-23.21.31
+ * TIME: 2025.03.16-00.11.33
  */
  
 @UIBind('UI/module/CoinModule/DiamondItem.ui')

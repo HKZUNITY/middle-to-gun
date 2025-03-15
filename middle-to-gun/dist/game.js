@@ -29,7 +29,7 @@ function __decorate(decorators, target, key, desc) {
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/NoticeView.ui
- * TIME: 2025.01.03-23.21.30
+ * TIME: 2025.03.16-00.11.33
  */
 let NoticeView_Generate = class NoticeView_Generate extends UIScript {
     get con_top_notice() {
@@ -96,7 +96,7 @@ var foreign163 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/TopNoticeItem.ui
- * TIME: 2025.01.03-23.21.30
+ * TIME: 2025.03.16-00.11.33
  */
 let TopNoticeItem_Generate = class TopNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -1879,7 +1879,7 @@ function cubicBezier$1(p1x, p1y, p2x, p2y) {
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdModule/AdPanel.ui
- * TIME: 2025.01.03-23.21.31
+ * TIME: 2025.03.16-00.11.34
  */
 let AdPanel_Generate = class AdPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -2102,7 +2102,7 @@ var foreign1 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/ConfirmPanel.ui
- * TIME: 2025.01.03-23.21.30
+ * TIME: 2025.03.16-00.11.33
  */
 let ConfirmPanel_Generate = class ConfirmPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -2701,130 +2701,10 @@ var foreign34 = /*#__PURE__*/Object.freeze({
     FullHairConfig: FullHairConfig
 });
 
-const EXCELDATA$H = [["ID", "GUNNAME", "GUNPREFAB", "GUNICON", "GUNICON_M", "GUNLOC", "GUNSCALE", "IATURNICON", "PRICETYPE", "PRICE", "FIREINTERVAL", "BULLETCOUNT", "HURT"], ["", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "水枪", "587777AD4056DC3AB465FBA7D3F5F7BA", null, "166941", new mw.Vector(0, 0, 0), new mw.Vector(1, 2, 1), 0, 1, [1, 15888], "0.2", 30, 25], [2, "泡泡枪", "0D543D5346C331F41DA890A5E6DD3DB5", null, "155696", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1, 15888], "0.2", 30, 25], [3, "霰弹枪", "E3E0C2994D3518540DBB6D8C00C8AB83", null, "226214", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), 0, 1, [1, 15888], "0.15", 30, 25], [4, "金枪鱼", "5181250F44DF914A714B668F99177E3A", null, "138213", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1, 15888], "0.15", 30, 25], [5, "脉冲枪", "1CD6AEAB4602DF140ACE93BD49D5CA19", null, "153110", new mw.Vector(0, 0, 0), new mw.Vector(2, 2.5, 2), 0, 1, [1, 15888], "0.1", 35, 25], [6, "喷火枪", "A469CCC84AAA873815243BB25439707C", null, "226213", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), 0, 1, [1, 15888], "0.1", 35, 25], [7, "散弹喷枪", "68E812DC47B714F9A2BB2ABE18304C5B", null, "155702", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [2, 28888], "0.1", 35, 25], [8, "霰弹枪枪身", "BA1BDC034FCDE8574CBBAA8C4831A950", null, "318664", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [2, 28888], "0.1", 40, 25], [9, "火箭发射器", "FCFE18BE440FAEBD5AB999A222F10AA9", null, "226826", new mw.Vector(0, 0, 0), new mw.Vector(1.5, 1, 1), 0, 1, [2, 28888], "0.2", 100, 25], [10, "激光幽灵枪", "23240FEE4F3BD25DE8EA6DBE525B3A20", null, "122716", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 1, 1, [3, 38888], "0.3", 40, 50], [11, "烟花枪", "A830458640D6EA21FB7AEA8F7E029CB7", null, "122726", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [10, 3888888], "0.3", 40, 50], [12, "激光烈火枪", "0C7F278C4254F90F69614086DCA0B906", null, "95676", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [30, 4888888], "0.3", 40, 50], [13, "激光冰雷枪", "29CD5E6145D1B05590E887A050E0D3C8", null, "122720", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [50, 4888888], "0.3", 40, 50], [14, "尖叫鸡", "015C826546EBC60F95EF399D16523B78", null, "20799", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 3), 1, 1, [888, 58888888], "1", 10, 100]];
-class GUNConfig extends ConfigBase {
-    constructor() {
-        super(EXCELDATA$H);
-    }
-}
-
-var foreign38 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    GUNConfig: GUNConfig
-});
-
-const EXCELDATA$G = [["ID", "AssetId", "OffsetPos", "OffsetRot", "OffsetSca"], ["", "", "", "", ""], [1, "C665A5E44F6F23B13103ADB63B6DB8FE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [2, "7EFE3FDB48F92FD44D7B9C9B4617847B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [3, "0FCB78664DCD1BB057543DB8A067C122", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [4, "6EEEE3FE4889D23A286CC8B30701C8EE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [5, "EE3A158548986A567D4741AF925DEA34", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [6, "B40762884A5A907F6FC1018C2E8185C8", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [7, "77796AE5405E9B5B173C9EA0E0131A7D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [8, "6CF59C074F7CD23EEEA26B8CCFFBC2C2", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [9, "B04EE94540EE3000A660AEA94FDB25D2", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [10, "471E86844D001CE4E84DA8BABEB0DDEA", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [11, "98CDBDE94A8C79B6C5DD8E96AF07FAF7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [12, "967939744A6C3F5FB4E850A3E7B33E3B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [13, "4F5E80FC46C55F6F7F5ED0AFCA5D414A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [14, "6D4B721A4E1B76493972E08A824F8AE7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [15, "424A2E254F9FD0AABA1BE3B4E7992B60", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [16, "AFC3939B401019F2DEE37784CC1803A5", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [17, "63D0E8894374EF73151267AE2CD7A6E8", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [18, "CA3C71F24708B24B97555584A526400D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [19, "473BEFA7481C557195E608A058891B5A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [20, "A62514214509E9BB6FFCD286F0A8CACE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [21, "7CDBD4B148DCD0CB517E88819C62FD4D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [22, "429C69244E35328DF8D73CA554BFE01C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [23, "662BFCAD46B8DDB2C1F15E95DC1D71FB", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [24, "C7AF1DB740B957C45B589589961D4E9A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [25, "B1C3D37445115C0FD6602D86C18F5A5E", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [26, "4241E3D6474673648F132C9EE621BB2F", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [27, "893BFC51454BD89A3F56B99C7D87C45D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [28, "C54732A548232206595D87B7BB339EF7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [29, "7B07E44B468B61C5618A599240037492", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [30, "FA4C79AE412B67C2D02B5C8ABFD6A648", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [31, "B22039F941FFA26BC319D784637C0835", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [32, "36A8FDF445016445175EAB94DF5ECB2D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [33, "874AD10242ADB2FB8F99F0A7CFEDFD92", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(5, 5, 5)], [34, "AC6DA72A418140BECDB4DB959200750D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(0.5, 0.5, 0.5)], [35, "FB2E466B4DBEB0D3DA22C9AFDD2D0AAD", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [36, "5E9F896F4292738E09AFC6A7290FDA43", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [37, "1E47FB6B4F4DCED75E97CB83424EC32F", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)]];
-class MorphConfig extends ConfigBase {
-    constructor() {
-        super(EXCELDATA$G);
-    }
-}
-
-var foreign51 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    MorphConfig: MorphConfig
-});
-
-const EXCELDATA$F = [["ID", "ROLEID", "PRICETYPE", "PRICE", "NAME"], ["", "", "", "", ""], [1, "181562", 1, [1, 5888], "兜帽男"], [2, "143400", 1, [1, 5888], "双马尾女"], [3, "142292", 1, [1, 5888], "男战士"], [4, "142272", 1, [1, 5888], "机甲少女"], [5, "142293", 1, [1, 5888], "男骑士"], [6, "142255", 1, [1, 5888], "纳米机甲女性"], [7, "219915", 1, [1, 5888], "赛博少年"], [8, "226379", 1, [1, 5888], "赛博少年"], [9, "219912", 1, [1, 5888], "赛博少女"], [10, "226386", 1, [1, 5888], "赛博少女"], [11, "266641", 1, [1, 5888], "一定锅少年"], [12, "267183", 1, [1, 5888], "求神少年"], [13, "264622", 1, [1, 5888], "一定锅少女"], [14, "266861", 1, [1, 5888], "求神少女"], [15, "142302", 1, [1, 5888], "宝石铠甲男"], [16, "142303", 1, [1, 5888], "铠甲男战士"], [17, "142396", 1, [1, 5888], "黑人男纳米机甲"], [18, "142397", 1, [1, 5888], "白人男纳米机甲"], [19, "142398", 1, [1, 5888], "白银骑士"], [20, "142906", 1, [1, 5888], "鹰战士"], [21, "142895", 1, [1, 5888], "战士"], [22, "142886", 1, [1, 5888], "毒液怪人"], [23, "142905", 1, [1, 5888], "蚁侠士"], [24, "142898", 1, [1, 5888], "最强队长"], [25, "142885", 1, [1, 5888], "超帅侠"], [26, "142900", 1, [1, 5888], "奇异战士"], [27, "142901", 1, [1, 5888], "闪电怪"], [28, "142887", 1, [1, 5888], "恶灵骷髅"], [29, "142888", 1, [1, 5888], "铁人"], [30, "222475", 1, [1, 5888], "风衣女"], [31, "219916", 1, [1, 5888], "汉服少女"], [32, "266860", 1, [1, 5888], "时尚少女"], [33, "226382", 1, [1, 5888], "潮流少女"], [34, "222476", 1, [1, 5888], "古代书生"]];
-class ROLEConfig extends ConfigBase {
-    constructor() {
-        super(EXCELDATA$F);
-    }
-}
-
-var foreign59 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    ROLEConfig: ROLEConfig
-});
-
-const EXCELDATA$E = [["ID", "CommodityId", "PartyPrice", "Count", "Des", "Icon"], ["", "", "", "", "", ""], [1, "2up8k7U7ULm0000hZ", 98, 100, "钻石*100", "103220"], [2, "9ZHaEgphvWq0000ha", 580, 600, "钻石*600", "103221"], [3, "6JfMPeEBARi0000hb", 980, 1000, "钻石*1000", "103215"], [4, "55OB9kdnutU0000hc", 2800, 3000, "钻石*3000", "103214"], [5, "7BktFJ9eIPI0000hd", 6800, 7000, "钻石*7000", "103214"], [6, "8CbboTcgQAn0000he", 9800, 10000, "钻石*10000", "103217"], [7, "6I0UekjBePp0000hf", 19800, 20000, "钻石*20000", "103217"], [8, "6U1htY0UV3i0000hg", 45800, 50000, "钻石*50000", "103218"], [9, "A2d5Hp0SiF40000hh", 88800, 100000, "钻石*100000", "103218"]];
-class ShopItemConfig extends ConfigBase {
-    constructor() {
-        super(EXCELDATA$E);
-    }
-}
-
-var foreign62 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    ShopItemConfig: ShopItemConfig
-});
-
-const EXCELDATA$D = [["ID", "Name", "TaskType", "TaskItemType", "NextId", "TragetNum", "Coin", "Diamond"], ["", "", "", "", "", "", "", ""], [1, "每日登录游戏（{0}/{1}）", 1, 1, 0, 1, 100, 1], [11, "每日在线时长5分钟（{0}/{1}）", 1, 11, 0, 5, 500, 1], [12, "每日在线时长10分钟（{0}/{1}）", 1, 12, 0, 10, 500, 5], [13, "每日在线时长15分钟（{0}/{1}）", 1, 13, 0, 15, 500, 5], [14, "每日在线时长20分钟（{0}/{1}）", 1, 14, 0, 20, 500, 10], [15, "每日在线时长25分钟（{0}/{1}）", 1, 15, 0, 25, 500, 10], [16, "每日在线时长30分钟（{0}/{1}）", 1, 16, 0, 30, 500, 20], [17, "每日在线时长40分钟（{0}/{1}）", 1, 17, 0, 40, 1000, 20], [18, "每日在线时长50分钟（{0}/{1}）", 1, 18, 0, 50, 1000, 30], [19, "每日在线时长60分钟（{0}/{1}）", 1, 19, 0, 60, 1000, 100], [31, "每日击败1个玩家（{0}/{1}）", 1, 31, 0, 1, 20, 1], [32, "每日击败5个玩家（{0}/{1}）", 1, 32, 0, 5, 80, 1], [33, "每日击败10个玩家（{0}/{1}）", 1, 33, 0, 10, 100, 2], [34, "每日击败20个玩家（{0}/{1}）", 1, 34, 0, 20, 200, 2], [35, "每日击败30个玩家（{0}/{1}）", 1, 35, 0, 30, 200, 5], [36, "每日击败50个玩家（{0}/{1}）", 1, 36, 0, 50, 400, 5], [37, "每日击败100个玩家（{0}/{1}）", 1, 37, 0, 100, 1000, 10], [38, "每日击败200个玩家（{0}/{1}）", 1, 38, 0, 200, 2000, 10], [39, "每日击败300个玩家（{0}/{1}）", 1, 39, 0, 300, 2000, 100], [101, "每周登录1天（{0}/{1}）", 2, 101, 0, 1, 1000, 1], [102, "每周登录2天（{0}/{1}）", 2, 102, 0, 2, 1000, 100], [103, "每周登录3天（{0}/{1}）", 2, 103, 0, 3, 1000, 200], [104, "每周登录4天（{0}/{1}）", 2, 104, 0, 4, 1000, 300], [105, "每周登录5天（{0}/{1}）", 2, 105, 0, 5, 1000, 400], [106, "每周登录6天（{0}/{1}）", 2, 106, 0, 6, 1000, 500], [107, "每周登录7天（{0}/{1}）", 2, 107, 0, 7, 1000, 600]];
-class TaskConfig extends ConfigBase {
-    constructor() {
-        super(EXCELDATA$D);
-    }
-}
-
-var foreign74 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    TaskConfig: TaskConfig
-});
-
-const EXCELDATA$C = [["ID", "TRAILING", "PRICETYPE", "PRICE", "NAME"], ["", "", "", "", ""], [1, "14317", 1, [1, 8888], "烟雾拖尾"], [2, "14319", 1, [1, 8888], "烟雾拖尾"], [3, "27399", 1, [1, 8888], "烟雾拖尾"], [4, "27447", 1, [1, 8888], "粒子拖尾"], [5, "30497", 1, [1, 8888], "烟雾拖尾"], [6, "88020", 1, [1, 8888], "光束拖尾"], [7, "88442", 1, [1, 8888], "光束拖尾"], [8, "88443", 1, [1, 8888], "光束拖尾"], [9, "88796", 1, [1, 8888], "烟雾拖尾"], [10, "88794", 1, [1, 8888], "烟雾拖尾"], [11, "88797", 1, [1, 8888], "烟雾拖尾"], [12, "88798", 1, [1, 8888], "烟雾拖尾"], [13, "89592", 1, [1, 8888], "光束拖尾"], [14, "128512", 1, [1, 8888], "光束拖尾"], [15, "128513", 1, [1, 8888], "光束拖尾"], [16, "128514", 1, [1, 8888], "光束拖尾"], [17, "128515", 1, [1, 8888], "光束拖尾"], [18, "128516", 1, [1, 8888], "光束拖尾"], [19, "128517", 1, [1, 8888], "光束拖尾"], [20, "128518", 1, [1, 8888], "光束拖尾"], [21, "146783", 1, [1, 8888], "烟雾拖尾"], [22, "148710", 1, [1, 8888], "拖尾"], [23, "150907", 1, [1, 8888], "水拖尾"], [24, "145511", 1, [1, 8888], "火焰拖尾"], [25, "151527", 1, [1, 8888], "烟雾拖尾"], [26, "151528", 1, [1, 8888], "烟雾拖尾"], [27, "153603", 1, [1, 8888], "拖尾"], [28, "153613", 1, [1, 8888], "拖尾"], [29, "128519", 1, [1, 8888], "光束拖尾"], [30, "128520", 1, [1, 8888], "光束拖尾"], [31, "145496", 1, [1, 8888], "烟雾拖尾"], [32, "145506", 1, [1, 8888], "拖尾"], [33, "128521", 1, [1, 8888], "光束拖尾"], [34, "4399", 1, [1, 8888], "雷拖尾"], [35, "27392", 1, [1, 8888], "彩虹拖尾"], [36, "133481", 1, [1, 8888], "胎印拖尾"], [37, "145492", 1, [1, 8888], "螺丝钉拖尾"], [38, "145493", 1, [1, 8888], "足球拖尾"], [39, "145494", 1, [1, 8888], "彩虹拖尾"], [40, "145495", 1, [1, 8888], "糖果拖尾"], [41, "145497", 1, [1, 8888], "奖杯拖尾"], [42, "145498", 1, [1, 8888], "皇冠拖尾"], [43, "145499", 1, [1, 8888], "爱心拖尾"], [44, "145500", 1, [1, 8888], "骷髅拖尾"], [45, "145502", 1, [1, 8888], "香蕉拖尾"], [46, "145503", 1, [1, 8888], "雷电拖尾"], [47, "145504", 1, [1, 8888], "雪花拖尾"], [48, "145505", 1, [1, 8888], "2023拖尾"], [49, "145507", 1, [1, 8888], "爆竹拖尾"], [50, "145508", 1, [1, 8888], "烟花拖尾"], [51, "145509", 1, [1, 8888], "礼物拖尾"], [52, "145510", 1, [1, 8888], "钞票拖尾"], [53, "145512", 1, [1, 8888], "泡泡拖尾"], [54, "145513", 1, [1, 8888], "彩带拖尾"], [55, "186344", 1, [1, 8888], "便便拖尾"], [56, "195115", 1, [1, 8888], "枫叶拖尾"], [57, "196217", 1, [1, 8888], "六芒星拖尾"], [58, "221186", 1, [1, 8888], "蝴蝶拖尾"], [59, "221187", 1, [1, 8888], "冰淇淋拖尾"], [60, "267975", 1, [1, 8888], "鸟拖尾"], [61, "271639", 1, [1, 8888], "蝙蝠拖尾"], [62, "289528", 1, [1, 8888], "祥云拖尾"], [63, "290033", 1, [1, 8888], "爪印"]];
-class TRAILINGConfig extends ConfigBase {
-    constructor() {
-        super(EXCELDATA$C);
-    }
-}
-
-var foreign77 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    TRAILINGConfig: TRAILINGConfig
-});
-
-class GameConfig {
-    /**
-    * 多语言设置
-    * @param languageIndex 语言索引(-1为系统默认语言)
-    * @param getLanguageFun 根据key获取语言内容的方法
-    */
-    static initLanguage(languageIndex, getLanguageFun) {
-        ConfigBase.initLanguage(languageIndex, getLanguageFun);
-        this.configMap.clear();
-    }
-    static getConfig(ConfigClass) {
-        if (!this.configMap.has(ConfigClass.name)) {
-            this.configMap.set(ConfigClass.name, new ConfigClass());
-        }
-        return this.configMap.get(ConfigClass.name);
-    }
-    static get GUN() { return this.getConfig(GUNConfig); }
-    ;
-    static get Morph() { return this.getConfig(MorphConfig); }
-    ;
-    static get ROLE() { return this.getConfig(ROLEConfig); }
-    ;
-    static get ShopItem() { return this.getConfig(ShopItemConfig); }
-    ;
-    static get Task() { return this.getConfig(TaskConfig); }
-    ;
-    static get TRAILING() { return this.getConfig(TRAILINGConfig); }
-    ;
-}
-GameConfig.configMap = new Map();
-
-var foreign35 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    GameConfig: GameConfig
-});
-
-const EXCELDATA$B = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, "翻毛黄金首饰", "137386", 1], [2, "清洁手套", "119254", 2]];
-class GlovesConfig extends ConfigBase {
-    constructor() {
-        super(EXCELDATA$B);
-    }
-}
-
-var foreign36 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    GlovesConfig: GlovesConfig
-});
-
-const EXCELDATA$A = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "502239", 2], [2, null, "497737", 2], [3, null, "476303", 2], [4, null, "458634", 2], [5, null, "457816", 2], [6, null, "457731", 2], [7, null, "440212", 2], [8, null, "412073", 2], [9, null, "390741", 2], [10, null, "390739", 2], [11, null, "390343", 2], [12, null, "344061", 2], [13, null, "322893", 2], [14, null, "321369", 2], [15, null, "314289", 2], [16, null, "300485", 2], [17, null, "299083", 2], [18, null, "292847", 2], [19, null, "269618", 2], [20, null, "241439", 2], [21, null, "240051", 2], [22, null, "224012", 2], [23, null, "218567", 2], [24, null, "213470", 2], [25, null, "213469", 2], [26, null, "213468", 2], [27, null, "131791", 2], [28, null, "121945", 2], [29, null, "119226", 2], [30, null, "111259", 2], [31, null, "111087", 2], [32, null, "75663", 2], [33, null, "66574", 2], [34, null, "66423", 2], [35, null, "66299", 2], [36, null, "65658", 2], [37, null, "64721", 2], [38, null, "64720", 2], [39, null, "63875", 2], [40, null, "63308", 2], [41, null, "63307", 2], [42, null, "62547", 2], [43, null, "60992", 2], [44, null, "60081", 2], [45, null, "507471", 1], [46, null, "502262", 1], [47, null, "336268", 1], [48, null, "320848", 1], [49, null, "313978", 1], [50, null, "313678", 1], [51, null, "299158", 1], [52, null, "293136", 1], [53, null, "247534", 1], [54, null, "224167", 1], [55, null, "218834", 1], [56, null, "213090", 1], [57, null, "213089", 1], [58, null, "213088", 1], [59, null, "212894", 1], [60, null, "200235", 1], [61, null, "150735", 1], [62, null, "134566", 1], [63, null, "131746", 1], [64, null, "129935", 1], [65, null, "129274", 1], [66, null, "129090", 1], [67, null, "127718", 1], [68, null, "127496", 1], [69, null, "126680", 1], [70, null, "122780", 1], [71, null, "120574", 1], [72, null, "119892", 1], [73, null, "119663", 1], [74, null, "119391", 1], [75, null, "119254", 1], [76, null, "118078", 1], [77, null, "117683", 1], [78, null, "115939", 1], [79, null, "112037", 1], [80, null, "111576", 1], [81, null, "111390", 1], [82, null, "111285", 1], [83, null, "109141", 1], [84, null, "94783", 1], [85, null, "75664", 1], [86, null, "65778", 1], [87, null, "65730", 1], [88, null, "64631", 1], [89, null, "64551", 1], [90, null, "63890", 1], [91, null, "60384", 1]];
+const EXCELDATA$H = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "502239", 2], [2, null, "497737", 2], [3, null, "476303", 2], [4, null, "458634", 2], [5, null, "457816", 2], [6, null, "457731", 2], [7, null, "440212", 2], [8, null, "412073", 2], [9, null, "390741", 2], [10, null, "390739", 2], [11, null, "390343", 2], [12, null, "344061", 2], [13, null, "322893", 2], [14, null, "321369", 2], [15, null, "314289", 2], [16, null, "300485", 2], [17, null, "299083", 2], [18, null, "292847", 2], [19, null, "269618", 2], [20, null, "241439", 2], [21, null, "240051", 2], [22, null, "224012", 2], [23, null, "218567", 2], [24, null, "213470", 2], [25, null, "213469", 2], [26, null, "213468", 2], [27, null, "131791", 2], [28, null, "121945", 2], [29, null, "119226", 2], [30, null, "111259", 2], [31, null, "111087", 2], [32, null, "75663", 2], [33, null, "66574", 2], [34, null, "66423", 2], [35, null, "66299", 2], [36, null, "65658", 2], [37, null, "64721", 2], [38, null, "64720", 2], [39, null, "63875", 2], [40, null, "63308", 2], [41, null, "63307", 2], [42, null, "62547", 2], [43, null, "60992", 2], [44, null, "60081", 2], [45, null, "507471", 1], [46, null, "502262", 1], [47, null, "336268", 1], [48, null, "320848", 1], [49, null, "313978", 1], [50, null, "313678", 1], [51, null, "299158", 1], [52, null, "293136", 1], [53, null, "247534", 1], [54, null, "224167", 1], [55, null, "218834", 1], [56, null, "213090", 1], [57, null, "213089", 1], [58, null, "213088", 1], [59, null, "212894", 1], [60, null, "200235", 1], [61, null, "150735", 1], [62, null, "134566", 1], [63, null, "131746", 1], [64, null, "129935", 1], [65, null, "129274", 1], [66, null, "129090", 1], [67, null, "127718", 1], [68, null, "127496", 1], [69, null, "126680", 1], [70, null, "122780", 1], [71, null, "120574", 1], [72, null, "119892", 1], [73, null, "119663", 1], [74, null, "119391", 1], [75, null, "119254", 1], [76, null, "118078", 1], [77, null, "117683", 1], [78, null, "115939", 1], [79, null, "112037", 1], [80, null, "111576", 1], [81, null, "111390", 1], [82, null, "111285", 1], [83, null, "109141", 1], [84, null, "94783", 1], [85, null, "75664", 1], [86, null, "65778", 1], [87, null, "65730", 1], [88, null, "64631", 1], [89, null, "64551", 1], [90, null, "63890", 1], [91, null, "60384", 1]];
 class GlovesGlovesConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$A);
+        super(EXCELDATA$H);
     }
 }
 
@@ -2833,10 +2713,34 @@ var foreign37 = /*#__PURE__*/Object.freeze({
     GlovesGlovesConfig: GlovesGlovesConfig
 });
 
-const EXCELDATA$z = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, "风暴女", "142261", 2], [2, "绯红女巫", "142262", 2], [3, "黑寡妇", "142891", 2], [4, "惊奇队长", "142893", 2], [5, "神奇女侠", "142902", 2], [6, "女战士", "349374", 2], [7, "魔法女孩", "350260", 2], [8, "战士服", "164416", 2], [9, "作战服", "164420", 2], [10, "紧身作战服", "164425", 2], [11, "塞西亚套装", "321428", 2], [12, "男式紧身服", "162938", 1], [13, "道服", "162937", 1], [14, "男作战服", "162946", 1], [15, "雷电战士服饰", "164355", 1], [16, "鱼族战士服", "164360", 1], [17, "战士服", "164361", 1], [18, "法师服饰", "164362", 1], [19, "面具骑士服", "164371", 1], [20, "黑夜战士服", "164373", 1], [21, "黄金战甲", "164378", 1], [22, "蝙蝠侠", "142884", 1], [23, "超人", "142885", 1], [24, "毒液", "142886", 1], [25, "恶灵骑士", "142887", 1], [26, "钢铁侠", "142888", 1], [27, "海王", "142889", 1], [28, "黑豹", "142890", 1], [29, "金刚狼", "142892", 1], [30, "雷神", "142894", 1], [31, "洛基", "142895", 1], [32, "绿灯侠", "142896", 1], [33, "绿巨人", "142897", 1], [34, "美国队长", "142898", 1], [35, "灭霸", "142899", 1], [36, "奇异博士", "142900", 1], [37, "闪电侠", "142901", 1], [38, "死侍", "142903", 1], [39, "万磁王", "142904", 1], [40, "蚁人", "142905", 1], [41, "鹰眼", "142906", 1], [42, "蜘蛛侠", "142907", 1]];
+const EXCELDATA$G = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, "翻毛黄金首饰", "137386", 1], [2, "清洁手套", "119254", 2]];
+class GlovesConfig extends ConfigBase {
+    constructor() {
+        super(EXCELDATA$G);
+    }
+}
+
+var foreign36 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    GlovesConfig: GlovesConfig
+});
+
+const EXCELDATA$F = [["ID", "GUNNAME", "GUNPREFAB", "GUNICON", "GUNICON_M", "GUNLOC", "GUNSCALE", "IATURNICON", "PRICETYPE", "PRICE", "FIREINTERVAL", "BULLETCOUNT", "HURT"], ["", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "水枪", "587777AD4056DC3AB465FBA7D3F5F7BA", null, "166941", new mw.Vector(0, 0, 0), new mw.Vector(1, 2, 1), 0, 1, [1, 15888], "0.2", 30, 25], [2, "泡泡枪", "0D543D5346C331F41DA890A5E6DD3DB5", null, "155696", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1, 15888], "0.2", 30, 25], [3, "霰弹枪", "E3E0C2994D3518540DBB6D8C00C8AB83", null, "226214", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), 0, 1, [1, 15888], "0.15", 30, 25], [4, "金枪鱼", "5181250F44DF914A714B668F99177E3A", null, "138213", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [1, 15888], "0.15", 30, 25], [5, "脉冲枪", "1CD6AEAB4602DF140ACE93BD49D5CA19", null, "153110", new mw.Vector(0, 0, 0), new mw.Vector(2, 2.5, 2), 0, 1, [1, 15888], "0.1", 35, 25], [6, "喷火枪", "A469CCC84AAA873815243BB25439707C", null, "226213", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), 0, 1, [1, 15888], "0.1", 35, 25], [7, "散弹喷枪", "68E812DC47B714F9A2BB2ABE18304C5B", null, "155702", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [2, 28888], "0.1", 35, 25], [8, "霰弹枪枪身", "BA1BDC034FCDE8574CBBAA8C4831A950", null, "318664", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [2, 28888], "0.1", 40, 25], [9, "火箭发射器", "FCFE18BE440FAEBD5AB999A222F10AA9", null, "226826", new mw.Vector(0, 0, 0), new mw.Vector(1.5, 1, 1), 0, 1, [2, 28888], "0.2", 100, 25], [10, "激光幽灵枪", "23240FEE4F3BD25DE8EA6DBE525B3A20", null, "122716", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 1, 1, [3, 38888], "0.3", 40, 50], [11, "烟花枪", "A830458640D6EA21FB7AEA8F7E029CB7", null, "122726", new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [10, 3888888], "0.3", 40, 50], [12, "激光烈火枪", "0C7F278C4254F90F69614086DCA0B906", null, "95676", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [30, 4888888], "0.3", 40, 50], [13, "激光冰雷枪", "29CD5E6145D1B05590E887A050E0D3C8", null, "122720", new mw.Vector(-30, 0, 0), new mw.Vector(1, 1, 1), 0, 1, [50, 4888888], "0.3", 40, 50], [14, "尖叫鸡", "015C826546EBC60F95EF399D16523B78", null, "20799", new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 3), 1, 1, [888, 58888888], "1", 10, 100]];
+class GUNConfig extends ConfigBase {
+    constructor() {
+        super(EXCELDATA$F);
+    }
+}
+
+var foreign38 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    GUNConfig: GUNConfig
+});
+
+const EXCELDATA$E = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, "风暴女", "142261", 2], [2, "绯红女巫", "142262", 2], [3, "黑寡妇", "142891", 2], [4, "惊奇队长", "142893", 2], [5, "神奇女侠", "142902", 2], [6, "女战士", "349374", 2], [7, "魔法女孩", "350260", 2], [8, "战士服", "164416", 2], [9, "作战服", "164420", 2], [10, "紧身作战服", "164425", 2], [11, "塞西亚套装", "321428", 2], [12, "男式紧身服", "162938", 1], [13, "道服", "162937", 1], [14, "男作战服", "162946", 1], [15, "雷电战士服饰", "164355", 1], [16, "鱼族战士服", "164360", 1], [17, "战士服", "164361", 1], [18, "法师服饰", "164362", 1], [19, "面具骑士服", "164371", 1], [20, "黑夜战士服", "164373", 1], [21, "黄金战甲", "164378", 1], [22, "蝙蝠侠", "142884", 1], [23, "超人", "142885", 1], [24, "毒液", "142886", 1], [25, "恶灵骑士", "142887", 1], [26, "钢铁侠", "142888", 1], [27, "海王", "142889", 1], [28, "黑豹", "142890", 1], [29, "金刚狼", "142892", 1], [30, "雷神", "142894", 1], [31, "洛基", "142895", 1], [32, "绿灯侠", "142896", 1], [33, "绿巨人", "142897", 1], [34, "美国队长", "142898", 1], [35, "灭霸", "142899", 1], [36, "奇异博士", "142900", 1], [37, "闪电侠", "142901", 1], [38, "死侍", "142903", 1], [39, "万磁王", "142904", 1], [40, "蚁人", "142905", 1], [41, "鹰眼", "142906", 1], [42, "蜘蛛侠", "142907", 1]];
 class HeroStylingOutfitConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$z);
+        super(EXCELDATA$E);
     }
 }
 
@@ -2845,10 +2749,10 @@ var foreign39 = /*#__PURE__*/Object.freeze({
     HeroStylingOutfitConfig: HeroStylingOutfitConfig
 });
 
-const EXCELDATA$y = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "497741", 2], [2, null, "490925", 2], [3, null, "436992", 2], [4, null, "358106", 2], [5, null, "321373", 2], [6, null, "299079", 2], [7, null, "218443", 2], [8, null, "211008", 2], [9, null, "164845", 2], [10, null, "141712", 2], [11, null, "137428", 2], [12, null, "127638", 2], [13, null, "67592", 2], [14, null, "66562", 2], [15, null, "65867", 2], [16, null, "64775", 2], [17, null, "64712", 2], [18, null, "64304", 2], [19, null, "64144", 2], [20, null, "63870", 2], [21, null, "63541", 2], [22, null, "62961", 2], [23, null, "62960", 2], [24, null, "62541", 2], [25, null, "62539", 2], [26, null, "60984", 2], [27, null, "60117", 2], [28, null, "60078", 2]];
+const EXCELDATA$D = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "497741", 2], [2, null, "490925", 2], [3, null, "436992", 2], [4, null, "358106", 2], [5, null, "321373", 2], [6, null, "299079", 2], [7, null, "218443", 2], [8, null, "211008", 2], [9, null, "164845", 2], [10, null, "141712", 2], [11, null, "137428", 2], [12, null, "127638", 2], [13, null, "67592", 2], [14, null, "66562", 2], [15, null, "65867", 2], [16, null, "64775", 2], [17, null, "64712", 2], [18, null, "64304", 2], [19, null, "64144", 2], [20, null, "63870", 2], [21, null, "63541", 2], [22, null, "62961", 2], [23, null, "62960", 2], [24, null, "62541", 2], [25, null, "62539", 2], [26, null, "60984", 2], [27, null, "60117", 2], [28, null, "60078", 2]];
 class HighHeelsShoesConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$y);
+        super(EXCELDATA$D);
     }
 }
 
@@ -2857,10 +2761,10 @@ var foreign40 = /*#__PURE__*/Object.freeze({
     HighHeelsShoesConfig: HighHeelsShoesConfig
 });
 
-const EXCELDATA$x = [["ID", "Describe", "AssetId", "Transform", "SexType"], ["", "", "", "", ""], [1, "尾巴", "136179", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [2, "孔雀尾巴", "292600", ["0", "0", "0", "-90", "0", "90", "1", "1", "1"], 0], [3, "尾巴", "136173", ["0", "0", "0", "-90", "0", "-90", "1", "1", "1"], 0], [4, "尾巴", "453459", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [5, "尾巴", "453460", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [6, "尾巴", "404432", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [7, "狐狸尾巴", "226476", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [8, "人鱼尾巴", "493583", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [9, "尾巴", "323388", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [10, null, "404432", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [11, null, "136172", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [12, null, "136182", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [13, null, "136174", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [14, null, "136162", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [15, null, "212788", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [16, null, "213045", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [17, null, "212598", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [18, null, "213046", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [19, null, "212911", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [20, null, "212761", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [21, null, "212762", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [22, null, "212599", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [23, null, "212786", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [24, null, "215996", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [25, null, "348230", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [26, null, "323953", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0]];
+const EXCELDATA$C = [["ID", "Describe", "AssetId", "Transform", "SexType"], ["", "", "", "", ""], [1, "尾巴", "136179", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [2, "孔雀尾巴", "292600", ["0", "0", "0", "-90", "0", "90", "1", "1", "1"], 0], [3, "尾巴", "136173", ["0", "0", "0", "-90", "0", "-90", "1", "1", "1"], 0], [4, "尾巴", "453459", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [5, "尾巴", "453460", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [6, "尾巴", "404432", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [7, "狐狸尾巴", "226476", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [8, "人鱼尾巴", "493583", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [9, "尾巴", "323388", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [10, null, "404432", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [11, null, "136172", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [12, null, "136182", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [13, null, "136174", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [14, null, "136162", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [15, null, "212788", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [16, null, "213045", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [17, null, "212598", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [18, null, "213046", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [19, null, "212911", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [20, null, "212761", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [21, null, "212762", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [22, null, "212599", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [23, null, "212786", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [24, null, "215996", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [25, null, "348230", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [26, null, "323953", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0]];
 class HipConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$x);
+        super(EXCELDATA$C);
     }
 }
 
@@ -2869,10 +2773,10 @@ var foreign41 = /*#__PURE__*/Object.freeze({
     HipConfig: HipConfig
 });
 
-const EXCELDATA$w = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, "圣诞节女", "136298", 2], [2, "煎饼狗子", "141608", 2], [3, "新年双马尾女", "141918", 2], [4, "新年女", "142187", 2], [5, "雪人001", "142264", 2], [6, "新年女青年", "142285", 2], [7, "万圣节女", "143399", 2], [8, "圣诞服装", "162933", 2], [9, "汉服襦裙", "163276", 2], [10, "圣诞公主裙", "163326", 2], [11, "圣诞装", "163549", 2], [12, "春节时装", "163552", 2], [13, "雪人装", "164566", 2], [14, "新年装", "297941", 2], [15, "兔子套装", "314666", 2], [16, "汉服长袍", "162964", 1], [17, "春节时装", "164565", 1], [18, "摇滚歌手服饰", "164567", 1], [19, "圣诞老人服", "164568", 1], [20, "巫医服饰", "164569", 1], [21, "教廷服饰", "164570", 1], [22, "鬼脸套装", "164571", 1], [23, "圣诞老人套装", "164572", 1], [24, "圣诞装", "164573", 1], [25, "鸡蛋套装", "314226", 1], [26, "兔子套装", "314664", 1], [27, "圣诞老人", "136299", 1], [28, "Cupid", "141077", 1], [29, "凌羽琪", "141155", 1], [30, "新年男", "142186", 1], [31, "新年男青年", "142273", 1], [32, "新年男中年", "142284", 1], [33, "新年男005", "142313", 1]];
+const EXCELDATA$B = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, "圣诞节女", "136298", 2], [2, "煎饼狗子", "141608", 2], [3, "新年双马尾女", "141918", 2], [4, "新年女", "142187", 2], [5, "雪人001", "142264", 2], [6, "新年女青年", "142285", 2], [7, "万圣节女", "143399", 2], [8, "圣诞服装", "162933", 2], [9, "汉服襦裙", "163276", 2], [10, "圣诞公主裙", "163326", 2], [11, "圣诞装", "163549", 2], [12, "春节时装", "163552", 2], [13, "雪人装", "164566", 2], [14, "新年装", "297941", 2], [15, "兔子套装", "314666", 2], [16, "汉服长袍", "162964", 1], [17, "春节时装", "164565", 1], [18, "摇滚歌手服饰", "164567", 1], [19, "圣诞老人服", "164568", 1], [20, "巫医服饰", "164569", 1], [21, "教廷服饰", "164570", 1], [22, "鬼脸套装", "164571", 1], [23, "圣诞老人套装", "164572", 1], [24, "圣诞装", "164573", 1], [25, "鸡蛋套装", "314226", 1], [26, "兔子套装", "314664", 1], [27, "圣诞老人", "136299", 1], [28, "Cupid", "141077", 1], [29, "凌羽琪", "141155", 1], [30, "新年男", "142186", 1], [31, "新年男青年", "142273", 1], [32, "新年男中年", "142284", 1], [33, "新年男005", "142313", 1]];
 class HolidayStylingOutfitConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$w);
+        super(EXCELDATA$B);
     }
 }
 
@@ -2881,10 +2785,10 @@ var foreign42 = /*#__PURE__*/Object.freeze({
     HolidayStylingOutfitConfig: HolidayStylingOutfitConfig
 });
 
-const EXCELDATA$v = [["Id", "Name", "Value", "Value_Ch", "Value_Cht", "Value_J", "Value_K"], ["", "Key|ReadByName", "MainLanguage", "ChildLanguage", "ChildLanguage", "ChildLanguage", "ChildLanguage"], [1, "CannotResetPositionWithinSeconds", "Cannot Reset Position Within {0} Seconds", "{0}秒内不可重置位置", null, null, null], [2, "DoYouWantToResetThePosition", "Do You Want To Reset The Position", "是否重置位置", null, null, null], [3, "Yes", "Yes", "是", null, null, null], [4, "No", "No", "否", null, null, null], [5, "ResetPosition", "Reset Position", "重置位置", null, null, null], [6, "DoYouWantToUseItImmediately", "Do You Want To Use It Immediately", "是否立即使用", null, null, null], [7, "Buy", "Buy", "购买", null, null, null], [8, "ConfirmExpenses", "Confirm Expenses", "确认花费", null, null, null], [9, "Diamonds", "Diamonds", "钻石", null, null, null], [10, "GoldCoins", "Gold Coins", "金币", null, null, null], [11, "Cancel", "Cancel", "取消", null, null, null], [12, "Tips", "Tips", "提示", null, null, null], [13, "AcquisitionFailedPleaseTryAgain", "Acquisition Failed, Please Try Again", "获取失败，请重试", null, null, null], [14, "FreeCollectionOfCoins", "Free Collection Of {0} Coins", "免费领取{0}金币", null, null, null], [15, "FreeToReceive", "Free To Receive", "免费领取", null, null, null], [16, "DoubleTheRewardMaximumHealthIncreasedTo", "Double The Reward\nMaximum Health Increased To {0}", "奖励翻倍\n最大生命值提高到{0}", null, null, null], [17, "FreeIncrease", "Free Increase", "免费提高", null, null, null], [18, "FreeUseOfOneRound", "{0}\nFree Use Of One Round", "{0}\n免费使用一局", null, null, null], [19, "FreeToUse", "Free To Use", "免费使用", null, null, null], [20, "FreeCollectionOfDiamonds", "Free Collection Of {0} Diamonds", "免费领取{0}钻石", null, null, null], [21, "Get", "Get", "获得", null, null, null], [22, "Spend", "Spend", "花费", null, null, null], [23, "Lurking", "Lurkers", "潜伏者", null, null, null], [24, "Defenders", "Defenders", "保卫者", null, null, null], [25, "Life", "Hp", "生命", null, null, null], [26, "InvincibleTime", "Invincible Time", "无敌时间", null, null, null], [27, "ResurrectionCountdown", "Resurrection Countdown", "复活倒计时", null, null, null], [28, "InvincibleWithinSecondsAfterResurrection", "Invincible Within {0} Seconds After Resurrection", "复活后{0}秒内无敌", null, null, null], [29, "SetUp", "Set Up", "设置", null, null, null], [30, "FiringSensitivity", "Firing Sensitivity", "开火灵敏度", null, null, null], [31, "ControlSensitivity", "Control Sensitivity", "控制灵敏度", null, null, null], [32, "BackgroundMusicSize", "Background Music Size", "背景音乐大小", null, null, null], [33, "SfxVolume", "Sfx Volume", "音效大小", null, null, null], [34, "Defeated", " Defeated ", " 击败了 ", null, null, null], [35, "YouHaveBeenDefeatedBy", "You Have Been Defeated By {0}", "你已被 {0} 击败", null, null, null], [36, "DefeatToCompleteRevenge", "Defeat {0} To Complete Revenge", "击败 {0} 完成复仇", null, null, null], [37, "RdPlace", "{0}: {1}Rd Place", "{0}：第{1}名", null, null, null], [38, "DefeatedPeople_2", "Defeated 2 People", "连续消灭2人！势不可当！", null, null, null], [39, "DefeatedPeople_3", "Defeated 3 People", "连续消灭3人！勇冠三军！", null, null, null], [40, "DefeatedPeople_4", "Defeated 4 People", "连续消灭4人！无人能敌！", null, null, null], [41, "DefeatedPeople_5", "Defeated 5 People", "连续消灭5人！横扫千军！", null, null, null], [42, "DefeatedPeople_6", "Defeated 6 People", "连续消灭6人！接近神了！", null, null, null], [43, "DefeatedPeople_7", "Defeated {0} People", "连续消灭{0}人！超越神了！", null, null, null], [44, "Ranking", "Ranking", "排名", null, null, null], [45, "Nickname", "Nickname", "昵称", null, null, null], [46, "Beat", "Beat", "击败", null, null, null], [47, "Death", "Death", "死亡", null, null, null], [48, "TopInTheEntireServer", "Top {0} In The Entire Server", "全服前{0}名", null, null, null], [49, "TotalDefeat", "Total Defeat", "总击败", null, null, null], [50, "TotalDeaths", "Total Deaths", "总死亡", null, null, null], [51, "RankingOfAchievements", "Ranking\nAchievements", "战绩排行榜", null, null, null], [52, "FullServerRankingList", "Full Server\nRanking List", "全服排行榜", null, null, null], [53, "Weapon", "Weapon", "武器", null, null, null], [54, "Skin", "Skin", "皮肤", null, null, null], [55, "Trailing", "Trailing", "拖尾", null, null, null], [56, "Use", "Use", "使用", null, null, null], [57, "Obtained", "Obtained", "已获得", null, null, null], [58, "NotObtained", "Not Obtained", "未获得", null, null, null], [59, "Hurt", "Hurt", "伤害", null, null, null], [60, "Bullet", "Bullet", "子弹", null, null, null], [61, "TimeLimited", "Time Limited", "限时", null, null, null], [62, "Permanent", "Permanent", "永久", null, null, null], [63, "Error", "Error", "出错啦", null, null, null], [64, "TransformationStatusCannotOpenTheStore", "Transformation Status Cannot Open The Store", "变身状态不可打开商店", null, null, null], [65, "PurchaseSuccessful", "Purchase Successful", "购买成功", null, null, null], [66, "InsufficientGoldCoins", "Insufficient Gold Coins", "金币不足", null, null, null], [67, "DiamondShortage", "Diamond Shortage", "钻石不足", null, null, null], [68, "WearingIt", "Wearing It", "穿戴中", null, null, null], [69, "SkinSuccessfullyWorn", "Skin Successfully Worn", "皮肤成功穿戴", null, null, null], [70, "TailSuccessfullyWorn", "Tail Successfully Worn", "尾迹成功穿戴", null, null, null], [71, "Previewing", "Previewing", "正在预览", null, null, null], [72, "Pistol", "Pistol", "手枪", null, null, null], [73, "BubbleGun", "Bubble Gun", "泡泡枪", null, null, null], [74, "ShotgunSprayGun", "Shotgun Spray Gun", "散弹喷枪", null, null, null], [75, "Shotgun", "Shotgun", "霰弹枪", null, null, null], [76, "SpitfireGun", "Spitfire Gun", "喷火枪", null, null, null], [77, "FireGun", "Fire Gun", "火枪", null, null, null], [78, "LaserGun", "Laser Gun", "激光枪", null, null, null], [79, "WaterGun", "Water Gun", "水枪", null, null, null], [80, "RocketLauncher", "Rocket Launcher", "火箭发射器", null, null, null], [81, "JustinGatlin", "Justin Gatlin", "加特林", null, null, null], [82, "Tunas", "Tunas", "金枪鱼", null, null, null], [83, "BowAndArrow", "Bow And Arrow", "弓箭", null, null, null], [84, "ParticleTailing", "Particle Tailing", "粒子拖尾", null, null, null], [85, "SmokeTrail", "Smoke Trail", "烟雾拖尾", null, null, null], [86, "BeamTrailing", "Beam Trailing", "光束拖尾", null, null, null], [87, "Tail", "Tail", "拖尾", null, null, null], [88, "WaterTailing", "Water Tailing", "水拖尾", null, null, null], [89, "FlameTrailing", "Flame Trailing", "火焰拖尾", null, null, null], [90, "ThunderTail", "Thunder Tail", "雷拖尾", null, null, null], [91, "RainbowTail", "Rainbow Tail", "彩虹拖尾", null, null, null], [92, "TirePrintTailing", "Tire Print Tailing", "胎印拖尾", null, null, null], [93, "ScrewTail", "Screw Tail", "螺丝钉拖尾", null, null, null], [94, "FootballTail", "Football Tail", "足球拖尾", null, null, null], [95, "CandyTail", "Candy Tail", "糖果拖尾", null, null, null], [96, "TrophyTail", "Trophy Tail", "奖杯拖尾", null, null, null], [97, "CrownTail", "Crown Tail", "皇冠拖尾", null, null, null], [98, "LoveTail", "Love Tail", "爱心拖尾", null, null, null], [99, "SkullTail", "Skull Tail", "骷髅拖尾", null, null, null], [100, "BananaTail", "Banana Tail", "香蕉拖尾", null, null, null], [102, "SnowflakeTail", "Snowflake Tail", "雪花拖尾", null, null, null], [103, "Tail2023", "2023 Tail", "2023拖尾", null, null, null], [104, "FirecrackerTail", "Firecracker Tail", "爆竹拖尾", null, null, null], [105, "FireworksTail", "Fireworks Tail", "烟花拖尾", null, null, null], [106, "GiftTail", "Gift Tail", "礼物拖尾", null, null, null], [107, "TailOfBanknotes", "Tail Of Banknotes", "钞票拖尾", null, null, null], [108, "BubbleTail", "Bubble Tail", "泡泡拖尾", null, null, null], [109, "RibbonTrailing", "Ribbon Trailing", "彩带拖尾", null, null, null], [110, "TailOfFeces", "Tail Of Feces", "便便拖尾", null, null, null], [111, "MapleLeafTail", "Maple Leaf Tail", "枫叶拖尾", null, null, null], [112, "SixPointedStarTail", "Six Pointed Star Tail", "六芒星拖尾", null, null, null], [113, "ButterflyTail", "Butterfly Tail", "蝴蝶拖尾", null, null, null], [114, "IceCreamTrail", "Ice Cream Trail", "冰淇淋拖尾", null, null, null], [115, "BirdTail", "Bird Tail", "鸟拖尾", null, null, null], [116, "BatTail", "Bat Tail", "蝙蝠拖尾", null, null, null], [117, "XiangyunTail", "Xiangyun Tail", "祥云拖尾", null, null, null], [118, "Print", "Print", "爪印", null, null, null], [119, "HoodedMan", "Hooded Man", "兜帽男", null, null, null], [120, "DoublePonytailGirl", "Double Ponytail Girl", "双马尾女", null, null, null], [121, "MaleWarrior", "Male Warrior", "男战士", null, null, null], [122, "MechGirl", "Mech Girl", "机甲少女", null, null, null], [123, "MaleKnight", "Male Knight", "男骑士", null, null, null], [124, "NanoMechWomen", "Nano Mech Women", "纳米机甲女性", null, null, null], [125, "CyberYouth", "Cyber Youth", "赛博少年", null, null, null], [126, "CyberGirls", "Cyber Girls", "赛博少女", null, null, null], [127, "DefinitelyPotBoy", "Definitely Pot Boy", "一定锅少年", null, null, null], [128, "SeekingGodYoungMan", "Seeking God, Young Man", "求神少年", null, null, null], [129, "DefinitelyPotGirl", "Definitely Pot Girl", "一定锅少女", null, null, null], [130, "SeekingGodGirl", "Seeking God Girl", "求神少女", null, null, null], [131, "GemstoneArmoredMan", "Gemstone Armored Man", "宝石铠甲男", null, null, null], [132, "ArmoredMaleWarrior", "Armored Male Warrior", "铠甲男战士", null, null, null], [133, "BlackMaleNanomecha", "Black Male Nanomecha", "黑人男纳米机甲", null, null, null], [134, "WhiteMaleNanomecha", "White Male Nanomecha", "白人男纳米机甲", null, null, null], [135, "SilverKnights", "Silver Knights", "白银骑士", null, null, null], [136, "EagleWarrior", "Eagle Warrior", "鹰战士", null, null, null], [137, "Warrior", "Warrior", "战士", null, null, null], [138, "VenomMonster", "Venom Monster", "毒液怪人", null, null, null], [139, "AntWarrior", "Ant Warrior", "蚁侠士", null, null, null], [140, "TheStrongestCaptain", "The Strongest Captain", "最强队长", null, null, null], [141, "SuperHandsomeHero", "Super Handsome Hero", "超帅侠", null, null, null], [142, "StrangeWarrior", "Strange Warrior", "奇异战士", null, null, null], [143, "LightningMonster", "Lightning Monster", "闪电怪", null, null, null], [144, "EvilSpiritSkull", "Evil Spirit Skull", "恶灵骷髅", null, null, null], [145, "IronMan", "Iron Man", "铁人", null, null, null], [146, "WindbreakerGirl", "Windbreaker Girl", "风衣女", null, null, null], [147, "HanfuGirl", "Hanfu Girl", "汉服少女", null, null, null], [148, "FashionableGirl", "Fashionable Girl", "时尚少女", null, null, null], [149, "TrendyGirl", "Trendy Girl", "潮流少女", null, null, null], [150, "AncientScholars", "Ancient Scholars", "古代书生", null, null, null], [151, "OrangeLaserGun", "Orange Laser Gun", "橘黄激光枪", null, null, null], [152, "Text_ClaimRewards", "Claim Rewards", "领取奖励", null, null, null], [153, "Text_HangInTheAir", "Hang In The Air", "未完成", null, null, null], [154, "Text_DailyTasks", "Daily Tasks", "每日任务", null, null, null], [155, "Text_AllTasksHaveBeenCompletedWaitingForRefresh", "All Tasks Have Been Completed, Waiting For Refresh", "任务已全部完成，等待刷新...", null, null, null], [156, "Text_RemainingHours", "Remaining: {0} Hours", "剩余：{0}小时", null, null, null], [157, "Text_RemainingDays", "Remaining: {0} Days", "剩余：{0}天", null, null, null], [158, "Text_WeeklyTasks", "Weekly Tasks", "每周任务", null, null, null], [159, "Dailylogintothegame", "Daily login to the game ({0}/{1})", "每日登录游戏（{0}/{1}）", null, null, null], [160, "Dailyonlinedurationminutes", "Daily online duration {2} minutes ({0}/{1})", "每日在线时长{2}分钟（{0}/{1}）", null, null, null], [161, "Defeatplayersdaily", "Defeat {2} players daily ({0}/{1})", "每日击败{2}个玩家（{0}/{1}）", null, null, null], [162, "Logindaysperweek", "Login {2} days per week ({0}/{1})", "每周登录{2}天（{0}/{1}）", null, null, null], [163, "Join", "Join", "加入", null, null, null], [164, "WeaponEquipmentSuccessful", "Weapon Equipment Successful", "武器装备成功", null, null, null], [165, "SwitchingFailedYouAreAlreadyIn", "Switching Failed, You Are Already In {0}", "切换失败,你已在{0}中", null, null, null], [166, "CannotSwitchTeamsFrequentlyTryAgainInSeconds", "Cannot Switch Teams Frequently, Try Again In {0} Seconds", "不能频繁切换队伍，{0}秒后再试", null, null, null], [167, "SuccessfullySwitchedTeams", "Successfully Switched Teams", "切换队伍成功", null, null, null], [168, "SwitchingFailedThisTeamIsFull", "Switching Failed, This Team Is Full", "切换失败,此队已满", null, null, null], [169, "SwitchingFailedUnequalNumberOfPeople", "Switching Failed, Unequal Number Of People", "切换失败,人数不平等", null, null, null], [170, "AlreadyOnThisTeam", "Already On This Team", "已在此队", null, null, null], [171, "bazooka", "bazooka", "火箭筒", null, null, null], [172, "Text_TheItemBarIsFull", "The item bar is full", "道具栏已满", null, null, null], [173, "Text_ThisItemIsInUse", "This item is in use", "正在使用此道具", null, null, null], [174, "Text_Tips1", "Someone is using it, please try another one", "有人正在使用，请换个试试", null, null, null], [175, "Text_SetUp1", "Base Setup", "基础设置", null, null, null], [176, "Text_PictureQuality", "Picture Quality", "画质", null, null, null], [177, "Text_SoundEffects", "Sound Effects", "音效", null, null, null], [178, "Text_BackgroundMusic", "Background Music", "背景音乐", null, null, null], [179, "Text_ViewAngleScaling", "View Angle Scaling", "视角缩放", null, null, null], [180, "Text_DisplayNicknames", "Display Nicknames", "显示昵称", null, null, null], [181, "Text_ResetLocation", "Reset Location", "重置位置", null, null, null], [182, "Text_RestoringSettings", "Restoring Settings", "还原设置", null, null, null], [183, "Text_On", "ON", "开", null, null, null], [184, "Text_Off", "OFF", "关", null, null, null], [185, "Text_ObtainedTips", "Obtained, open the knapsack to use", "已获得，打开背包使用", null, null, null], [186, "Text_Advertising", "Advertising", "广告奖励", null, null, null], [187, "Text_ADGetTips", "See the AD for free guide you get", "看广告免费指引你获得", null, null, null], [188, "Text_Dont", "Don't", "不要", null, null, null], [189, "Text_Free", "free", "免费获得", null, null, null], [190, "Text_Fail", "Fail", "指引失败，请重试", null, null, null], [191, "Text_NoOnTheList", "Not", "未上榜", null, null, null], [192, "Text_Ranking", "Ranking", "排名", null, null, null], [193, "Text_Nickname", "Nickname", "昵称", null, null, null], [194, "Text_Score", "Score", "分数", null, null, null], [195, "Text_Duration", "Duration", "时长", null, null, null], [196, "Text_TopInTermsOfDuration", "Top {0} In Terms Of Duration", "时长全服前{0}名", null, null, null], [197, "Text_StartGame", "Start the game", "开始游戏", null, null, null], [198, "Text_WelcomeTo", "Welcome to\nMy Cherry blossom town", "欢迎来到\n我的樱花小镇", null, null, null], [199, "Text_UpNext", "Up next", "下一个", null, null, null], [200, "Text_GuideEnd", "With the guide over, start your trip to the cherry blossom town", "引导结束，开启你的樱花小镇之旅吧", null, null, null], [201, "Text_Close", "Close", "关闭", null, null, null], [202, "Text_MyCharacterId", "My Character ID- Share Friend Try On", "我的角色ID-分享好友试穿", null, null, null], [203, "Text_PleaseEnter", "Please Enter The Friend Role ID", "请输入好友角色ID", null, null, null], [204, "Text_Cancel", "Cancel", "取消", null, null, null], [205, "Text_FreeTryOn", "Free Try On", "免费试穿", null, null, null], [206, "Text_SaveImagesForFree", "Save images for free", "免费保存形象", null, null, null], [207, "Text_TryOnYourFriendAvatarForFree", "Try On Your Friend's Avatar For Free", "免费试穿好友的角色形象", null, null, null], [208, "Text_CopySuccessfully", "Copy Successfully", "复制成功", null, null, null], [209, "Text_InvalidID", "Invalid ID!", "ID无效！", null, null, null], [210, "Text_Loading", "Loading", "加载中", null, null, null], [211, "Text_TryItOnSuccessfully", "Try it on successfully", "试穿成功", null, null, null], [212, "Text_CopyTheCharacterIDShareFriendsTryOn", "Copy the character ID share friends try on", "复制角色ID分享好友试穿", null, null, null], [213, "Text_TryItOnForFree", "Try it on for free", "看广告免费试穿", null, null, null], [214, "Text_GuideTips", "Reach near the target point", "达到目标点附近", null, null, null], [215, "Text_HUDTips1", null, "签到任务", null, null, null], [216, "Text_HUDTips2", null, "排行榜", null, null, null], [217, "Text_HUDTips3", null, "设置", null, null, null], [218, "Text_HUDTips4", null, "换装商店", null, null, null], [219, "Text_HUDTips5", null, "武器商店", null, null, null], [220, "Text_HUDTips6", null, "切换阵营", null, null, null], [221, "Text_HUDTips7", null, "免费换装", null, null, null], [222, "Text_HUDTips8", null, null, null, null, null], [223, "Text_Tab1_1", "Appearance", "捏脸", null, null, null], [224, "Text_Tab1_2", "Clothing", "换装", null, null, null], [225, "Text_Tab1_3", "Collection", "收藏", null, null, null], [226, "Text_Tab1_4", "Test", "测试", null, null, null], [227, "Text_Tab2_101", "Body Type", "体型", null, null, null], [228, "Text_Tab2_102", "Skin Tone", "肤色", null, null, null], [229, "Text_Tab2_103", "Face", "脸型", null, null, null], [230, "Text_Tab2_104", "Eyes", "眼睛", null, null, null], [231, "Text_Tab2_105", "Eyebrows", "眉毛", null, null, null], [232, "Text_Tab2_106", "Makeup", "妆容", null, null, null], [233, "Text_Tab2_107", "Expression", "表情", null, null, null], [234, "Text_Tab2_108", "Outfit", "套装", null, null, null], [235, "Text_Tab2_109", "Hair", "头发", null, null, null], [236, "Text_Tab2_110", "Top", "上衣", null, null, null], [237, "Text_Tab2_111", "Bottom", "下衣", null, null, null], [238, "Text_Tab2_112", "Gloves", "鞋子", null, null, null], [239, "Text_Tab2_113", "Shoes", "手套", null, null, null], [240, "Text_Tab2_114", "Pet", "宠物", null, null, null], [241, "Text_Tab2_115", "Accessory", "饰品", null, null, null], [242, "Text_Tab2_501", "Body Type", "体型", "收藏", null, null], [243, "Text_Tab2_502", "Skin Tone", "肤色", "收藏", null, null], [244, "Text_Tab2_503", "Face", "脸型", "收藏", null, null], [245, "Text_Tab2_504", "Eyes", "眼睛", "收藏", null, null], [246, "Text_Tab2_505", "Eyebrows", "眉毛", "收藏", null, null], [247, "Text_Tab2_506", "Makeup", "妆容", "收藏", null, null], [248, "Text_Tab2_507", "Expression", "表情", "收藏", null, null], [249, "Text_Tab2_508", "Outfit", "套装", "收藏", null, null], [250, "Text_Tab2_509", "Hair", "头发", "收藏", null, null], [251, "Text_Tab2_510", "Top", "上衣", "收藏", null, null], [252, "Text_Tab2_511", "Bottom", "下衣", "收藏", null, null], [253, "Text_Tab2_512", "Gloves", "鞋子", "收藏", null, null], [254, "Text_Tab2_513", "Shoes", "手套", "收藏", null, null], [255, "Text_Tab2_514", "Pet", "宠物", "收藏", null, null], [256, "Text_Tab2_515", "Accessory", "饰品", "收藏", null, null], [257, "Text_Tab3_1001", "Pupil Style", "瞳孔样式", null, null, null], [258, "Text_Tab3_1002", "Lens", "瞳孔贴花", null, null, null], [259, "Text_Tab3_1003", "Upper Highlight", "上高光", null, null, null], [260, "Text_Tab3_1004", "Lower Highlight", "下高光", null, null, null], [261, "Text_Tab3_1005", "Eyelashes", "睫毛", null, null, null], [262, "Text_Tab3_1006", "Eyeshadow", "眼影", null, null, null], [263, "Text_Tab3_1007", "Blush", "腮红", null, null, null], [264, "Text_Tab3_1008", "Lip Makeup", "口红", null, null, null], [265, "Text_Tab3_1009", "Face Tattoo", "面部彩绘", null, null, null], [266, "Text_Tab3_1010", "Full Hair", "整体发型", null, null, null], [267, "Text_Tab3_1011", "Front Hair", "前发", null, null, null], [268, "Text_Tab3_1012", "Back Hair", "后发", null, null, null], [269, "Text_Tab3_1013", "Left Hand", "左手", null, null, null], [270, "Text_Tab3_1014", "Right Hand", "右手", null, null, null], [271, "Text_Tab3_1015", "Back", "背饰", null, null, null], [272, "Text_Tab3_1016", "Head", "头饰", null, null, null], [273, "Text_Tab3_1017", "Face", "面饰", null, null, null], [274, "Text_Tab3_1018", "Hip", "臀部", null, null, null], [275, "Text_Tab3_1019", "Shoulder", "肩部", null, null, null], [276, "Text_Tab3_1020", "Effects", "特效", null, null, null], [277, "Text_Tab3_2001", "Pupil Style", "瞳孔样式", "收藏", null, null], [278, "Text_Tab3_2002", "Lens", "瞳孔贴花", "收藏", null, null], [279, "Text_Tab3_2003", "Upper Highlight", "上高光", "收藏", null, null], [280, "Text_Tab3_2004", "Lower Highlight", "下高光", "收藏", null, null], [281, "Text_Tab3_2005", "Eyelashes", "睫毛", "收藏", null, null], [282, "Text_Tab3_2006", "Eyeshadow", "眼影", "收藏", null, null], [283, "Text_Tab3_2007", "Blush", "腮红", "收藏", null, null], [284, "Text_Tab3_2008", "Lip Makeup", "口红", "收藏", null, null], [285, "Text_Tab3_2009", "Face Tattoo", "面部彩绘", "收藏", null, null], [286, "Text_Tab3_2010", "Full Hair", "整体发型", "收藏", null, null], [287, "Text_Tab3_2011", "Front Hair", "前发", "收藏", null, null], [288, "Text_Tab3_2012", "Back Hair", "后发", "收藏", null, null], [289, "Text_Tab3_2013", "Left Hand", "左手", "收藏", null, null], [290, "Text_Tab3_2014", "Right Hand", "右手", "收藏", null, null], [291, "Text_Tab3_2015", "Back", "背饰", "收藏", null, null], [292, "Text_Tab3_2016", "Ear", "耳饰", "收藏", null, null], [293, "Text_Tab3_2017", "Face", "面饰", "收藏", null, null], [294, "Text_Tab3_2018", "Hip", "臀部", "收藏", null, null], [295, "Text_Tab3_2019", "Shoulder", "肩部", "收藏", null, null], [296, "Text_Tab3_2020", "Effects", "特效", "收藏", null, null], [297, "Text_OpenClothTextBlock", "Shop", "换装商店", null, null, null], [298, "Text_MallItem_Free", "Free", "免费", null, null, null], [299, "Text_ThisFeatureIsNotEnabled", "This feature is not enabled", "此功能未开启", null, null, null], [300, "Text_BodyTypeDescribe", "{0} times", "{0}倍", null, null, null], [301, "Text_Expression_Default", "Default", "默认表情", null, null, null], [302, "Text_Expression_Smile", "Smile", "微笑", null, null, null], [303, "Text_Expression_HaveFun", "Have Fun", "开心", null, null, null], [304, "Text_Expression_Sad", "Sad", "伤心", null, null, null], [305, "Text_Expression_GetAngry", "Get Angry", "生气", null, null, null], [306, "Text_Expression_Embarrassment", "Embarrassment", "尴尬", null, null, null], [307, "Text_Expression_Laugh", "Laugh", "笑", null, null, null], [308, "Text_Expression_BeNaughty", "Be Naughty", "调皮", null, null, null], [309, "Text_Expression_Cute", "Cute", "可爱", null, null, null], [310, "Text_Expression_Doubt", "Doubt", "疑惑", null, null, null], [311, "Text_Tab3_1021", "Trailing", "拖尾", null, null, null], [312, "Text_Tab3_2021", "Trailing", "拖尾", "收藏", null, null], [313, "Text_ColorPick", "Color Pick", "调色板", null, null, null], [314, "Text_ColorPart", "Part {0}", "部位 {0}", null, null, null], [315, "Text_NotSupportToning", "This {0} Does Not Support Toning", "这个{0}不支持调色", null, null, null], [316, "Text_PupilColor", "Pupil Color", "瞳孔颜色", null, null, null], [317, "Text_LeftPupilColor", "Left Pupil Color", "左瞳孔颜色", null, null, null], [318, "Text_RightPupilColor", "Right Pupil Color", "右瞳孔颜色", null, null, null], [319, "Text_DecalColor", "Decal Color", "贴花颜色", null, null, null], [320, "Text_UpperHighlightColor", "Upper Highlight Color", "上高光颜色", null, null, null], [321, "Text_LowerHighlightColor", "Lower Highlight Color", "下高光颜色", null, null, null], [322, "Text_EyelashColor", "Eyelash Color", "睫毛颜色", null, null, null], [323, "Text_EyeshaowColor", "Eyeshaow Color", "眼影颜色", null, null, null], [324, "Text_BlushColor", "Blush Color", "腮红颜色", null, null, null], [325, "Text_LipstickColor", "Lipstick Color", "口红颜色", null, null, null], [326, "Text_Monochrome", "Monochrome", "单色", null, null, null], [327, "Text_TopColor", "Top Color", "发顶色", null, null, null], [328, "Text_TailColor", "Tail Color", "发尾色", null, null, null], [329, "Text_FreeSave", "Free Save", "免费保存", null, null, null], [330, "Text_ResetImage", "Reset Image", "重置平台形象", null, null, null], [331, "Text_ResetImageFaild", "Failed to reset platform image", "重置平台形象失败", null, null, null], [332, "Text_SaveColor", "Save {0} Color", "保存{0}颜色", null, null, null], [333, "Text_SaveTips", "Save Tips", "保存提示", null, null, null], [334, "Text_Save", "Save", "保存", null, null, null], [335, "Text_NoSave", "No Save", "不保存", null, null, null], [336, "Text_WhetherSaveImage", "Whether Save Image", "是否保存当前角色形象", null, null, null], [337, "Text_CloseTips", "Close Tips", "关闭提示", null, null, null], [338, "Text_SaveSuccessfully", "Save Successfully", "保存成功", null, null, null], [339, "Text_ResetSuccessfully", "Reset Successfully", "重置成功", null, null, null], [340, "Text_SwitchSuccessfully", "Switch Successfully", "切换成功", null, null, null], [341, "Text_WhetherToKeepTheCurrentColor", "Whether to keep the current color", "是否保留当前颜色", null, null, null], [342, "Text_Retain", "Retain", "保留", null, null, null], [343, "Text_NoRetain", "No Retain", "不保留", null, null, null], [344, "Text_Tab3_1022", "Daily Styling", "日常造型1", null, null, null], [345, "Text_Tab3_1023", "Muppet Styling", "布偶造型", null, null, null], [346, "Text_Tab3_1024", "Hero Styling", "英雄造型", null, null, null], [347, "Text_Tab3_1025", "Fantasy Modeling", "幻想造型", null, null, null], [348, "Text_Tab3_1026", "Holiday Styling", "节日造型", null, null, null], [349, "Text_Tab3_1027", "Science Fiction Styling", "科幻造型", null, null, null], [350, "Text_Tab3_1028", "Ancient Molding", "古代造型", null, null, null], [351, "Text_Tab3_1029", "Long Piece", "长单件", null, null, null], [352, "Text_Tab3_1030", "Jacket", "短外套", null, null, null], [353, "Text_Tab3_1031", "Short Piece", "短单件", null, null, null], [354, "Text_Tab3_1032", "Outfit", "套装", null, null, null], [355, "Text_Tab3_1033", "Long Coat", "长外套", null, null, null], [356, "Text_Tab3_1034", "Kilt", "短裙", null, null, null], [357, "Text_Tab3_1035", "Trousers", "长裤", null, null, null], [358, "Text_Tab3_1036", "Shorts", "短裤", null, null, null], [359, "Text_Tab3_1037", "Long Dress", "长裙", null, null, null], [360, "Text_Tab3_1038", "Pantyhose", "裤袜", null, null, null], [361, "Text_Tab3_1039", "Gloves", "手套", null, null, null], [362, "Text_Tab3_1040", "Glove Accessory", "手套饰品", null, null, null], [363, "Text_Tab3_1041", "Everyday Shoes", "日常鞋", null, null, null], [364, "Text_Tab3_1042", "Boots", "靴子", null, null, null], [365, "Text_Tab3_1043", "Toe Brace", "足套", null, null, null], [366, "Text_Tab3_1044", "Nudity", "裸饰", null, null, null], [367, "Text_Tab3_1045", "High Heeled Shoes", "高跟鞋", null, null, null], [368, "Text_Tab3_1046", "Sneakers", "运动鞋", null, null, null], [369, "Text_Tab3_1047", "Daily Styling", "日常造型2", null, null, null]];
+const EXCELDATA$A = [["Id", "Name", "Value", "Value_Ch", "Value_Cht", "Value_J", "Value_K"], ["", "Key|ReadByName", "MainLanguage", "ChildLanguage", "ChildLanguage", "ChildLanguage", "ChildLanguage"], [1, "CannotResetPositionWithinSeconds", "Cannot Reset Position Within {0} Seconds", "{0}秒内不可重置位置", null, null, null], [2, "DoYouWantToResetThePosition", "Do You Want To Reset The Position", "是否重置位置", null, null, null], [3, "Yes", "Yes", "是", null, null, null], [4, "No", "No", "否", null, null, null], [5, "ResetPosition", "Reset Position", "重置位置", null, null, null], [6, "DoYouWantToUseItImmediately", "Do You Want To Use It Immediately", "是否立即使用", null, null, null], [7, "Buy", "Buy", "购买", null, null, null], [8, "ConfirmExpenses", "Confirm Expenses", "确认花费", null, null, null], [9, "Diamonds", "Diamonds", "钻石", null, null, null], [10, "GoldCoins", "Gold Coins", "金币", null, null, null], [11, "Cancel", "Cancel", "取消", null, null, null], [12, "Tips", "Tips", "提示", null, null, null], [13, "AcquisitionFailedPleaseTryAgain", "Acquisition Failed, Please Try Again", "获取失败，请重试", null, null, null], [14, "FreeCollectionOfCoins", "Free Collection Of {0} Coins", "免费领取{0}金币", null, null, null], [15, "FreeToReceive", "Free To Receive", "免费领取", null, null, null], [16, "DoubleTheRewardMaximumHealthIncreasedTo", "Double The Reward\nMaximum Health Increased To {0}", "奖励翻倍\n最大生命值提高到{0}", null, null, null], [17, "FreeIncrease", "Free Increase", "免费提高", null, null, null], [18, "FreeUseOfOneRound", "{0}\nFree Use Of One Round", "{0}\n免费使用一局", null, null, null], [19, "FreeToUse", "Free To Use", "免费使用", null, null, null], [20, "FreeCollectionOfDiamonds", "Free Collection Of {0} Diamonds", "免费领取{0}钻石", null, null, null], [21, "Get", "Get", "获得", null, null, null], [22, "Spend", "Spend", "花费", null, null, null], [23, "Lurking", "Lurkers", "潜伏者", null, null, null], [24, "Defenders", "Defenders", "保卫者", null, null, null], [25, "Life", "Hp", "生命", null, null, null], [26, "InvincibleTime", "Invincible Time", "无敌时间", null, null, null], [27, "ResurrectionCountdown", "Resurrection Countdown", "复活倒计时", null, null, null], [28, "InvincibleWithinSecondsAfterResurrection", "Invincible Within {0} Seconds After Resurrection", "复活后{0}秒内无敌", null, null, null], [29, "SetUp", "Set Up", "设置", null, null, null], [30, "FiringSensitivity", "Firing Sensitivity", "开火灵敏度", null, null, null], [31, "ControlSensitivity", "Control Sensitivity", "控制灵敏度", null, null, null], [32, "BackgroundMusicSize", "Background Music Size", "背景音乐大小", null, null, null], [33, "SfxVolume", "Sfx Volume", "音效大小", null, null, null], [34, "Defeated", " Defeated ", " 击败了 ", null, null, null], [35, "YouHaveBeenDefeatedBy", "You Have Been Defeated By {0}", "你已被 {0} 击败", null, null, null], [36, "DefeatToCompleteRevenge", "Defeat {0} To Complete Revenge", "击败 {0} 完成复仇", null, null, null], [37, "RdPlace", "{0}: {1}Rd Place", "{0}：第{1}名", null, null, null], [38, "DefeatedPeople_2", "Defeated 2 People", "连续消灭2人！势不可当！", null, null, null], [39, "DefeatedPeople_3", "Defeated 3 People", "连续消灭3人！勇冠三军！", null, null, null], [40, "DefeatedPeople_4", "Defeated 4 People", "连续消灭4人！无人能敌！", null, null, null], [41, "DefeatedPeople_5", "Defeated 5 People", "连续消灭5人！横扫千军！", null, null, null], [42, "DefeatedPeople_6", "Defeated 6 People", "连续消灭6人！接近神了！", null, null, null], [43, "DefeatedPeople_7", "Defeated {0} People", "连续消灭{0}人！超越神了！", null, null, null], [44, "Ranking", "Ranking", "排名", null, null, null], [45, "Nickname", "Nickname", "昵称", null, null, null], [46, "Beat", "Beat", "击败", null, null, null], [47, "Death", "Death", "死亡", null, null, null], [48, "TopInTheEntireServer", "Top {0} In The Entire Server", "全服前{0}名", null, null, null], [49, "TotalDefeat", "Total Defeat", "总击败", null, null, null], [50, "TotalDeaths", "Total Deaths", "总死亡", null, null, null], [51, "RankingOfAchievements", "Ranking\nAchievements", "战绩排行榜", null, null, null], [52, "FullServerRankingList", "Full Server\nRanking List", "全服排行榜", null, null, null], [53, "Weapon", "Weapon", "武器", null, null, null], [54, "Skin", "Skin", "皮肤", null, null, null], [55, "Trailing", "Trailing", "拖尾", null, null, null], [56, "Use", "Use", "使用", null, null, null], [57, "Obtained", "Obtained", "已获得", null, null, null], [58, "NotObtained", "Not Obtained", "未获得", null, null, null], [59, "Hurt", "Hurt", "伤害", null, null, null], [60, "Bullet", "Bullet", "子弹", null, null, null], [61, "TimeLimited", "Time Limited", "限时", null, null, null], [62, "Permanent", "Permanent", "永久", null, null, null], [63, "Error", "Error", "出错啦", null, null, null], [64, "TransformationStatusCannotOpenTheStore", "Transformation Status Cannot Open The Store", "变身状态不可打开商店", null, null, null], [65, "PurchaseSuccessful", "Purchase Successful", "购买成功", null, null, null], [66, "InsufficientGoldCoins", "Insufficient Gold Coins", "金币不足", null, null, null], [67, "DiamondShortage", "Diamond Shortage", "钻石不足", null, null, null], [68, "WearingIt", "Wearing It", "穿戴中", null, null, null], [69, "SkinSuccessfullyWorn", "Skin Successfully Worn", "皮肤成功穿戴", null, null, null], [70, "TailSuccessfullyWorn", "Tail Successfully Worn", "尾迹成功穿戴", null, null, null], [71, "Previewing", "Previewing", "正在预览", null, null, null], [72, "Pistol", "Pistol", "手枪", null, null, null], [73, "BubbleGun", "Bubble Gun", "泡泡枪", null, null, null], [74, "ShotgunSprayGun", "Shotgun Spray Gun", "散弹喷枪", null, null, null], [75, "Shotgun", "Shotgun", "霰弹枪", null, null, null], [76, "SpitfireGun", "Spitfire Gun", "喷火枪", null, null, null], [77, "FireGun", "Fire Gun", "火枪", null, null, null], [78, "LaserGun", "Laser Gun", "激光枪", null, null, null], [79, "WaterGun", "Water Gun", "水枪", null, null, null], [80, "RocketLauncher", "Rocket Launcher", "火箭发射器", null, null, null], [81, "JustinGatlin", "Justin Gatlin", "加特林", null, null, null], [82, "Tunas", "Tunas", "金枪鱼", null, null, null], [83, "BowAndArrow", "Bow And Arrow", "弓箭", null, null, null], [84, "ParticleTailing", "Particle Tailing", "粒子拖尾", null, null, null], [85, "SmokeTrail", "Smoke Trail", "烟雾拖尾", null, null, null], [86, "BeamTrailing", "Beam Trailing", "光束拖尾", null, null, null], [87, "Tail", "Tail", "拖尾", null, null, null], [88, "WaterTailing", "Water Tailing", "水拖尾", null, null, null], [89, "FlameTrailing", "Flame Trailing", "火焰拖尾", null, null, null], [90, "ThunderTail", "Thunder Tail", "雷拖尾", null, null, null], [91, "RainbowTail", "Rainbow Tail", "彩虹拖尾", null, null, null], [92, "TirePrintTailing", "Tire Print Tailing", "胎印拖尾", null, null, null], [93, "ScrewTail", "Screw Tail", "螺丝钉拖尾", null, null, null], [94, "FootballTail", "Football Tail", "足球拖尾", null, null, null], [95, "CandyTail", "Candy Tail", "糖果拖尾", null, null, null], [96, "TrophyTail", "Trophy Tail", "奖杯拖尾", null, null, null], [97, "CrownTail", "Crown Tail", "皇冠拖尾", null, null, null], [98, "LoveTail", "Love Tail", "爱心拖尾", null, null, null], [99, "SkullTail", "Skull Tail", "骷髅拖尾", null, null, null], [100, "BananaTail", "Banana Tail", "香蕉拖尾", null, null, null], [102, "SnowflakeTail", "Snowflake Tail", "雪花拖尾", null, null, null], [103, "Tail2023", "2023 Tail", "2023拖尾", null, null, null], [104, "FirecrackerTail", "Firecracker Tail", "爆竹拖尾", null, null, null], [105, "FireworksTail", "Fireworks Tail", "烟花拖尾", null, null, null], [106, "GiftTail", "Gift Tail", "礼物拖尾", null, null, null], [107, "TailOfBanknotes", "Tail Of Banknotes", "钞票拖尾", null, null, null], [108, "BubbleTail", "Bubble Tail", "泡泡拖尾", null, null, null], [109, "RibbonTrailing", "Ribbon Trailing", "彩带拖尾", null, null, null], [110, "TailOfFeces", "Tail Of Feces", "便便拖尾", null, null, null], [111, "MapleLeafTail", "Maple Leaf Tail", "枫叶拖尾", null, null, null], [112, "SixPointedStarTail", "Six Pointed Star Tail", "六芒星拖尾", null, null, null], [113, "ButterflyTail", "Butterfly Tail", "蝴蝶拖尾", null, null, null], [114, "IceCreamTrail", "Ice Cream Trail", "冰淇淋拖尾", null, null, null], [115, "BirdTail", "Bird Tail", "鸟拖尾", null, null, null], [116, "BatTail", "Bat Tail", "蝙蝠拖尾", null, null, null], [117, "XiangyunTail", "Xiangyun Tail", "祥云拖尾", null, null, null], [118, "Print", "Print", "爪印", null, null, null], [119, "HoodedMan", "Hooded Man", "兜帽男", null, null, null], [120, "DoublePonytailGirl", "Double Ponytail Girl", "双马尾女", null, null, null], [121, "MaleWarrior", "Male Warrior", "男战士", null, null, null], [122, "MechGirl", "Mech Girl", "机甲少女", null, null, null], [123, "MaleKnight", "Male Knight", "男骑士", null, null, null], [124, "NanoMechWomen", "Nano Mech Women", "纳米机甲女性", null, null, null], [125, "CyberYouth", "Cyber Youth", "赛博少年", null, null, null], [126, "CyberGirls", "Cyber Girls", "赛博少女", null, null, null], [127, "DefinitelyPotBoy", "Definitely Pot Boy", "一定锅少年", null, null, null], [128, "SeekingGodYoungMan", "Seeking God, Young Man", "求神少年", null, null, null], [129, "DefinitelyPotGirl", "Definitely Pot Girl", "一定锅少女", null, null, null], [130, "SeekingGodGirl", "Seeking God Girl", "求神少女", null, null, null], [131, "GemstoneArmoredMan", "Gemstone Armored Man", "宝石铠甲男", null, null, null], [132, "ArmoredMaleWarrior", "Armored Male Warrior", "铠甲男战士", null, null, null], [133, "BlackMaleNanomecha", "Black Male Nanomecha", "黑人男纳米机甲", null, null, null], [134, "WhiteMaleNanomecha", "White Male Nanomecha", "白人男纳米机甲", null, null, null], [135, "SilverKnights", "Silver Knights", "白银骑士", null, null, null], [136, "EagleWarrior", "Eagle Warrior", "鹰战士", null, null, null], [137, "Warrior", "Warrior", "战士", null, null, null], [138, "VenomMonster", "Venom Monster", "毒液怪人", null, null, null], [139, "AntWarrior", "Ant Warrior", "蚁侠士", null, null, null], [140, "TheStrongestCaptain", "The Strongest Captain", "最强队长", null, null, null], [141, "SuperHandsomeHero", "Super Handsome Hero", "超帅侠", null, null, null], [142, "StrangeWarrior", "Strange Warrior", "奇异战士", null, null, null], [143, "LightningMonster", "Lightning Monster", "闪电怪", null, null, null], [144, "EvilSpiritSkull", "Evil Spirit Skull", "恶灵骷髅", null, null, null], [145, "IronMan", "Iron Man", "铁人", null, null, null], [146, "WindbreakerGirl", "Windbreaker Girl", "风衣女", null, null, null], [147, "HanfuGirl", "Hanfu Girl", "汉服少女", null, null, null], [148, "FashionableGirl", "Fashionable Girl", "时尚少女", null, null, null], [149, "TrendyGirl", "Trendy Girl", "潮流少女", null, null, null], [150, "AncientScholars", "Ancient Scholars", "古代书生", null, null, null], [151, "OrangeLaserGun", "Orange Laser Gun", "橘黄激光枪", null, null, null], [152, "Text_ClaimRewards", "Claim Rewards", "领取奖励", null, null, null], [153, "Text_HangInTheAir", "Hang In The Air", "未完成", null, null, null], [154, "Text_DailyTasks", "Daily Tasks", "每日任务", null, null, null], [155, "Text_AllTasksHaveBeenCompletedWaitingForRefresh", "All Tasks Have Been Completed, Waiting For Refresh", "任务已全部完成，等待刷新...", null, null, null], [156, "Text_RemainingHours", "Remaining: {0} Hours", "剩余：{0}小时", null, null, null], [157, "Text_RemainingDays", "Remaining: {0} Days", "剩余：{0}天", null, null, null], [158, "Text_WeeklyTasks", "Weekly Tasks", "每周任务", null, null, null], [159, "Dailylogintothegame", "Daily login to the game ({0}/{1})", "每日登录游戏（{0}/{1}）", null, null, null], [160, "Dailyonlinedurationminutes", "Daily online duration {2} minutes ({0}/{1})", "每日在线时长{2}分钟（{0}/{1}）", null, null, null], [161, "Defeatplayersdaily", "Defeat {2} players daily ({0}/{1})", "每日击败{2}个玩家（{0}/{1}）", null, null, null], [162, "Logindaysperweek", "Login {2} days per week ({0}/{1})", "每周登录{2}天（{0}/{1}）", null, null, null], [163, "Join", "Join", "加入", null, null, null], [164, "WeaponEquipmentSuccessful", "Weapon Equipment Successful", "武器装备成功", null, null, null], [165, "SwitchingFailedYouAreAlreadyIn", "Switching Failed, You Are Already In {0}", "切换失败,你已在{0}中", null, null, null], [166, "CannotSwitchTeamsFrequentlyTryAgainInSeconds", "Cannot Switch Teams Frequently, Try Again In {0} Seconds", "不能频繁切换队伍，{0}秒后再试", null, null, null], [167, "SuccessfullySwitchedTeams", "Successfully Switched Teams", "切换队伍成功", null, null, null], [168, "SwitchingFailedThisTeamIsFull", "Switching Failed, This Team Is Full", "切换失败,此队已满", null, null, null], [169, "SwitchingFailedUnequalNumberOfPeople", "Switching Failed, Unequal Number Of People", "切换失败,人数不平等", null, null, null], [170, "AlreadyOnThisTeam", "Already On This Team", "已在此队", null, null, null], [171, "bazooka", "bazooka", "火箭筒", null, null, null], [172, "Text_TheItemBarIsFull", "The item bar is full", "道具栏已满", null, null, null], [173, "Text_ThisItemIsInUse", "This item is in use", "正在使用此道具", null, null, null], [174, "Text_Tips1", "Someone is using it, please try another one", "有人正在使用，请换个试试", null, null, null], [175, "Text_SetUp1", "Base Setup", "基础设置", null, null, null], [176, "Text_PictureQuality", "Picture Quality", "画质", null, null, null], [177, "Text_SoundEffects", "Sound Effects", "音效", null, null, null], [178, "Text_BackgroundMusic", "Background Music", "背景音乐", null, null, null], [179, "Text_ViewAngleScaling", "View Angle Scaling", "视角缩放", null, null, null], [180, "Text_DisplayNicknames", "Display Nicknames", "显示昵称", null, null, null], [181, "Text_ResetLocation", "Reset Location", "重置位置", null, null, null], [182, "Text_RestoringSettings", "Restoring Settings", "还原设置", null, null, null], [183, "Text_On", "ON", "开", null, null, null], [184, "Text_Off", "OFF", "关", null, null, null], [185, "Text_ObtainedTips", "Obtained, open the knapsack to use", "已获得，打开背包使用", null, null, null], [186, "Text_Advertising", "Advertising", "广告奖励", null, null, null], [187, "Text_ADGetTips", "See the AD for free guide you get", "看广告免费指引你获得", null, null, null], [188, "Text_Dont", "Don't", "不要", null, null, null], [189, "Text_Free", "free", "免费获得", null, null, null], [190, "Text_Fail", "Fail", "指引失败，请重试", null, null, null], [191, "Text_NoOnTheList", "Not", "未上榜", null, null, null], [192, "Text_Ranking", "Ranking", "排名", null, null, null], [193, "Text_Nickname", "Nickname", "昵称", null, null, null], [194, "Text_Score", "Score", "分数", null, null, null], [195, "Text_Duration", "Duration", "时长", null, null, null], [196, "Text_TopInTermsOfDuration", "Top {0} In Terms Of Duration", "时长全服前{0}名", null, null, null], [197, "Text_StartGame", "Start the game", "开始游戏", null, null, null], [198, "Text_WelcomeTo", "Welcome to\nMy Cherry blossom town", "欢迎来到\n我的樱花小镇", null, null, null], [199, "Text_UpNext", "Up next", "下一个", null, null, null], [200, "Text_GuideEnd", "With the guide over, start your trip to the cherry blossom town", "引导结束，开启你的樱花小镇之旅吧", null, null, null], [201, "Text_Close", "Close", "关闭", null, null, null], [202, "Text_MyCharacterId", "My Character ID- Share Friend Try On", "我的角色ID-分享好友试穿", null, null, null], [203, "Text_PleaseEnter", "Please Enter The Friend Role ID", "请输入好友角色ID", null, null, null], [204, "Text_Cancel", "Cancel", "取消", null, null, null], [205, "Text_FreeTryOn", "Free Try On", "免费试穿", null, null, null], [206, "Text_SaveImagesForFree", "Save images for free", "免费保存形象", null, null, null], [207, "Text_TryOnYourFriendAvatarForFree", "Try On Your Friend's Avatar For Free", "免费试穿好友的角色形象", null, null, null], [208, "Text_CopySuccessfully", "Copy Successfully", "复制成功", null, null, null], [209, "Text_InvalidID", "Invalid ID!", "ID无效！", null, null, null], [210, "Text_Loading", "Loading", "加载中", null, null, null], [211, "Text_TryItOnSuccessfully", "Try it on successfully", "试穿成功", null, null, null], [212, "Text_CopyTheCharacterIDShareFriendsTryOn", "Copy the character ID share friends try on", "复制角色ID分享好友试穿", null, null, null], [213, "Text_TryItOnForFree", "Try it on for free", "看广告免费试穿", null, null, null], [214, "Text_GuideTips", "Reach near the target point", "达到目标点附近", null, null, null], [215, "Text_HUDTips1", null, "签到任务", null, null, null], [216, "Text_HUDTips2", null, "排行榜", null, null, null], [217, "Text_HUDTips3", null, "设置", null, null, null], [218, "Text_HUDTips4", null, "换装商店", null, null, null], [219, "Text_HUDTips5", null, "武器商店", null, null, null], [220, "Text_HUDTips6", null, "切换阵营", null, null, null], [221, "Text_HUDTips7", null, "免费换装", null, null, null], [222, "Text_HUDTips8", null, null, null, null, null], [223, "Text_Tab1_1", "Appearance", "捏脸", null, null, null], [224, "Text_Tab1_2", "Clothing", "换装", null, null, null], [225, "Text_Tab1_3", "Collection", "收藏", null, null, null], [226, "Text_Tab1_4", "Test", "测试", null, null, null], [227, "Text_Tab2_101", "Body Type", "体型", null, null, null], [228, "Text_Tab2_102", "Skin Tone", "肤色", null, null, null], [229, "Text_Tab2_103", "Face", "脸型", null, null, null], [230, "Text_Tab2_104", "Eyes", "眼睛", null, null, null], [231, "Text_Tab2_105", "Eyebrows", "眉毛", null, null, null], [232, "Text_Tab2_106", "Makeup", "妆容", null, null, null], [233, "Text_Tab2_107", "Expression", "表情", null, null, null], [234, "Text_Tab2_108", "Outfit", "套装", null, null, null], [235, "Text_Tab2_109", "Hair", "头发", null, null, null], [236, "Text_Tab2_110", "Top", "上衣", null, null, null], [237, "Text_Tab2_111", "Bottom", "下衣", null, null, null], [238, "Text_Tab2_112", "Gloves", "鞋子", null, null, null], [239, "Text_Tab2_113", "Shoes", "手套", null, null, null], [240, "Text_Tab2_114", "Pet", "宠物", null, null, null], [241, "Text_Tab2_115", "Accessory", "饰品", null, null, null], [242, "Text_Tab2_501", "Body Type", "体型", "收藏", null, null], [243, "Text_Tab2_502", "Skin Tone", "肤色", "收藏", null, null], [244, "Text_Tab2_503", "Face", "脸型", "收藏", null, null], [245, "Text_Tab2_504", "Eyes", "眼睛", "收藏", null, null], [246, "Text_Tab2_505", "Eyebrows", "眉毛", "收藏", null, null], [247, "Text_Tab2_506", "Makeup", "妆容", "收藏", null, null], [248, "Text_Tab2_507", "Expression", "表情", "收藏", null, null], [249, "Text_Tab2_508", "Outfit", "套装", "收藏", null, null], [250, "Text_Tab2_509", "Hair", "头发", "收藏", null, null], [251, "Text_Tab2_510", "Top", "上衣", "收藏", null, null], [252, "Text_Tab2_511", "Bottom", "下衣", "收藏", null, null], [253, "Text_Tab2_512", "Gloves", "鞋子", "收藏", null, null], [254, "Text_Tab2_513", "Shoes", "手套", "收藏", null, null], [255, "Text_Tab2_514", "Pet", "宠物", "收藏", null, null], [256, "Text_Tab2_515", "Accessory", "饰品", "收藏", null, null], [257, "Text_Tab3_1001", "Pupil Style", "瞳孔样式", null, null, null], [258, "Text_Tab3_1002", "Lens", "瞳孔贴花", null, null, null], [259, "Text_Tab3_1003", "Upper Highlight", "上高光", null, null, null], [260, "Text_Tab3_1004", "Lower Highlight", "下高光", null, null, null], [261, "Text_Tab3_1005", "Eyelashes", "睫毛", null, null, null], [262, "Text_Tab3_1006", "Eyeshadow", "眼影", null, null, null], [263, "Text_Tab3_1007", "Blush", "腮红", null, null, null], [264, "Text_Tab3_1008", "Lip Makeup", "口红", null, null, null], [265, "Text_Tab3_1009", "Face Tattoo", "面部彩绘", null, null, null], [266, "Text_Tab3_1010", "Full Hair", "整体发型", null, null, null], [267, "Text_Tab3_1011", "Front Hair", "前发", null, null, null], [268, "Text_Tab3_1012", "Back Hair", "后发", null, null, null], [269, "Text_Tab3_1013", "Left Hand", "左手", null, null, null], [270, "Text_Tab3_1014", "Right Hand", "右手", null, null, null], [271, "Text_Tab3_1015", "Back", "背饰", null, null, null], [272, "Text_Tab3_1016", "Head", "头饰", null, null, null], [273, "Text_Tab3_1017", "Face", "面饰", null, null, null], [274, "Text_Tab3_1018", "Hip", "臀部", null, null, null], [275, "Text_Tab3_1019", "Shoulder", "肩部", null, null, null], [276, "Text_Tab3_1020", "Effects", "特效", null, null, null], [277, "Text_Tab3_2001", "Pupil Style", "瞳孔样式", "收藏", null, null], [278, "Text_Tab3_2002", "Lens", "瞳孔贴花", "收藏", null, null], [279, "Text_Tab3_2003", "Upper Highlight", "上高光", "收藏", null, null], [280, "Text_Tab3_2004", "Lower Highlight", "下高光", "收藏", null, null], [281, "Text_Tab3_2005", "Eyelashes", "睫毛", "收藏", null, null], [282, "Text_Tab3_2006", "Eyeshadow", "眼影", "收藏", null, null], [283, "Text_Tab3_2007", "Blush", "腮红", "收藏", null, null], [284, "Text_Tab3_2008", "Lip Makeup", "口红", "收藏", null, null], [285, "Text_Tab3_2009", "Face Tattoo", "面部彩绘", "收藏", null, null], [286, "Text_Tab3_2010", "Full Hair", "整体发型", "收藏", null, null], [287, "Text_Tab3_2011", "Front Hair", "前发", "收藏", null, null], [288, "Text_Tab3_2012", "Back Hair", "后发", "收藏", null, null], [289, "Text_Tab3_2013", "Left Hand", "左手", "收藏", null, null], [290, "Text_Tab3_2014", "Right Hand", "右手", "收藏", null, null], [291, "Text_Tab3_2015", "Back", "背饰", "收藏", null, null], [292, "Text_Tab3_2016", "Ear", "耳饰", "收藏", null, null], [293, "Text_Tab3_2017", "Face", "面饰", "收藏", null, null], [294, "Text_Tab3_2018", "Hip", "臀部", "收藏", null, null], [295, "Text_Tab3_2019", "Shoulder", "肩部", "收藏", null, null], [296, "Text_Tab3_2020", "Effects", "特效", "收藏", null, null], [297, "Text_OpenClothTextBlock", "Shop", "换装商店", null, null, null], [298, "Text_MallItem_Free", "Free", "免费", null, null, null], [299, "Text_ThisFeatureIsNotEnabled", "This feature is not enabled", "此功能未开启", null, null, null], [300, "Text_BodyTypeDescribe", "{0} times", "{0}倍", null, null, null], [301, "Text_Expression_Default", "Default", "默认表情", null, null, null], [302, "Text_Expression_Smile", "Smile", "微笑", null, null, null], [303, "Text_Expression_HaveFun", "Have Fun", "开心", null, null, null], [304, "Text_Expression_Sad", "Sad", "伤心", null, null, null], [305, "Text_Expression_GetAngry", "Get Angry", "生气", null, null, null], [306, "Text_Expression_Embarrassment", "Embarrassment", "尴尬", null, null, null], [307, "Text_Expression_Laugh", "Laugh", "笑", null, null, null], [308, "Text_Expression_BeNaughty", "Be Naughty", "调皮", null, null, null], [309, "Text_Expression_Cute", "Cute", "可爱", null, null, null], [310, "Text_Expression_Doubt", "Doubt", "疑惑", null, null, null], [311, "Text_Tab3_1021", "Trailing", "拖尾", null, null, null], [312, "Text_Tab3_2021", "Trailing", "拖尾", "收藏", null, null], [313, "Text_ColorPick", "Color Pick", "调色板", null, null, null], [314, "Text_ColorPart", "Part {0}", "部位 {0}", null, null, null], [315, "Text_NotSupportToning", "This {0} Does Not Support Toning", "这个{0}不支持调色", null, null, null], [316, "Text_PupilColor", "Pupil Color", "瞳孔颜色", null, null, null], [317, "Text_LeftPupilColor", "Left Pupil Color", "左瞳孔颜色", null, null, null], [318, "Text_RightPupilColor", "Right Pupil Color", "右瞳孔颜色", null, null, null], [319, "Text_DecalColor", "Decal Color", "贴花颜色", null, null, null], [320, "Text_UpperHighlightColor", "Upper Highlight Color", "上高光颜色", null, null, null], [321, "Text_LowerHighlightColor", "Lower Highlight Color", "下高光颜色", null, null, null], [322, "Text_EyelashColor", "Eyelash Color", "睫毛颜色", null, null, null], [323, "Text_EyeshaowColor", "Eyeshaow Color", "眼影颜色", null, null, null], [324, "Text_BlushColor", "Blush Color", "腮红颜色", null, null, null], [325, "Text_LipstickColor", "Lipstick Color", "口红颜色", null, null, null], [326, "Text_Monochrome", "Monochrome", "单色", null, null, null], [327, "Text_TopColor", "Top Color", "发顶色", null, null, null], [328, "Text_TailColor", "Tail Color", "发尾色", null, null, null], [329, "Text_FreeSave", "Free Save", "免费保存", null, null, null], [330, "Text_ResetImage", "Reset Image", "重置平台形象", null, null, null], [331, "Text_ResetImageFaild", "Failed to reset platform image", "重置平台形象失败", null, null, null], [332, "Text_SaveColor", "Save {0} Color", "保存{0}颜色", null, null, null], [333, "Text_SaveTips", "Save Tips", "保存提示", null, null, null], [334, "Text_Save", "Save", "保存", null, null, null], [335, "Text_NoSave", "No Save", "不保存", null, null, null], [336, "Text_WhetherSaveImage", "Whether Save Image", "是否保存当前角色形象", null, null, null], [337, "Text_CloseTips", "Close Tips", "关闭提示", null, null, null], [338, "Text_SaveSuccessfully", "Save Successfully", "保存成功", null, null, null], [339, "Text_ResetSuccessfully", "Reset Successfully", "重置成功", null, null, null], [340, "Text_SwitchSuccessfully", "Switch Successfully", "切换成功", null, null, null], [341, "Text_WhetherToKeepTheCurrentColor", "Whether to keep the current color", "是否保留当前颜色", null, null, null], [342, "Text_Retain", "Retain", "保留", null, null, null], [343, "Text_NoRetain", "No Retain", "不保留", null, null, null], [344, "Text_Tab3_1022", "Daily Styling", "日常造型1", null, null, null], [345, "Text_Tab3_1023", "Muppet Styling", "布偶造型", null, null, null], [346, "Text_Tab3_1024", "Hero Styling", "英雄造型", null, null, null], [347, "Text_Tab3_1025", "Fantasy Modeling", "幻想造型", null, null, null], [348, "Text_Tab3_1026", "Holiday Styling", "节日造型", null, null, null], [349, "Text_Tab3_1027", "Science Fiction Styling", "科幻造型", null, null, null], [350, "Text_Tab3_1028", "Ancient Molding", "古代造型", null, null, null], [351, "Text_Tab3_1029", "Long Piece", "长单件", null, null, null], [352, "Text_Tab3_1030", "Jacket", "短外套", null, null, null], [353, "Text_Tab3_1031", "Short Piece", "短单件", null, null, null], [354, "Text_Tab3_1032", "Outfit", "套装", null, null, null], [355, "Text_Tab3_1033", "Long Coat", "长外套", null, null, null], [356, "Text_Tab3_1034", "Kilt", "短裙", null, null, null], [357, "Text_Tab3_1035", "Trousers", "长裤", null, null, null], [358, "Text_Tab3_1036", "Shorts", "短裤", null, null, null], [359, "Text_Tab3_1037", "Long Dress", "长裙", null, null, null], [360, "Text_Tab3_1038", "Pantyhose", "裤袜", null, null, null], [361, "Text_Tab3_1039", "Gloves", "手套", null, null, null], [362, "Text_Tab3_1040", "Glove Accessory", "手套饰品", null, null, null], [363, "Text_Tab3_1041", "Everyday Shoes", "日常鞋", null, null, null], [364, "Text_Tab3_1042", "Boots", "靴子", null, null, null], [365, "Text_Tab3_1043", "Toe Brace", "足套", null, null, null], [366, "Text_Tab3_1044", "Nudity", "裸饰", null, null, null], [367, "Text_Tab3_1045", "High Heeled Shoes", "高跟鞋", null, null, null], [368, "Text_Tab3_1046", "Sneakers", "运动鞋", null, null, null], [369, "Text_Tab3_1047", "Daily Styling", "日常造型2", null, null, null]];
 class LanguageConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$v);
+        super(EXCELDATA$A);
     }
     /**{0}秒内不可重置位置*/
     get CannotResetPositionWithinSeconds() { return this.getElement(1); }
@@ -4000,10 +3904,10 @@ var foreign43 = /*#__PURE__*/Object.freeze({
     LanguageConfig: LanguageConfig
 });
 
-const EXCELDATA$u = [["ID", "Describe", "AssetId", "Transform", "SexType"], ["", "", "", "", ""], [1, "单手刀", "334208", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [2, "星月魔杖", "291285", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [3, "散弹喷枪", "155702", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [4, "紫光剑", "304952", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [5, "弓箭", "304643", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [6, "星月魔杖", "304949", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [7, "法杖", "304953", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0]];
+const EXCELDATA$z = [["ID", "Describe", "AssetId", "Transform", "SexType"], ["", "", "", "", ""], [1, "单手刀", "334208", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [2, "星月魔杖", "291285", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [3, "散弹喷枪", "155702", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [4, "紫光剑", "304952", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [5, "弓箭", "304643", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [6, "星月魔杖", "304949", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [7, "法杖", "304953", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0]];
 class LeftHandConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$u);
+        super(EXCELDATA$z);
     }
 }
 
@@ -4012,10 +3916,10 @@ var foreign44 = /*#__PURE__*/Object.freeze({
     LeftHandConfig: LeftHandConfig
 });
 
-const EXCELDATA$t = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "291374", 0], [2, null, "291373", 0], [3, null, "291372", 0], [4, null, "291371", 0], [5, null, "291370", 0], [6, null, "291369", 0], [7, null, "291368", 0], [8, null, "291367", 0], [9, null, "291366", 0], [10, null, "291365", 0], [11, null, "291364", 0], [12, null, "291363", 0], [13, null, "291362", 0], [14, null, "291361", 0], [15, null, "291360", 0], [16, null, "291359", 0], [17, null, "291358", 0], [18, null, "291357", 0], [19, null, "291356", 0], [20, null, "291355", 0], [21, null, "291354", 0], [22, null, "291353", 0], [23, null, "291352", 0], [24, null, "291351", 0], [25, null, "291350", 0], [26, null, "291349", 0], [27, null, "291348", 0], [28, null, "291347", 0], [29, null, "291346", 0], [30, null, "291345", 0], [31, null, "291344", 0], [32, null, "291343", 0], [33, null, "291342", 0], [34, null, "291341", 0], [35, null, "291340", 0], [36, null, "270031", 0], [37, null, "228490", 0], [38, null, "193330", 0], [39, null, "193329", 0], [40, null, "193328", 0], [41, null, "185329", 0], [42, null, "116948", 0], [43, null, "116947", 0], [44, null, "116946", 0], [45, null, "116945", 0], [46, null, "116944", 0], [47, null, "116625", 0], [48, null, "115870", 0], [49, null, "115869", 0], [50, null, "112641", 0], [51, null, "112592", 0], [52, null, "109582", 0], [53, null, "108744", 0], [54, null, "108743", 0], [55, null, "108742", 0], [56, null, "100892", 0], [57, null, "98605", 0], [58, null, "77768", 0], [59, null, "77767", 0], [60, null, "77766", 0], [61, null, "77590", 0], [62, null, "77589", 0], [63, null, "77588", 0], [64, null, "77587", 0], [65, null, "77586", 0], [66, null, "77585", 0], [67, null, "77584", 0], [68, null, "77583", 0], [69, null, "77582", 0], [70, null, "77581", 0], [71, null, "77509", 0], [72, null, "77508", 0], [73, null, "77507", 0], [74, null, "77506", 0], [75, null, "77505", 0], [76, null, "77504", 0], [77, null, "77503", 0], [78, null, "77502", 0], [79, null, "77477", 0], [80, null, "77476", 0], [81, null, "77475", 0], [82, null, "77474", 0], [83, null, "77473", 0], [84, null, "77472", 0], [85, null, "77471", 0], [86, null, "77470", 0], [87, null, "77469", 0], [88, null, "77446", 0], [89, null, "77445", 0], [90, null, "77444", 0], [91, null, "68986", 0], [92, null, "68985", 0], [93, null, "68984", 0], [94, null, "48672", 0], [95, null, "48671", 0], [96, null, "48670", 0], [97, null, "48669", 0], [98, null, "48668", 0], [99, null, "48667", 0], [100, null, "48666", 0], [101, null, "48665", 0], [102, null, "48664", 0], [103, null, "48663", 0], [104, null, "32111", 0], [105, null, "32110", 0], [106, null, "32109", 0], [107, null, "32107", 0], [108, null, "32106", 0], [109, null, "32104", 0], [110, null, "32102", 0], [111, null, "32100", 0], [112, null, "32099", 0], [113, null, "32097", 0], [114, null, "32087", 0], [115, null, "32086", 0], [116, null, "32085", 0], [117, null, "32084", 0], [118, null, "32083", 0], [119, null, "22746", 0]];
+const EXCELDATA$y = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "291374", 0], [2, null, "291373", 0], [3, null, "291372", 0], [4, null, "291371", 0], [5, null, "291370", 0], [6, null, "291369", 0], [7, null, "291368", 0], [8, null, "291367", 0], [9, null, "291366", 0], [10, null, "291365", 0], [11, null, "291364", 0], [12, null, "291363", 0], [13, null, "291362", 0], [14, null, "291361", 0], [15, null, "291360", 0], [16, null, "291359", 0], [17, null, "291358", 0], [18, null, "291357", 0], [19, null, "291356", 0], [20, null, "291355", 0], [21, null, "291354", 0], [22, null, "291353", 0], [23, null, "291352", 0], [24, null, "291351", 0], [25, null, "291350", 0], [26, null, "291349", 0], [27, null, "291348", 0], [28, null, "291347", 0], [29, null, "291346", 0], [30, null, "291345", 0], [31, null, "291344", 0], [32, null, "291343", 0], [33, null, "291342", 0], [34, null, "291341", 0], [35, null, "291340", 0], [36, null, "270031", 0], [37, null, "228490", 0], [38, null, "193330", 0], [39, null, "193329", 0], [40, null, "193328", 0], [41, null, "185329", 0], [42, null, "116948", 0], [43, null, "116947", 0], [44, null, "116946", 0], [45, null, "116945", 0], [46, null, "116944", 0], [47, null, "116625", 0], [48, null, "115870", 0], [49, null, "115869", 0], [50, null, "112641", 0], [51, null, "112592", 0], [52, null, "109582", 0], [53, null, "108744", 0], [54, null, "108743", 0], [55, null, "108742", 0], [56, null, "100892", 0], [57, null, "98605", 0], [58, null, "77768", 0], [59, null, "77767", 0], [60, null, "77766", 0], [61, null, "77590", 0], [62, null, "77589", 0], [63, null, "77588", 0], [64, null, "77587", 0], [65, null, "77586", 0], [66, null, "77585", 0], [67, null, "77584", 0], [68, null, "77583", 0], [69, null, "77582", 0], [70, null, "77581", 0], [71, null, "77509", 0], [72, null, "77508", 0], [73, null, "77507", 0], [74, null, "77506", 0], [75, null, "77505", 0], [76, null, "77504", 0], [77, null, "77503", 0], [78, null, "77502", 0], [79, null, "77477", 0], [80, null, "77476", 0], [81, null, "77475", 0], [82, null, "77474", 0], [83, null, "77473", 0], [84, null, "77472", 0], [85, null, "77471", 0], [86, null, "77470", 0], [87, null, "77469", 0], [88, null, "77446", 0], [89, null, "77445", 0], [90, null, "77444", 0], [91, null, "68986", 0], [92, null, "68985", 0], [93, null, "68984", 0], [94, null, "48672", 0], [95, null, "48671", 0], [96, null, "48670", 0], [97, null, "48669", 0], [98, null, "48668", 0], [99, null, "48667", 0], [100, null, "48666", 0], [101, null, "48665", 0], [102, null, "48664", 0], [103, null, "48663", 0], [104, null, "32111", 0], [105, null, "32110", 0], [106, null, "32109", 0], [107, null, "32107", 0], [108, null, "32106", 0], [109, null, "32104", 0], [110, null, "32102", 0], [111, null, "32100", 0], [112, null, "32099", 0], [113, null, "32097", 0], [114, null, "32087", 0], [115, null, "32086", 0], [116, null, "32085", 0], [117, null, "32084", 0], [118, null, "32083", 0], [119, null, "22746", 0]];
 class LensConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$t);
+        super(EXCELDATA$y);
     }
 }
 
@@ -4024,10 +3928,10 @@ var foreign45 = /*#__PURE__*/Object.freeze({
     LensConfig: LensConfig
 });
 
-const EXCELDATA$s = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "531767", 0], [2, null, "531766", 0], [3, null, "370253", 0], [4, null, "370242", 0], [5, null, "370241", 0], [6, null, "370240", 0], [7, null, "370238", 0], [8, null, "367137", 0], [9, null, "270030", 0], [10, null, "267300", 0], [11, null, "267297", 0], [12, null, "267289", 0], [13, null, "267288", 0], [14, null, "267286", 0], [15, null, "215818", 0], [16, null, "215817", 0], [17, null, "215816", 0], [18, null, "215815", 0], [19, null, "215814", 0], [20, null, "215813", 0], [21, null, "215812", 0], [22, null, "215811", 0], [23, null, "215810", 0], [24, null, "215809", 0], [25, null, "215808", 0], [26, null, "215807", 0], [27, null, "215806", 0], [28, null, "215805", 0], [29, null, "215804", 0], [30, null, "215803", 0], [31, null, "215802", 0], [32, null, "215800", 0], [33, null, "215799", 0], [34, null, "215798", 0], [35, null, "215797", 0], [36, null, "215795", 0], [37, null, "215794", 0], [38, null, "215793", 0], [39, null, "215792", 0], [40, null, "215791", 0], [41, null, "215790", 0], [42, null, "215789", 0], [43, null, "215788", 0], [44, null, "215787", 0], [45, null, "215786", 0], [46, null, "215785", 0], [47, null, "215784", 0], [48, null, "215783", 0], [49, null, "215782", 0], [50, null, "215781", 0], [51, null, "215780", 0], [52, null, "215779", 0], [53, null, "215778", 0], [54, null, "215777", 0], [55, null, "215776", 0], [56, null, "215775", 0], [57, null, "215774", 0], [58, null, "215773", 0], [59, null, "215772", 0], [60, null, "129304", 0], [61, null, "112587", 0], [62, null, "77603", 0], [63, null, "77602", 0], [64, null, "77526", 0], [65, null, "77525", 0], [66, null, "77524", 0], [67, null, "77523", 0], [68, null, "77522", 0], [69, null, "77521", 0], [70, null, "77520", 0], [71, null, "75947", 0], [72, null, "32092", 0], [73, null, "32091", 0], [74, null, "32090", 0], [75, null, "32089", 0], [76, null, "32088", 0], [77, null, "32080", 0]];
+const EXCELDATA$x = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "531767", 0], [2, null, "531766", 0], [3, null, "370253", 0], [4, null, "370242", 0], [5, null, "370241", 0], [6, null, "370240", 0], [7, null, "370238", 0], [8, null, "367137", 0], [9, null, "270030", 0], [10, null, "267300", 0], [11, null, "267297", 0], [12, null, "267289", 0], [13, null, "267288", 0], [14, null, "267286", 0], [15, null, "215818", 0], [16, null, "215817", 0], [17, null, "215816", 0], [18, null, "215815", 0], [19, null, "215814", 0], [20, null, "215813", 0], [21, null, "215812", 0], [22, null, "215811", 0], [23, null, "215810", 0], [24, null, "215809", 0], [25, null, "215808", 0], [26, null, "215807", 0], [27, null, "215806", 0], [28, null, "215805", 0], [29, null, "215804", 0], [30, null, "215803", 0], [31, null, "215802", 0], [32, null, "215800", 0], [33, null, "215799", 0], [34, null, "215798", 0], [35, null, "215797", 0], [36, null, "215795", 0], [37, null, "215794", 0], [38, null, "215793", 0], [39, null, "215792", 0], [40, null, "215791", 0], [41, null, "215790", 0], [42, null, "215789", 0], [43, null, "215788", 0], [44, null, "215787", 0], [45, null, "215786", 0], [46, null, "215785", 0], [47, null, "215784", 0], [48, null, "215783", 0], [49, null, "215782", 0], [50, null, "215781", 0], [51, null, "215780", 0], [52, null, "215779", 0], [53, null, "215778", 0], [54, null, "215777", 0], [55, null, "215776", 0], [56, null, "215775", 0], [57, null, "215774", 0], [58, null, "215773", 0], [59, null, "215772", 0], [60, null, "129304", 0], [61, null, "112587", 0], [62, null, "77603", 0], [63, null, "77602", 0], [64, null, "77526", 0], [65, null, "77525", 0], [66, null, "77524", 0], [67, null, "77523", 0], [68, null, "77522", 0], [69, null, "77521", 0], [70, null, "77520", 0], [71, null, "75947", 0], [72, null, "32092", 0], [73, null, "32091", 0], [74, null, "32090", 0], [75, null, "32089", 0], [76, null, "32088", 0], [77, null, "32080", 0]];
 class LipMakeupConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$s);
+        super(EXCELDATA$x);
     }
 }
 
@@ -4036,10 +3940,10 @@ var foreign46 = /*#__PURE__*/Object.freeze({
     LipMakeupConfig: LipMakeupConfig
 });
 
-const EXCELDATA$r = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "509866", 2], [2, null, "502242", 2], [3, null, "478216", 2], [4, null, "476300", 2], [5, null, "390742", 2], [6, null, "390421", 2], [7, null, "390411", 2], [8, null, "390344", 2], [9, null, "340073", 2], [10, null, "313728", 2], [11, null, "300486", 2], [12, null, "269622", 2], [13, null, "241444", 2], [14, null, "240054", 2], [15, null, "192595", 2], [16, null, "171302", 2], [17, null, "142607", 2], [18, null, "138105", 2], [19, null, "137427", 2], [20, null, "131790", 2], [21, null, "127682", 2], [22, null, "119278", 2], [23, null, "117488", 2], [24, null, "116974", 2], [25, null, "115846", 2], [26, null, "112206", 2], [27, null, "111724", 2], [28, null, "111723", 2], [29, null, "111718", 2], [30, null, "111251", 2], [31, null, "111248", 2], [32, null, "111085", 2], [33, null, "109832", 2], [34, null, "64729", 2], [35, null, "64152", 2], [36, null, "63878", 2], [37, null, "63314", 2], [38, null, "63313", 2], [39, null, "62550", 2], [40, null, "509876", 1], [41, null, "507470", 1], [42, null, "504605", 1], [43, null, "502160", 1], [44, null, "494890", 1], [45, null, "479103", 1], [46, null, "476241", 1], [47, null, "458750", 1], [48, null, "458131", 1], [49, null, "382997", 1], [50, null, "356545", 1], [51, null, "348896", 1], [52, null, "320845", 1], [53, null, "313981", 1], [54, null, "299161", 1], [55, null, "291008", 1], [56, null, "264150", 1], [57, null, "250472", 1], [58, null, "240886", 1], [59, null, "224166", 1], [60, null, "221669", 1], [61, null, "212897", 1], [62, null, "200239", 1], [63, null, "192555", 1], [64, null, "181106", 1], [65, null, "171317", 1], [66, null, "144965", 1], [67, null, "144877", 1], [68, null, "140276", 1], [69, null, "134563", 1], [70, null, "134560", 1], [71, null, "131745", 1], [72, null, "129275", 1], [73, null, "129250", 1], [74, null, "129179", 1], [75, null, "129091", 1], [76, null, "127714", 1], [77, null, "127500", 1], [78, null, "126682", 1], [79, null, "125690", 1], [80, null, "122778", 1], [81, null, "120577", 1], [82, null, "119891", 1], [83, null, "119341", 1], [84, null, "119290", 1], [85, null, "119257", 1], [86, null, "118077", 1], [87, null, "117682", 1], [88, null, "116983", 1], [89, null, "115941", 1], [90, null, "112575", 1], [91, null, "111761", 1], [92, null, "111613", 1], [93, null, "111575", 1], [94, null, "111487", 1], [95, null, "111418", 1], [96, null, "111395", 1], [97, null, "111352", 1], [98, null, "111159", 1], [99, null, "109149", 1], [100, null, "109063", 1], [101, null, "98552", 1], [102, null, "94784", 1], [103, null, "75659", 1], [104, null, "74122", 1], [105, null, "74119", 1], [106, null, "66699", 1], [107, null, "66596", 1], [108, null, "66426", 1], [109, null, "66425", 1], [110, null, "66164", 1], [111, null, "65982", 1], [112, null, "65782", 1], [113, null, "65727", 1], [114, null, "65062", 1], [115, null, "65010", 1], [116, null, "64997", 1], [117, null, "64950", 1], [118, null, "64805", 1], [119, null, "64794", 1], [120, null, "64723", 1], [121, null, "64554", 1], [122, null, "63965", 1], [123, null, "63917", 1], [124, null, "63682", 1], [125, null, "63681", 1], [126, null, "63680", 1], [127, null, "63594", 1], [128, null, "60386", 1]];
+const EXCELDATA$w = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "509866", 2], [2, null, "502242", 2], [3, null, "478216", 2], [4, null, "476300", 2], [5, null, "390742", 2], [6, null, "390421", 2], [7, null, "390411", 2], [8, null, "390344", 2], [9, null, "340073", 2], [10, null, "313728", 2], [11, null, "300486", 2], [12, null, "269622", 2], [13, null, "241444", 2], [14, null, "240054", 2], [15, null, "192595", 2], [16, null, "171302", 2], [17, null, "142607", 2], [18, null, "138105", 2], [19, null, "137427", 2], [20, null, "131790", 2], [21, null, "127682", 2], [22, null, "119278", 2], [23, null, "117488", 2], [24, null, "116974", 2], [25, null, "115846", 2], [26, null, "112206", 2], [27, null, "111724", 2], [28, null, "111723", 2], [29, null, "111718", 2], [30, null, "111251", 2], [31, null, "111248", 2], [32, null, "111085", 2], [33, null, "109832", 2], [34, null, "64729", 2], [35, null, "64152", 2], [36, null, "63878", 2], [37, null, "63314", 2], [38, null, "63313", 2], [39, null, "62550", 2], [40, null, "509876", 1], [41, null, "507470", 1], [42, null, "504605", 1], [43, null, "502160", 1], [44, null, "494890", 1], [45, null, "479103", 1], [46, null, "476241", 1], [47, null, "458750", 1], [48, null, "458131", 1], [49, null, "382997", 1], [50, null, "356545", 1], [51, null, "348896", 1], [52, null, "320845", 1], [53, null, "313981", 1], [54, null, "299161", 1], [55, null, "291008", 1], [56, null, "264150", 1], [57, null, "250472", 1], [58, null, "240886", 1], [59, null, "224166", 1], [60, null, "221669", 1], [61, null, "212897", 1], [62, null, "200239", 1], [63, null, "192555", 1], [64, null, "181106", 1], [65, null, "171317", 1], [66, null, "144965", 1], [67, null, "144877", 1], [68, null, "140276", 1], [69, null, "134563", 1], [70, null, "134560", 1], [71, null, "131745", 1], [72, null, "129275", 1], [73, null, "129250", 1], [74, null, "129179", 1], [75, null, "129091", 1], [76, null, "127714", 1], [77, null, "127500", 1], [78, null, "126682", 1], [79, null, "125690", 1], [80, null, "122778", 1], [81, null, "120577", 1], [82, null, "119891", 1], [83, null, "119341", 1], [84, null, "119290", 1], [85, null, "119257", 1], [86, null, "118077", 1], [87, null, "117682", 1], [88, null, "116983", 1], [89, null, "115941", 1], [90, null, "112575", 1], [91, null, "111761", 1], [92, null, "111613", 1], [93, null, "111575", 1], [94, null, "111487", 1], [95, null, "111418", 1], [96, null, "111395", 1], [97, null, "111352", 1], [98, null, "111159", 1], [99, null, "109149", 1], [100, null, "109063", 1], [101, null, "98552", 1], [102, null, "94784", 1], [103, null, "75659", 1], [104, null, "74122", 1], [105, null, "74119", 1], [106, null, "66699", 1], [107, null, "66596", 1], [108, null, "66426", 1], [109, null, "66425", 1], [110, null, "66164", 1], [111, null, "65982", 1], [112, null, "65782", 1], [113, null, "65727", 1], [114, null, "65062", 1], [115, null, "65010", 1], [116, null, "64997", 1], [117, null, "64950", 1], [118, null, "64805", 1], [119, null, "64794", 1], [120, null, "64723", 1], [121, null, "64554", 1], [122, null, "63965", 1], [123, null, "63917", 1], [124, null, "63682", 1], [125, null, "63681", 1], [126, null, "63680", 1], [127, null, "63594", 1], [128, null, "60386", 1]];
 class LongPantsBottomConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$r);
+        super(EXCELDATA$w);
     }
 }
 
@@ -4048,10 +3952,10 @@ var foreign47 = /*#__PURE__*/Object.freeze({
     LongPantsBottomConfig: LongPantsBottomConfig
 });
 
-const EXCELDATA$q = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "502238", 2], [2, null, "497919", 2], [3, null, "497780", 2], [4, null, "497738", 2], [5, null, "495176", 2], [6, null, "490926", 2], [7, null, "468350", 2], [8, null, "457968", 2], [9, null, "457815", 2], [10, null, "457732", 2], [11, null, "455507", 2], [12, null, "440246", 2], [13, null, "437604", 2], [14, null, "437075", 2], [15, null, "412080", 2], [16, null, "390746", 2], [17, null, "390457", 2], [18, null, "390445", 2], [19, null, "390420", 2], [20, null, "390417", 2], [21, null, "390415", 2], [22, null, "383397", 2], [23, null, "383392", 2], [24, null, "358152", 2], [25, null, "340074", 2], [26, null, "325905", 2], [27, null, "323597", 2], [28, null, "313726", 2], [29, null, "299082", 2], [30, null, "298037", 2], [31, null, "269653", 2], [32, null, "269652", 2], [33, null, "224242", 2], [34, null, "224241", 2], [35, null, "224240", 2], [36, null, "224239", 2], [37, null, "224238", 2], [38, null, "192850", 2], [39, null, "171802", 2], [40, null, "171092", 2], [41, null, "171091", 2], [42, null, "140483", 2], [43, null, "137385", 2], [44, null, "125737", 2], [45, null, "121055", 2], [46, null, "117491", 2], [47, null, "111205", 2], [48, null, "64774", 2], [49, null, "64140", 2], [50, null, "63295", 2], [51, null, "62537", 2], [52, null, "62536", 2], [53, null, "60982", 2], [54, null, "60114", 2], [55, null, "504623", 1], [56, null, "502263", 1], [57, null, "494891", 1], [58, null, "477531", 1], [59, null, "192842", 1], [60, null, "181113", 1], [61, null, "140280", 1], [62, null, "127800", 1], [63, null, "126679", 1], [64, null, "122919", 1], [65, null, "122779", 1], [66, null, "119483", 1], [67, null, "119338", 1], [68, null, "112568", 1], [69, null, "109058", 1], [70, null, "96576", 1], [71, null, "66726", 1], [72, null, "65973", 1], [73, null, "63710", 1]];
+const EXCELDATA$v = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "502238", 2], [2, null, "497919", 2], [3, null, "497780", 2], [4, null, "497738", 2], [5, null, "495176", 2], [6, null, "490926", 2], [7, null, "468350", 2], [8, null, "457968", 2], [9, null, "457815", 2], [10, null, "457732", 2], [11, null, "455507", 2], [12, null, "440246", 2], [13, null, "437604", 2], [14, null, "437075", 2], [15, null, "412080", 2], [16, null, "390746", 2], [17, null, "390457", 2], [18, null, "390445", 2], [19, null, "390420", 2], [20, null, "390417", 2], [21, null, "390415", 2], [22, null, "383397", 2], [23, null, "383392", 2], [24, null, "358152", 2], [25, null, "340074", 2], [26, null, "325905", 2], [27, null, "323597", 2], [28, null, "313726", 2], [29, null, "299082", 2], [30, null, "298037", 2], [31, null, "269653", 2], [32, null, "269652", 2], [33, null, "224242", 2], [34, null, "224241", 2], [35, null, "224240", 2], [36, null, "224239", 2], [37, null, "224238", 2], [38, null, "192850", 2], [39, null, "171802", 2], [40, null, "171092", 2], [41, null, "171091", 2], [42, null, "140483", 2], [43, null, "137385", 2], [44, null, "125737", 2], [45, null, "121055", 2], [46, null, "117491", 2], [47, null, "111205", 2], [48, null, "64774", 2], [49, null, "64140", 2], [50, null, "63295", 2], [51, null, "62537", 2], [52, null, "62536", 2], [53, null, "60982", 2], [54, null, "60114", 2], [55, null, "504623", 1], [56, null, "502263", 1], [57, null, "494891", 1], [58, null, "477531", 1], [59, null, "192842", 1], [60, null, "181113", 1], [61, null, "140280", 1], [62, null, "127800", 1], [63, null, "126679", 1], [64, null, "122919", 1], [65, null, "122779", 1], [66, null, "119483", 1], [67, null, "119338", 1], [68, null, "112568", 1], [69, null, "109058", 1], [70, null, "96576", 1], [71, null, "66726", 1], [72, null, "65973", 1], [73, null, "63710", 1]];
 class LongSinglePieceTopConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$q);
+        super(EXCELDATA$v);
     }
 }
 
@@ -4060,10 +3964,10 @@ var foreign48 = /*#__PURE__*/Object.freeze({
     LongSinglePieceTopConfig: LongSinglePieceTopConfig
 });
 
-const EXCELDATA$p = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "313993", 2], [2, null, "296021", 2], [3, null, "128837", 2], [4, null, "127279", 2], [5, null, "121054", 2], [6, null, "64418", 2], [7, null, "62971", 2], [8, null, "193166", 1], [9, null, "127801", 1], [10, null, "127348", 1]];
+const EXCELDATA$u = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "313993", 2], [2, null, "296021", 2], [3, null, "128837", 2], [4, null, "127279", 2], [5, null, "121054", 2], [6, null, "64418", 2], [7, null, "62971", 2], [8, null, "193166", 1], [9, null, "127801", 1], [10, null, "127348", 1]];
 class LongSkirtBottomConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$p);
+        super(EXCELDATA$u);
     }
 }
 
@@ -4072,10 +3976,10 @@ var foreign49 = /*#__PURE__*/Object.freeze({
     LongSkirtBottomConfig: LongSkirtBottomConfig
 });
 
-const EXCELDATA$o = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "32098", 0], [2, null, "48017", 0], [3, null, "48018", 0], [4, null, "48019", 0], [5, null, "48020", 0], [6, null, "48021", 0], [7, null, "48022", 0], [8, null, "48023", 0], [9, null, "48024", 0], [10, null, "48025", 0], [11, null, "48026", 0], [12, null, "48027", 0], [13, null, "48028", 0], [14, null, "48029", 0], [15, null, "48035", 0]];
+const EXCELDATA$t = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "32098", 0], [2, null, "48017", 0], [3, null, "48018", 0], [4, null, "48019", 0], [5, null, "48020", 0], [6, null, "48021", 0], [7, null, "48022", 0], [8, null, "48023", 0], [9, null, "48024", 0], [10, null, "48025", 0], [11, null, "48026", 0], [12, null, "48027", 0], [13, null, "48028", 0], [14, null, "48029", 0], [15, null, "48035", 0]];
 class LowerHighlightConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$o);
+        super(EXCELDATA$t);
     }
 }
 
@@ -4084,10 +3988,22 @@ var foreign50 = /*#__PURE__*/Object.freeze({
     LowerHighlightConfig: LowerHighlightConfig
 });
 
-const EXCELDATA$n = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, "回声战士", "141606", 2], [2, "福瑞", "141617", 2], [3, "海绵宝宝装", "142135", 2], [4, "猫人装", "142137", 2], [5, "长腿妈妈", "143403", 2], [6, "猫猫头套服饰", "163304", 2], [7, "猫咪玩偶服", "164422", 2], [8, "大头玩偶服", "164427", 2], [9, "交个朋友鸭", "270464", 2], [10, "交个朋友鸭", "270465", 2], [11, "卡通玩偶服饰", "162955", 1], [12, "玩偶熊服饰", "164354", 1], [13, "小蓝人服饰", "164356", 1], [14, "方块玩偶服", "164359", 1], [15, "兔子玩偶服", "164364", 1], [16, "玩具鸡服饰", "164366", 1], [17, "刺猬玩偶服", "164367", 1], [18, "玩具兔服饰", "164368", 1], [19, "狗头毛毛虫玩偶服", "164377", 1], [20, "雪人装", "164417", 1], [21, "橘龙", "212971", 1], [22, "跳舞熊", "213498", 1], [23, "蓝龙", "216268", 1], [24, "绿龙", "216269", 1], [25, "黑龙", "216270", 1], [26, "成都五彩熊", "141156", 1], [27, "小黑子", "141476", 1], [28, "鸡人装", "142136", 1], [29, "兔人装", "142138", 1], [30, "熊人装", "142147", 1], [31, "Bunzo bunny", "143383", 1], [32, "Enderman", "143384", 1], [33, "Rainbow friends", "143385", 1], [34, "索尼克", "143387", 1], [35, "狗头毛毛虫", "143390", 1]];
+const EXCELDATA$s = [["ID", "AssetId", "OffsetPos", "OffsetRot", "OffsetSca"], ["", "", "", "", ""], [1, "C665A5E44F6F23B13103ADB63B6DB8FE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [2, "7EFE3FDB48F92FD44D7B9C9B4617847B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [3, "0FCB78664DCD1BB057543DB8A067C122", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [4, "6EEEE3FE4889D23A286CC8B30701C8EE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [5, "EE3A158548986A567D4741AF925DEA34", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [6, "B40762884A5A907F6FC1018C2E8185C8", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [7, "77796AE5405E9B5B173C9EA0E0131A7D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [8, "6CF59C074F7CD23EEEA26B8CCFFBC2C2", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [9, "B04EE94540EE3000A660AEA94FDB25D2", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [10, "471E86844D001CE4E84DA8BABEB0DDEA", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [11, "98CDBDE94A8C79B6C5DD8E96AF07FAF7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [12, "967939744A6C3F5FB4E850A3E7B33E3B", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [13, "4F5E80FC46C55F6F7F5ED0AFCA5D414A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [14, "6D4B721A4E1B76493972E08A824F8AE7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [15, "424A2E254F9FD0AABA1BE3B4E7992B60", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [16, "AFC3939B401019F2DEE37784CC1803A5", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [17, "63D0E8894374EF73151267AE2CD7A6E8", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [18, "CA3C71F24708B24B97555584A526400D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [19, "473BEFA7481C557195E608A058891B5A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [20, "A62514214509E9BB6FFCD286F0A8CACE", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [21, "7CDBD4B148DCD0CB517E88819C62FD4D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [22, "429C69244E35328DF8D73CA554BFE01C", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [23, "662BFCAD46B8DDB2C1F15E95DC1D71FB", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [24, "C7AF1DB740B957C45B589589961D4E9A", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [25, "B1C3D37445115C0FD6602D86C18F5A5E", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [26, "4241E3D6474673648F132C9EE621BB2F", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [27, "893BFC51454BD89A3F56B99C7D87C45D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [28, "C54732A548232206595D87B7BB339EF7", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [29, "7B07E44B468B61C5618A599240037492", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [30, "FA4C79AE412B67C2D02B5C8ABFD6A648", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [31, "B22039F941FFA26BC319D784637C0835", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [32, "36A8FDF445016445175EAB94DF5ECB2D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [33, "874AD10242ADB2FB8F99F0A7CFEDFD92", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(5, 5, 5)], [34, "AC6DA72A418140BECDB4DB959200750D", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(0.5, 0.5, 0.5)], [35, "FB2E466B4DBEB0D3DA22C9AFDD2D0AAD", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [36, "5E9F896F4292738E09AFC6A7290FDA43", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)], [37, "1E47FB6B4F4DCED75E97CB83424EC32F", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1)]];
+class MorphConfig extends ConfigBase {
+    constructor() {
+        super(EXCELDATA$s);
+    }
+}
+
+var foreign51 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    MorphConfig: MorphConfig
+});
+
+const EXCELDATA$r = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, "回声战士", "141606", 2], [2, "福瑞", "141617", 2], [3, "海绵宝宝装", "142135", 2], [4, "猫人装", "142137", 2], [5, "长腿妈妈", "143403", 2], [6, "猫猫头套服饰", "163304", 2], [7, "猫咪玩偶服", "164422", 2], [8, "大头玩偶服", "164427", 2], [9, "交个朋友鸭", "270464", 2], [10, "交个朋友鸭", "270465", 2], [11, "卡通玩偶服饰", "162955", 1], [12, "玩偶熊服饰", "164354", 1], [13, "小蓝人服饰", "164356", 1], [14, "方块玩偶服", "164359", 1], [15, "兔子玩偶服", "164364", 1], [16, "玩具鸡服饰", "164366", 1], [17, "刺猬玩偶服", "164367", 1], [18, "玩具兔服饰", "164368", 1], [19, "狗头毛毛虫玩偶服", "164377", 1], [20, "雪人装", "164417", 1], [21, "橘龙", "212971", 1], [22, "跳舞熊", "213498", 1], [23, "蓝龙", "216268", 1], [24, "绿龙", "216269", 1], [25, "黑龙", "216270", 1], [26, "成都五彩熊", "141156", 1], [27, "小黑子", "141476", 1], [28, "鸡人装", "142136", 1], [29, "兔人装", "142138", 1], [30, "熊人装", "142147", 1], [31, "Bunzo bunny", "143383", 1], [32, "Enderman", "143384", 1], [33, "Rainbow friends", "143385", 1], [34, "索尼克", "143387", 1], [35, "狗头毛毛虫", "143390", 1]];
 class MuppetStylingOutfitConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$n);
+        super(EXCELDATA$r);
     }
 }
 
@@ -4096,10 +4012,10 @@ var foreign52 = /*#__PURE__*/Object.freeze({
     MuppetStylingOutfitConfig: MuppetStylingOutfitConfig
 });
 
-const EXCELDATA$m = [["id", "Guid", "Annotation"], ["", "", ""], [1, "63341", "Chirp"], [2, "118698", "STAY"], [3, "118699", "bad guy"], [4, "117222", "I will live"], [5, "118697", "Let Me Love You"], [6, "118700", "Running up That Hill"], [7, "118701", "Love To Hate Me"], [8, "118702", "TOMBOY"], [9, "118703", "Shut Down"], [10, "118704", "Celestial"], [11, "118712", "As It Was"], [12, "118706", "Good Morning"], [13, "118707", "Alone"], [14, "118709", "Chanderiler"], [15, "118711", "Don't Wanna Know"], [16, "118716", "Mood"], [17, "117220", "Golden wheel"], [18, "128884", "I don't know what it's called"], [19, "128888", "I don't know what it's called"]];
+const EXCELDATA$q = [["id", "Guid", "Annotation"], ["", "", ""], [1, "63341", "Chirp"], [2, "118698", "STAY"], [3, "118699", "bad guy"], [4, "117222", "I will live"], [5, "118697", "Let Me Love You"], [6, "118700", "Running up That Hill"], [7, "118701", "Love To Hate Me"], [8, "118702", "TOMBOY"], [9, "118703", "Shut Down"], [10, "118704", "Celestial"], [11, "118712", "As It Was"], [12, "118706", "Good Morning"], [13, "118707", "Alone"], [14, "118709", "Chanderiler"], [15, "118711", "Don't Wanna Know"], [16, "118716", "Mood"], [17, "117220", "Golden wheel"], [18, "128884", "I don't know what it's called"], [19, "128888", "I don't know what it's called"]];
 class MusicConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$m);
+        super(EXCELDATA$q);
     }
 }
 
@@ -4108,10 +4024,10 @@ var foreign53 = /*#__PURE__*/Object.freeze({
     MusicConfig: MusicConfig
 });
 
-const EXCELDATA$l = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "124879", 2], [2, null, "65712", 2], [3, null, "64412", 2], [4, null, "64142", 2], [5, null, "127349", 1], [6, null, "109137", 1]];
+const EXCELDATA$p = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "124879", 2], [2, null, "65712", 2], [3, null, "64412", 2], [4, null, "64142", 2], [5, null, "127349", 1], [6, null, "109137", 1]];
 class NakedDressShoesConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$l);
+        super(EXCELDATA$p);
     }
 }
 
@@ -4120,10 +4036,10 @@ var foreign54 = /*#__PURE__*/Object.freeze({
     NakedDressShoesConfig: NakedDressShoesConfig
 });
 
-const EXCELDATA$k = [["ID", "Describe", "AssetId", "SexType", "IsTransition"], ["", "", "", "", ""], [1, "一定过套装", "253153", 2, 0], [2, "一定过套装", "263401", 1, 0], [3, "主打求神套装", "264188", 2, 0], [4, "主打求神套装", "264189", 1, 0], [5, "新年装", "297941", 2, 0], [6, "温柔女孩", "303702", 2, 0], [7, "阳光男", "303705", 1, 0], [8, "叛逆女孩", "303706", 2, 0], [9, "叛逆男孩", "303703", 1, 0], [10, "制服女", "367076", 2, 1], [11, "制服女", "435694", 2, 1], [12, "白人女天使", "137837", 2, 1], [13, "白人举重运动员", "141018", 1, 1], [14, "钢铁侠", "357563", 1, 1], [15, "女仆套装女", "350569", 2, 1], [16, "橘龙", "212971", 1, 1], [17, "华丽海盗服", "163624", 2, 0]];
+const EXCELDATA$o = [["ID", "Describe", "AssetId", "SexType", "IsTransition"], ["", "", "", "", ""], [1, "一定过套装", "253153", 2, 0], [2, "一定过套装", "263401", 1, 0], [3, "主打求神套装", "264188", 2, 0], [4, "主打求神套装", "264189", 1, 0], [5, "新年装", "297941", 2, 0], [6, "温柔女孩", "303702", 2, 0], [7, "阳光男", "303705", 1, 0], [8, "叛逆女孩", "303706", 2, 0], [9, "叛逆男孩", "303703", 1, 0], [10, "制服女", "367076", 2, 1], [11, "制服女", "435694", 2, 1], [12, "白人女天使", "137837", 2, 1], [13, "白人举重运动员", "141018", 1, 1], [14, "钢铁侠", "357563", 1, 1], [15, "女仆套装女", "350569", 2, 1], [16, "橘龙", "212971", 1, 1], [17, "华丽海盗服", "163624", 2, 0]];
 class OutfitConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$k);
+        super(EXCELDATA$o);
     }
 }
 
@@ -4132,10 +4048,10 @@ var foreign55 = /*#__PURE__*/Object.freeze({
     OutfitConfig: OutfitConfig
 });
 
-const EXCELDATA$j = [["ID", "Describe", "AssetId", "Transform", "SexType"], ["", "", "", "", ""], [1, null, "420535", ["0", "50", "0", "0", "0", "0", "2", "2", "2"], 0], [2, null, "156405", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [3, null, "267954", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [4, null, "289523", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [5, null, "289524", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [6, null, "289525", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [7, null, "289526", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [8, null, "289527", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [9, null, "365903", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [10, null, "365906", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [11, null, "365918", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [12, null, "365921", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [13, null, "365922", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [14, null, "366268", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [15, null, "379426", ["0", "50", "25", "0", "0", "0", "1", "1", "1"], 0], [16, null, "379427", ["0", "50", "25", "0", "0", "0", "1", "1", "1"], 0], [17, null, "380285", ["0", "50", "25", "0", "0", "0", "1", "1", "1"], 0], [18, null, "380286", ["0", "50", "25", "0", "0", "0", "1", "1", "1"], 0], [19, null, "260129", ["0", "50", "0", "0", "0", "0", "1", "1", "1"], 0]];
+const EXCELDATA$n = [["ID", "Describe", "AssetId", "Transform", "SexType"], ["", "", "", "", ""], [1, null, "420535", ["0", "50", "0", "0", "0", "0", "2", "2", "2"], 0], [2, null, "156405", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [3, null, "267954", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [4, null, "289523", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [5, null, "289524", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [6, null, "289525", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [7, null, "289526", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [8, null, "289527", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [9, null, "365903", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [10, null, "365906", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [11, null, "365918", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [12, null, "365921", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [13, null, "365922", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [14, null, "366268", ["0", "50", "0", "0", "0", "-90", "1", "1", "1"], 0], [15, null, "379426", ["0", "50", "25", "0", "0", "0", "1", "1", "1"], 0], [16, null, "379427", ["0", "50", "25", "0", "0", "0", "1", "1", "1"], 0], [17, null, "380285", ["0", "50", "25", "0", "0", "0", "1", "1", "1"], 0], [18, null, "380286", ["0", "50", "25", "0", "0", "0", "1", "1", "1"], 0], [19, null, "260129", ["0", "50", "0", "0", "0", "0", "1", "1", "1"], 0]];
 class PetConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$j);
+        super(EXCELDATA$n);
     }
 }
 
@@ -4144,10 +4060,10 @@ var foreign56 = /*#__PURE__*/Object.freeze({
     PetConfig: PetConfig
 });
 
-const EXCELDATA$i = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, "美瞳", "531757", 0], [2, "美瞳", "531159", 0], [3, "美瞳", "461646", 0], [4, null, "458422", 0], [5, null, "398609", 0], [6, null, "267296", 0], [7, null, "267295", 0], [8, null, "267294", 0], [9, null, "267291", 0], [10, null, "267285", 0], [11, null, "266476", 0], [12, null, "266475", 0], [13, null, "266474", 0], [14, null, "266473", 0], [15, null, "266472", 0], [16, null, "266372", 0], [17, null, "266371", 0], [18, null, "266363", 0], [19, null, "266362", 0], [20, null, "266361", 0], [21, null, "266360", 0], [22, null, "266359", 0], [23, null, "266358", 0], [24, null, "215181", 0], [25, null, "215180", 0], [26, null, "215179", 0], [27, null, "215178", 0], [28, null, "215177", 0], [29, null, "215176", 0], [30, null, "215175", 0], [31, null, "215174", 0], [32, null, "215173", 0], [33, null, "215172", 0], [34, null, "215171", 0], [35, null, "215170", 0], [36, null, "215169", 0], [37, null, "215168", 0], [38, null, "215167", 0], [39, null, "215166", 0], [40, null, "215165", 0], [41, null, "215164", 0], [42, null, "215163", 0], [43, null, "215162", 0], [44, null, "185330", 0], [45, null, "121577", 0], [46, null, "117054", 0], [47, null, "77770", 0], [48, null, "77769", 0], [49, null, "77598", 0], [50, null, "77597", 0], [51, null, "77596", 0], [52, null, "77518", 0], [53, null, "77517", 0], [54, null, "77485", 0], [55, null, "77484", 0], [56, null, "70244", 0], [57, null, "70243", 0], [58, null, "70242", 0], [59, null, "70241", 0], [60, null, "47973", 0], [61, null, "47972", 0], [62, null, "47971", 0], [63, null, "47970", 0], [64, null, "47969", 0], [65, null, "47968", 0], [66, null, "47967", 0], [67, null, "47966", 0], [68, null, "47965", 0], [69, null, "47964", 0], [70, null, "47963", 0], [71, null, "47962", 0], [72, null, "47961", 0], [73, null, "47960", 0], [74, null, "47959", 0], [75, null, "47958", 0], [76, null, "47957", 0], [77, null, "47956", 0], [78, null, "32093", 0], [79, null, "30422", 0], [80, null, "25891", 0], [81, null, "22599", 0]];
+const EXCELDATA$m = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, "美瞳", "531757", 0], [2, "美瞳", "531159", 0], [3, "美瞳", "461646", 0], [4, null, "458422", 0], [5, null, "398609", 0], [6, null, "267296", 0], [7, null, "267295", 0], [8, null, "267294", 0], [9, null, "267291", 0], [10, null, "267285", 0], [11, null, "266476", 0], [12, null, "266475", 0], [13, null, "266474", 0], [14, null, "266473", 0], [15, null, "266472", 0], [16, null, "266372", 0], [17, null, "266371", 0], [18, null, "266363", 0], [19, null, "266362", 0], [20, null, "266361", 0], [21, null, "266360", 0], [22, null, "266359", 0], [23, null, "266358", 0], [24, null, "215181", 0], [25, null, "215180", 0], [26, null, "215179", 0], [27, null, "215178", 0], [28, null, "215177", 0], [29, null, "215176", 0], [30, null, "215175", 0], [31, null, "215174", 0], [32, null, "215173", 0], [33, null, "215172", 0], [34, null, "215171", 0], [35, null, "215170", 0], [36, null, "215169", 0], [37, null, "215168", 0], [38, null, "215167", 0], [39, null, "215166", 0], [40, null, "215165", 0], [41, null, "215164", 0], [42, null, "215163", 0], [43, null, "215162", 0], [44, null, "185330", 0], [45, null, "121577", 0], [46, null, "117054", 0], [47, null, "77770", 0], [48, null, "77769", 0], [49, null, "77598", 0], [50, null, "77597", 0], [51, null, "77596", 0], [52, null, "77518", 0], [53, null, "77517", 0], [54, null, "77485", 0], [55, null, "77484", 0], [56, null, "70244", 0], [57, null, "70243", 0], [58, null, "70242", 0], [59, null, "70241", 0], [60, null, "47973", 0], [61, null, "47972", 0], [62, null, "47971", 0], [63, null, "47970", 0], [64, null, "47969", 0], [65, null, "47968", 0], [66, null, "47967", 0], [67, null, "47966", 0], [68, null, "47965", 0], [69, null, "47964", 0], [70, null, "47963", 0], [71, null, "47962", 0], [72, null, "47961", 0], [73, null, "47960", 0], [74, null, "47959", 0], [75, null, "47958", 0], [76, null, "47957", 0], [77, null, "47956", 0], [78, null, "32093", 0], [79, null, "30422", 0], [80, null, "25891", 0], [81, null, "22599", 0]];
 class PupilStyleConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$i);
+        super(EXCELDATA$m);
     }
 }
 
@@ -4156,10 +4072,10 @@ var foreign57 = /*#__PURE__*/Object.freeze({
     PupilStyleConfig: PupilStyleConfig
 });
 
-const EXCELDATA$h = [["ID", "Describe", "AssetId", "Transform", "SexType"], ["", "", "", "", ""], [1, "单手刀", "334208", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [2, null, "297029", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [3, "散弹喷枪", "155702", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [4, null, "122956", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [5, null, "122952", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [6, null, "31734", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [7, null, "31728", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [8, null, "31724", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [9, null, "221099", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [10, null, "122716", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [11, null, "166941", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [12, null, "155696", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [13, null, "122726", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [14, null, "168811", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [15, null, "155702", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [16, null, "122720", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0]];
+const EXCELDATA$l = [["ID", "Describe", "AssetId", "Transform", "SexType"], ["", "", "", "", ""], [1, "单手刀", "334208", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [2, null, "297029", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [3, "散弹喷枪", "155702", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [4, null, "122956", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [5, null, "122952", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [6, null, "31734", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [7, null, "31728", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [8, null, "31724", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [9, null, "221099", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [10, null, "122716", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [11, null, "166941", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [12, null, "155696", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [13, null, "122726", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [14, null, "168811", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [15, null, "155702", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [16, null, "122720", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0]];
 class RightHandConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$h);
+        super(EXCELDATA$l);
     }
 }
 
@@ -4168,10 +4084,22 @@ var foreign58 = /*#__PURE__*/Object.freeze({
     RightHandConfig: RightHandConfig
 });
 
-const EXCELDATA$g = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, "短发女", "351026", 2], [2, "短发女", "411825", 2], [3, "机械女", "163329", 2], [4, "赛博套装", "163330", 2], [5, "机甲套装", "163553", 2], [6, "机器人", "162950", 1], [7, "赛博服饰", "162971", 1], [8, "机甲套装", "164428", 1], [9, "刺猬小子", "351402", 1], [10, "魔法男孩", "361919", 1]];
+const EXCELDATA$k = [["ID", "ROLEID", "PRICETYPE", "PRICE", "NAME"], ["", "", "", "", ""], [1, "181562", 1, [1, 5888], "兜帽男"], [2, "143400", 1, [1, 5888], "双马尾女"], [3, "142292", 1, [1, 5888], "男战士"], [4, "142272", 1, [1, 5888], "机甲少女"], [5, "142293", 1, [1, 5888], "男骑士"], [6, "142255", 1, [1, 5888], "纳米机甲女性"], [7, "219915", 1, [1, 5888], "赛博少年"], [8, "226379", 1, [1, 5888], "赛博少年"], [9, "219912", 1, [1, 5888], "赛博少女"], [10, "226386", 1, [1, 5888], "赛博少女"], [11, "266641", 1, [1, 5888], "一定锅少年"], [12, "267183", 1, [1, 5888], "求神少年"], [13, "264622", 1, [1, 5888], "一定锅少女"], [14, "266861", 1, [1, 5888], "求神少女"], [15, "142302", 1, [1, 5888], "宝石铠甲男"], [16, "142303", 1, [1, 5888], "铠甲男战士"], [17, "142396", 1, [1, 5888], "黑人男纳米机甲"], [18, "142397", 1, [1, 5888], "白人男纳米机甲"], [19, "142398", 1, [1, 5888], "白银骑士"], [20, "142906", 1, [1, 5888], "鹰战士"], [21, "142895", 1, [1, 5888], "战士"], [22, "142886", 1, [1, 5888], "毒液怪人"], [23, "142905", 1, [1, 5888], "蚁侠士"], [24, "142898", 1, [1, 5888], "最强队长"], [25, "142885", 1, [1, 5888], "超帅侠"], [26, "142900", 1, [1, 5888], "奇异战士"], [27, "142901", 1, [1, 5888], "闪电怪"], [28, "142887", 1, [1, 5888], "恶灵骷髅"], [29, "142888", 1, [1, 5888], "铁人"], [30, "222475", 1, [1, 5888], "风衣女"], [31, "219916", 1, [1, 5888], "汉服少女"], [32, "266860", 1, [1, 5888], "时尚少女"], [33, "226382", 1, [1, 5888], "潮流少女"], [34, "222476", 1, [1, 5888], "古代书生"]];
+class ROLEConfig extends ConfigBase {
+    constructor() {
+        super(EXCELDATA$k);
+    }
+}
+
+var foreign59 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    ROLEConfig: ROLEConfig
+});
+
+const EXCELDATA$j = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, "短发女", "351026", 2], [2, "短发女", "411825", 2], [3, "机械女", "163329", 2], [4, "赛博套装", "163330", 2], [5, "机甲套装", "163553", 2], [6, "机器人", "162950", 1], [7, "赛博服饰", "162971", 1], [8, "机甲套装", "164428", 1], [9, "刺猬小子", "351402", 1], [10, "魔法男孩", "361919", 1]];
 class ScienceFictionStylingOutfitConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$g);
+        super(EXCELDATA$j);
     }
 }
 
@@ -4180,10 +4108,10 @@ var foreign60 = /*#__PURE__*/Object.freeze({
     ScienceFictionStylingOutfitConfig: ScienceFictionStylingOutfitConfig
 });
 
-const EXCELDATA$f = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, "长袜制服鞋", "57729", 2], [2, "细跟尖头鞋", "60078", 1], [3, "猫猫鞋套", "63301", 0], [4, "皮鞋", "383403", 2], [5, "小熊鞋", "362125", 2]];
+const EXCELDATA$i = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, "长袜制服鞋", "57729", 2], [2, "细跟尖头鞋", "60078", 1], [3, "猫猫鞋套", "63301", 0], [4, "皮鞋", "383403", 2], [5, "小熊鞋", "362125", 2]];
 class ShoesConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$f);
+        super(EXCELDATA$i);
     }
 }
 
@@ -4192,10 +4120,22 @@ var foreign61 = /*#__PURE__*/Object.freeze({
     ShoesConfig: ShoesConfig
 });
 
-const EXCELDATA$e = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "509868", 2], [2, null, "478218", 2], [3, null, "383390", 2], [4, null, "370735", 2], [5, null, "356245", 2], [6, null, "344228", 2], [7, null, "321370", 2], [8, null, "313079", 2], [9, null, "297929", 2], [10, null, "296023", 2], [11, null, "292004", 2], [12, null, "171377", 2], [13, null, "171301", 2], [14, null, "137425", 2], [15, null, "121948", 2], [16, null, "119366", 2], [17, null, "119350", 2], [18, null, "115922", 2], [19, null, "111253", 2], [20, null, "111241", 2], [21, null, "109839", 2], [22, null, "65656", 2], [23, null, "63648", 2], [24, null, "63539", 2], [25, null, "63300", 2], [26, null, "62958", 2], [27, null, "62777", 2], [28, null, "59857", 2], [29, null, "509895", 1], [30, null, "479087", 1], [31, null, "383409", 1], [32, null, "356544", 1], [33, null, "336269", 1], [34, null, "300136", 1], [35, null, "291009", 1], [36, null, "266166", 1], [37, null, "171318", 1], [38, null, "171118", 1], [39, null, "140934", 1], [40, null, "137437", 1], [41, null, "127499", 1], [42, null, "122089", 1], [43, null, "120060", 1], [44, null, "120059", 1], [45, null, "120058", 1], [46, null, "120056", 1], [47, null, "119893", 1], [48, null, "118079", 1], [49, null, "116791", 1], [50, null, "115938", 1], [51, null, "112202", 1], [52, null, "112201", 1], [53, null, "111573", 1], [54, null, "111518", 1], [55, null, "111161", 1], [56, null, "98550", 1], [57, null, "74113", 1], [58, null, "66414", 1], [59, null, "66160", 1], [60, null, "65006", 1], [61, null, "64995", 1], [62, null, "64803", 1], [63, null, "64544", 1], [64, null, "63883", 1], [65, null, "63674", 1], [66, null, "63671", 1]];
+const EXCELDATA$h = [["ID", "CommodityId", "PartyPrice", "Count", "Des", "Icon"], ["", "", "", "", "", ""], [1, "2up8k7U7ULm0000hZ", 98, 100, "钻石*100", "103220"], [2, "9ZHaEgphvWq0000ha", 580, 600, "钻石*600", "103221"], [3, "6JfMPeEBARi0000hb", 980, 1000, "钻石*1000", "103215"], [4, "55OB9kdnutU0000hc", 2800, 3000, "钻石*3000", "103214"], [5, "7BktFJ9eIPI0000hd", 6800, 7000, "钻石*7000", "103214"], [6, "8CbboTcgQAn0000he", 9800, 10000, "钻石*10000", "103217"], [7, "6I0UekjBePp0000hf", 19800, 20000, "钻石*20000", "103217"], [8, "6U1htY0UV3i0000hg", 45800, 50000, "钻石*50000", "103218"], [9, "A2d5Hp0SiF40000hh", 88800, 100000, "钻石*100000", "103218"]];
+class ShopItemConfig extends ConfigBase {
+    constructor() {
+        super(EXCELDATA$h);
+    }
+}
+
+var foreign62 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    ShopItemConfig: ShopItemConfig
+});
+
+const EXCELDATA$g = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "509868", 2], [2, null, "478218", 2], [3, null, "383390", 2], [4, null, "370735", 2], [5, null, "356245", 2], [6, null, "344228", 2], [7, null, "321370", 2], [8, null, "313079", 2], [9, null, "297929", 2], [10, null, "296023", 2], [11, null, "292004", 2], [12, null, "171377", 2], [13, null, "171301", 2], [14, null, "137425", 2], [15, null, "121948", 2], [16, null, "119366", 2], [17, null, "119350", 2], [18, null, "115922", 2], [19, null, "111253", 2], [20, null, "111241", 2], [21, null, "109839", 2], [22, null, "65656", 2], [23, null, "63648", 2], [24, null, "63539", 2], [25, null, "63300", 2], [26, null, "62958", 2], [27, null, "62777", 2], [28, null, "59857", 2], [29, null, "509895", 1], [30, null, "479087", 1], [31, null, "383409", 1], [32, null, "356544", 1], [33, null, "336269", 1], [34, null, "300136", 1], [35, null, "291009", 1], [36, null, "266166", 1], [37, null, "171318", 1], [38, null, "171118", 1], [39, null, "140934", 1], [40, null, "137437", 1], [41, null, "127499", 1], [42, null, "122089", 1], [43, null, "120060", 1], [44, null, "120059", 1], [45, null, "120058", 1], [46, null, "120056", 1], [47, null, "119893", 1], [48, null, "118079", 1], [49, null, "116791", 1], [50, null, "115938", 1], [51, null, "112202", 1], [52, null, "112201", 1], [53, null, "111573", 1], [54, null, "111518", 1], [55, null, "111161", 1], [56, null, "98550", 1], [57, null, "74113", 1], [58, null, "66414", 1], [59, null, "66160", 1], [60, null, "65006", 1], [61, null, "64995", 1], [62, null, "64803", 1], [63, null, "64544", 1], [64, null, "63883", 1], [65, null, "63674", 1], [66, null, "63671", 1]];
 class ShortJacketTopConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$e);
+        super(EXCELDATA$g);
     }
 }
 
@@ -4204,10 +4144,10 @@ var foreign63 = /*#__PURE__*/Object.freeze({
     ShortJacketTopConfig: ShortJacketTopConfig
 });
 
-const EXCELDATA$d = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "497740", 2], [2, null, "457813", 2], [3, null, "457730", 2], [4, null, "390740", 2], [5, null, "390416", 2], [6, null, "383395", 2], [7, null, "344230", 2], [8, null, "344064", 2], [9, null, "321371", 2], [10, null, "294324", 2], [11, null, "241190", 2], [12, null, "218442", 2], [13, null, "210327", 2], [14, null, "181361", 2], [15, null, "144575", 2], [16, null, "140329", 2], [17, null, "125734", 2], [18, null, "122110", 2], [19, null, "111722", 2], [20, null, "66424", 2], [21, null, "66302", 2], [22, null, "64457", 2], [23, null, "63552", 2], [24, null, "63315", 2], [25, null, "59855", 2], [26, null, "383411", 1], [27, null, "382168", 1], [28, null, "266167", 1], [29, null, "250471", 1], [30, null, "241332", 1], [31, null, "145069", 1], [32, null, "111510", 1], [33, null, "75460", 1], [34, null, "66110", 1], [35, null, "65616", 1], [36, null, "64783", 1], [37, null, "64553", 1], [38, null, "64187", 1], [39, null, "63915", 1], [40, null, "63688", 1]];
+const EXCELDATA$f = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "497740", 2], [2, null, "457813", 2], [3, null, "457730", 2], [4, null, "390740", 2], [5, null, "390416", 2], [6, null, "383395", 2], [7, null, "344230", 2], [8, null, "344064", 2], [9, null, "321371", 2], [10, null, "294324", 2], [11, null, "241190", 2], [12, null, "218442", 2], [13, null, "210327", 2], [14, null, "181361", 2], [15, null, "144575", 2], [16, null, "140329", 2], [17, null, "125734", 2], [18, null, "122110", 2], [19, null, "111722", 2], [20, null, "66424", 2], [21, null, "66302", 2], [22, null, "64457", 2], [23, null, "63552", 2], [24, null, "63315", 2], [25, null, "59855", 2], [26, null, "383411", 1], [27, null, "382168", 1], [28, null, "266167", 1], [29, null, "250471", 1], [30, null, "241332", 1], [31, null, "145069", 1], [32, null, "111510", 1], [33, null, "75460", 1], [34, null, "66110", 1], [35, null, "65616", 1], [36, null, "64783", 1], [37, null, "64553", 1], [38, null, "64187", 1], [39, null, "63915", 1], [40, null, "63688", 1]];
 class ShortsBottomConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$d);
+        super(EXCELDATA$f);
     }
 }
 
@@ -4216,10 +4156,10 @@ var foreign64 = /*#__PURE__*/Object.freeze({
     ShortsBottomConfig: ShortsBottomConfig
 });
 
-const EXCELDATA$c = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "458656", 2], [2, null, "390745", 2], [3, null, "390419", 2], [4, null, "390332", 2], [5, null, "383400", 2], [6, null, "362161", 2], [7, null, "346550", 2], [8, null, "344058", 2], [9, null, "323610", 2], [10, null, "322900", 2], [11, null, "322894", 2], [12, null, "314285", 2], [13, null, "313848", 2], [14, null, "313730", 2], [15, null, "313078", 2], [16, null, "300488", 2], [17, null, "241187", 2], [18, null, "240938", 2], [19, null, "240052", 2], [20, null, "224080", 2], [21, null, "224079", 2], [22, null, "224078", 2], [23, null, "224077", 2], [24, null, "224076", 2], [25, null, "223960", 2], [26, null, "223959", 2], [27, null, "223958", 2], [28, null, "223957", 2], [29, null, "192596", 2], [30, null, "174758", 2], [31, null, "171064", 2], [32, null, "152034", 2], [33, null, "140330", 2], [34, null, "138031", 2], [35, null, "137599", 2], [36, null, "137518", 2], [37, null, "137505", 2], [38, null, "128834", 2], [39, null, "127681", 2], [40, null, "127522", 2], [41, null, "127277", 2], [42, null, "126615", 2], [43, null, "122100", 2], [44, null, "119362", 2], [45, null, "119358", 2], [46, null, "119354", 2], [47, null, "119277", 2], [48, null, "119229", 2], [49, null, "117497", 2], [50, null, "115921", 2], [51, null, "115849", 2], [52, null, "111721", 2], [53, null, "111714", 2], [54, null, "111673", 2], [55, null, "111529", 2], [56, null, "111519", 2], [57, null, "111517", 2], [58, null, "111516", 2], [59, null, "111509", 2], [60, null, "111507", 2], [61, null, "111505", 2], [62, null, "111497", 2], [63, null, "111496", 2], [64, null, "111307", 2], [65, null, "111303", 2], [66, null, "111240", 2], [67, null, "111203", 2], [68, null, "111088", 2], [69, null, "66413", 2], [70, null, "66301", 2], [71, null, "64728", 2], [72, null, "64545", 2], [73, null, "64410", 2], [74, null, "63953", 2], [75, null, "63304", 2], [76, null, "62959", 2], [77, null, "62956", 2], [78, null, "60983", 2], [79, null, "59880", 2], [80, null, "59853", 2], [81, null, "57730", 2], [82, null, "507453", 1], [83, null, "476242", 1], [84, null, "458752", 1], [85, null, "458129", 1], [86, null, "383410", 1], [87, null, "383002", 1], [88, null, "382166", 1], [89, null, "313977", 1], [90, null, "313681", 1], [91, null, "250440", 1], [92, null, "250439", 1], [93, null, "241389", 1], [94, null, "240885", 1], [95, null, "224168", 1], [96, null, "196935", 1], [97, null, "192556", 1], [98, null, "140278", 1], [99, null, "129334", 1], [100, null, "129249", 1], [101, null, "129177", 1], [102, null, "129087", 1], [103, null, "128801", 1], [104, null, "127802", 1], [105, null, "127716", 1], [106, null, "127351", 1], [107, null, "125689", 1], [108, null, "122009", 1], [109, null, "121533", 1], [110, null, "120575", 1], [111, null, "120057", 1], [112, null, "119289", 1], [113, null, "119112", 1], [114, null, "117681", 1], [115, null, "116726", 1], [116, null, "112200", 1], [117, null, "111498", 1], [118, null, "111403", 1], [119, null, "111282", 1], [120, null, "94782", 1], [121, null, "74114", 1], [122, null, "66696", 1], [123, null, "66415", 1], [124, null, "65780", 1], [125, null, "65614", 1], [126, null, "64793", 1], [127, null, "64708", 1], [128, null, "64543", 1], [129, null, "64542", 1], [130, null, "63906", 1], [131, null, "63686", 1], [132, null, "63672", 1], [133, null, "63593", 1]];
+const EXCELDATA$e = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "458656", 2], [2, null, "390745", 2], [3, null, "390419", 2], [4, null, "390332", 2], [5, null, "383400", 2], [6, null, "362161", 2], [7, null, "346550", 2], [8, null, "344058", 2], [9, null, "323610", 2], [10, null, "322900", 2], [11, null, "322894", 2], [12, null, "314285", 2], [13, null, "313848", 2], [14, null, "313730", 2], [15, null, "313078", 2], [16, null, "300488", 2], [17, null, "241187", 2], [18, null, "240938", 2], [19, null, "240052", 2], [20, null, "224080", 2], [21, null, "224079", 2], [22, null, "224078", 2], [23, null, "224077", 2], [24, null, "224076", 2], [25, null, "223960", 2], [26, null, "223959", 2], [27, null, "223958", 2], [28, null, "223957", 2], [29, null, "192596", 2], [30, null, "174758", 2], [31, null, "171064", 2], [32, null, "152034", 2], [33, null, "140330", 2], [34, null, "138031", 2], [35, null, "137599", 2], [36, null, "137518", 2], [37, null, "137505", 2], [38, null, "128834", 2], [39, null, "127681", 2], [40, null, "127522", 2], [41, null, "127277", 2], [42, null, "126615", 2], [43, null, "122100", 2], [44, null, "119362", 2], [45, null, "119358", 2], [46, null, "119354", 2], [47, null, "119277", 2], [48, null, "119229", 2], [49, null, "117497", 2], [50, null, "115921", 2], [51, null, "115849", 2], [52, null, "111721", 2], [53, null, "111714", 2], [54, null, "111673", 2], [55, null, "111529", 2], [56, null, "111519", 2], [57, null, "111517", 2], [58, null, "111516", 2], [59, null, "111509", 2], [60, null, "111507", 2], [61, null, "111505", 2], [62, null, "111497", 2], [63, null, "111496", 2], [64, null, "111307", 2], [65, null, "111303", 2], [66, null, "111240", 2], [67, null, "111203", 2], [68, null, "111088", 2], [69, null, "66413", 2], [70, null, "66301", 2], [71, null, "64728", 2], [72, null, "64545", 2], [73, null, "64410", 2], [74, null, "63953", 2], [75, null, "63304", 2], [76, null, "62959", 2], [77, null, "62956", 2], [78, null, "60983", 2], [79, null, "59880", 2], [80, null, "59853", 2], [81, null, "57730", 2], [82, null, "507453", 1], [83, null, "476242", 1], [84, null, "458752", 1], [85, null, "458129", 1], [86, null, "383410", 1], [87, null, "383002", 1], [88, null, "382166", 1], [89, null, "313977", 1], [90, null, "313681", 1], [91, null, "250440", 1], [92, null, "250439", 1], [93, null, "241389", 1], [94, null, "240885", 1], [95, null, "224168", 1], [96, null, "196935", 1], [97, null, "192556", 1], [98, null, "140278", 1], [99, null, "129334", 1], [100, null, "129249", 1], [101, null, "129177", 1], [102, null, "129087", 1], [103, null, "128801", 1], [104, null, "127802", 1], [105, null, "127716", 1], [106, null, "127351", 1], [107, null, "125689", 1], [108, null, "122009", 1], [109, null, "121533", 1], [110, null, "120575", 1], [111, null, "120057", 1], [112, null, "119289", 1], [113, null, "119112", 1], [114, null, "117681", 1], [115, null, "116726", 1], [116, null, "112200", 1], [117, null, "111498", 1], [118, null, "111403", 1], [119, null, "111282", 1], [120, null, "94782", 1], [121, null, "74114", 1], [122, null, "66696", 1], [123, null, "66415", 1], [124, null, "65780", 1], [125, null, "65614", 1], [126, null, "64793", 1], [127, null, "64708", 1], [128, null, "64543", 1], [129, null, "64542", 1], [130, null, "63906", 1], [131, null, "63686", 1], [132, null, "63672", 1], [133, null, "63593", 1]];
 class ShortSinglePieceTopConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$c);
+        super(EXCELDATA$e);
     }
 }
 
@@ -4228,10 +4168,10 @@ var foreign65 = /*#__PURE__*/Object.freeze({
     ShortSinglePieceTopConfig: ShortSinglePieceTopConfig
 });
 
-const EXCELDATA$b = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "468349", 2], [2, null, "440230", 2], [3, null, "412115", 2], [4, null, "390433", 2], [5, null, "383391", 2], [6, null, "370794", 2], [7, null, "356246", 2], [8, null, "314286", 2], [9, null, "297931", 2], [10, null, "292002", 2], [11, null, "240937", 2], [12, null, "174757", 2], [13, null, "138032", 2], [14, null, "127523", 2], [15, null, "126616", 2], [16, null, "122101", 2], [17, null, "121947", 2], [18, null, "119227", 2], [19, null, "116967", 2], [20, null, "116956", 2], [21, null, "116955", 2], [22, null, "66356", 2], [23, null, "65665", 2], [24, null, "64334", 2], [25, null, "64333", 2], [26, null, "63650", 2], [27, null, "62970", 2], [28, null, "62790", 2], [29, null, "60994", 2], [30, null, "60113", 2], [31, null, "57736", 2]];
+const EXCELDATA$d = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "468349", 2], [2, null, "440230", 2], [3, null, "412115", 2], [4, null, "390433", 2], [5, null, "383391", 2], [6, null, "370794", 2], [7, null, "356246", 2], [8, null, "314286", 2], [9, null, "297931", 2], [10, null, "292002", 2], [11, null, "240937", 2], [12, null, "174757", 2], [13, null, "138032", 2], [14, null, "127523", 2], [15, null, "126616", 2], [16, null, "122101", 2], [17, null, "121947", 2], [18, null, "119227", 2], [19, null, "116967", 2], [20, null, "116956", 2], [21, null, "116955", 2], [22, null, "66356", 2], [23, null, "65665", 2], [24, null, "64334", 2], [25, null, "64333", 2], [26, null, "63650", 2], [27, null, "62970", 2], [28, null, "62790", 2], [29, null, "60994", 2], [30, null, "60113", 2], [31, null, "57736", 2]];
 class ShortSkirtBottomConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$b);
+        super(EXCELDATA$d);
     }
 }
 
@@ -4240,10 +4180,10 @@ var foreign66 = /*#__PURE__*/Object.freeze({
     ShortSkirtBottomConfig: ShortSkirtBottomConfig
 });
 
-const EXCELDATA$a = [["ID", "Describe", "AssetId", "Transform", "SexType"], ["", "", "", "", ""], [1, null, "152404", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [2, null, "152387", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [3, null, "152384", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [4, null, "152395", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [5, null, "152380", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [6, null, "152393", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [7, null, "152400", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [8, null, "152407", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [9, null, "152382", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [10, null, "152397", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [11, null, "152381", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [12, null, "152396", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [13, null, "152392", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [14, null, "152399", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [15, null, "152408", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [16, null, "152391", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [17, null, "152405", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [18, null, "152402", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [19, null, "152409", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [20, null, "152383", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [21, null, "152406", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [22, null, "152403", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [23, null, "152385", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [24, null, "152386", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [25, null, "152388", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [26, null, "152389", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [27, null, "152390", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [28, null, "152394", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [29, null, "152398", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [30, null, "152401", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [31, null, "87027", ["0", "-35", "-50", "0", "0", "-90", "0.5", "0.5", "0.5"], 0], [32, null, "152259", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [33, null, "177575", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [34, null, "177646", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [35, null, "178141", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [36, null, "179400", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [37, null, "179470", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [38, null, "179487", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [39, null, "180526", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [40, null, "180527", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [41, null, "180962", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [42, null, "180963", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [43, null, "180965", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [44, null, "180966", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [45, null, "180967", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [46, null, "180968", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [47, null, "181639", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [48, null, "184402", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [49, null, "184489", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [50, null, "184541", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [51, null, "184555", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [52, null, "184556", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [53, null, "184561", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [54, null, "185376", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [55, null, "185448", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [56, null, "185537", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [57, null, "185598", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [58, null, "185627", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [59, null, "185708", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [60, null, "186357", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [61, null, "186532", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [62, null, "186533", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [63, null, "186534", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [64, null, "186655", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [65, null, "186656", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [66, null, "186657", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [67, null, "186685", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [68, null, "186807", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [69, null, "186897", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [70, null, "191800", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [71, null, "191806", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [72, null, "191852", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [73, null, "191950", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [74, null, "192290", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [75, null, "192359", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [76, null, "192385", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [77, null, "192395", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [78, null, "192420", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [79, null, "192533", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [80, null, "192579", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [81, null, "194960", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [82, null, "194965", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [83, null, "195014", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [84, null, "195088", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [85, null, "195089", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [86, null, "195090", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [87, null, "195162", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [88, null, "195260", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [89, null, "195261", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [90, null, "195262", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [91, null, "195771", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [92, null, "195772", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [93, null, "195773", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [94, null, "195774", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [95, null, "196299", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [96, null, "196300", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [97, null, "196301", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [98, null, "196302", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [99, null, "196536", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [100, null, "197005", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [101, null, "197006", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [102, null, "197007", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [103, null, "197008", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [104, null, "198126", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [105, null, "198127", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [106, null, "198128", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [107, null, "198630", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [108, null, "198631", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [109, null, "198632", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [110, null, "198633", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [111, null, "198651", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [112, null, "198652", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [113, null, "198653", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [114, null, "198654", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [115, null, "199401", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [116, null, "199402", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [117, null, "199403", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [118, null, "199404", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [119, null, "200181", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [120, null, "200182", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [121, null, "200183", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [122, null, "203716", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [123, null, "203717", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [124, null, "203718", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [125, null, "203719", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [126, null, "209370", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [127, null, "209371", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [128, null, "209372", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [129, null, "209373", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [130, null, "217695", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [131, null, "217700", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [132, null, "217949", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [133, null, "218295", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [134, null, "218316", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0]];
+const EXCELDATA$c = [["ID", "Describe", "AssetId", "Transform", "SexType"], ["", "", "", "", ""], [1, null, "152404", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [2, null, "152387", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [3, null, "152384", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [4, null, "152395", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [5, null, "152380", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [6, null, "152393", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [7, null, "152400", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [8, null, "152407", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [9, null, "152382", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [10, null, "152397", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [11, null, "152381", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [12, null, "152396", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [13, null, "152392", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [14, null, "152399", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [15, null, "152408", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [16, null, "152391", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [17, null, "152405", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [18, null, "152402", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [19, null, "152409", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [20, null, "152383", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [21, null, "152406", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [22, null, "152403", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [23, null, "152385", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [24, null, "152386", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [25, null, "152388", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [26, null, "152389", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [27, null, "152390", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [28, null, "152394", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [29, null, "152398", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [30, null, "152401", ["0", "-35", "-25", "0", "0", "0", "0.1", "0.1", "0.1"], 0], [31, null, "87027", ["0", "-35", "-50", "0", "0", "-90", "0.5", "0.5", "0.5"], 0], [32, null, "152259", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [33, null, "177575", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [34, null, "177646", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [35, null, "178141", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [36, null, "179400", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [37, null, "179470", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [38, null, "179487", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [39, null, "180526", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [40, null, "180527", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [41, null, "180962", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [42, null, "180963", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [43, null, "180965", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [44, null, "180966", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [45, null, "180967", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [46, null, "180968", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [47, null, "181639", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [48, null, "184402", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [49, null, "184489", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [50, null, "184541", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [51, null, "184555", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [52, null, "184556", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [53, null, "184561", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [54, null, "185376", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [55, null, "185448", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [56, null, "185537", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [57, null, "185598", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [58, null, "185627", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [59, null, "185708", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [60, null, "186357", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [61, null, "186532", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [62, null, "186533", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [63, null, "186534", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [64, null, "186655", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [65, null, "186656", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [66, null, "186657", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [67, null, "186685", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [68, null, "186807", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [69, null, "186897", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [70, null, "191800", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [71, null, "191806", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [72, null, "191852", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [73, null, "191950", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [74, null, "192290", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [75, null, "192359", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [76, null, "192385", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [77, null, "192395", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [78, null, "192420", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [79, null, "192533", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [80, null, "192579", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [81, null, "194960", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [82, null, "194965", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [83, null, "195014", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [84, null, "195088", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [85, null, "195089", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [86, null, "195090", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [87, null, "195162", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [88, null, "195260", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [89, null, "195261", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [90, null, "195262", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [91, null, "195771", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [92, null, "195772", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [93, null, "195773", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [94, null, "195774", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [95, null, "196299", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [96, null, "196300", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [97, null, "196301", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [98, null, "196302", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [99, null, "196536", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [100, null, "197005", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [101, null, "197006", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [102, null, "197007", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [103, null, "197008", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [104, null, "198126", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [105, null, "198127", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [106, null, "198128", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [107, null, "198630", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [108, null, "198631", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [109, null, "198632", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [110, null, "198633", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [111, null, "198651", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [112, null, "198652", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [113, null, "198653", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [114, null, "198654", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [115, null, "199401", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [116, null, "199402", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [117, null, "199403", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [118, null, "199404", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [119, null, "200181", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [120, null, "200182", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [121, null, "200183", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [122, null, "203716", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [123, null, "203717", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [124, null, "203718", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [125, null, "203719", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [126, null, "209370", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [127, null, "209371", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [128, null, "209372", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [129, null, "209373", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [130, null, "217695", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [131, null, "217700", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [132, null, "217949", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [133, null, "218295", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0], [134, null, "218316", ["0", "-35", "-50", "0", "0", "-90", "1", "1", "1"], 0]];
 class ShoulderConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$a);
+        super(EXCELDATA$c);
     }
 }
 
@@ -4252,10 +4192,10 @@ var foreign67 = /*#__PURE__*/Object.freeze({
     ShoulderConfig: ShoulderConfig
 });
 
-const EXCELDATA$9 = [["ID", "Describe", "SkinTone", "SexType"], ["", "", "", ""], [1, null, "ColorPick", 0], [2, null, "FDF4EFFF", 0], [3, null, "FAEDE5FF", 0], [4, null, "F8E7E0FF", 0], [5, null, "F5E2D4FF", 0], [6, null, "F3D8C7FF", 0], [7, null, "EACCC1FF", 0], [8, null, "F6E6D6FF", 0], [9, null, "F0DEC8FF", 0], [10, null, "EDD9BEFF", 0], [11, null, "E8D0B4FF", 0], [12, null, "E7CAA2FF", 0], [13, null, "DCBB8EFF", 0], [14, null, "DCC2A7FF", 0], [15, null, "C7A58CFF", 0], [16, null, "AB8874FF", 0], [17, null, "96735FFF", 0], [18, null, "805F4CFF", 0], [19, null, "5B4337FF", 0], [20, null, "D0B9ABFF", 0], [21, null, "C1ABA0FF", 0], [22, null, "A38881FF", 0], [23, null, "806B68FF", 0], [24, null, "64504FFF", 0], [25, null, "423431FF", 0], [26, null, "E4C3A0FF", 0], [27, null, "E3BA8CFF", 0], [28, null, "D1A173FF", 0], [29, null, "B37D51FF", 0], [30, null, "976238FF", 0], [31, null, "6D3F25FF", 0], [32, null, "7D553CFF", 0], [33, null, "794F37FF", 0], [34, null, "5F3C26FF", 0], [35, null, "5B3822FF", 0], [36, null, "3D2314FF", 0], [37, null, "341C10FF", 0], [38, null, "F9E175FF", 0], [39, null, "B0C87EFF", 0], [40, null, "8AB8DCFF", 0], [41, null, "FBF5F5FF", 0]];
+const EXCELDATA$b = [["ID", "Describe", "SkinTone", "SexType"], ["", "", "", ""], [1, null, "ColorPick", 0], [2, null, "FDF4EFFF", 0], [3, null, "FAEDE5FF", 0], [4, null, "F8E7E0FF", 0], [5, null, "F5E2D4FF", 0], [6, null, "F3D8C7FF", 0], [7, null, "EACCC1FF", 0], [8, null, "F6E6D6FF", 0], [9, null, "F0DEC8FF", 0], [10, null, "EDD9BEFF", 0], [11, null, "E8D0B4FF", 0], [12, null, "E7CAA2FF", 0], [13, null, "DCBB8EFF", 0], [14, null, "DCC2A7FF", 0], [15, null, "C7A58CFF", 0], [16, null, "AB8874FF", 0], [17, null, "96735FFF", 0], [18, null, "805F4CFF", 0], [19, null, "5B4337FF", 0], [20, null, "D0B9ABFF", 0], [21, null, "C1ABA0FF", 0], [22, null, "A38881FF", 0], [23, null, "806B68FF", 0], [24, null, "64504FFF", 0], [25, null, "423431FF", 0], [26, null, "E4C3A0FF", 0], [27, null, "E3BA8CFF", 0], [28, null, "D1A173FF", 0], [29, null, "B37D51FF", 0], [30, null, "976238FF", 0], [31, null, "6D3F25FF", 0], [32, null, "7D553CFF", 0], [33, null, "794F37FF", 0], [34, null, "5F3C26FF", 0], [35, null, "5B3822FF", 0], [36, null, "3D2314FF", 0], [37, null, "341C10FF", 0], [38, null, "F9E175FF", 0], [39, null, "B0C87EFF", 0], [40, null, "8AB8DCFF", 0], [41, null, "FBF5F5FF", 0]];
 class SkinToneConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$9);
+        super(EXCELDATA$b);
     }
 }
 
@@ -4264,10 +4204,10 @@ var foreign68 = /*#__PURE__*/Object.freeze({
     SkinToneConfig: SkinToneConfig
 });
 
-const EXCELDATA$8 = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "121946", 2], [2, null, "115634", 2], [3, null, "111207", 2], [4, null, "111206", 2], [5, null, "64727", 2], [6, null, "64711", 2], [7, null, "64147", 2], [8, null, "59854", 2], [9, null, "458132", 1], [10, null, "356543", 1], [11, null, "266168", 1], [12, null, "250456", 1], [13, null, "240887", 1], [14, null, "129210", 1], [15, null, "119890", 1], [16, null, "115937", 1], [17, null, "66416", 1], [18, null, "66163", 1], [19, null, "65009", 1], [20, null, "64792", 1], [21, null, "63687", 1], [22, null, "63596", 1]];
+const EXCELDATA$a = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "121946", 2], [2, null, "115634", 2], [3, null, "111207", 2], [4, null, "111206", 2], [5, null, "64727", 2], [6, null, "64711", 2], [7, null, "64147", 2], [8, null, "59854", 2], [9, null, "458132", 1], [10, null, "356543", 1], [11, null, "266168", 1], [12, null, "250456", 1], [13, null, "240887", 1], [14, null, "129210", 1], [15, null, "119890", 1], [16, null, "115937", 1], [17, null, "66416", 1], [18, null, "66163", 1], [19, null, "65009", 1], [20, null, "64792", 1], [21, null, "63687", 1], [22, null, "63596", 1]];
 class SportsShoesShoesConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$8);
+        super(EXCELDATA$a);
     }
 }
 
@@ -4276,10 +4216,10 @@ var foreign69 = /*#__PURE__*/Object.freeze({
     SportsShoesShoesConfig: SportsShoesShoesConfig
 });
 
-const EXCELDATA$7 = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "241445", 2], [2, null, "221704", 2], [3, null, "211010", 2], [4, null, "210328", 2], [5, null, "181365", 2], [6, null, "171774", 2], [7, null, "142608", 2], [8, null, "141708", 2], [9, null, "134234", 2], [10, null, "131789", 2], [11, null, "127639", 2], [12, null, "124880", 2], [13, null, "119745", 2], [14, null, "86088", 2], [15, null, "71960", 2], [16, null, "67583", 2], [17, null, "67582", 2], [18, null, "67541", 2], [19, null, "66712", 2], [20, null, "66572", 2], [21, null, "65870", 2], [22, null, "65710", 2], [23, null, "65655", 2], [24, null, "65654", 2], [25, null, "64710", 2], [26, null, "64709", 2], [27, null, "64627", 2], [28, null, "64559", 2], [29, null, "64305", 2], [30, null, "64141", 2], [31, null, "64138", 2], [32, null, "63954", 2], [33, null, "63871", 2], [34, null, "63868", 2], [35, null, "63538", 2], [36, null, "63536", 2], [37, null, "63292", 2], [38, null, "63291", 2], [39, null, "63290", 2], [40, null, "62778", 2], [41, null, "62776", 2], [42, null, "62535", 2], [43, null, "60981", 2], [44, null, "60077", 2], [45, null, "59955", 2], [46, null, "59536", 2], [47, null, "320844", 1], [48, null, "212895", 1], [49, null, "200242", 1], [50, null, "186268", 1], [51, null, "131747", 1], [52, null, "129936", 1], [53, null, "119773", 1], [54, null, "119669", 1], [55, null, "119393", 1], [56, null, "111612", 1], [57, null, "109144", 1], [58, null, "92015", 1], [59, null, "75457", 1], [60, null, "66615", 1], [61, null, "66554", 1], [62, null, "64813", 1], [63, null, "63711", 1], [64, null, "60381", 1]];
+const EXCELDATA$9 = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "241445", 2], [2, null, "221704", 2], [3, null, "211010", 2], [4, null, "210328", 2], [5, null, "181365", 2], [6, null, "171774", 2], [7, null, "142608", 2], [8, null, "141708", 2], [9, null, "134234", 2], [10, null, "131789", 2], [11, null, "127639", 2], [12, null, "124880", 2], [13, null, "119745", 2], [14, null, "86088", 2], [15, null, "71960", 2], [16, null, "67583", 2], [17, null, "67582", 2], [18, null, "67541", 2], [19, null, "66712", 2], [20, null, "66572", 2], [21, null, "65870", 2], [22, null, "65710", 2], [23, null, "65655", 2], [24, null, "65654", 2], [25, null, "64710", 2], [26, null, "64709", 2], [27, null, "64627", 2], [28, null, "64559", 2], [29, null, "64305", 2], [30, null, "64141", 2], [31, null, "64138", 2], [32, null, "63954", 2], [33, null, "63871", 2], [34, null, "63868", 2], [35, null, "63538", 2], [36, null, "63536", 2], [37, null, "63292", 2], [38, null, "63291", 2], [39, null, "63290", 2], [40, null, "62778", 2], [41, null, "62776", 2], [42, null, "62535", 2], [43, null, "60981", 2], [44, null, "60077", 2], [45, null, "59955", 2], [46, null, "59536", 2], [47, null, "320844", 1], [48, null, "212895", 1], [49, null, "200242", 1], [50, null, "186268", 1], [51, null, "131747", 1], [52, null, "129936", 1], [53, null, "119773", 1], [54, null, "119669", 1], [55, null, "119393", 1], [56, null, "111612", 1], [57, null, "109144", 1], [58, null, "92015", 1], [59, null, "75457", 1], [60, null, "66615", 1], [61, null, "66554", 1], [62, null, "64813", 1], [63, null, "63711", 1], [64, null, "60381", 1]];
 class SuitTopConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$7);
+        super(EXCELDATA$9);
     }
 }
 
@@ -4288,10 +4228,10 @@ var foreign70 = /*#__PURE__*/Object.freeze({
     SuitTopConfig: SuitTopConfig
 });
 
-const EXCELDATA$6 = [["ID", "Describe", "Text", "Tab2"], ["", "", "Language", ""], [1, "捏脸", "Text_Tab1_1", [101, 102, 103, 104, 105, 106, 107]], [2, "换装", "Text_Tab1_2", [108, 109, 110, 111, 112, 113, 115, 114]], [3, "收藏", "Text_Tab1_3", null]];
+const EXCELDATA$8 = [["ID", "Describe", "Text", "Tab2"], ["", "", "Language", ""], [1, "捏脸", "Text_Tab1_1", [101, 102, 103, 104, 105, 106, 107]], [2, "换装", "Text_Tab1_2", [108, 109, 110, 111, 112, 113, 115, 114]], [3, "收藏", "Text_Tab1_3", null]];
 class Tab1Config extends ConfigBase {
     constructor() {
-        super(EXCELDATA$6);
+        super(EXCELDATA$8);
     }
 }
 
@@ -4300,10 +4240,10 @@ var foreign71 = /*#__PURE__*/Object.freeze({
     Tab1Config: Tab1Config
 });
 
-const EXCELDATA$5 = [["ID", "Describe", "Text", "Tab3"], ["", "", "Language", ""], [101, "体型", "Text_Tab2_101", null], [102, "肤色", "Text_Tab2_102", null], [103, "脸型", "Text_Tab2_103", null], [104, "眼睛", "Text_Tab2_104", [1001, 1002, 1003, 1004, 1005]], [105, "眉毛", "Text_Tab2_105", null], [106, "妆容", "Text_Tab2_106", [1006, 1007, 1008, 1009]], [107, "表情", "Text_Tab2_107", null], [108, "套装", "Text_Tab2_108", [1022, 1047, 1023, 1024, 1025, 1026, 1027, 1028]], [109, "头发", "Text_Tab2_109", [1010, 1011, 1012]], [110, "上衣", "Text_Tab2_110", [1029, 1030, 1031, 1032, 1033]], [111, "下衣", "Text_Tab2_111", [1034, 1035, 1036, 1037, 1038]], [112, "鞋子", "Text_Tab2_112", [1041, 1042, 1043, 1044, 1045, 1046]], [113, "手套", "Text_Tab2_113", [1039, 1040]], [114, "宠物", "Text_Tab2_114", null], [115, "饰品", "Text_Tab2_115", [1020, 1015, 1014, 1018, 1016, 1017, 1019, 1021]], [501, "体型_收藏", "Text_Tab2_501", null], [502, "肤色_收藏", "Text_Tab2_502", null], [503, "脸型_收藏", "Text_Tab2_503", null], [504, "眼睛_收藏", "Text_Tab2_504", [2001, 2002, 2003, 2004, 2005]], [505, "眉毛_收藏", "Text_Tab2_505", null], [506, "妆容_收藏", "Text_Tab2_506", [2006, 2007, 2008, 2009]], [507, "表情_收藏", "Text_Tab2_507", null], [508, "套装_收藏", "Text_Tab2_508", null], [509, "头发_收藏", "Text_Tab2_509", [2010, 2011, 2012]], [510, "上衣_收藏", "Text_Tab2_510", null], [511, "下衣_收藏", "Text_Tab2_511", null], [512, "鞋子_收藏", "Text_Tab2_512", null], [513, "手套_收藏", "Text_Tab2_513", null], [514, "宠物_收藏", "Text_Tab2_514", null], [515, "饰品_收藏", "Text_Tab2_515", [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021]]];
+const EXCELDATA$7 = [["ID", "Describe", "Text", "Tab3"], ["", "", "Language", ""], [101, "体型", "Text_Tab2_101", null], [102, "肤色", "Text_Tab2_102", null], [103, "脸型", "Text_Tab2_103", null], [104, "眼睛", "Text_Tab2_104", [1001, 1002, 1003, 1004, 1005]], [105, "眉毛", "Text_Tab2_105", null], [106, "妆容", "Text_Tab2_106", [1006, 1007, 1008, 1009]], [107, "表情", "Text_Tab2_107", null], [108, "套装", "Text_Tab2_108", [1022, 1047, 1023, 1024, 1025, 1026, 1027, 1028]], [109, "头发", "Text_Tab2_109", [1010, 1011, 1012]], [110, "上衣", "Text_Tab2_110", [1029, 1030, 1031, 1032, 1033]], [111, "下衣", "Text_Tab2_111", [1034, 1035, 1036, 1037, 1038]], [112, "鞋子", "Text_Tab2_112", [1041, 1042, 1043, 1044, 1045, 1046]], [113, "手套", "Text_Tab2_113", [1039, 1040]], [114, "宠物", "Text_Tab2_114", null], [115, "饰品", "Text_Tab2_115", [1020, 1015, 1014, 1018, 1016, 1017, 1019, 1021]], [501, "体型_收藏", "Text_Tab2_501", null], [502, "肤色_收藏", "Text_Tab2_502", null], [503, "脸型_收藏", "Text_Tab2_503", null], [504, "眼睛_收藏", "Text_Tab2_504", [2001, 2002, 2003, 2004, 2005]], [505, "眉毛_收藏", "Text_Tab2_505", null], [506, "妆容_收藏", "Text_Tab2_506", [2006, 2007, 2008, 2009]], [507, "表情_收藏", "Text_Tab2_507", null], [508, "套装_收藏", "Text_Tab2_508", null], [509, "头发_收藏", "Text_Tab2_509", [2010, 2011, 2012]], [510, "上衣_收藏", "Text_Tab2_510", null], [511, "下衣_收藏", "Text_Tab2_511", null], [512, "鞋子_收藏", "Text_Tab2_512", null], [513, "手套_收藏", "Text_Tab2_513", null], [514, "宠物_收藏", "Text_Tab2_514", null], [515, "饰品_收藏", "Text_Tab2_515", [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021]]];
 class Tab2Config extends ConfigBase {
     constructor() {
-        super(EXCELDATA$5);
+        super(EXCELDATA$7);
     }
 }
 
@@ -4312,10 +4252,10 @@ var foreign72 = /*#__PURE__*/Object.freeze({
     Tab2Config: Tab2Config
 });
 
-const EXCELDATA$4 = [["ID", "Describe", "Text"], ["", "", "Language"], [1001, "瞳孔样式", "Text_Tab3_1001"], [1002, "瞳孔贴画", "Text_Tab3_1002"], [1003, "上高光", "Text_Tab3_1003"], [1004, "下高光", "Text_Tab3_1004"], [1005, "睫毛", "Text_Tab3_1005"], [1006, "眼影", "Text_Tab3_1006"], [1007, "腮红", "Text_Tab3_1007"], [1008, "口红", "Text_Tab3_1008"], [1009, "面部彩绘", "Text_Tab3_1009"], [1010, "整体发型", "Text_Tab3_1010"], [1011, "前发", "Text_Tab3_1011"], [1012, "后发", "Text_Tab3_1012"], [1013, "左手", "Text_Tab3_1013"], [1014, "右手", "Text_Tab3_1014"], [1015, "背饰", "Text_Tab3_1015"], [1016, "耳饰", "Text_Tab3_1016"], [1017, "面饰", "Text_Tab3_1017"], [1018, "臀部", "Text_Tab3_1018"], [1019, "肩部", "Text_Tab3_1019"], [1020, "特效", "Text_Tab3_1020"], [1021, "拖尾", "Text_Tab3_1021"], [1022, "日常造型1", "Text_Tab3_1022"], [1023, "布偶造型", "Text_Tab3_1023"], [1024, "英雄造型", "Text_Tab3_1024"], [1025, "幻想造型", "Text_Tab3_1025"], [1026, "节日造型", "Text_Tab3_1026"], [1027, "科幻造型", "Text_Tab3_1027"], [1028, "古代造型", "Text_Tab3_1028"], [1029, "长单件", "Text_Tab3_1029"], [1030, "短外套", "Text_Tab3_1030"], [1031, "短单件", "Text_Tab3_1031"], [1032, "套装", "Text_Tab3_1032"], [1033, "长外套", "Text_Tab3_1033"], [1034, "短裙", "Text_Tab3_1034"], [1035, "长裤", "Text_Tab3_1035"], [1036, "短裤", "Text_Tab3_1036"], [1037, "长裙", "Text_Tab3_1037"], [1038, "裤袜", "Text_Tab3_1038"], [1039, "手套", "Text_Tab3_1039"], [1040, "手套饰品", "Text_Tab3_1040"], [1041, "日常鞋", "Text_Tab3_1041"], [1042, "靴子", "Text_Tab3_1042"], [1043, "足套", "Text_Tab3_1043"], [1044, "裸饰", "Text_Tab3_1044"], [1045, "高跟鞋", "Text_Tab3_1045"], [1046, "运动鞋", "Text_Tab3_1046"], [1047, "日常造型2", "Text_Tab3_1047"], [2001, "瞳孔样式_收藏", "Text_Tab3_2001"], [2002, "瞳孔贴花_收藏", "Text_Tab3_2002"], [2003, "上高光_收藏", "Text_Tab3_2003"], [2004, "下高光_收藏", "Text_Tab3_2004"], [2005, "睫毛_收藏", "Text_Tab3_2005"], [2006, "眼影_收藏", "Text_Tab3_2006"], [2007, "腮红_收藏", "Text_Tab3_2007"], [2008, "口红_收藏", "Text_Tab3_2008"], [2009, "面部彩绘_收藏", "Text_Tab3_2009"], [2010, "整体发型_收藏", "Text_Tab3_2010"], [2011, "前发_收藏", "Text_Tab3_2011"], [2012, "后发_收藏", "Text_Tab3_2012"], [2013, "左手_收藏", "Text_Tab3_2013"], [2014, "右手_收藏", "Text_Tab3_2014"], [2015, "背饰_收藏", "Text_Tab3_2015"], [2016, "耳饰_收藏", "Text_Tab3_2016"], [2017, "面饰_收藏", "Text_Tab3_2017"], [2018, "臀部_收藏", "Text_Tab3_2018"], [2019, "肩部_收藏", "Text_Tab3_2019"], [2020, "特效_收藏", "Text_Tab3_2020"], [2021, "拖尾_收藏", "Text_Tab3_1021"]];
+const EXCELDATA$6 = [["ID", "Describe", "Text"], ["", "", "Language"], [1001, "瞳孔样式", "Text_Tab3_1001"], [1002, "瞳孔贴画", "Text_Tab3_1002"], [1003, "上高光", "Text_Tab3_1003"], [1004, "下高光", "Text_Tab3_1004"], [1005, "睫毛", "Text_Tab3_1005"], [1006, "眼影", "Text_Tab3_1006"], [1007, "腮红", "Text_Tab3_1007"], [1008, "口红", "Text_Tab3_1008"], [1009, "面部彩绘", "Text_Tab3_1009"], [1010, "整体发型", "Text_Tab3_1010"], [1011, "前发", "Text_Tab3_1011"], [1012, "后发", "Text_Tab3_1012"], [1013, "左手", "Text_Tab3_1013"], [1014, "右手", "Text_Tab3_1014"], [1015, "背饰", "Text_Tab3_1015"], [1016, "耳饰", "Text_Tab3_1016"], [1017, "面饰", "Text_Tab3_1017"], [1018, "臀部", "Text_Tab3_1018"], [1019, "肩部", "Text_Tab3_1019"], [1020, "特效", "Text_Tab3_1020"], [1021, "拖尾", "Text_Tab3_1021"], [1022, "日常造型1", "Text_Tab3_1022"], [1023, "布偶造型", "Text_Tab3_1023"], [1024, "英雄造型", "Text_Tab3_1024"], [1025, "幻想造型", "Text_Tab3_1025"], [1026, "节日造型", "Text_Tab3_1026"], [1027, "科幻造型", "Text_Tab3_1027"], [1028, "古代造型", "Text_Tab3_1028"], [1029, "长单件", "Text_Tab3_1029"], [1030, "短外套", "Text_Tab3_1030"], [1031, "短单件", "Text_Tab3_1031"], [1032, "套装", "Text_Tab3_1032"], [1033, "长外套", "Text_Tab3_1033"], [1034, "短裙", "Text_Tab3_1034"], [1035, "长裤", "Text_Tab3_1035"], [1036, "短裤", "Text_Tab3_1036"], [1037, "长裙", "Text_Tab3_1037"], [1038, "裤袜", "Text_Tab3_1038"], [1039, "手套", "Text_Tab3_1039"], [1040, "手套饰品", "Text_Tab3_1040"], [1041, "日常鞋", "Text_Tab3_1041"], [1042, "靴子", "Text_Tab3_1042"], [1043, "足套", "Text_Tab3_1043"], [1044, "裸饰", "Text_Tab3_1044"], [1045, "高跟鞋", "Text_Tab3_1045"], [1046, "运动鞋", "Text_Tab3_1046"], [1047, "日常造型2", "Text_Tab3_1047"], [2001, "瞳孔样式_收藏", "Text_Tab3_2001"], [2002, "瞳孔贴花_收藏", "Text_Tab3_2002"], [2003, "上高光_收藏", "Text_Tab3_2003"], [2004, "下高光_收藏", "Text_Tab3_2004"], [2005, "睫毛_收藏", "Text_Tab3_2005"], [2006, "眼影_收藏", "Text_Tab3_2006"], [2007, "腮红_收藏", "Text_Tab3_2007"], [2008, "口红_收藏", "Text_Tab3_2008"], [2009, "面部彩绘_收藏", "Text_Tab3_2009"], [2010, "整体发型_收藏", "Text_Tab3_2010"], [2011, "前发_收藏", "Text_Tab3_2011"], [2012, "后发_收藏", "Text_Tab3_2012"], [2013, "左手_收藏", "Text_Tab3_2013"], [2014, "右手_收藏", "Text_Tab3_2014"], [2015, "背饰_收藏", "Text_Tab3_2015"], [2016, "耳饰_收藏", "Text_Tab3_2016"], [2017, "面饰_收藏", "Text_Tab3_2017"], [2018, "臀部_收藏", "Text_Tab3_2018"], [2019, "肩部_收藏", "Text_Tab3_2019"], [2020, "特效_收藏", "Text_Tab3_2020"], [2021, "拖尾_收藏", "Text_Tab3_1021"]];
 class Tab3Config extends ConfigBase {
     constructor() {
-        super(EXCELDATA$4);
+        super(EXCELDATA$6);
     }
 }
 
@@ -4324,10 +4264,22 @@ var foreign73 = /*#__PURE__*/Object.freeze({
     Tab3Config: Tab3Config
 });
 
-const EXCELDATA$3 = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "497927", 2], [2, null, "497783", 2], [3, null, "458637", 2], [4, null, "437607", 2], [5, null, "299081", 2], [6, null, "224015", 2], [7, null, "221706", 2], [8, null, "217271", 2], [9, null, "211009", 2], [10, null, "141710", 2], [11, null, "137517", 2], [12, null, "137504", 2], [13, null, "137491", 2], [14, null, "137382", 2], [15, null, "134233", 2], [16, null, "127636", 2], [17, null, "119743", 2], [18, null, "116973", 2], [19, null, "67589", 2], [20, null, "66576", 2], [21, null, "65869", 2], [22, null, "65659", 2], [23, null, "64776", 2], [24, null, "64722", 2], [25, null, "64309", 2], [26, null, "64153", 2], [27, null, "63877", 2], [28, null, "63553", 2], [29, null, "63312", 2], [30, null, "62792", 2], [31, null, "62791", 2], [32, null, "62549", 2], [33, null, "60993", 2], [34, null, "64815", 1]];
+const EXCELDATA$5 = [["ID", "Name", "TaskType", "TaskItemType", "NextId", "TragetNum", "Coin", "Diamond"], ["", "", "", "", "", "", "", ""], [1, "每日登录游戏（{0}/{1}）", 1, 1, 0, 1, 100, 1], [11, "每日在线时长5分钟（{0}/{1}）", 1, 11, 0, 5, 500, 1], [12, "每日在线时长10分钟（{0}/{1}）", 1, 12, 0, 10, 500, 5], [13, "每日在线时长15分钟（{0}/{1}）", 1, 13, 0, 15, 500, 5], [14, "每日在线时长20分钟（{0}/{1}）", 1, 14, 0, 20, 500, 10], [15, "每日在线时长25分钟（{0}/{1}）", 1, 15, 0, 25, 500, 10], [16, "每日在线时长30分钟（{0}/{1}）", 1, 16, 0, 30, 500, 20], [17, "每日在线时长40分钟（{0}/{1}）", 1, 17, 0, 40, 1000, 20], [18, "每日在线时长50分钟（{0}/{1}）", 1, 18, 0, 50, 1000, 30], [19, "每日在线时长60分钟（{0}/{1}）", 1, 19, 0, 60, 1000, 100], [31, "每日击败1个玩家（{0}/{1}）", 1, 31, 0, 1, 20, 1], [32, "每日击败5个玩家（{0}/{1}）", 1, 32, 0, 5, 80, 1], [33, "每日击败10个玩家（{0}/{1}）", 1, 33, 0, 10, 100, 2], [34, "每日击败20个玩家（{0}/{1}）", 1, 34, 0, 20, 200, 2], [35, "每日击败30个玩家（{0}/{1}）", 1, 35, 0, 30, 200, 5], [36, "每日击败50个玩家（{0}/{1}）", 1, 36, 0, 50, 400, 5], [37, "每日击败100个玩家（{0}/{1}）", 1, 37, 0, 100, 1000, 10], [38, "每日击败200个玩家（{0}/{1}）", 1, 38, 0, 200, 2000, 10], [39, "每日击败300个玩家（{0}/{1}）", 1, 39, 0, 300, 2000, 100], [101, "每周登录1天（{0}/{1}）", 2, 101, 0, 1, 1000, 1], [102, "每周登录2天（{0}/{1}）", 2, 102, 0, 2, 1000, 100], [103, "每周登录3天（{0}/{1}）", 2, 103, 0, 3, 1000, 200], [104, "每周登录4天（{0}/{1}）", 2, 104, 0, 4, 1000, 300], [105, "每周登录5天（{0}/{1}）", 2, 105, 0, 5, 1000, 400], [106, "每周登录6天（{0}/{1}）", 2, 106, 0, 6, 1000, 500], [107, "每周登录7天（{0}/{1}）", 2, 107, 0, 7, 1000, 600]];
+class TaskConfig extends ConfigBase {
+    constructor() {
+        super(EXCELDATA$5);
+    }
+}
+
+var foreign74 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    TaskConfig: TaskConfig
+});
+
+const EXCELDATA$4 = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "497927", 2], [2, null, "497783", 2], [3, null, "458637", 2], [4, null, "437607", 2], [5, null, "299081", 2], [6, null, "224015", 2], [7, null, "221706", 2], [8, null, "217271", 2], [9, null, "211009", 2], [10, null, "141710", 2], [11, null, "137517", 2], [12, null, "137504", 2], [13, null, "137491", 2], [14, null, "137382", 2], [15, null, "134233", 2], [16, null, "127636", 2], [17, null, "119743", 2], [18, null, "116973", 2], [19, null, "67589", 2], [20, null, "66576", 2], [21, null, "65869", 2], [22, null, "65659", 2], [23, null, "64776", 2], [24, null, "64722", 2], [25, null, "64309", 2], [26, null, "64153", 2], [27, null, "63877", 2], [28, null, "63553", 2], [29, null, "63312", 2], [30, null, "62792", 2], [31, null, "62791", 2], [32, null, "62549", 2], [33, null, "60993", 2], [34, null, "64815", 1]];
 class TightsBottomConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$3);
+        super(EXCELDATA$4);
     }
 }
 
@@ -4336,10 +4288,10 @@ var foreign75 = /*#__PURE__*/Object.freeze({
     TightsBottomConfig: TightsBottomConfig
 });
 
-const EXCELDATA$2 = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, "弓道服", "59536", 2], [2, "毛衣外套", "59857", 2], [3, "拖尾婚纱", "60077", 2], [4, "蝴蝶结桃心裙", "59955", 2], [5, "恐龙玩偶服", "509868", 2], [6, "恐龙玩偶服", "509895", 1], [7, "礼服", "476302", 2], [8, "礼服", "458752", 1], [9, "战损休闲装", "458129", 1], [10, "披风长袖", "455507", 1], [11, "紧身衣", "64542", 1], [12, "长袍上衣", "504623", 1], [13, "礼服", "476242", 1], [14, "学士服", "264153", 1]];
+const EXCELDATA$3 = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, "弓道服", "59536", 2], [2, "毛衣外套", "59857", 2], [3, "拖尾婚纱", "60077", 2], [4, "蝴蝶结桃心裙", "59955", 2], [5, "恐龙玩偶服", "509868", 2], [6, "恐龙玩偶服", "509895", 1], [7, "礼服", "476302", 2], [8, "礼服", "458752", 1], [9, "战损休闲装", "458129", 1], [10, "披风长袖", "455507", 1], [11, "紧身衣", "64542", 1], [12, "长袍上衣", "504623", 1], [13, "礼服", "476242", 1], [14, "学士服", "264153", 1]];
 class TopConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$2);
+        super(EXCELDATA$3);
     }
 }
 
@@ -4348,16 +4300,28 @@ var foreign76 = /*#__PURE__*/Object.freeze({
     TopConfig: TopConfig
 });
 
-const EXCELDATA$1 = [["ID", "Describe", "AssetId", "Transform", "SexType"], ["", "", "", "", ""], [1, null, "484538", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [2, null, "472914", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [3, null, "472706", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [4, null, "467037", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [5, null, "444603", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [6, null, "398522", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [7, null, "397400", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [8, null, "384139", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [9, null, "380860", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [10, null, "380858", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [11, null, "380849", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [12, null, "379886", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [13, null, "375147", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [14, null, "375146", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [15, null, "357366", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [16, null, "357364", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [17, null, "351325", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [18, null, "350256", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [19, null, "350163", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [20, null, "350055", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [21, null, "350053", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [22, null, "349960", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [23, null, "317495", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [24, null, "314952", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [25, null, "314951", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [26, null, "314950", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [27, null, "314949", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [28, null, "314948", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [29, null, "314947", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [30, null, "314946", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [31, null, "314945", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [32, null, "314944", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [33, null, "314943", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [34, null, "290033", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [35, null, "289529", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [36, null, "289528", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [37, null, "287117", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [38, null, "267975", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [39, null, "271639", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [40, null, "265670", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [41, null, "225996", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [42, null, "221187", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [43, null, "221186", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [44, null, "197804", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [45, null, "196217", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [46, null, "195115", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [47, null, "193220", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [48, null, "192273", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [49, null, "186344", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [50, null, "181013", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [51, null, "181011", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [52, null, "153613", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [53, null, "151528", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [54, null, "151527", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [55, null, "150907", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [56, null, "145513", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [57, null, "145510", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [58, null, "145509", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [59, null, "145508", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [60, null, "145507", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [61, null, "145506", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [62, null, "145505", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [63, null, "145504", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [64, null, "145503", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [65, null, "145502", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [66, null, "145500", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [67, null, "145499", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [68, null, "145498", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [69, null, "145497", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [70, null, "145496", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [71, null, "145495", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [72, null, "145494", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [73, null, "145493", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [74, null, "145492", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0]];
+const EXCELDATA$2 = [["ID", "Describe", "AssetId", "Transform", "SexType"], ["", "", "", "", ""], [1, null, "484538", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [2, null, "472914", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [3, null, "472706", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [4, null, "467037", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [5, null, "444603", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [6, null, "398522", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [7, null, "397400", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [8, null, "384139", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [9, null, "380860", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [10, null, "380858", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [11, null, "380849", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [12, null, "379886", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [13, null, "375147", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [14, null, "375146", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [15, null, "357366", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [16, null, "357364", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [17, null, "351325", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [18, null, "350256", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [19, null, "350163", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [20, null, "350055", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [21, null, "350053", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [22, null, "349960", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [23, null, "317495", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [24, null, "314952", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [25, null, "314951", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [26, null, "314950", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [27, null, "314949", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [28, null, "314948", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [29, null, "314947", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [30, null, "314946", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [31, null, "314945", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [32, null, "314944", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [33, null, "314943", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [34, null, "290033", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [35, null, "289529", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [36, null, "289528", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [37, null, "287117", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [38, null, "267975", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [39, null, "271639", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [40, null, "265670", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [41, null, "225996", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [42, null, "221187", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [43, null, "221186", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [44, null, "197804", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [45, null, "196217", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [46, null, "195115", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [47, null, "193220", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [48, null, "192273", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [49, null, "186344", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [50, null, "181013", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [51, null, "181011", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [52, null, "153613", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [53, null, "151528", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [54, null, "151527", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [55, null, "150907", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [56, null, "145513", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [57, null, "145510", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [58, null, "145509", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [59, null, "145508", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [60, null, "145507", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [61, null, "145506", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [62, null, "145505", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [63, null, "145504", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [64, null, "145503", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [65, null, "145502", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [66, null, "145500", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [67, null, "145499", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [68, null, "145498", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [69, null, "145497", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [70, null, "145496", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [71, null, "145495", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [72, null, "145494", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [73, null, "145493", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0], [74, null, "145492", ["0", "0", "0", "0", "0", "0", "1", "1", "1"], 0]];
 class TrailingsConfig extends ConfigBase {
     constructor() {
-        super(EXCELDATA$1);
+        super(EXCELDATA$2);
     }
 }
 
 var foreign78 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     TrailingsConfig: TrailingsConfig
+});
+
+const EXCELDATA$1 = [["ID", "TRAILING", "PRICETYPE", "PRICE", "NAME"], ["", "", "", "", ""], [1, "14317", 1, [1, 8888], "烟雾拖尾"], [2, "14319", 1, [1, 8888], "烟雾拖尾"], [3, "27399", 1, [1, 8888], "烟雾拖尾"], [4, "27447", 1, [1, 8888], "粒子拖尾"], [5, "30497", 1, [1, 8888], "烟雾拖尾"], [6, "88020", 1, [1, 8888], "光束拖尾"], [7, "88442", 1, [1, 8888], "光束拖尾"], [8, "88443", 1, [1, 8888], "光束拖尾"], [9, "88796", 1, [1, 8888], "烟雾拖尾"], [10, "88794", 1, [1, 8888], "烟雾拖尾"], [11, "88797", 1, [1, 8888], "烟雾拖尾"], [12, "88798", 1, [1, 8888], "烟雾拖尾"], [13, "89592", 1, [1, 8888], "光束拖尾"], [14, "128512", 1, [1, 8888], "光束拖尾"], [15, "128513", 1, [1, 8888], "光束拖尾"], [16, "128514", 1, [1, 8888], "光束拖尾"], [17, "128515", 1, [1, 8888], "光束拖尾"], [18, "128516", 1, [1, 8888], "光束拖尾"], [19, "128517", 1, [1, 8888], "光束拖尾"], [20, "128518", 1, [1, 8888], "光束拖尾"], [21, "146783", 1, [1, 8888], "烟雾拖尾"], [22, "148710", 1, [1, 8888], "拖尾"], [23, "150907", 1, [1, 8888], "水拖尾"], [24, "145511", 1, [1, 8888], "火焰拖尾"], [25, "151527", 1, [1, 8888], "烟雾拖尾"], [26, "151528", 1, [1, 8888], "烟雾拖尾"], [27, "153603", 1, [1, 8888], "拖尾"], [28, "153613", 1, [1, 8888], "拖尾"], [29, "128519", 1, [1, 8888], "光束拖尾"], [30, "128520", 1, [1, 8888], "光束拖尾"], [31, "145496", 1, [1, 8888], "烟雾拖尾"], [32, "145506", 1, [1, 8888], "拖尾"], [33, "128521", 1, [1, 8888], "光束拖尾"], [34, "4399", 1, [1, 8888], "雷拖尾"], [35, "27392", 1, [1, 8888], "彩虹拖尾"], [36, "133481", 1, [1, 8888], "胎印拖尾"], [37, "145492", 1, [1, 8888], "螺丝钉拖尾"], [38, "145493", 1, [1, 8888], "足球拖尾"], [39, "145494", 1, [1, 8888], "彩虹拖尾"], [40, "145495", 1, [1, 8888], "糖果拖尾"], [41, "145497", 1, [1, 8888], "奖杯拖尾"], [42, "145498", 1, [1, 8888], "皇冠拖尾"], [43, "145499", 1, [1, 8888], "爱心拖尾"], [44, "145500", 1, [1, 8888], "骷髅拖尾"], [45, "145502", 1, [1, 8888], "香蕉拖尾"], [46, "145503", 1, [1, 8888], "雷电拖尾"], [47, "145504", 1, [1, 8888], "雪花拖尾"], [48, "145505", 1, [1, 8888], "2023拖尾"], [49, "145507", 1, [1, 8888], "爆竹拖尾"], [50, "145508", 1, [1, 8888], "烟花拖尾"], [51, "145509", 1, [1, 8888], "礼物拖尾"], [52, "145510", 1, [1, 8888], "钞票拖尾"], [53, "145512", 1, [1, 8888], "泡泡拖尾"], [54, "145513", 1, [1, 8888], "彩带拖尾"], [55, "186344", 1, [1, 8888], "便便拖尾"], [56, "195115", 1, [1, 8888], "枫叶拖尾"], [57, "196217", 1, [1, 8888], "六芒星拖尾"], [58, "221186", 1, [1, 8888], "蝴蝶拖尾"], [59, "221187", 1, [1, 8888], "冰淇淋拖尾"], [60, "267975", 1, [1, 8888], "鸟拖尾"], [61, "271639", 1, [1, 8888], "蝙蝠拖尾"], [62, "289528", 1, [1, 8888], "祥云拖尾"], [63, "290033", 1, [1, 8888], "爪印"]];
+class TRAILINGConfig extends ConfigBase {
+    constructor() {
+        super(EXCELDATA$1);
+    }
+}
+
+var foreign77 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    TRAILINGConfig: TRAILINGConfig
 });
 
 const EXCELDATA = [["ID", "Describe", "AssetId", "SexType"], ["", "", "", ""], [1, null, "152735", 0], [2, null, "77447", 0], [3, null, "48629", 0], [4, null, "48041", 0], [5, null, "48040", 0], [6, null, "48039", 0], [7, null, "48038", 0], [8, null, "48037", 0], [9, null, "48036", 0], [10, null, "48034", 0], [11, null, "48033", 0], [12, null, "48032", 0], [13, null, "48031", 0], [14, null, "48030", 0], [15, null, "32112", 0], [16, null, "22660", 0], [17, null, "22616", 0]];
@@ -4370,6 +4334,172 @@ class UpperHighlightConfig extends ConfigBase {
 var foreign79 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     UpperHighlightConfig: UpperHighlightConfig
+});
+
+class GameConfig {
+    /**
+    * 多语言设置
+    * @param languageIndex 语言索引(-1为系统默认语言)
+    * @param getLanguageFun 根据key获取语言内容的方法
+    */
+    static initLanguage(languageIndex, getLanguageFun) {
+        ConfigBase.initLanguage(languageIndex, getLanguageFun);
+        this.configMap.clear();
+    }
+    static getConfig(ConfigClass) {
+        if (!this.configMap.has(ConfigClass.name)) {
+            this.configMap.set(ConfigClass.name, new ConfigClass());
+        }
+        return this.configMap.get(ConfigClass.name);
+    }
+    static get AccessoriesGloves() { return this.getConfig(AccessoriesGlovesConfig); }
+    ;
+    static get ALongCoatTop() { return this.getConfig(ALongCoatTopConfig); }
+    ;
+    static get AncientMoldingOutfit() { return this.getConfig(AncientMoldingOutfitConfig); }
+    ;
+    static get BackHair() { return this.getConfig(BackHairConfig); }
+    ;
+    static get Back() { return this.getConfig(BackConfig); }
+    ;
+    static get Blush() { return this.getConfig(BlushConfig); }
+    ;
+    static get BodyType() { return this.getConfig(BodyTypeConfig); }
+    ;
+    static get BootsShoes() { return this.getConfig(BootsShoesConfig); }
+    ;
+    static get Bottom() { return this.getConfig(BottomConfig); }
+    ;
+    static get ColorValue() { return this.getConfig(ColorValueConfig); }
+    ;
+    static get DailyStylingOutfit1() { return this.getConfig(DailyStylingOutfit1Config); }
+    ;
+    static get DailyStylingOutfit2() { return this.getConfig(DailyStylingOutfit2Config); }
+    ;
+    static get Ear() { return this.getConfig(EarConfig); }
+    ;
+    static get Effects() { return this.getConfig(EffectsConfig); }
+    ;
+    static get EverydayShoes() { return this.getConfig(EverydayShoesConfig); }
+    ;
+    static get Expression() { return this.getConfig(ExpressionConfig); }
+    ;
+    static get Eyebrows() { return this.getConfig(EyebrowsConfig); }
+    ;
+    static get Eyelashes() { return this.getConfig(EyelashesConfig); }
+    ;
+    static get Eyeshadow() { return this.getConfig(EyeshadowConfig); }
+    ;
+    static get FaceExpression() { return this.getConfig(FaceExpressionConfig); }
+    ;
+    static get FaceTattoo() { return this.getConfig(FaceTattooConfig); }
+    ;
+    static get Face() { return this.getConfig(FaceConfig); }
+    ;
+    static get Facing() { return this.getConfig(FacingConfig); }
+    ;
+    static get FantasyModelingOutfit() { return this.getConfig(FantasyModelingOutfitConfig); }
+    ;
+    static get FootCoverShoes() { return this.getConfig(FootCoverShoesConfig); }
+    ;
+    static get FrontHair() { return this.getConfig(FrontHairConfig); }
+    ;
+    static get FullHair() { return this.getConfig(FullHairConfig); }
+    ;
+    static get GlovesGloves() { return this.getConfig(GlovesGlovesConfig); }
+    ;
+    static get Gloves() { return this.getConfig(GlovesConfig); }
+    ;
+    static get GUN() { return this.getConfig(GUNConfig); }
+    ;
+    static get HeroStylingOutfit() { return this.getConfig(HeroStylingOutfitConfig); }
+    ;
+    static get HighHeelsShoes() { return this.getConfig(HighHeelsShoesConfig); }
+    ;
+    static get Hip() { return this.getConfig(HipConfig); }
+    ;
+    static get HolidayStylingOutfit() { return this.getConfig(HolidayStylingOutfitConfig); }
+    ;
+    static get Language() { return this.getConfig(LanguageConfig); }
+    ;
+    static get LeftHand() { return this.getConfig(LeftHandConfig); }
+    ;
+    static get Lens() { return this.getConfig(LensConfig); }
+    ;
+    static get LipMakeup() { return this.getConfig(LipMakeupConfig); }
+    ;
+    static get LongPantsBottom() { return this.getConfig(LongPantsBottomConfig); }
+    ;
+    static get LongSinglePieceTop() { return this.getConfig(LongSinglePieceTopConfig); }
+    ;
+    static get LongSkirtBottom() { return this.getConfig(LongSkirtBottomConfig); }
+    ;
+    static get LowerHighlight() { return this.getConfig(LowerHighlightConfig); }
+    ;
+    static get Morph() { return this.getConfig(MorphConfig); }
+    ;
+    static get MuppetStylingOutfit() { return this.getConfig(MuppetStylingOutfitConfig); }
+    ;
+    static get Music() { return this.getConfig(MusicConfig); }
+    ;
+    static get NakedDressShoes() { return this.getConfig(NakedDressShoesConfig); }
+    ;
+    static get Outfit() { return this.getConfig(OutfitConfig); }
+    ;
+    static get Pet() { return this.getConfig(PetConfig); }
+    ;
+    static get PupilStyle() { return this.getConfig(PupilStyleConfig); }
+    ;
+    static get RightHand() { return this.getConfig(RightHandConfig); }
+    ;
+    static get ROLE() { return this.getConfig(ROLEConfig); }
+    ;
+    static get ScienceFictionStylingOutfit() { return this.getConfig(ScienceFictionStylingOutfitConfig); }
+    ;
+    static get Shoes() { return this.getConfig(ShoesConfig); }
+    ;
+    static get ShopItem() { return this.getConfig(ShopItemConfig); }
+    ;
+    static get ShortJacketTop() { return this.getConfig(ShortJacketTopConfig); }
+    ;
+    static get ShortsBottom() { return this.getConfig(ShortsBottomConfig); }
+    ;
+    static get ShortSinglePieceTop() { return this.getConfig(ShortSinglePieceTopConfig); }
+    ;
+    static get ShortSkirtBottom() { return this.getConfig(ShortSkirtBottomConfig); }
+    ;
+    static get Shoulder() { return this.getConfig(ShoulderConfig); }
+    ;
+    static get SkinTone() { return this.getConfig(SkinToneConfig); }
+    ;
+    static get SportsShoesShoes() { return this.getConfig(SportsShoesShoesConfig); }
+    ;
+    static get SuitTop() { return this.getConfig(SuitTopConfig); }
+    ;
+    static get Tab1() { return this.getConfig(Tab1Config); }
+    ;
+    static get Tab2() { return this.getConfig(Tab2Config); }
+    ;
+    static get Tab3() { return this.getConfig(Tab3Config); }
+    ;
+    static get Task() { return this.getConfig(TaskConfig); }
+    ;
+    static get TightsBottom() { return this.getConfig(TightsBottomConfig); }
+    ;
+    static get Top() { return this.getConfig(TopConfig); }
+    ;
+    static get Trailings() { return this.getConfig(TrailingsConfig); }
+    ;
+    static get TRAILING() { return this.getConfig(TRAILINGConfig); }
+    ;
+    static get UpperHighlight() { return this.getConfig(UpperHighlightConfig); }
+    ;
+}
+GameConfig.configMap = new Map();
+
+var foreign35 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    GameConfig: GameConfig
 });
 
 class ActivityData extends Subdata {
@@ -4422,7 +4552,7 @@ var foreign149 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/CoinPanel.ui
- * TIME: 2025.01.03-23.21.31
+ * TIME: 2025.03.16-00.11.33
  */
 let CoinPanel_Generate = class CoinPanel_Generate extends UIScript {
     get mCoinCanvas() {
@@ -4797,7 +4927,7 @@ var foreign97 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2025.01.03-23.21.30
+ * TIME: 2025.03.16-00.11.34
  */
 let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     get mVirtualJoystickPanel() {
@@ -5226,7 +5356,7 @@ var foreign174 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShareModule/SharePanel.ui
- * TIME: 2025.01.03-23.21.31
+ * TIME: 2025.03.16-00.11.34
  */
 let SharePanel_Generate = class SharePanel_Generate extends UIScript {
     get mMainImage() {
@@ -5364,7 +5494,7 @@ var foreign193 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/KillTipItem.ui
- * TIME: 2025.01.03-23.21.31
+ * TIME: 2025.03.16-00.11.34
  */
 let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
     get mBgImage() {
@@ -6742,7 +6872,7 @@ var foreign135 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopPanel.ui
- * TIME: 2025.01.03-23.21.31
+ * TIME: 2025.03.16-00.11.34
  */
 let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
     get mTabCanvas() {
@@ -6863,7 +6993,7 @@ var foreign195 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopItem.ui
- * TIME: 2025.01.03-23.21.31
+ * TIME: 2025.03.16-00.11.34
  */
 let ShopItem_Generate = class ShopItem_Generate extends UIScript {
     get mICONImage() {
@@ -7826,7 +7956,7 @@ var foreign136 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ActivityModule/ActivityPanel.ui
- * TIME: 2025.01.03-23.21.30
+ * TIME: 2025.03.16-00.11.33
  */
 let ActivityPanel_Generate = class ActivityPanel_Generate extends UIScript {
     get mWhatDayTextBlock() {
@@ -8731,7 +8861,7 @@ var foreign103 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/tools/LoadingPanel.ui
- * TIME: 2025.03.01-10.45.33
+ * TIME: 2025.03.16-00.11.33
  */
 let LoadingPanel_Generate = class LoadingPanel_Generate extends UIScript {
     get mMainCanvas() {
@@ -9562,7 +9692,7 @@ var foreign102 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/ColorPickPanel.ui
- * TIME: 2025.03.01-10.45.33
+ * TIME: 2025.03.16-00.11.34
  */
 let ColorPickPanel_Generate = class ColorPickPanel_Generate extends UIScript {
     get mSaveCanvas() {
@@ -9728,7 +9858,7 @@ var foreign176 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/ColorPickTab1.ui
- * TIME: 2025.03.01-10.45.33
+ * TIME: 2025.03.16-00.11.34
  */
 let ColorPickTab1_Generate = class ColorPickTab1_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -9803,7 +9933,7 @@ var foreign107 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/ColorPickTab2.ui
- * TIME: 2025.03.01-10.45.33
+ * TIME: 2025.03.16-00.11.34
  */
 let ColorPickTab2_Generate = class ColorPickTab2_Generate extends UIScript {
     get mTab2Canvas() {
@@ -9968,7 +10098,7 @@ var foreign108 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/ColorPickTab3.ui
- * TIME: 2025.03.01-10.45.33
+ * TIME: 2025.03.16-00.11.34
  */
 let ColorPickTab3_Generate = class ColorPickTab3_Generate extends UIScript {
     get mBgImage() {
@@ -10179,7 +10309,7 @@ var foreign157 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/MallPanel.ui
- * TIME: 2025.03.01-10.45.33
+ * TIME: 2025.03.16-00.11.34
  */
 let MallPanel_Generate = class MallPanel_Generate extends UIScript {
     get mTouchImage() {
@@ -10402,7 +10532,7 @@ var foreign184 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/MallItem_Big.ui
- * TIME: 2025.03.01-10.45.33
+ * TIME: 2025.03.16-00.11.34
  */
 let MallItem_Big_Generate = class MallItem_Big_Generate extends UIScript {
     get mBgImage() {
@@ -10625,7 +10755,7 @@ var foreign110 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/MallItem_Color.ui
- * TIME: 2025.03.01-10.45.33
+ * TIME: 2025.03.16-00.11.34
  */
 let MallItem_Color_Generate = class MallItem_Color_Generate extends UIScript {
     get mBgImage() {
@@ -10774,7 +10904,7 @@ var foreign111 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/MallItem_Self.ui
- * TIME: 2025.03.01-10.45.33
+ * TIME: 2025.03.16-00.11.34
  */
 let MallItem_Self_Generate = class MallItem_Self_Generate extends UIScript {
     get mBgImage() {
@@ -10907,7 +11037,7 @@ var foreign112 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/MallItem_Small.ui
- * TIME: 2025.03.01-10.45.33
+ * TIME: 2025.03.16-00.11.34
  */
 let MallItem_Small_Generate = class MallItem_Small_Generate extends UIScript {
     get mBgImage() {
@@ -11313,7 +11443,7 @@ var foreign113 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/MallTab1.ui
- * TIME: 2025.03.01-10.45.33
+ * TIME: 2025.03.16-00.11.34
  */
 let MallTab1_Generate = class MallTab1_Generate extends UIScript {
     get mTab1Canvas() {
@@ -11465,7 +11595,7 @@ var foreign115 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/MallTab2.ui
- * TIME: 2025.03.01-10.45.33
+ * TIME: 2025.03.16-00.11.34
  */
 let MallTab2_Generate = class MallTab2_Generate extends UIScript {
     get mTab2Canvas() {
@@ -11603,7 +11733,7 @@ var foreign116 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/MallTab3.ui
- * TIME: 2025.03.01-10.45.33
+ * TIME: 2025.03.16-00.11.34
  */
 let MallTab3_Generate = class MallTab3_Generate extends UIScript {
     get mTab3Canvas() {
@@ -12913,7 +13043,7 @@ var foreign106 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/MallModule/MallTipsPanel.ui
- * TIME: 2025.03.01-10.45.33
+ * TIME: 2025.03.16-00.11.34
  */
 let MallTipsPanel_Generate = class MallTipsPanel_Generate extends UIScript {
     get mMainImage() {
@@ -14115,10 +14245,10 @@ class MallModuleC extends ModuleC {
         this.localPlayer.character.worldTransform.rotation = this.localPlayer.character.worldTransform.rotation.add(new mw.Rotation(0, 0, -(this.mallCharacterRotSpeed * dir)));
     }
     async initNpc() {
-        this.maleNpc = await mw.GameObject.asyncFindGameObjectById(`3C486412`);
-        this.feMaleNpc = await mw.GameObject.asyncFindGameObjectById(`3CD55A36`);
-        this.transitionNpc = await mw.GameObject.asyncFindGameObjectById(`0BC339EB`);
-        this.copyNpc = await mw.GameObject.asyncFindGameObjectById(`0F17BFB7`);
+        this.maleNpc = await mw.GameObject.asyncFindGameObjectById(`2CEC2028`);
+        this.feMaleNpc = await mw.GameObject.asyncFindGameObjectById(`1747A541`);
+        this.transitionNpc = await mw.GameObject.asyncFindGameObjectById(`24D5B860`);
+        this.copyNpc = await mw.GameObject.asyncFindGameObjectById(`1C09F670`);
         await this.localPlayer.character.asyncReady();
         let somatotype = this.localPlayer.character.description.advance.base.characterSetting.somatotype;
         this.recordSex(somatotype);
@@ -15142,7 +15272,7 @@ var foreign129 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/RankPanel.ui
- * TIME: 2025.01.03-23.21.31
+ * TIME: 2025.03.16-00.11.34
  */
 let RankPanel_Generate = class RankPanel_Generate extends UIScript {
     get mRoomCanvas() {
@@ -15280,7 +15410,7 @@ var foreign190 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/RoomItem.ui
- * TIME: 2025.01.03-23.21.31
+ * TIME: 2025.03.16-00.11.34
  */
 let RoomItem_Generate = class RoomItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -15384,7 +15514,7 @@ var foreign133 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RankModule/WorldItem.ui
- * TIME: 2025.01.03-23.21.31
+ * TIME: 2025.03.16-00.11.34
  */
 let WorldItem_Generate = class WorldItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -15943,7 +16073,7 @@ var foreign144 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TeamModule/TeamPanel.ui
- * TIME: 2025.01.03-23.21.31
+ * TIME: 2025.03.16-00.11.34
  */
 let TeamPanel_Generate = class TeamPanel_Generate extends UIScript {
     get mMainCanvas() {
@@ -16044,7 +16174,7 @@ var foreign199 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TeamModule/TeamItem.ui
- * TIME: 2025.01.03-23.21.31
+ * TIME: 2025.03.16-00.11.34
  */
 let TeamItem_Generate = class TeamItem_Generate extends UIScript {
     get mBgImage() {
@@ -18376,7 +18506,7 @@ var foreign137 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2025.01.03-23.21.31
+ * TIME: 2025.03.16-00.11.34
  */
 let TaskItem_Generate = class TaskItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -18476,7 +18606,7 @@ var foreign196 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskPanel.ui
- * TIME: 2025.01.03-23.21.31
+ * TIME: 2025.03.16-00.11.34
  */
 let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
     get mDailyTimeTextBlock() {
@@ -19487,7 +19617,7 @@ var foreign91 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GMModule/GMHUD.ui
- * TIME: 2025.01.03-23.21.30
+ * TIME: 2025.03.16-00.11.34
  */
 let GMHUD_Generate = class GMHUD_Generate extends UIScript {
     get oKbutton() {
@@ -19577,7 +19707,7 @@ var foreign171 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GMModule/GMItem.ui
- * TIME: 2025.01.03-23.21.30
+ * TIME: 2025.03.16-00.11.34
  */
 let GMItem_Generate = class GMItem_Generate extends UIScript {
     get button() {
@@ -19855,7 +19985,7 @@ var foreign92 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GunModule/WeaponUI.ui
- * TIME: 2025.01.03-23.21.31
+ * TIME: 2025.03.16-00.11.34
  */
 let WeaponUI_Generate = class WeaponUI_Generate extends UIScript {
     get point() {
@@ -23239,7 +23369,7 @@ var foreign159 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/JumpGameTips.ui
- * TIME: 2025.01.03-23.21.30
+ * TIME: 2025.03.16-00.11.33
  */
 let JumpGameTips_Generate = class JumpGameTips_Generate extends UIScript {
     onAwake() {
@@ -23289,7 +23419,7 @@ var foreign162 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/SecondNoticeItem.ui
- * TIME: 2025.01.03-23.21.30
+ * TIME: 2025.03.16-00.11.33
  */
 let SecondNoticeItem_Generate = class SecondNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -23357,7 +23487,7 @@ var foreign164 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/DiamondItem.ui
- * TIME: 2025.01.03-23.21.31
+ * TIME: 2025.03.16-00.11.33
  */
 let DiamondItem_Generate = class DiamondItem_Generate extends UIScript {
     get mFirstBuyTextBlock() {
@@ -23469,7 +23599,7 @@ var foreign169 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/CoinModule/DiamondPanel.ui
- * TIME: 2025.01.03-23.21.31
+ * TIME: 2025.03.16-00.11.33
  */
 let DiamondPanel_Generate = class DiamondPanel_Generate extends UIScript {
     get mMainCanvas() {
@@ -23560,7 +23690,7 @@ var foreign170 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RadarModule/RadarPanel.ui
- * TIME: 2025.01.03-23.21.31
+ * TIME: 2025.03.16-00.11.34
  */
 let RadarPanel_Generate = class RadarPanel_Generate extends UIScript {
     onAwake() {
