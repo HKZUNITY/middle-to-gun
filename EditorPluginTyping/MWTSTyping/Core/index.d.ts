@@ -209,7 +209,7 @@ declare namespace mw {
          */
         setVisibility(status: mw.PropertyStatus | boolean, propagateToChildren?: boolean): void;
         /**
-         * @description 构造一个物体
+         * @description 构造一个物体，创建时请尽量把信息通过 gameObjectInfo 传入以达到性能最优化。
          * @groups 基类/场景所有物体基类
          * @effect 调用端生效
          * @param assetId usage: 资源 id   <br>  range: 根据资源 ID 长度而定
@@ -226,7 +226,7 @@ declare namespace mw {
          */
         static spawn<T extends GameObject>(assetId: string, gameObjectInfo?: mw.GameObjectInfo): T;
         /**
-         * @description 异步构造一个物体
+         * @description 异步构造一个物体，创建时请尽量把信息通过 gameObjectInfo 传入以达到性能最优化。
          * @groups 基类/场景所有物体基类
          * @description 资源不存在会先去下载资源再去创建
          * @effect 调用端生效
@@ -480,13 +480,12 @@ declare namespace mw {
          */
         static bulkPivotTo(gameObjects: Array<GameObject>, transforms: Array<mw.Transform>): void;
         /**
-         * @Editor
-         * @description 返回当前物体是否为预制体
+         * @description 返回当前物体使用的预制体资源ID，如果当前物体不是预制体，则返回空
          * @groups 基类/场景所有物体基类
          * @effect 调用端生效
          * @returns 名称
          */
-        isPrefabActor(): boolean;
+        get prefabAssetId(): string;
         /**
          * @Editor
          * @description 返回当前物体名称
@@ -531,11 +530,6 @@ declare namespace mw {
          * @returns Tag
          */
         get sceneCaptureTag(): string;
-        /**
-         * @description 获取Actor等级
-         * @effect 编辑器端生效
-         */
-        get actorLevel(): number;
         /**
          * @description 获取当前物体同步状态
          * @groups 基类/场景所有物体基类
@@ -655,7 +649,7 @@ declare namespace mw {
          * @param gameObjectInfo usage:克隆物体的信息  <br> default: null
          * @returns 克隆的对象
          */
-        clone(gameObjectInfo?: mw.GameObjectInfo): this;
+        clone(gameObjectInfo?: mw.CloneInfo): this;
         /**
          * @description 获得当前物体下的指定脚本
          * @deprecated info:该接口已废弃，在该接口被删除前会仍保持可用，请尽快使用替换方案以免出现问题 since:027 reason:脚本API优化 replacement:getComponent
@@ -826,6 +820,9 @@ declare namespace mw {
          */
         onCustomPropertyChange: Readonly<mw.MulticastDelegate<(path: string, value: unknown, oldValue: unknown) => void>>;
     }
+}
+
+declare namespace mw {
 }
 
 declare namespace mw {

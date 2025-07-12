@@ -33,6 +33,12 @@
         replicates?: boolean;
         /** @description transform */
         transform?: mw.Transform;
+        /** @description static */
+        static?: boolean;
+    }
+    interface CloneInfo extends GameObjectInfo {
+        /** @description 只包含序列化的对象 */
+        serializableOnly?: boolean;
     }
     /**
      * @author zhiqiang.tan

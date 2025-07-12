@@ -47,6 +47,52 @@ declare namespace mw {
      */
     type MGSResponse = (isSuccess: boolean, jsonData: string) => void;
     /**
+     * @author jun.zhang
+     * @description GameService的错误回调编码枚举
+     * @groups 基础类型
+     */
+    enum AvatarCheckStatusCode {
+        /** 正常 */
+        WellDone = 0,
+        /** 参数错误 */
+        InvalidParams = 1,
+        /** http 请求错误：可能是网络问题 */
+        HttpRequestFailure = 2,
+        /** 所属对象已失效：可能在完成任务之前角色已失效 */
+        OwnerCharacterDestroyed = 3,
+        /** 平台形象下载失败：网络连接成功，但是响应中没有有效的数据，可能是账号权限或者服务器权限设置，也可能数据结构不对 */
+        AvatarDescDownloadFailure = 4,
+        /** 资源上传版本高于当前引擎版本：需要更新引擎了 */
+        AssetEngineVersionHigher = 5,
+        /** 资源不可访问：可能没有购买所以没有权限 */
+        AssetNoAccess = 6,
+        /** 资源下载失败：是不是访问了无效的资源 GUID，或者服务器内部错误 */
+        AssetDownloadFailure = 7,
+        /** 资源错误使用：可能衣服部位混用了 */
+        AssetMisuse = 8,
+        /** 换装任务失败 */
+        AvatarTaskFailure = 9
+    }
+    /**
+     * @author jun.zhang
+     * @description GameService的回调参数类型
+     * @groups 基础类型
+     */
+    interface AvatarBaseError {
+        /** @description 错误编码 */
+        code: AvatarCheckStatusCode;
+        /** @description 错误描述 */
+        message: string;
+    }
+    /**
+     * @author jun.zhang
+     * @description GameService的回调参数类型
+     * @groups 基础类型
+     */
+    type AvatarCheckResponse = (isSuccess: boolean, errors: Array<AvatarBaseError | (AvatarBaseError & {
+        assetId: string;
+    })>) => void;
+    /**
      * @author huipeng.jia, guang.deng
      * @groups 服务/社交
      * @description 用户账号信息管理服务
@@ -168,7 +214,15 @@ declare namespace mw {
          * @param index usage:角色资源位 default:0（主角资源位） range: [0,5] type: 整形
          * @effect 只在客户端调用生效
          */
-        static downloadData(character: mw.Character, callback?: BoolResponse | VoidResponse, index?: number): void;
+        static downloadData(character: mw.Character, callback?: AvatarCheckResponse, index?: number): void;
+        /**
+         * @description 如果本地有缓存，则优先使用缓存，否则下载角色形象并应用到当前角色身上,
+         * @param character usage:要应用换装数据的角色
+         * @param callback usage:设置是否成功的回调 default:默认没有回调
+         * @param index usage:角色资源位 default:0（主角资源位） range: [0,5] type: 整形
+         * @effect 只在客户端调用生效
+         */
+        static useCacheOrDownloadData(character: mw.Character, callback?: BoolResponse | VoidResponse, index?: number): void;
         /**
          * @description 设置数据是否公开给其他用户
          * @param index usage:角色资源位 default:0（主角资源位） range: [0,5] type: 整形
@@ -186,12 +240,29 @@ declare namespace mw {
         static createSharedId(character: mw.Character, callback: StringResponse): void;
         /**
          * @description 应用分享Id的角色数据
+         * @deprecated info:该接口已废弃，在该接口被删除前会仍保持可用，请尽快使用替换方案以免出现问题 since:045 reason: api 迭代支持更多检查选项，replacement:
          * @param character usage:分享换装数据的角色
          * @param id usage:分享Id range: 无
          * @param callback usage: 回调参数，true:应用成功；false:应用失败
          * @effect 只在客户端调用生效
          */
         static applySharedId(character: mw.Character, id: string, callback: BoolResponse): void;
+        /**
+         * @description 应用分享Id的角色数据
+         * @param character usage:分享换装数据的角色
+         * @param id usage:分享Id range: 无
+         * @param isSkipPreCheck usage:是否跳过检查 range: 无
+         * @param callback usage: 回调参数，true:应用成功；false:应用失败
+         * @effect 只在客户端调用生效
+         */
+        static applySharedId(character: mw.Character, id: string, isSkipPreCheck: boolean, callback: AvatarCheckResponse): void;
+        /**
+         * @description 检查分享Id的角色数据
+         * @param id usage:分享Id range: 无
+         * @param callback usage: 回调参数，true:应用成功；false:应用失败
+         * @effect 只在客户端调用生效
+         */
+        static checkSharedId(id: string, callback: AvatarCheckResponse): void;
         /**
          * @description 获取用户存储在服务器上的角色形象数据
          * @param userId usage:用户Id range: 无
@@ -255,7 +326,7 @@ declare namespace mw {
          * }
          * ```
          */
-        static setUserData(character: mw.Character, dataString: string, callback?: BoolResponse): void;
+        static setUserData(character: mw.Character, dataString: string, callback?: AvatarCheckResponse): void;
         /**
          * @description 发起添加好友请求
          * @effect 只在客户端调用生效
@@ -431,6 +502,61 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author huipeng.jia
+     * @groups 服务/埋点分析
+     * @description 事件包装器
+     * @networkStatus usage: 双端
+     * @example 使用示例: 在客户端执行如下代码，即可上报玩家登录的埋点事件（需要先在服务端注册该埋点事件）
+     * ```ts
+     * AnalyticsService
+     *       .create('user_signup')
+     *       .put('username', 'john')
+     *       .put('age', 30)
+     *       .put('isPremium', true)
+     *       .send();
+     * ```
+     */
+    class EventWrapper {
+        /**
+         * @param event usage:埋点事件名 range: 在服务端注册过的埋点
+         */
+        constructor(event: string);
+        /**
+         * @groups 服务/埋点分析
+         * @description 放入普通数据
+         * @effect 只在客户端调用生效
+         * @param key usage:数据的键 range:参数需要与服务端注册的保持一致，不一致的会被丢弃，影响最终数据。
+         * @param value usage:数据的值 range: 无
+         * @returns 返回自身，以支持链式调用
+         */
+        put(key: string, value: any): EventWrapper;
+        /**
+         * @groups 服务/埋点分析
+         * @description 放入Array数据
+         * @effect 只在客户端调用生效
+         * @param kvs usage:键值对形式的参数数组 range:参数需要与服务端注册的保持一致，不一致的会被丢弃，影响最终数据。
+         * @returns 返回自身，以支持链式调用
+         */
+        putArray(kvs: {
+            [key: string]: any;
+        }[]): EventWrapper;
+        /**
+         * @groups 服务/埋点分析
+         * @description 放入Map数据
+         * @effect 只在客户端调用生效
+         * @param kvMap usage:Map形式的参数集 range:参数需要与服务端注册的保持一致，不一致的会被丢弃，影响最终数据。
+         * @returns 返回自身，以支持链式调用
+         */
+        putMap(kvMap: Map<string, any>): EventWrapper;
+        /**
+         * @groups 服务/埋点分析
+         * @description 发送事件埋点
+         * @effect 只在客户端调用生效
+         * @precautions 该接口有频率限制，超过限制的调用会被丢弃不发送。该限制不是对单个事件埋点，而是所有。
+         */
+        send(): void;
+    }
+    /**
      * @author xiangkun.sun
      * @groups 服务/埋点分析
      * @description 分析服务
@@ -454,6 +580,24 @@ declare namespace mw {
         static googleEventTracking(eventName: string, eventParams?: {
             [p: string]: string;
         }): void;
+        /**
+         * @groups 服务/埋点分析
+         * @description 创建事件埋点
+         * @effect 只在客户端调用生效
+         * @param event usage:埋点事件名 range: 在服务端注册过的埋点
+         * @precautions 埋点名和参数需要与服务端注册的保持一致，不一致的会被丢弃，影响最终数据。
+         * @returns 事件埋点对象
+         * @example 使用示例: 在客户端执行如下代码，即可上报玩家登录的埋点事件（需要先在服务端注册该埋点事件）
+         * ```ts
+         * AnalyticsService
+         *       .create('user_signup')
+         *       .put('username', 'john')
+         *       .put('age', 30)
+         *       .put('isPremium', true)
+         *       .send();
+         * ```
+         */
+        static create(event: string): EventWrapper;
     }
 }
 
@@ -557,6 +701,46 @@ declare namespace mw {
          * ```
          */
         static sendTo(toWhom: MessageChannelReceiver, message: string): void;
+    }
+}
+
+/**
+ * @author changzun.li
+ * @description 拍照组件
+ */
+declare namespace mw {
+    /**
+     * @author changzun.li
+     * @groups 设置/设置面板
+     * @description 拍照组件
+     * @networkStatus usage: 客户端
+     */
+    class PhotoStudioService {
+        /**
+         * @author changzun.li
+         * @groups 设置/设置面板
+         * @description 打开拍照组件
+         * @effect 只在客户端调用生效
+         * @param extraInfo usage: 额外的传参 default: undefined
+         * @returns 打开结果
+         */
+        static asyncOpenPhotoStudioModule(extraInfo?: any): Promise<boolean>;
+        /**
+         * @author changzun.li
+         * @groups 设置/设置面板
+         * @description 打开拍照组件
+         * @effect 只在客户端调用生效
+         * @returns 异步void
+         */
+        static asyncClosePhotoStudioModule(): Promise<void>;
+        /**
+         * @groups 服务/社交
+         * @description 设置是否开启拍照入口
+         * @effect  只在客户端调用生效
+         * @param state usage: 是否开启 default: true
+         * @returns 设置是否成功
+         */
+        static setEnablePhotoModule(state: boolean): boolean;
     }
 }
 
@@ -1191,6 +1375,24 @@ declare namespace mw {
 declare namespace mw {
     /**
      * @author changzun.li
+     * @description 设置面板选项
+     * @networkStatus usage: 客户端
+     * @groups 设置/设置面板
+     */
+    enum SettingsOption {
+        /** 画质控制选项，包含画质模式和画质级别 */
+        Graphic = "GRAPHIC",
+        /** 帧率控制选项 */
+        FPS = "FPS",
+        /** 音量控制选项，全局音量，语音房则包含语音音量 */
+        Volume = "VOLUME",
+        /** UI显隐控制选项 */
+        HideUI = "HIDE_UI",
+        /** Profiler显隐控制选项 */
+        Profiler = "PROFILER"
+    }
+    /**
+     * @author changzun.li
      * @description 设置面板相关API
      * @networkStatus usage: 客户端
      * @groups 设置/设置面板
@@ -1198,7 +1400,7 @@ declare namespace mw {
     class SettingService {
         /**
          * @groups 设置/设置面板
-         * @description 控制设置面板入口显隐
+         * @description 控制设置面板与角编组件入口显隐
          * @effect 只在客户端调用生效
          * @precautions 游戏中提供给玩家的退出按钮在设置面板中，如果设置面板入口隐藏，玩家将无法退出游戏。使用此接口时请注意游戏退出逻辑。
          * @param visible usage: 是否显示设置面板入口
@@ -1216,6 +1418,14 @@ declare namespace mw {
          * @effect 只在客户端调用生效
          */
         static collapseSettingPanel(): void;
+        /**
+         * @groups 设置/设置面板
+         * @description 控制设置面板指定配置项的显隐状态
+         * @effect 只在客户端调用生效
+         * @param option usage: 要设置的配置项，类型为SettingsOption枚举
+         * @param isVisible usage: 显隐状态，true表示显示，false表示隐藏
+         */
+        static setOptionVisibility(option: SettingsOption, isVisible: boolean): void;
     }
 }
 
@@ -3019,7 +3229,7 @@ declare namespace mw {
          */
         static requestShareScreenShot(resp: mw.MGSResponse, mgsData: string): void;
         /**
-         * @deprecated info:该接口已废弃，在该接口被删除前会仍保持可用，请尽快使用替换方案以免出现问题 since:035 reason:接口废弃 replacement:
+         * @deprecated info:该接口已废弃，在该接口被删除前会仍保持可用，请尽快使用替换方案以免出现问题 since:043 reason:接口废弃 replacement:AnalyticsService
          * @groups 服务/社交
          * @description 游戏方调用 reportLogInfo 接口上报运营所需的埋点数据
          * @effect  只在客户端调用生效
