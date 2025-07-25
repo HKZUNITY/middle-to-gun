@@ -46,6 +46,25 @@
          * ```
          */
         static asyncLoad(fileName: string): Promise<string>;
+        /**
+         * @author yingjie.zhong
+         * @description 查询指定目录是否存在
+         * @effect 调用端生效
+         * @param directoryRelativePath usage: 要查找的目录于DataFile目录的相对路径(若为空则查找DataFile目录) range: 有效目录路径,末尾带‘/’与否皆可
+         * @returns 目标目录是否存在
+         */
+        static DirectoryExists(directoryRelativePath: string): boolean;
+        /**
+         * @author yingjie.zhong
+         * @description 获取指定目录下所有文件夹和.data文件
+         * @precautions 指定目录不存在会返回false
+         * @effect 调用端生效
+         * @param fileNames usage: 存储.data文件的数组 default: undefined
+         * @param directoryNames usage: 存储文件夹的数组 default: undefined
+         * @param targetDirectoryRelativePath usage: 要查找的目录于DataFile目录的相对路径(若为空则查找DataFile目录)  default: undefined range: 有效目录路径,末尾带‘/’与否皆可
+         * @returns 目标目录是否存在
+         */
+        static findDataFiles(fileNames: Array<string>, directoryNames: Array<string>, targetDirectoryRelativePath: string): boolean;
     }
 }
 
@@ -137,6 +156,17 @@ declare namespace mw {
          * @returns 为真时本地资源
          * */
         static isLocalMaterialAsset(InAssetId: string): boolean;
+        /**
+         * @groups 工具
+         * @author ruichen.wang
+         * @groups 基础类型
+         * @description 将线上prefab资源本地化
+         * @effect 调用端生效
+         * @param InAssetId usage:资源 ID  range: 依据资源 ID 而定
+         * @param InPath usage:本地化路径  range: 依据路径 而定
+         * @returns 转为本地资源后的资源ID
+         * */
+        static localizeOnlinePrefab(InAssetId: string, InPath: string): Promise<string>;
     }
 }
 
@@ -195,6 +225,9 @@ declare namespace mw {
          */
         static get cachedRPCs(): string[];
     }
+}
+
+declare namespace mw {
 }
 
 declare namespace mw {
@@ -3422,6 +3455,19 @@ declare namespace mw {
         JPEG = 2,
         /** GIF */
         GIF = 3
+    }
+    /**
+     * @author guang.deng
+     * @description 贴图格式
+     * @groups 基础类型
+     */
+    enum MultiTextureFormat {
+        /** PNG */
+        PNG = 0,
+        /** JPEG */
+        JPEG = 1,
+        /** GIF */
+        GIF = 2
     }
     /**
      * @author mengyuan.hao

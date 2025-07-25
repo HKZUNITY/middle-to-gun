@@ -5,6 +5,55 @@ declare namespace mw {
 }
 
 declare namespace mw {
+    /**
+     * @author jie.wu
+     * @groups 基础类型
+     * @description 设置对象是否序列化到场景
+     * @effect 只在MobileEditor调用生效
+     * @param target usage:设置对象
+     * @param flag usage:是否序列化
+     */
+    function setSerializable(target: mw.GameObject, flag: boolean): void;
+    function setLocalRotationEuler(target: mw.GameObject, rotation: mw.Rotation): void;
+    /**
+     * @author jie.wu
+     * @groups 基础类型
+     * @description 获取展示的旋转角度
+     * @effect 只在MobileEditor调用生效
+     * @param target usage:设置对象
+     * @returns 旋转角度
+     */
+    function getLocalRotationEuler(target: mw.GameObject): mw.Rotation;
+    /**
+     * @author jie.wu
+     * @groups 基础类型
+     * @description 更新展示的旋转角度
+     * @effect 只在MobileEditor调用生效
+     * @param target usage:设置对象
+     * @param rotation usage:旋转角度
+     */
+    function setWorldRotationEuler(target: mw.GameObject, rotation: mw.Rotation): void;
+    /**
+     * @author jie.wu
+     * @groups 基础类型
+     * @description 获取展示的旋转角度
+     * @effect 只在MobileEditor调用生效
+     * @param target usage:设置对象
+     * @returns 旋转角度
+     */
+    function getWorldRotationEuler(target: mw.GameObject): mw.Rotation;
+    /**
+     * @author jie.wu
+     * @param target 修改目标脚本
+     * @param status 状态
+     */
+    function setScriptNetStatus(target: mw.Script, status: mw.NetStatus): void;
+    /**
+     * @author jie.wu
+     * @param target 获取目标脚本
+     * @return 状态
+     */
+    function getScriptNetStatus(target: mw.Script): mw.NetStatus;
 }
 
 declare namespace mw {
