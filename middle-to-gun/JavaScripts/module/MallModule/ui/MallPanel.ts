@@ -968,6 +968,8 @@ export default class MallPanel extends MallPanel_Generate {
 
 	//#region Rotate-Camera
 	private initMallRot(): void {
+		Utils.setWidgetVisibility(this.mTouchImage, mw.SlateVisibility.Collapsed);
+		return;
 		this.moveVec = [];
 		mw.TimeUtil.delayExecute(() => {
 			this.movePos = this.mTouchImage.position.multiply(1);

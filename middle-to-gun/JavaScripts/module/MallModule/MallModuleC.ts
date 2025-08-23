@@ -4,6 +4,8 @@ import { IColorValueElement } from "../../config/ColorValue";
 import { IFaceExpressionElement } from "../../config/FaceExpression";
 import { GameConfig } from "../../config/GameConfig";
 import { IOutfitElement } from "../../config/Outfit";
+import CameraManager from "../../tools/CameraManager";
+import { CameraManagerType, EventType } from "../../tools/GlobalData";
 import Utils from "../../tools/Utils";
 import ExecutorManager from "../../tools/WaitingQueue";
 import HUDModuleC from "../HUDModule/HUDModuleC";
@@ -976,23 +978,31 @@ export default class MallModuleC extends ModuleC<MallModuleS, MallData> {
         let shopCamera: mw.Camera = await GameObject.asyncSpawn<mw.Camera>(`Camera`);
         shopCamera.worldTransform.rotation = mw.Rotation.zero;
         this.onSwitchCameraAction.add((cameraType: number) => {
-            if (this.lastCameraType == cameraType) return;
+            // if (this.lastCameraType == cameraType) return;
             if (cameraType == 0) {
+                CameraManager.instance.switchWFZCamera(false);
+                return;
                 Camera.switch(myCamera);
             } else if (cameraType == 1) {
+                CameraManager.instance.switchWFZCamera(true, this.localPlayer.character, true, false);
+                Event.dispatchToLocal(EventType.SwitchCamera, CameraManagerType.Head);
+                return;
                 let rootLoc = this.localPlayer.character.getSlotWorldPosition(mw.HumanoidSlotType.Head);
                 // shopCamera.worldTransform.position = new mw.Vector(rootLoc.x - 55, rootLoc.y + 32, rootLoc.z + 10);
                 let offsetZ = this.localPlayer.character.collisionExtent.z;
                 shopCamera.worldTransform.position = new mw.Vector(rootLoc.x - offsetZ / 2.8, rootLoc.y + offsetZ / 5.3, rootLoc.z + offsetZ / 16);
                 Camera.switch(shopCamera, 0.5, mw.CameraSwitchBlendFunction.Linear);
             } else if (cameraType == 2) {
+                CameraManager.instance.switchWFZCamera(true, this.localPlayer.character, true, false);
+                Event.dispatchToLocal(EventType.SwitchCamera, CameraManagerType.Body);
+                return;
                 let rootLoc = this.localPlayer.character.getSlotWorldPosition(mw.HumanoidSlotType.Head);
                 // shopCamera.worldTransform.position = new mw.Vector(rootLoc.x - 174, rootLoc.y + 102, rootLoc.z - 54);
                 let offsetZ = this.localPlayer.character.collisionExtent.z;
                 shopCamera.worldTransform.position = new mw.Vector(rootLoc.x - offsetZ * 1.3, rootLoc.y + offsetZ / 1.6, rootLoc.z - offsetZ / 3);
                 Camera.switch(shopCamera, 0.5, mw.CameraSwitchBlendFunction.Linear);
             }
-            this.lastCameraType = cameraType;
+            // this.lastCameraType = cameraType;
         });
     }
 

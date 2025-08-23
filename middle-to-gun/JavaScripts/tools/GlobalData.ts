@@ -15,3 +15,13 @@ export default class GlobalData {
     public static addCoin: number = 88888;
     public static maxWorldRankCount: number = 500;
 }
+
+export enum EventType {
+    OnOffMainUI = `OnOffMainUI`,
+    SwitchCamera = `SwitchCamera`,
+}
+
+export enum CameraManagerType {
+    Head = 104,
+    Body = 105,
+}
